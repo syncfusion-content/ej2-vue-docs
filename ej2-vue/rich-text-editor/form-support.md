@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form support in Vue Rich text editor component
+# Form support in Vue Rich Text Editor Component
 
 The following sample demonstrates how to get the Rich Text Editor value in button click.
 
@@ -27,7 +27,7 @@ Render the Rich Text Editor in form.
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs2" %}
 
-## See Also
+## See also
 
 * [How to integrate the third party library](./third-party-integration/)
 * [How to validate the value](./validation/)

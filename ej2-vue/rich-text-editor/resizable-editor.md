@@ -27,7 +27,7 @@ The following sample demonstrates the resizable feature.
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs12" %}
 
-## Setting Editor Resize Limits
+## Restrict resize
 
 To restrict the resizable area of the Rich Text Editor, set the `min-width`, `max-width`, `min-height`, and `max-height` CSS properties for the component's wrapper element. 
 
@@ -55,7 +55,7 @@ By default, the control resizes up to the current viewport size. Apply these sty
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs13" %}
 
-## See Also
+## See also
 
 * [Working with IFrame Editing Mode](./iframe)
-* [Using the Markdown Editor](./markdown)
+* [Using the Markdown Editor](../markdown-editor/getting-started)

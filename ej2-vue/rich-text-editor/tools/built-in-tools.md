@@ -1,20 +1,14 @@
 ---
 layout: post
-title: Toolbar in Vue Rich text editor component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Vue Rich text editor component of Syncfusion Essential JS 2 and more.
-control: Toolbar 
+title: Built-in Tools in Vue Rich text editor component | Syncfusion
+description: Learn here all about Built-in Tools in Syncfusion Vue Rich text editor component of Syncfusion Essential JS 2 and more.
+control: Built-in Tools
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in Vue Rich Text Editor component
-
-The Syncfusion Vue Rich Text Editor component provides a versatile and powerful toolbar to enhance your text editing experience. The toolbar contains a variety of formatting, styling, and editing tools, allowing users to create and modify content efficiently.
-
-## Tools
-
-### Default Toolbar Items
+# Built-in Tools in Vue Rich Text Editor Component
 
 By default, the Vue Rich Text Editor displays the following toolbar items:
 
@@ -22,11 +16,11 @@ By default, the Vue Rich Text Editor displays the following toolbar items:
 
 These default items cover essential text editing features, such as text formatting, lists, alignment, and linking.
 
-### Available Toolbar Items
+## Available toolbar items
 
-The order of items in the toolbar can be customized to meet your application's requirements. If no specific order is set, the editor will render the above default toolbar items. Below is a list of all available toolbar items in the Rich Text Editor. 
+The order of items in the toolbar can be customized to meet your application's requirements. If no specific order is set, the editor will render the above default toolbar items. Below is a list of all available toolbar items in the Rich Text Editor.
 
-#### Text formatting
+### Text formatting
 
 It provides tools for applying text styles such as bold, italic, underline, strike-through, and more to modify the appearance of the text.
 
@@ -43,7 +37,7 @@ It provides tools for applying text styles such as bold, italic, underline, stri
 | LowerCase | ![LowerCase icon](./images/lower-case.png) | Change the case of selected text to lower in the content. |toolbarSettings: { items: ['LowerCase']}|
 | UpperCase | ![UpperCase icon](./images/upper-case.png) | Change the case of selected text to upper  in the content.|toolbarSettings: { items: ['UpperCase’']}|
 
-#### Font & styling
+### Font & styling
 
 Tools in this section allow users to customize font properties such as font family, size, color, background color, and paragraph formatting.
 
@@ -55,7 +49,7 @@ Tools in this section allow users to customize font properties such as font fami
 | BackgroundColor | ![BackgroundColor icon](./images/background-color.png) | Specifies an array of colors can be used in the colors popup for background color.|toolbarSettings: { items: ['BackgroundColor']}|
 | Formats (Paragraph, Headings) | ![Format icon](./images/formats.png) | An Object with the options that will appear in the Paragraph Format dropdown from the toolbar. |toolbarSettings: { items: ['Formats']}|
 
-#### Alignment
+### Alignment
 
 This section provides alignment options for the text or content, allowing users to justify text or align it to the left, center, or right.
 
@@ -67,7 +61,7 @@ This section provides alignment options for the text or content, allowing users 
 | JustifyRight | ![JustifyRight icon](./images/align-right.png) | Allows each line to end at the same distance from the editor’s right-hand side. | toolbarSettings: { items: ['JustifyRight']} |
 | JustifyFull | ![JustifyFull icon](./images/align-justify.png) | The text is aligned with both right and left margins. | toolbarSettings: { items: ['JustifyFull']} |
 
-#### Lists & indentation
+### Lists & indentation
 
 Tools here allow users to create ordered and unordered lists, change the list style, and adjust indentation levels for improved document structure.
 
@@ -80,7 +74,7 @@ Tools here allow users to create ordered and unordered lists, change the list st
 | Indent | ![Indent icon](./images/increase-indent.png) | Allows to increase the indent level of the content.|toolbarSettings: { items: ['Indent']}|
 | Outdent | ![Outdent icon](./images/decrease-indent.png) | Allows to decrease the indent level of the content.|toolbarSettings: { items: ['Outdent']}|
 
-#### Hyperlinks
+### Hyperlinks
 
 This section provides tools for inserting and managing hyperlinks within the content. Users can create new links or modify existing ones to enhance document navigation and interactivity.
 
@@ -89,7 +83,7 @@ This section provides tools for inserting and managing hyperlinks within the con
 | Hyperlink | ![Hyperlink icon](./images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content.|toolbarSettings: { items: ['CreateLink']}|
 | InsertLink | ![InsertLink icon](./images/create-link.png) |Allows users to add a link to a particular item. | toolbarSettings: { items: ['InsertLink']} |
 
-##### Link quicktoolbar items
+#### Link quicktoolbar items
 
 The link quicktoolbar provides tools to manage hyperlinks in the Rich Text Editor, allowing users to add, edit, or remove links from selected text or images directly within the editor.
 
@@ -99,7 +93,7 @@ The link quicktoolbar provides tools to manage hyperlinks in the Rich Text Edito
 | EditLink | ![EditLink icon](./images/edit-link.png) | Allows you to change the URL that has been attached to a specific item. | quickToolbarSettings: { link: ['EditLink']} |
 | RemoveLink | ![RemoveLink icon](./images/remove-link.png) | Allows you to remove the applied link from the selected item. | quickToolbarSettings: { link: ['RemoveLink']} |
 
-#### Images
+### Images
 
 This section contains the primary tool for inserting images into the editor.
 
@@ -107,7 +101,7 @@ This section contains the primary tool for inserting images into the editor.
 |----------------|---------|---------|------------------------------------------|
 | Insert Image | ![Images icon](./images/insert-image.png) | Inserts an image from an online source or local computer. |toolbarSettings: { items: ['Image']}|
 
-##### Image quicktoolbar items
+#### Image quicktoolbar items
 
 The image quicktoolbar offers a set of tools to edit images inserted in the Rich Text Editor. It allows users to modify image properties, including alignment, size, alternate text, and links, enhancing image management in the content.
 
@@ -123,7 +117,7 @@ The image quicktoolbar offers a set of tools to edit images inserted in the Rich
 | AltText | ![AltText icon](./images/alt-text.png) | To display image description when an image on a Web page cannot be displayed. | quickToolbarSettings: { image: ['AltText']} |
 | Dimension | ![Dimension icon](./images/dimension.png) | Allows you to customize the image’s height and width. | quickToolbarSettings: { image: ['Dimension']} |
 
-#### Tables
+### Tables
 
 This section offers the main tool for creating tables within the content.
 
@@ -131,7 +125,7 @@ This section offers the main tool for creating tables within the content.
 |----------------|---------|---------|------------------------------------------|
 | CreateTable | ![CreateTable icon](./images/create-table.png) | Create a table with defined columns and rows. | toolbarSettings: { items: ['CreateTable']} |
 
-##### Table quicktoolbar items
+#### Table quicktoolbar items
 
 The table quicktoolbar provides options for table editing within the Rich Text Editor. Users can insert or remove rows and columns, merge or split cells, and access table properties for easier table management and customization.
 
@@ -145,7 +139,7 @@ The table quicktoolbar provides options for table editing within the Rich Text E
 | TableCellVerticalAlign | ![TableCellVerticalAlign icon](./images/vertical-align.png) | Allows the table cell content to be aligned vertically. | quickToolbarSettings: { table: ['TableCellVerticalAlign']} |
 | TableEditProperties | ![TableEditProperties icon](./images/table-edit.png) | Allows you to change the table width, padding, and cell spacing styles. | quickToolbarSettings: { table: ['TableEditProperties']} |
 
-#### Undo & redo
+### Undo & redo
 
 These tools allow users to easily undo or redo any changes made within the editor to restore or repeat previous actions.
 
@@ -154,7 +148,7 @@ These tools allow users to easily undo or redo any changes made within the edito
 | Undo | ![Undo icon](./images/undo.png) | Allows to undo the actions.|toolbarSettings: { items: ['Undo']} |
 | Redo | ![Redo icon](./images/redo.png) | Allows to redo the actions.|toolbarSettings: { items: ['Redo']}|
 
-#### Other tools
+### Other tools
 
 This section contains miscellaneous tools such as full-screen mode, print, preview, source code editing, and clearing all styles from text.
 
@@ -169,150 +163,17 @@ This section contains miscellaneous tools such as full-screen mode, print, previ
 | ClearAll | ![ClearAll icon](./images/clear-all.png) | Removes all styles that have been applied to the selected text.| toolbarSettings: { items: ['ClearAll']} |
 | SourceCode | ![SourceCode icon](./images/code-view.png)  | Rich Text Editor includes the ability for users to directly edit HTML code via “Source View”. If you made any modification in Source view directly, synchronize with Design view.|toolbarSettings: { items: ['SourceCode']}|
 
-## Toolbar in Vue Rich text editor Component
+## Removing built-in tool from toolbar
 
-The Rich Text Editor toolbar contains a collection of tools such as bold, italic and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.
-
->To use Toolbar feature, configure `Toolbar` in the provider section.
-
-The Rich Text Editor allows you to configure different types of toolbar using [toolbarSettings.type](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/revueact/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
-
-* Expand
-* MultiRow
-* Scrollable
-
-## Expanding the Toolbar
-
-The default mode of the toolbar is `Expand`, configured through [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) with `type: 'Expand'`. This mode hides any overflowing toolbar items in the next row, which can viewed by clicking the expand arrow.
+Remove the build-in tools from the toolbar by using the [toolbarSettings.items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs16/app-composition.vue %}
+{% include code-snippet/rich-text-editor/remove-buildin-tool-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs16/app.vue %}
+{% include code-snippet/rich-text-editor/remove-buildin-tool-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs16" %}
-
-## Configuring a Multi-row Toolbar
-
-Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs17/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs17/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs17" %}
-
-## Implementing a Scrollable Toolbar
-
-Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) will display the toolbar items in a single line, enabling horizontal scrolling in the toolbar.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/scrollable-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/scrollable-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs1" %}
-
-## Creating a Sticky Toolbar
-
-By default, the toolbar remains fixed at the top of the Rich Text Editor when scrolling. You can customize the position of this sticky toolbar by setting the [floatingToolbarOffset](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#floatingtoolbaroffset) to adjust its offset from the top of the document.
-
-Additionally, you can enable or disable the floating toolbar using the [enableFloating`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#enablefloating) property.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs18/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs18/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs18" %}
-
-
-## Custom Toolbar Items
-
-The Rich Text Editor allows you to configure your own commands to its toolbar using the [`toolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind the action to the command by getting its instance.
-
-This sample shows how to add your own commands to the toolbar of the Rich Text Editor. The “Ω” command is added to insert special characters in the editor. By clicking the “Ω” command, it will show the special characters list, and then choose the character to be inserted in the editor.
-
-The following code snippet illustrates custom tool with tooltip text which will be included in [items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#items) field of the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property.
-
-```javascript
-{
-    tooltipText: 'Insert Symbol',
-    undo: true,
-    click: this.onClick.bind(this),
-    template: '<button class="e-tbar-btn e-btn" tabindex="-1" id="custom_tbar" style="width:100%"><div class="e-tbar-btn-text" style="font-weight: 500;"> &#937;</div></button>'
-}
-
-```
-
-The Rich Text Editor provides options to customize tool functionalities. Use the [`undo`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarStatusEventArgs/) property to enable or disable the undo function for specific tools. Additionally, the [click](https://helpej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarClickEventArgs/) property lets you configure and bind the onclick event of a tool to a specific method.
-
-This sample demonstrates how to add a custom "Ω" icon to the toolbar. Clicking on this icon opens a dialog where you can insert special characters into the editor. It also shows how to enable undo and redo functionalities.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs19/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs19/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs19" %}
-
-> When rendering any component for the custom toolbar, like a dropdown, the focus may be lost, causing it to render outside the Rich Text Editor and triggering a blur event. This can interfere with proper functionalities like cursor focus. To prevent this issue, it is recommended to assign the e-rte-elements class to the component rendered in the custom toolbar.
-
-## Enabling and Disabling Toolbar Items
-
-You can use the [enableToolbarItem](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#enabletoolbaritem) and [disableToolbarItem](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#disabletoolbaritem) methods to control the state of toolbar items. This methods takes a single item or an array of [items](#available-toolbar-items) as parameter.
-
->You can add the command name `Custom` to disable the custom toolbar items on source code view and other quicktoolbar operations.
-
-## Quick inline toolbar
-
-Quick commands are opened as context-menu on clicking the corresponding element. The commands must be passed as string collection to image, text, link and table attributes of the [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) property.
-
-| Target Element | Default Quick Toolbar items |
-|----------------|---------|
-|image | 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText','Dimension'.|
-| link | 'Open', 'Edit', 'UnLink'.|
-| text | null <br> (Any toolbar [items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/toolbar#toolbar-items) in the Rich Text Editor can be configured here).|
-| table | 'TableHeader', 'TableRows', 'TableColumns', 'BackgroundColor', 'TableRemove', 'Alignments', 'TableCellVerticalAlign', 'Styles'.|
-
-Custom tool can be added to the corresponding quick toolbar, using [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) property.
-
-The following sample demonstrates the option to insert the image to the Rich Text Editor content as well as option to rotate the image through the quick toolbar. The image rotation functionalities have been achieved through the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#toolbarclick) event.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs20/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs20/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs20" %}
-
-## See Also
-
-* [Customizing Rich Text Editor Toolbar Styles](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/style#customizing-the-rich-text-editors-toolbar)
-* [Implementing Inline Editing](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/inline-mode)
-* [Customizing Accessibility Shortcut Keys](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility#keyboard-interaction)
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/remove-buildin-tool-cs1" %}

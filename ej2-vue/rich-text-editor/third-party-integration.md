@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Third party integration in Vue Rich text editor component
+# Third Party Integration in Vue Rich Text Editor Component
 
 The Rich Text Editor can be integrated with third-party to suite the application scenario.
 
-## CodeMirror Integration
+## CodeMirror integration
 
 Rich Text Editor comes with a basic HTML source editor through the view-source property. CodeMirror plugin can be used to highlight the syntax of HTML. CodeMirror plugin for Rich Text Editor makes editing of HTML source code with a pleasant experience.
 

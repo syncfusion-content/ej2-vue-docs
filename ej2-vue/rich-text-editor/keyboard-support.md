@@ -161,9 +161,7 @@ In the below sample, you have customize the bold, italic, underline toolbar acti
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs23" %}
 
-## See Also
+## See also
 
 * [Globalization](./globalization/)
 * [Accessibility](./accessibility/)
-* [How to customize the toolbar items shortcut key](./how-to/customize-shortcut-keys/)
-* [How to customize the saving operation](./how-to/update-value/)

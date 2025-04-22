@@ -224,7 +224,7 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs9" %}
 
-## See Also
+## See also
 
 * [How to change the editor type](./editor-modes)
 * [How to render the iframe](./iframe)
