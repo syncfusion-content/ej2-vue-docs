@@ -1252,7 +1252,7 @@ When you run the application, the resultant Syncfusion Vue Grid will look like t
 
 ![Grid bound with Microsoft SQL Server data](../images/DB-grid-action.gif)
 
-> Please find the sample in this GitHub location.
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-vue-grid/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor).
 
 ## Binding data from Microsoft SQL Server using CustomAdaptor
 
@@ -2535,4 +2535,4 @@ public class CRUDModel<T> where T : class
 
 ![Grid bound with Microsoft SQL Server data](../images/DB-grid-action.gif)
 
-> Please find the sample in this GitHub location.
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-vue-grid/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).

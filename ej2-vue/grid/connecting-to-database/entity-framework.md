@@ -1362,6 +1362,8 @@ When you run the application, the resultant Syncfusion Vue Grid will look like t
 
 ![Grid bound with Microsoft SQL Server using Entity](../images/DB-grid-action.gif)
 
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-vue-grid/tree/master/Binding%20SQL%20database%20using%20EF%20and%20UrlAdaptor).
+
 ## Binding data from Microsoft SQL Server using Entity Framework with CustomAdaptor
 
 This section describes step by step process how to use Entity Framework to retrieve data from a Microsoft SQL Server using `CustomAdaptor` and bind it to the Syncfusion Vue Grid.
@@ -2735,3 +2737,5 @@ public class CRUDModel<T> where T : class
 {% endtabs %}
 
 ![Grid bound with Microsoft SQL Server using Entity](../images/DB-grid-action.gif)
+
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-vue-grid/tree/master/Binding%20SQL%20database%20using%20EF%20and%20CustomAdaptor).
