@@ -117,4 +117,4 @@ The accessibility compliance of the DatePicker component is shown in the followi
 
 ## See also
 
-* [Accessibility in Syncfusion Vue components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)

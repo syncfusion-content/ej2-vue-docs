@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Chart Component in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion Vue Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue Chart components](../system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart components](../system-requirements)
 
 ## Set up the Quasar project
 
@@ -40,11 +40,11 @@ Navigate to your project directory:
 cd quasar-project
 ```
 
-Now that `quasar-project` is ready to run with default settings, let's add the Syncfusion Vue Chart component to the project.
+Now that `quasar-project` is ready to run with default settings, let's add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component to the project.
 
-## Add Syncfusion Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion Vue Chart component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
 This article uses the [Vue Chart component](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
 
@@ -52,7 +52,7 @@ This article uses the [Vue Chart component](https://www.syncfusion.com/vue-compo
 npm install @syncfusion/ej2-vue-charts --save
 ```
 
-## Add the Syncfusion Vue component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Follow the below steps to add the Vue Chart component:
 

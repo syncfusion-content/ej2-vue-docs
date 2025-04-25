@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion SpeedDial Component in Vue 3
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> SpeedDial Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue SpeedDial component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue SpeedDial component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -21,7 +21,7 @@ To get started quickly with Vue 3 Speed dial, you can check out this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -82,11 +82,11 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add Syncfusion Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
 This article uses the [Vue Speed Dial component](https://www.syncfusion.com/vue-components/vue-speed-dial) as an example. To use the Vue Speed Dial component in the project, the `@syncfusion/ej2-vue-buttons` package needs to be installed using the following command:
 
@@ -100,9 +100,9 @@ or
 yarn add @syncfusion/ej2-vue-buttons
 ```
 
-## Adding CSS reference for Syncfusion Vue Speed Dial component
+## Adding CSS reference for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Speed Dial component
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Button component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -117,7 +117,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Syncfusion Vue Speed Dial component in the application
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Speed Dial component in the application
 
 Follow the below steps to add the Vue Speed Dial component using `Composition API` or `Options API`:
 

@@ -14,7 +14,7 @@ The Vue File Manager component provides a [uploadSettings](https://ej2.syncfusio
 
 ## Directory Upload
 
-The [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettingsModel/#directoryupload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion Vue File Manager component. 
+The [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettingsModel/#directoryupload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component. 
 
 To enable directory upload, set the `directoryUpload` property to `true` in the `uploadSettings` configuration.
 

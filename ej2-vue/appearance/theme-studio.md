@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Theme studio in Vue Appearance component
 
-Theme Studio for Essential JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
+Theme Studio for Essential<sup style="font-size:70%">&reg;</sup> JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
 
 ## Customizing theme color from theme studio
 
-The Syncfusion Vue (Essential JS 2) themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all Syncfusion Vue UI components. All Syncfusion Vue component styles are derived from these [theme-based common variables](theme#common-variables). This common variable list is handled inside the theme studio application for customizing theme-based colors.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components. All Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component styles are derived from these [theme-based common variables](theme#common-variables). This common variable list is handled inside the theme studio application for customizing theme-based colors.
 
 **Step 1:** Navigate to the theme studio application at [https://ej2.syncfusion.com/themestudio/](https://ej2.syncfusion.com/themestudio/).
 
@@ -26,13 +26,13 @@ The Syncfusion Vue (Essential JS 2) themes are developed under the SCSS environm
 
 ![colpr-picker](images/colorpicker.png)
 
-**Step 4:** After selecting colors with the color pickers, the Syncfusion Vue components will have the newly selected colors applied to them in the components preview section.
+**Step 4:** After selecting colors with the color pickers, the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components will have the newly selected colors applied to them in the components preview section.
 
 ![customized](images/customized.png)
 
 ### Filtering a specific list of components
 
-Using the theme studio, you can apply custom themes to a list of specific components. This option is useful when you have integrated a selective list of Syncfusion Vue components in your application. The theme studio will filter the selected components and customize the final output for those component's styles alone, reducing the final output file size.
+Using the theme studio, you can apply custom themes to a list of specific components. This option is useful when you have integrated a selective list of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in your application. The theme studio will filter the selected components and customize the final output for those component's styles alone, reducing the final output file size.
 
 **Step 1:** Click the Filter icon in the top right corner and select the components whose theme you want to customize.
 
@@ -58,7 +58,7 @@ You can download the custom styles after customizing the theme colors.
 
 ![download-dialog](images/download-dialog.png)
 
-**Step 3:** The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion Vue components. The current settings are stored in the `settings.json` file.
+**Step 3:** The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components. The current settings are stored in the `settings.json` file.
 
 ![output-files](images/output-files.png)
 
@@ -78,7 +78,7 @@ You can directly use the customized CSS file in the web application.
 
 ## Import previously changed settings into the theme studio
 
-When you want to change your application theme and UI design in the future, you won’t need to customize the Syncfusion Vue components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the theme studio application.
+When you want to change your application theme and UI design in the future, you won’t need to customize the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the theme studio application.
 
 **Step 1:** Click the Import icon in the top right corner.
 

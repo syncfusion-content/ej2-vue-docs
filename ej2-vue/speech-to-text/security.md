@@ -32,7 +32,7 @@ Without HTTPS, attackers could intercept audio data during transmission.
 
 ### Browser and permission exploits
 
-Malicious websites may misuse permissions to eavesdrop on conversations. Explicit user consent is essential before enabling microphone access.
+Malicious websites may misuse permissions to eavesdrop on conversations. Explicit user consent is Essential<sup style="font-size:70%">&reg;</sup> before enabling microphone access.
 
 ## Mitigation strategies
 

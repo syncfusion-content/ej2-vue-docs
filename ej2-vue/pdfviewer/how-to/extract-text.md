@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract Text Method in Syncfusion PdfViewer Control
+# Extract Text Method in Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
 
-The `extractText` method of the Syncfusion PdfViewer control enables text extraction from one or more pages in a PDF document. This method is useful for retrieving the text content along with its associated data, such as the bounds of each text element.
+The `extractText` method of the Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer control enables text extraction from one or more pages in a PDF document. This method is useful for retrieving the text content along with its associated data, such as the bounds of each text element.
 
 ### extractText Method
 The extractText method retrieves text data from the specified page(s) of a PDF document. It can extract text from one page, a range of pages, or even provide detailed text data, depending on the options specified.
@@ -33,7 +33,7 @@ The method returns a Promise that resolves to an object containing two propertie
 
 **pageText:** A concatenated string of plain text extracted from the specified page(s).
 
-### Usage of extractText in Syncfusion PdfViewer Control
+### Usage of extractText in Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
 Here is an example that demonstrates how to use the extractText method:
 
 ```html

@@ -593,7 +593,7 @@ public object Get()
 
 ### Sending additional parameters to the server
 
-We can pass additional parameters using `addParams` method of `Query` class. In server side we have inherited and shown the additional parameter value in Syncfusion DataManager class itself. We pass an additional parameter in load time using [`load`](https://ej2.syncfusion.com/vue/documentation/api/gantt#load) event. We can also pass additional parameter to the CRUD model. Please Check the below code snippet to send additional parameter to Gantt.
+We can pass additional parameters using `addParams` method of `Query` class. In server side we have inherited and shown the additional parameter value in Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager class itself. We pass an additional parameter in load time using [`load`](https://ej2.syncfusion.com/vue/documentation/api/gantt#load) event. We can also pass additional parameter to the CRUD model. Please Check the below code snippet to send additional parameter to Gantt.
 
 ```
 <template>

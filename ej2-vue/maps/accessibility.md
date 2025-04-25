@@ -93,4 +93,4 @@ The accessibility compliance of the Maps component is shown in the following sam
 
 ## See also
 
-* [Accessibility in Syncfusion Vue components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)
