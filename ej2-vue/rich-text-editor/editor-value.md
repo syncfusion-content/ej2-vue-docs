@@ -37,11 +37,11 @@ To retrieve the editor contents, use the value property of Rich Text Editor.
 
 ## Two-Way Binding Value
 
-Two-way binding allows you to synchronize data between the Syncfusion RichTextEditor component and the Vue instance. This ensures that any changes made in the editor are automatically reflected in your component's data, and vice versa.
+Two-way binding allows you to synchronize data between the Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor component and the Vue instance. This ensures that any changes made in the editor are automatically reflected in your component's data, and vice versa.
 
 In Vue, you can achieve two-way data binding using the `v-model` directive. This binds the editor’s value to a Vue data property, keeping both in sync.
 
-The example below demonstrates how two-way binding works in a Vue application using Syncfusion's Rich Text Editor.
+The example below demonstrates how two-way binding works in a Vue application using Syncfusion's<sup style="font-size:70%">&reg;</sup> Rich Text Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

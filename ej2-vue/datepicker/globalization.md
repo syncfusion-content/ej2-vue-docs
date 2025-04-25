@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 Globalization is the combination of  adapting the component to various languages by means of parsing and formatting the date or number [`Internationalization`](../common/internationalization/) and also by adding cultural specific customizations and translating the text [`localization`](../common/localization/)
 
-By default, DatePicker date format, week and month names are specific to English culture. It utilizes the [`Essential JavaScript 2 Internationalization`](../common/internationalization/) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data and it allows to load the culture specific CLDR JSON data by using `loadCldr` method
+By default, DatePicker date format, week and month names are specific to English culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](../common/internationalization/) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data and it allows to load the culture specific CLDR JSON data by using `loadCldr` method
 
-The DatePicker component supports only the Gregorian type of calendar. All the Essential JS 2 component are specific to English cultur ('en-US'). If you want to go with the different culture other than English, follow the below steps.
+The DatePicker component supports only the Gregorian type of calendar. All the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component are specific to English cultur ('en-US'). If you want to go with the different culture other than English, follow the below steps.
 
 * Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). To know more about CLDR-Data refer the
 [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.

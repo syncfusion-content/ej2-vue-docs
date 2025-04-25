@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ContextMenu can be opened and closed programmatically whenever required by using the open and close methods.
 
-Install Syncfusion `Button` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Button` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-buttons --save

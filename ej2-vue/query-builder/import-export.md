@@ -134,7 +134,7 @@ Exporting to SQL involves converting the defined conditions within the Query Bui
 
 Exporting to Inline SQL Query entails embedding the defined conditions from the Query Builder directly into SQL statements within the exported code. This method ensures that the conditions are seamlessly integrated into the SQL query syntax, enabling straightforward execution or further processing within SQL database systems. This can be achieved using the [`getSqlFromRules`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#getsqlfromrules) method.
 
-Install Syncfusion `Popup` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Popup` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-popups --save

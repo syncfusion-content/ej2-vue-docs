@@ -149,7 +149,7 @@ export default {
 
 You can use the created conditions in DataManager through the [`getPredicate`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#getpredicate) method. This method creates predicates which is used as conditions in DataManager.
 
-Install Syncfusion `Buttons` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Buttons` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-buttons --save

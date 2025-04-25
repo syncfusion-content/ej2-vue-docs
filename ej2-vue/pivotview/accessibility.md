@@ -246,4 +246,4 @@ The accessibility compliance of the pivot table component is shown in the follow
 
 ## See also
 
-* [Accessibility in Syncfusion Vue components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)

@@ -27,7 +27,7 @@ In the following example, the SplitButton with default iconPosition and `iconPos
         
 {% previewsample "page.domainurl/code-snippet/split-button/default-cs8" %}
 
-> The Essential JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the SplitButton using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#iconcss)property.
+> The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the SplitButton using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#iconcss)property.
 
 ### Vertical button
 
@@ -46,7 +46,7 @@ The following example illustrates how to provide vertical support in SplitButton
         
 {% previewsample "page.domainurl/code-snippet/split-button/default-cs9" %}
 
-> The Essential JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the SplitButton using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#iconcss) property.
+> The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the SplitButton using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#iconcss) property.
 
 ## Separator
 

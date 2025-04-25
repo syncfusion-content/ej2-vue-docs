@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Theme in Vue Appearance component
 
-The Syncfusion Vue library has provided the below list of in-built themes,
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue library has provided the below list of in-built themes,
 
 |Theme |Style Sheet Name|
 |--------|--------|
@@ -34,11 +34,11 @@ The Syncfusion Vue library has provided the below list of in-built themes,
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
 
-> The Syncfusion Bootstrap theme is designed based on `Bootstrap v3`, however, it can be compatible with `Bootstrap v4` applications. In addition to these four built-in themes, [ThemeStudio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/) provides support for the Fusion Theme that can only be downloaded from [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
+> The Syncfusion<sup style="font-size:70%">&reg;</sup> Bootstrap theme is designed based on `Bootstrap v3`, however, it can be compatible with `Bootstrap v4` applications. In addition to these four built-in themes, [ThemeStudio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/) provides support for the Fusion Theme that can only be downloaded from [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
 
 ## Optimized CSS files
 
-Syncfusion components provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI components.
 
 The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of components.
 
@@ -46,7 +46,7 @@ Below is a comparison of the Button component in normal and bigger size modes:
 
 ![bigger-sized-button](./images/bigger-theme-button.png)
 
-Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion<sup style="font-size:70%">&reg;</sup> offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
 
 Refer to the comparison below for the default and optimized theme file sizes:
 
@@ -86,7 +86,7 @@ Referring individual control from individual package
 @import "ej2-buttons/styles/button/material.scss";
 ```
 
-> `ej2-base` is common dependent package for all Syncfusion JavaScript control styles. So, it needs first to be added in the import statement.
+> `ej2-base` is common dependent package for all Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript control styles. So, it needs first to be added in the import statement.
 
 Referring individual control from ej2 package
 
@@ -148,9 +148,9 @@ To refer to individual component's optimized CSS files from an individual packag
 
 ## Common variables
 
-The below list of common variables used in the Syncfusion Vue library themes for all components. You can change these variables to customize the corresponding theme.
+The below list of common variables used in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue library themes for all components. You can change these variables to customize the corresponding theme.
 
-### Syncfusion Tailwind 3.4 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Tailwind 3.4 theme
 
 <table>
     <style>
@@ -359,7 +359,7 @@ The below list of common variables used in the Syncfusion Vue library themes for
     </tbody>
 </table>
 
-### Syncfusion Bootstrap 5.3 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Bootstrap 5.3 theme
 
 <table>
     <style>
@@ -604,7 +604,7 @@ The below list of common variables used in the Syncfusion Vue library themes for
     </tbody>
 </table>
 
-### Syncfusion Fluent 2 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Fluent 2 theme
 
 <table>
     <style>
@@ -885,7 +885,7 @@ The below list of common variables used in the Syncfusion Vue library themes for
     </tbody>
 </table>
 
-### Syncfusion Material 3 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Material 3 theme
 
 <table>
     <style>

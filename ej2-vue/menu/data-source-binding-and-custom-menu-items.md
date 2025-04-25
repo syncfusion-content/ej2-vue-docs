@@ -69,11 +69,11 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 ## Custom menu items
 
-The Menu can be customized using Essential JS2 [Template engine](https://ej2.syncfusion.com/documentation/common/template-engine.html) to render the elements.
+The Menu can be customized using Essential<sup style="font-size:70%">&reg;</sup> JS2 [Template engine](https://ej2.syncfusion.com/documentation/common/template-engine.html) to render the elements.
 
 To customize menu items in your application, set your customized template string to the [`template`](https://ej2.syncfusion.com/vue/documentation/api/menu#template) property. In the following example, the menu has been rendered with customized menu items.
 
-Install Syncfusion `Layouts` and `Navigations` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Layouts` and `Navigations` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-layouts --save

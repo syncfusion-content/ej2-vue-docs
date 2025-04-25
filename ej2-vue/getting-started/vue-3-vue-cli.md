@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Vue UI Components in Vue 3
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3
 
-This section explains how to use Syncfusion Vue components in Vue 3 application. To get started with Vue 2 application, refer to the [getting started with Vue 2](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/) section.
+This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application. To get started with Vue 2 application, refer to the [getting started with Vue 2](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/) section.
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](../system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](../system-requirements)
 
 ## Create the Vue 3 application
 
@@ -31,9 +31,9 @@ Initiating a new project prompts us to choose the type of project to be used for
 
 ![Reference](../appearance/images/vue3-terminal.png)
 
-## Add Syncfusion packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-Once the Vue 3 application is created, install the required Syncfusion Vue component package in the application. All the available Syncfusion Vue packages are published in the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry. Choose the component to be installed. In this article, the Grid component is used as an example.
+Once the Vue 3 application is created, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component package in the application. All the available Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published in the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry. Choose the component to be installed. In this article, the Grid component is used as an example.
 
 Check out the [installation and upgrade](../installation-and-upgrade/installation) section to learn about the different ways of installing the packages. Here, the Grid component package is installed using the following `npm` command.
 
@@ -41,13 +41,13 @@ Check out the [installation and upgrade](../installation-and-upgrade/installatio
 npm install @syncfusion/ej2-vue-grids --save
 ```
 
-## Import the Syncfusion CSS styles
+## Import the Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-After installing the Syncfusion component packages in the application, add the required theme based on the components used.
+After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component packages in the application, add the required theme based on the components used.
 
 Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) section to know more about built-in themes and different ways (npm packages, CDN and CRG) to refer the themes in the Vue application.
 
-Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion Vue component. Let’s import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
+Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. Let’s import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -67,9 +67,9 @@ Here the themes are referred through the installed npm packages which contains t
 {% endhighlight %}
 {% endtabs %}
 
->Grid components use other Syncfusion components as well, so CSS references for the dependent component must be added in order to use all grid functionalities. Use this same order to display the Syncfusion Grid component's predefined appearance.
+>Grid components use other Syncfusion<sup style="font-size:70%">&reg;</sup> components as well, so CSS references for the dependent component must be added in order to use all grid functionalities. Use this same order to display the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component's predefined appearance.
 
-## Register the Syncfusion Vue component
+## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Import the Grid component along with the required child directives from the installed packages into the `<script>` section of the `src/App.vue` file. Register the Grid component along with the required child directives using following code.
 
@@ -92,7 +92,7 @@ Import the Grid component along with the required child directives from the inst
 
 Now, the Grid and column directives are registered to use it in this application.
 
-## Add Syncfusion Vue component to the application
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
 Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
 
@@ -285,9 +285,9 @@ In template declaration, the component name must match the property binding name
   {% endhighlight %}
   {% endtabs %}
 
-### Using Syncfusion Vue components inside template properties
+### Using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components inside template properties
 
-To use other Syncfusion Vue components inside the templates, register the components in the template declaration also.
+To use other Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components inside the templates, register the components in the template declaration also.
 
 The following sample uses the Button component within the grid's template property. To use the Button component within the template, register the Button component in the template declaration.
 

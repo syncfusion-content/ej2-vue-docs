@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Document Editor features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
 * **Print** - Prints the document.
-* **SfdtExport** - Exports the document as Syncfusion Document Text (.SFDT) file.
+* **SfdtExport** - Exports the document as Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.SFDT) file.
 * **Selection** - Selects a portion of the document and copy it to the clipboard.
 * **Search** - Searches specific text and navigate between the results.
 * **WordExport** - Exports the document as Word Document (.DOCX) file.
