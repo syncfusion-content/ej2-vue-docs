@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Header in popup items is possible in DropdownButton by templating entire popup with ListView. Create ListView with id `#listview` and provide it as a [`target`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#target) for DropDownButton.
 
-Install Syncfusion `List` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `List` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-list --save

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customizing Appearance of Suggestions 
 
-The [ShowSuggestionOnPopup](https://ej2.syncfusion.com/vue/documentation/api/smart-textarea/#showsuggestiononpopup) property in Syncfusion JavaScript Smart TextArea allows you to control how text suggestions are displayed to the users.
+The [ShowSuggestionOnPopup](https://ej2.syncfusion.com/vue/documentation/api/smart-textarea/#showsuggestiononpopup) property in Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Smart TextArea allows you to control how text suggestions are displayed to the users.
 
 * If `ShowSuggestionOnPopup` is `Enable`, suggestions displayed in the pop-up window
 
@@ -52,4 +52,4 @@ By default `showSuggestionOnPopup` is `None`.
 
 ## See also
 
-* [Getting Started with Syncfusion Vue Smart TextArea](./vue-3-getting-started)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smart TextArea](./vue-3-getting-started)

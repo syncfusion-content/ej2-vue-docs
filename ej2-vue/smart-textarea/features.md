@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Inherited Features from TextArea
 
-The Syncfusion Vue Smart TextArea component fully inherits all the properties, features, and styling options of the Syncfusion Vue TextArea component. This means that you can leverage the existing features of the Syncfusion Vue TextArea while benefiting from the enhanced functionality of the Smart TextArea.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smart TextArea component fully inherits all the properties, features, and styling options of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TextArea component. This means that you can leverage the existing features of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TextArea while benefiting from the enhanced functionality of the Smart TextArea.
 
 * [Form Support](https://ej2.syncfusion.com/vue/documentation/textarea/form-support)
 * [Floating Labels](https://ej2.syncfusion.com/vue/documentation/textarea/floating-label)
@@ -20,4 +20,4 @@ The Syncfusion Vue Smart TextArea component fully inherits all the properties, f
 
 ## See also
 
-* [Getting Started with Syncfusion Vue Smart TextArea](./vue-3-getting-started)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smart TextArea](./vue-3-getting-started)

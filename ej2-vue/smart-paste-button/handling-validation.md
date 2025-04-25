@@ -309,5 +309,5 @@ Below is the featured sample output:
 
 ## See also
 
-* [Getting Started with Syncfusion Vue Smart Paste Button](./vue-3-getting-started)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smart Paste Button](./vue-3-getting-started)
 

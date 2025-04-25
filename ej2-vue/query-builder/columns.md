@@ -80,7 +80,7 @@ The Query Builder formats date and number values. Use the [`format`](https://ej2
 
 Validation allows you to validate the conditions and it display errors for invalid fields while using  the [`validateFields`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#validatefields) method.  To enable validation in the query builder , set the allowValidation to true. Column fields are validated after setting [`allowValidation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#allowvalidation) as to true. So, you should manually configure the validation for Operator and, Value fields through [`validation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#validation).
 
-Install Syncfusion `Buttons` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Buttons` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-buttons --save

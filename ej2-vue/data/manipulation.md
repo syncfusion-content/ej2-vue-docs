@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Manipulation in Vue DataManager
 
-The Syncfusion Vue DataManager provides comprehensive support for manipulating data, including creating, updating, and deleting records. Whether working with a local or remote data source, [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) simplifies the process of interacting with data by abstracting the fundamental operations and providing a consistent interface.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager provides comprehensive support for manipulating data, including creating, updating, and deleting records. Whether working with a local or remote data source, [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) simplifies the process of interacting with data by abstracting the fundamental operations and providing a consistent interface.
 
-Data manipulation involves CRUD (Create, Read, Update, Delete) operations on records within a data source. These operations are essential for managing data in any application. DataManager simplifies this process by providing a consistent interface for performing these operations on both local and remote data sources.
+Data manipulation involves CRUD (Create, Read, Update, Delete) operations on records within a data source. These operations are Essential<sup style="font-size:70%">&reg;</sup> for managing data in any application. DataManager simplifies this process by providing a consistent interface for performing these operations on both local and remote data sources.
 
 ### Insert
 
-The Syncfusion DataManager provides a way to add new records to the data source. This is especially helpful when you want to insert additional records into the data source.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager provides a way to add new records to the data source. This is especially helpful when you want to insert additional records into the data source.
 
 The [insert](https://ej2.syncfusion.com/documentation/api/data/dataManager/#insert) method of the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) class allows you to add new records to the data source.
 
@@ -203,11 +203,11 @@ export default {
 
 ### Update
 
-The Syncfusion DataManager provides a convenient method to update existing records in your data source. This feature is particularly useful when you need to modify data entries without replacing the entire data set.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager provides a convenient method to update existing records in your data source. This feature is particularly useful when you need to modify data entries without replacing the entire data set.
 
 The [update](https://ej2.syncfusion.com/documentation/api/data/dataManager/#update) method of the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) class is the key to modifying records in the data source. It offers a straightforward way to update individual records, ensuring data accuracy and consistency.
 
-When using the `update` method with Syncfusion DataManager, it is essential to define the **KeyField** (Primary key name). The KeyField serves as a unique identifier for each record in the data source. By specifying the KeyField, the update method can accurately locate and update the desired record.
+When using the `update` method with Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager, it is Essential<sup style="font-size:70%">&reg;</sup> to define the **KeyField** (Primary key name). The KeyField serves as a unique identifier for each record in the data source. By specifying the KeyField, the update method can accurately locate and update the desired record.
 
 The following example demonstrates how to modify or update existing records in the data source using `DataManager`. In this example, an input box is provided to edit the existing values, and a button triggers the update process using the `update` method of the `DataManager`.
 
@@ -394,9 +394,9 @@ export default {
 
 ### Remove
 
-The Syncfusion DataManager offers a convenient way to remove existing records from your data source. This feature is particularly useful when you need to delete specific data entries without affecting the entire dataset.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager offers a convenient way to remove existing records from your data source. This feature is particularly useful when you need to delete specific data entries without affecting the entire dataset.
 
-The [remove](https://ej2.syncfusion.com/documentation/api/data/dataManager/#remove) method of the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) class is the key to removing records from the data source. When using this method, it is essential to define the **KeyField** (Primary key name). The KeyField serves as a unique identifier for each record in the data source. By specifying the KeyField, the `remove` method can accurately locate and remove the desired record.
+The [remove](https://ej2.syncfusion.com/documentation/api/data/dataManager/#remove) method of the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) class is the key to removing records from the data source. When using this method, it is Essential<sup style="font-size:70%">&reg;</sup> to define the **KeyField** (Primary key name). The KeyField serves as a unique identifier for each record in the data source. By specifying the KeyField, the `remove` method can accurately locate and remove the desired record.
 
 The following example demonstrates how to remove existing records from the data source using `DataManager`. In this example, an input box is provided to collect the keyField value from the existing data, and a button triggers the removal process using the `remove` method of the `DataManager`.
 
@@ -567,7 +567,7 @@ export default {
 
 ### Batch editing
 
-Syncfusion DataManager offers built-in support for batch processing of CRUD (Create, Read, Update, Delete) operations on your data. This feature allows you to optimize data management by batching multiple edit operations together, improving efficiency and reducing the number of server requests.
+Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager offers built-in support for batch processing of CRUD (Create, Read, Update, Delete) operations on your data. This feature allows you to optimize data management by batching multiple edit operations together, improving efficiency and reducing the number of server requests.
 
 Batch processing allows you to perform multiple CRUD operations simultaneously, optimizing performance and reducing unnecessary network overhead. The [saveChanges](https://ej2.syncfusion.com/documentation/api/data/dataManager/#savechanges) method of the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) class is the key to batching edit operations. When using this method, all add, remove, and update requests are handled together at once, enhancing the efficiency of data manipulation.
 

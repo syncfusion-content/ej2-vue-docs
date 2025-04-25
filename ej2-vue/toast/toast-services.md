@@ -14,7 +14,7 @@ The [Vue Toast](https://www.syncfusion.com/vue-components/vue-toaster) component
 
 ## Show Toast with predefined types
 
-The Toast component support 4 types of predefined toast with essential colors for various situations which can be shown using the `ToastUtility.show` by just defining the type of the toast without defining any class names. The following options are used as an argument on calling the utility function for predefined types:
+The Toast component support 4 types of predefined toast with Essential<sup style="font-size:70%">&reg;</sup> colors for various situations which can be shown using the `ToastUtility.show` by just defining the type of the toast without defining any class names. The following options are used as an argument on calling the utility function for predefined types:
 
 | Options   | Description |
 |-----------|-------------|

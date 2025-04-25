@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This section explains about how to open a dialog on DropdownButton popup item click. This can be achieved by handling dialog open in [`select`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#select) event of the DropdownButton.
 
-Install Syncfusion `List` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `List` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-list --save

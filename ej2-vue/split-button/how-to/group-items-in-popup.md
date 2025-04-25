@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Grouped items are possible in SplitButton by templating entire popup with ListView. Check ListView [`grouping`](../../listview/grouping/#grouping) and create such items. Create ListView with id `listview` and provide element of the ListView as target of SplitButton to render it in popup area.
 
-Install Syncfusion `List` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `List` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-list --save

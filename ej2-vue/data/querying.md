@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Querying in Vue DataManager
 
-The Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) offers various classes to work with data. The Query class plays a vital role in data execution and manipulation. It allows you to create complex queries to fetch data from your data source. It provides a various methods to help you filter, sort, aggregate, and transform data as needed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) offers various classes to work with data. The Query class plays a vital role in data execution and manipulation. It allows you to create complex queries to fetch data from your data source. It provides a various methods to help you filter, sort, aggregate, and transform data as needed.
 
 ## Specifying resource name using from
 
-The Syncfusion DataManager's Query class provides a powerful method to set the primary resource or table name for data retrieval during query execution. This method is particularly useful when you need to fetch data from a specific table or resource in your data source.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager's Query class provides a powerful method to set the primary resource or table name for data retrieval during query execution. This method is particularly useful when you need to fetch data from a specific table or resource in your data source.
 
 The [from](https://ej2.syncfusion.com/documentation/api/data/query/#from) method of [query](https://ej2.syncfusion.com/documentation/api/data/query) class is used to specify the name of the resource or table from which the data will be fetched. This sets the primary source for the query execution.
 
-Follow these steps to use `from` method with Syncfusion [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager):
+Follow these steps to use `from` method with Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager):
 
 1. Initialize a new `query` object to start building your query.
 
 2. Use the `from` method to specify the table or resource name from which data will be fetched.
 
-3. Execute the query to fetch data from the specified resource using Syncfusion `DataManager`.
+3. Execute the query to fetch data from the specified resource using Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`.
 
 The following example demonstrates how to use `from` method of `query` class in `DataManager`.
 
@@ -157,15 +157,15 @@ export default {
 
 ## Projection using select
 
-When working with Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager), you may need to fetch only specific fields from your data source. The [select](https://ej2.syncfusion.com/documentation/api/data/query/#select) method from [query](https://ej2.syncfusion.com/documentation/api/data/query) class allows you to specify which fields to project onto the DataManager.
+When working with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager), you may need to fetch only specific fields from your data source. The [select](https://ej2.syncfusion.com/documentation/api/data/query/#select) method from [query](https://ej2.syncfusion.com/documentation/api/data/query) class allows you to specify which fields to project onto the DataManager.
 
 The `select` method is helpful for displaying a specific number of columns from a large dataset with multiple columns, which reduces the amount of data transferred and improves the performance of your application.
 
-Follow these steps to use `select` method with Syncfusion `DataManager`:
+Follow these steps to use `select` method with Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
 
 1. Create a new `query` object to begin constructing your query.
 
-2. Use the `select` method to specify the columns that you want to display in the Syncfusion `DataManager`.
+2. Use the `select` method to specify the columns that you want to display in the Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`.
 
 3. Execute the query to fetch and display data with the specified columns.
 
@@ -300,11 +300,11 @@ export default {
 
 ## Eager loading navigation properties
 
-Eager loading navigation properties in Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager)r allows you to retrieve related data along with the primary data in a single query. This improves performance by reducing the frequency of trips to the server. It enhances the experience by providing comprehensive data views without additional server requests. 
+Eager loading navigation properties in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager)r allows you to retrieve related data along with the primary data in a single query. This improves performance by reducing the frequency of trips to the server. It enhances the experience by providing comprehensive data views without additional server requests. 
 
 The [expand](https://ej2.syncfusion.com/documentation/api/data/query/#expand) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class facilitates eager loading of navigation properties to fetch the related data.
 
-Follow these steps to use `expand` method with Syncfusion `DataManager`:
+Follow these steps to use `expand` method with Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
 
 1. Initialize a new `query` object to start building your query.
 
@@ -312,7 +312,7 @@ Follow these steps to use `expand` method with Syncfusion `DataManager`:
 
 3. Execute the query to fetch data along with eagerly loaded navigation properties.
 
-The following example demonstrates how to use the `expand` method with Syncfusion `DataManager` for eager loading navigation properties.
+The following example demonstrates how to use the `expand` method with Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager` for eager loading navigation properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -445,11 +445,11 @@ export default {
 
 ## Sorting
 
-Sorting in Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) allows you to organize data in a specified order, thus enhancing data readability and analysis. It allows you to arrange data either in ascending or descending order based on specified criteria. 
+Sorting in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) allows you to organize data in a specified order, thus enhancing data readability and analysis. It allows you to arrange data either in ascending or descending order based on specified criteria. 
 
 This can be achieved using the [sortBy](https://ej2.syncfusion.com/documentation/api/data/query/#sortby) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method facilitates the sorting of data based on specified fields and order.
 
-Follow these steps to use `sortBy` method with Syncfusion `DataManager`:
+Follow these steps to use `sortBy` method with Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
 
 1. Initialize a new `query` object to start building your query.
 
@@ -591,11 +591,11 @@ export default {
 
 ## Filtering
 
-Filtering with Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) enables you to efficiently filter data before it is fetched from the server, reducing the amount of data transferred and enhancing performance. This fundamental operation allows you to obtain a reduced view of data based on specified filter criteria, essential for efficiently managing and displaying large datasets.
+Filtering with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) enables you to efficiently filter data before it is fetched from the server, reducing the amount of data transferred and enhancing performance. This fundamental operation allows you to obtain a reduced view of data based on specified filter criteria, Essential<sup style="font-size:70%">&reg;</sup> for efficiently managing and displaying large datasets.
 
 A filter expression can be easily constructed using the [where](https://ej2.syncfusion.com/documentation/api/data/query/#where) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method allows you to specify filter criteria based on various conditions. 
 
-Follow these steps to use `where` method with Syncfusion `DataManager`:
+Follow these steps to use `where` method with Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
 
 1. Create a new `query` object to begin constructing your query.
 
@@ -734,7 +734,7 @@ export default {
 
 ### Filter operators
 
-Filter operators in Syncfusion [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allow you to specify the filter type for querying data. These operators enable you to define various conditions to filter data effectively. Below is a comprehensive list of filter operators supported by Syncfusion `DataManager`.
+Filter operators in Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allow you to specify the filter type for querying data. These operators enable you to define various conditions to filter data effectively. Below is a comprehensive list of filter operators supported by Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`.
 
 | Operator           | Description                                                             |
 | ------------------ | ----------------------------------------------------------------------- |
@@ -753,11 +753,11 @@ Filter operators in Syncfusion [DataManager](https://ej2.syncfusion.com/document
 
 ### Build complex filter criteria using predicate
 
-The Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) offers extensive capabilities for handling and manipulating data from various sources. While the [where](https://ej2.syncfusion.com/documentation/api/data/query/#where) method is suitable for basic filtering requirements, there are situations where more complex filter criteria are needed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) offers extensive capabilities for handling and manipulating data from various sources. While the [where](https://ej2.syncfusion.com/documentation/api/data/query/#where) method is suitable for basic filtering requirements, there are situations where more complex filter criteria are needed.
 
 The [predicate](https://ej2.syncfusion.com/documentation/api/data/predicate/) class of `DataManager` provides a solution for complex filter cases. It allows developers to construct composite filter criteria, enabling precise data filtering in complex scenarios. The `predicate` consists of multiple conditions chained together using logical operators (and, or).
 
-Follow these steps to use `predicate` method with Syncfusion `DataManager`:
+Follow these steps to use `predicate` method with Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
 
 1. Initialize a new `query` object to start building your query.
 
@@ -906,7 +906,7 @@ export default {
 
 ## Searching
 
-The Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) provides a robust built-in search method that allows searching for specific data across all fields in the data source. This method enhances the efficiency of filtering records based on user-defined search criteria, making it easier to locate relevant information within datasets.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) provides a robust built-in search method that allows searching for specific data across all fields in the data source. This method enhances the efficiency of filtering records based on user-defined search criteria, making it easier to locate relevant information within datasets.
 
 The [search](https://ej2.syncfusion.com/documentation/api/data/query#search) method of [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables you to create search criteria that apply to all data fields within the datasource. This is particularly useful when you need to find records containing a particular keyword anywhere in the displayed data.
 
@@ -916,7 +916,7 @@ To use the `search` method with `DataManager`, follow these steps:
 
 2. Use the `search` method to define your search criteria.
 
-3. Execute the query to fetch the searched data from the server using Syncfusion `DataManager`.
+3. Execute the query to fetch the searched data from the server using Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`.
 
 The following example demonstrates how to search data based on the **CustomerID** field with the searchkey of **VI** using the `search` method of `query` class of `DataManager`.
 
@@ -1030,7 +1030,7 @@ export default {
 
 ## Grouping
 
-Grouping in Syncfusion [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allows you to organize records by category based on specified criteria, facilitating structured data organization. This is particularly useful for organizing and analyzing large datasets by grouping related records together.
+Grouping in Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allows you to organize records by category based on specified criteria, facilitating structured data organization. This is particularly useful for organizing and analyzing large datasets by grouping related records together.
 
 The [group](https://ej2.syncfusion.com/documentation/api/data/query#group) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables you to apply grouping functionality to your data source seamlessly.
 
@@ -1040,7 +1040,7 @@ To use the `group` method with `DataManager`, follow these steps:
 
 2. Use the `group` method to define your group query.
 
-3. Execute the query to fetch the grouped data from the server using Syncfusion `DataManager`.
+3. Execute the query to fetch the grouped data from the server using Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`.
 
 The following example demonstrates how to group data based on the **CustomerID** field using the `group` method of `query` class of `DataManager`.
 
@@ -1190,11 +1190,11 @@ export default {
 
 ## Paging
 
-Paging in Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allows you to organize and retrieve data in smaller, manageable chunks or pages. This enhances performance and experience, especially when dealing with large datasets. 
+Paging in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allows you to organize and retrieve data in smaller, manageable chunks or pages. This enhances performance and experience, especially when dealing with large datasets. 
 
 The [page](https://ej2.syncfusion.com/documentation/api/data/query#page) method of [query](https://ej2.syncfusion.com/documentation/api/data/query) class is utilized to achieve paging functionality. This method allows you to specify the page size and index, enable to query a particular subset of records from the dataset.
 
-Follow these steps to use `page` method with Syncfusion `DataManager`:
+Follow these steps to use `page` method with Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
 
 1. Initialize a new `query` object to start building your query.
 
@@ -1335,9 +1335,9 @@ export default {
 
 ## Aggregation
 
-The aggregates in Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) facilitate the calculation of summarized values for specific fields based on predefined types. This functionality is particularly useful when you need to analyze numerical or boolean data within your dataset. It enables you to derive valuable information by summarizing and analyzing the data based on different criteria such as total sum, average value, minimum and maximum values, and counts of specific conditions.
+The aggregates in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) facilitate the calculation of summarized values for specific fields based on predefined types. This functionality is particularly useful when you need to analyze numerical or boolean data within your dataset. It enables you to derive valuable information by summarizing and analyzing the data based on different criteria such as total sum, average value, minimum and maximum values, and counts of specific conditions.
 
-To utilize the aggregation, you can use the [aggregate](https://ej2.syncfusion.com/documentation/api/data/query/#aggregate) method of the Syncfusion DataManager class. This method allows you to specify the field for aggregation and the type of aggregation to perform.
+To utilize the aggregation, you can use the [aggregate](https://ej2.syncfusion.com/documentation/api/data/query/#aggregate) method of the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager class. This method allows you to specify the field for aggregation and the type of aggregation to perform.
 
 Aggregates supports the follwing built-in types:
 
@@ -1502,11 +1502,11 @@ export default {
 
 ## Hierarchical query
 
-The hierarchical query in Syncfusion Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allows you to fetch data in a hierarchical structure, making it easier to display and analyze such data in applications. This is essential when dealing with data structures that have parent-child relationships, such as hierarchical data or data with foreign key bindings.
+The hierarchical query in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allows you to fetch data in a hierarchical structure, making it easier to display and analyze such data in applications. This is Essential<sup style="font-size:70%">&reg;</sup> when dealing with data structures that have parent-child relationships, such as hierarchical data or data with foreign key bindings.
 
 The [hierarchy](https://ej2.syncfusion.com/documentation/api/data/query#hierarchy) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables you to retrieve hierarchical data from a data source.
 
-Follow these steps to perform a hierarchical query using Syncfusion `DataManager`:
+Follow these steps to perform a hierarchical query using Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
 
 * Utilize the [foreignKey](https://ej2.syncfusion.com/documentation/api/data/query/#foreignkey) method to specify the key field of the foreign table, which establishes the relationship between the primary and foreign tables.
 * Call the [hierarchy](https://ej2.syncfusion.com/documentation/api/data/query/#hierarchy) method, passing a selector function as the second argument. This function selects the records from the foreign table based on the specified key field.

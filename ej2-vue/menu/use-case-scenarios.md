@@ -59,7 +59,7 @@ The following example demonstrates the use case of menu with Accordion component
 
 The following example demonstrates the use case of Menu in Mobile mode by using ListView component with hamburger.
 
-Install Syncfusion `Lists` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Lists` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-lists --save

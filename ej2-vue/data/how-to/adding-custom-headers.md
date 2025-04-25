@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Custom headers allow you to send extra information along with your HTTP requests. This information can include authentication tokens, API keys, or any other data required by the server to process the request correctly. By adding custom headers, you can enhance the security and functionality of your application's data communication process.
 
-The Syncfusion [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) provides a flexible way to include custom HTTP headers in your data requests through the `headers` property, enhancing communication between your application and the server. This feature is particularly useful when you need to include additional information or authentication tokens in your data requests.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) provides a flexible way to include custom HTTP headers in your data requests through the `headers` property, enhancing communication between your application and the server. This feature is particularly useful when you need to include additional information or authentication tokens in your data requests.
 
 To integrate custom headers into your `DataManager` requests, follow these steps:
 

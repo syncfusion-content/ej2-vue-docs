@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Extract Text Option in Vue Pdfviewer component
 
-The `extractTextOption` property in the Syncfusion PdfViewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
+The `extractTextOption` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
 
 ### Available Options:
 

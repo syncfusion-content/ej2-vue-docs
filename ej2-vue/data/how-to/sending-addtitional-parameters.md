@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 In Vue applications, when working with remote data sources, it's often necessary to pass additional parameters to the server to customize the data retrieval process. These parameters could include filters, sorting criteria, or any other information required for server-side processing. 
 
-The Syncfusion [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) provides a convenient method for including custom parameters in data requests, allowing for enhanced server-side processing. By utilizing the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class, you can seamlessly integrate additional information into your data requests.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) provides a convenient method for including custom parameters in data requests, allowing for enhanced server-side processing. By utilizing the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class, you can seamlessly integrate additional information into your data requests.
 
 In the following example, the top 15 records of the service are displayed in the table using the `addParams` method of `query` class. 
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Globalization is the combination of internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number (Internationalization), and also add culture specific customization and translation to the text (Localization).
 
-By default, DateRangePicker date format, week, and month names are specific to the English culture. It utilizes the [`Essential JavaScript 2 Internationalization`](../common/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data. It allows to load culture specific CLDR JSON data by using `loadCldr` method.
+By default, DateRangePicker date format, week, and month names are specific to the English culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](../common/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data. It allows to load culture specific CLDR JSON data by using `loadCldr` method.
 
 To use a different culture other than `English`, follow the below steps:
 

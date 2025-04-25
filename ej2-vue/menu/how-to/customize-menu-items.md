@@ -33,7 +33,7 @@ In the following example, the **Europe** menu items are added before the **Ocean
 
 You can enable and disable the menu items using the [`enableItems`](https://ej2.syncfusion.com/vue/documentation/api/menu#enableitems) method in Menu. To enable menuItems, set the `enable` property in argument to `true` and vice-versa.
 
-Install Syncfusion `Buttons` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Buttons` packages using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-buttons --save

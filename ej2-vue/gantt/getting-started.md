@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Gantt Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Gantt component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt component
 
 To get start quickly with Vue Gantt Chart, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=S1GbWmVcre0" %}
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -64,11 +64,11 @@ When creating a new project, choose the option `Default ([Vue 2] babel, eslint)`
 
 ![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add Syncfusion Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
 This article uses the [Vue gantt component](https://www.syncfusion.com/vue-components/vue-gantt-chart) as an example. Install the `@syncfusion/ej2-vue-gantt` package by running the following command:
 
@@ -81,9 +81,9 @@ or
 yarn add @syncfusion/ej2-vue-gantt
 ```
 
-## Import Syncfusion CSS styles
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Gantt component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -97,6 +97,7 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
@@ -112,7 +113,7 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 `Note:` Use above CSS styles in `<style> </style>` tag for rendering all code snippets.
 
-## Add Syncfusion Vue component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Follow the below steps to add the Vue Gantt component:
 
@@ -205,8 +206,8 @@ export default {
 
 Bind data with the Gantt component by using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#datasource) property. It accepts an array of JavaScript object or the DataManager instance.
 
- {% tabs %}
- {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 <template>
     <div>
@@ -305,7 +306,7 @@ The data source fields that are required to render the tasks are mapped to the G
         
 {% previewsample "page.domainurl/code-snippet/gantt/getting-started-cs1" %}
 
-Note : While creating a Syncfusion Vue components using [`Direct Scripts`](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts), `camelCased` property (dataSource) names need to specify in the `kebab-cased` (data-source) equivalents.
+Note : While creating a Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using [`Direct Scripts`](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts), `camelCased` property (dataSource) names need to specify in the `kebab-cased` (data-source) equivalents.
 
 ## Defining timeline
 
@@ -487,7 +488,7 @@ To use Sorting, inject the [`Sort`](https://ej2.syncfusion.com/vue/documentation
         
 {% previewsample "page.domainurl/code-snippet/gantt/getting-started-cs11" %}
 
-## Defining eventmarkers
+## Defining event markers
 
 The [`eventMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#eventmarkers) property in Gantt component is used to highlight the important event in Gantt chart part. By using this feature, you can add the lines and label to highlight important days in your project.
 
