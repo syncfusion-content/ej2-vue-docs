@@ -29,5 +29,5 @@ Render the Rich Text Editor in form.
 
 ## See also
 
-* [How to integrate the third party library](./third-party-integration/)
-* [How to validate the value](./validation/)
+* [How to integrate the third party library](../third-party-integration)
+* [How to validate the value](../validation)

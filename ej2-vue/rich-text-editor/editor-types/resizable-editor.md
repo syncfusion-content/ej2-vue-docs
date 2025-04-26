@@ -58,4 +58,4 @@ By default, the control resizes up to the current viewport size. Apply these sty
 ## See also
 
 * [Working with IFrame Editing Mode](./iframe)
-* [Using the Markdown Editor](../markdown-editor/getting-started)
+* [Using the Markdown Editor](../../markdown-editor/getting-started)
