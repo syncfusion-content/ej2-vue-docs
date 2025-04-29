@@ -13,7 +13,7 @@
 </template>
 <script>
 import { L10n, setCulture } from '@syncfusion/ej2-base';
-import { GridComponent, Page, Group } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, Page, Group, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 setCulture('de-DE');
 L10n.load({
