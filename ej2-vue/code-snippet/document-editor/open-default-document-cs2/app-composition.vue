@@ -9,7 +9,7 @@ import { provide, ref } from "vue";
 import { DocumentEditorContainerComponent, DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
 const container = ref(null);
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 const height = '590px';
 
 provide('DocumentEditorContainer', [Toolbar]);
