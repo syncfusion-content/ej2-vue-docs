@@ -12,7 +12,7 @@ new Vue({
 
       data(){
         return {
-            serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+            serviceUrl:'https://services.syncfusion.com/vue/production/api/documenteditor/',
             height: '590px'
         }
       },

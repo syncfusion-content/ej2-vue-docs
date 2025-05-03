@@ -33,7 +33,7 @@ The following example code illustrates how to hide the properties pane.
 import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 import { provide } from 'vue';
 
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar])
@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       serviceUrl:
-        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+        'https://services.syncfusion.com/vue/production/api/documenteditor/',
     };
   },
   provide: {
@@ -71,6 +71,8 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 >Note: Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
 
@@ -93,7 +95,7 @@ The following example code illustrates how to hide the existing toolbar.
 import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 import { provide } from 'vue';
 
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar])
@@ -119,7 +121,7 @@ export default {
   data() {
     return {
       serviceUrl:
-        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+        'https://services.syncfusion.com/vue/production/api/documenteditor/',
     };
   },
   provide: {
@@ -131,6 +133,8 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## See Also
 

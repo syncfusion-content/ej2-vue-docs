@@ -139,7 +139,7 @@ import { onMounted, ref, provide } from 'vue';
 import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
 const container = ref(null);
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 
 provide('DocumentEditorContainer', [Toolbar]);
 
@@ -170,7 +170,7 @@ export default {
     'ejs-documenteditorcontainer': DocumentEditorContainerComponent
   },
   data() {
-    return { serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/' };
+    return { serviceUrl: 'https://services.syncfusion.com/vue/production/api/documenteditor/' };
   },
   provide: {//Inject require modules.
     DocumentEditorContainer: [Toolbar]
@@ -186,6 +186,8 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Comment only protection can be enabled in UI by using [Restrict Editing pane](../document-editor/document-management#restrict-editing-pane)
 
@@ -216,7 +218,7 @@ The following example illustrates how to enable mention support in the Document 
             ];
   export default {
     data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+      return { serviceUrl:'https://services.syncfusion.com/vue/production/api/documenteditor/',
       settings: { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} }},
     },
     provide: {
@@ -226,3 +228,107 @@ The following example illustrates how to enable mention support in the Document 
   }
 </script>
 ```
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+## Events
+
+DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/vue/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
+
+To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" height="590px" :toolbarItems='items' :documentEditorSettings="settings" :beforeCommentAction="beforeComment"
+      :enableToolbar='true' :currentUser="'Guest User'" > </ejs-documenteditorcontainer>
+  </div>
+</template>
+
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+let mentionData =  [
+                { "Name": "Mary Kate", "EmailId": "marry@company.com" },
+                { "Name": "Andrew James", "EmailId": "james@company.com" },
+                { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
+            ];
+provide('DocumentEditorContainer', [Toolbar]);
+const settings= { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} };
+const beforeComment = function (args) {
+  if(args.type === "Delete" && container.value.ej2Instances.currentUser !== args.author){
+    args.cancel = true;
+  }
+}
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
+</style>
+
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" height="590px" :beforeCommentAction="beforeComment"
+      :enableToolbar='true' :documentEditorSettings="settings" :currentUser="'Guest User'" ></ejs-documenteditorcontainer>
+  </div>
+</template>
+
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+let mentionData =  [
+                { "Name": "Mary Kate", "EmailId": "marry@company.com" },
+                { "Name": "Andrew James", "EmailId": "james@company.com" },
+                { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
+            ];
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      settings: { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} }
+    }
+  },
+  provide: {
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    beforeComment: function (args) {
+      if(args.type === "Delete" && this.$refs.container.currentUser !== args.author){
+        args.cancel=true;
+      }
+    }
+  }
+}
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
