@@ -32,7 +32,7 @@ import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar
 import { provide, ref } from 'vue';
 
 const container = ref(null);
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar])
@@ -95,7 +95,7 @@ export default {
   data() {
     return {
       serviceUrl:
-        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+        'https://services.syncfusion.com/vue/production/api/documenteditor/',
     };
   },
   provide: {
@@ -147,6 +147,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
 ### Customize custom option in context menu
 
 Document Editor allows you to customize the added custom option and also to hide/show default context menu.
@@ -171,7 +173,7 @@ import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar
 import { provide, ref } from 'vue';
 
 const container = ref(null);
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar])
@@ -209,7 +211,7 @@ export default {
   data() {
     return {
       serviceUrl:
-        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+        'https://services.syncfusion.com/vue/production/api/documenteditor/',
     };
   },
   provide: {
@@ -236,6 +238,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
 #### Customize added context menu items
 
 The following code shows how to hide/show added custom option in context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs/).
@@ -254,7 +258,7 @@ import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar
 import { provide, ref } from 'vue';
 
 const container = ref(null);
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar])
@@ -323,7 +327,7 @@ export default {
   data() {
     return {
       serviceUrl:
-        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+        'https://services.syncfusion.com/vue/production/api/documenteditor/',
     };
   },
   provide: {
@@ -381,6 +385,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
 The following is the output of custom context menu with customization.
 
 {% tabs %}
@@ -393,3 +399,146 @@ The following is the output of custom context menu with customization.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/document-editor/customize-context-menu-cs1" %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+#### Customize Context Menu with sub-menu items
+
+Document Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/contextMenu/#addcustommenu) method.
+
+The following code shows how to add a sub items in the custom option in context menu in Document Editor Container.
+ 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onCreated = function () {
+  // creating Custom Options
+  let menuItems = [
+    {
+      text: 'Form field',
+      id: 'form field',
+      iconCss: 'e-de-formfield e-icons',
+      items: [
+        {
+          text: 'Text form',
+          id: 'Text form',
+          iconCss: 'e-icons e-de-textform',
+        },
+        {
+          text: 'Check box',
+          id: 'Check box',
+          iconCss: 'e-icons e-de-checkbox-form',
+        },
+        {
+          text: 'Drop down',
+          id: 'Drop down',
+          iconCss: 'e-icons e-de-dropdownform',
+        },
+      ],
+    },
+  ];
+  // adding Custom Options
+  container.value.ej2Instances.documentEditor.contextMenu.addCustomMenu(
+    menuItems,
+    false,
+    true
+  );
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer
+      ref="container"
+      :serviceUrl="serviceUrl"
+      v-on:created="onCreated"
+      height="590px"
+      id="container"
+      :enableToolbar="true"
+    ></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+} from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent,
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://services.syncfusion.com/vue/production/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar],
+  },
+  methods: {
+    onCreated: function () {
+      // creating Custom Options
+      let menuItems = [
+        {
+          text: 'Form field',
+          id: 'form field',
+          iconCss: 'e-de-formfield e-icons',
+          items: [
+            {
+              text: 'Text form',
+              id: 'Text form',
+              iconCss: 'e-icons e-de-textform',
+            },
+            {
+              text: 'Check box',
+              id: 'Check box',
+              iconCss: 'e-icons e-de-checkbox-form',
+            },
+            {
+              text: 'Drop down',
+              id: 'Drop down',
+              iconCss: 'e-icons e-de-dropdownform',
+            },
+          ],
+        },
+      ];
+      // adding Custom Options
+      this.$refs.container.ej2Instances.documentEditor.contextMenu.addCustomMenu(
+        menuItems,
+        false,
+        true
+      );
+    },
+  },
+};
+</script>
+<style></style>
+
+{% endhighlight %}
+{% endtabs %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+

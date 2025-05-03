@@ -14,7 +14,7 @@ import {
 import { createSpinner, showSpinner, hideSpinner } from '@syncfusion/ej2-popups';
 
 const container = ref(null);
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 
 provide('DocumentEditorContainer', [Toolbar],);
 

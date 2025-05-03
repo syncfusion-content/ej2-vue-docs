@@ -21,7 +21,7 @@ export default {
         "ejs-documenteditor": DocumentEditorComponent
     },
     data() {
-        return { serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/' }
+        return { serviceUrl: 'https://services.syncfusion.com/vue/production/api/documenteditor/' }
     },
     provide: {
         DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]

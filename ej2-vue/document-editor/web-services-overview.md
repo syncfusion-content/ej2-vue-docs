@@ -71,7 +71,7 @@ The following example code illustrates how to customize the method name using se
 import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 import { provide } from 'vue';
 
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 // Customize the API name
 const settings = { import: 'Import1', systemClipboard: 'SystemClipboard1', spellCheck: 'SpellCheck1', restrictEditing: 'RestrictEditing1' };
 
@@ -97,7 +97,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+      serviceUrl: 'https://services.syncfusion.com/vue/production/api/documenteditor/',
       // Customize the API name
       settings: { import: 'Import1', systemClipboard: 'SystemClipboard1', spellCheck: 'SpellCheck1', restrictEditing: 'RestrictEditing1' }
     };
@@ -111,6 +111,8 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Add the custom headers to XMLHttpRequest
 
@@ -129,7 +131,7 @@ Document editor component provides an an option to add custom headers of XMLHttp
 import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 import { provide } from 'vue';
 
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 // custom headers
 const customHeaders = [{ 'Authorization': 'Bearer YOUR_ACCESS_TOKEN' }, { 'Content-Type': 'application/json' }]
 
@@ -156,7 +158,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+      serviceUrl: 'https://services.syncfusion.com/vue/production/api/documenteditor/',
       // custom headers
       customHeaders: [{ 'Authorization': 'Bearer YOUR_ACCESS_TOKEN' }, { 'Content-Type': 'application/json' }]
     };
@@ -170,6 +172,8 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Modify the XMLHttpRequest before request send
 
@@ -193,7 +197,7 @@ import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar
 import { onMounted, provide, ref } from 'vue';
 
 const container = ref(null);
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar]);
 
@@ -231,7 +235,7 @@ onMounted(function () {
   Vue.use(DocumentEditorContainerPlugin);
   export default {
     data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'};
+      return { serviceUrl:'https://services.syncfusion.com/vue/production/api/documenteditor/'};
     },
     provide: {
       //Inject require modules.
@@ -258,5 +262,7 @@ onMounted(function () {
 
 {% endhighlight %}
 {% endtabs %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Note: Find the customizable serverActionType values are `'Import' | 'RestrictEditing' | 'SpellCheck' | 'SystemClipboard'`.

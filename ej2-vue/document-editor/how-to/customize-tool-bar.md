@@ -33,11 +33,22 @@ import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar
 import { provide, ref } from 'vue';
 
 const container = ref(null);
+const onWrapText = function (text) {
+  let content = '';
+    const index = text.lastIndexOf(' ');
+    if (index !== -1) {
+        content = text.slice(0, index) + "<div class='e-de-text-wrap'>" + text.slice(index + 1) + "<div>";
+    } else {
+        content = text;
+    }
+
+    return content;
+}
 const items = [
   {
     prefixIcon: "e-de-ctnr-lock",
     tooltipText: "Disable Image",
-    text: "Disable Image",
+    text: onWrapText("Disable Image"),
     id: "Custom"
   },
   'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']
@@ -59,32 +70,33 @@ const onToolbarClick = function (args) {
 
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer ref="container" :toolbarItems='items' v-bind:toolbarClick='onToolbarClick'
-      :enableToolbar='true'> </ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer
+      ref="container"
+      :toolbarItems="items"
+      v-bind:toolbarClick="onToolbarClick"
+      :enableToolbar="true"
+    >
+    </ejs-documenteditorcontainer>
   </div>
 </template>
 
 <script>
-import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+} from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   components: {
-    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent,
   },
   data() {
     return {
-      items: [
-        {
-          prefixIcon: "e-de-ctnr-lock",
-          tooltipText: "Disable Image",
-          text: "Disable Image",
-          id: "Custom"
-        },
-        'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']
-    }
+      items: this.getToolbarItems(),
+    };
   },
   provide: {
-    DocumentEditorContainer: [Toolbar]
+    DocumentEditorContainer: [Toolbar],
   },
   methods: {
     onToolbarClick: function (args) {
@@ -94,9 +106,63 @@ export default {
           this.$refs.container.ej2Instances.toolbar.enableItems(4, false);
           break;
       }
-    }
-  }
-}
+    },
+    onWrapText: function (text) {
+      let content = '';
+      const index = text.lastIndexOf(' ');
+
+      if (index !== -1) {
+        content =
+          text.slice(0, index) +
+          "<div class='e-de-text-wrap'>" +
+          text.slice(index + 1) +
+          '</div>';
+      } else {
+        content = text;
+      }
+
+      return content;
+    },
+    getToolbarItems: function () {
+      return [
+        {
+          prefixIcon: 'e-de-ctnr-lock',
+          tooltipText: 'Disable Image',
+          text: this.onWrapText('Disable Image'),
+          id: 'Custom',
+        },
+        'Undo',
+        'Redo',
+        'Separator',
+        'Image',
+        'Table',
+        'Hyperlink',
+        'Bookmark',
+        'TableOfContents',
+        'Separator',
+        'Header',
+        'Footer',
+        'PageSetup',
+        'PageNumber',
+        'Break',
+        'InsertFootnote',
+        'InsertEndnote',
+        'Separator',
+        'Find',
+        'Separator',
+        'Comments',
+        'TrackChanges',
+        'Separator',
+        'LocalClipboard',
+        'RestrictEditing',
+        'Separator',
+        'FormFields',
+        'UpdateFields',
+        'ContentControl',
+      ];
+    },
+  },
+};
 </script>
 
 {% endhighlight %}

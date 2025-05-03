@@ -7,7 +7,7 @@ import { onMounted, ref } from "vue";
 import { DocumentEditorComponent as EjsDocumenteditor } from '@syncfusion/ej2-vue-documenteditor';
 
 const documenteditor = ref(null);
-const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const serviceUrl = 'https://services.syncfusion.com/vue/production/api/documenteditor/';
 const height = '370px';
 
 onMounted(function () {

@@ -25,6 +25,8 @@ In this article, we are going to see how to open a document in read only mode by
         
 {% previewsample "page.domainurl/code-snippet/document-editor/getting-started-cs4" %}
 
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
 ## How to open a document in ready only mode by default in DocumentEditorContainer
 
 {% tabs %}
@@ -37,5 +39,7 @@ In this article, we are going to see how to open a document in read only mode by
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/document-editor/getting-started-cs5" %}
+
+> The Web API hosted link `https://services.syncfusion.com/vue/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Note: You can use the `restrictEditing` in Document Editor Container and `isReadOnly` in Document Editor based on your requirement to change component to read only mode.
