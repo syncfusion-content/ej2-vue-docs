@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Tool bar items in Vue Grid component
 
-The Syncfusion Vue Grid offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. This customizable toolbar is positioned above the grid, providing a convenient way to access various actions and functionalities
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. This customizable toolbar is positioned above the grid, providing a convenient way to access various actions and functionalities
 
 ## Built-in toolbar items
 
-Built-in toolbar items in the Syncfusion Vue Grid component involves utilizing pre-defined actions to perform standard operations within the Grid.
+Built-in toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component involves utilizing pre-defined actions to perform standard operations within the Grid.
 
 These items can be added by defining the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property as a collection of built-in items. Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their respective actions.
 
@@ -75,7 +75,7 @@ This is demonstrated in the following sample:
 
 ### Customize the built-in toolbar items
 
-The Syncfusion Vue Grid component allows you to customize the built-in toolbar items to meet your specific requirements. This can include adding, removing, or modifying toolbar items, as well as handling custom actions when toolbar buttons are clicked.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component allows you to customize the built-in toolbar items to meet your specific requirements. This can include adding, removing, or modifying toolbar items, as well as handling custom actions when toolbar buttons are clicked.
 
 To customize the built-in toolbar items, you can use the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event of the grid.
 
@@ -94,7 +94,7 @@ The following example demonstrate how to customize the toolbar by disabling and 
 
 ## Custom toolbar items
 
-Adding custom toolbar items to the Syncfusion Vue Grid involves incorporating personalized functionality into the toolbar.
+Adding custom toolbar items to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid involves incorporating personalized functionality into the toolbar.
 
 Custom toolbar items can be added to the Grid component by defining the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property as a collection of [ItemModel](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel) objects. These objects define the custom items and their corresponding actions. The actions for the customized toolbar items are defined in the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event.
 
@@ -116,7 +116,7 @@ By default, custom toolbar items are positioned on the **left** side of the tool
 
 ## Both built-in and custom items in toolbar
 
-Built-in and custom items in a toolbar within the Syncfusion Vue Grid provides the flexibility to create a customized toolbar with a combination of standard actions and custom actions.
+Built-in and custom items in a toolbar within the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid provides the flexibility to create a customized toolbar with a combination of standard actions and custom actions.
 
 To use both types of toolbar items, you can define the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property of the Grid as an array that includes both built-in and custom items. The built-in items are specified as strings, while the custom items are defined as objects with properties such as [text](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/#text), [prefixIcon](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/#prefixicon), and [id](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/#id) within the toolbar component.
 
@@ -242,7 +242,7 @@ components: {
 
 ## Custom toolbar items in a specific position
 
-Customizing the position of a custom toolbar within the Syncfusion Vue Grid involves modifying the default placement of the custom toolbar items. This enables you to precisely control the positioning of each custom toolbar item according to your specific requirements and desired layout within the Grid.
+Customizing the position of a custom toolbar within the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid involves modifying the default placement of the custom toolbar items. This enables you to precisely control the positioning of each custom toolbar item according to your specific requirements and desired layout within the Grid.
 
 By default, custom toolbar items in Grid component are aligned on the left side of the toolbar. However, you have the ability to modify the position of the custom toolbar items by utilizing the [align](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel#align) property of the [ItemModel](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel).
 

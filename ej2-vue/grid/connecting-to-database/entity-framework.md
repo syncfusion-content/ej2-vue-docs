@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting SQL Server data to Syncfusion Vue Grid using Entity Framework
+# Connecting SQL Server data to Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid using Entity Framework
 
-This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) and bind it to the Syncfusion Vue Grid.
+This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) and bind it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 Microsoft SQL Server database can be bound to the Grid using **Entity Framework** in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Grid using **Entity Framework**. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
@@ -21,7 +21,7 @@ Entity Framework is an open-source [ORM framework](https://en.wikipedia.org/wiki
 
 **1. Using UrlAdaptor**
 
-The [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion Vue Grid by connecting to an existing pre-configured API service linked to the Microsoft SQL Server databaset5uf5. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/web-api-adaptor), [ODataV4](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
+The [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid by connecting to an existing pre-configured API service linked to the Microsoft SQL Server databaset5uf5. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/web-api-adaptor), [ODataV4](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
 
 **2. Using CustomAdaptor**
 
@@ -29,7 +29,7 @@ The `CustomAdaptor` serves as a mediator between the UI component and the databa
 
 ## Binding data using Entity Framework from Microsoft SQL Server via an API service.
 
-This section describes step by step process how to use Entity Framework to retrieve data from a Microsoft SQL Server using an API service and bind it to the Syncfusion Vue Grid.
+This section describes step by step process how to use Entity Framework to retrieve data from a Microsoft SQL Server using an API service and bind it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 ### Creating an API service
 
@@ -37,7 +37,7 @@ This section describes step by step process how to use Entity Framework to retri
 
 **2.** To use Entity Framework and access the Microsoft SQL Server database in our Vue application, need to install the [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) and [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) NuGet packages. To add **Microsoft.EntityFrameworkCore** and **Microsoft.EntityFrameworkCore.SqlServer** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
-**3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Syncfusion Vue Grid.
+**3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 **4.** In the API controller (aka, GridController), a connection is established to Microsoft SQL Server within the **GetOrderData()** method using **OrderDbContext**. This class extends **DbContext** and is configured to connect to a Microsoft SQL Server database using the provided connection string. It includes a **DbSet<Orders>** property, enabling interaction with the **Orders** table in the database. The method retrieves all orders from the database asynchronously and returns them as a list of `Orders` objects as shown in the following code snippet.
 
@@ -139,13 +139,13 @@ namespace Grid_EntityFramework.Server.Controllers
 
 ![Hosted API URL](../images/DB-data.png)
 
-### Connecting Syncfusion Vue Grid to an API service
+### Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid to an API service
 
-To integrate the Syncfusion Vue Grid into your Vue and ASP.NET Core project using Visual Studio, follow the below steps:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid into your Vue and ASP.NET Core project using Visual Studio, follow the below steps:
 
-**Step 1: Install Syncfusion Package**
+**Step 1: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Package**
 
-Open your terminal in the project client folder and install the required Syncfusion packages using npm:
+Open your terminal in the project client folder and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using npm:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -158,7 +158,7 @@ Remove unnecessary default codes in `App.vue` and `main.css`.
 
 **Step 3: Adding CSS reference**
 
-Include the necessary CSS files in your `App.Vue` file to style the Syncfusion Vue Grid:
+Include the necessary CSS files in your `App.Vue` file to style the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind.css';
@@ -172,7 +172,7 @@ Include the necessary CSS files in your `App.Vue` file to style the Syncfusion V
 @import '../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css';
 ```
 
-**Step 4: Adding Syncfusion Vue Grid**
+**Step 4: Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid**
 
 To add the Grid using **Composition API** or **Options API**, follow these steps:
 
@@ -379,7 +379,7 @@ var app = builder.Build();
 app.UseCors();
 ```
 
-> * The Syncfusion Vue Grid provides built-in support for handling various data operations such as searching, sorting, filtering, aggregate and paging on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformTake` and `PerformSkip` available in the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) package. Let’s explore how to manage these data operations using the `UrlAdaptor`.
+> * The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid provides built-in support for handling various data operations such as searching, sorting, filtering, aggregate and paging on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformTake` and `PerformSkip` available in the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) package. Let’s explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add `Syncfusion.EJ2.AspNet.Core` by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 > * To access `DataManagerRequest` and `QueryableOperation`, import `Syncfusion.EJ2.Base` in `GridController.cs` file.
 
@@ -918,7 +918,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ### Handling CRUD operations
 
-The Syncfusion Vue Grid seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: `insertUrl`, `removeUrl`, `updateUrl` and `batchUrl`. These properties enable the Grid to communicate with the data service for every Grid action, facilitating server-side operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: `insertUrl`, `removeUrl`, `updateUrl` and `batchUrl`. These properties enable the Grid to communicate with the data service for every Grid action, facilitating server-side operations.
 
 **CRUD Operations Mapping**
 
@@ -1358,7 +1358,7 @@ public class CRUDModel<T> where T : class
 {% endhighlight %}
 {% endtabs %}
 
-When you run the application, the resultant Syncfusion Vue Grid will look like this
+When you run the application, the resultant Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid will look like this
 
 ![Grid bound with Microsoft SQL Server using Entity](../images/DB-grid-action.gif)
 
@@ -1366,9 +1366,9 @@ When you run the application, the resultant Syncfusion Vue Grid will look like t
 
 ## Binding data from Microsoft SQL Server using Entity Framework with CustomAdaptor
 
-This section describes step by step process how to use Entity Framework to retrieve data from a Microsoft SQL Server using `CustomAdaptor` and bind it to the Syncfusion Vue Grid.
+This section describes step by step process how to use Entity Framework to retrieve data from a Microsoft SQL Server using `CustomAdaptor` and bind it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
-**1.** To create a simple Grid, the procedure is explained in the above-mentioned topic on [Connecting Syncfusion Vue Grid to an API service](#connecting-syncfusion-vue-grid-to-an-api-service)
+**1.** To create a simple Grid, the procedure is explained in the above-mentioned topic on [Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid to an API service](#connecting-syncfusion-vue-grid-to-an-api-service)
 
 **2.** To use `Entity Framework` and access the Microsoft SQL Server database in our Vue application, we need to install the [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) and [Microsoft.EntityFrameworkCore.SqlServer ](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) NuGet packages. To add **Microsoft.EntityFrameworkCore** and **Microsoft.EntityFrameworkCore.SqlServer** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
@@ -1583,7 +1583,7 @@ namespace Grid_EntityFramework.Server.Controllers
 
 When utilizing the `CustomAdaptor` in Vue, managing the searching operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
 
-In the code example below, searching a custom data source can be accomplished by employing the built-in `PerformSearching` method of the `QueryableOperation` class. Alternatively, you can implement your own method for searching operation and bind the resultant data to the Syncfusion Vue Grid.
+In the code example below, searching a custom data source can be accomplished by employing the built-in `PerformSearching` method of the `QueryableOperation` class. Alternatively, you can implement your own method for searching operation and bind the resultant data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -1733,7 +1733,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 When utilizing the `CustomAdaptor` in Vue, managing the filtering operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
 
-In the code example below, filtering a custom data source can be achieved by utilizing the built-in `PerformFiltering` method of the `QueryableOperation` class. Alternatively, you can implement your own method for filtering operation and bind the resulting data to the Syncfusion Vue Grid.
+In the code example below, filtering a custom data source can be achieved by utilizing the built-in `PerformFiltering` method of the `QueryableOperation` class. Alternatively, you can implement your own method for filtering operation and bind the resulting data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -1887,7 +1887,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 When utilizing the `CustomAdaptor` in Vue, managing the sorting operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
 
-In the code example below, sorting a custom data source can be accomplished by employing the built-in `PerformSorting` method of the `QueryableOperation` class. Alternatively, you can implement your own method for sorting operation and bind the resulting data to the Syncfusion Vue Grid.
+In the code example below, sorting a custom data source can be accomplished by employing the built-in `PerformSorting` method of the `QueryableOperation` class. Alternatively, you can implement your own method for sorting operation and bind the resulting data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -2035,7 +2035,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 When utilizing the `CustomAdaptor` in Vue, managing the paging operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
 
-In the code example below, paging a custom data source can be achieved by utilizing the built-in `PerformTake` and `PerformSkip` method of the `QueryableOperation` class. Alternatively, you can use your own method for paging operation and bind the resulting data to the Syncfusion Vue Grid.
+In the code example below, paging a custom data source can be achieved by utilizing the built-in `PerformTake` and `PerformSkip` method of the `QueryableOperation` class. Alternatively, you can use your own method for paging operation and bind the resulting data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -2186,7 +2186,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 ### Handling CRUD operations
 
-To enable editing in the Syncfusion Vue Grid, utilize the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) documentation.
+To enable editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, utilize the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) documentation.
 
 In this scenario, the inline edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) and [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property configured to display toolbar items for editing purpose.
 
@@ -2317,7 +2317,7 @@ The CRUD operations can be performed and customized on our own by overriding the
 * update
 * batchRequest
 
-Let’s see how to perform CRUD operations using Entity Framework in Microsoft SQL Server data with Syncfusion Vue Grid.
+Let’s see how to perform CRUD operations using Entity Framework in Microsoft SQL Server data with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 **Insert Operation:**
 

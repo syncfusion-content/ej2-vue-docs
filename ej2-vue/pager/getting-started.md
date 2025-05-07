@@ -15,7 +15,7 @@ and demonstrate the basic usage of the pager component in Vue environment.
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Setup Vue Environment
 
@@ -38,9 +38,9 @@ cd quickstart
 npm install
 ```
 
-## Adding Syncfusion Pager package
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Pager package
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
 
 To install pager component, use the following command
 
@@ -137,13 +137,13 @@ import { PagerComponent as EjsPager } from '@syncfusion/ej2-vue-grids';
 
 ## Page sizes
 
-The [pageSizes](https://ej2.syncfusion.com/vue/documentation/api/pager/#pagesizes) property in the Syncfusion Pager component allows you to control the number of records displayed per page through a `DropDownList` integrated into the pager. This feature enhances the experience by providing flexibility in data viewing.
+The [pageSizes](https://ej2.syncfusion.com/vue/documentation/api/pager/#pagesizes) property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Pager component allows you to control the number of records displayed per page through a `DropDownList` integrated into the pager. This feature enhances the experience by providing flexibility in data viewing.
 
 **Enabling Page Sizes**
 
 To enable the `pageSizes` property, follow these steps:
 
-1. Import the `PagerDropDown` and `Pager` modules from the Syncfusion Grid package.
+1. Import the `PagerDropDown` and `Pager` modules from the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package.
 
 2. Inject the `PagerDropDown` into the `Pager` module to enable the `DropDownList` in the pager.
 

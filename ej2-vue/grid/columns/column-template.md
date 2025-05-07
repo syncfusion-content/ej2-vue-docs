@@ -146,7 +146,7 @@ The column template has options to render a custom component in a grid column in
 
 ### Render LineChart component in a column
 
-The [LineChart](https://ej2.syncfusion.com/vue/documentation/sparkline/getting-started) component of Syncfusion provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
+The [LineChart](https://ej2.syncfusion.com/vue/documentation/sparkline/getting-started) component of Syncfusion<sup style="font-size:70%">&reg;</sup> provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
 
 In the following example, we rendered the Sparkline Chart component in the Grid column by defining the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
 
@@ -163,7 +163,7 @@ In the following example, we rendered the Sparkline Chart component in the Grid 
 
 ### Render ColorPicker component in a column
 
-The [ColorPicker](https://ej2.syncfusion.com/vue/documentation/color-picker/getting-started) component of Syncfusion provides a user-friendly way to select colors from a pre-defined color palette or custom colors. It can be used in a variety of scenarios such as picking a theme color or changing the color of an element on a page.
+The [ColorPicker](https://ej2.syncfusion.com/vue/documentation/color-picker/getting-started) component of Syncfusion<sup style="font-size:70%">&reg;</sup> provides a user-friendly way to select colors from a pre-defined color palette or custom colors. It can be used in a variety of scenarios such as picking a theme color or changing the color of an element on a page.
 
 In the following code, we rendered the ColorPicker component in the Grid column by defining the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
 
@@ -230,7 +230,7 @@ In the following code, we rendered the Chips component in the Grid **First Name*
 
 ### Render ProgressBar component in a column
 
-The Syncfusion Grid component supports rendering the [Progress Bar](https://ej2.syncfusion.com/vue/documentation/progressbar/getting-started) component within a column using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property. Displaying the `Progress Bar` component in a grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component supports rendering the [Progress Bar](https://ej2.syncfusion.com/vue/documentation/progressbar/getting-started) component within a column using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property. Displaying the `Progress Bar` component in a grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
 
 In the following code, the `Progress Bar` component render in the Grid **Freight** column by defining the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
 
@@ -253,9 +253,9 @@ In the following code, the `Progress Bar` component render in the Grid **Freight
 
 ### Render RadioButton in a column 
 
-The Syncfusion Vue Grid supports rendering the [RadioButton](https://ej2.syncfusion.com/vue/documentation/radio-button/getting-started) within a column using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property. This feature is particularly useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid supports rendering the [RadioButton](https://ej2.syncfusion.com/vue/documentation/radio-button/getting-started) within a column using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property. This feature is particularly useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the Grid.
 
-In the following example, a `RadioButton` is rendered in the **Order Status** column of the Syncfusion Vue Grid by defining the `template` property.
+In the following example, a `RadioButton` is rendered in the **Order Status** column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid by defining the `template` property.
 
 ```
 <template v-slot:radioTemplate="{ data }">
@@ -325,7 +325,7 @@ In the following code, the button element is rendered in the **Employee Data** c
 
 ## Use custom helper inside the template
 
-The Syncfusion Grid allows you to use custom helpers inside the column template. This feature allows you to create complex templates that can incorporate additional helper functions that are not available through the default [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) syntax.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to use custom helpers inside the column template. This feature allows you to create complex templates that can incorporate additional helper functions that are not available through the default [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) syntax.
 
 To use the custom helper function inside a column template, you must first add the function to the template's context. This can be done by using the let keyword to create a new variable that references the function.
 
@@ -431,7 +431,7 @@ components: {
 
 ## Dynamically adding template column
 
-The Syncfusion Grid component allows you to dynamically add template columns at runtime. This capability is particularly useful when the structure of the grid needs to be modified based on individual interactions or other dynamic conditions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to dynamically add template columns at runtime. This capability is particularly useful when the structure of the grid needs to be modified based on individual interactions or other dynamic conditions.
 
 Dynamically adding template columns involves creating and inserting columns with custom templates after the grid has been initialized. This approach provides flexibility in presenting data in a highly customizable manner.
 
