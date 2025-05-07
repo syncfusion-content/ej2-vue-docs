@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Global local in Vue Grid component
 
-The Syncfusion Vue Grid component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
 
 ## Localization
 
-The Syncfusion Vue Grid provides a built-in [Localization](https://ej2.syncfusion.com/vue/documentation/common/localization) library, enabling you to customize the text used in the grid to suit different languages or cultural preferences. With this library, you can change static text on various elements, such as **group drop area text** and **pager information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid provides a built-in [Localization](https://ej2.syncfusion.com/vue/documentation/common/localization) library, enabling you to customize the text used in the grid to suit different languages or cultural preferences. With this library, you can change static text on various elements, such as **group drop area text** and **pager information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more.
 
 This can be achieved by defining the [locale](https://ej2.syncfusion.com/vue/documentation/api/grid/#locale) property and translation object.
 
@@ -228,7 +228,7 @@ Pages |  Pages |
 
 ### Loading translations for de culture
 
-The Syncfusion Vue Grid component provides a built-in Localization library that allows you to load translation objects for different cultures. By using the **load** function of the **L10n** class, you can customize the text content of the Grid to be displayed in different languages. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component provides a built-in Localization library that allows you to load translation objects for different cultures. By using the **load** function of the **L10n** class, you can customize the text content of the Grid to be displayed in different languages. 
 
 This feature allows you to specify translation objects for specific cultures, such as **Deutsch** (German), and display the Grid's content in the desired language.
 
@@ -264,7 +264,7 @@ The following example demonstrates how to load a translation object for **French
 
 ### Switch the different localization
 
-The Syncfusion Vue Grid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. 
 
 To switch to a different localization, follow these steps:
 
@@ -297,7 +297,7 @@ To switch to the **French** culture and set the currency code as **EUR**, you ca
 
 ## Internationalization
 
-The Internationalization library in the Syncfusion Vue Grid provides a localized display of number, date, and time values in the Grid component based on the preferred language and region.
+The Internationalization library in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid provides a localized display of number, date, and time values in the Grid component based on the preferred language and region.
 
 [Internationalization](https://ej2.syncfusion.com/vue/documentation/common/internationalization) library allows you to globalize number, date, and time values using format strings defined in the [columns.format](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#format) property.
 
@@ -319,7 +319,7 @@ You need to load the culture format files corresponding to the desired locale. T
 
 ## Right to Left - RTL
 
-The Right to Left (RTL) feature in the Syncfusion Vue Grid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
+The Right to Left (RTL) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
 
 To enable RTL in the Grid, you need to set the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablertl) property to **true**. By setting `enableRtl`, the grid component's text direction and layout will be adjusted to support right-to-left languages.
 

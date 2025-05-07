@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar in Vue Grid component
 
-You can customize the appearance of the toolbar in the Syncfusion Vue Grid component using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
+You can customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
 
 ## Customizing the toolbar root element
 

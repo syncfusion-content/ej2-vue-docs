@@ -11,13 +11,13 @@ domainurl: ##DomainURL##
 
 # Binding and perform CRUD operation using RemoteSaveAdaptor
 
-The RemoteSaveAdaptor in Syncfusion Vue Grid Component allows you to perform grid actions such as sorting, filtering, searching and paging primarily on the client-side while handling CRUD operations, such as updating, inserting, and removing data, on the server-side for data persistence. This approach optimizes your experience by minimizing unnecessary server interactions.
+The RemoteSaveAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid Component allows you to perform grid actions such as sorting, filtering, searching and paging primarily on the client-side while handling CRUD operations, such as updating, inserting, and removing data, on the server-side for data persistence. This approach optimizes your experience by minimizing unnecessary server interactions.
 
 Ensure your server-side implementation in ASP.NET Core handles CRUD operations. Here is an example of how you can set up your ASP.NET Core controller to handle these operations:
 
 **Server-Side Implementation**
 
-To configure a server with Syncfusion Vue Grid, you need to follow the below steps:
+To configure a server with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, you need to follow the below steps:
 
 **1. Project Creation:**
 
@@ -236,13 +236,13 @@ Run the application in Visual Studio. It will be accessible on a URL like **http
 
 After running the application, you can verify that the server-side API controller is successfully returning the order data in the URL(https://localhost:xxxx/api/Orders). Here **xxxx** denotes the port number.
 
-**Connecting syncfusion vue grid to an api service**
+**Connecting syncfusion<sup style="font-size:70%">&reg;</sup> vue grid to an api service**
 
-To integrate the Syncfusion Grid component into your Vue and ASP.NET Core project using Visual Studio, follow the steps below:
+To integrate the <sup style="font-size:70%">&reg;</sup> Grid component into your Vue and ASP.NET Core project using Visual Studio, follow the steps below:
 
-**Step 1:** Install Syncfusion Package
+**Step 1:** Install Syncfusion<sup style="font-size:70%">&reg;</sup> Package
 
-Open your terminal in the project’s client folder and install the required Syncfusion packages using npm:
+Open your terminal in the project’s client folder and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using npm:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -255,7 +255,7 @@ Remove unnecessary default codes in `App.vue` and `main.css`.
 
 **Step 3:** Adding CSS Reference
 
-Include the necessary CSS files in your `App.Vue` file to style the Syncfusion Vue component:
+Include the necessary CSS files in your `App.Vue` file to style the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind.css';
@@ -269,13 +269,13 @@ Include the necessary CSS files in your `App.Vue` file to style the Syncfusion V
 @import '../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css';
 ```
 
-**Step 4:** Adding Syncfusion Vue Grid Component
+**Step 4:** Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid Component
 
 In your `App.vue`, import `DataManager` and `RemoteSaveAdaptor` from` @syncfusion/ej2-data`. Create a `DataManager` instance by following these steps:
 
   * **Assign RemoteSaveAdaptor:** Set the `adaptor` property within the  [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) configuration to new RemoteSaveAdaptor(). This enables server-side CRUD operations for your grid.
 
-  * **Set DataSource Property:** Configure the `dataSource` property of your Syncfusion Vue Grid with a JSON object.
+  * **Set DataSource Property:** Configure the `dataSource` property of your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid with a JSON object.
 
   * **CRUD Operations Mapping:** CRUD operations within the grid can be mapped to server-side controller actions using specific properties:
       * **insertUrl**: Specifies the URL for inserting new data.

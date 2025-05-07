@@ -9,23 +9,23 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting PostgreSQL Server data to Syncfusion Vue Grid
+# Connecting PostgreSQL Server data to Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid
 
-This section describes how to connect and retrieve data from a PostgreSQL Server database using [Npgsql EntityFrameworkCore PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) and bind it to the Syncfusion Vue Grid.
+This section describes how to connect and retrieve data from a PostgreSQL Server database using [Npgsql EntityFrameworkCore PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) and bind it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 PostgreSQL Server database can be bound to the Grid in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a PostgreSQL Server database to a Grid. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
 **1. Using UrlAdaptor**
 
-The [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion Vue Grid by connecting to an existing pre-configured API service linked to the PostgreSQL Server database. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/web-api-adaptor), [ODataV4](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
+The [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid by connecting to an existing pre-configured API service linked to the PostgreSQL Server database. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/web-api-adaptor), [ODataV4](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
 
 **2. Using CustomAdaptor**
 
-The `CustomAdaptor` serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the Syncfusion Vue Grid locally using the `dataSource` property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Grid, a corresponding request with action details is sent to the `CustomAdaptor`. The Grid provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `result` and `count` format for displaying in the Grid. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
+The `CustomAdaptor` serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid locally using the `dataSource` property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Grid, a corresponding request with action details is sent to the `CustomAdaptor`. The Grid provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `result` and `count` format for displaying in the Grid. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
 
 ## Binding data from PostgreSQL Server using an API service
 
-This section describes step by step process how to retrieve data from a PostgreSQL Server using an API service and bind it to the Syncfusion Vue Grid.
+This section describes step by step process how to retrieve data from a PostgreSQL Server using an API service and bind it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 ### Creating an API service
 
@@ -33,7 +33,7 @@ This section describes step by step process how to retrieve data from a PostgreS
 
 **2.** To connect a PostgreSQL Server database using the PostgreSQL driver in your application, you need to install the [Npgsql.EntityFrameworkCore.PostgreSQL ](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) NuGet package. To add **Npgsql.EntityFrameworkCore.PostgreSQL** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
-**3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Syncfusion Vue Grid.
+**3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
 **4.** In an API controller (aka, GridController), connect to PostgreSQL Server. In the **GetOrderData()** method **NpgsqlConnection** helps to connect the PostgreSQL Server database. Next, using **NpgsqlCommand** and **NpgsqlDataAdapter** you can process the desired Npgsql query string and retrieve data from the database. The **Fill** method of the **DataAdapter** is used to populate the Npgsql data into a **DataTable** as shown in the following code snippet.
 
@@ -138,13 +138,13 @@ namespace Grid_PostgreSQL.Server.Controllers
 
 ![Hosted API URL](../images/DB-data.png)
 
-### Connecting Syncfusion Vue Grid to an API service
+### Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid to an API service
 
-To integrate the Syncfusion Vue Grid into your Vue and ASP.NET Core project using Visual Studio, follow the below steps:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid into your Vue and ASP.NET Core project using Visual Studio, follow the below steps:
 
-**Step 1: Install Syncfusion Package**
+**Step 1: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Package**
 
-Open your terminal in the project client folder and install the required Syncfusion packages using npm:
+Open your terminal in the project client folder and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using npm:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -157,7 +157,7 @@ Remove unnecessary default codes in `App.vue` and `main.css`.
 
 **Step 3: Adding CSS reference**
 
-Include the necessary CSS files in your `App.Vue` file to style the Syncfusion Vue Grid:
+Include the necessary CSS files in your `App.Vue` file to style the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind.css';
@@ -171,7 +171,7 @@ Include the necessary CSS files in your `App.Vue` file to style the Syncfusion V
 @import '../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css';
 ```
 
-**Step 4: Adding Syncfusion Vue Grid**
+**Step 4: Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid**
 
 To add the Grid using **Composition API** or **Options API**, follow these steps:
 
@@ -381,7 +381,7 @@ var app = builder.Build();
 app.UseCors();
 ```
 
-> * The Syncfusion Vue Grid provides built-in support for handling various data operations such as searching, sorting, filtering, aggregate and paging on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformTake` and `PerformSkip` available in the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) package. Let’s explore how to manage these data operations using the `UrlAdaptor`.
+> * The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid provides built-in support for handling various data operations such as searching, sorting, filtering, aggregate and paging on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformTake` and `PerformSkip` available in the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) package. Let’s explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add `Syncfusion.EJ2.AspNet.Core` by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 > * To access `DataManagerRequest` and `QueryableOperation`, import `Syncfusion.EJ2.Base` in `GridController.cs` file.
 
@@ -920,7 +920,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ### Handling CRUD operations
 
-The Syncfusion Vue Grid seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: `insertUrl`, `removeUrl`, `updateUrl` and `batchUrl`. These properties enable the Grid to communicate with the data service for every Grid action, facilitating server-side operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: `insertUrl`, `removeUrl`, `updateUrl` and `batchUrl`. These properties enable the Grid to communicate with the data service for every Grid action, facilitating server-side operations.
 
 **CRUD Operations Mapping**
 
@@ -1316,7 +1316,7 @@ public class CRUDModel<T> where T : class
 {% endhighlight %}
 {% endtabs %}
 
-When you run the application, the resultant Syncfusion Vue Grid will look like this
+When you run the application, the resultant Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid will look like this
 
 ![Grid bound with PostgreSQL Server data](../images/DB-grid-action.gif)
 
@@ -1324,9 +1324,9 @@ When you run the application, the resultant Syncfusion Vue Grid will look like t
 
 ## Binding data from PostgreSQL Server using CustomAdaptor
 
-This section describes step by step process how to retrieve data from a PostgreSQL Server using `CustomAdaptor` and bind it to the Syncfusion Vue Grid.
+This section describes step by step process how to retrieve data from a PostgreSQL Server using `CustomAdaptor` and bind it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid.
 
-**1.** To create a simple Grid, the procedure is explained in the above-mentioned topic on [Connecting Syncfusion Vue Grid to an API service](#connecting-syncfusion-vue-grid-to-an-api-service)
+**1.** To create a simple Grid, the procedure is explained in the above-mentioned topic on [Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid to an API service](#connecting-syncfusion-vue-grid-to-an-api-service)
 
 **2.** To connect a PostgreSQL Server database using the PostgreSQL driver in your application, you need to install the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) NuGet package. To add **Npgsql.EntityFrameworkCore.PostgreSQL** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
@@ -2149,7 +2149,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 ### Handling CRUD operations
 
-To enable editing in the Syncfusion Vue Grid, utilize the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) documentation.
+To enable editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, utilize the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) documentation.
 
 In this scenario, the inline edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) and [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property configured to display toolbar items for editing purpose.
 

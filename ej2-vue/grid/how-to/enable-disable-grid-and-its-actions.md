@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Enable disable grid and its actions in Vue Grid component
 
-You can enable or disable the Syncfusion Vue Grid and its actions by applying or removing specific CSS styles. This functionality is particularly useful in scenarios where interactions need to be restricted. Follow the steps below to implement this feature.
+You can enable or disable the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid and its actions by applying or removing specific CSS styles. This functionality is particularly useful in scenarios where interactions need to be restricted. Follow the steps below to implement this feature.
 
 **Step 1**: Create CSS class with custom style to override the default style of Grid.
 

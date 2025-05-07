@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Aggregate in Vue Grid component
 
-You can customize the appearance of aggregate elements in the Syncfusion Vue Grid component using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
+You can customize the appearance of aggregate elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
 
 ## Customizing the aggregate root element
 
