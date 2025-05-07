@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Steps to create a routing sample in Vue Grid component
 
-**1. Creating a vue project and integrating the Syncfusion Grid component:**
+**1. Creating a vue project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component:**
 
 A simple vue project can be created by following the steps under [getting started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) section of this documentation. Install the Vue Router package by running the following command in your project's directory.
 
@@ -90,4 +90,4 @@ Include the below code lines in **App.vue** file to set up the navigation.
 The `<router-link>` components are used for navigation, the `to` attribute specifies the path to navigate.
 The `<router-view>` component is responsible for rendering the content of each route. It acts as a placeholder that will be replaced with the component corresponding to the active route.
 
-[Here](https://github.com/SyncfusionExamples/DataGrid-routing-vue), you can find the Vue Routing sample with Syncfusion DataGrid.
+[Here](https://github.com/SyncfusionExamples/DataGrid-routing-vue), you can find the Vue Routing sample with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid.

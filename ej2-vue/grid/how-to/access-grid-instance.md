@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Access grid instance in Vue Grid component
 
-The Syncfusion Vue Grid component allows you to programmatically access the grid instance, enabling you to manipulate its properties and methods. This capability is particularly useful for customizing functionalities such as filtering, sorting, and more, directly from the grid instance.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component allows you to programmatically access the grid instance, enabling you to manipulate its properties and methods. This capability is particularly useful for customizing functionalities such as filtering, sorting, and more, directly from the grid instance.
 
 The following example demonstrates how to access the grid instance and change the default filter operator for string-type columns from "startsWith" to "contains":
 

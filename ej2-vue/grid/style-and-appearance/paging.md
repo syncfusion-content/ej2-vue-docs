@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paging in Vue Grid component
 
-You can customize the appearance of the paging elements in the Syncfusion Vue Grid component using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element.
+You can customize the appearance of the paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element.
 
 ## Customizing the grid pager root element
 

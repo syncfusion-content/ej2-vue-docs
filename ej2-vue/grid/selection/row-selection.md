@@ -689,7 +689,7 @@ components: {
 
 ## Pass selected records to server using AJAX
 
-The Syncfusion Vue Grid allows you to select multiple or single records and send them to the server using AJAX requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to select multiple or single records and send them to the server using AJAX requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
 
 To achieve passing selected records to the server using AJAX requests in the Grid, follow these steps:
 
@@ -1001,7 +1001,7 @@ The following screenshot shows how to pass selected records to the server:
 
 ## Pass selected records to server using FETCH
 
-The Syncfusion Vue Grid allows you to select multiple or single records and send them to the server using Fetch requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to select multiple or single records and send them to the server using Fetch requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
 
 To achieve passing selected records to the server using Fetch requests in the Grid, follow these steps:
 

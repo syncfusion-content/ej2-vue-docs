@@ -18,7 +18,7 @@ Additionally, leverage the power for data retrieval and operations, enhancing ev
 
 The custom binding feature in the Vue Grid enables you to manage your own custom API for handling data processing externally and then binding the resulting data to the Grid. This allows you to implement your own custom data logic to your application's requirements. When using custom binding, the Grid expects the result of the custom logic to be an object with properties `result` and `count`. The `result` property should contain the data to be displayed in the Grid, while the `count` property indicates the total number of records in the dataset for your application. To utilize custom binding, you can handle the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started). The DataManager integrates seamlessly with the vue Grid to manage custom data processing and binding. 
 
-The Syncfusion Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/vue/documentation/api/grid/#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasourcechanged) event. This event provides you with the opportunity to manage and manipulate data according to the individual's interactions. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/vue/documentation/api/grid/#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasourcechanged) event. This event provides you with the opportunity to manage and manipulate data according to the individual's interactions. 
 
 **Using the dataStateChange event**
 
@@ -34,7 +34,7 @@ To implement the `dataStateChange` event, follow these steps:
 
 ## Creating an API service
 
-To configure a server with Syncfusion Vue Grid, you need to follow the below steps:
+To configure a server with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, you need to follow the below steps:
 
 **Step 1:** Open your terminal and create a new Vite project using the following command:
 
@@ -42,7 +42,7 @@ To configure a server with Syncfusion Vue Grid, you need to follow the below ste
 npm create vite@latest
 ```
 
-**Step 2:** Navigate to your project directory and install the required Syncfusion packages using npm:
+**Step 2:** Navigate to your project directory and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using npm:
 
 ```bash
 cd my-project
@@ -222,7 +222,7 @@ export function getOrders(state) {
 }
 ```
 
-**Step 10:** In your Vue component (e.g., `App.vue`), import and use the Syncfusion Grid component. Use the **orderService** to fetch and manipulate data.
+**Step 10:** In your Vue component (e.g., `App.vue`), import and use the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component. Use the **orderService** to fetch and manipulate data.
 
 ```ts
 <script setup>
@@ -623,7 +623,7 @@ The Grid component provides powerful options for dynamically inserting, deleting
 
 Integrating CRUD Operations
 
-To implement CRUD operations using Syncfusion Grid, follow these steps:
+To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, follow these steps:
 
 1. **Configure grid settings:** Set up the necessary grid settings, such as editing, adding, and deleting records. Define the toolbar options to facilitate your interactions.
 
@@ -1188,13 +1188,13 @@ You can find the complete sample for the custom binding in [GitHub](https://gith
 
 ## Sending additional parameters to the server
 
-The Syncfusion Grid component allows you to include custom parameters in data requests. This feature is particularly useful when you need to provide additional information to the server enhanced processing.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to include custom parameters in data requests. This feature is particularly useful when you need to provide additional information to the server enhanced processing.
 
 By utilizing the [query](https://ej2.syncfusion.com/vue/documentation/api/grid/#query) property of the grid along with the `addParams` method of the Query class, you can easily incorporate custom parameters into data requests for every grid action.
 
 To enable custom parameters in data requests for the grid component, follow these steps:
 
-**1. Bind the Query Object to the Grid**: Assign the initialized query object to the query property of the Syncfusion Grid component.
+**1. Bind the Query Object to the Grid**: Assign the initialized query object to the query property of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
 
 **2. Initialize the Query Object:** Create a new instance of the Query class and use the addParams method to add the custom parameters.
 
@@ -1464,7 +1464,7 @@ export default data;
 
 Export all records is especially beneficial when dealing with large datasets that need to be exported for offline analysis or sharing.
 
-By default, the Syncfusion Grid component exports only the records on the current page. However, the Syncfusion ##Platform_Name## Grid component allows you to export all records, including those from multiple pages, by configuring the [pdfExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties).
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component exports only the records on the current page. However, the Syncfusion<sup style="font-size:70%">&reg;</sup> ##Platform_Name## Grid component allows you to export all records, including those from multiple pages, by configuring the [pdfExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties).
 
 To export all records, including those from multiple pages, configure the [pdfExportProperties.dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties/#datasource) for PDF exporting and [excelExportProperties.dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties#datasource) for Excel exporting within the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event handler. Inside this event, set the `dataSource` property of `pdfExportProperties` and `excelExportProperties` for PDF and Excel exporting to include all records.
 
@@ -1845,7 +1845,7 @@ On remote data binding, all grid actions such as paging, sorting, editing, group
 
 ## Fetch result from the DataManager query using external button 
 
-By default, Syncfusion Vue Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). However, in some scenarios, you may need to fetch data dynamically from the server using a query triggered by an external button. This approach allows greater control over when and how data is loaded into the Grid.
+By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). However, in some scenarios, you may need to fetch data dynamically from the server using a query triggered by an external button. This approach allows greater control over when and how data is loaded into the Grid.
 
 To achieve this, you can use the `executeQuery` method of `DataManager` with a **Query** object. This method allows you to run a custom query and retrieve results dynamically.
 

@@ -91,7 +91,7 @@ The following example that demonstrates how to use the `rowSelected` event to sc
 
 ## Hide the empty placeholder of scrollbar
 
-The Syncfusion Grid component provides a feature to hide the empty placeholder of the scrollbar, offering a cleaner interface without unnecessary scrollbars. To achieve this, you can utilize the [hideScroll](https://ej2.syncfusion.com/vue/documentation/api/grid/#hidescroll) method. This method allows you to determine whether the scrollbar should be hidden based on the content's overflow.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides a feature to hide the empty placeholder of the scrollbar, offering a cleaner interface without unnecessary scrollbars. To achieve this, you can utilize the [hideScroll](https://ej2.syncfusion.com/vue/documentation/api/grid/#hidescroll) method. This method allows you to determine whether the scrollbar should be hidden based on the content's overflow.
 
 The following example that demonstrates how to use the `hideScroll` method inside the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event:
 
@@ -108,7 +108,7 @@ The following example that demonstrates how to use the `hideScroll` method insid
 
 ## Render scrollbar in both top and bottom
 
-The Syncfusion Vue Grid allows rendering scrollbars at both the top and bottom, enhancing horizontal navigation for large datasets. This feature ensures users can scroll the Grid from either direction, enhancing usability and accessibility.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows rendering scrollbars at both the top and bottom, enhancing horizontal navigation for large datasets. This feature ensures users can scroll the Grid from either direction, enhancing usability and accessibility.
 
 Steps to render scrollbars at the top in the Grid:
 
