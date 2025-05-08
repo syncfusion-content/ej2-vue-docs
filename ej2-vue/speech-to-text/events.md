@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Vue SpeechToText component | Syncfusion
-description:  Learn here all about Events in Syncfusion Vue SpeechToText component of Syncfusion Essential JS 2 and more.
+title: Events in Vue SpeechToText Component | Syncfusion
+description: Learn here all about events in Syncfusion Essential Vue SpeechToText component, its elements, and more.
 platform: ej2-vue
 control: SpeechToText
 documentation: ug
