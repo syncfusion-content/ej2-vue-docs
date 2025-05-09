@@ -122,7 +122,7 @@ The following example demonstrates how to change the default frozen line color u
         
 {% previewsample "page.domainurl/code-snippet/grid/column/frozen-column-cs4" %}
 
-## Render DatePicker in frozen columns in Vue Grid
+## Render DatePicker in frozen columns in Grid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows rendering a [DatePicker](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/datepicker/default) inside frozen columns during editing. This is achieved using the [edit](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#edit) property, where a custom editor (DatePicker) is assigned to the specific column.
 
