@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Vue SpeechToText component | Syncfusion
-description:  Learn here all about Accessibility in Syncfusion Vue SpeechToText component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue SpeechToText Component | Syncfusion
+description: Learn here all about accessibility in Syncfusion Essential Vue SpeechToText component, its elements, and more.
 platform: ej2-vue
 control: SpeechToText
 documentation: ug

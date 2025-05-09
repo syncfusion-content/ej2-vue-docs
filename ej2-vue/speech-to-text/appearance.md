@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in Vue SpeechToText component | Syncfusion
-description:  Learn here all about Appearance in Syncfusion Vue SpeechToText component of Syncfusion Essential JS 2 and more.
+title: Appearance in Vue SpeechToText Component | Syncfusion
+description: Learn here all about appearance in Syncfusion Essential Vue SpeechToText component, its elements, and more.
 platform: ej2-vue
 control: SpeechToText
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Customizing the button
 
-You can use the [buttonSettings](../api/speech-to-text#buttonSettings) property to customize the appearance of the start and stop buttons in the speech to text conversion.
+You can use the [buttonSettings](../api/speech-to-text/#buttonSettings) property to customize the appearance of the start and stop buttons in the speech to text conversion.
 
 ### Setting start content  
 
@@ -53,7 +53,7 @@ Below code sample demonstrates how to configure the button with above mentioned 
 
 ## Customizing the tooltips
 
-You can use the [tooltipSettings](../api/speech-to-text#tooltipSettings) property to customize the content and positions of the tooltip.
+You can use the [tooltipSettings](../api/speech-to-text/#tooltipSettings) property to customize the content and positions of the tooltip.
 
 ### Setting start content
 
@@ -82,7 +82,7 @@ Below code sample demonstrates how to configure the tooltip with above mentioned
 
 ## Setting button styles
 
-The SpeechToText component supports the following predefined styles that can be defined using the [cssClass](../api/speech-to-text#cssClass) property. You can customize by adding the cssClass property with the below defined class. 
+The SpeechToText component supports the following predefined styles that can be defined using the [cssClass](../api/speech-to-text/#cssClass) property. You can customize by adding the cssClass property with the below defined class. 
 
 | cssClass | Description | 
 | -------- | -------- | 
@@ -95,7 +95,7 @@ The SpeechToText component supports the following predefined styles that can be 
 
 ## Setting cssclass
 
-You can use the [cssClass](../api/speech-to-text#cssClass) property to customize the appearance of the SpeechToText component.
+You can use the [cssClass](../api/speech-to-text/#cssClass) property to customize the appearance of the SpeechToText component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
