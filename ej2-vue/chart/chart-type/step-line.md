@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Step line in Vue Chart component | Syncfusion
-description: Learn here all about Step line in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Step line Chart
+title: Step Line Chart in Vue Charts | Syncfusion
+description: Learn here all about Step Line in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Step Line Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Step line Chart in Vue Component
+# Step Line Chart in Vue Charts
 
-## Step line
+## Step Line
 
 To render a [step line](https://www.syncfusion.com/vue-components/vue-charts/chart-types/stepline-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Radar in Vue Chart component | Syncfusion
-description: Learn here all about Radar Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Radar Chart in Vue Charts | Syncfusion
+description: Learn here all about Radar Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Radar Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radar Chart in Vue Component
+# Radar Chart in Vue Charts
 
-## Radar chart
+## Radar Chart
 
 To render a [radar](https://www.syncfusion.com/vue-components/vue-charts/chart-types/radar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

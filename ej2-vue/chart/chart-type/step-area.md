@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Step area in Vue Chart component | Syncfusion
-description: Learn here all about Step area in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Step area Chart
+title: Step Area Chart in Vue Charts | Syncfusion
+description: Learn here all about Step Area in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Step Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Step area Chart in Vue Component
+# Step Area Chart in Vue Charts
 
-## Step area
+## Step Area
 
 To render a [step area](https://www.syncfusion.com/vue-components/vue-charts/chart-types/step-area-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

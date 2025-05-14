@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line Chart in Vue Chart component | Syncfusion
-description: Learn here all about Line Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Line Chart in Vue Charts | Syncfusion
+description: Learn here all about Line Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Line Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line Chart in Vue Component
+# Line Chart in Vue Charts
 
 ## Line
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Stacked line in Vue Chart component | Syncfusion
-description: Learn here all about Stacked line in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Stacked line Chart
+title: Stacked Line Chart in Vue Charts | Syncfusion
+description: Learn here all about Stacked Line in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Stacked Line Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacked line Chart in Vue Component
+# Stacked Line Chart in Vue Charts
 
-## Stacked line
+## Stacked Line
 
 To render a [stacked line](https://www.syncfusion.com/vue-components/vue-charts/chart-types/stacked-line-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Box and Whisker in Vue Chart component | Syncfusion
-description: Learn here all about Box and Whisker Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Box and Whisker Chart in Vue Charts | Syncfusion
+description: Learn here all about Box and Whisker Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Box and Whisker Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Box and Whisker Chart in Vue Component
+# Box and Whisker Chart in Vue Charts
 
 ## Box and whisker
 

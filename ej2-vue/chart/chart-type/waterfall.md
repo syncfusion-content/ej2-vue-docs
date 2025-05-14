@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Watterfall in Vue Chart component | Syncfusion
-description: Learn here all about Watterfall Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Watterfall Chart in Vue Charts | Syncfusion
+description: Learn here all about Watterfall Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Watterfall Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Waterfall Chart in Vue Component
+# Waterfall Chart in Vue Charts
 
-## Waterfall chart
+## Waterfall Chart
 
 To render a `waterfall` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

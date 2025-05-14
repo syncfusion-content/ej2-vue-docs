@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column in Vue Chart component | Syncfusion
-description: Learn here all about Column in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Column chart
+title: Column Chart in Vue Charts | Syncfusion
+description: Learn here all about Column in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Column Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Chart in Vue Component
+# Column Chart in Vue Charts
 
 ## Column
 

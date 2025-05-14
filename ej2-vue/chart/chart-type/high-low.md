@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Hilo in Vue Chart component | Syncfusion
-description: Learn here all about Hilo Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Hilo Chart
+title: High Low Chart in Vue Charts | Syncfusion
+description: Learn here all about Hilo Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: High Low Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hilo Chart in Vue Component
+# High Low Chart in Vue Charts
 
-## Hilo
+## High Low
 
 To render a `hilo` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Range step area in Vue Chart component | Syncfusion
-description: Learn here all about Range step area in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Range step area Chart
+title: Range Step Area Chart in Vue Charts | Syncfusion
+description: Learn here all about Range Step Area in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Range Step Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range step area Chart in Vue Component
+# Range Step Area Chart in Vue Charts
 
-## Range step area
+## Range Step Area
 
 To render a `range step area` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  
