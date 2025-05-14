@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Content Import/Export in Vue Rich Text Editor component
 
-## Importing Content from Microsoft Word
+## Importing content from Microsoft Word
 
 The Rich Text Editor provides functionality to import content directly from Microsoft Word documents, preserving the original formatting and structure. This feature ensures a smooth transition of content from Word to the editor, maintaining elements such as headings, lists, tables, and text styles.
 
@@ -95,7 +95,7 @@ public class RichTextEditorController : Controller
 
 ```
 
-## Exporting Content to PDF and Microsoft Word
+## Exporting content to PDF and Microsoft Word
 
 The Rich Text Editor's export functionality allows users to convert their edited content into PDF or Word documents with a single click, preserving all text styles, images, tables, and other formatting elements.
 
@@ -116,7 +116,7 @@ The following example demonstrates how to configure the `ExportWord` and `Export
 
 Here’s how to handle the server-side action for exporting content to PDF and Microsoft Word
 
-```csharp
+ ```csharp
 
 public class RichTextEditorController : Controller
 
