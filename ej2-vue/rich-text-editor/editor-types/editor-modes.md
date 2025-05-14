@@ -8,14 +8,14 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editor mode in Vue Rich text editor component
+# Editor Mode in Vue Rich Text Editor Component
 
 The Rich Text Editor component used to create, edit and return the content in valid HTML markup or markdown (MD) of the content. It supports following two editing formation.
 
 * HTML Editor
 * Markdown Editor
 
-## HTML Editor
+## HTML editor
 
 Rich Text Editor is a WYSIWYG editing control for formatting the word content as HTML.
 
@@ -34,7 +34,13 @@ The HTML editing mode is the default mode of Rich Text Editor. Which is used for
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs2" %}
 
-## Markdown Editor
+## IFrame editor
+
+The IFrame editor mode enables content editing within an iframe, isolating styles from the main page.
+
+For more details, refer to the [Iframe Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/iframe) documentation.
+
+## Markdown editor
 
 Set the [editorMode](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#editormode) property value as `Markdown` to create or edit the content and apply formatting to view markdown formatted content.
 
@@ -57,4 +63,8 @@ The third-party library such as `Marked` or any other library is used to convert
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs1" %}
 
-For further details on Markdown editing, refer to the [`Markdown`](../../markdown-editor/getting-started)
+For further details on Markdown editing, refer to the [`Markdown`](../markdown-editor/getting-started)
+
+## See also
+
+* [Markdown Editor](https://ej2.syncfusion.com/vue/documentation/markdown-editor/getting-started)

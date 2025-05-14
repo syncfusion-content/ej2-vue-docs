@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components (Essential<sup style="font-size:70%">&reg;</sup> JS 2)
+# Syncfusion Vue UI Components (Essential JS 2)
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue is a modern UI Components library that has been built from the ground up to be lightweight, responsive, modular and touch friendly. It also includes complete support for Angular, React, ASP.NET MVC and ASP.NET Core frameworks.
+Syncfusion Vue is a modern UI Components library that has been built from the ground up to be lightweight, responsive, modular and touch friendly. It also includes complete support for Angular, React, ASP.NET MVC and ASP.NET Core frameworks.
 
 ## Components list
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components are listed below.
+The Syncfusion Vue UI components are listed below.
 
 <style>
 
@@ -140,7 +140,7 @@ letter-spacing: 0.7px;
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/signature/getting-started/">Signature</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rating/getting-started/">Rating</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/otp-input/getting-started">OTP Input</a></div>
-        <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/speech-to-text/getting-started">Speech To Text</a></div>
+        <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/speech-to-text/getting-started">Speech To Text</a></div> 
         <div><p class="control-category">FORMS</p></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/query-builder/getting-started/">Query Builder</a></div>
     </td>
@@ -192,12 +192,12 @@ letter-spacing: 0.7px;
 
 If you are still not able to find the information that you are looking for at the self-help resources mentioned above then please contact us by creating a support ticket in our support site, or ask your query in StackOverflow with tag `syncfusion-ej2`.
 
->Note: Syncfusion<sup style="font-size:70%">&reg;</sup> does not collect any kind of information when our components are used in customer applications.
+>Note: Syncfusion does not collect any kind of information when our components are used in customer applications.
 
 ## See also
 
 * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/)
+* [Getting Started with Syncfusion Vue UI Components](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/)
+* [Getting Started with Syncfusion Vue UI Components in Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/)
