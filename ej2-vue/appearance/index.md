@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in Vue Appearance component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue library styles are developed under the SCSS environment with `base64` embed font icons. The list of key features are described in the below topics.
+The Syncfusion Vue library styles are developed under the SCSS environment with `base64` embed font icons. The list of key features are described in the below topics.
 
 ## Key features
 

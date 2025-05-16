@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spline in Vue Chart component | Syncfusion
-description: Learn here all about Spline in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Spline Chart in Vue Charts | Syncfusion
+description: Learn here all about Spline in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Spline Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spline Chart in Vue Component
+# Spline Chart in Vue Charts
 
 ## Spline
 

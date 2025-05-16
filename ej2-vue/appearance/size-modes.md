@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 An application that is designed to be accessed through a web browser on various devices, including desktop computers and mobile devices, may have a distinct layout or user interface on a mobile device compared to a desktop computer to better suit the smaller screen size.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support both touch (bigger) and normal size modes. Touch mode creates a responsive design for mobile devices by adding the `e-bigger` class, which enhances interactions, visibility, and the overall experience.
+Syncfusion Vue components support both touch (bigger) and normal size modes. Touch mode creates a responsive design for mobile devices by adding the `e-bigger` class, which enhances interactions, visibility, and the overall experience.
 
 ## Size mode for application
 

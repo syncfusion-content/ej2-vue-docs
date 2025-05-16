@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## CDN
 
-The CDN links are provided individually for all the scripts and style sheets of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components.
+The CDN links are provided individually for all the scripts and style sheets of Syncfusion Vue UI components.
 
 The CDN link is provided to following files in the package
 
@@ -43,11 +43,11 @@ For example
 
 ## Packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages is published and available in public [npm](https://www.npmjs.com/search?q=ej2-vue&page=1&ranking=optimal) registry.
+Syncfusion Vue packages is published and available in public [npm](https://www.npmjs.com/search?q=ej2-vue&page=1&ranking=optimal) registry.
 
 ### Anatomy of NPM packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components are shipped as npm packages. Following table explains the purpose of each file available in the package.
+Syncfusion Vue UI components are shipped as npm packages. Following table explains the purpose of each file available in the package.
 
 |    Files                                                                  |    Purpose                                                                                                                                                                                                                                                                                   |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: 100% Stacked area in Vue Chart component | Syncfusion
-description: Learn here all about 100% Stacked area in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: 100% Stacked area Chart
+title: 100% Stacked Area Chart in Vue Charts | Syncfusion
+description: Learn here all about 100% Stacked Area in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: 100% Stacked Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# 100% Stacked area Chart in Vue Component
+# 100% Stacked Area Chart in Vue Charts
 
-## 100% Stacked area
+## 100% Stacked Area
 
 To render a [100% stacked area](https://www.syncfusion.com/vue-components/vue-charts/chart-types/100-stacked-area-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

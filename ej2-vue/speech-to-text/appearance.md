@@ -49,7 +49,7 @@ Below code sample demonstrates how to configure the button with above mentioned 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/buttonSettings" %}
+{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/buttonSettings/index" %}
 
 ## Customizing the tooltips
 
@@ -78,7 +78,7 @@ Below code sample demonstrates how to configure the tooltip with above mentioned
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/tooltipSettings" %}
+{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/tooltipSettings/index" %}
 
 ## Setting button styles
 
@@ -106,4 +106,4 @@ You can use the [cssClass](../api/speech-to-text/#cssClass) property to customiz
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/cssClass" %}
+{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/cssClass/index" %}

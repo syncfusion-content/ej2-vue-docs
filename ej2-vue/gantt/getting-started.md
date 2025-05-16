@@ -97,6 +97,7 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
@@ -205,8 +206,8 @@ export default {
 
 Bind data with the Gantt component by using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#datasource) property. It accepts an array of JavaScript object or the DataManager instance.
 
- {% tabs %}
- {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 <template>
     <div>
@@ -487,7 +488,7 @@ To use Sorting, inject the [`Sort`](https://ej2.syncfusion.com/vue/documentation
         
 {% previewsample "page.domainurl/code-snippet/gantt/getting-started-cs11" %}
 
-## Defining eventmarkers
+## Defining event markers
 
 The [`eventMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#eventmarkers) property in Gantt component is used to highlight the important event in Gantt chart part. By using this feature, you can add the lines and label to highlight important days in your project.
 

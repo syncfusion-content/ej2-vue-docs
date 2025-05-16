@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Polar in Vue Chart component | Syncfusion
-description: Learn here all about Polar Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Polar Chart in Vue Charts | Syncfusion
+description: Learn here all about Polar Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Polar Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Polar Chart in Vue Component
+# Polar Chart in Vue Charts
 
-## Polar chart
+## Polar Chart
 
 To render a [polar](https://www.syncfusion.com/vue-components/vue-charts/chart-types/polar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

@@ -3,7 +3,7 @@
         <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields="taskFields" :treeColumnIndex="1"
             :holidays="holidays" :labelSettings="labelSettings" :splitterSettings="splitterSettings" :height="height"
             :columns="columns" :timelineSettings="timelineSettings" :timelineTemplate="'timelineTemplates'">
-            <template v-slot:timlelineTemplate="{ data }">
+            <template v-slot:timelineTemplates="{ data }">
                 <div v-if="data.tier == 'topTier'" class="e-header-cell-label e-gantt-top-cell-text"
                     style="width:100%;background-color: #FBF9F1 ;  font-weight: bold;height: 100%;display: flex; justify-content: center ; align-items: center;   "
                     title={{data.date}}>
@@ -27,12 +27,12 @@ import { editingData } from './data-source.js';
 const data = editingData;
 const height = '450px';
 const taskFields = {
-    id: 'TaskID',
+    id: 'TaskId',
     name: 'TaskName',
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentId',
 };
 const timelineSettings = {
     topTier: {

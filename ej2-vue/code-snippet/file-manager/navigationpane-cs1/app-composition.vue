@@ -16,7 +16,7 @@ const ajaxSettings =
     uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
     downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
 };
-const navigationPaneSettings = { maxWidth: '850px', minWidth: '140px', visible: true};
+const navigationPaneSettings = { maxWidth: '850px', minWidth: '140px', visible: true, sortOrder: 'Ascending'};
 provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 </script>

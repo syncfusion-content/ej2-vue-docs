@@ -10,6 +10,6 @@ domainurl: ##DomainURL##
 
 # Overview
 
-This document illustrates how to build and run a simple Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) component in web applications.
+This document illustrates how to build and run a simple Syncfusion Vue (Essential JS 2) component in web applications.
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components and Vue CLI](./vue-cli3)
+* [Getting Started with Syncfusion Vue UI Components and Vue CLI](./vue-cli3)

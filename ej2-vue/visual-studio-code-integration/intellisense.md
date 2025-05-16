@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Intellisense of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components
+# Intellisense of Syncfusion Vue Components
 
 Intellisense of the Vue component provides code suggestions, error checking, property hints, and other useful information while typing. It will save a lot of time and help you develop more precise and efficient code.
 
-Install the [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension for Visual Studio Code to use Intellisense in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. After installing the addon, typing in your Vue files will generate Intellisense suggestions.
+Install the [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension for Visual Studio Code to use Intellisense in the Syncfusion Vue component. After installing the addon, typing in your Vue files will generate Intellisense suggestions.
 
 ![volar-intellisense](./images/intellisense.gif)
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Stacked bar in Vue Chart component | Syncfusion
-description: Learn here all about Stacked bar Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Stacked bar chart
+title: Stacked Bar Chart in Vue Charts | Syncfusion
+description: Learn here all about Stacked Bar Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Stacked Bar chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacked bar Chart in Vue Component
+# Stacked Bar Chart in Vue Charts
 
-## Stacked bar
+## Stacked Bar
 
 To render a [stacked bar](https://www.syncfusion.com/vue-components/vue-charts/chart-types/stacked-bar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

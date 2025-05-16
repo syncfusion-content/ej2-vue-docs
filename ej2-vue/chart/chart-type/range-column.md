@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Range column in Vue Chart component | Syncfusion
-description: Learn here all about Range column in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Range column Chart
+title: Range Column Chart in Vue Charts | Syncfusion
+description: Learn here all about Range Column in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Range Column Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range column Chart in Vue Component
+# Range Column Chart in Vue Charts
 
-## Range column
+## Range Column
 
 To render a [range column](https://www.syncfusion.com/vue-components/vue-charts/chart-types/range-column-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

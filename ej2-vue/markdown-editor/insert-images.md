@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert Images in Vue Markdown Editor Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Markdown Editor allows users to insert images using the toolbar. This feature enables embedding images from online sources into the editor content.
+The Syncfusion Vue Markdown Editor allows users to insert images using the toolbar. This feature enables embedding images from online sources into the editor content.
 
 ## Steps to Insert an Image  
 
@@ -22,7 +22,7 @@ Follow these steps to add an image in the Markdown editor:
 
 The image will be added to the editor content at the cursor position.
 
-The following example demonstrates how to enable image insertion in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Markdown Editor.
+The following example demonstrates how to enable image insertion in the Syncfusion Vue Markdown Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

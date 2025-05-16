@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Vue CLI 3 is a complete rewrite of the previous version of the Vue command line interface tool and comes with a set of new features which makes Vue development and the management of Vue projects a lot easier.
 
-## Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components and Vue CLI
+## Getting started with Syncfusion Vue UI components and Vue CLI
 
 You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue applications.
 At first it is mostly recommended to  uninstall the old Vue CLI package from your system.
@@ -46,9 +46,9 @@ npm install
 
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion packages
 
-All the available Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+All the available Syncfusion Vue packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
 Choose the component to be installed. In this application, the calendar component is installed.
 
 To install the calendar component, use the following command.

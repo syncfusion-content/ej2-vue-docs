@@ -1,16 +1,16 @@
 ---
 layout: post
-title: High low open close in Vue Chart component | Syncfusion
-description: Learn here all about High low open close Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: High low open close Chart
+title: High Low Open Close Chart in Vue Charts | Syncfusion
+description: Learn here all about High Low Open Close Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: High Low Open Close Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# High low open close Chart in Vue Component
+# High Low Open Close Chart in Vue Charts
 
-## High low open close
+## High Low Open Close
 
 To render an [`hiloOpenClose`](https://www.syncfusion.com/vue-components/vue-charts/chart-types/ohlc-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

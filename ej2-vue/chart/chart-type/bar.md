@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bar in Vue Chart component | Syncfusion
-description: Learn here all about Bar Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Bar chart
+title: Bar Chart in Vue Charts | Syncfusion
+description: Learn here all about Bar Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Bar Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bar Chart in Vue Component
+# Bar Chart in Vue Charts
 
 ## Bar
 

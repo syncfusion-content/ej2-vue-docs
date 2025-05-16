@@ -12,7 +12,20 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the Rich Text Editor content
+## Customizing placeholder text
+
+Use the following CSS to customize the default color in the Rich Text Editor's placeholder.
+
+```CSS
+
+.e-richtexteditor .e-rte-placeholder {
+    color: blue;
+    font-family: monospace;
+}
+
+```
+
+## Customizing editor content
 
 Use the following CSS to customize the default Rich Text Editor's content properties like font-family, font-size and color.
 
@@ -32,7 +45,7 @@ Use the following CSS to customize the default Rich Text Editor's content proper
 }
 ```
 
-## Customizing the Rich Text Editor's toolbar
+## Customizing editor toolbar
 
 Use the following CSS to customize the default color in the Rich Text Editor's toolbar icon.
 
@@ -62,7 +75,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's t
 }
 ```
 
-## Customizing Character Count Display
+## Customizing character count display
 
 Use the following CSS to customize the default color in the Rich Text Editor's character count.
 
@@ -78,20 +91,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's c
 }
 ```
 
-## Customizing Placeholder Text
-
-Use the following CSS to customize the default color in the Rich Text Editor's placeholder.
-
-```CSS
-
-.e-richtexteditor .e-rte-placeholder {
-    color: blue;
-    font-family: monospace;
-}
-
-```
-
-## Customizing Border Color
+## Customizing border color
 
 Use the following CSS to customize the border color in the Rich Text Editor's container.
 
@@ -103,6 +103,22 @@ Use the following CSS to customize the border color in the Rich Text Editor's co
 }
 
 ```
+
+## Highlight the specific lines
+
+Programmatically highlight a portion of the text in the editor by setting the background color. This can be achieved by applying a background style to the selected text using the Rich Text Editor's `executeCommand` method.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/highlight-specific-line-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/highlight-specific-line-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/highlight-specific-line-cs1" %}
+
 ## See Also
 
 * [Text Styling and Formatting](./font-styling)

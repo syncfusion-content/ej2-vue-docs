@@ -311,13 +311,13 @@ export default {
             data: editingData,
             allowSorting: true,
             taskFields: {
-                id: 'TaskID',
+                id: 'TaskId',
                 name: 'TaskName',
                 startDate: 'StartDate',
                 duration: 'Duration',
                 progress: 'Progress',
                 dependency: 'Predecessor',
-                child: 'subtasks'
+                parentID: 'ParentId',
             },
             splitterSettings: {
                 columnIndex: 1

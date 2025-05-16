@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue getting started with Vitest | Syncfusion
-description: Learn all about testing Syncfusion Essential JS 2 Vue UI components in Vitest, and much more details.
+description: Learn all about testing Syncfusion Essential JS 2 Vue UI components in Vitest, and much more, here.
 control: Vitest
 platform: ej2-vue
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting started with testing Vue UI components in the Vitest project
 
-This article provides a step-by-step guide for setting up a [Vitest](https://vitest.dev/) project, integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components, and perform comprehensive testing of the components.
+This article provides a step-by-step guide for setting up a [Vitest](https://vitest.dev/) project, integrating Syncfusion Vue components, and perform comprehensive testing of the components.
 
 `Vitest` is a blazing fast unit test framework powered by [Vite](https://vitejs.dev/) that makes it easy to write and run tests for your Vue.js components. It is designed to be fast, easy to use, and compatible with Jest.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](../system-requirements)
+[System requirements for Syncfusion Vue UI components](../system-requirements)
 
 ## Set up the Vitest project
 
@@ -55,7 +55,7 @@ cd my-project
 npm install
 ```
 
-4\. The default setup of `Vitest` utilizes `JSDOM`, which may not fully support all the APIs available in the `window` object. However, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components rely on certain APIs of the `window` object internally. Therefore, in order to ensure compatibility, it is necessary to configure `Vitest` with `happy-dom`. To install it, execute the following command:
+4\. The default setup of `Vitest` utilizes `JSDOM`, which may not fully support all the APIs available in the `window` object. However, Syncfusion Vue components rely on certain APIs of the `window` object internally. Therefore, in order to ensure compatibility, it is necessary to configure `Vitest` with `happy-dom`. To install it, execute the following command:
 
 ```bash
 npm i happy-dom --save-dev
@@ -73,11 +73,11 @@ test: {
 {% endhighlight %}
 {% endtabs %}
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Add the Syncfusion packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
 
 This article uses the [Vue Grid component](https://www.syncfusion.com/vue-components/vue-grid) as an example. To use the Vue Grid component in the project, the `@syncfusion/ej2-vue-grids` package needs to be installed using the following command:
 
@@ -85,7 +85,7 @@ This article uses the [Vue Grid component](https://www.syncfusion.com/vue-compon
 npm install @syncfusion/ej2-vue-grids --save
 ```
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add the Syncfusion Vue component
 
 Follow the below steps to add the Vue Grid component:
 

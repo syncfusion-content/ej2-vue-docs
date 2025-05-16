@@ -1,16 +1,16 @@
 ---
 layout: post
-title: 100% Stacked line in Vue Chart component | Syncfusion
-description: Learn here all about 100% Stacked line in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: 100% Stacked line Chart
+title: 100% Stacked Line Chart in Vue Charts | Syncfusion
+description: Learn here all about 100% Stacked Line in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: 100% Stacked Line Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# 100% Stacked line Chart in Vue Component
+# 100% Stacked Line Chart in Vue Charts
 
-## 100% Stacked line
+## 100% Stacked Line
 
 To render a [100% stacked line](https://www.syncfusion.com/vue-components/vue-charts/chart-types/100-stacked-line-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

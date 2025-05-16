@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in Vue Base component
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 for Vue Components support native Vue Templates, using Single File Components and Vue.component().
+The Essential JS 2 for Vue Components support native Vue Templates, using Single File Components and Vue.component().
 
 The Template support can be configured by these two ways given below.
 
@@ -54,7 +54,7 @@ cTemplate: function(e) {
 }
 ```
 
-* Template function is assigned to the template property of the Essential<sup style="font-size:70%">&reg;</sup> JS2 Vue Component.
+* Template function is assigned to the template property of the Essential JS2 Vue Component.
 
 Refer the below code snippet of App.vue file.
 
@@ -118,7 +118,7 @@ cTemplate: function(e) {
 }
 ```
 
-* Template function is assigned to the template property of the Essential<sup style="font-size:70%">&reg;</sup> JS2 Vue Component.
+* Template function is assigned to the template property of the Essential JS2 Vue Component.
 
 * Refer the below code snippet of App.vue file.
 
