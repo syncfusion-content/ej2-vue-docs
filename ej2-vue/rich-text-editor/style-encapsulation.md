@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style Encapsulation in Vue Rich Text Editor
 
-Style encapsulation determines how styles are applied within the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue **Rich Text Editor**. This feature helps control whether the component's content inherits global styles from the application or remains isolated. 
+Style encapsulation determines how styles are applied within the Syncfusion Vue **Rich Text Editor**. This feature helps control whether the component's content inherits global styles from the application or remains isolated. 
 
 ## Encapsulation modes
 
-Syncfusion's<sup style="font-size:70%">&reg;</sup> Vue Rich Text Editor offers two rendering modes for controlling style encapsulation:
+Syncfusion's Vue Rich Text Editor offers two rendering modes for controlling style encapsulation:
 
 1. **Encapsulated Mode (Iframe Mode)**  
    - When enabled, the Rich Text Editor is rendered inside an `<iframe>`.  
@@ -44,3 +44,7 @@ Below is a sample implementation of both **encapsulated** and **non-encapsulated
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/style-encapsulation" %}
+
+## See also
+
+* [Iframe Editor](./iframe)

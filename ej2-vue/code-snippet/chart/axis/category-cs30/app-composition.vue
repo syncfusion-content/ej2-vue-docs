@@ -38,9 +38,11 @@ const tooltip = { enable: true };
 provide('chart', [ColumnSeries, Category, Selection, Tooltip]);
 const tooltipRender = (args) => {
   var series = (args.series);
-  if (series.seriesElement.classList[0] === 'container_ej2_deselected') {
-    args.cancel = true;
-  }
+    if (series.seriesElement.childNodes[0].classList[0] === 'container_ej2_deselected') {
+        args.cancel = true;
+      } else {
+        args.cancel = false;
+      }
 };
 
 </script>

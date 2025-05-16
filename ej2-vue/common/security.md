@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-#  Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components - Security
+#  Syncfusion Vue Components - Security
 
 Security is a critical aspect of web applications to protect them from various threats and vulnerabilities. Using HTTPS for data encryption, validating and sanitizing user inputs, and implementing strong authentication measures such as multi-factor authentication are indispensable practices in Web application development.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components are implemented with these security considerations.
+Syncfusion Vue components are implemented with these security considerations.
 
 Vue includes inherent security functionalities.
 
@@ -28,11 +28,11 @@ Security vulnerabilities in web applications refer to weaknesses or flaws in the
 
 * Injection Attacks - These occur when an attacker injects malicious code (such as SQL injection, XML injection, or command injection) into input fields or parameters of a web application. If the application does not properly sanitize or validate user inputs, it can execute unintended commands or gain unauthorized access to sensitive data.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components provide support for implementing web applications with enhanced security features.
+Syncfusion Vue components provide support for implementing web applications with enhanced security features.
 
 ## Security Considerations
 
-Security holds significant importance in software development, and the incorporation of security measures from the outset of the development process is vital for the protection of applications. Syncfusion<sup style="font-size:70%">&reg;</sup> takes a thorough approach to security in the development of Vue components, encompassing all critical aspects. The following considerations provide a comprehensive overview of security measures.
+Security holds significant importance in software development, and the incorporation of security measures from the outset of the development process is vital for the protection of applications. Syncfusion takes a thorough approach to security in the development of Vue components, encompassing all critical aspects. The following considerations provide a comprehensive overview of security measures.
 
 * [Content Security Policy](#content-security-policy)
 * [HTML Sanitizer](#html-sanitizer)
@@ -42,11 +42,11 @@ Security holds significant importance in software development, and the incorpora
 
 [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) is a one of the security feature, that helps the detect the cross-site-scripting(XSS) attacks and malicious code injection. It will throw the errors and warnings while using the inline-styles and inline scripts, eval, new Function, etc in your applications.
 
-To implement Content Security Policy (CSP) in your application, include a `<meta>` tag with specified CSP directives. Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components have been designed and implemented with adherence to these CSP directives, ensuring enhanced security. These directives are below.
+To implement Content Security Policy (CSP) in your application, include a `<meta>` tag with specified CSP directives. Syncfusion Vue components have been designed and implemented with adherence to these CSP directives, ensuring enhanced security. These directives are below.
 
 #### CSP Directives
 
-The following directives are Essential<sup style="font-size:70%">&reg;</sup> for utilizing Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components.
+The following directives are essential for utilizing Syncfusion Vue components.
 
 |    Directives    |    Description    |    Examples    |
 |------------------|-------------------|----------------|
@@ -73,11 +73,11 @@ To know more information about the CSP, refer this [documentation](https://ej2.s
 
 An HTML sanitizer is a tool or program that helps remove potentially malicious or harmful code from HTML documents. This type of sanitizer is commonly used in web applications to prevent cross-site scripting (XSS) attacks, which can inject malicious code into a website and compromise user data. HTML sanitizers typically work by analyzing HTML code and removing any potentially dangerous or unwanted elements, such as script tags, inline styles, or event handlers. Other aspects of the HTML may also be modified or cleaned up, such as removing extra whitespace or fixing malformed code.
 
-To avoid the risk of code injection, Syncfusion<sup style="font-size:70%">&reg;</sup> has provided the [enableHtmlSanitizer](https://ej2.syncfusion.com/vue/documentation/api/button#enablehtmlsanitizer) API into its UI components. This ensures that HTML strings submitted by users are sanitized, enhancing security measures against potential threats.
+To avoid the risk of code injection, Syncfusion has provided the [enableHtmlSanitizer](https://ej2.syncfusion.com/vue/documentation/api/button#enablehtmlsanitizer) API into its UI components. This ensures that HTML strings submitted by users are sanitized, enhancing security measures against potential threats.
 
 When this property is enabled, the HTML string undergoes a thorough sanitization process before being rendered in the component. This approach ensures that user inputs containing potential security threats are meticulously filtered, addressing the risk of XSS and contributing to the overall security robustness of our components in the face of potential attacks.
 
-To sanitize input values in a web application using Syncfusion<sup style="font-size:70%">&reg;</sup> sanitizer, you can use the following code.
+To sanitize input values in a web application using Syncfusion sanitizer, you can use the following code.
 
 ```ts
 import { SanitizeHtmlHelper } from '@syncfusion/ej2-base';
@@ -87,7 +87,7 @@ let html: string = '<script>alert("XSS");</script>';
 let sanitizedHtml: string = SanitizeHtmlHelper.sanitize(html);
 ```
 
-For sanitizing the template content using Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript controls, please see the provided code below.
+For sanitizing the template content using Syncfusion JavaScript controls, please see the provided code below.
 
 ```ts
 import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
@@ -130,7 +130,7 @@ When `enableHtmlSanitizer` is `false` or not included this property, the malicio
 
 ### Browser Storage
 
-Browser storage refers to the mechanisms provided by web browsers to store data locally on a user's device. Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components utilize the following storage options only.
+Browser storage refers to the mechanisms provided by web browsers to store data locally on a user's device. Syncfusion Vue components utilize the following storage options only.
 
 * Local Storage
 
@@ -138,4 +138,4 @@ Browser storage refers to the mechanisms provided by web browsers to store data 
 
 [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) is a type of web storage mechanism provided by web browsers that allows web applications to store data locally on a user's device. It provides a simple key-value pair storage interface and is accessible via Vue.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components utilize local storage only when persistence is enabled.
+Syncfusion Vue components utilize local storage only when persistence is enabled.

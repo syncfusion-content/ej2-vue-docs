@@ -16,11 +16,11 @@ By default, the Vue Markdown Editor displays the following toolbar items:
 
 > `Bold` , `Italic` , `|` , `Formats` , `Blockquote`, `OrderedList` , `UnorderedList` , `|` , `CreateLink` , `Image` , `|` , `SourceCode` , `Undo` , `Redo`
 
-These default items cover Essential<sup style="font-size:70%">&reg;</sup> text editing features, such as text formatting, lists, and linking.
+These default items cover essential text editing features, such as text formatting, lists, and linking.
 
 ## Type of toolbar 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Markdown Editor allows you to configure different type of toolbars using the [type](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) field in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/) property.
+The Syncfusion Markdown Editor allows you to configure different type of toolbars using the [type](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) field in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/) property.
 
 The available toolbar types are:
 

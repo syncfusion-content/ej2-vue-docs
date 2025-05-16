@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Stacked area in Vue Chart component | Syncfusion
-description: Learn here all about Stacked area in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Stacked area Chart
+title: Stacked Area Chart in Vue Charts | Syncfusion
+description: Learn here all about Stacked Area in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Stacked Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacked area Chart in Vue Component
+# Stacked Area Chart in Vue Charts
 
-## Stacked area
+## Stacked Area
 
 To render a [stacked area](https://www.syncfusion.com/vue-components/vue-charts/chart-types/stacked-area-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

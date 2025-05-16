@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right-To-Left
 
-Right To Left (RTL) can be enabled for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components by calling `enableRtl` with `true`. This will render all the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the right to left direction. Find the code snippet for this below.
+Right To Left (RTL) can be enabled for Syncfusion Vue UI components by calling `enableRtl` with `true`. This will render all the Syncfusion Vue components in the right to left direction. Find the code snippet for this below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

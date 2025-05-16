@@ -23,7 +23,7 @@ export default {
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // Navigation Pane settings customization
-            navigationPaneSettings: { maxWidth: '850px', minWidth: '140px', visible: true}
+            navigationPaneSettings: { maxWidth: '850px', minWidth: '140px', visible: true, sortOrder: 'Ascending'}
         };
     },
     provide: {

@@ -54,7 +54,7 @@ The details view settings, including column width, header text, and templates fo
 
 ## Navigation pane customization
 
-The navigation pane settings like, minimum and maximum width and visibility can be customized using [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) property.
+The navigation pane settings like, minimum and maximum width, visibility and sort order can be customized using [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

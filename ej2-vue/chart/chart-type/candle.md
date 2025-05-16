@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Candle in Vue Chart component | Syncfusion
-description: Learn here all about Candle Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Candle Chart in Vue Charts | Syncfusion
+description: Learn here all about Candle Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Candle Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Candle Chart in Vue Component
+# Candle Chart in Vue Charts
 
 ## Candle
 

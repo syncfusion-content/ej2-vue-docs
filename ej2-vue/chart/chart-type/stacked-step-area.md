@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Stacked step area in Vue Chart component | Syncfusion
-description: Learn here all about Stacked step area in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Stacked step area Chart
+title: Stacked Step Area Chart in Vue Charts | Syncfusion
+description: Learn here all about Stacked Step Area in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Stacked Step Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacked step area Chart in Vue Component
+# Stacked Step Area Chart in Vue Charts
 
-## Stacked step area
+## Stacked Step Area
 
 To render a `stacked step area` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

@@ -45,7 +45,7 @@ After installing the package, you can integrate WProofreader with the Vue Rich T
 4. Set the `lang` property to specify the language of the text to be checked.
 5. Configure the activation key in the `serviceId` property.
 
-Below is an example code snippet to integrate WProofreader with the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Rich Text Editor:
+Below is an example code snippet to integrate WProofreader with the Syncfusion Vue Rich Text Editor:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -56,6 +56,6 @@ Below is an example code snippet to integrate WProofreader with the Syncfusion<s
 {% endhighlight %}
 {% endtabs %}
 
-Below is a GIF demonstrating how to integrate WProofreader with the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Rich Text Editor
+Below is a GIF demonstrating how to integrate WProofreader with the Syncfusion Vue Rich Text Editor
 
 ![WebSpellChecker](images/spell-grammar-check.gif)

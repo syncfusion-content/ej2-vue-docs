@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Range area in Vue Chart component | Syncfusion
-description: Learn here all about Range area in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Range area Chart
+title: Range Area Chart in Vue Charts | Syncfusion
+description: Learn here all about Range Area in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+control: Range Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range area Chart in Vue Component
+# Range Area Chart in Vue Charts
 
-## Range area
+## Range Area
 
 To render a [range area](https://www.syncfusion.com/vue-components/vue-charts/chart-types/range-area-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Area in Vue Chart component | Syncfusion
-description: Learn here all about Area Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Area Chart in Vue Charts | Syncfusion
+description: Learn here all about Area Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Area Chart in Vue Component
+# Area Chart in Vue Charts
 
 ## Area
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Scatter in Vue Chart component | Syncfusion
-description: Learn here all about Scatter Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Scatter Chart in Vue Charts | Syncfusion
+description: Learn here all about Scatter Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Scatter Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scatter Chart in Vue Component
+# Scatter Chart in Vue Charts
 
-## Scatter charts
+## Scatter Chart
 
 To render a [scatter](https://www.syncfusion.com/vue-components/vue-charts/chart-types/scatter-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  

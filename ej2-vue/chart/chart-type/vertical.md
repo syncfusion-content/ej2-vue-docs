@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Vertical in Vue Chart component | Syncfusion
-description: Learn here all about Vertical Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+title: Vertical Chart in Vue Charts | Syncfusion
+description: Learn here all about Vertical Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
 control: Vertical Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Vertical Chart in Vue Component
+# Vertical Chart in Vue Charts
 
-## Vertical chart
+## Vertical Chart
 
 To draw a chart in a vertical manner, change the orientation of the axis using the [`isTransposed`](https://ej2.syncfusion.com/vue/documentation/api/chart/#istransposed) property, which is supported by all series types.
 

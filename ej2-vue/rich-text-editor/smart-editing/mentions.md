@@ -38,6 +38,6 @@ In the following sample, we configured the following properties with popup dimen
 
 > [View Sample](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/rich-text-editor/mention-integration.html)
 
-## See Also
+## See also
 
 * [Mention](https://ej2.syncfusion.com/vue/documentation/mention/getting-started/)
