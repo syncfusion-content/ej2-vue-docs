@@ -29,7 +29,7 @@ const created = function () {
     gridInstance.getContentTable().addEventListener('click', (args) => {
         if (args.target.classList.contains('e-rowcell')) {
             gridInstance.editModule.editCell(parseInt(args.target.getAttribute('index')),
-            gridInstance.getColumnByIndex(parseInt(args.target.getAttribute('data-colindex'))).field);
+            gridInstance.getColumnByIndex(parseInt(args.target.getAttribute('aria-colindex'))-1).field);
         }
     });
 }
@@ -37,7 +37,7 @@ const editACell = function (args) {
     let gridInstance = grid.value.ej2Instances;
     gridInstance.editModule.editCell(
         parseInt(args.getAttribute('index')),
-        gridInstance.getColumnByIndex(parseInt(args.getAttribute('data-colindex'))).field);
+        gridInstance.getColumnByIndex(parseInt(args.getAttribute('aria-colindex'))-1).field);
 }
 const load = function () {
     let gridInstance = grid.value.ej2Instances
@@ -48,18 +48,18 @@ const load = function () {
         }
         if (e.keyCode === 37 && !isNullOrUndefined(closesttd.previousSibling) &&
             !gridInstance.getColumnByIndex(
-                parseInt(closesttd.previousSibling.getAttribute('data-colindex'))).isPrimaryKey) {
+                parseInt(closesttd.previousSibling.getAttribute('aria-colindex'))-1).isPrimaryKey) {
             editACell(closesttd.previousSibling);
         }
         if (e.keyCode === 40 && !isNullOrUndefined(closesttd.closest('tr').nextSibling)) {
             editACell(
                 closesttd.closest('tr').nextSibling.querySelectorAll('td')[
-                parseInt(closesttd.getAttribute('data-colindex'))]);
+                parseInt(closesttd.getAttribute('aria-colindex'))-1]);
         }
         if (e.keyCode === 38 && !isNullOrUndefined(closesttd.closest('tr').previousSibling)) {
             editACell(
                 closesttd.closest('tr').previousSibling.querySelectorAll('td')[
-                parseInt(closesttd.getAttribute('data-colindex'))]);
+                parseInt(closesttd.getAttribute('aria-colindex'))-1]);
         }
     });
 }

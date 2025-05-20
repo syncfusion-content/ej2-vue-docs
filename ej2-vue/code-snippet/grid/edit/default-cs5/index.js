@@ -8,8 +8,8 @@ Vue.use(GridPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
   <div id="app">
     <ejs-grid ref="grid" id="grid" :dataSource='data' :allowPaging='true' :enableHover='false' :created='created' :load='load' :editSettings='editSettings' :toolbar='toolbar' height='273px'>
       <e-columns>
@@ -26,56 +26,55 @@ new Vue({
   data() {
     return {
       data: data,
-      orderIDRules : { required: true },
-      orderDateRules : { required: true },
-      shipCountryRules : { required: true },
-      customerIDRules : { required: true, minLength: 5 },
-      freightIDRules  : { required: true, min: 1, max: 1000 },
+      orderIDRules: { required: true },
+      orderDateRules: { required: true },
+      shipCountryRules: { required: true },
+      customerIDRules: { required: true, minLength: 5 },
+      freightIDRules: { required: true, min: 1, max: 1000 },
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' },
       toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel']
     };
   },
   methods: {
-      created: function() {
-           let gridInstance = document.getElementById("grid").ej2_instances[0];
-           gridInstance.getContentTable().addEventListener('click', (args) => {
-              if (args.target.classList.contains('e-rowcell')) {
-                   gridInstance.editModule.editCell(parseInt(args.target.getAttribute('index')),
-                   gridInstance.getColumnByIndex(parseInt(args.target.getAttribute('data-colindex'))).field);
-              }
-          });
-      },
-      editACell: function(args) {
-          let gridInstance = document.getElementById("grid").ej2_instances[0];
-          gridInstance.editModule.editCell(
-          parseInt(args.getAttribute('index')),
-          gridInstance.getColumnByIndex(parseInt(args.getAttribute('data-colindex'))).field);
-      },
-      load: function() {
-          let gridInstance = document.getElementById("grid").ej2_instances[0];
-          gridInstance.element.addEventListener('keydown', (e) => {
-          var closesttd = e.target.closest('td');
-          if (e.keyCode === 39 && !isNullOrUndefined(closesttd.nextSibling)) {
-              this.editACell(closesttd.nextSibling);
-          }
-          if (e.keyCode === 37 && !isNullOrUndefined(closesttd.previousSibling) &&
-            !gridInstance.getColumnByIndex(
-                parseInt(closesttd.previousSibling.getAttribute('data-colindex'))).isPrimaryKey)
-          {
-               this.editACell(closesttd.previousSibling);
-          }
-          if (e.keyCode === 40 && !isNullOrUndefined(closesttd.closest('tr').nextSibling)) {
-            this.editACell(
-                closesttd.closest('tr').nextSibling.querySelectorAll('td')[
-                parseInt(closesttd.getAttribute('data-colindex'))]);
-          }
-          if ( e.keyCode === 38 && !isNullOrUndefined(closesttd.closest('tr').previousSibling)) {
-            this.editACell(
-                closesttd.closest('tr').previousSibling.querySelectorAll('td')[
-                 parseInt(closesttd.getAttribute('data-colindex'))]);
-          }
-          });
-      }
+    created: function () {
+      let gridInstance = document.getElementById("grid").ej2_instances[0];
+      gridInstance.getContentTable().addEventListener('click', (args) => {
+        if (args.target.classList.contains('e-rowcell')) {
+          gridInstance.editModule.editCell(parseInt(args.target.getAttribute('index')),
+            gridInstance.getColumnByIndex(parseInt(args.target.getAttribute('aria-colindex')) - 1).field);
+        }
+      });
+    },
+    editACell: function (args) {
+      let gridInstance = document.getElementById("grid").ej2_instances[0];
+      gridInstance.editModule.editCell(
+        parseInt(args.getAttribute('index')),
+        gridInstance.getColumnByIndex(parseInt(args.getAttribute('aria-colindex')) - 1).field);
+    },
+    load: function () {
+      let gridInstance = document.getElementById("grid").ej2_instances[0];
+      gridInstance.element.addEventListener('keydown', (e) => {
+        var closesttd = e.target.closest('td');
+        if (e.keyCode === 39 && !isNullOrUndefined(closesttd.nextSibling)) {
+          this.editACell(closesttd.nextSibling);
+        }
+        if (e.keyCode === 37 && !isNullOrUndefined(closesttd.previousSibling) &&
+          !gridInstance.getColumnByIndex(
+            parseInt(closesttd.previousSibling.getAttribute('aria-colindex')) - 1).isPrimaryKey) {
+          this.editACell(closesttd.previousSibling);
+        }
+        if (e.keyCode === 40 && !isNullOrUndefined(closesttd.closest('tr').nextSibling)) {
+          this.editACell(
+            closesttd.closest('tr').nextSibling.querySelectorAll('td')[
+            parseInt(closesttd.getAttribute('aria-colindex')) - 1]);
+        }
+        if (e.keyCode === 38 && !isNullOrUndefined(closesttd.closest('tr').previousSibling)) {
+          this.editACell(
+            closesttd.closest('tr').previousSibling.querySelectorAll('td')[
+            parseInt(closesttd.getAttribute('aria-colindex')) - 1]);
+        }
+      });
+    }
   },
   provide: {
     grid: [Page, Edit, Toolbar]
