@@ -49,7 +49,7 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 | Match case                           | Match case                                                                                                                       |
 | Apply                                | Apply                                                                                                                            |
 | GoToPage                             | Go to page                                                                                                                       |
-| No matches                           | Viewer has finished searching the document. No more matches were found                                                           |
+| No Matches                           | Viewer has finished searching the document. No more matches were found                                                           |
 | No Text Found                        | No Text Found                                                                                                                    |
 | Undo                                 | Undo                                                                                                                             |
 | Redo                                 | Redo                                                                                                                             |
@@ -258,6 +258,12 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 | Select All                           | Select All                                                                                                                       |
 | Import Document                      | Import Document                                                                                                                  |
 | Match any word                       | Match any word                                                                                                                   |
+|Cors policy error                     |Unable to retrieve the document due to an invalid URL or access restrictions. Please check the document URL and try again|
+|No More Matches                       |Viewer has finished searching the document. No more matches were found                                                                                                                  |
+|No Search Matches                     |No matches found                                                                                                                  |
+|No More Search Matches                |No more matches found                                                                                                                  |
+|Exact Matches                         |EXACT MATCHES                                                                                                                  |
+|Total Matches                         |TOTAL MATCHES                                                                                                                  |
 
 The different locale value for the PDF Viewer can be specified using the locale property.
 
@@ -323,7 +329,7 @@ L10n.load({
       'Match case': 'حالة مباراة',
       'Apply': 'تطبيق',
       'GoToPage': 'انتقل إلى صفحة',
-      'No matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على مزيد من التطابقات',
+      'No Matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على مزيد من التطابقات',
       'No Text Found': 'لم يتم العثور على نص',
       'Undo': 'فك',
       'Redo': 'فعل ثانية',
@@ -350,7 +356,7 @@ L10n.load({
       'Selection text': 'اختيار',
       'Pan text': 'مقلاة',
       'Print text': 'طباعة',
-      'Seach text': 'بحث',
+      'Search text': 'بحث',
       'Annotation Edit text': 'تحرير التعليق التوضيحي',
       'Line Thickness': 'سمك الخط',
       'Line Properties': 'خط الخصائص',
@@ -532,7 +538,14 @@ L10n.load({
       'Save As': 'حفظ باسم',
       'Select All': 'اختر الكل',
       'Import Document': 'استيراد المستند',
-      'Match any word': 'تطابق أي كلمة'
+      'Match any word': 'تطابق أي كلمة',
+      'Client error': 'تم العثور على خطأ في جانب العميل. يرجى التحقق من رؤوس Ajax المخصصة في خاصية AjaxRequestSettings وطرق الويب في خاصية ServerActionSettings',
+      'Cors policy error': 'تعذر استرداد المستند بسبب عنوان URL غير صالح أو قيود على الوصول. يرجى التحقق من عنوان URL للمستند والمحاولة مرة أخرى',
+      'No More Matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على تطابقات أخرى',
+      'No Search Matches': 'لم يتم العثور على تطابقات',
+      'No More Search Matches': 'لم يتم العثور على تطابقات أخرى',
+      'Exact Matches': 'تطابقات دقيقة',
+      'Total Matches': 'إجمالي التطابقات'
     }
   }
 });
@@ -610,7 +623,7 @@ L10n.load({
       'Match case': 'حالة مباراة',
       'Apply': 'تطبيق',
       'GoToPage': 'انتقل إلى صفحة',
-      'No matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على مزيد من التطابقات',
+      'No Matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على مزيد من التطابقات',
       'No Text Found': 'لم يتم العثور على نص',
       'Undo': 'فك',
       'Redo': 'فعل ثانية',
@@ -637,7 +650,7 @@ L10n.load({
       'Selection text': 'اختيار',
       'Pan text': 'مقلاة',
       'Print text': 'طباعة',
-      'Seach text': 'بحث',
+      'Search text': 'بحث',
       'Annotation Edit text': 'تحرير التعليق التوضيحي',
       'Line Thickness': 'سمك الخط',
       'Line Properties': 'خط الخصائص',
@@ -819,7 +832,14 @@ L10n.load({
       'Save As': 'حفظ باسم',
       'Select All': 'اختر الكل',
       'Import Document': 'استيراد المستند',
-      'Match any word': 'تطابق أي كلمة'
+      'Match any word': 'تطابق أي كلمة',
+      'Client error': 'تم العثور على خطأ في جانب العميل. يرجى التحقق من رؤوس Ajax المخصصة في خاصية AjaxRequestSettings وطرق الويب في خاصية ServerActionSettings',
+      'Cors policy error': 'تعذر استرداد المستند بسبب عنوان URL غير صالح أو قيود على الوصول. يرجى التحقق من عنوان URL للمستند والمحاولة مرة أخرى',
+      'No More Matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على تطابقات أخرى',
+      'No Search Matches': 'لم يتم العثور على تطابقات',
+      'No More Search Matches': 'لم يتم العثور على تطابقات أخرى',
+      'Exact Matches': 'تطابقات دقيقة',
+      'Total Matches': 'إجمالي التطابقات'
     }
   }
 });
@@ -888,7 +908,7 @@ L10n.load({
       'Match case': 'حالة مباراة',
       'Apply': 'تطبيق',
       'GoToPage': 'انتقل إلى صفحة',
-      'No matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على مزيد من التطابقات',
+      'No Matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على مزيد من التطابقات',
       'No Text Found': 'لم يتم العثور على نص',
       'Undo': 'فك',
       'Redo': 'فعل ثانية',
@@ -915,7 +935,7 @@ L10n.load({
       'Selection text': 'اختيار',
       'Pan text': 'مقلاة',
       'Print text': 'طباعة',
-      'Seach text': 'بحث',
+      'Search text': 'بحث',
       'Annotation Edit text': 'تحرير التعليق التوضيحي',
       'Line Thickness': 'سمك الخط',
       'Line Properties': 'خط الخصائص',
@@ -1097,7 +1117,14 @@ L10n.load({
       'Save As': 'حفظ باسم',
       'Select All': 'اختر الكل',
       'Import Document': 'استيراد المستند',
-      'Match any word': 'تطابق أي كلمة'
+      'Match any word': 'تطابق أي كلمة',
+      'Client error': 'تم العثور على خطأ في جانب العميل. يرجى التحقق من رؤوس Ajax المخصصة في خاصية AjaxRequestSettings وطرق الويب في خاصية ServerActionSettings',
+      'Cors policy error': 'تعذر استرداد المستند بسبب عنوان URL غير صالح أو قيود على الوصول. يرجى التحقق من عنوان URL للمستند والمحاولة مرة أخرى',
+      'No More Matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على تطابقات أخرى',
+      'No Search Matches': 'لم يتم العثور على تطابقات',
+      'No More Search Matches': 'لم يتم العثور على تطابقات أخرى',
+      'Exact Matches': 'تطابقات دقيقة',
+      'Total Matches': 'إجمالي التطابقات'
     }
   }
 });
@@ -1175,7 +1202,7 @@ L10n.load({
       'Match case': 'حالة مباراة',
       'Apply': 'تطبيق',
       'GoToPage': 'انتقل إلى صفحة',
-      'No matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على مزيد من التطابقات',
+      'No Matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على مزيد من التطابقات',
       'No Text Found': 'لم يتم العثور على نص',
       'Undo': 'فك',
       'Redo': 'فعل ثانية',
@@ -1202,7 +1229,7 @@ L10n.load({
       'Selection text': 'اختيار',
       'Pan text': 'مقلاة',
       'Print text': 'طباعة',
-      'Seach text': 'بحث',
+      'Search text': 'بحث',
       'Annotation Edit text': 'تحرير التعليق التوضيحي',
       'Line Thickness': 'سمك الخط',
       'Line Properties': 'خط الخصائص',
@@ -1384,7 +1411,14 @@ L10n.load({
       'Save As': 'حفظ باسم',
       'Select All': 'اختر الكل',
       'Import Document': 'استيراد المستند',
-      'Match any word': 'تطابق أي كلمة'
+      'Match any word': 'تطابق أي كلمة',
+      'Client error': 'تم العثور على خطأ في جانب العميل. يرجى التحقق من رؤوس Ajax المخصصة في خاصية AjaxRequestSettings وطرق الويب في خاصية ServerActionSettings',
+      'Cors policy error': 'تعذر استرداد المستند بسبب عنوان URL غير صالح أو قيود على الوصول. يرجى التحقق من عنوان URL للمستند والمحاولة مرة أخرى',
+      'No More Matches': 'انتهى العارض من البحث في المستند. لم يتم العثور على تطابقات أخرى',
+      'No Search Matches': 'لم يتم العثور على تطابقات',
+      'No More Search Matches': 'لم يتم العثور على تطابقات أخرى',
+      'Exact Matches': 'تطابقات دقيقة',
+      'Total Matches': 'إجمالي التطابقات'
     }
   }
 });
