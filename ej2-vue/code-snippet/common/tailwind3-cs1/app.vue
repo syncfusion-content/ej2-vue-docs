@@ -20,8 +20,6 @@ import {
   import { enableRipple } from '@syncfusion/ej2-base';
   
   enableRipple(true);
-  Vue.use(CheckBoxPlugin);
-  Vue.use(ButtonPlugin);
   
   export default {
     name: 'App',
