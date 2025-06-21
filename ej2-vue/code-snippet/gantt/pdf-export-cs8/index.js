@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import { GanttPlugin, Toolbar, PdfExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
@@ -18,15 +17,15 @@ new Vue({
         data:editingData,
         height:'450px',
         taskFields: {
-            id: 'TaskID',
+            id: 'TaskId',
             name: 'TaskName',
             startDate: 'StartDate',
             duration: 'Duration',
             progress: 'Progress',
-            child: 'subtasks'
+            parentID: 'ParentId',
         },
         columns: [
-            { field: 'TaskID', headerText:  'Task ID', textAlign: 'Left', width: '100' },
+            { field: 'TaskId', headerText:  'Task ID', textAlign: 'Left', width: '100' },
             { field: 'TaskName', headerText:  'Task Name', width: '150' },
             { field: 'StartDate', headerText: 'Start Date', width: '150'},
             { field: 'Duration',headerText: 'Duration', width: '150', visible: false },

@@ -12,15 +12,15 @@ const gantt = ref(null);
 const data = editingData;
 const height = '450px';
 const taskFields = {
-    id: 'TaskID',
+    id: 'TaskId',
     name: 'TaskName',
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentId',
 };
 const columns = [
-    { field: 'TaskID', headerText:  'Task ID', textAlign: 'Left', width: '100' },
+    { field: 'TaskId', headerText:  'Task ID', textAlign: 'Left', width: '100' },
     { field: 'TaskName', headerText:  'Task Name', width: '150' },
     { field: 'StartDate', headerText: 'Start Date', width: '150'},
     { field: 'Duration',headerText: 'Duration', width: '150', visible: false },
@@ -28,15 +28,15 @@ const columns = [
 ];
 const toolbar = ['PdfExport'];
 const toolbarClick = (args) => {
-        if (args.item.id === 'GanttContainer_pdfexport') {
-            var ganttChart = gantt.value.ej2Instances;
-             ganttChart.pdfExport();
-        }
-    };
+    if (args.item.id === 'GanttContainer_pdfexport') {
+        var ganttChart = gantt.value.ej2Instances;
+        ganttChart.pdfExport();
+    }
+};
 const beforePdfExport = (args) => {
     var obj = gantt.value.ej2Instances;
     obj.treeGrid.columns[3].visible = true;
     obj.treeGrid.columns[2].visible = false;
-    }
+}
 provide('gantt', [Toolbar, PdfExport]);
 </script>

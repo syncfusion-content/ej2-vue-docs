@@ -11,18 +11,18 @@ import { editingData } from './data-source.js';
 const data = editingData;
 const height = '450px';
 const taskFields = {
-    id: 'TaskID',
+    id: 'TaskId',
     name: 'TaskName',
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentId'
 };
 const labelSettings = {
-    leftLabel: 'Task ID: ${taskData.TaskID}',
-    rightLabel: 'Progress Value: ${taskData.Progress}',
+    leftLabel: 'Task Id: ${taskData.TaskId}',
+    rightLabel: 'Task Name: ${taskData.TaskName}',
     taskLabel: '${Progress}%'
 };
 const projectStartDate = new Date('03/28/2019');
-const projectEndDate = new Date('04/14/2019');
+const projectEndDate = new Date('04/20/2019');
 </script>

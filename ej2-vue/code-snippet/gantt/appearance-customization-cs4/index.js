@@ -14,24 +14,24 @@ new Vue({
 
   data: function() {
       return{
-            data: editingData,
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                child: 'subtasks'
-            },
-            labelSettings: {
-            leftLabel: 'Task ID: ${taskData.TaskID}',
-            rightLabel:'Progress Value: ${taskData.Progress}'
+        data: editingData,
+        height: '450px',
+        taskFields: {
+            id: 'TaskId',
+            name: 'TaskName',
+            startDate: 'StartDate',
+            duration: 'Duration',
+            progress: 'Progress',
+            parentID: 'ParentId'
+        },
+        labelSettings: {
+            leftLabel: 'Task Id: ${taskData.TaskId}',
+            rightLabel:'Task Name: ${taskData.TaskName}',
             taskLabel: '${Progress}%'
         },
         projectStartDate: new Date('03/28/2019'),
-        projectEndDate: new Date('04/14/2019'),
-      };
+        projectEndDate: new Date('04/20/2019'),
+    };
   },
 
 });
