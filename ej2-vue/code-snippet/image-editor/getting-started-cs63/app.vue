@@ -20,13 +20,13 @@ export default {
   data: function () {
     return {
       uploadSettings: {
-        allowedExtensions: ".jpg, .svg"
+        allowedExtensions: ".png, .svg"
       }
     };
   },
   methods: {
     loadImage: function () {
-      this.$refs.imageEditorObj.ej2Instances.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+      this.$refs.imageEditorObj.ej2Instances.open('https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg');
     }
   }
 }

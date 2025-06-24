@@ -115,6 +115,30 @@ Here is an example of how to use the `reorderColumns` method to reorder single c
         
 {% previewsample "page.domainurl/code-snippet/grid/column/default-cs13" %}
 
+### Reorder columns using the column model (ideal for stacked headers)
+
+Previously, column reordering in the Grid was handled using methods like [reorderColumnByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#reordercolumnbyindex), [reorderColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#reordercolumns), and [reorderColumnByTargetIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#reordercolumnbytargetindex). These methods allowed reordering based on field names or index positions and were suitable for simple, flat column structures.
+
+To reorder stacked header columns, use the `reorderByColumnModel` method. It enables reordering by passing complete column model objects. This method is specifically designed to support [stacked header columns](https://ej2.syncfusion.com/vue/documentation/grid/columns/column-headers#stacked-header), but it also works with normal column configurations.
+
+The `reorderColumnByModel` method accepts two arguments:
+
+* **fromColumn**: The column object that you want to move.
+* **toColumn**: The target column object before which the **fromColumn** should be placed.
+
+In this example, **Order Details** is moved before **Customer Name**, and **Ship Country** is moved before **Ship Name** within **Ship Details**, showing how `reorderColumnByModel` method reorders both normal and stacked header columns using a button click.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/reorderColumnByModel-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/reorderColumnByModel-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+ 
+{% previewsample "page.domainurl/code-snippet/grid/column/reorderColumnByModel-cs1" %}
+
 ## Reorder events
 
 When reordering columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component, you may want to take some specific action in response to the drag and drop events. To handle these events, you can define event handlers for the following events:

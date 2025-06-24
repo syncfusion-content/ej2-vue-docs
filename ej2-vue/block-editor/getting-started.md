@@ -25,6 +25,12 @@ The list of dependencies required to use the BlockEditor component in your appli
 |-- @syncfusion/ej2-vue-blockeditor
     |-- @syncfusion/ej2-vue-base
     |-- @syncfusion/ej2-base
+    |-- @syncfusion/ej2-popups
+    |-- @syncfusion/ej2-buttons
+    |-- @syncfusion/ej2-splitbuttons
+    |-- @syncfusion/ej2-navigations
+    |-- @syncfusion/ej2-dropdowns
+    |-- @syncfusion/ej2-inputs
 ```
 
 ## Setting up the Vue 2 project
@@ -79,6 +85,12 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-blockeditor/styles/material.css';
 </style>
 
@@ -105,7 +117,7 @@ import { BlockEditorComponent as EjsBlockEditor  } from "@syncfusion/ej2-vue-blo
 import { BlockEditorComponent  } from "@syncfusion/ej2-vue-blockeditor";
 export default {
   components: {
-    'ejs-BlockEditor': BlockEditorComponent
+    'ejs-blockeditor': BlockEditorComponent
   }
 }
 </script>
@@ -120,7 +132,7 @@ export default {
 
 <template>
     <div id='container'>
-        <ejs-BlockEditor></ejs-BlockEditor>
+        <ejs-blockeditor></ejs-blockeditor>
     </div>
 </template>
 

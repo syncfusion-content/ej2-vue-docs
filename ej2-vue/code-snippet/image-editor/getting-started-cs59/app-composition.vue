@@ -20,8 +20,8 @@ const created = () => {
     if (imageEditorObj.value) {
         const instance = imageEditorObj.value.ej2Instances;
         const imageUrl = Browser.isDevice
-            ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
-            : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+            ? "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg"
+            : "https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg";
         instance.open(imageUrl);
     }
 };

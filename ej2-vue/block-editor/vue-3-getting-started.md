@@ -112,6 +112,12 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 <style>
     @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
     @import '../node_modules/@syncfusion/ej2-blockeditor/styles/material.css';
 </style>
 
@@ -174,6 +180,12 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-blockeditor/styles/material.css';
 </style>
 
@@ -196,6 +208,12 @@ export default {
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-blockeditor/styles/material.css';
 </style>
 

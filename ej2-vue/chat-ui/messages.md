@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Messages in Vue Chat UI component
 
-The Chat UI allows to add messages using the `e-message` tag directive. The message collection stores all the messages being sent and received.
+The Chat UI allows to add messages using the `e-message` tag directive. The message collection stores all the messages being sent and received.
 
 ## Configuring Messages
 
@@ -89,7 +89,32 @@ You can use the [cssClass](../api/chat-ui/userModel/#cssclass) property to custo
   
 {% previewsample "page.domainurl/code-snippet/chat-ui/messages/cssClass" %}
 
-## Define timestamp
+#### Setting status icon css
+
+You can use the [statusIconCss](../api/chat-ui/message/#statusiconcss) property to identify the user's presence, including `online`, `offline`, `busy`, and `away` status in the Chat UI.
+
+The following are the predefined status styles that can be defined using the `statusIconCss` property.
+
+| Status | Icon class |
+| ------------ | -------------- |
+| `Available` | `e-user-online` |
+| `Away` | `e-user-away` |
+| `Busy` | `e-user-busy` |
+| `Offline` | `e-user-offline` |
+
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/statusIconCss/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/statusIconCss/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/statusicon" %}
+
+### Define timestamp
 
 You can use the [timeStamp](../api/chat-ui/messageModel/#timestamp) property to indicate the date and time of each message being sent. By default it is set to the current date and time when the message is sent.
 
@@ -168,9 +193,9 @@ You can use the [tooltip](../api/chat-ui/messageStatusModel/#tooltip) property t
   
 {% previewsample "page.domainurl/code-snippet/chat-ui/messages/tooltip" %}
 
-## Setting autoscroll
+## Setting auto scroll
 
-You can use the [autoScrollToBottom](../api/chat-ui/chatUIModel/#autoscrolltobottom) property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view.
+You can use the [autoScrollToBottom](../api/chat-ui/#autoscrolltobottom) property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view.
 
 - By default, it scrolls to bottom for each message being sent or when the scroll is maintained at the bottom in the chat, in order to prevent the automatic scroll for different user messages you can use the `autoScrollToBottom` property.
 
@@ -187,7 +212,7 @@ You can use the [autoScrollToBottom](../api/chat-ui/chatUIModel/#autoscrolltobot
 
 ## Setting suggestions
 
-You can use the [suggestions](../api/chat-ui/chatUIModel/#suggestions) property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field.
+You can use the[suggestions](../api/chat-ui/#suggestions)property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -199,3 +224,120 @@ You can use the [suggestions](../api/chat-ui/chatUIModel/#suggestions) property,
 {% endtabs %}
   
 {% previewsample "page.domainurl/code-snippet/chat-ui/messages/suggestions" %}
+
+### Setting pinned
+
+You can use the [isPinned](../api/chat-ui/message/#ispinned) property to highlight the important message in the chat. Once a message is pinned, you can access the options menu to continue the chat or unpin it.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/pinned/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/pinned/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/pinned" %}
+
+### Setting reply to
+
+You can use the [replyTo](../api/chat-ui/message/#replyto) property to respond to the original message preserving context and creating a threaded conversation.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/replyTo/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/replyTo/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/replyTo" %}
+
+### Setting forward
+
+You can use the [isForwarded](../api/chat-ui/message/#isforwarded) property to specify the user when the message is forwarded.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/isForwarded/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/isForwarded/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/forwarded" %}
+
+## Setting compact mode
+
+You can use the `enableCompactMode` property to align all messages to the left in the chat for creating a streamlined layout ideal for group conversations or space-constrained interfaces.  By default, it is set to `false`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/compactmode/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/compactmode/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/compactmode" %}
+
+## Configure message options
+
+The `messageToolbarSettings` property allows customization of the message toolbar for richer chat experience in the Chat UI. It provides options to define the toolbar's `width`, configure a set of toolbar `items`, and handle `itemClick` events for enhanced interactivity.  By default, the message options available are `Copy`, `Reply`, `Pin`, and `Delete`.
+
+### Copying a message
+
+You can copy the message item to quickly duplicate the message, by using the toolbar copy icon in the message options.
+
+### Deleting a message
+
+You can delete a message item to remove it from the chat conversation, by using the toolbar trash icon in the message options.
+
+### Setting width
+
+You can use the `width` property to set width of the message toolbar in the chat.  By default, it is set to `100%`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/width/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/width/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/width" %}
+
+### Setting items
+
+You can use the `items` property to specify the toolbar item in the message toolbar of the chat.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/items/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/items/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/items" %}
+
+### Setting itemClick
+
+You can use the `itemClicked` event when the toolbar item is clicked in the message toolbar of the chat.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/itemclicked/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/itemclicked/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/itemclicked" %}

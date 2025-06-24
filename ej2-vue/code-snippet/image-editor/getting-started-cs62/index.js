@@ -33,12 +33,12 @@ new Vue({
                   {
                     nodeId: "03-01-01",
                     nodeText: "Flower",
-                    image: "flower.jpeg",
+                    image: "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg",
                   },
                   {
                     nodeId: "03-01-02",
                     nodeText: "Bridge",
-                    image: "bridge.jpeg",
+                    image: "https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg",
                   },
                 ],
               },

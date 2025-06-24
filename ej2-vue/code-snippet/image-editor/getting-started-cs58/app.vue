@@ -40,7 +40,7 @@ export default {
       setTimeout(() => {
         if (this.$refs.imageEditorRef?.ej2Instances) {
           this.$refs.imageEditorRef.ej2Instances.open(
-            "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+            "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg"
           );
         }
       }, 10);

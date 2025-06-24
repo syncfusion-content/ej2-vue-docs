@@ -51,12 +51,12 @@ const fields = ref({
             {
               nodeId: "03-01-01",
               nodeText: "Flower",
-              image: "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png",
+              image: "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg",
             },
             {
               nodeId: "03-01-02",
               nodeText: "Bridge",
-              image: "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png",
+              image: "https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg",
             },
           ],
         },
