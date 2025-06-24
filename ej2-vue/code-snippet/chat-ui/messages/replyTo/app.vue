@@ -7,7 +7,7 @@
         <e-message :author="currentUser" text="I’ll review it and send feedback by today." replyTo="{
             author: michaleUserModel,
             text: 'Yes, the design phase is complete.',
-            messageID: 'user2'
+            messageID: 'chat-message-2'
         }"></e-message>
       </e-messages>
     </ejs-chatui>
@@ -26,11 +26,11 @@ export default {
   data() {
     return {
       currentUser: {
-        id: "user1",
+        id: "chat-message-1",
         user: "Albert",
       },
       michaleUser: {
-        id: "user2",
+        id: "chat-message-2",
         user: "Michale Suyama",
       }
     };
