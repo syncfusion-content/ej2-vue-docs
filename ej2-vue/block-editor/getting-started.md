@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting started with Vue BlockEditor Component | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Essential Vue BlockEditor component, its elements, and more details.
+title: Getting started with Vue Block Editor Component | Syncfusion
+description: Checkout and learn about getting started with Syncfusion Essential Vue Block Editor component, its elements, and more details.
 platform: ej2-vue
-control: BlockEditor 
+control: Block Editor 
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue BlockEditor component in Vue 2
+# Getting Started with the Vue Block Editor component in Vue 2
 
-This section explains how to create a simple BlockEditor and configure its available functionalities in the Vue environment.
+This section explains how to create a simple Block Editor and configure its available functionalities in the Vue environment.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ This section explains how to create a simple BlockEditor and configure its avail
 
 ## Dependencies
 
-The list of dependencies required to use the BlockEditor component in your application is given as follows:
+The list of dependencies required to use the Block Editor component in your application is given as follows:
 
 ```js
 |-- @syncfusion/ej2-vue-blockeditor
@@ -63,7 +63,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the `Vue BlockEditor component` as an example. Install the `@syncfusion/ej2-vue-blockeditor` package by running the following command:
+This article uses the `Vue Block Editor component` as an example. Install the `block editor` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-blockeditor --save
@@ -78,7 +78,7 @@ yarn add @syncfusion/ej2-vue-blockeditor
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the BlockEditor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Block Editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -99,9 +99,9 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue BlockEditor component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Block Editor component using `Composition API` or `Options API`:
 
-1\. First, import and register the BlockEditor component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the Block Editor component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -125,7 +125,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section define the BlockEditor component.
+2\. In the `template` section define the Block Editor component.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
