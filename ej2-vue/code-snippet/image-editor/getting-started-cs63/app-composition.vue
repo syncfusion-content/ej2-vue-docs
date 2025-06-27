@@ -14,10 +14,10 @@ import { ref } from "vue";
 
 const imageEditorObj = ref(null);
 const uploadSettings = {
-  allowedExtensions: ".jpg, .svg"
+  allowedExtensions: ".png, .svg"
 };
 const loadImage = () => {
-  imageEditorObj.value.ej2Instances.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+  imageEditorObj.value.ej2Instances.open('https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg');
 };
 
 </script>

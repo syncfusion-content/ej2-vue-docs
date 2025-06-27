@@ -30,7 +30,7 @@ new Vue({
                     'FontColor',
                     'BackgroundColor',
                     'Alignments',
-                    '-',
+                    '|',
                     'FontSize',
                     'FontName',
                     'Formats',

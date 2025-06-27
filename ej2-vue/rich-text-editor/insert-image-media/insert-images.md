@@ -77,6 +77,56 @@ To integrate the file manager into the Rich Text Editor, follow these steps:
 
 > Rich Text Editor features are segregated into individual feature-wise modules. To use the file browser tool, configure `FileManager` in providers.
 
+## Maximum file size restriction
+
+You can restrict the image uploaded from the local machine when the uploaded image file size is greater than the allowed size by using the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/imageSettingsModel/#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+
+In the following example, the Image size has been validated before uploading and determined whether the Image has been uploaded or not.
+
+```
+<template>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertImageSettings="insertImageSettings"
+                        :toolbarSettings="toolbarSettings">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor,Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, PasteCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+
+const toolbarSettings = {
+    items: ['Image', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', '|', 'SourceCode', '|', 'Undo', 'Redo']
+};
+const insertImageSettings = {
+    maxFileSize: 30000000
+};
+provide('richtexteditor', [Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, PasteCleanup]);
+</script>
+
+<style> 
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+</style>
+
+```
+
 ## Saving images to server
 
 Upload the selected image to a specified destination using the controller action specified in [insertImageSettings.saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/imageSettingsModel/#saveurl). Ensure to map this method name appropriately and provide the required destination path through the [insertImageSettings.path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/imageSettingsModel/#path) properties.
@@ -158,12 +208,6 @@ public class HomeController : Controller
 ### Rename images before inserting
 
 You can use the [insertImageSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertimagesettings) property, to specify the server handler to upload the selected image. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
-
-### Size-based image restrictions
-
-You can restrict the image uploaded from the local machine when the uploaded image file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event.
-
-> The file size in the argument will be returned in `bytes`.
 
 ### Secure image upload with authentication
 

@@ -41,7 +41,7 @@ new Vue({
           parentId: "0",
           size: 69632,
           type: ".png",
-          imageUrl: "flower.jpeg"
+          imageUrl: "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg"
         },
         {
           dateCreated: new Date("2023-11-15T19:02:02.341Z"),
@@ -54,7 +54,7 @@ new Vue({
           parentId: "0",
           size: 48951,
           type: ".png",
-          imageUrl: "bridge.jpeg"
+          imageUrl: "https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg"
         }
       ]
     };

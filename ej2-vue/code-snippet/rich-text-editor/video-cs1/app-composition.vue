@@ -32,8 +32,5 @@ provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>

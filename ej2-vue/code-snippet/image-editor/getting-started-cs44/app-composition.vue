@@ -21,8 +21,8 @@ const created = () => {
   const imageEditor = imageEditorObj.value?.ej2Instances;
   if (!imageEditor) return;
   const imageUrl = Browser.isDevice
-    ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
-    : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    ? "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg"
+    : "https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg";
   imageEditor.open(imageUrl);
   imageEditor.fontFamily = fontFamily;
 };

@@ -99,8 +99,23 @@ In the following sample,data with diacritics are bound as dataSource for DropDow
         
 {% previewsample "page.domainurl/code-snippet/drop-down-list/filtering/diacritics-filter-cs1" %}
 
+## Debounce delay
+
+You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/filtering/simple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/filtering/simple-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/drop-down-list/filtering/simple-cs1" %}
+
 ## See Also
 
-* [How to limit the search result while filtering](./how-to/search-on-filtering/)
-* [How to highlight the matched characters in filtering](./how-to/highlight-filtering/)
-* [How to modify the result data using remote data source](./how-to/modify-data/)
+* [How to limit the search result while filtering](./how-to/search-on-filtering)
+* [How to highlight the matched characters in filtering](./how-to/highlight-filtering)
+* [How to modify the result data using remote data source](./how-to/modify-data)

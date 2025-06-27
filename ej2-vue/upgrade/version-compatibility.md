@@ -8,20 +8,20 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion Vue supported versions
+# Syncfusion<sup style="font-size:70%">&reg;</sup> Vue supported versions
 
 ## Vue version compatibility
 
-The following table represents the supported Vue versions by different Syncfusion Vue UI components releases.
+The following table represents the supported Vue versions by different Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components releases.
 
-| Version | Syncfusion Vue components version |
+| Version | Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components version |
 | ------------- | ------------- |
 |[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto.html) | 20.3.47 and above |
 |[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default.html) | 19.2.44 and above |
 
-## Syncfusion version information
+## Syncfusion<sup style="font-size:70%">&reg;</sup> version information
 
-Syncfusion follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion Vue components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
+Syncfusion<sup style="font-size:70%">&reg;</sup> follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
 
 For example, if the release package version is `22.1.34`, the version number can be interpreted as follows:
 
@@ -33,6 +33,6 @@ For example, if the release package version is `22.1.34`, the version number can
 
 ## See also
 
-* [Syncfusion product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
+* [Syncfusion<sup style="font-size:70%">&reg;</sup> product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 
 * [Upgrade guide](https://help.syncfusion.com/upgrade-guide/vue-ui-components)

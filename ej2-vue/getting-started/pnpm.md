@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue UI Components with Vite and PNPM
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue components using [PNPM](https://pnpm.io/)
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using [PNPM](https://pnpm.io/)
 
 `PNPM` is an alternative package manager for Node. js that shares dependencies between packages and provides hard links to save disc space usage and installation times.
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](../system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](../system-requirements)
 
 ## Set up the Vite project using PNPM
 
@@ -67,11 +67,11 @@ cd my-project
 pnpm install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add Syncfusion Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
 This article uses the [Vue Grid component](https://www.syncfusion.com/vue-components/vue-grid) as an example. To use the Vue Grid component in the project, the `@syncfusion/ej2-vue-grids` package needs to be installed using the following command:
 
@@ -79,14 +79,14 @@ This article uses the [Vue Grid component](https://www.syncfusion.com/vue-compon
 pnpm install @syncfusion/ej2-vue-grids --save
 ```
 
-## Import Syncfusion CSS styles
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
 
-The dependency packages for Syncfusion in a PNPM vite project are situated within the `.pnpm/node_modules` directory.
+The dependency packages for Syncfusion<sup style="font-size:70%">&reg;</sup> in a PNPM vite project are situated within the `.pnpm/node_modules` directory.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/App.vue" %}
@@ -108,7 +108,7 @@ The dependency packages for Syncfusion in a PNPM vite project are situated withi
 
 > The order of importing CSS styles should be in line with its dependency graph.
 
-## Add Syncfusion Vue component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Follow the below steps to add the Vue Grid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api):
 
@@ -124,7 +124,7 @@ Follow the below steps to add the Vue Grid component using the [Composition API]
 {% endhighlight %}
 {% endtabs %}
    
-2\. In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
+2\. In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/App.vue" %}

@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import { GanttPlugin, Toolbar, PdfExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';

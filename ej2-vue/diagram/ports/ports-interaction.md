@@ -65,6 +65,25 @@ The following code explains how to enable port drag.
         
 {% previewsample "page.domainurl/code-snippet/diagram/ports/ports-int3" %}
 
+## Automatic Port Creation
+
+The Diagram component allows you to dynamically create ports on nodes or connectors by clicking and dragging the mouse while holding the Control (Ctrl) key. This feature is disabled by default and can be enabled by using the `DiagramConstraints.AutomaticPortCreation` constraint.
+
+You can also remove a port using the same Ctrl + Click interaction, but only if the port is not currently connected to any connector.
+
+The following example shows how to enable automatic port creation:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ports/automaticPortCreation/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ports/automaticPortCreation/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/ports/automaticPortCreation" %}
+
 ## Port tooltip
 
 The port tooltip feature allows a tooltip to be displayed when hovering over a port. This functionality can be enabled by setting the port constraints to **"Tooltip"**.

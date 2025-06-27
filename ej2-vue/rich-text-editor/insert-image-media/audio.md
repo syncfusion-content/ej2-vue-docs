@@ -65,6 +65,56 @@ You can use the `browse` option on the audio dialog, to select the audio from th
 
 If the path field is not specified in the [insertAudioSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertaudiosettings), the audio will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
 
+## Maximum file size restriction
+
+You can restrict the audio uploaded from the local machine when the uploaded audio file size is greater than the allowed size by using the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel/#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+
+In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
+
+```
+<template>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertAudioSettings="insertAudioSettings"
+                        :toolbarSettings="toolbarSettings">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor,Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, Audio, PasteCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+
+const toolbarSettings = {
+    items: ['Audio', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', 'Image', '|', 'SourceCode', '|', 'Undo', 'Redo']
+};
+const insertAudioSettings = {
+    maxFileSize: 30000000
+};
+provide('richtexteditor', [Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, Audio, PasteCleanup]);
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+</style>
+
+```
+
 ## Saving audio to the server 
 
 [saveFormat](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettings/#saveformat) Sets the default save format of the audio element when inserted. Possible options are: `Blob` and `Base64`.
@@ -122,10 +172,7 @@ provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
 
 ```
@@ -258,10 +305,7 @@ provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
 
 ```
@@ -319,69 +363,6 @@ public void Rename()
 
 ```
 
-### Restricting audio by size
-
-You can restrict the audio uploaded from the local machine when the uploaded audio file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event.
-
-> The file size in the argument will be returned in `bytes`.
-
-In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
-
-```
-<template>
-    <div>
-        <div class="control-section">
-            <div class="sample-container">
-                <div class="default-section">
-                    <ejs-richtexteditor ref="rteObj" :height="340" :insertAudioSettings="insertAudioSettings"
-                        :toolbarSettings="toolbarSettings" :fileUploading="onFileUpload">
-                    </ejs-richtexteditor>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-
-<script setup>
-import { provide } from 'vue';
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-const toolbarSettings = {
-    items: ['Audio']
-};
-const insertAudioSettings = {
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
-};
-const onFileUpload = (args) => {
-    let sizeInBytes = args.fileData.size;
-    let fileSize = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-};
-provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
-</script>
-
-<style>
-@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
-</style>
-
-```
-
 ### Uploading audio with authentication
 
 You can add additional data with the audio uploaded from the Rich Text Editor on the client side, which can even be received on the server side by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
@@ -434,10 +415,7 @@ provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
 
 ```
@@ -509,10 +487,7 @@ provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
 
 ```
@@ -521,4 +496,4 @@ provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 
 * [Audio Quick Toolbar](../toolbar/quick-toolbar#audio-quick-toolbar)
 * [How to Use the Video Editing Option in Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/video)
-* [How to Use the Image Editing Option in Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/insert-image)
+* [How to Use the Image Editing Option in Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/insert-images)

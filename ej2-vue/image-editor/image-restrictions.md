@@ -18,7 +18,7 @@ The Image Editor allows users to specify image extensions, as well as the minimu
 
 The Image Editor allows users to specify acceptable file extensions for uploaded images using the [`uploadSettings.allowedExtensions`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/uploadSettingsModel/#allowedextensions) property, ensuring that only supported formats, such as `.jpg`, `.png`, and `.webp` and `.svg` are allowed. This helps maintain compatibility and prevents errors caused by unsupported file types. By default, the Image Editor allows files with .jpg, .png, .webp, and .svg extensions.
 
-`Note:` To specify allowed extensions in the upload settings, use the format '.jpg, .svg', listing the permitted file types as a comma-separated string.
+`Note:` To specify allowed extensions in the upload settings, use the format '.png, .svg', listing the permitted file types as a comma-separated string.
 
 Here is an example of configuring image restrictions using the `uploadSettings` property.
 

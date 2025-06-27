@@ -46,7 +46,7 @@ export default {
           size: 69632,
           type: ".png",
           imageUrl:
-            "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+            "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg"
         },
         {
           dateCreated: new Date("2023-11-15T19:02:02.3419426+05:30"),
@@ -60,7 +60,7 @@ export default {
           size: 48951,
           type: ".png",
           imageUrl:
-            "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png"
+            "https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg"
         }
       ]
     };

@@ -42,7 +42,7 @@ new Vue({
         created() {
             const imageEditor = getComponent(document.getElementById('image-editor'), 'image-editor');
             if (!imageEditor) return;
-            const imageUrl = Browser.isDevice ? "flower.png" : "bridge.png";
+            const imageUrl = Browser.isDevice ? "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg" : "https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg";
             imageEditor.open(imageUrl);
         }
     }

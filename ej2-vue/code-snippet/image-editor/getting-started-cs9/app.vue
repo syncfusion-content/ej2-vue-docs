@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     openImage() {
-      this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+      this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg');
     }
   }
 };
