@@ -34,7 +34,7 @@ export default {
                     'FontColor',
                     'BackgroundColor',
                     'Alignments',
-                    '-',
+                    '|',
                     'FontSize',
                     'FontName',
                     'Formats',

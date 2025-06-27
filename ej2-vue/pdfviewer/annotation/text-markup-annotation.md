@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text markup annotation in Vue Pdfviewer component
 
-The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, and strikethrough annotations in the PDF document.
+The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, strikethrough and squiggly annotations in the PDF document.
 
 ![Alt text](../../pdfviewer/images/text_markup_annotation.png)
 
@@ -1662,6 +1662,557 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+## Squiggly a text
+
+There are two ways to add squiggly to a text in the PDF document:
+
+1.Using the context menu
+      * Select a text in the PDF document and right-click it.
+      * Select **Squiggly** option in the context menu that appears.
+
+  ![Alt text](../../pdfviewer/images/squiggly_context.png)
+
+<!-- markdownlint-disable MD029 -->
+2.Using the annotation toolbar
+      * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+      * Select the **Squiggly** button in the annotation toolbar. It enables the squiggly mode.
+      * Select the text and the squiggly annotation will be added.
+      * You can also select the text and apply the squiggly annotation using the **Squiggly** button.
+
+  ![Alt text](../../pdfviewer/images/squiggly_button.png)
+
+In the pan mode, if the squiggly mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for adding squiggly to the text.
+
+Refer to the following code snippet to switch to squiggly mode.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Squiggly</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+const documentLoad = () => {
+  const viewer = this.$refs.pdfviewer.ej2Instances;
+  document.getElementById('set').addEventListener('click', () => {
+    viewer.annotation.setAnnotationMode('Squiggly');
+  });
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Squiggly</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib',
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
+    documentLoad() {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', () => {
+        viewer.annotation.setAnnotationMode('Squiggly');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Squiggly</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+ 
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+const documentLoad = () => {
+  const viewer = pdfviewer.value.ej2Instances;
+  document.getElementById('set').addEventListener('click', () => {
+    viewer.annotation.setAnnotationMode('Squiggly');
+  });
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Squiggly</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
+    documentLoad() {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', () => {
+        viewer.annotation.setAnnotationMode('Squiggly');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Refer to the following code snippet to switch back to normal mode from squiggly mode.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Squiggly</button>
+    <button id="setNone">Normal Mode</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+const documentLoad = () => {
+  const viewer = pdfviewer.value.ej2Instances;
+  document.getElementById('set').addEventListener('click', () => {
+    viewer.annotation.setAnnotationMode('Squiggly');
+  });
+  document.getElementById('setNone').addEventListener('click', () => {
+    viewer.annotation.setAnnotationMode('None');
+  });
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Squiggly</button>
+    <button id="setNone">Normal Mode</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib',
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
+    documentLoad() {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', () => {
+        viewer.annotation.setAnnotationMode('Squiggly');
+      });
+      document.getElementById('setNone').addEventListener('click', () => {
+        viewer.annotation.setAnnotationMode('None');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Squiggly</button>
+    <button id="setNone">Normal Mode</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide("PdfViewer", [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+const documentLoad = () => {
+  const viewer = pdfviewer.value.ej2Instances;
+  document.getElementById('set').addEventListener('click', () => {
+    viewer.annotation.setAnnotationMode('Squiggly');
+  });
+  document.getElementById('setNone').addEventListener('click', () => {
+    viewer.annotation.setAnnotationMode('None');
+  });
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Squiggly</button>
+    <button id="setNone">Normal Mode</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
+    documentLoad() {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', () => {
+        viewer.annotation.setAnnotationMode('Squiggly');
+      });
+      document.getElementById('setNone').addEventListener('click', () => {
+        viewer.annotation.setAnnotationMode('None');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Squiggly a text programmatically
+
+The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+
+Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+const addAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Squiggly", {
+    bounds: [{ x: 250, y: 144, width: 345, height: 14 }],
+    pageNumber: 2
+  });
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
+    addAnnotation: function () {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.annotation.addAnnotation("Squiggly", {
+        bounds: [{ x: 250, y: 144, width: 345, height: 14 }],
+        pageNumber: 2
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+const addAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Squiggly", {
+    bounds: [{ x: 250, y: 144, width: 345, height: 14 }],
+    pageNumber: 2
+  });
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
+    addAnnotation: function () {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.annotation.addAnnotation("Squiggly", {
+        bounds: [{ x: 250, y: 144, width: 345, height: 14 }],
+        pageNumber: 2
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Deleting a text markup annotation
 
 The selected annotation can be deleted by the following ways:
@@ -1694,7 +2245,7 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 ## Setting default properties during control initialization
 
-The properties of the text markup annotation can be set before creating the control using highlightSettings, underlineSettings, and strikethroughSettings.
+The properties of the text markup annotation can be set before creating the control using highlightSettings, underlineSettings,  strikethroughSettings, squigglySettings.
 
 >After editing the default color and opacity using the Edit Color tool and Edit Opacity tool, they will be changed to the selected values.
 
@@ -1707,7 +2258,7 @@ Refer to the following code snippet to set the default annotation settings.
   <div id="app">
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
       :highlightSettings="highlightSettings" :underlineSettings="underlineSettings"
-      :strikethroughSettings="strikethroughSettings">
+      :strikethroughSettings="strikethroughSettings" :squigglySettings="squigglySettings">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -1725,6 +2276,7 @@ const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-l
 const highlightSettings = { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: '' };
 const underlineSettings = { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: '' };
 const strikethroughSettings = { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' };
+const squigglySettings = { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' };
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
@@ -1738,7 +2290,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
   <div id="app">
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
       :highlightSettings="highlightSettings" :underlineSettings="underlineSettings"
-      :strikethroughSettings="strikethroughSettings">
+      :strikethroughSettings="strikethroughSettings" :squigglySettings="squigglySettings">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -1761,7 +2313,8 @@ export default {
       resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
       highlightSettings: { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: '' },
       underlineSettings: { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: '' },
-      strikethroughSettings: { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' }
+      strikethroughSettings: { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' },
+      squigglySettings: {author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' }
     };
   },
   provide: {
@@ -1778,7 +2331,7 @@ export default {
   <div id="app">
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
       :highlightSettings="highlightSettings" :underlineSettings="underlineSettings"
-      :strikethroughSettings="strikethroughSettings">
+      :strikethroughSettings="strikethroughSettings" :squigglySettings="squigglySettings">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -1797,6 +2350,7 @@ const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
 const highlightSettings = { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: '' };
 const underlineSettings = { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: '' };
 const strikethroughSettings = { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' };
+const squigglySettings = { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' };
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
@@ -1810,7 +2364,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
   <div id="app">
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
       :highlightSettings="highlightSettings" :underlineSettings="underlineSettings"
-      :strikethroughSettings="strikethroughSettings">
+      :strikethroughSettings="strikethroughSettings" :squigglySettings="squigglySettings">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -1833,7 +2387,8 @@ export default {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       highlightSettings: { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: '' },
       underlineSettings: { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: '' },
-      strikethroughSettings: { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' }
+      strikethroughSettings: { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' },
+      squigglySettings: { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' }
     };
   },
   provide: {

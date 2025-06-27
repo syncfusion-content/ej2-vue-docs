@@ -63,7 +63,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the `Vue Block Editor component` as an example. Install the `block editor` package by running the following command:
+This article uses the `Vue Block Editor component` as an example. Install the block editor package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-blockeditor --save
@@ -84,14 +84,14 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-blockeditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+@import "../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css";
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>
 
 {% endhighlight %}

@@ -19,13 +19,27 @@ The Block Editor component provides a comprehensive set of public methods that a
 
 you can add a new block to the editor at a specified position using the [addBlock](../api/blockeditor/#addblock) method. You can also insert the block before or after a target block.
 
+```vue
+// Add a new paragraph block after a specific block
+const newBlock = {
+    id: 'new-block-1',
+    id: 'new-block',
+    type: 'Paragraph',
+    content: 'This is a new paragraph block'
+    content: [
+        {
+            type: ContentType.Text,
+            content: 'This is a newly added block'
+        }
+    ]
+};
+
+editor.addBlock(newBlock, 'target-block-id', true); // true = after, false = before
+```
+
 ### Removing a block
 
 You can remove a block from the editor using the [removeBlock](../api/blockeditor/#removeblock) method.
-
-### Getting a block
-
-You can retrieve a block model by its unique identifier using the [getBlock](../api/blockeditor/#getblock) method. Returns `null` if the block is not found.
 
 ### Moving a block
 
@@ -34,6 +48,25 @@ You can move a block from one position to another within the editor using the [m
 ### Updating a block
 
 You can update the properties of an existing block using the [updateBlock](../api/blockeditor/#updateblock) method. Only the specified properties are modified while others remain unchanged. Returns `true` if the update was successful, `false` otherwise.
+
+### Getting a block
+
+You can retrieve a block model by its unique identifier using the [getBlock](../api/blockeditor/#getblock) method. Returns `null` if the block is not found.
+
+### Getting block count
+
+You can utilize the [getBlockCount](../api/blockeditor/#getblockcount) method to retrieve the total number of blocks in the editor.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/methods/block/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/methods/block/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/methods/block" %}
 
 ## Selection and Cursor Methods
 
@@ -65,6 +98,17 @@ You can select a specific block in the editor using the [selectBlock](../api/blo
 
 You can select all blocks in the editor using the [selectAllBlocks](../api/blockeditor/#selectallblocks) method.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/methods/selection/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/methods/selection/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/methods/selection" %}
+
 ## Focus Management Methods
 
 ### FocusIn
@@ -89,6 +133,17 @@ You can enable specific toolbar items in the inline toolbar using the [enableToo
 
 You can disable specific toolbar items in the inline toolbar using the [disableToolbarItems](../api/blockeditor/#disabletoolbaritems) method. This method accepts a single item or an array of items to be disabled.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/methods/formatting/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/methods/formatting/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/methods/formatting" %}
+
 ## Data Export Methods
 
 ### Getting data as JSON
@@ -108,3 +163,14 @@ You can utilize the [getBlockCount](../api/blockeditor/#getblockcount) method to
 ### Printing editor content
 
 You can print the editor content using the [print](../api/blockeditor/#print) method. This method opens a print dialog with the current editor content formatted for printing.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/methods/data/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/methods/data/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/methods/data" %}

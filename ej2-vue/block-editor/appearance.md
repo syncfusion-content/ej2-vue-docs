@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Appearance in Vue Block Editor Component | Syncfusion
-description: Checkout and learn about appearance with Vue Block Editor component of Syncfusion Essential JS 2 and more.
+title: Appearance  in Vue Block Editor Component | Syncfusion
+description: Checkout and learn about Appearance  with Syncfusion Essential Vue Block Editor component, its elements, and more details.
 platform: ej2-vue
-control: Block Editor
+control: Block Editor 
+publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance
+# Appearance in Vue Block Editor component
 
 The Block Editor control provides various appearance customization options to match your application's design requirements. These properties allow you to control the visual styling, layout, and overall look and feel of the editor.
 
@@ -24,3 +25,13 @@ You can utilize the [readonly](../api/blockeditor/#readonly) property to control
 
 You can use the [cssClass](../api/blockeditor/#cssclass) property to customize the appearance of the Block Editor control.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/appearance/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/appearance/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/appearance" %}

@@ -27,6 +27,66 @@ You can use the [text](../api/chat-ui/messageModel/#text) property to add messag
   
 {% previewsample "page.domainurl/code-snippet/chat-ui/defaultMessage" %}
 
+### Setting pinned
+
+You can use the [isPinned](../api/chat-ui/message/#ispinned) property to highlight the important message in the chat. Once a message is pinned, you can access the options menu to continue the chat or unpin it.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/pinned/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/pinned/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/pinned" %}
+
+### Setting reply to
+
+You can use the [replyTo](../api/chat-ui/message/#replyto) property to respond to the original message preserving context and creating a threaded conversation.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/replyTo/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/replyTo/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/replyTo" %}
+
+### Setting forward
+
+You can use the [isForwarded](../api/chat-ui/message/#isforwarded) property to specify the user when the message is forwarded.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/isForwarded/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/isForwarded/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/forwarded" %}
+
+## Setting compact mode
+
+You can use the `enableCompactMode` property to align all messages to the left in the chat for creating a streamlined layout ideal for group conversations or space-constrained interfaces.  By default, it is set to `false`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/compactmode/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/messages/compactmode/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/compactmode" %}
+
 ### Defining current user
 
 You can use the [author](../api/chat-ui/messageModel/#author) property to identify the current user of the chat. Each user can be configured with options such as id, user, avatarUrl, and more.
@@ -224,66 +284,6 @@ You can use the[suggestions](../api/chat-ui/#suggestions)property, to add the su
 {% endtabs %}
   
 {% previewsample "page.domainurl/code-snippet/chat-ui/messages/suggestions" %}
-
-### Setting pinned
-
-You can use the [isPinned](../api/chat-ui/message/#ispinned) property to highlight the important message in the chat. Once a message is pinned, you can access the options menu to continue the chat or unpin it.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/messages/pinned/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/messages/pinned/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-  
-{% previewsample "page.domainurl/code-snippet/chat-ui/messages/pinned" %}
-
-### Setting reply to
-
-You can use the [replyTo](../api/chat-ui/message/#replyto) property to respond to the original message preserving context and creating a threaded conversation.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/messages/replyTo/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/messages/replyTo/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-  
-{% previewsample "page.domainurl/code-snippet/chat-ui/messages/replyTo" %}
-
-### Setting forward
-
-You can use the [isForwarded](../api/chat-ui/message/#isforwarded) property to specify the user when the message is forwarded.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/messages/isForwarded/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/messages/isForwarded/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-  
-{% previewsample "page.domainurl/code-snippet/chat-ui/messages/forwarded" %}
-
-## Setting compact mode
-
-You can use the `enableCompactMode` property to align all messages to the left in the chat for creating a streamlined layout ideal for group conversations or space-constrained interfaces.  By default, it is set to `false`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/messages/compactmode/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/messages/compactmode/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-  
-{% previewsample "page.domainurl/code-snippet/chat-ui/messages/compactmode" %}
 
 ## Configure message options
 

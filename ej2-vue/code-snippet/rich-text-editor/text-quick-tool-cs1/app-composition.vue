@@ -28,7 +28,7 @@ const quickToolbarSettings= {
         'FontColor',
         'BackgroundColor',
         'Alignments',
-        '-',
+        '|',
         'FontSize',
         'FontName',
         'Formats',

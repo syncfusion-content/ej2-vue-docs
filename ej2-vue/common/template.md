@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Syncfusion Vue Components
+# Templates in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components
 
-Syncfusion Vue components are rendered with a pre-defined layout or structure that is used to define how the component should be rendered on the user interface. The user wants to customise the appearance of the component and add functionality that is specific to the needs of the application. Syncfusion Vue components have the option to achieve this using template support.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components are rendered with a pre-defined layout or structure that is used to define how the component should be rendered on the user interface. The user wants to customise the appearance of the component and add functionality that is specific to the needs of the application. Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components have the option to achieve this using template support.
 
 ## Types of templates
 
-Syncfusion Vue components have three types of templates, such as:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components have three types of templates, such as:
 
 * [Slot template](#Slot-template)
 * [Inline template](#Inline-template)
@@ -22,7 +22,7 @@ Syncfusion Vue components have three types of templates, such as:
 
 ## Slot template
 
-The Syncfusion Vue components do support [slots](https://vuejs.org/guide/components/slots.html), which can help reduce the number of properties that need to be defined and increase the readability of the component. This is because using slots allows defining the content or behaviour of the component in the parent component rather than in the component's own code. This can make it easier to understand the purpose and functionality of the component at a glance and make the component more modular and flexible.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components do support [slots](https://vuejs.org/guide/components/slots.html), which can help reduce the number of properties that need to be defined and increase the readability of the component. This is because using slots allows defining the content or behaviour of the component in the parent component rather than in the component's own code. This can make it easier to understand the purpose and functionality of the component at a glance and make the component more modular and flexible.
 
 In the Vue component, the `v-slot` directive is used to define a slot template in the component's template where users can insert custom content. Refer to the following code sample.
 
@@ -56,7 +56,7 @@ In a single-page application, there may be a need to access the parent component
 
 ### Named slot
 
-The Syncfusion Vue components support multiple templates. Each template is differentiated by its name. To render the slot content to the corresponding slot outlet, the name of each slot must map to the name of the corresponding property. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support multiple templates. Each template is differentiated by its name. To render the slot content to the corresponding slot outlet, the name of each slot must map to the name of the corresponding property. 
 
 ```html
 <template v-slot:templateName></template>
@@ -98,7 +98,7 @@ The slot template can also be used to insert content into `nested tags` within a
 
 ## Inline template
 
-The user can use the `app.component` method to add custom content to the template that can be used in the Syncfusion Vue components. The template elements can be added to `template` attribute of the `app.component` method. Refer to the below code snippet to create the template element using `app.component` method.
+The user can use the `app.component` method to add custom content to the template that can be used in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components. The template elements can be added to `template` attribute of the `app.component` method. Refer to the below code snippet to create the template element using `app.component` method.
 
 ```js
 import { createApp  } from "vue/dist/vue.esm-bundler.js";
@@ -135,7 +135,7 @@ Now, the template function is assigned to the `template` property of the Grid co
 
 ## External template
 
-The template elements can be defined in an external file (single-file component) and used in Syncfusion Vue components. Refer to the below code snippet to define template elements in `template.vue` file.
+The template elements can be defined in an external file (single-file component) and used in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components. Refer to the below code snippet to define template elements in `template.vue` file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/template.vue" %}
@@ -229,7 +229,7 @@ const ds = [
 
 ## External modules in templates
 
-Syncfusion provides the option to use external modules in template content. To use the external modules in the template, add those modules to the `plugins` property of the Vue component. For example, the "i18n" module is added to the `plugins` property of the Grid component. Refer to the below code snippet.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to use external modules in template content. To use the external modules in the template, add those modules to the `plugins` property of the Vue component. For example, the "i18n" module is added to the `plugins` property of the Grid component. Refer to the below code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -333,7 +333,7 @@ const  modules= [i18n];
 
 In Vue, `provide` and `inject` options are used to share data between components that are not directly related through a parent-child relationship.
 
-Syncfusion components can use these `provide` and `inject` options in templates. It allows to pass data from a parent component to its template components without having to pass props down the component tree. Instead, the parent component provides the data, and the child components inject it.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components can use these `provide` and `inject` options in templates. It allows to pass data from a parent component to its template components without having to pass props down the component tree. Instead, the parent component provides the data, and the child components inject it.
 
 To provide data from a parent component to its template, use the `provide` option. The provide option is an object that contains the data to provide. The keys in the object are the names of the properties, and the values are the data to provide.
 
@@ -377,7 +377,7 @@ provide('content', 'Update');
 
 To inject data provided by a parent component, use the `inject` option. The `inject` option is an array or an object that contains the names of the properties to inject.
 
-In this below example, the child template component injects content property using the `inject` option, and displays its value using an interpolation directive ({% raw %}{{ content }}{% endraw %}) in **MyTemplate.vue** file.
+In this below example, the child template component injects content property using the `inject` option, and displays its value using an interpolation directive ({{ content }}) in **MyTemplate.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/MyTemplate.vue" %}

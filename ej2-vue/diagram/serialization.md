@@ -114,9 +114,9 @@ let diagram: Diagram = new Diagram({
 ```
 
 
-## Save and load diagram using uploader control
+## Save and load diagram using Uploader control
 
-The JSON files can be uploaded using the uploader component, where they are parsed to extract the JSON data they contain. To achieve this, configure the uploader component with the saveUrl property to receive uploaded files and store them on the server. Similarly, use the removeUrl property to handle file removal operations on the server.
+The JSON files can be uploaded using the Uploader component, where they are parsed to extract the JSON data they contain. To achieve this, configure the Uploader component with the saveUrl property to receive uploaded files and store them on the server. Similarly, use the removeUrl property to handle file removal operations on the server.
 
 When a JSON file is uploaded, it undergoes parsing to extract its JSON data. This data is then loaded into the diagram using the [`loadDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#loaddiagram) method.
 
@@ -132,7 +132,7 @@ When a JSON file is uploaded, it undergoes parsing to extract its JSON data. Thi
         
 {% previewsample "page.domainurl/code-snippet/diagram/serialisation/serialisation-cs1" %}
 
- ## Importing and Exporting Diagrams using Mermaid Syntax
+## Importing and Exporting Diagrams using Mermaid Syntax
 
 The [`Diagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/) supports saving diagrams in Mermaid syntax format. Mermaid is a Markdown-inspired syntax that automatically generates diagrams. With this functionality, you can easily create mind maps, flowcharts, and UML sequence diagrams from Mermaid syntax data, simplifying the visualization of complex ideas and processes without manual drawing. Additionally, you can export your mind maps, flowcharts, and UML sequence diagrams to Mermaid syntax, allowing for easy sharing, editing, and use across different platforms.
 
@@ -148,9 +148,9 @@ let data = diagramInstance.saveDiagramAsMermaid();
 
 ### Load diagram from Mermaid syntax
 
-You can load a [`diagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram) from the serialized Mermaid syntax data using the `loadDiagramFromMermaid` method. The following code illustrates how to load a diagram from a Mermaid string data.
+You can load a [`diagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/) from the serialized Mermaid syntax data using the `loadDiagramFromMermaid` method. The following code illustrates how to load a diagram from a Mermaid string data.
 
-#### Load flowchart layout
+#### Load Flowchart layout
 
 The following example shows how to load flowchart diagram from mermaid syntax.
 
@@ -166,7 +166,7 @@ The following example shows how to load flowchart diagram from mermaid syntax.
 {% previewsample "page.domainurl/code-snippet/diagram/serialisation/serialisation-cs2" %}
 
 
-#### Load mindmap layout
+#### Load Mind Map layout
 
 The following example shows how to load mind map diagram from mermaid syntax.
 
@@ -181,9 +181,9 @@ The following example shows how to load mind map diagram from mermaid syntax.
         
 {% previewsample "page.domainurl/code-snippet/diagram/serialisation/serialisation-cs3" %}
 
-#### Load Uml Sequence diagram
+#### Load UML Sequence diagram
 
-The following example shows how to load Uml Sequence diagram from mermaid syntax.
+The following example shows how to load UML Sequence diagram from mermaid syntax:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

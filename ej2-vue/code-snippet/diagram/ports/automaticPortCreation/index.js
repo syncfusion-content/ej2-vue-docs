@@ -6,7 +6,7 @@ Vue.use(DiagramPlugin);
 
 const nodes = [
     {
-        id: 'node1', width: 100, height: 100, offsetX: 150, offsetY: 200, style: { fill: '#cornflowerblue' },
+        id: 'node1', width: 100, height: 100, offsetX: 150, offsetY: 200, style: { fill: 'cornflowerblue' },
         constraints: NodeConstraints.Default &
             ~(NodeConstraints.InConnect | NodeConstraints.OutConnect)
 
