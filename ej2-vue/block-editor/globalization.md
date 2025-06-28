@@ -49,6 +49,28 @@ The Block Editor can be localized to any culture by defining the text of the Blo
 
 The below example shows adding the German culture locale(`de-DE`)
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/globalization/localization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/globalization/localization/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/globalization/localization" %}
+
 ## RTL
 
 RTL provides an option to switch the text direction and layout of the Block Editor control from right to left by setting the [enableRtl](../api/blockeditor/#enablertl) property to `true`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/globalization/rtl/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/globalization/rtl/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/globalization/rtl" %}

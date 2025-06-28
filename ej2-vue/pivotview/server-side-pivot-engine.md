@@ -815,3 +815,585 @@ Meanwhile, the memory cache is set to expire after 60 minutes from RAM to free i
 * **GetMembers:** Allows to get the members of a field. This fires when the member editor is opened to do a filtering operation.
 * **GetRawData:** Allows to get raw data of an aggregated value cell. This fires when the drill-through or editing dialog is opened.
 * **GetPivotValues:** Allows to update the stored engine properties in-memory cache and returns the aggregated values to browser to render the Pivot Table. Here, the return value can be modified. The Pivot Table will be rendered browser-based on this.
+
+## Excel Export
+
+The server-side engine seamlessly supports Excel export functionality, enabling users to efficiently generate and download pivot table reports in Excel format directly from the server. To enable Excel export in the pivot table, set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowexcelexport) as **true**. Once the API is set, the user needs to call the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method to export the pivot table to Excel by clicking an external button.
+
+N> The pivot table component can be exported to Excel format using options available in the toolbar. For more details [refer](./tool-bar) here.
+
+```javascript
+<template>
+  <div class="control-section">
+    <div style="margin-bottom: 5px">
+      <ejs-button id="export-btn" v-on:click.native="btnClick" isPrimary="true">Export</ejs-button>
+    </div>
+    <div>
+      <div class="content-wrapper">
+        <ejs-pivotview
+          id="pivotview"
+          ref="pivotview"
+          :dataSourceSettings="dataSourceSettings"
+          :gridSettings="gridSettings"
+          :width="width"
+          :height="height"
+          :allowExcelExport="allowExcelExport"
+        >
+        </ejs-pivotview>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+/* eslint-disable */
+import Vue from 'vue';
+import {
+  PivotViewPlugin,
+  GroupingBar,
+  FieldList,
+  IDataSet,
+  VirtualScroll,
+  CalculatedField,
+  Toolbar,
+  PDFExport,
+  ExcelExport,
+  ConditionalFormatting,
+  NumberFormatting,
+} from '@syncfusion/ej2-vue-pivotview';
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { extend, enableRipple } from '@syncfusion/ej2-base';
+
+Vue.use(PivotViewPlugin);
+Vue.use(ButtonPlugin);
+
+export default {
+  data() {
+    return {
+      dataSourceSettings: {
+        url: 'https://localhost:44350/api/pivot/post',
+        mode: 'Server',
+        rows: [
+          {
+            name: 'ProductID',
+            caption: 'Product ID',
+          },
+        ],
+        formatSettings: [
+          {
+            name: 'Price',
+            format: 'C',
+          },
+        ],
+        columns: [
+          {
+            name: 'Year',
+            caption: 'Production Year',
+          },
+        ],
+        values: [
+          { name: 'Sold', caption: 'Units Sold' },
+          { name: 'Price', caption: 'Sold Amount' },
+        ],
+      },
+      width: '100%',
+      height: 450,
+      gridSettings: { columnWidth: 140 },
+      allowExcelExport: true,
+    };
+  },
+  provide: {
+    pivotview: [FieldList],
+  },
+  methods: {
+    btnClick() {
+      const pivotGridObj = this.$refs.pivotview.ej2Instances;
+      pivotGridObj.excelExport();
+    },
+  },
+};
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-pivotview/styles/material.css';
+</style>
+```
+
+To enable export functionality in a server-side controller, initialize the **ExcelExport** class to handle export file generation.
+
+```csharp
+ private ExcelExport excelExport = new ExcelExport();
+```
+
+Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), invoke the **ExportToExcel** method in the **Post** method of the **PivotController.cs** file.
+
+```csharp
+        [Route("/api/pivot/post")]
+        [HttpPost]
+        public async Task<object> Post([FromBody] object args)
+        {
+            FetchData param = JsonConvert.DeserializeObject<FetchData>(args.ToString());
+            if (param.Action == "fetchFieldMembers")
+            {
+                return await GetMembers(param);
+            }
+            else if (param.Action == "fetchRawData")
+            {
+                return await GetRawData(param);
+            }
+            else if (param.Action == "onExcelExport" || param.Action == "onCsvExport" ||
+                  param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+            {
+                EngineProperties engine = await GetEngine(param);
+                if (param.InternalProperties.EnableVirtualization && param.ExportAllPages)
+                {
+                    engine = await PivotEngine.PerformAction(engine, param);
+                }
+                if (param.Action == "onExcelExport")
+                {
+                    return excelExport.ExportToExcel("Excel", engine, null, param.ExcelExportProperties);
+                }
+                else
+                {
+                    return excelExport.ExportToExcel("CSV", engine, null, param.ExcelExportProperties);
+                }
+            }
+            else
+            {
+                return await GetPivotValues(param);
+            }
+        }
+
+```
+
+![Server-side engine excel exporting](images/excel-export-with-server-side-pivot-engine.png)
+
+### Add header and footer while exporting
+
+The Excel export provides an option to include header and footer content for the excel document before exporting. In-order to add header and footer, define [header](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties/#header) and [footer](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties/#footer) properties in [ExcelExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties/) and pass it as a parameter to the [excelExport](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
+
+``` javascript
+<template>
+  <div class="control-section">
+    <div style="margin-bottom: 5px">
+      <ejs-button id="export-btn" v-on:click.native="btnClick" isPrimary="true">Export</ejs-button>
+    </div>
+    <div>
+      <div class="content-wrapper">
+        <ejs-pivotview
+          id="pivotview"
+          ref="pivotview"
+          :dataSourceSettings="dataSourceSettings"
+          :gridSettings="gridSettings"
+          :width="width"
+          :height="height"
+          :allowExcelExport="allowExcelExport"
+        >
+        </ejs-pivotview>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+/* eslint-disable */
+import Vue from 'vue';
+import {
+  PivotViewPlugin,
+  GroupingBar,
+  FieldList,
+  IDataSet,
+  VirtualScroll,
+  CalculatedField,
+  Toolbar,
+  PDFExport,
+  ExcelExport,
+  ConditionalFormatting,
+  NumberFormatting,
+} from '@syncfusion/ej2-vue-pivotview';
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { extend, enableRipple } from '@syncfusion/ej2-base';
+
+Vue.use(PivotViewPlugin);
+Vue.use(ButtonPlugin);
+
+export default {
+  data() {
+    return {
+      dataSourceSettings: {
+        url: 'https://localhost:44350/api/pivot/post',
+        mode: 'Server',
+        rows: [
+          {
+            name: 'ProductID',
+            caption: 'Product ID',
+          },
+        ],
+        formatSettings: [
+          {
+            name: 'Price',
+            format: 'C',
+          },
+        ],
+        columns: [
+          {
+            name: 'Year',
+            caption: 'Production Year',
+          },
+        ],
+        values: [
+          { name: 'Sold', caption: 'Units Sold' },
+          { name: 'Price', caption: 'Sold Amount' },
+        ],
+      },
+      width: '100%',
+      height: 450,
+      gridSettings: { columnWidth: 140 },
+      allowExcelExport: true,
+    };
+  },
+  provide: {
+    pivotview: [FieldList],
+  },
+  methods: {
+    btnClick() {
+      const pivotGridObj = this.$refs.pivotview.ej2Instances;
+      let excelExportProperties = {
+        header: {
+          headerRows: 2,
+          rows: [
+            { cells: [{ colSpan: 4, value: "Pivot Table", style: { fontColor: '#C67878', fontSize: 20, hAlign: 'Center', bold: true, underline: true } }] }
+          ]
+        },
+        footer: {
+          footerRows: 4,
+          rows: [
+            { cells: [{ colSpan: 4, value: "Thank you for your business!", style: { hAlign: 'Center', bold: true } }] },
+            { cells: [{ colSpan: 4, value: "!Visit Again!", style: { hAlign: 'Center', bold: true } }] }
+          ]
+        }
+      };
+      pivotGridObj.excelExport(excelExportProperties);
+    },
+  },
+};
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-pivotview/styles/material.css';
+</style>
+
+```
+![Add header and footer while exporting](images/add-header-and-footer-while-exporting.png)
+
+## CSV Export
+
+The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowexcelexport) as **true**. Once the API is set, the user needs to call the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method to export the pivot table to CSV by clicking an external button.
+
+N> The pivot table component can be exported to CSV format using options available in the toolbar. For more details [refer](./tool-bar) here.
+
+```javascript
+<template>
+  <div class="control-section">
+    <div style="margin-bottom: 5px">
+      <ejs-button id="export-btn" v-on:click.native="btnClick" isPrimary="true">Export</ejs-button>
+    </div>
+    <div>
+      <div class="content-wrapper">
+        <ejs-pivotview
+          id="pivotview"
+          ref="pivotview"
+          :dataSourceSettings="dataSourceSettings"
+          :gridSettings="gridSettings"
+          :width="width"
+          :height="height"
+          :allowExcelExport="allowExcelExport"
+        >
+        </ejs-pivotview>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+/* eslint-disable */
+import Vue from 'vue';
+import {
+  PivotViewPlugin,
+  GroupingBar,
+  FieldList,
+  IDataSet,
+  VirtualScroll,
+  CalculatedField,
+  Toolbar,
+  PDFExport,
+  ExcelExport,
+  ConditionalFormatting,
+  NumberFormatting,
+} from '@syncfusion/ej2-vue-pivotview';
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { extend, enableRipple } from '@syncfusion/ej2-base';
+
+Vue.use(PivotViewPlugin);
+Vue.use(ButtonPlugin);
+
+export default {
+  data() {
+    return {
+      dataSourceSettings: {
+        url: 'https://localhost:44350/api/pivot/post',
+        mode: 'Server',
+        rows: [
+          {
+            name: 'ProductID',
+            caption: 'Product ID',
+          },
+        ],
+        formatSettings: [
+          {
+            name: 'Price',
+            format: 'C',
+          },
+        ],
+        columns: [
+          {
+            name: 'Year',
+            caption: 'Production Year',
+          },
+        ],
+        values: [
+          { name: 'Sold', caption: 'Units Sold' },
+          { name: 'Price', caption: 'Sold Amount' },
+        ],
+      },
+      width: '100%',
+      height: 450,
+      gridSettings: { columnWidth: 140 },
+      allowExcelExport: true,
+    };
+  },
+  provide: {
+    pivotview: [FieldList],
+  },
+  methods: {
+    btnClick() {
+      const pivotGridObj = this.$refs.pivotview.ej2Instances;
+      pivotGridObj.csvExport();
+    },
+  },
+};
+</script>
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-pivotview/styles/material.css';
+</style>
+```
+
+To enable export functionality in a server-side controller, initialize the **ExcelExport** class to handle export file generation.
+
+```csharp
+ private ExcelExport excelExport = new ExcelExport();
+```
+
+Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), invoke the **ExportToExcel** method in the **Post** method of the **PivotController.cs** file.
+
+```csharp
+        [Route("/api/pivot/post")]
+        [HttpPost]
+        public async Task<object> Post([FromBody] object args)
+        {
+            FetchData param = JsonConvert.DeserializeObject<FetchData>(args.ToString());
+            if (param.Action == "fetchFieldMembers")
+            {
+                return await GetMembers(param);
+            }
+            else if (param.Action == "fetchRawData")
+            {
+                return await GetRawData(param);
+            }
+            else if (param.Action == "onExcelExport" || param.Action == "onCsvExport" ||
+                  param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+            {
+                EngineProperties engine = await GetEngine(param);
+                if (param.InternalProperties.EnableVirtualization && param.ExportAllPages)
+                {
+                    engine = await PivotEngine.PerformAction(engine, param);
+                }
+                if (param.Action == "onExcelExport")
+                {
+                    return excelExport.ExportToExcel("Excel", engine, null, param.ExcelExportProperties);
+                }
+                else
+                {
+                    return excelExport.ExportToExcel("CSV", engine, null, param.ExcelExportProperties);
+                }
+            }
+            else
+            {
+                return await GetPivotValues(param);
+            }
+        }
+
+```
+![CSV Export](images/csv-export-with-server-side-pivot-engine.png)
+
+## Export as Pivot
+
+You can export a Syncfusion PivotTable to an Excel file while preserving its native pivot structure using the server-side engine. The exported Excel document contains a fully interactive PivotTable, allowing users to dynamically modify configurations such as filtering, sorting, grouping, and aggregation directly in Microsoft Excel.
+
+To enable native Excel pivot export in the PivotTable, the user must call the `exportAsPivot` method to export the PivotTable to Excel by clicking an external button, specifying the export type (**Excel** or **CSV**) as a parameter.
+
+```javascript
+<template>
+  <div class="control-section">
+    <div style="margin-bottom: 5px">
+      <ejs-button id="export-btn" v-on:click.native="btnClick" isPrimary="true">Export</ejs-button>
+    </div>
+    <div>
+      <div class="content-wrapper">
+        <ejs-pivotview
+          id="pivotview"
+          ref="pivotview"
+          :dataSourceSettings="dataSourceSettings"
+          :gridSettings="gridSettings"
+          :width="width"
+          :height="height"
+          :allowExcelExport="allowExcelExport"
+        >
+        </ejs-pivotview>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+/* eslint-disable */
+import Vue from 'vue';
+import {
+  PivotViewPlugin,
+  GroupingBar,
+  FieldList,
+  IDataSet,
+  VirtualScroll,
+  CalculatedField,
+  Toolbar,
+  PDFExport,
+  ExcelExport,
+  ConditionalFormatting,
+  NumberFormatting,
+} from '@syncfusion/ej2-vue-pivotview';
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { extend, enableRipple } from '@syncfusion/ej2-base';
+
+Vue.use(PivotViewPlugin);
+Vue.use(ButtonPlugin);
+
+export default {
+  data() {
+    return {
+      dataSourceSettings: {
+        url: 'https://localhost:44350/api/pivot/post',
+        mode: 'Server',
+        rows: [
+          {
+            name: 'ProductID',
+            caption: 'Product ID',
+          },
+        ],
+        formatSettings: [
+          {
+            name: 'Price',
+            format: 'C',
+          },
+        ],
+        columns: [
+          {
+            name: 'Year',
+            caption: 'Production Year',
+          },
+        ],
+        values: [
+          { name: 'Sold', caption: 'Units Sold' },
+        ],
+      },
+      width: '100%',
+      height: 450,
+      gridSettings: { columnWidth: 140 },
+      allowExcelExport: true,
+    };
+  },
+  provide: {
+    pivotview: [FieldList, ExcelExport],
+  },
+  methods: {
+    btnClick() {
+      const pivotGridObj = this.$refs.pivotview.ej2Instances;
+      pivotGridObj.exportAsPivot();
+    },
+  },
+};
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-pivotview/styles/material.css';
+</style>
+```
+
+To enable native Excel pivot export functionality in a server-side controller, initialize the **PivotExportEngine** class to handle export file generation.
+
+```csharp
+    private PivotExportEngine<PivotData> pivotExport = new PivotExportEngine<PivotData>();
+```
+
+Then, based on the **Action** parameter (**onPivotExcelExport** or **onPivotCsvExport**), invoke the **ExportAsPivot** method in the **Post** method of the **PivotController.cs** file.
+
+```csharp
+        [Route("/api/pivot/post")]
+        [HttpPost]
+        public async Task<object> Post([FromBody] object args)
+        {
+            FetchData param = JsonConvert.DeserializeObject<FetchData>(args.ToString());
+            if (param.Action == "fetchFieldMembers")
+            {
+                return await GetMembers(param);
+            }
+            else if (param.Action == "fetchRawData")
+            {
+                return await GetRawData(param);
+            }
+            else if (param.Action == "onExcelExport" || param.Action == "onCsvExport" ||
+                    param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+            {
+                EngineProperties engine = await GetEngine(param);
+                if (param.InternalProperties.EnableVirtualization && param.ExportAllPages)
+                {
+                    engine = await PivotEngine.PerformAction(engine, param);
+                }
+                if (param.Action == "onExcelExport")
+                {
+                    return excelExport.ExportToExcel("Excel", engine, null, param.ExcelExportProperties);
+                }
+                else if (param.Action == "onPivotExcelExport" || param.Action == "onPivotCsvExport")
+                {
+                    return pivotExport.ExportAsPivot(param.Action == "onPivotExcelExport" ? ExportType.Excel : ExportType.CSV, engine, param);
+                }
+                else
+                {
+                    return excelExport.ExportToExcel("CSV", engine, null, param.ExcelExportProperties);
+                }
+            }
+            else
+            {
+                return await GetPivotValues(param);
+            }
+        }
+```
+
+![Export as Pivot](images/export-as-pivot.png)
