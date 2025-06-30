@@ -39,3 +39,22 @@ Here's an example of how to customize both the Undo/Redo timer and steps:
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs26" %}
+
+## Clear Undo/Redo stack
+
+The Rich Text Editor automatically maintains an undo/redo stack, allowing users to revert or redo changes made during editing.
+
+To clear the entire undo and redo stack, use the public [clearUndoRedo](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#clearundoredo) method. This is helpful when loading new content dynamically or resetting the editor to its initial state.
+
+Here's an example of how to clear the Undo/Redo stack:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/undo-redo-stack/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/undo-redo-stack/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/undo-redo-stack" %}
