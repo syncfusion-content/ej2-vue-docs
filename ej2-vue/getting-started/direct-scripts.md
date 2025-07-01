@@ -10,13 +10,14 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Syncfusion Vue UI Components using direct scripts in a quickstart application
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts in a quickstart application
+
 
 
 Vue provides native script support, allowing users to directly include the Vue.js library in an HTML file without the need for a build process or module bundler. This feature is useful for simpler projects or prototypes, enabling quick and easy implementation of Vue.js without setting up a complex build workflow.
 
 
-Similarly, Syncfusion offers direct script support for its Vue components. Developers can seamlessly include Syncfusion Vue components in their HTML files and leverage them within their Vue.js applications. This allows for straightforward integration of Syncfusion Vue components without the need for additional build processes. Now, let's delve into the process of utilizing Syncfusion Vue components through direct script inclusion.
+Similarly, Syncfusion<sup style="font-size:70%">&reg;</sup> offers direct script support for its Vue components. Developers can seamlessly include Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in their HTML files and leverage them within their Vue.js applications. This allows for straightforward integration of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components without the need for additional build processes. Now, let's delve into the process of utilizing Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components through direct script inclusion.
 
 ## Prerequisites
 
@@ -30,7 +31,7 @@ To demonstrate the usage of the `Grid` component through direct scripting, follo
 
 2\. Inside the `quickstart` folder, create an HTML file named `index.html`.
 
-Include the appropriate version of the Vue.js library in the **index.html** file based on whether to use [Vue 2](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) or [Vue 3](https://unpkg.com/vue@3/dist/vue.global.js) in the project. Then, create a new Vue instance with the required configuration options.
+Include the appropriate version of the Vue.js library in the **index.html** file based on whether to use [Vue 2](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) or [Vue 3](https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js) in the project. Then, create a new Vue instance with the required configuration options.
 
 > The [Vue class component](https://class-component.vuejs.org) package is required before the 2023 Volume 1 (v21.1.35) release. So, add the [Vue class component](<https://cdn.jsdelivr.net/npm/vue-class-component@8.0.0-rc.1/dist/vue-class-component.global.min.js>) script to the head section of the **index.html** file for Vue 3 direct script.
 
@@ -65,9 +66,9 @@ Include the appropriate version of the Vue.js library in the **index.html** file
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion CSS styles
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS from CDN, [CRG] and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS from CDN, [CRG] and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in CDN. Add the `Material` CSS styles to the head section of the **index.html** file.
 
@@ -79,9 +80,9 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion Vue scripts
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> Vue scripts
 
-To integrate Syncfusion components into your application, add the required Syncfusion Vue direct scripts to the head section of the **index.html** file to set up the Vue instance.
+To integrate Syncfusion<sup style="font-size:70%">&reg;</sup> components into your application, add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Vue direct scripts to the head section of the **index.html** file to set up the Vue instance.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
@@ -91,7 +92,7 @@ To integrate Syncfusion components into your application, add the required Syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion Vue component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 1\. First, register the Grid component and its child directives in Vue.
 
@@ -119,9 +120,9 @@ To integrate Syncfusion components into your application, add the required Syncf
 {% endhighlight %}
 {% endtabs %}
 
-2\. Add the component to the `<body>` section of the **index.html** file. Bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and inject the `Page` module. Follow the [Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started/) documentation for further details.
+2\. Add the component to the `<body>` section of the **index.html** file. Bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and inject the `Page` module. Follow the [Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation for further details.
 
-> While using Syncfusion Vue components in a direct script way, camel-cased property (isPrimaryKey) names need to be specified in the kebab-cased (is-primary-key) equivalents.
+> While using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in a direct script way, camel-cased property (isPrimaryKey) names need to be specified in the kebab-cased (is-primary-key) equivalents.
 
 {% tabs %}
 {% highlight html tabtitle="Vue 2 (~/index.html)" %}

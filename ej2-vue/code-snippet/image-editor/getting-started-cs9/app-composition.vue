@@ -16,7 +16,7 @@ const toolbar = ref([]);
 
 const openImage = () => {
     if (imageEditorObj.value) {
-        imageEditorObj.value.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+        imageEditorObj.value.open('https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg');
     }
 };
 </script>

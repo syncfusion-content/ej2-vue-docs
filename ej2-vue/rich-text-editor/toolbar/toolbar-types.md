@@ -14,11 +14,12 @@ The Syncfusion Vue Rich Text Editor provides a powerful toolbar that enables use
 
 >To use Toolbar feature, configure `Toolbar` in the provider section.
 
-The Rich Text Editor allows you to configure different types of toolbar using [toolbarSettings.type](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/revueact/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
+The Rich Text Editor allows you to configure different types of toolbar using [type](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
 
 1. Expand 
 2. MultiRow
 3. Scrollable
+4. Popup
 
 ## Expanding the toolbar
 
@@ -64,6 +65,21 @@ Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.c
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs1" %}
+
+## Configuring a popup toolbar
+
+Setting the `type` to `Popup` in [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#type) will display overflowing toolbar items into a popup container, optimizing the toolbar layout for limited space and smaller screens.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-popup/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-popup/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-popup" %}
 
 ## Creating a sticky toolbar
 

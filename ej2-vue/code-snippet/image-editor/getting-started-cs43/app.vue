@@ -28,13 +28,13 @@ export default {
       let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
       if (!imageEditor) return;
       let imageUrl = Browser.isDevice
-        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
-        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+        ? 'https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg'
+        : 'https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg';
       imageEditor.open(imageUrl);
     },
     btnClick: function () {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawImage('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png', dimension.x, dimension.y, 100, 80, true, 0);
+      this.$refs.imageEditorObj.ej2Instances.drawImage('https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg', dimension.x, dimension.y, 100, 80, true, 0);
     }
   }
 }

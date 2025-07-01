@@ -71,6 +71,56 @@ You can use the `browse` option on the video dialog to select the video from the
 
 If the path field is not specified in the [insertVideoSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertvideosettings), the video will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
 
+## Maximum file size restrictions
+
+You can restrict the video uploaded from the local machine when the uploaded video file size is greater than the allowed size by using the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+
+In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
+
+```
+<template>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertVideoSettings="insertVideoSettings"
+                        :toolbarSettings="toolbarSettings">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor,Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, Video, PasteCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+
+const toolbarSettings = {
+    items: ['Video', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', 'Image', '|', 'SourceCode', '|', 'Undo', 'Redo']
+};
+const insertVideoSettings = {
+    maxFileSize: 30000000
+};
+provide('richtexteditor', [Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, Audio, PasteCleanup]);
+</script>
+
+<style>
+@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+</style>
+
+```
+
 ## Saving video to the server
 
 Upload the selected video to a specified destination using the controller action specified in [insertVideoSettings.saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#saveurl). Ensure to map this method name appropriately and provide the required destination path through the [insertVideoSettings.path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#path) properties.
@@ -125,10 +175,7 @@ provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
 
 ```
@@ -261,10 +308,7 @@ provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
 ```
 
@@ -321,69 +365,6 @@ public void Rename()
 
 ```
 
-### Restricting video by size
-
-You can restrict the video uploaded from the local machine when the uploaded video file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event.
-
-> The file size in the argument will be returned in `bytes`.
-
-In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
-
-```
-<template>
-    <div>
-        <div class="control-section">
-            <div class="sample-container">
-                <div class="default-section">
-                    <ejs-richtexteditor ref="rteObj" :height="340" :insertVideoSettings="insertVideoSettings"
-                        :toolbarSettings="toolbarSettings" :fileUploading="onFileUpload">
-                    </ejs-richtexteditor>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-
-<script setup>
-import { provide } from 'vue';
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-const toolbarSettings = {
-    items: ['Video']
-};
-const insertVideoSettings = {
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
-};
-const onFileUpload = (args) => {
-    let sizeInBytes = args.fileData.size;
-    let fileSize = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-};
-provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
-</script>
-
-<style>
-@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
-</style>
-
-```
-
 ### Uploading video with authentication
 
 You can add additional data with the video uploaded from the Rich Text Editor on the client side, which can even be received on the server side. By using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
@@ -435,10 +416,7 @@ provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
 ```
 
@@ -510,7 +488,7 @@ provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 </script>
 
 <style>
-@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
@@ -520,10 +498,7 @@ provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
 
 ```

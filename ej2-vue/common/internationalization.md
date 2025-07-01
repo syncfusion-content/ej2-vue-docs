@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Internationalization
 
-The `Internationalization` library provides support for formatting and parsing date and number objects using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The `en-US` locale is set as default _culture_ and `USD` is set as default `_currencyCode_` for all Syncfusion Vue UI Components.
+The `Internationalization` library provides support for formatting and parsing date and number objects using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The `en-US` locale is set as default _culture_ and `USD` is set as default `_currencyCode_` for all Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components.
 
 ## Loading culture data
 
-Syncfusion CLDR data package contains only JSON data files generated using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data. This helps users avoid utilizing the existing [cldr-data](https://www.npmjs.com/package/cldr-data) package, which has third-party library vulnerabilities. The `loadCldr` function is required to load the following CLDR data for cultures other than `en-US`.
+Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data package contains only JSON data files generated using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data. This helps users avoid utilizing the existing [cldr-data](https://www.npmjs.com/package/cldr-data) package, which has third-party library vulnerabilities. The `loadCldr` function is required to load the following CLDR data for cultures other than `en-US`.
 
-N> Syncfusion CLDR data package is published based on the releases of the Unicode CLDR JSON data. The package will be published within a week after the official [Unicode CLDR](http://cldr.unicode.org/) JSON data is released.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data package is published based on the releases of the Unicode CLDR JSON data. The package will be published within a week after the official [Unicode CLDR](http://cldr.unicode.org/) JSON data is released.
 
 ### Individual file path reference
 
-Syncfusion CLDR data can be loaded by referring to individual paths from the package below, such as:
+Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data can be loaded by referring to individual paths from the package below, such as:
 
 | File Name | Path |
 | ------------- | ------------- |
@@ -33,7 +33,7 @@ Syncfusion CLDR data can be loaded by referring to individual paths from the pac
 
 ### Single file path reference
 
-Syncfusion CLDR data can also be loaded by referring to a single path from the package below, such as:
+Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data can also be loaded by referring to a single path from the package below, such as:
 
 | File Name | Path |
 | ------------- | ------------- |
@@ -44,7 +44,7 @@ Syncfusion CLDR data can also be loaded by referring to a single path from the p
 
 ### Installing CLDR data
 
-Syncfusion CLDR data is available as npm package. So, we can install it through below command to our package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data is available as npm package. So, we can install it through below command to our package.
 
 ```bash
 npm install @syncfusion/ej2-cldr-data
@@ -66,7 +66,7 @@ loadcldr(enNumberData, entimeZoneData);
 
 ## Changing Global Culture and Currency Code
 
-To set the default culture and the currency code for all Syncfusion Vue UI Components, you can use the methods `setCulture` for setting the default locale and `setCurrencyCode` for setting the currency code.
+To set the default culture and the currency code for all Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components, you can use the methods `setCulture` for setting the default locale and `setCurrencyCode` for setting the currency code.
 
 ```ts
 
@@ -86,7 +86,7 @@ setCurrencyCode('QAR');
 
 <!-- markdownlint-disable MD024 -->
 
-Based on the  [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) number formatting and parsing operations are processed. You need to specify some or all of the following properties mentioned below table.
+Based on the  [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) number formatting and parsing operations are processed. You need to specify some or all of the following properties mentioned below table.
 
 | No | Properties | Description |
 | --- | --- | --- |
@@ -118,13 +118,13 @@ If group two properties are defined, then the  group one properties will be igno
 | ; | Denotes separate formats for positive, negative and zero values. | `instance.formatNumber`(-120,{format: '###.##;(###.00);-0'}); | ‘(120.00)’    |
 | 'String' (single Quotes) | Denotes the characters enclosed within single Quote(') to be replaced in the resultant string. | `instance.formatNumber`(-123.44,{format: "####.## '@'"}) | ‘123.44 @’    |
 
-> Note: If a custom format pattern is specified, other [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) properties will not be considered.
+> Note: If a custom format pattern is specified, other [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) properties will not be considered.
 
 ### Number Parsing
 
 #### `getNumberParser`
 
-The [`getNumberParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization#getnumberparser) method, which will return a function that parses a given string based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) specified.
+The [`getNumberParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getnumberparser) method, which will return a function that parses a given string based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) specified.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -139,7 +139,7 @@ The [`getNumberParser`](https://ej2.syncfusion.com/documentation/api/base/intern
 
 #### `parseNumber`
 
-The [`parseNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization#parsenumber) method, which takes two arguments, the string value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) and returns the numeric value.
+The [`parseNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#parsenumber) method, which takes two arguments, the string value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) and returns the numeric value.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -156,7 +156,7 @@ The [`parseNumber`](https://ej2.syncfusion.com/documentation/api/base/internatio
 
 #### `getNumberFormat`
 
-The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization#getnumberformat) method will return a function that formats a given number based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) specified.
+The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getnumberformat) method will return a function that formats a given number based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) specified.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -171,7 +171,7 @@ The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/intern
 
 #### `formatNumber`
 
- The [`formatNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization)  method, which takes two arguments, a numeric value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) and returns the formatted string.
+ The [`formatNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization/)  method, which takes two arguments, a numeric value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) and returns the formatted string.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -188,7 +188,7 @@ The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/intern
 
 ### Supported format string
 
- Date formatting and parsing operations are performed based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions). You need to specify  some or all of the following properties mentioned in the table below.
+ Date formatting and parsing operations are performed based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/). You need to specify  some or all of the following properties mentioned in the table below.
 
 | Options | Descriptions |
 | --- | --- | --- |
@@ -304,7 +304,7 @@ var formattedString =  intl.formatDate(new Date('1/12/2014 10:20:33'), { format:
 
 #### `getDateParser`
 
-The [`getDateParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization#getdateParser) method will return a function that parses a given string based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions) specified.
+The [`getDateParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getdateParser) method will return a function that parses a given string based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/) specified.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -319,7 +319,7 @@ The [`getDateParser`](https://ej2.syncfusion.com/documentation/api/base/internat
 
 #### `parseDate`
 
-The date object is returned by the [`parseDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization#parsedate) method, which takes two arguments, a string value and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions).
+The date object is returned by the [`parseDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#parsedate) method, which takes two arguments, a string value and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -336,7 +336,7 @@ The date object is returned by the [`parseDate`](https://ej2.syncfusion.com/docu
 
 #### `getDateFormat`
 
-The [`getDateFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization#getdateformat) method, which will return a function that formats a given date object based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions) specified.
+The [`getDateFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getdateformat) method, which will return a function that formats a given date object based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/) specified.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -351,7 +351,7 @@ The [`getDateFormat`](https://ej2.syncfusion.com/documentation/api/base/internat
 
 #### `formatDate`
 
- The [`formatDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization) method, which takes two arguments, the date object and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions), returns the formatted string.
+ The [`formatDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization/) method, which takes two arguments, the date object and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/), returns the formatted string.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

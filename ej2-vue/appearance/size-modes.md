@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 An application that is designed to be accessed through a web browser on various devices, including desktop computers and mobile devices, may have a distinct layout or user interface on a mobile device compared to a desktop computer to better suit the smaller screen size.
 
-Syncfusion Vue components support both touch (bigger) and normal size modes. Touch mode creates a responsive design for mobile devices by adding the `e-bigger` class, which enhances interactions, visibility, and the overall experience.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support both touch (bigger) and normal size modes. Touch mode creates a responsive design for mobile devices by adding the `e-bigger` class, which enhances interactions, visibility, and the overall experience.
 
 ## Size mode for application
 
@@ -71,10 +71,10 @@ The user can change the size mode of a component between touch and normal (mouse
 
 ## See also
 
-* [Sidebar responsiveness](https://ej2.syncfusion.com/vue/documentation/sidebar/auto-close/)
-* [DataGrid responsiveness](https://ej2.syncfusion.com/vue/documentation/grid/columns/responsive-columns/)
-* [TreeGrid responsiveness](https://ej2.syncfusion.com/vue/documentation/treegrid/scrolling/#responsive-with-parent-container)
-* [Dashboard Layout responsiveness](https://ej2.syncfusion.com/vue/documentation/dashboard-layout/responsive-adaptive/)
-* [Kanban responsiveness](https://ej2.syncfusion.com/vue/documentation/kanban/responsive-mode/)
-* [Toolbar responsiveness](https://ej2.syncfusion.com/vue/documentation/toolbar/responsive-mode/)
-* [Tab responsiveness](https://ej2.syncfusion.com/vue/documentation/tab/adaptive/)
+* [Sidebar responsiveness](https://ej2.syncfusion.com/vue/documentation/sidebar/auto-close)
+* [DataGrid responsiveness](https://ej2.syncfusion.com/vue/documentation/grid/columns/responsive-columns)
+* [TreeGrid responsiveness](https://ej2.syncfusion.com/vue/documentation/treegrid/scrolling#responsive-with-parent-container)
+* [Dashboard Layout responsiveness](https://ej2.syncfusion.com/vue/documentation/dashboard-layout/responsive-adaptive)
+* [Kanban responsiveness](https://ej2.syncfusion.com/vue/documentation/kanban/responsive-mode)
+* [Toolbar responsiveness](https://ej2.syncfusion.com/vue/documentation/toolbar/responsive-mode)
+* [Tab responsiveness](https://ej2.syncfusion.com/vue/documentation/tab/adaptive)

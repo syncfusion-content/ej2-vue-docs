@@ -137,7 +137,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Rich text editor component with the [height](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#height) property.
+2\. In the `template` section, define the Rich text editor component with the [height](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#height) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -233,4 +233,4 @@ yarn run serve
 * [Keyboard support in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/keyboard-support)
 * [Globalization in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/globalization)
 
-> You can refer to our [Vue Rich Text Editor](https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Rich Text Editor example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/rich-text-editor/default.html) that shows how to render and configure the rich text editor tools.
+> You can refer to our [Vue Rich Text Editor](https://www.syncfusion.com/vue-ui-components/vue-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Rich Text Editor example](https://ej2.syncfusion.com/vue/demos/#/material/rich-text-editor/default.html) that shows how to render and configure the rich text editor tools.

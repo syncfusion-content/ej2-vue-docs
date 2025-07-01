@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Vue UI Components and Vue CLI
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components and Vue CLI
 
-This section explains how to use Syncfusion Vue components in Vue 2 application. To get started with Vue 3 application, refer to the [getting started with Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/) topic.
+This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 2 application. To get started with Vue 3 application, refer to the [getting started with Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial) topic.
 
 ## Prerequisites
 
@@ -38,9 +38,9 @@ npm install
 
 ```
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Syncfusion Vue packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+All the available Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
 Choose the component to be installed. In this application, the button component is installed.
 
 To install the button component, use the following command.
@@ -214,7 +214,7 @@ Now, run the `npm run dev` command in the console to build your application and 
 
 ## How To override styles
 
-In Syncfusion Vue components, you can override control styles by replacing sass variable values like below:
+In Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components, you can override control styles by replacing sass variable values like below:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

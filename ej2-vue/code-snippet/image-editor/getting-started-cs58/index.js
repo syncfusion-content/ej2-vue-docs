@@ -33,7 +33,7 @@ new Vue({
         setTimeout(() => {
           let imageEditor = this.$refs.imageEditorRef.ej2Instances;
           if (imageEditor) {
-            imageEditor.open("https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png");
+            imageEditor.open("https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg");
           }
         }, 10);
       });

@@ -18,7 +18,7 @@ const uploadSettings = {
   maxFileSize: 90 * 1024  // Maximum file size in bytes (90 KB)
 };
 const loadInvalidImage = () => {
-  imageEditorObj.value.ej2Instances.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+  imageEditorObj.value.ej2Instances.open('https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg');
 };
 
 </script>

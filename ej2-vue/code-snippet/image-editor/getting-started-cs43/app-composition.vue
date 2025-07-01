@@ -20,14 +20,14 @@ const created = () => {
     const imageEditor = imageEditorObj.value?.ej2Instances;
     if (!imageEditor) return;
     const imageUrl = Browser.isDevice
-        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
-        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+        ? "https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg"
+        : "https://ej2.syncfusion.com/vue/documentation/image-editor/images/bridge.jpeg";
     imageEditor.open(imageUrl);
 };
 
 const btnClick = () => {
     let dimension = imageEditorObj.value.ej2Instances.getImageDimension();
-    imageEditorObj.value.ej2Instances.drawImage('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png', dimension.x, dimension.y, 100, 80, true, 0);
+    imageEditorObj.value.ej2Instances.drawImage('https://ej2.syncfusion.com/vue/documentation/image-editor/images/flower.jpeg', dimension.x, dimension.y, 100, 80, true, 0);
 };
 
 </script>

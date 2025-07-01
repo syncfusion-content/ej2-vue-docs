@@ -77,6 +77,18 @@ Make comprehensive adjustments by selecting all pages simultaneously. This facil
 
 ![Alt text](images/selectall.gif)
 
+### Zooming Page Thumbnails
+
+Adjust the size of page thumbnails within the organizer panel for better visibility and precision when editing. The zoom functionality allows you to:
+
+* Increase or decrease the size of page thumbnails using the zoom slider
+* See more details on pages when zoomed in
+* View more pages simultaneously when zoomed out
+
+This feature is especially useful when working with documents containing complex layouts or small details that need careful examination during organization.
+
+![Alt text](./images/zoomOrganize.gif)
+
 ### Real-time updates 
 
 Witness instant changes in page organization reflected within the PDF Viewer. Simply click the **Save** button to preserve your modifications.
@@ -245,7 +257,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-**pageOrganizerSettings:** This API allows control over various page management functionalities within the PDF Viewer. It includes options to enable or disable actions such as deleting, inserting, rotating, copying, importing and rearranging pages. By default, all these actions are enabled.
+**pageOrganizerSettings:** This API allows control over various page management functionalities within the PDF Viewer. It includes options to enable or disable actions such as deleting, inserting, rotating, copying, importing and rearranging pages, as well as configuring thumbnail zoom settings. By default, all these actions are enabled and standard zoom settings are applied.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -275,7 +287,7 @@ export default {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
-      pageOrganizerSettings : {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true}
+      pageOrganizerSettings : {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5}
     };
   },
   
@@ -313,7 +325,7 @@ export default {
     return {
       serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      pageOrganizerSettings : {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true}
+      pageOrganizerSettings : {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5}
     };
   },
   
@@ -360,6 +372,7 @@ The following keyboard shortcuts are available at the organize pages dialog.
 
 * **Ctrl+Z** : Undo the last action performed.
 * **Ctrl+Y** : Redo the action that was undone
+* **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 
 ![Alt text](images/undo-redo.gif)
 

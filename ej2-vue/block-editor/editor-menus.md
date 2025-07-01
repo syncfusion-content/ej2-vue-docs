@@ -52,6 +52,17 @@ The following events are available in the Slash Command menu.
 
 Below example demonstrates how to configure the events in the Slash Command menu.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/slash-command/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/slash-command/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/slash-command" %}
+
 ## Context menu
 
 The Context menu appears when a user right-clicks within a specific block. It provides context-aware actions relevant to the clicked block or content.
@@ -84,6 +95,17 @@ The following events are available in the Context menu.
 |[itemClick](../api/blockeditor/contextMenuSettingsModel/#itemclick)|ContextMenuItemClickEventArgs|Triggers when a context menu item is clicked.|
 
 Below example demonstrates how to configure the events in the Context menu.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/context-menu/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/context-menu/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/context-menu" %}
 
 ## Block action menu
 
@@ -120,6 +142,17 @@ The following events are available in the Block action menu.
 
 Below example demonstrates how to configure the events in the Blockaction menu.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/block-action/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/block-action/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/block-action" %}
+
 ## Inline Toolbar
 
 The Inline Toolbar appears when a text is selected in the editor, providing quick access to common text formatting actions that apply to the inline content.
@@ -155,3 +188,14 @@ The following events are available in the Inline Toolbar.
 |[itemClicked](../api/blockeditor/inlineToolbarSettingsModel/#itemclicked)|ToolbarItemClickedEventArgs|Triggers when the user clicks on an inline toolbar item.|
 
 Below example demonstrates how to configure the events in the Inline Toolbar.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/inline-toolbar" %}

@@ -31,13 +31,35 @@ The [deniedTags](../api/blockeditor/pasteSettingsModel/#deniedtags) property in 
 
 In the below example, any `<script>` or `<iframe>` tags found in the pasted content will be removed, preventing unwanted behavior or styling issues.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/paste-cleanup/allowedstyle/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/paste-cleanup/allowedstyle/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/paste-cleanup/allowedstyle" %}
+
 ## Disable Keep format
 
-By default, the editor attempts to keep the formatting of the pasted content (e.g., bold, italics, links). You can disable this behavior by setting the [keepFormat](../api/blockeditor/pasteSettingsModel/#keepformat)) property to `false` in [pasteSettings](../api/blockeditor/#pastesettings). When disabled, the editor will primarily paste the content as plain text regardless of `allowedStyles`.
+By default, the editor attempts to keep the formatting of the pasted content (e.g., bold, italics, links). You can disable this behavior by setting the [keepFormat](../api/blockeditor/pasteSettingsModel/#keepformat) property to `false` in [pasteSettings](../api/blockeditor/#pastesettings). When disabled, the editor will primarily paste the content as plain text regardless of `allowedStyles`.
 
 ## Allowing plain text
 
-To paste content purely as plain text, stripping all HTML tags and inline styles, you can set the [plainText](../api/blockeditor/pasteSettingsModel/#plaintext)) property to `true` in [pasteSettings](../api/blockeditor/#pastesettings). This ensures that only the raw textual content is inserted into the editor, making it ideal for maintaining strict content consistency. By default, the `plainText` property is set to `false`.
+To paste content purely as plain text, stripping all HTML tags and inline styles, you can set the [plainText](../api/blockeditor/pasteSettingsModel/#plaintext) property to `true` in [pasteSettings](../api/blockeditor/#pastesettings). This ensures that only the raw textual content is inserted into the editor, making it ideal for maintaining strict content consistency. By default, the `plainText` property is set to `false`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/paste-cleanup/plaintext/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/paste-cleanup/plaintext/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/paste-cleanup/plaintext" %}
 
 ### Events
 

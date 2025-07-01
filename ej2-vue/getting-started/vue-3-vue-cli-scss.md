@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Vue UI Components and Vue CLI
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components and Vue CLI
 
-This section explains how to use Syncfusion Vue components in Vue 3 application. To get started with Vue 2 application, refer to the [getting started with Vue 2](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/) section.
+This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application. To get started with Vue 2 application, refer to the [getting started with Vue 2](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial) section.
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](../system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](../system-requirements)
 
 ## Create the Vue 3 application
 
@@ -32,9 +32,9 @@ Initiating a new project prompts us to choose the type of project to be used for
 ![Reference](../appearance/images/vue3-scss-terminal.png)
 
 
-## Add Syncfusion packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-Once the Vue 3 application is created, install the required Syncfusion Vue component package in the application. All the available Syncfusion Vue packages are published in the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry. Choose the component to be installed. In this article, the Grid component is used as an example.
+Once the Vue 3 application is created, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component package in the application. All the available Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published in the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry. Choose the component to be installed. In this article, the Grid component is used as an example.
 
 Check out the [installation and upgrade](../installation-and-upgrade/installation) section to learn about the different ways of installing the packages. Here, the Grid component package is installed using the following `npm` command.
 
@@ -42,7 +42,7 @@ Check out the [installation and upgrade](../installation-and-upgrade/installatio
 npm install @syncfusion/ej2-vue-grids --save
 ```
 
-## Register the Syncfusion Vue component
+## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Import the Grid component along with the required child directives from the installed packages into the `<script>` section of the `src/App.vue` file. Register the Grid component along with the required child directives using following code.
 
@@ -65,7 +65,7 @@ Import the Grid component along with the required child directives from the inst
 
 Now, the Grid and column directives are registered to use it in this application.
 
-## Add Syncfusion Vue component to the application
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
 Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
 

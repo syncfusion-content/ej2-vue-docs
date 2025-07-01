@@ -99,6 +99,21 @@ In the following sample,data with diacritics are bound as dataSource for MultiSe
         
 {% previewsample "page.domainurl/code-snippet/multi-select/filtering/diacritics-cs1" %}
 
+## Debounce delay
+
+You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/filtering/simple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/filtering/simple-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/multi-select/filtering/simple-cs1" %}
+
 ## See Also
 
 * [How to bind the data](./data-binding)
