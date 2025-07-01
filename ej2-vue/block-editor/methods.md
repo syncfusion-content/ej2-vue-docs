@@ -20,21 +20,46 @@ The Block Editor component provides a comprehensive set of public methods that a
 you can add a new block to the editor at a specified position using the [addBlock](../api/blockeditor/#addblock) method. You can also insert the block before or after a target block.
 
 ```vue
-// Add a new paragraph block after a specific block
-const newBlock = {
-    id: 'new-block-1',
-    id: 'new-block',
-    type: 'Paragraph',
-    content: 'This is a new paragraph block'
-    content: [
-        {
-            type: ContentType.Text,
-            content: 'This is a newly added block'
-        }
-    ]
-};
+<template>
+  <div id='container'>
+    <ejs-blockeditor ref="blockEditor"></ejs-blockeditor>
+    <div id="controls">
+        <div class="button-group">
+            <button @click="addBlock">Add Block</button>
+        </div>
+    </div>  
+  </div>
+</template>
 
-editor.addBlock(newBlock, 'target-block-id', true); // true = after, false = before
+<script>
+import { BlockEditorComponent, ContentType, AfterPasteEventArgs  } from "@syncfusion/ej2-vue-blockeditor";
+
+export default {
+    components: {
+        'ejs-blockeditor': BlockEditorComponent,
+    },
+    data() {
+        return {
+        }
+    },
+    methods: {
+    // Add a new paragraph block after a specific block
+    addBlock: function() {
+        const newBlock = {
+            id: 'new-block',
+            type: 'Paragraph',
+            content: [
+            {
+                type: ContentType.Text,
+                content: 'This is a newly added block'
+            }
+            ]
+        };
+        this.$refs.blockEditor.ej2Instances.addBlock(newBlock, 'block-2', true);
+        }, // true = after, false = before
+    }
+};
+</script>
 ```
 
 ### Removing a block
