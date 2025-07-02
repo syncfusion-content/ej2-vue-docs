@@ -32,7 +32,7 @@ In the following sample, the table feature has been provided from table module.
 {% include code-snippet/rich-text-editor/toolbar-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs15" %}
 
 ## Table headers
