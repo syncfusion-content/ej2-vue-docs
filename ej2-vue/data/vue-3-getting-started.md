@@ -10,27 +10,27 @@ domainurl: ##DomainURL##
 
 # Getting started with Vue DataManager in Vue 3
 
-The Syncfusion Vue DataManager enables efficient data management in Vue applications. It seamlessly interacts with various data sources (remote or local) and provides functionalities like sorting, filtering, paging, and CRUD (Create, Read, Update, Delete) operations, enhancing the data presentation capabilities of your Vue application. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager enables efficient data management in Vue applications. It seamlessly interacts with various data sources (remote or local) and provides functionalities like sorting, filtering, paging, and CRUD (Create, Read, Update, Delete) operations, enhancing the data presentation capabilities of your Vue application. 
 
-This guide details the steps involved in setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue DataManager using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This guide details the steps involved in setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
 The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component’s properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
-## Prerequisites for Syncfusion Vue UI Components
+## Prerequisites for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components
 
-Before you start using Syncfusion Vue UI components, ensure that your system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Vue.js versions, and other dependencies required for using Syncfusion Vue UI components effectively.
+Before you start using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components, ensure that your system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Vue.js versions, and other dependencies required for using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components effectively.
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
-This section provides information about the essential dependencies required for integrating the Syncfusion Vue DataManager into your Vue projects. These dependencies are necessary for managing and manipulating data effectively within your applications.
+This section provides information about the Essential<sup style="font-size:70%">&reg;</sup> dependencies required for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager into your Vue projects. These dependencies are necessary for managing and manipulating data effectively within your applications.
 
-1.  `@syncfusion/ej2-data`: The `@syncfusion/ej2-data` package serves as the core component for Syncfusion data management functionalities. It includes critical features such as DataManager, which enables various data operations like sorting, filtering, and paging. By integrating this package into your Vue project, you gain access to powerful tools for handling data efficiently.
+1.  `@syncfusion/ej2-data`: The `@syncfusion/ej2-data` package serves as the core component for Syncfusion<sup style="font-size:70%">&reg;</sup> data management functionalities. It includes critical features such as DataManager, which enables various data operations like sorting, filtering, and paging. By integrating this package into your Vue project, you gain access to powerful tools for handling data efficiently.
 
-2. `@syncfusion/ej2-base`: The `@syncfusion/ej2-base` package serves as the foundational layer for other Syncfusion packages. It provides essential utilities and helpers required for seamless integration and functionality of Syncfusion components within your Vue applications.
+2. `@syncfusion/ej2-base`: The `@syncfusion/ej2-base` package serves as the foundational layer for other Syncfusion<sup style="font-size:70%">&reg;</sup> packages. It provides Essential<sup style="font-size:70%">&reg;</sup> utilities and helpers required for seamless integration and functionality of Syncfusion<sup style="font-size:70%">&reg;</sup> components within your Vue applications.
 
 ```javascript
 |-- @syncfusion/ej2-data
@@ -99,9 +99,9 @@ Once the project setup is complete, navigate into the project directory using th
 cd data-app
 ```
 
-**Step 4: Install Syncfusion package**
+**Step 4: Install Syncfusion<sup style="font-size:70%">&reg;</sup> package**
 
-Install the Syncfusion package required for data management using the following command:
+Install the Syncfusion<sup style="font-size:70%">&reg;</sup> package required for data management using the following command:
 
 ```bash
 npm install @syncfusion/ej2-data --save
@@ -125,9 +125,9 @@ yarn run dev
 
 ## Connection to a data source
 
-Data sources are fundamental for applications that depend on information, serving as repositories that store and manage various types of data. It enables applications to retrieve, manipulate, and present data effectively. Establishing a connection between your application and a data source is essential for making the most of the data's potential
+Data sources are fundamental for applications that depend on information, serving as repositories that store and manage various types of data. It enables applications to retrieve, manipulate, and present data effectively. Establishing a connection between your application and a data source is Essential<sup style="font-size:70%">&reg;</sup> for making the most of the data's potential
 
-The Syncfusion [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) serves as a gateway for both local and remote data sources, utilizing query to interact with the data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) serves as a gateway for both local and remote data sources, utilizing query to interact with the data.
 
 ### Binding to JSON data
 
@@ -249,9 +249,10 @@ To bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamana
 
 The following example demonstrates how to bind JSON data using the [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of `DataManager`.
 
+
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% raw %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -270,7 +271,7 @@ The following example demonstrates how to bind JSON data using the [executeLocal
 import data from './datasource.js';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 
-const items= new DataManager(data).executeLocal(new Query())
+const items = new DataManager(data).executeLocal(new Query())
 </script>
 
 <style>
@@ -294,23 +295,81 @@ const items= new DataManager(data).executeLocal(new Query())
     width: auto;
   }
 </style>
-{% endraw %}
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>  
+  </div>
+</template>
+
+<script>
+import data from './datasource.js';
+import { DataManager, Query } from '@syncfusion/ej2-data';
+
+export default {
+  name: "App",
+  components: {
+    'ejs-grid': GridComponent,
+    'e-columns': ColumnsDirective,
+    'e-column': ColumnDirective
+  },
+  data() {
+    return {
+      items: new DataManager(data).executeLocal(new Query())
+    }
+  }
+}
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs1" %}
 
 ### Binding to ODataV4
 
-OData (Open Data Protocol) is a standardized protocol for creating and consuming data APIs over the internet, allowing you to access and manipulate data from various sources. Syncfusion's DataManager provides seamless integration with OData services, enabling you to bind data from remote sources to your application.
+OData (Open Data Protocol) is a standardized protocol for creating and consuming data APIs over the internet, allowing you to access and manipulate data from various sources. Syncfusion's<sup style="font-size:70%">&reg;</sup> DataManager provides seamless integration with OData services, enabling you to bind data from remote sources to your application.
 
 [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) can also be bound to remote data source by assigning service endpoint URL to the `url` property. All `DataManager` operations will address the provided service endpoint.
 
 The following example demonstrates how to bind data to an OData service using the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executequery) method of `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% raw %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -362,23 +421,94 @@ dataManager.executeQuery(new Query().take(12)).then((e) => {
     width: auto;
   }
 </style>
-{% endraw %}
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Employee ID</th>
+        <th>Ship Country</th>
+      </tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue';
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+
+export default {
+  name: "App",
+  data() {
+    return {
+      items: [],
+      dataManager: new DataManager({
+        url: SERVICE_URI,
+        adaptor: new ODataV4Adaptor()
+      })
+    }
+  },
+  mounted() {
+    this.dataManager.executeQuery(new Query().take(12)).then((e) => {
+      this.items = e.result;
+    });
+  }
+}
+
+</script>
+
+<style>
+.e-table {
+  border: solid 1px #e0e0e0;
+  border-collapse: collapse;
+  font-family: Roboto;
+}
+
+.e-table td,
+.e-table th {
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-color: #e0e0e0;
+  display: table-cell;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 8px 21px;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+</style>
+
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs2" %}
 
 ## Filter
 
-Data filtering is a fundamental operation that allows to obtain a reduced view of data based on specified filter criteria. This feature is essential for efficiently managing and displaying large datasets.
+Data filtering is a fundamental operation that allows to obtain a reduced view of data based on specified filter criteria. This feature is Essential<sup style="font-size:70%">&reg;</sup> for efficiently managing and displaying large datasets.
 
 The filter expression can be easily constructed using the [where](https://ej2.syncfusion.com/documentation/api/data/query/#where) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method allows you to specify filter criteria based on various conditions. 
 
 The following example demonstrates how to filter data based on the **EmployeeID** field equal to **4** using the `where` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% raw %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -421,10 +551,74 @@ const items= new DataManager(data).executeLocal(new Query().where('EmployeeID', 
     width: auto;
   }
 </style>
-{% endraw %}
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Employee ID</th>
+        <th>Ship Country</th>
+      </tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>
+  </div>
+</template>
+
+<script>
+import data from './datasource.js';
+import { DataManager, Query } from '@syncfusion/ej2-data';
+
+export default {
+  name: "App",
+  components: {
+    'ejs-grid': GridComponent,
+    'e-columns': ColumnsDirective,
+    'e-column': ColumnDirective
+  },
+  data() {
+    return {
+      items: new DataManager(data).executeLocal(new Query().where('EmployeeID', 'equal', 4))
+    }
+  }
+}
+</script>
+
+<style>
+.e-table {
+  border: solid 1px #e0e0e0;
+  border-collapse: collapse;
+  font-family: Roboto;
+}
+
+.e-table td,
+.e-table th {
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-color: #e0e0e0;
+  display: table-cell;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 8px 21px;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+</style>
+
 {% endhighlight %}
 {% endtabs %}
-        
+ 
 {% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs3" %}
 
 ## Sort
@@ -436,8 +630,8 @@ This can be achieved using the [sortBy](https://ej2.syncfusion.com/documentation
 The following example demonstrates how to sort data based on the **EmployeeID** field in **ascending** order using the `sortBy` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% raw %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -480,23 +674,10 @@ const items= new DataManager(data).executeLocal(new Query().sortBy('EmployeeID')
     width: auto;
   }
 </style>
-{% endraw %}
+
 {% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs4" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
-## Page
-
-Paging provides an option to display data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive datasets.
-
-The [page](https://ej2.syncfusion.com/documentation/api/data/query/#page) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables pagination of data by retrieving a specific range of data based on the page index and the page size.
-
-The following example demonstrates how to apply paging to the data using the `page` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% raw %}
 <template>
   <div id="app">
     <table class='e-table'>
@@ -511,11 +692,18 @@ The following example demonstrates how to apply paging to the data using the `pa
   </div>
 </template>
 
-<script setup>
+<script>
 import data from './datasource.js';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 
-const items= new DataManager(data).executeLocal(new Query().page(1, 8))
+export default {
+  name: "App",
+  data() {
+    return {
+      items: new DataManager(data).executeLocal(new Query().sortBy('EmployeeID').take(8))
+    }
+  }
+}
 </script>
 
 <style>
@@ -539,7 +727,131 @@ const items= new DataManager(data).executeLocal(new Query().page(1, 8))
     width: auto;
   }
 </style>
-{% endraw %}
+
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs4" %}
+
+## Page
+
+Paging provides an option to display data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive datasets.
+
+The [page](https://ej2.syncfusion.com/documentation/api/data/query/#page) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables pagination of data by retrieving a specific range of data based on the page index and the page size.
+
+The following example demonstrates how to apply paging to the data using the `page` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Employee ID</th>
+        <th>Ship Country</th>
+      </tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>
+  </div>
+</template>
+
+<script setup>
+import data from './datasource.js';
+import { DataManager, Query } from '@syncfusion/ej2-data';
+
+const items = new DataManager(data).executeLocal(new Query().page(1, 8))
+</script>
+
+<style>
+.e-table {
+  border: solid 1px #e0e0e0;
+  border-collapse: collapse;
+  font-family: Roboto;
+}
+
+.e-table td,
+.e-table th {
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-color: #e0e0e0;
+  display: table-cell;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 8px 21px;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Employee ID</th>
+        <th>Ship Country</th>
+      </tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>
+  </div>
+</template>
+
+<script>
+import data from './datasource.js';
+import { DataManager, Query } from '@syncfusion/ej2-data';
+
+export default {
+  name: "App",
+  data() {
+    return {
+      items: new DataManager(data).executeLocal(new Query().page(1, 8))
+    }
+  }
+}
+</script>
+
+<style>
+.e-table {
+  border: solid 1px #e0e0e0;
+  border-collapse: collapse;
+  font-family: Roboto;
+}
+
+.e-table td,
+.e-table th {
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-color: #e0e0e0;
+  display: table-cell;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 8px 21px;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+</style>
+
 {% endhighlight %}
 {% endtabs %}
         
@@ -547,76 +859,30 @@ const items= new DataManager(data).executeLocal(new Query().page(1, 8))
 
 ## Component binding
 
-The DataManager can be seamlessly integrated with Syncfusion components that support data binding. However, before utilizing DataManager, you need to register the Syncfusion Vue component.
+The DataManager can be seamlessly integrated with Syncfusion<sup style="font-size:70%">&reg;</sup> components that support data binding. However, before utilizing DataManager, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component.
 
 In the following samples, the grid component is bound. To render the Grid with the necessary configurations, please refer to the [Grid Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation.
 
 ### Local data binding
 
-Local data binding allows you to directly bind data to Syncfusion components from within your Vue application. This method is useful when you have the data available locally and want to integrate it seamlessly with Syncfusion components.
+Local data binding allows you to directly bind data to Syncfusion<sup style="font-size:70%">&reg;</sup> components from within your Vue application. This method is useful when you have the data available locally and want to integrate it seamlessly with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-To bind local data to a Syncfusion component, follow these steps:
+To bind local data to a Syncfusion<sup style="font-size:70%">&reg;</sup> component, follow these steps:
 
 1. Define your data directly in your Vue component or import it from an external source.
 
 2. Use the [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) class to create a data source and bind it to your data.
 
-3. Integrate the data source with the Syncfusion grid component by setting the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property.
+3. Integrate the data source with the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component by setting the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property.
 
 The following example shows how to bind local data to the grid component using `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/data/vue-3-getting-started/default-cs6/app.vue %}
+{% include code-snippet/data/vue-3-getting-started/default-cs6/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% raw%}
-<template>
-  <ejs-grid :dataSource='data'>
-    <e-columns>
-        <e-column field='OrderID' headerText='Order ID' width=90></e-column>
-        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
-        <e-column field='Freight' headerText='Freight' format='C2'  width=90></e-column>
-        <e-column field='ShipName' headerText='Ship Name' width=100></e-column>
-    </e-columns>
-  </ejs-grid>
-</template>
-
-<script>
-  import { DataManager } from "@syncfusion/ej2-data";
-  import gridData from './datasource.js';
-  import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
-  // Component registration
-  export default {
-    name: "App",
-    // Declaring component and its directives
-    components: {
-      'ejs-grid': GridComponent,
-      'e-columns': ColumnsDirective,
-      'e-column': ColumnDirective
-    },
-    // Bound properties declarations
-    data() {
-      return {
-        data:new DataManager(gridData)
-          
-      };
-    }
-  };
-</script>
-
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
-</style>
-{% endraw %}
+{% include code-snippet/data/vue-3-getting-started/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -624,69 +890,22 @@ The following example shows how to bind local data to the grid component using `
 
 ### Remote data binding
 
-Remote data binding involves binding external data sources, such as API endpoints, to Syncfusion components. This allows you to fetch and display data dynamically from a server.
+Remote data binding involves binding external data sources, such as API endpoints, to Syncfusion<sup style="font-size:70%">&reg;</sup> components. This allows you to fetch and display data dynamically from a server.
 
-To bind remote data to a Syncfusion component, follow these steps:
+To bind remote data to a Syncfusion<sup style="font-size:70%">&reg;</sup> component, follow these steps:
 
 1. Initialize a [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) object and configure it with the URL of the remote service from which you want to fetch data.
 
-2.  Assign the `DataManager` instance to the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property of the Syncfusion grid component.
+2.  Assign the `DataManager` instance to the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property of the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component.
 
 The following example demonstrates how to bind remote data to the grid component using `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/data/vue-3-getting-started/default-cs7/app.vue %}
+{% include code-snippet/data/vue-3-getting-started/default-cs7/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% raw%}
-<template>
-  <ejs-grid :dataSource='data'>
-    <e-columns>
-        <e-column field='OrderID' headerText='Order ID' width=90></e-column>
-        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
-        <e-column field='Freight' headerText='Freight' format='C2'  width=90></e-column>
-        <e-column field='ShipName' headerText='Ship Name' width=100></e-column>
-    </e-columns>
-  </ejs-grid>
-</template>
-
-<script>
-  import { DataManager } from "@syncfusion/ej2-data";
-  import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
-  // Component registration
-  export default {
-    name: "App",
-    // Declaring component and its directives
-    components: {
-      'ejs-grid': GridComponent,
-      'e-columns': ColumnsDirective,
-      'e-column': ColumnDirective
-    },
-    // Bound properties declarations
-    data() {
-      let SERVICE_URI =
-      "https://services.syncfusion.com/vue/production/";
-      return {
-        data:new DataManager({ url: SERVICE_URI+ 'api/Orders' })
-          
-      };
-    }
-  };
-</script>
-
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
-</style>
-{% endraw %}
+{% include code-snippet/data/vue-3-getting-started/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

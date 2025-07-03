@@ -12,11 +12,18 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import data from './datasource.js';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 
-const items= new DataManager(data).executeLocal(new Query().where('EmployeeID', 'equal', 4))
+export default {
+  name: "App",
+  data() {
+    return {
+      items: new DataManager(data).executeLocal(new Query().where('EmployeeID', 'equal', 4))
+    }
+  }
+}
 </script>
 
 <style>
