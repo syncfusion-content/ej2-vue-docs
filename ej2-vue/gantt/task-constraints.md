@@ -49,7 +49,7 @@ To enable and manage task constraints in the Gantt component, you need to config
 
 In your Gantt component configuration, map the following fields:
 
-```vue
+```ts
 taskFields: {
     id: 'taskId',
     name: 'taskName',
@@ -119,7 +119,7 @@ You can intercept constraint violations using the `actionBegin` event. When the 
 
 #### Example setup
 
-```vue
+```ts
 actionBegin(args) {
     if (args.requestType === 'validateTaskViolation') {
         args.validateMode = {
