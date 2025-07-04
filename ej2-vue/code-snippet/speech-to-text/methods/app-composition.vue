@@ -1,10 +1,10 @@
 <template>
   <div id='container'>
     <div class="actions">
-      <ejs-button @click="startRecognition">Start Listening</ejs-button>
-      <ejs-button @click="stopRecognition">Stop Listening</ejs-button>
+      <button @click="startRecognition">Start Listening</button>
+      <button @click="stopRecognition">Stop Listening</button>
     </div>
-    <ejs-speechtotext id="speechtotext" ref="speechToTextInstance" @transcript-changed="onTranscriptChange" ></ejs-speechtotext>
+    <ejs-speechtotext id="speechtotext" ref="speechToTextInstance" @transcriptChanged="onTranscriptChange" ></ejs-speechtotext>
     <ejs-textarea v-model="textareaValue" rows="5" cols="50" resizeMode="None" placeholder="Transcribed text will be shown here..."></ejs-textarea>
   </div>
 </template>

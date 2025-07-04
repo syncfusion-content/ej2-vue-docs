@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id='container'>
-      <ejs-speechtotext id="speechtotext" ref="speechToTextInstance" @transcript-changed="onTranscriptChange" v-model="transcript"></ejs-speechtotext>
+      <ejs-speechtotext id="speechtotext" ref="speechToTextInstance" @transcriptChanged="onTranscriptChange" v-model="transcript"></ejs-speechtotext>
       <ejs-textarea v-model="transcript" rows="5" cols="50" resizeMode="None" placeholder="Transcribed text will be shown here..."></ejs-textarea>
     </div>
 `,

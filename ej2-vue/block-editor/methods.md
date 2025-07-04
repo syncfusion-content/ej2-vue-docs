@@ -19,7 +19,7 @@ The Block Editor component provides a comprehensive set of public methods that a
 
 you can add a new block to the editor at a specified position using the [addBlock](../api/blockeditor/#addblock) method. You can also insert the block before or after a target block.
 
-```vue
+```
 <template>
   <div id='container'>
     <ejs-blockeditor ref="blockEditor"></ejs-blockeditor>
