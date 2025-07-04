@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# CustomAdaptor in Syncfusion Vue Grid 
+# CustomAdaptor in Syncfusion Vue Grid
 
 The `CustomAdaptor` in the Syncfusion Vue Grid allows to create their own custom adaptors by extending the built-in adaptors. The custom adaptor involves handling the query process, requests, and responses of the built-in adaptor. The `CustomAdaptor` can be used to extend OData V4 services, enabling efficient data fetching and manipulation. By default, there are three built-in methods available for `CustomAdaptor`.
 
@@ -33,7 +33,7 @@ The `ProcessQuery` method handles the execution of a query sent to a [dataSource
 
 ![Query](../images/custom-adaptor-query.png)
 
-```vue
+```
 processQuery(dm, query): Object {
     dm.dataSource.url = 'https://localhost:xxxx/odata/orders'; //Change the url.
     query.addParams('Syncfusion in Vue Grid', 'true'); // Add the additional parameter.
@@ -63,7 +63,7 @@ The `beforeSend` method is executed before a request is sent to the server. This
 
 ![Settings](../images/custom-adaptor-fetch.png)
 
-```vue
+```
 beforeSend(dm, request, settings) {
     request.headers.set('Authorization', `true`);
     super.beforeSend(dm, request, settings);
@@ -74,7 +74,7 @@ beforeSend(dm, request, settings) {
 
 The `processResponse` method handles the response received from the server after an asynchronous request. It is responsible for parsing the response data, managing errors, and preparing the data for further processing. This method can accept multiple optional arguments, allowing customization based on specific requirements.
 
-```vue
+```
  processResponse() {
     let i = 0;
     const original = super.processResponse.apply(this, arguments);
@@ -158,7 +158,7 @@ namespace ODataV4Adaptor.Server.Models
 
 To construct the Entity Data Model for your OData service, utilize the `ODataConventionModelBuilder` to define the model's structure. Start by creating an instance of the `ODataConventionModelBuilder`, then register the entity set **Orders** using the `EntitySet<T>` method, where `OrdersDetails` represents the CLR type containing order details.  
 
-```cs
+```
 // Create an ODataConventionModelBuilder to build the OData model.
 var modelBuilder = new ODataConventionModelBuilder();
 
@@ -169,7 +169,7 @@ modelBuilder.EntitySet<OrdersDetails>("Orders");
 
 Once the Entity Data Model is built, you need to register the OData services in your ASP.NET Core application. Here's how:
 
-```cs
+```
 // Add controllers with OData support to the service collection.
 builder.Services.AddControllers().AddOData(
     options => options
@@ -181,7 +181,7 @@ builder.Services.AddControllers().AddOData(
 
 Finally, add controllers to expose the OData endpoints. Here's an example:
 
-```cs
+```
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using ODataV4Adaptor.Server.Models;
@@ -221,7 +221,7 @@ To integrate the Syncfusion Grid into your Vue and ASP.NET Core project using Vi
 
 Open your terminal in the project's client folder and install the required Syncfusion packages using npm:
 
-```bash
+```
 npm install @syncfusion/ej2-Vue-grids --save
 npm install @syncfusion/ej2-data --save
 ```
@@ -390,7 +390,7 @@ Run the application in Visual Studio. It will be accessible on a URL like **http
 
 > Ensure your API service is configured to handle CORS (Cross-Origin Resource Sharing) if necessary.
 
-```cs
+```
   [program.cs]
   builder.Services.AddCors(options =>
   {
@@ -1012,7 +1012,7 @@ To enable CRUD operations in the Grid within an Vue application, follow the belo
 
 To insert a new record into your Syncfusion Vue Grid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **OrdersController**:
 
-```cs
+```
 /// <summary>
 /// Inserts a new order to the collection.
 /// </summary>
@@ -1038,7 +1038,7 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 
 Updating a record in the Syncfusion Vue Grid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
 
-```cs
+```
 /// <summary>
 /// Updates an existing order.
 /// </summary>
@@ -1069,7 +1069,7 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updatedOrder)
 
 To delete a record from your Syncfusion Vue Grid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
 
-```cs
+```
 /// <summary>
 /// Deletes an order.
 /// </summary>
