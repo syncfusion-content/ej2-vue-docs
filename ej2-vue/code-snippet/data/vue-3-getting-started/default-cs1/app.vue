@@ -12,11 +12,18 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import data from './datasource.js';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 
-const items= new DataManager(data).executeLocal(new Query())
+export default {
+  name: "App",
+  data() {
+    return {
+      items: new DataManager(data).executeLocal(new Query())
+    }
+  }
+}
 </script>
 
 <style>

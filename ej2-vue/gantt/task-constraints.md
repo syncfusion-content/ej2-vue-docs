@@ -55,8 +55,8 @@ taskFields: {
     name: 'taskName',
     startDate: 'startDate',
     endDate: 'endDate',
-    constraintType: 'constraintType', // Specifies the type of constraint (e.g., 2 for MustStartOn)
-    constraintDate: 'constraintDate' // Specifies the relevant date for the constraint
+    constraintType: 'constraintType',
+    constraintDate: 'constraintDate'
 }
 ```
 
