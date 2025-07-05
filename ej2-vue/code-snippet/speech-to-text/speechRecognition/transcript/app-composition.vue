@@ -1,6 +1,6 @@
 <template>
   <div id='container'>
-    <ejs-speechtotext id="speechtotext" ref="speechToTextInstance" v-model="transcript" @transcript-changed="onTranscriptChange"></ejs-speechtotext>
+    <ejs-speechtotext id="speechtotext" ref="speechToTextInstance" v-model="transcript" @transcriptChanged="onTranscriptChange"></ejs-speechtotext>
     <ejs-textarea v-model="transcript" rows="5" cols="50" resizeMode="None" placeholder="Transcribed text will be shown here..."></ejs-textarea>
   </div>
 </template>
