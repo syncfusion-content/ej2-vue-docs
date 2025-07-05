@@ -50,6 +50,7 @@ const dropdownItems = [
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 
 .custom-dropdown.e-dropdown-popup ul {
   min-width: 100px;
