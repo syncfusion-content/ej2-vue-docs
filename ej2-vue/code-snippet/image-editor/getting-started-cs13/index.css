@@ -1,0 +1,12 @@
+#image-editor {
+    width: 550px !important;
+    height: 350px !important;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.button-group .e-btn {
+  margin-right: 5px;
+}

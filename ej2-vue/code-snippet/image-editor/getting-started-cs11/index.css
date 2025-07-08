@@ -1,0 +1,17 @@
+#image-editor {
+    width: 550px !important;
+    height: 350px !important;
+}
+
+#text {
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.button-group .e-btn .e-icons {
+    margin-right: 5px;
+}
