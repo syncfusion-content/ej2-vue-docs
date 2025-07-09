@@ -96,7 +96,7 @@ The following example demonstrate how to customize the toolbar by disabling and 
 
 Adding custom toolbar items to the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid involves incorporating personalized functionality into the toolbar.
 
-Custom toolbar items can be added to the Grid component by defining the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property as a collection of [ItemModel](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel) objects. These objects define the custom items and their corresponding actions. The actions for the customized toolbar items are defined in the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event.
+Custom toolbar items can be added to the Grid component by defining the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property as a collection of [ItemModel](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/) objects. These objects define the custom items and their corresponding actions. The actions for the customized toolbar items are defined in the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event.
 
 By default, custom toolbar items are positioned on the **left** side of the toolbar. However, you can change the position by using the [align](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/#align) property of the `ItemModel`. The following example demonstrates how to apply the `align` property with the value **Right** for the **Collapse All** toolbar item.
 
@@ -240,11 +240,193 @@ components: {
         
 {% previewsample "page.domainurl/code-snippet/grid/toolbar/default-cs4" %}
 
+## Add custom components to the Grid toolbar using template
+
+The Syncfusion Vue Grid provides the flexibility to customize its toolbar by embedding custom components using the [template](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/#template) property of the [ItemModel](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/). This feature allows developers to add UI elements such as buttons, dropdowns, or input controls directly into the toolbar, alongside built-in actions like **Add**, **Edit**, and **Delete**.
+
+In the following example, an [AutoComplete](https://ej2.syncfusion.com/vue/documentation/auto-complete/getting-started) is defined in the **App.vue** page as a custom toolbar item using the `template` property. The `AutoComplete` is populated with unique values from the `ShipCity` field of the Grid data. When you select a value from the `AutoComplete`, the Grid is filtered to show only the records that match the selected city. Once the Grid is rendered, the custom `AutoComplete` appears as part of the toolbar, allowing you to interact with both standard and custom toolbar elements.
+
+Additionally, the [change](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#change) event of the `AutoComplete` is used to trigger a search operation within the Grid. When you select or type a value, the event handler invokes the Grid’s [search](https://ej2.syncfusion.com/vue/documentation/api/grid/#search) method, dynamically filtering the displayed records in the **ShipCity** column based on the input.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+
+<template>
+  <div id="app">
+    <ejs-grid ref='grid' :dataSource='data' height='270px' :editSettings='editSettings' :toolbar='toolbar'>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' isPrimaryKey="true" width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+        <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
+    <div id="toolbar-template">
+      <ejs-autocomplete :dataSource='dropDownData' placeholder="Search ShipCity" @change="onChange"></ejs-autocomplete>
+    </div>
+  </div>
+</template>
+
+<script setup>
+  import { provide, ref } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+  import { AutoCompleteComponent as EjsAutocomplete } from '@syncfusion/ej2-vue-dropdowns';
+  import { data } from './datasource.js';
+
+  const grid = ref(null);
+  const dropDownData = ref([   
+    'Reims',
+    'Münster',
+    'Rio de Janeiro',
+    'Lyon',
+    'Charleroi',
+    'Bern',
+    'Genève',
+    'San Cristóbal',
+    'Graz',
+    'México D.F.',
+    'Albuquerque',
+    'Köln'
+  ]);
+  const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+  const toolbar = [
+    'Add', 
+    'Edit', 
+    'Delete',
+    { 
+      template: '#toolbar-template', 
+      align:"Left", 
+      tooltipText:"Custom component AutoComplete" 
+    }
+  ];
+
+  const onChange = function (event){
+    const selectedCity = event.value;
+    // perform search action for ShipCity column.
+    grid.value.search(selectedCity);
+  }
+  provide('grid', [Toolbar, Edit]);
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+
+{% endraw %}
+{% endhighlight %}
+
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
+
+<template>
+  <div id="app">
+    <ejs-grid ref="grid" :dataSource='data' height='270px' :toolbar='toolbar' :editSettings='editSettings'>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' isPrimaryKey="true" width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+        <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
+    <div id="toolbar-template">
+    <ejs-autocomplete :dataSource='dropDownData' placeholder="Search ShipCity" @change="onChange"></ejs-autocomplete>
+  </div>
+  </div>
+</template>
+
+<script>
+  import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+  import { AutoCompleteComponent } from '@syncfusion/ej2-vue-dropdowns';
+  import { data } from './datasource.js';
+
+  export default {
+  name: "App",
+  components: {
+  "ejs-grid":GridComponent,
+  "e-columns":ColumnsDirective,
+  "e-column":ColumnDirective, 
+  "ejs-autocomplete": AutoCompleteComponent
+  },
+    data() {
+      return {
+        data: data,
+        dropDownData: [
+          'Reims',
+          'Münster',
+          'Rio de Janeiro',
+          'Lyon',
+          'Charleroi',
+          'Bern',
+          'Genève',
+          'San Cristóbal',
+          'Graz',
+          'México D.F.',
+          'Albuquerque',
+          'Köln'
+        ],
+        editSettings: {
+          allowEditing: true,
+          allowAdding: true,
+          allowDeleting: true,
+          mode: "Normal",
+        },
+        toolbar: [
+          'Add',
+          'Edit',
+          'Delete',
+          {
+            template:'#toolbar-template', 
+            align:"Left", 
+            tooltipText:"Custom Component AutoComplete"
+          }
+        ]
+      };
+    },
+    methods: {
+      onChange: function (event) {
+        const selectedCity = event.value;
+        // perform search action for ShipCity column.
+        this.$refs.grid.ej2Instances.search(selectedCity);
+      }
+    },
+    provide: {
+      grid: [Toolbar, Edit]
+    }
+  }
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/toolbar/custom-toolbar" %}
+
 ## Custom toolbar items in a specific position
 
 Customizing the position of a custom toolbar within the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid involves modifying the default placement of the custom toolbar items. This enables you to precisely control the positioning of each custom toolbar item according to your specific requirements and desired layout within the Grid.
 
-By default, custom toolbar items in Grid component are aligned on the left side of the toolbar. However, you have the ability to modify the position of the custom toolbar items by utilizing the [align](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel#align) property of the [ItemModel](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel).
+By default, custom toolbar items in Grid component are aligned on the left side of the toolbar. However, you have the ability to modify the position of the custom toolbar items by utilizing the [align](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/#align) property of the [ItemModel](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/).
 
 In the following sample, the **Collapse All** toolbar item is positioned on the **Right**, the **Expand All** toolbar item is positioned on the **Left**, and the **Search** toolbar item is positioned at the **Center**.
 
