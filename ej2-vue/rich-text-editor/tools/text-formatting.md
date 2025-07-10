@@ -301,62 +301,6 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 {% include code-snippet/rich-text-editor/horizontal-line/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/horizontal-line" %}
-
-## Insert code
-
-The Vue Rich Text Editor component offers a powerful feature to format text as preformatted code blocks, making it ideal for displaying programming snippets or structured contents.
-
-### Enabling code block formatting
-
-To enable code block formatting, ensure that the Formats item is included in the toolbar items of your Rich Text Editor configuration.
-
-Below are examples and code snippets demonstrating how to add and effectively use the code block formatting option in the Rich Text Editor.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/code-format-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/code-format-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/code-format-cs1" %}
-
-### Applying code block formatting
-
-Follow these steps to format text as a code block:
-
-1. Select the desired text in the editor.
-2. Click on the `Formats` dropdown in the toolbar.
-3. Choose `Preformatted` from the dropdown menu.
-
-### Exiting code block format
-
-To exit the code block format:
-
-1. Place the cursor at the end of your code block content.
-2. Press the Enter key twice.
-
-This action will move the cursor out of the code block and return to normal text formatting.
-
-### Enhancing code block appearance
-
-To make your code blocks more visually appealing, you can add custom styling. Here's an example of how to style your `<pre>` tag:
-
-```css
-<style>
-
-.e-richtexteditor .e-rte-content .e-content pre{
-                background-color: #f4f4f4; color: #333; font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 15px; border-radius: 5px; border: 1px solid #ccc; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;
-            }
-
-</style>
-```
-
-This styling adds a light gray background, sets a monospace font, and includes padding and borders for better visual separation.
 
 ## Format painter
 
