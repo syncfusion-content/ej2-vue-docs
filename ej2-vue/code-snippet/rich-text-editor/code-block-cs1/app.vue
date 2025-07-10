@@ -3,7 +3,7 @@
         <div class="control-section">
             <div class="sample-container">
                 <div class="default-section">
-                    <ejs-richtexteditor ref="rteObj" :value="rteValue" :height="340" :toolbarSettings="toolbarSettings" :codeBlockSettings="codeBlockSettings" :placeholder="placeholder"></ejs-richtexteditor>
+                    <ejs-richtexteditor ref="rteObj" :height="340" :toolbarSettings="toolbarSettings" :codeBlockSettings="codeBlockSettings" :placeholder="placeholder"></ejs-richtexteditor>
                 </div>
             </div>
         </div>

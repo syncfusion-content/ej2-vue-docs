@@ -38,7 +38,7 @@ Below is an example of how to configure the `codeBlockSettings` using the Rich T
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs15" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/code-block-cs1" %}
 
 In this example:
 
