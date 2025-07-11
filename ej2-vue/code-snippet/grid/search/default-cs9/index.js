@@ -93,6 +93,13 @@ new Vue({
         this.removeQuery = false;
         this.$refs.grid.ej2Instances.refresh();
       }
+      document.getElementById(this.$refs.grid.ej2Instances.element.id + "_searchbar").addEventListener('keyup', (args) => {
+        if(args.target.value === "" && (args.key === "Enter" || args.key === "Backspace" )){
+          this.$refs.grid.ej2Instances.query = new Query();
+          this.removeQuery = false;
+          this.$refs.grid.ej2Instances.refresh();
+        }         
+      });
     }
   },
   provide: {

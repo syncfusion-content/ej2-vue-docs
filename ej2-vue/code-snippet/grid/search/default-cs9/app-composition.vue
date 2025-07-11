@@ -81,6 +81,13 @@ const actionComplete = (args) => {
     removeQuery = false;
     grid.value.ej2Instances.refresh();
   }
+  document.getElementById(grid.value.ej2Instances.element.id + "_searchbar").addEventListener('keyup', (args) => {
+    if(args.target.value === "" && (args.key === "Enter" || args.key === "Backspace" )){
+      grid.value.ej2Instances.query = new Query();
+      removeQuery = false;
+      grid.value.ej2Instances.refresh();
+    }         
+  });
 }
 provide('grid', [Toolbar, Search]);
 </script>
