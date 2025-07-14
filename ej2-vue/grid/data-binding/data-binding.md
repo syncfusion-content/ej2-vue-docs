@@ -180,6 +180,32 @@ The following code demonstrates, how to use the `changeDataSource` method to bin
 >* The Grid state persistence feature does not support the  `changeDataSource` method.
 >* In this document, the above sample uses the local data for `changeDataSource` method. For those using a remote data source, refer to the [FlexibleData](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/grid/flexible-data) resource.
 
+## How to set custom headers using a custom adaptor
+
+Custom headers in HTTP requests are used to send additional information such as authentication tokens, API keys, or metadata required by the server. These headers improve security and enable better control over data communication. In the Syncfusion Vue Grid, custom headers can be added when making API requests, ensuring that each request carries the necessary information for server-side validation and processing.
+
+This method is particularly useful when integrating the Grid with authenticated APIs, where requests must include authorization tokens or other security credentials to ensure secure access.
+
+To achieve this, the `WebApiAdaptor` can be extended to create the custom adaptor. The `beforeSend` method in the custom adaptor allows modifying request headers before sending them to the server. This ensures that every request from the Grid includes the required headers.
+
+The following example demonstrates how to set custom headers using the custom adaptor in Grid.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+{% include code-snippet/grid/databind/custom-headers-cs1/app-composition.vue %}
+
+{% endhighlight %}
+
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+{% include code-snippet/grid/databind/custom-headers-cs1/app.vue %}
+
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/databind/custom-headers-cs1" %}
+
 ## Prevent to convert local time zone format for date column
 
 By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid automatically converts date values to the local time zone of the client system. However, in some scenarios, you may need to display the original date as received from the server without any timezone conversion.
