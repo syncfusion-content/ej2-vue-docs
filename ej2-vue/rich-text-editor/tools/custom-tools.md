@@ -20,6 +20,8 @@ The following code snippet illustrates custom tool with tooltip text which will 
 {
     tooltipText: 'Insert Symbol',
     undo: true,
+    // To disable the custom toolbar items on source code view
+    command: 'Custom',
     click: this.onClick.bind(this),
     template: '<button class="e-tbar-btn e-btn" tabindex="-1" id="custom_tbar" style="width:100%"><div class="e-tbar-btn-text" style="font-weight: 500;"> &#937;</div></button>'
 }
@@ -47,4 +49,4 @@ This sample demonstrates how to add a custom "Ω" icon to the toolbar. Clicking 
 
 You can use the [enableToolbarItem](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#enabletoolbaritem) and [disableToolbarItem](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#disabletoolbaritem) methods to control the state of toolbar items. This methods takes a single item or an array of [items](#available-toolbar-items) as parameter.
 
->You can add the command name `Custom` to disable the custom toolbar items on source code view and other quicktoolbar operations.
+>You can add the command name `Custom` to disable the custom toolbar items on source code view and other quick toolbar operations.
