@@ -87,6 +87,8 @@ const toolbarSettings = {
         {
             tooltipText: 'Insert Symbol',
             undo: true,
+            // To disable the custom toolbar items on source code view
+            command: 'Custom',
             click: onClick,
             template: '<button class="e-tbar-btn e-btn" tabindex="-1" id="custom_tbar"  style="width:100%"><div class="e-tbar-btn-text" style="font-weight: 500;"> &#937;</div></button>'
         }, '|', 'Undo', 'Redo']
