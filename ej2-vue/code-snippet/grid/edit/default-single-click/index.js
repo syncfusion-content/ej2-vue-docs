@@ -33,17 +33,18 @@ data() {
   };
 },
 methods: {
- load: function () {
-     this.$refs.grid.ej2Instances.element.addEventListener('mouseup', function(e) {
-          var instance = this.ej2_instances[0];
-          if (e.target.classList.contains("e-rowcell")) {
-          if (instance.isEdit)
-              instance.endEdit();
-              let index = parseInt(e.target.getAttribute("Index"));
-              instance.selectRow(index);
-              instance.startEdit();
-          }
-      });
+  load: function () {
+    this.$refs.grid.ej2Instances.element.addEventListener('mouseup', function(e) {
+      var instance = this.ej2_instances[0];
+      if (e.target.classList.contains("e-rowcell")) {
+        if (instance.isEdit) {
+          instance.endEdit();
+        }
+        let index = parseInt(e.target.getAttribute("Index"));
+        instance.selectRow(index);
+        instance.startEdit();
+      }
+    });
   }
 },
 provide: {
