@@ -10,7 +10,7 @@ new Vue({
             <div class="control-section">
                 <div class="sample-container">
                     <div class="default-section">
-                        <ejs-richtexteditor ref="rteObj" :fileUploading="onImageUpload" :insertImageSettings="insertImageSettings" :value="rteValue" :height="340" :toolbarSettings="toolbarSettings"></ejs-richtexteditor>
+                        <ejs-richtexteditor ref="rteObj" :imageUploading="onImageUpload" :insertImageSettings="insertImageSettings" :value="rteValue" :height="340" :toolbarSettings="toolbarSettings"></ejs-richtexteditor>
                     </div>
                 </div>
             </div>
