@@ -19,20 +19,18 @@ This guide demonstrates how to toggle the visibility of annotations in the Syncf
 **Step 2:** Set up your Vue component with a toggle button to control the visibility of annotations:
 
 {% tabs %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Standalone" %}
 <template>
-  <div id="app">
-    <button v-on:click="toggleAnnotations" style="margin-bottom: 20px;">
-      {{ annotationsVisible ? 'Hide Annotations' : 'Show Annotations' }}
-    </button>
-    <ejs-pdfviewer
-      id="pdfViewer"
-      ref="pdfviewer"
-      :documentPath="documentPath"
-      :serviceUrl="serviceUrl"
-      style="height: 640px;">
-    </ejs-pdfviewer>
-  </div>
+<div id="app">
+<button id="hideBtn" v-on:click="hideAnnotations">Hide Annotations</button>
+<button id="unhideBtn" v-on:click="unhideAnnotations">Show Annotations</button>
+<ejs-pdfviewer
+id="pdfViewer"
+ref="pdfviewer"
+:documentPath="documentPath"
+:resourceUrl="resourceUrl">
+</ejs-pdfviewer>
+</div>
 </template>
 
 <script>
@@ -42,7 +40,7 @@ import {
   Magnification,
   Navigation,
   LinkAnnotation,
-  BookmarkView,
+  BookmarkView, 
   ThumbnailView,
   Print,
   TextSelection,
@@ -60,8 +58,8 @@ export default {
   },
   data() {
     return {
-      documentPath: "Annotations.pdf",
-      serviceUrl: "https://localhost:44309/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib",
       exportObject: "",
       annotationsVisible: true
     };
@@ -69,34 +67,25 @@ export default {
   provide: {
     PdfViewer: [
       Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-      ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
-      FormFields, FormDesigner, PageOrganizer
+      ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer
     ]
   },
   methods: {
-    async toggleAnnotations() {
+    async hideAnnotations() {
       const viewer = this.$refs.pdfviewer.ej2Instances;
-      if (this.annotationsVisible) {
-        // Hide annotations by exporting and deleting them
-        try {
-          const value = await viewer.exportAnnotationsAsObject();
-          this.exportObject = JSON.stringify(value); // Store annotations for later use
-          const count = viewer.annotationCollection.length;
-          for (let i = 0; i < count; i++) {
-            // Always delete the first item as the collection shrinks
-            viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
-          }
-          this.annotationsVisible = false;
-        } catch (error) {
-          console.error('Error hiding annotations:', error);
-        }
-      } else {
-        // Restore annotations
-        if (this.exportObject) {
-          const parsedObject = JSON.parse(this.exportObject);
-          viewer.importAnnotation(JSON.parse(parsedObject));
-        }
-        this.annotationsVisible = true;
+      try {
+        const value = await viewer.exportAnnotationsAsObject();
+        this.exportObject = JSON.stringify(value); // Convert object to string for later use
+        viewer.deleteAnnotations();
+      } catch (error) {
+        console.error('Error hiding annotations:', error);
+      }
+    },
+    unhideAnnotations() {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      if (this.exportObject) {
+        const parsedObject = JSON.parse(this.exportObject);
+        viewer.importAnnotation(JSON.parse(parsedObject));
       }
     }
   }
