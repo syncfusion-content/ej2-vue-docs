@@ -301,8 +301,6 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 {% include code-snippet/rich-text-editor/horizontal-line/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/horizontal-line" %}
 
 ## Format painter
 
