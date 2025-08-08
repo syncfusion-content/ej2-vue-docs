@@ -121,6 +121,14 @@ You can make a subscript or superscript text as normal using the following code.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.baselineAlignment='Normal';
 ```
 
+## Change case
+
+You can apply different case formatting based on the selected text. Refer to the following sample code.
+
+```ts
+this.$refs.documenteditor.ej2Instances.documentEditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleCase'|'CapitalizeEachWord');
+```
+
 ## Size
 
 The size of selected text can be get or set using the following code.
@@ -446,6 +454,6 @@ export default {
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [Font dialog](../document-editor/dialog#font-dialog)
-* [Keyboard shortcuts](../document-editor/keyboard-shortcut#text-formatting/)
+* [Keyboard shortcuts](../document-editor/keyboard-shortcut#text-formatting)
