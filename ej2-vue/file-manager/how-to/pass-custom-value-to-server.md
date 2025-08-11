@@ -210,6 +210,7 @@ public object GetImage([FromBody] FileManagerDirectoryContent args)
     return this.operation.GetImage(args.Path, args.Id, false, null, null);
 }
 
+
 ```
 
 > **Note:** View the complete [Github sample](https://github.com/SyncfusionExamples/How-to-pass-custom-values-from-client-to-server-in-filemanager) which includes all the above event along with service code for passing custom values to server.
