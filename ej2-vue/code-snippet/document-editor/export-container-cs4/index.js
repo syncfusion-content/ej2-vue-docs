@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar,Editor, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 
 Vue.use(DocumentEditorContainerPlugin);
         
