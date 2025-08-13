@@ -35,7 +35,8 @@ System.config({
         "@syncfusion/ej2-pdf-export": "syncfusion:ej2-pdf-export/dist/ej2-pdf-export.umd.min.js",
         "@syncfusion/ej2-documenteditor": "syncfusion:ej2-documenteditor/dist/ej2-documenteditor.umd.min.js",
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
-        "@syncfusion/ej2-vue-documenteditor": "syncfusion:ej2-vue-documenteditor/dist/ej2-vue-documenteditor.umd.min.js"
+        "@syncfusion/ej2-vue-documenteditor": "syncfusion:ej2-vue-documenteditor/dist/ej2-vue-documenteditor.umd.min.js",
+        "@syncfusion/ej2-ribbon": "syncfusion:ej2-ribbon/dist/ej2-ribbon.umd.min.js"
     }
 });
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Vue AI AssistView component | Syncfusion
-description: Checkout and learn about Getting started with Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Custom View with Vue AI AssistView component | Syncfusion
+description: Checkout and learn about Custom View with Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
@@ -16,7 +16,7 @@ By using the `e-views` tag directive you can define the collection of different 
 
 ### Setting view type
 
-You can set the type of view by using the [type](../api/ai-assistview/assistViewType) property within the `e-view` tag directive. It accepts two values such as `Assist`, and `Custom`.
+You can set the type of view by using the [type](../api/ai-assistview/assistViewType/) property within the `e-view` tag directive. It accepts two values such as `Assist`, and `Custom`.
 
 ```html
 
@@ -197,7 +197,7 @@ You can use the [viewTemplate](../api/ai-assistview/assistViewModel/#viewtemplat
 
 ## Setting active view
 
-You can use the [activeView](../api/ai-assistview#activeview) property to set the active view in the AI AssistView. By default, the value is `0`.
+You can use the [activeView](../api/ai-assistview/#activeview) property to set the active view in the AI AssistView. By default, the value is `0`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
