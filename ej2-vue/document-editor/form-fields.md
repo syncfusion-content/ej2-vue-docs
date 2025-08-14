@@ -76,6 +76,22 @@ this.$refs.documenteditor.ej2Instances.setFormFieldInfo('Drop1',dropdownfieldInf
 
 >Note:If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
 
+## Form Field Shading
+
+You can customize form field shading at the application level using the [`formFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#formFieldSettings) property.
+
+The example code below demonstrates how to set a custom shading color and how to disable shading (by default, shading is enabled).
+
+```ts
+// Set a custom shading color (for example, white) 
+this.$refs.doceditcontainer.ej2Instances.documentEditorSettings.formFieldSettings.shadingColor = '#ffffff';
+
+// Disable form field shading entirely 
+this.$refs.doceditcontainer.ej2Instances.documentEditorSettings.formFieldSettings.applyShading = false;
+```
+
+N> This customization only affects the application UI and will not be preserved when exporting the document.
+
 ## Export form field data
 
 Data of the all the Form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#exportformdata).
@@ -86,7 +102,7 @@ var formFieldDate = this.$refs.documenteditor.ej2Instances.exportFormData();
 
 ## Import form field data
 
-Form fields can be prefilled with data using [`importFormData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#importformdata).
+Form fields can be initialized with data using [`importFormData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#importformdata).
 
 ```ts
 var textformField = {fieldName: 'Text1', value: 'Hello World'};
