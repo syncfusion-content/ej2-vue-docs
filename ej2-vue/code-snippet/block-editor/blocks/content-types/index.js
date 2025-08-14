@@ -23,7 +23,8 @@ new Vue({
         },
       blocksData: [
         {
-            type: 'Heading2',
+            type: 'Heading',
+            props: { level: 2},
             content: [
                 {
                     type: ContentType.Text,
@@ -41,7 +42,7 @@ new Vue({
                 {
                     type: ContentType.Link,
                     content: 'hyperlinks',
-                    linkSettings: {
+                    props: {
                         url: 'https://ej2.syncfusion.com/documentation/',
                         openInNewWindow: true
                     }

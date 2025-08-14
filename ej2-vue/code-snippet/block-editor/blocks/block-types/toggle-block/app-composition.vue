@@ -9,13 +9,14 @@ import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blo
 
 const blocksData = [
     {
-        type: 'ToggleHeading1',
+        type: 'CollapsibleParagraph',
         content: [
             {
                 type: ContentType.Text,
                 content: 'Collapsible Section'
             }
         ],
+        props: {
         isExpanded: true,
         children: [
             {
@@ -28,15 +29,17 @@ const blocksData = [
                 ]
             }
         ]
+        }
     },
     {
-        type: 'ToggleParagraph',
+        type: 'CollapsibleParagraph',
         content: [
             {
                 type: ContentType.Text,
                 content: 'Toggle paragraph section'
             }
         ],
+        props: {
         isExpanded: false,
         children: [
             {
@@ -49,6 +52,7 @@ const blocksData = [
                 ]
             }
         ]
+        }
     }
 ];
 

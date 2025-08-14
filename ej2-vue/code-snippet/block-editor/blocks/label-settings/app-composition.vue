@@ -9,7 +9,8 @@ import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blo
 
 const blocksData = [
     {
-        type: 'Heading1',
+        type: 'Heading',
+        props: { level: 1},
         content: [
             {
                 type: ej.blockeditor.ContentType.Text,
@@ -35,7 +36,7 @@ const blocksData = [
             },
             {
                 type: ej.blockeditor.ContentType.Label,
-                id: 'bug'
+                props: { lableId: 'bug'}
             },
             {
                 type: ej.blockeditor.ContentType.Text,
@@ -43,7 +44,7 @@ const blocksData = [
             },
             {
                 type: ej.blockeditor.ContentType.Label,
-                id: 'high'
+                props: { lableId: 'high'}
             }
         ]
     },
@@ -56,7 +57,7 @@ const blocksData = [
             },
             {
                 type: ej.blockeditor.ContentType.Label,
-                id: 'task'
+                props: { lableId: 'task'}
             },
             {
                 type: ej.blockeditor.ContentType.Text,
@@ -64,7 +65,7 @@ const blocksData = [
             },
             {
                 type: ej.blockeditor.ContentType.Label,
-                id: 'medium'
+                props: { lableId: 'medium'}
             }
         ]
     },
@@ -77,7 +78,7 @@ const blocksData = [
             },
             {
                 type: ej.blockeditor.ContentType.Label,
-                id: 'feature'
+                props: { lableId: 'feature'}
             },
             {
                 type: ej.blockeditor.ContentType.Text,
@@ -85,7 +86,7 @@ const blocksData = [
             },
             {
                 type: ej.blockeditor.ContentType.Label,
-                id: 'critical'
+                props: { lableId: 'critical'}
             }
         ]
     }

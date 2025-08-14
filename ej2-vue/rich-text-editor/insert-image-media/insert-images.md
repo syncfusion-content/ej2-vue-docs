@@ -247,12 +247,7 @@ Once you select the image from the local machine, the URL for the image will be 
 
 ![Rich Text Editor Image delete](../images/image-del.png)
 
-The following sample explains, how to configure `removeUrl` to remove a saved image from the remote service location, when the following image remove actions are performed:
-
-* `delete` key action.
-* `backspace` key action.
-* Removing uploaded image file from the insert image dialog.
-* Deleting image using the quick toolbar `remove` option.
+The following sample explains, how to configure the `removeUrl` to remove a saved image from the remote service location, when the image is removed using the Insert Image dialog.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -264,6 +259,89 @@ The following sample explains, how to configure `removeUrl` to remove a saved im
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs18" %}
+
+## Deleting Images from Server Using Keyboard and Quick Toolbar Actions
+
+In the Rich Text Editor, deleting images using the `Delete` or `Backspace` keys, or the Quick Toolbar's `Remove` button, removes the image from the editor content not from the server.
+
+This behavior is intentional, allowing undo/redo operations to function properly without breaking references to previously uploaded images.
+
+To explicitly remove images from the server, use the `afterImageDelete` event. This event is triggered after an image is removed from the content and provides the src URL of the image, which can be used to initiate a request to your server for deleting the corresponding file.
+
+The following sample demonstrates how to use the afterImageDelete event in Rich Text Editor to delete images from the server after they are removed from the editor content:
+
+```
+<template>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :insertImageSettings="insertImageSettings" :value="rteValue" :afterImageDelete="afterImageDeleteHandler" :toolbarSettings="toolbarSettings"></ejs-richtexteditor>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+export default {
+    name: "App",
+    components: {
+        "ejs-richtexteditor": RichTextEditorComponent
+    },
+    data: function () {
+        return {
+            toolbarSettings: {
+                items: ['Image']
+            },
+            insertImageSettings : {
+                saveUrl: "[SERVICE_HOSTED_PATH]/api/Home/SaveImage",
+                path: "[SERVICE_HOSTED_PATH]/Uploads/"
+            },
+            rteValue: `<p>The Syncfudion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul><li><p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes.</p></li><li><p>Bulleted and numbered lists.</p></li><li><p>Handles images, hyperlinks, videos, hyperlinks, uploads, etc.</p></li><li><p>Contains undo/redo manager. </p></li></ul><div style='display: inline-block; width: 60%; vertical-align: top; cursor: auto;'><img alt='Sky with sun' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png' width='309' style='min-width: 10px; min-height: 10px; width: 309px; height: 174px;' class='e-rte-image e-imginline e-rte-drag-image' height='174' /></div>`,
+        };
+    },  
+    methods: {
+        afterImageDeleteHandler(args) {
+            if (args && args.src) {
+                const src = args.src;
+                const fileName = src.split('/').pop();
+                const dummyFile = new File([''], fileName);
+                const formData = new FormData();
+                formData.append('UploadFiles', dummyFile);
+                fetch(this.insertImageSettings.removeUrl, {
+                method: 'POST',
+                body: formData,
+                })
+                .then((response) => {
+                    if (!response.ok) throw new Error('Server responded with an error');
+                    console.log('Image deleted successfully:', fileName);
+                })
+                .catch((error) => {
+                    console.error('Image deletion failed:', error);
+                });
+            }
+        },
+    },
+    provide: {
+        richtexteditor: [Toolbar, Link, Image, HtmlEditor]
+    }
+}
+</script>
+
+<style>
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
+</style>
+
+```
 
 ## Adjusting image dimensions
 

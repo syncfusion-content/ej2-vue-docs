@@ -10,7 +10,7 @@ import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blo
 const blocksData = [
     {
         type: 'Image',
-        imageSettings: {
+        props: {
             src: 'https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png',
             altText: 'Sample image'
         }

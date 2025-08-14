@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Vue AI AssistView component | Syncfusion
-description: Checkout and learn about Getting started with Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: File Attachment in Vue AI AssistView component | Syncfusion
+description: Checkout and learn about file attachment with Vue AI AssistView component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug

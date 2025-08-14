@@ -27,7 +27,8 @@ export default {
       blocksData : [
           {
             id: 'title-block',
-            type: 'Heading1',
+            type: 'Heading',
+            props: { level: 1},
             content: [
                 {
                     type: ContentType.Text,
@@ -47,7 +48,8 @@ export default {
         },
         {
             id: 'features-heading',
-            type: 'Heading2',
+            type: 'Heading'
+            props:{ level:2},
             content: [
                 {
                     type: ContentType.Text,
@@ -99,8 +101,8 @@ export default {
     };
   },
   methods: {
-    getJsonBlock: function() {
-      const blockData = this.$refs.blockEditor.ej2Instances.getDataAsJson('block-1');
+    getJsonAll: function() {
+      const blockData = this.$refs.blockEditor.ej2Instances.getDataAsJson();
       const formattedJson = JSON.stringify(blockData, null, 2);
       this.displayOutput(`Block "block-1" as JSON:\n\n${formattedJson}`);
     },

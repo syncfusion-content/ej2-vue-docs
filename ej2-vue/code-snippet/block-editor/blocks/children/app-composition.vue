@@ -11,11 +11,13 @@ const blocksData = [
     {
         id: 'security-callout',
         type: 'Callout',
+        props: {
         children: [
             { 
                 id: 'security-title',
                 parentId: 'security-callout',
-                type: 'Heading3',
+                type: 'Heading',
+                props: { level: 3},
                 content: [{
                     type: ej.blockeditor.ContentType.Text,
                     content: 'Security Notice'
@@ -61,6 +63,7 @@ const blocksData = [
                 indent: 1
             }
         ]
+        }
     }
 ];
 

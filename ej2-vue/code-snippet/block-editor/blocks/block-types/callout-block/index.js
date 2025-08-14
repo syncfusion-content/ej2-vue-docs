@@ -16,6 +16,7 @@ new Vue({
       blocksData: [
         {
           type: 'Callout',
+          props: {
           children: [{ 
               id: 'callout-content',
               type: 'Paragraph',
@@ -25,6 +26,7 @@ new Vue({
                   content: 'Important information: This is a callout block used to highlight important content.'
               }]
           }]
+        }
       }
       ]
     }

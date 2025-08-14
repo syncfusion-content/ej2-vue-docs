@@ -22,7 +22,7 @@ export default {
                     content: 'function greeting() {\n  console.log("Hello, world!");\n}'
                 }
             ],
-            codeSettings: {
+            props: {
                 defaultLanguage: 'javascript',
                 languages: [
                     { language: 'javascript', label: 'JavaScript' },

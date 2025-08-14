@@ -23,7 +23,8 @@ import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blo
 const blockData = [
     {
             id: 'title-block',
-            type: 'Heading1',
+            type: 'Heading',
+            props: { level: 1},
             content: [
                 {
                     type: ContentType.Text,

@@ -27,7 +27,8 @@ new Vue({
       blocksData : [
           {
             id: 'title-block',
-            type: 'Heading1',
+            type: 'Heading',
+            props: { level:1},
             content: [
                 {
                     type: ContentType.Text,
@@ -47,7 +48,8 @@ new Vue({
         },
         {
             id: 'features-heading',
-            type: 'Heading2',
+            type: 'Heading',
+            props: { level: 2},
             content: [
                 {
                     type: ContentType.Text,

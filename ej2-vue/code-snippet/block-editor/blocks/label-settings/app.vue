@@ -15,7 +15,8 @@ export default {
     return {
       blocksData: [
         {
-            type: 'Heading1',
+            type: 'Heading',
+            props: { level: 1},
             content: [
                 {
                     type: ej.blockeditor.ContentType.Text,
@@ -41,7 +42,7 @@ export default {
                 },
                 {
                     type: ej.blockeditor.ContentType.Label,
-                    id: 'bug'
+                    props: { labelId: 'bug' }
                 },
                 {
                     type: ej.blockeditor.ContentType.Text,
@@ -49,7 +50,7 @@ export default {
                 },
                 {
                     type: ej.blockeditor.ContentType.Label,
-                    id: 'high'
+                    props: { labelId: 'high' }
                 }
             ]
         },
@@ -62,7 +63,7 @@ export default {
                 },
                 {
                     type: ej.blockeditor.ContentType.Label,
-                    id: 'task'
+                    props: { labelId: 'task' }
                 },
                 {
                     type: ej.blockeditor.ContentType.Text,
@@ -70,7 +71,7 @@ export default {
                 },
                 {
                     type: ej.blockeditor.ContentType.Label,
-                    id: 'medium'
+                    props: { labelId: 'medium' }
                 }
             ]
         },
@@ -83,7 +84,7 @@ export default {
                 },
                 {
                     type: ej.blockeditor.ContentType.Label,
-                    id: 'feature'
+                    props: { labelId: 'feature' }
                 },
                 {
                     type: ej.blockeditor.ContentType.Text,
@@ -91,7 +92,7 @@ export default {
                 },
                 {
                     type: ej.blockeditor.ContentType.Label,
-                    id: 'critical'
+                    props: { labelId: 'critical' }
                 }
             ]
         }

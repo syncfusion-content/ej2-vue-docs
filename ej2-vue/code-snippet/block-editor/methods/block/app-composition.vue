@@ -24,7 +24,8 @@ let blockEditor=ref(null);
 const blocksData = [
      {
         id: 'block-1',
-        type: 'Heading1',
+        type: 'Heading',
+        props: { level: 1},
         content: [
             {
                 type: ej.blockeditor.ContentType.Text,

@@ -11,7 +11,8 @@ import { L10n } from '@syncfusion/ej2-base';
 const blocksData = [
     {
         id: 'block-1',
-        type: 'Heading1',
+        type: 'Heading',
+        props: { level: 1},
         content: [
             {
                 type: ContentType.Text,

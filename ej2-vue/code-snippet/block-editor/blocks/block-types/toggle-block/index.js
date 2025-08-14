@@ -15,13 +15,14 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'ToggleHeading1',
+            type: 'CollapsibleParagraph',
             content: [
                 {
                     type: ContentType.Text,
                     content: 'Collapsible Section'
                 }
             ],
+            props: {
             isExpanded: true,
             children: [
                 {
@@ -34,15 +35,17 @@ new Vue({
                     ]
                 }
             ]
+        }
         },
         {
-            type: 'ToggleParagraph',
+            type: 'CollapsibleParagraph',
             content: [
                 {
                     type: ContentType.Text,
                     content: 'Toggle paragraph section'
                 }
             ],
+            props:{
             isExpanded: false,
             children: [
                 {
@@ -55,6 +58,7 @@ new Vue({
                     ]
                 }
             ]
+        }
         }
       ]
     }
