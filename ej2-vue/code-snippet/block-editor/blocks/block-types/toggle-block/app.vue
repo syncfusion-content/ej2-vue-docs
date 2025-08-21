@@ -15,7 +15,7 @@ export default {
     return {
       blocksData: [
           {
-              type: 'CollapsibleParagraph',
+              type: 'CollapsibleHeading',
               content: [
                   {
                       type: ContentType.Text,
@@ -23,6 +23,7 @@ export default {
                   }
               ],
               props: {
+              level: 1,
               isExpanded: true,
               children: [
                   {

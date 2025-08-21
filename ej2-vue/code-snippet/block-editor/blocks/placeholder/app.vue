@@ -25,7 +25,7 @@ export default {
         },
         {
             type: 'Paragraph',
-            placeholder: 'Start typing your notes or press "/" for commands...'
+            props: { placeholder: 'Start typing your notes or press "/" for commands...' }
         }
       ]
     };

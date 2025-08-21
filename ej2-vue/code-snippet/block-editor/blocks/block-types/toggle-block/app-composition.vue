@@ -9,7 +9,7 @@ import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blo
 
 const blocksData = [
     {
-        type: 'CollapsibleParagraph',
+        type: 'CollapsibleHeading',
         content: [
             {
                 type: ContentType.Text,
@@ -17,6 +17,7 @@ const blocksData = [
             }
         ],
         props: {
+        level: 1,
         isExpanded: true,
         children: [
             {

@@ -69,7 +69,7 @@ export default {
                     },
                     {
                         type: ContentType.Label,
-                        id: 'label1'
+                        props: { labelId: 'label1'}
                     },
                     {
                         type: ContentType.Text,

@@ -15,7 +15,7 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'CollapsibleParagraph',
+            type: 'CollapsibleHeading',
             content: [
                 {
                     type: ContentType.Text,
@@ -23,6 +23,7 @@ new Vue({
                 }
             ],
             props: {
+            level: 1,
             isExpanded: true,
             children: [
                 {
