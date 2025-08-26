@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column spanning in Vue Grid component
 
-The column spanning feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to merge adjacent cells horizontally, creating a visually appealing and informative layout. By defining the [colSpan](https://ej2.syncfusion.com/vue/documentation/api/grid/queryCellInfoEventArgs/#colspan) attribute in the [QueryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/queryCellInfoEventArgs) event, you can easily span cells and customize the appearance of the grid.
+The column spanning feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to merge adjacent cells horizontally, creating a visually appealing and informative layout. By defining the [colSpan](https://ej2.syncfusion.com/vue/documentation/api/grid/queryCellInfoEventArgs/#colspan) attribute in the [QueryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#queryCellInfoEventArgs) event, you can easily span cells and customize the appearance of the grid.
 
 In the following demo, Employee doing analysis from 9.00 AM to 10.00 AM, so that cells have spanned.
 
@@ -48,3 +48,37 @@ You can change the border color for the spanned cells by the using [QueryCellInf
     2. Infinite scrolling
     3. Grouping
     4. Autofill
+
+## column spanning using enableColumnSpan property    
+
+The Syncfusion Vue Grid introduces a simplified approach to horizontally merge cells using the `enableColumnSpan` property. 
+
+When the `enableColumnSpan` property is enabled, the Grid automatically merges cells with matching data across adjacent columns without requiring manual span configuration using the [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event. These merged cells are visually combined into a single cell, improving readability.
+
+Here is an example of how to use the `enableColumnSpan` property to merge cells horizontally:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-spanning-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-spanning-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/column-spanning-cs1" %}
+
+> You can also control spanning at the column level. To prevent merging for specific columns, set `enableColumnSpan` to **false** in the column definition.
+
+### Limitation
+
+* Virtualization
+* Infinite Scrolling
+* Lazy Load Grouping
+* Row Drag and Drop
+* Column Virtualization
+* Detail Template
+* Editing
+* Export
+* Foreign Key
+* Hierarchy Grid    
