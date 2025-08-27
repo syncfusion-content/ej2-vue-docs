@@ -492,6 +492,37 @@ provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 
 ```
 
+## Drag and drop audio insertion
+
+By default, the Rich Text Editor allows you to insert audios by drag-and-drop from the local file system such as Windows Explorer into the content editor area. And, you can upload the audios to the server before inserting into the editor by configuring the saveUrl property.
+
+In the following sample, you can see feature demo.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs33/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs33/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs33" %}
+
+### Disabling audio drag and drop
+
+You can prevent drag-and-drop action by setting the actionBegin argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+
+``` typescript
+
+    actionBegin: function (args) {
+        if(args.type === 'drop' || args.tpe === 'dragstart') {
+            args.cancel =true;
+        }
+    }
+
+```
+
 ## See also
 
 * [Audio Quick Toolbar](../toolbar/quick-toolbar#audio-quick-toolbar)

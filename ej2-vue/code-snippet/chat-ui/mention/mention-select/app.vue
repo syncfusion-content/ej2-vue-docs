@@ -1,5 +1,5 @@
 <template>
-  <div id='mention-select' style="height: 380px; width: 450px; margin: 0 auto;">
+  <div style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui 
       :mentionUsers="mentionUsers" 
       :mentionSelect="mentionSelect" 
@@ -40,12 +40,12 @@ export default {
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 </style>

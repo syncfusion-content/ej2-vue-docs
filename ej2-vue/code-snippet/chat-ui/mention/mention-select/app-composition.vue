@@ -1,5 +1,5 @@
 <template>
-  <div id='mention-select' style="height: 380px; width: 450px; margin: 0 auto;">
+  <div style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui 
       :mentionUsers="mentionUsers" 
       :mentionSelect="mentionSelect" 

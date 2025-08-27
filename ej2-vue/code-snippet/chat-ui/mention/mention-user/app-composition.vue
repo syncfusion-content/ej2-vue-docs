@@ -1,56 +1,50 @@
 <template>
-  <div id="mention-user" style="height: 380px; width: 450px; margin: 0 auto;">
-    <ejs-chatui 
-      :user="currentUser"
-      :mentionUsers="mentionUsers"
-    >
-      <e-messages>
-        <e-message 
-          v-for="(message, index) in chatMessages" 
-          :key="index"
-          :author="message.author"
-          :text="message.text"
-        ></e-message>
+  <div style="height: 380px; width: 450px; margin: 0 auto;">
+    <ejs-chatui :user="currentUser" :enableRipple="true" :mentionUsers="mentionUsers" headerText="TeamSync Professionals">
+<e-messages>
+        <e-message :author="currentUser" text="Want to get coffee tomorrow?" ></e-message>
+        <e-message :author="michaleUser" text="Sure! What time?" ></e-message>
+        <e-message :author="currentUser" text="{0} How about 10 AM?" :mentionUsers="[michaleUser]" ></e-message>
       </e-messages>
     </ejs-chatui>
   </div>
 </template>
 
-<script setup>
+<script>
 import { enableRipple } from '@syncfusion/ej2-base';
-import { ChatUIComponent as EjsChatui, MessagesDirective as EMessages, MessageDirective as EMessage } from "@syncfusion/ej2-vue-interactive-chat";
+import { ChatUIComponent, MessagesDirective, MessageDirective } from "@syncfusion/ej2-vue-interactive-chat";
 
 enableRipple(true);
 
-const currentUser = {
-  id: "user1",
-  user: "Albert"
-};
-
-const michaleUser = {
-  id: "user2",
-  user: "Michale Suyama"
-};
-
-const chatMessages = [
-  {
-    author: currentUser,
-    text: "Hi Michale, are we on track for the deadline?"
+export default {
+  components: {
+    'ejs-chatui': ChatUIComponent,
+    'e-messages': MessagesDirective,
+    'e-message': MessageDirective
   },
-  {
-    author: michaleUser,
-    text: "Yes, the design phase is complete."
-  },
-  {
-    author: currentUser,
-    text: "I’ll review it and send feedback by today."
+  data() {
+    return {
+      currentUser: {
+        id: "user1",
+        user: "Albert"
+      },
+      michaleUser: {
+        id: "user2",
+        user: "Michale Suyama"
+      },
+      mentionUsers: [
+        {
+          id: "user1",
+          user: "Albert"
+        },
+        {
+          id: "user2",
+          user: "Michale Suyama"
+        }
+      ]
+    };
   }
-];
-
-const mentionUsers = [
-  currentUser,
-  michaleUser
-];
+};
 </script>
 
 <style>
