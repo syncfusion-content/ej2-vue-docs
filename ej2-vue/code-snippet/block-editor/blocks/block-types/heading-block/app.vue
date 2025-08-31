@@ -15,7 +15,8 @@ export default {
     return {
       blocksData: [
           {
-              type: 'Heading1',
+              type: 'Heading',
+              props: { level : 1 },
               content: [
                   {
                       type: ContentType.Text,
@@ -24,7 +25,8 @@ export default {
               ]
           },
           {
-              type: 'Heading2',
+              type: 'Heading',
+              props: { level : 2 },
               content: [
                   {
                       type: ContentType.Text,
@@ -33,7 +35,8 @@ export default {
               ]
           },
           {
-              type: 'Heading3',
+              type: 'Heading',
+              props: { level : 3 },
               content: [
                   {
                       type: ContentType.Text,
@@ -42,7 +45,8 @@ export default {
               ]
           },
           {
-              type: 'Heading4',
+              type: 'Heading',
+              props: { level : 4 },
               content: [
                   {
                       type: ContentType.Text,

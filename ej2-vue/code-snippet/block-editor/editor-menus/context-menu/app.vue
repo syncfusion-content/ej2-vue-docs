@@ -79,7 +79,8 @@ export default {
       blocksData: [
         {
             id: 'title-block',
-            type: 'Heading1',
+            type: 'Heading',
+            props: { level: 1},
             content: [
                 {
                     type: ContentType.Text,

@@ -27,7 +27,8 @@ export default {
       blocksData: [
         {
           id: 'title-block',
-          type: 'Heading1',
+          type: 'Heading',
+          props: { level: 1},
           content: [{ type: ContentType.Text, content: 'Appearance Configuration Demo' }],
         },
         {
@@ -37,7 +38,8 @@ export default {
         },
         {
           id: 'features-heading',
-          type: 'Heading2',
+          type: 'Heading',
+          props: { level: 2},
           content: [{ type: ContentType.Text, content: 'Configured Custom Theme' }],
         },
         {

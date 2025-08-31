@@ -10,6 +10,7 @@ import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blo
 const blocksData = [
     {
         type: 'Callout',
+        props: {
         children: [{ 
             id: 'callout-content',
             type: 'Paragraph',
@@ -19,6 +20,7 @@ const blocksData = [
                 content: 'Important information: This is a callout block used to highlight important content.'
             }]
         }]
+      }
     }
 ];
 

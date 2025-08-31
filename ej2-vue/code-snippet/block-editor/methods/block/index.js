@@ -26,18 +26,38 @@ new Vue({
   data () {
     return {
       blocksData : [
-          {
-              id: 'demo-block',
-              type: 'Paragraph'
-          }
+              {
+        id: 'block-1',
+        type: 'Heading',
+        props: { level: 1},
+        content: [
+            {
+                type: ContentType.Text,
+                content: 'Sample Heading'
+            }
+        ]
+    },
+    {
+        id: 'block-2',
+        type: 'Paragraph',
+        content: [
+            {
+                type: ContentType.Text,
+                content: 'This is a sample paragraph block.'
+            }
+        ]
+    },
+    {
+        id: 'block-3',
+        type: 'Paragraph',
+        content: [
+            {
+                type: ContentType.Text,
+                content: 'This is another paragraph block.'
+            }
+        ]
+    }
       ],
-      pasteSettings: {
-          keepFormat: false,
-          plainText: true,
-      },
-      afterPaste: (args) => {
-          this.displayOutput(`After Paste Event: Processed content length: ${args.content.length} characters`);
-      }
     }
   },
   methods: {

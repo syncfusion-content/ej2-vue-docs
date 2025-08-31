@@ -18,44 +18,44 @@ const blocksData = [
         ]
     },
     {
-        type: 'CheckList',
+        type: 'Checklist',
         content: [
             {
                 type: ContentType.Text,
                 content: 'Completed task (checked)'
             }
         ],
-        isChecked: true
+        props: { isChecked: true }
     },
     {
-        type: 'CheckList',
+        type: 'Checklist',
         content: [
             {
                 type: ContentType.Text,
                 content: 'Pending task (unchecked)'
             }
         ],
-        isChecked: false
+        props: { isChecked: false }
     },
     {
-        type: 'CheckList',
+        type: 'Checklist',
         content: [
             {
                 type: ContentType.Text,
                 content: 'High priority task'
             }
         ],
-        isChecked: true
+        props: { isChecked: true }
     },
     {
-        type: 'CheckList',
+        type: 'Checklist',
         content: [
             {
                 type: ContentType.Text,
                 content: 'Low priority task'
             }
         ],
-        isChecked: false
+        props: { isChecked: false }
     }
 ];
 

@@ -503,6 +503,37 @@ provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 
 ```
 
+## Drag and drop video insertion
+
+By default, the Rich Text Editor allows you to insert videos by drag-and-drop from the local file system such as Windows Explorer into the content editor area. And, you can upload the videos to the server before inserting into the editor by configuring the saveUrl property.
+
+In the following sample, you can see feature demo.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs34/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs34/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs34" %}
+
+### Disabling video drag and drop
+
+You can prevent drag-and-drop action by setting the actionBegin argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+
+``` typescript
+
+    actionBegin: function (args) {
+        if(args.type === 'drop' || args.tpe === 'dragstart') {
+            args.cancel =true;
+        }
+    }
+
+```
+
 ## Video resizing
 
 The Rich Text Editor has built-in video resizing support, which is enabled for the video elements added. The resize points will appear on each corner of the video when focusing, so users can easily resize the video using mouse points or thumb through the resize points. Also, the resize calculation will be done based on the aspect ratio.

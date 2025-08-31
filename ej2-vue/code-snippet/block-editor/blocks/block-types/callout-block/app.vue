@@ -13,26 +13,22 @@ export default {
   },
   data() {
     return {
-      blocksData: [
-           {
-          type: 'Code',
-          content: [
-              {
-                  type: ContentType.Text,  
-                  content: 'function greeting() {\n  console.log("Hello, world!");\n}'
-              }
-          ],
-          codeSettings: {
-              defaultLanguage: 'javascript',
-              languages: [
-                  { language: 'javascript', label: 'JavaScript' },
-                  { language: 'typescript', label: 'TypeScript' },
-                  { language: 'html', label: 'HTML' },
-                  { language: 'css', label: 'CSS' }
-              ]
-          }
+      blocksData : [
+      {
+        type: 'Callout',
+        props: {
+        children: [{ 
+            id: 'callout-content',
+            type: 'Paragraph',
+            content: [{
+                id: 'callout-content-1',
+                type: 'Text',
+                content: 'Important information: This is a callout block used to highlight important content.'
+            }]
+          }]
+        }
       }
-      ]
+    ]
     };
   },
   methods: {

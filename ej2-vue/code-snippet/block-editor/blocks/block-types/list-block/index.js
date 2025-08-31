@@ -33,24 +33,24 @@ new Vue({
             ]
         },
         {
-            type: 'CheckList',
+            type: 'Checklist',
             content: [
                 {
                     type: ContentType.Text,
                     content: 'Review documentation'
                 }
             ],
-            isChecked: true
+            props: { isChecked: true}
         },
         {
-            type: 'CheckList',
+            type: 'Checklist',
             content: [
                 {
                     type: ContentType.Text,
                     content: 'Implement drag and drop functionality'
                 }
             ],
-            isChecked: false
+            props: { isChecked: false}
         }
       ]
     }

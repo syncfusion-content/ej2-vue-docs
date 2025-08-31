@@ -22,39 +22,81 @@ let blockEditor=ref(null);
 
 const blocksData = [
      {
-        id: 'block-1',
-        type: 'Heading1',
+        id: 'title-block',
+        type: 'Heading',
+        props: { level: 1},
         content: [
             {
                 type: ej.blockeditor.ContentType.Text,
-                content: 'Sample Heading'
+                content: 'Document Export Demo'
             }
         ]
     },
     {
-        id: 'block-2',
+        id: 'intro-block',
         type: 'Paragraph',
         content: [
             {
                 type: ej.blockeditor.ContentType.Text,
-                content: 'This is a sample paragraph block.'
+                content: 'This document demonstrates the data export capabilities of the Block Editor. You can export content as JSON or HTML formats.'
             }
         ]
     },
     {
-        id: 'block-3',
-        type: 'Paragraph',
+        id: 'feature-heading',
+        type: 'Heading',
+        props: { level: 2},
         content: [
             {
                 type: ej.blockeditor.ContentType.Text,
-                content: 'This is another paragraph block.'
+                content: 'Export Features'
+            }
+        ]
+    },
+    {
+        id: 'features-list',
+        type: 'BulletList',
+        content: [
+            {
+                type: ej.blockeditor.ContentType.Text,
+                content: 'JSON export for data processing'
+            }
+        ]
+    },
+    {
+        id: 'features-list-2',
+        type: 'BulletList',
+        content: [
+            {
+                type: ej.blockeditor.ContentType.Text,
+                content: 'HTML export for web display'
+            }
+        ]
+    },
+    {
+        id: 'features-list-3',
+        type: 'BulletList',
+        content: [
+            {
+                type: ej.blockeditor.ContentType.Text,
+                content: 'Print functionality for hard copies'
+            }
+        ]
+    },
+    {
+        id: 'code-example',
+        type: 'Code',
+        content: [
+            {
+                type: ej.blockeditor.ContentType.Text,
+                content: 'const data = editor.getDataAsJson();\nconsole.log(data);'
             }
         ]
     }
 ];
 
-const getJsonBlock=()=> {
-      const blockData = blockEditor.getDataAsJson('block-1');
+const getJsonAll=()=> {
+      const blockData = blockEditor.getDataAsJson();
       const formattedJson = JSON.stringify(blockData, null, 2);
       displayOutput(`Block "block-1" as JSON:\n\n${formattedJson}`);
     };
