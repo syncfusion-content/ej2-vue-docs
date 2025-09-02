@@ -1,0 +1,14 @@
+
+  #ertTreeGrid .emptyRecordTemplate {
+      text-align: center;
+      margin: 31px auto;
+  }
+
+  #ertTreeGrid .e-emptyRecord {
+      display: block;
+      margin: 10px auto;
+      border-radius: 4px;
+      box-shadow: 2px 4px 10px #34343480;
+  }
+
+ 

@@ -47,6 +47,23 @@ With [`pageSizeMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/
         
 {% previewsample "page.domainurl/code-snippet/treegrid/paging/default-cs2" %}
 
+## Template
+
+The pager template in the TreeGrid component allows you to customize the appearance and behavior of the pager element, which is used for navigation through different pages of tree grid data. This feature is particularly useful when you want to use custom elements inside the pager instead of the default elements.
+
+To use the pager template, you need to specify the [pagerTemplate](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettings/#template) property in your Tree Grid configuration. The `pagerTemplate` property allows you to define a custom template for the pager. Within the template, you can access the [currentPage](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettings/#currentpage), [pageSize](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettings/#pagesize), [pageCount](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/paging/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/paging/default-cs4/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/treegrid/paging/default-cs4" %}
+
 ## Pager with Page Size Dropdown
 
 The pager Dropdown allows you to change the number of records in the TreeGrid dynamically. It can be enabled by defining the [`pageSettings.pageSizes`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettingsModel/#pagesizes) property as true.

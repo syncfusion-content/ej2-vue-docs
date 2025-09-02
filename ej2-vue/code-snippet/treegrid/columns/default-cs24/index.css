@@ -1,0 +1,23 @@
+    .no-record-text {
+        padding: 5px;
+    }
+    
+    .e-dlg-header{
+        width:300px;
+    }
+    
+    #gridInstance_gridcontrol_ccdlg .e-columnChooserTemplate {
+        overflow-x: auto !important;
+        overflow-y: auto;
+        min-width: 230px;
+    }
+
+    #gridInstance_gridcontrol_ccdlg .e-columnChooserTemplate .e-ul {
+        width: fit-content !important;
+    }
+ 
+    #gridInstance_gridcontrol_ccdlg .e-treeview .e-text-content,
+    #gridInstance_gridcontrol_ccdlg .e-treeview .e-list-text {
+        white-space: nowrap !important;
+        overflow: hidden;
+    }
