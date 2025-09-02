@@ -43,3 +43,19 @@ PDF export provides an option to define datasource dynamically before exporting.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/treegrid/pdf/default-cs11" %}
+
+## Exporting Custom Aggregates in Tree Grid
+ 
+The Tree Grid enables exporting custom aggregates, which summarize column data, to an Excel document using the `PdfAggregateQueryCellInfo` event.
+ 
+In the provided example, the `customAggregateFn` function computes the item count for a selected category, while the `PdfAggregateQueryCellInfo` event customizes the exported cell values in the Excel document.
+{% tabs %}
+{% highlight ts tabtitle="app.component.ts" %}
+{% include code-snippet/treegrid/pdf-export-cs16/src/app.component.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/treegrid/pdf-export-cs16/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/treegrid/pdf/default-cs12" %}

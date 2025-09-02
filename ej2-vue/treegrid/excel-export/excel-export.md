@@ -43,3 +43,17 @@ The excel export provides an option to define datasource dynamically before expo
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/treegrid/excel/default-cs9" %}
+
+## Exporting Custom Aggregates in Tree Grid  
+The Tree Grid enables exporting custom aggregates, which summarize column data, to an Excel document using the `ExcelAggregateQueryCellInfo` event.  
+ 
+In the provided example, the customAggregateFn function computes the item count for a selected category, while the `ExcelAggregateQueryCellInfo` event customizes the exported cell values in the Excel document.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/excel/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/excel/default-cs10/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+{% previewsample "page.domainurl/code-snippet/treegrid/excel/default-cs10" %}
