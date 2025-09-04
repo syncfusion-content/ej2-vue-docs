@@ -56,6 +56,23 @@ The toggle selection allows you to select and deselect a specific row or cell. T
         
 {% previewsample "page.domainurl/code-snippet/gantt/selection-cs12" %}
 
+## Hover highlighting
+
+The hover highlighting feature in the Syncfusion Vue Gantt Chart enhances user interaction by highlighting **tree grid rows, chart task bars, header cells, and timeline cells** when hovered, making it easier to track tasks in complex project timelines. Enable it by setting the [enableHover](../../api/gantt/#enablehover) property to **true** in the component.
+
+The following code example shows how to enable the hover highlighting in Gantt.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/selection-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/selection-cs16/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/selection-cs16" %}
+
 ## Clear selection
 
 You can clear the selected cells and selected rows by using a method called [`clearSelection`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#clearselection). The following code example demonstrates how to clear the selected rows in Gantt Chart.

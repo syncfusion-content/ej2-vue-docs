@@ -60,7 +60,6 @@ const buttons = [
 </script>
 
 <style>
-@import "https://cdn.syncfusion.com/ej2/28.2.3/fluent2.css";
 
 body {
   padding-top: 100px;
