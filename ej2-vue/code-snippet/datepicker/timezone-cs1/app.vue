@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class='wrapper'>
-      <ejs-datepicker :placeholder="waterMark" :serverTimezoneOffset="serverOffset"></ejs-datepicker>
+      <ejs-datepicker :placeholder="waterMark" :serverTimezoneOffset="serverOffset" :value="dateVal"></ejs-datepicker>
     </div>
   </div>
 </template>
@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       waterMark: 'Select a date',
+      dateVal: new Date(),
       serverOffset : 5.5
     }
   }

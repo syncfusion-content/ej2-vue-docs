@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Working with data in Vue Stock chart component
 
-Stock Chart can visualise data bound from local or remote data.
+Stock Chart can visualizes data bound from local or remote data.
 
 ## Local Data
 
@@ -28,6 +28,21 @@ You can bind a simple JSON data to the chart using [`dataSource`](https://ej2.sy
         
 {% previewsample "page.domainurl/code-snippet/stockchart/working-with-data-cs1" %}
 
+## Handling when no data is available
+
+When no data is available to render in the chart, the `noDataTemplate` property can be used to display a custom layout within the chart area. This layout may include a message indicating the absence of data, a relevant image, or a button to initiate data loading. Styled text, images, or interactive elements can be incorporated to maintain design consistency and improve user guidance. Once data becomes available, the chart automatically updates to display the appropriate visualization.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/working-with-data-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/working-with-data-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/stockchart/working-with-data-cs2" %}
+
 ## See Also
 
-* [Series Types](./series-types/)
+* [Series Types](series-types)

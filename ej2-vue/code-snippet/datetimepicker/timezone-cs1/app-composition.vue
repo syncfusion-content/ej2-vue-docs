@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class='wrapper'>
-      <ejs-datetimepicker :placeholder="waterMark" :serverTimezoneOffset="serverOffset"></ejs-datetimepicker>
+      <ejs-datetimepicker :placeholder="waterMark" :serverTimezoneOffset="serverOffset" :value="dateVal"></ejs-datetimepicker>
     </div>
   </div>
 </template>
@@ -10,7 +10,9 @@
 import { DateTimePickerComponent as EjsDatetimepicker } from '@syncfusion/ej2-vue-calendars';
 
 const waterMark = 'Select a datetime';
+const dateVal = new Date();
 const serverOffset = 5.5; // Example: UTC+5:30 for IST
+
 
 </script>
 <style>
