@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Symbol Palette customization in Vue Diagram component | Syncfusion®
-description: Learn here all about Symbol palette customization in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Palette customization in Vue Diagram component | Syncfusion®
+description: Learn here how to customize symbol palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-vue
 control: Symbol palette 
 documentation: ug
@@ -122,8 +122,8 @@ The following code example illustrates how to set symbol size and symbol margin 
 
 ## Symbol preview
 
-The symbol preview size of the palette items can be customized using [`symbolPreview`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreviewModel) property of symbol palette. 
-The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#width-number) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#height-number) properties of SymbolPalette allow you to define the preview size for all the symbol palette items. The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#offset-PointModel) property specifies the position of the dragging helper relative to the mouse cursor.
+The symbol preview size of the palette items can be customized using [`symbolPreview`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreviewModel/) property of symbol palette. 
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#width-number/) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#height-number/) properties of SymbolPalette allow you to define the preview size for all the symbol palette items. The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#offset-PointModel/) property specifies the position of the dragging helper relative to the mouse cursor.
 
 The following code example illustrates how to change the preview size of a palette item.
 
@@ -218,6 +218,25 @@ The code provided below demonstrates how to define tooltip content to symbols wi
         
 {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/symboldesc"%}
 
+### How to enable or disable the default tooltip for shapes in the symbol palette
+
+By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`showTooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolInfo/#showTooltip) property within the [`getSymbolInfo`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#getsymbolinfo) method. The `showTooltip` property is set to **true** by default, which enables the tooltip.
+
+The following example demonstrates how to configure selective tooltip display:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/custompalette/tooltip-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/custompalette/tooltip-custom/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/tooltip-custom"%}
+
+N> This property is effective only when tooltip constraints are disabled for the symbol palette element.
+
 
 ### How to provide different tooltip for Symbol palette and diagram elements.
 
@@ -225,7 +244,7 @@ When a custom tooltip is defined for a symbol, it will be displayed for both the
 
 However, to provide distinct tooltips for symbols in the palette and dropped nodes, capture the dragEnter event and assign specific tooltips dynamically.  
 
-When a symbol is dragged from the symbol palette and enters the diagram canvas, the [`DragEnter`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#dragenter), event is fired, accompanied by an argument of type [`IDragEnterEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iDragEnterEventArgs). Within this event, you can define a new tooltip for the dropped node. By assigning custom tooltip content to the Tooltip property of the node, you can provide a distinct tooltip that is specific to the dropped node.
+When a symbol is dragged from the symbol palette and enters the diagram canvas, the [`DragEnter`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#dragenter/), event is fired, accompanied by an argument of type [`IDragEnterEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iDragEnterEventArgs/). Within this event, you can define a new tooltip for the dropped node. By assigning custom tooltip content to the Tooltip property of the node, you can provide a distinct tooltip that is specific to the dropped node.
 
 The following image illustrates the differentiation of tooltips displayed in the Symbol Palette and the Diagram.
 

@@ -1,0 +1,106 @@
+<template>
+  <div id="app">
+    <ejs-symbolpalette
+      id="symbolpalette"
+      ref="symbolPalette"
+      width="700px"
+      height="300px"
+      :expandMode="expandMode"
+      :palettes="palettes"
+      :symbolHeight="70"
+      :symbolWidth="70"
+      :symbolPreview="symbolPreview"
+      :symbolMargin="symbolMargin"
+      :getSymbolInfo="getSymbolInfo"
+      :getNodeDefaults="getNodeDefaults"
+    ></ejs-symbolpalette>
+    <input id="showTooltip" @click="showTooltip" checked type="checkbox" />Show
+    Tooltip
+  </div>
+</template>
+
+<script>
+
+import { SymbolPaletteComponent } from "@syncfusion/ej2-vue-diagrams";
+let symbolPaletteInstance;
+export default {
+  name: "App",
+  components: {
+    "ejs-symbolpalette": SymbolPaletteComponent,
+  },
+  data() {
+    return {
+      expandMode: "Multiple",
+      symbolPreview: { height: 80, width: 80 },
+      symbolMargin: { left: 15, right: 15, top: 15, bottom: 15 },
+      palettes: [
+        {
+          id: "flow",
+          expanded: true,
+          symbols: this.getFlowShapes(),
+          title: "Flow Shapes",
+        },
+        {
+          id: "basic",
+          expanded: true,
+          symbols: this.getBasicShapes(),
+          title: "Basic Shapes",
+        },
+      ],
+    };
+  },
+  methods: {
+    getFlowShapes() {
+      return [
+        { id: "Terminator", shape: { type: "Flow", shape: "Terminator" } },
+        { id: "Process", shape: { type: "Flow", shape: "Process" } },
+        { id: "Decision", shape: { type: "Flow", shape: "Decision" } },
+        { id: "Document", shape: { type: "Flow", shape: "Document" } },
+        { id: "PreDefinedProcess", shape: { type: "Flow", shape: "PreDefinedProcess" } },
+        { id: "DirectData", shape: { type: "Flow", shape: "DirectData" } },
+        { id: "SequentialData", shape: { type: "Flow", shape: "Card" } },
+        { id: "Sort", shape: { type: "Flow", shape: "Collate" } },
+      ];
+    },
+    getBasicShapes() {
+      return [
+        { id: "Rectangle", shape: { type: "Basic", shape: "Rectangle" } },
+        { id: "Ellipse", shape: { type: "Basic", shape: "Ellipse" } },
+        { id: "Hexagon", shape: { type: "Basic", shape: "Triangle" } },
+        { id: "Star", shape: { type: "Basic", shape: "Hexagon" } },
+        { id: "Pentagon", shape: { type: "Basic", shape: "Parallelogram" } },
+        { id: "Diamond", shape: { type: "Basic", shape: "Diamond" } },
+        { id: "Pentagon", shape: { type: "Basic", shape: "Pentagon" } },
+        { id: "Heptagon", shape: { type: "Basic", shape: "Heptagon" } },
+      ];
+    },
+    getSymbolInfo: function (symbol) {
+      return { showTooltip: true };
+    },
+    getNodeDefaults: function (symbol) {
+      symbol.style.fill = "#6495ED";
+      symbol.style.strokeColor = "#6495ED";
+    },
+    showTooltip: function (args) {
+      var checkBox = document.getElementById("showTooltip");
+      symbolPaletteInstance.getSymbolInfo = function (symbol) {
+        return {
+          showTooltip: checkBox.checked,
+        };
+      };
+      symbolPaletteInstance.dataBind();
+    },
+  },
+  mounted() {
+    // Set up the reference once the component is mounted
+    symbolPaletteInstance = this.$refs.symbolPalette.ej2Instances;
+  },
+};
+</script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/fabric.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/fabric.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/fabric.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/fabric.css";
+</style>
