@@ -14,7 +14,7 @@ This section describes the Chat UI events that will be triggered when appropriat
 
 ## Created
 
-The Chat UI component triggers the [created](../api/chat-ui/chatUIModel/#created) event when the component rendering is completed.
+The Chat UI component triggers the [created](../api/chat-ui/#created) event when the component rendering is completed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The Chat UI component triggers the [created](../api/chat-ui/chatUIModel/#created
 
 ## Sending message
 
-The [messageSend](../api/chat-ui/chatUIModel/#messagesend) event is triggered before sending a message in the Chat UI component.
+The [messageSend](../api/chat-ui/#messagesend) event is triggered before sending a message in the Chat UI component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -40,7 +40,7 @@ The [messageSend](../api/chat-ui/chatUIModel/#messagesend) event is triggered be
 
 ## User Typing
 
-The [userTyping](../api/chat-ui/chatUIModel/#usertyping) event is triggered when the user is typing a message in the Chat UI component.
+The [userTyping](../api/chat-ui/#usertyping) event is triggered when the user is typing a message in the Chat UI component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
