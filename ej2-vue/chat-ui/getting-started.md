@@ -72,6 +72,7 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
 </style>
 
