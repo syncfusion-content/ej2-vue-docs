@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Symbol palette in Vue Diagram component | Syncfusion®
-description: Learn here all about Symbol palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Symbol Palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more
 control: Symbol palette 
 platform: ej2-vue
 documentation: ug
@@ -68,7 +68,7 @@ export default {
 
 The collection of predefined symbols can be added to palettes using the [`symbols`](https://ej2.syncfusion.com/vue/documentation/api/diagram/paletteModel/#symbols) property.
 
-A palette displays a group of related symbols and textually annotates the group with its header. A [`Palettes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette/) can be added as a collection of symbol groups.
+A palette displays a group of related symbols and textually annotates the group with its header. A [`Palettes`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#palettes) can be added as a collection of symbol groups.
 
 To initialize a palette, define a JSON object with the unique property [`ID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/paletteModel/#id). Additionally, include the symbols property, which contains an array of different symbols.
 
@@ -115,6 +115,28 @@ The symbol palette supports adding group nodes. To add group nodes to the palett
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/palettes-grp"%}
+
+## Template-based symbols
+
+### HTML and SVG node with content template
+
+The Symbol Palette supports the creation of complex nodes using HTML or SVG templates. This allows developers to incorporate rich, interactive, and visually engaging content within diagram elements.
+
+* For HTML content, set the node's `shape.type` property to **HTML**.
+* For SVG content, set the `shape.type` property to **Native**.
+
+Templates can be defined either as strings or functions and assigned to the node's `content` property. Function-based templates offer the flexibility to generate dynamic content based on node-specific properties or external data sources.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes/Palette-contentTemplate/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes/Palette-contentTemplate/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/Palette-contentTemplate"%}
 
 ## Drag and drop symbols from palette to diagram
 
