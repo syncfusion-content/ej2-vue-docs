@@ -90,7 +90,7 @@ export default {
     };
   },
   provide: {
-    chart: [LineSeries, Category, DataLabel, Tooltip, Highlight]
+    chart: [Category, LineSeries, DataLabel, Tooltip, Highlight]
   },
   methods: {
     load(args) {

@@ -65,7 +65,6 @@ import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 import { ref } from 'vue';
 
-const pie = ref(null);
 let hasData = false;
 let seriesData = [
   { x: 'January', y: 19173 },
@@ -109,7 +108,7 @@ const marker = {
   width: 7, height: 7
 };
 const load = (args) => {
-  seriesData = this.hasData ? [
+  seriesData = hasData ? [
     { x: 'January', y: 19173 },
     { x: 'February', y: 17726 },
     { x: 'March', y: 19874 },
@@ -129,7 +128,7 @@ const loadData = (args) => {
   ];
   hasData = true;
 
-  const values = this.seriesData.map(d => d.y);
+  const values = seriesData.map(d => d.y);
   const min = Math.min(...values);
   const max = Math.max(...values);
   const range = max - min;
@@ -157,7 +156,7 @@ const title = "Milk Production in US - 2025";
 const subTitle = "Source: nass.usda.gov";
 const tooltip = { enable: true, header: 'Milk Production', format: '${point.x} : <b>${point.y}M</b>' };
 
-provide('chart', [LineSeries, Category, DataLabel, Tooltip, Highlight]);
+provide('chart', [Category, LineSeries, DataLabel, Tooltip, Highlight]);
 
 
 
