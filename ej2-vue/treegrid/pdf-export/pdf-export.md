@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf export in Vue Treegrid component
+# PDF export in Vue Treegrid component
 
 PDF export allows exporting TreeGrid data to PDF document. You need to use the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#pdfexport) method for exporting. To enable PDF export in the treegrid, set the [`allowPdfExport`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowpdfexport) as true.
 
 To use PDF export, inject the `PdfExport` module in treegrid.
 
-To get start quickly with Pdf export feature, you can check on this video:
+To get start quickly with PDF export feature, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=nR3fDHxQ9dU" %}
 
@@ -46,16 +46,17 @@ PDF export provides an option to define datasource dynamically before exporting.
 
 ## Exporting Custom Aggregates in Tree Grid
  
-The Tree Grid enables exporting custom aggregates, which summarize column data, to an Excel document using the `PdfAggregateQueryCellInfo` event.
+The Tree Grid enables exporting custom aggregates, which summarize column data, to an PDF document using the `PdfAggregateQueryCellInfo` event.
  
-In the provided example, the `customAggregateFn` function computes the item count for a selected category, while the `PdfAggregateQueryCellInfo` event customizes the exported cell values in the Excel document.
+In the provided example, the `customAggregateFn` function computes the item count for a selected category, while the `PdfAggregateQueryCellInfo` event customizes the exported cell values in the PDF document.
+
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/treegrid/pdf-export-cs16/src/app.component.ts %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs12/app-composition.vue %}
 {% endhighlight %}
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/treegrid/pdf-export-cs16/src/main.ts %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-  
+        
 {% previewsample "page.domainurl/code-snippet/treegrid/pdf/default-cs12" %}
