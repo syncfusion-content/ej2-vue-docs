@@ -15,6 +15,7 @@ import {
   UndoRedo,
 } from "@syncfusion/ej2-vue-diagrams";
 
+// Initialize the nodes for the diagram.
 let nodes = [
   {
     id: "sourcenode",
@@ -49,6 +50,7 @@ let nodes = [
     ],
   },
 ];
+// Initialize the connectors for the diagram.
 let connectors = [
   {
     id: "connector1",

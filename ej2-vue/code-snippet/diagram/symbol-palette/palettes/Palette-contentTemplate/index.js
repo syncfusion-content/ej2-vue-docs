@@ -8,13 +8,12 @@ new Vue({
     el: '#app',
     template: `
             <div id='app'>
-                <ejs-symbolpalette ref="symbolPalette" id="symbolpalette" :expandMode="expandMode" :palettes="palettes" :getSymbolInfo="getSymbolInfo" :symbolMargin="symbolMargin" :symbolPreview="symbolPreview"></ejs-symbolpalette>
+                <ejs-symbolpalette ref="symbolPalette" id="symbolpalette" :palettes="palettes" :getSymbolInfo="getSymbolInfo" :symbolMargin="symbolMargin" :symbolPreview="symbolPreview"></ejs-symbolpalette>
                 <ejs-diagram id="diagram" width="1000px" height="500px"></ejs-diagram>
             </div>
             `,
     data() {
         return {
-            expandMode: 'Multiple',
             palettes: [{
                 id: "palette",
                 expanded: true,
@@ -38,7 +37,7 @@ new Vue({
         };
     },
     methods: {
-        getBasicShapes() {
+        getShapes() {
             return [
                 {
                     id: "Node1",

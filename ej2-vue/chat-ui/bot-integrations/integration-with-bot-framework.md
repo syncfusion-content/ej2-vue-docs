@@ -115,7 +115,7 @@ app.listen(port, () => console.log(`Token server running on http://localhost:${p
 Create `src/App.vue` to connect the Syncfusion Chat UI to the bot via the Direct Line API:
 
 {% tabs %}
-{% highlight Vue tabtitle="App.Vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
     <div id='chat-container'>

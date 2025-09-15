@@ -1,6 +1,6 @@
 <template>
   <div id='app'>
-    <ejs-symbolpalette ref="symbolPalette" id="symbolpalette" :expandMode="expandMode" :palettes="palettes" :getSymbolInfo="getSymbolInfo" :symbolMargin="symbolMargin" :symbolPreview="symbolPreview"></ejs-symbolpalette>
+    <ejs-symbolpalette ref="symbolPalette" id="symbolpalette" :palettes="palettes" :getSymbolInfo="getSymbolInfo" :symbolMargin="symbolMargin" :symbolPreview="symbolPreview"></ejs-symbolpalette>
     <ejs-diagram id="diagram" width="1000px" height="500px"></ejs-diagram>
   </div>
 </template>
@@ -23,7 +23,6 @@ export default {
   components: { 'ejs-symbolpalette': SymbolPaletteComponent, 'ejs-diagram': DiagramComponent },
   data() {
     return {
-      expandMode: 'Multiple',
       palettes: [{
         id: "palette",
         expanded: true,

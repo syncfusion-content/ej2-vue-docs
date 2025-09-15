@@ -130,10 +130,10 @@ Upon message submission, a POST request is sent to your backend API endpoint (`/
 
 ### Displaying Bot response:
 
-Create src/App.vue to integrate the Syncfusion Chat UI with the Dialogflow backend:
+Create `src/App.vue` to integrate the Syncfusion Chat UI with the Dialogflow backend:
 
 {% tabs %}
-{% highlight Vue tabtitle="App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div id="chat-container" style="height: 400px; width: 450px; margin: 0 auto;">
     <ejs-chatui :user="currentUserModel" :header-text="headerText" :header-icon-css="headerIconCss" @message-send="messageSend">
