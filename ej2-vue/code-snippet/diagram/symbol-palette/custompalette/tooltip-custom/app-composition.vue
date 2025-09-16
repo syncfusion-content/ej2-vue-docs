@@ -14,7 +14,7 @@
       :getSymbolInfo="getSymbolInfo"
       :getNodeDefaults="getNodeDefaults"
     ></ejs-symbolpalette>
-    <input id="showTooltip" @click="showTooltip" checked type="checkbox" />Show
+    <input id="showTooltip" ref="checkBox" @click="showTooltip" checked type="checkbox" />Show
     Tooltip
   </div>
 </template>
@@ -29,6 +29,7 @@ import {
 } from "@syncfusion/ej2-vue-diagrams";
 
 let symbolPaletteInstance;
+let checkBoxInstance;
 const expandMode = ref("Multiple");
 const symbolPreview = ref({
   height: 80,
@@ -55,6 +56,8 @@ const palettes = ref([
   },
 ]);
 const symbolPaletteRef = ref(null);
+const checkBox = ref(null);
+
 // Initialize the flow shapes for the symbol palette.
 function getFlowShapes() {
   return [
@@ -68,6 +71,7 @@ function getFlowShapes() {
     { id: "Collate", shape: { type: "Flow", shape: "Collate" } },
   ];
 }
+
 // Initialize the basic shapes for the symbol palette.
 function getBasicShapes() {
   return [
@@ -82,23 +86,19 @@ function getBasicShapes() {
   ];
 }
 function getSymbolInfo(symbol) {
-  return { showTooltip: true };
+  return { showTooltip: checkBoxInstance && checkBoxInstance.checked };
 }
 function getNodeDefaults(symbol) {
   symbol.style.fill = "#6495ED";
   symbol.style.strokeColor = "#6495ED";
+  return symbol;
 }
 function showTooltip(args) {
-  var checkBox = document.getElementById("showTooltip");
-  symbolPaletteInstance.getSymbolInfo = function (symbol) {
-    return {
-      showTooltip: checkBox.checked,
-    };
-  };
-  symbolPaletteInstance.dataBind();
+  symbolPaletteInstance.refresh();
 }
 onMounted(() => {
   symbolPaletteInstance = symbolPaletteRef.value.ej2Instances;
+  checkBoxInstance = checkBox.value;
 });
 </script>
 
