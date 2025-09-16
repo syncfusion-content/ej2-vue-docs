@@ -4,7 +4,7 @@ import { SymbolPalettePlugin, DiagramPlugin, NodeConstraints } from '@syncfusion
 Vue.use(SymbolPalettePlugin);
 Vue.use(DiagramPlugin);
 let symbolPaletteInstance;
-
+let checkBoxInstance;
 new Vue({
     el: '#app',
     template: `
@@ -23,7 +23,7 @@ new Vue({
                 :getSymbolInfo="getSymbolInfo"
                 :getNodeDefaults="getNodeDefaults"
             ></ejs-symbolpalette>
-            <input id="showTooltip" @click="showTooltip" checked type="checkbox" />Show
+            <input id="showTooltip" ref="checkBox" @click="showTooltip" checked type="checkbox" />Show
             Tooltip
         </div>`,
     data() {
@@ -75,24 +75,19 @@ new Vue({
             ];
         },
         getSymbolInfo: function (symbol) {
-            return { showTooltip: true };
+            return {  showTooltip: checkBoxInstance && checkBoxInstance.checked };
         },
         getNodeDefaults: function (symbol) {
             symbol.style.fill = "#6495ED";
             symbol.style.strokeColor = "#6495ED";
+            return symbol;
         },
         showTooltip: function (args) {
-            var checkBox = document.getElementById("showTooltip");
-            symbolPaletteInstance.getSymbolInfo = function (symbol) {
-                return {
-                    showTooltip: checkBox.checked,
-                };
-            };
-            symbolPaletteInstance.dataBind();
+            symbolPaletteInstance.refresh();
         },
     },
     mounted() {
-        // Set up the reference once the component is mounted.
         symbolPaletteInstance = this.$refs.symbolPalette.ej2Instances;
+        checkBoxInstance = this.$refs.checkBox;
     },
 });

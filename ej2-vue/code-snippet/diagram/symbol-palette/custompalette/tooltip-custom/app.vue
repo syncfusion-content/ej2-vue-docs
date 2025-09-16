@@ -14,8 +14,8 @@
       :getSymbolInfo="getSymbolInfo"
       :getNodeDefaults="getNodeDefaults"
     ></ejs-symbolpalette>
-    <input id="showTooltip" @click="showTooltip" checked type="checkbox" />Show
-    Tooltip
+    <input id="showTooltip" ref="checkBox" @click="showTooltip" checked type="checkbox" />Show
+  Tooltip
   </div>
 </template>
 
@@ -23,6 +23,7 @@
 
 import { SymbolPaletteComponent } from "@syncfusion/ej2-vue-diagrams";
 let symbolPaletteInstance;
+let checkBoxInstance;
 export default {
   name: "App",
   components: {
@@ -77,25 +78,20 @@ export default {
       ];
     },
     getSymbolInfo: function (symbol) {
-      return { showTooltip: true };
+      return {  showTooltip: checkBoxInstance && checkBoxInstance.checked };
     },
     getNodeDefaults: function (symbol) {
       symbol.style.fill = "#6495ED";
       symbol.style.strokeColor = "#6495ED";
+      return symbol;
     },
     showTooltip: function (args) {
-      var checkBox = document.getElementById("showTooltip");
-      symbolPaletteInstance.getSymbolInfo = function (symbol) {
-        return {
-          showTooltip: checkBox.checked,
-        };
-      };
-      symbolPaletteInstance.dataBind();
+      symbolPaletteInstance.refresh();
     },
   },
   mounted() {
-    // Set up the reference once the component is mounted.
     symbolPaletteInstance = this.$refs.symbolPalette.ej2Instances;
+    checkBoxInstance = this.$refs.checkBox;
   },
 };
 </script>
