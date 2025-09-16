@@ -50,6 +50,7 @@ export default {
     };
   },
   methods: {
+    // Initialize the flow shapes for the symbol palette.
     getFlowShapes() {
       return [
         { id: "Terminator", shape: { type: "Flow", shape: "Terminator" } },
@@ -62,6 +63,7 @@ export default {
         { id: "Collate", shape: { type: "Flow", shape: "Collate" } },
       ];
     },
+    // Initialize the basic shapes for the symbol palette.
     getBasicShapes() {
       return [
         { id: "Rectangle", shape: { type: "Basic", shape: "Rectangle" } },
@@ -92,7 +94,7 @@ export default {
     },
   },
   mounted() {
-    // Set up the reference once the component is mounted
+    // Set up the reference once the component is mounted.
     symbolPaletteInstance = this.$refs.symbolPalette.ej2Instances;
   },
 };

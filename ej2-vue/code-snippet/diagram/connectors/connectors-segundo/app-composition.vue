@@ -18,6 +18,8 @@ import { provide } from "vue";
 
 const width = "100%";
 const height = "350px";
+
+// Initialize the nodes for the diagram.
 const nodes = [
   {
     id: "sourcenode",
@@ -52,6 +54,7 @@ const nodes = [
     ],
   },
 ];
+// Initialize the connectors for the diagram.
 const connectors = [
   {
     id: "connector1",

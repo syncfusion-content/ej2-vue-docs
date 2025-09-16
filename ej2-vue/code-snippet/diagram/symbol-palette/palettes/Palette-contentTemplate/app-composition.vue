@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <ejs-symbolpalette ref="symbolPalette" id="symbolpalette"
-            :expandMode="expandMode" :palettes="palettes" :getSymbolInfo="getSymbolInfo" :symbolMargin="symbolMargin"
+        :palettes="palettes" :getSymbolInfo="getSymbolInfo" :symbolMargin="symbolMargin"
             :symbolPreview="symbolPreview" />
         <ejs-diagram id="diagram" width="1000px" height="500px"></ejs-diagram>
     </div>
@@ -22,7 +22,6 @@ else {
   };
 };
 
-const expandMode = ref('Multiple');
 const symbolMargin = ref({
     left: 15,
     right: 15,

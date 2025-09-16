@@ -55,6 +55,7 @@ const palettes = ref([
   },
 ]);
 const symbolPaletteRef = ref(null);
+// Initialize the flow shapes for the symbol palette.
 function getFlowShapes() {
   return [
     { id: "Terminator", shape: { type: "Flow", shape: "Terminator" } },
@@ -67,6 +68,7 @@ function getFlowShapes() {
     { id: "Collate", shape: { type: "Flow", shape: "Collate" } },
   ];
 }
+// Initialize the basic shapes for the symbol palette.
 function getBasicShapes() {
   return [
     { id: "Rectangle", shape: { type: "Basic", shape: "Rectangle" } },
