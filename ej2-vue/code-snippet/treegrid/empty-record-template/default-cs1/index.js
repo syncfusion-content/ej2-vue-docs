@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { TreeGridPlugin, Edit, Toolbar } from "@syncfusion/ej2-vue-treegrid";
+import { TreeGridPlugin, Edit, Toolbar,Page, Filter, Sort } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
 Vue.use(TreeGridPlugin);
@@ -42,7 +42,7 @@ new Vue({
     };
   },
   provide: {
-    treegrid: [Edit, Filter, Toolbar,Page]
+    treegrid: [Edit, Filter, Toolbar,Page,Sort]
   },
    methods:{
     onDataBound: function(args){
