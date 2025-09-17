@@ -3,7 +3,7 @@ import Vue from "vue";
 import { stackedData } from "./datasource.js";
 import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
-import { TreeGridComponent, ColumnDirective, ColumnsDirective, Page, ColumnChooser, Toolbar, } from "@syncfusion/ej2-vue-treegrid";
+import { TreeGridComponent, ColumnDirective, ColumnsDirective, Page, ColumnChooser, Toolbar, TreeGridPlugin  } from "@syncfusion/ej2-vue-treegrid";
 
 Vue.use(TreeGridPlugin);
 

@@ -49,7 +49,7 @@ npm install @syncfusion/ej2-vue-interactive-chat --save
 
 Create `src/App.vue` to integrate the Open AI with Chat UI component
 
-> Add your generated `API Key` at the line 
+* Add your generated `API Key` at the line 
 
 ```bash
 
