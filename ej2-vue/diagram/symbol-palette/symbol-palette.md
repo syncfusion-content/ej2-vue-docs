@@ -116,6 +116,28 @@ The symbol palette supports adding group nodes. To add group nodes to the palett
         
 {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/palettes-grp"%}
 
+## Template-based symbols
+
+### HTML and SVG node with content template
+
+The Symbol Palette supports the creation of complex nodes using HTML or SVG templates. This allows developers to incorporate rich, interactive, and visually engaging content within diagram elements.
+
+* For HTML content, set the node's `shape.type` property to **HTML**.
+* For SVG content, set the `shape.type` property to **Native**.
+
+Templates can be defined either as strings or functions and assigned to the node's `content` property. Function-based templates offer the flexibility to generate dynamic content based on node-specific properties or external data sources.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes/Palette-contentTemplate/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes/Palette-contentTemplate/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/Palette-contentTemplate"%}
+
 ## Drag and drop symbols from palette to diagram
 
 To drag and drop symbols from the palette to the diagram canvas, press and hold the mouse button on the desired symbol in the palette, drag it to the desired location on the diagram canvas, and release the mouse button to drop it.
