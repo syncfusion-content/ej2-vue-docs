@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Apply conditional formatting for specific row or column in Vue Pivotview component | Syncfusion
-description: Learn here all about Apply conditional formatting for specific row or column in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Vue Pivot Table: Conditional Formatting | Syncfusion
+description: Apply conditional formatting to rows or columns in the Syncfusion EJ2 Vue Pivot Table. Customize cell styles based on values to highlight key data.
 control: Apply conditional formatting for specific row or column 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Apply conditional formatting for specific row or column in Vue Pivotview component
+# Conditional Formatting for Specific Rows or Columns
 
 You can apply conditional formatting for specific row or column using `label` option in the pivot table. It can be configured using the `conditionalFormatSettings` option through code behind, during initial rendering. The required settings are:
 
