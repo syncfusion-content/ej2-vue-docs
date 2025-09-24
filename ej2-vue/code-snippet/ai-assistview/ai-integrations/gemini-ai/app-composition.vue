@@ -6,8 +6,9 @@
       :toolbarSettings="toolbarSettings"
       bannerTemplate="bannerTemplate"
       :prompt-request="onPromptRequest"
+      :stop-responding-click="stopRespondingClick"
 >
-<template v-slot:bannerTemplate="">
+<template v-slot:bannerTemplate>
 <div class="banner-content">
 <div class="e-icons e-assistview-icon"></div>
 <h3>AI Assistance</h3>
@@ -24,7 +25,7 @@ import { AIAssistViewComponent as EjsAiassistview } from '@syncfusion/ej2-vue-in
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { marked } from 'marked';
  
-const geminiApiKey = ''; // Replace with your Gemini API key
+const geminiApiKey = ''; // Replace with your Gemini API key (WARNING: Do not expose in client-side code for production)
 const genAI = new GoogleGenerativeAI(geminiApiKey);
  
 const suggestions = ref([
@@ -32,31 +33,57 @@ const suggestions = ref([
   'How can I maintain work-life balance effectively?',
 ]);
  
+const stopStreaming = ref(false);
+ 
 const toolbarSettings = {
-  items: [{ iconCss: 'e-icons e-refresh', align: 'Right' }],
+  items: [{ iconCss: 'e-icons e-refresh', align: 'Right', tooltip: 'Clear Prompts' }],
   itemClicked: (args) => {
     if (args.item.iconCss === 'e-icons e-refresh') {
-      aiAssist.value.prompts = [];
-      aiAssist.value.promptSuggestions = suggestions.value;
+      aiAssist.value.ej2Instances.prompts = [];
+      aiAssist.value.ej2Instances.promptSuggestions = suggestions.value;
+      stopStreaming.value = true;
     }
   },
 };
  
 const aiAssist = ref(null);
  
-const onPromptRequest = async (args) => {
-  setTimeout(async () => {
-    try {
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-      const result = await model.generateContent(args.prompt);
-      const response = result.response.text();
-      aiAssist.value.ej2Instances.addPromptResponse(marked.parse(response));
-    } catch (error) {
-      aiAssist.value.ej2Instances.addPromptResponse(
-        '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
-      );
+const streamResponse = async (response) => {
+  let lastResponse = '';
+  const responseUpdateRate = 10;
+  let i = 0;
+  const responseLength = response.length;
+  while (i < responseLength && !stopStreaming.value) {
+    lastResponse += response[i];
+    i++;
+    if (i % responseUpdateRate === 0 || i === responseLength) {
+      const htmlResponse = marked.parse(lastResponse);
+      aiAssist.value.ej2Instances.addPromptResponse(htmlResponse, i === responseLength);
+      aiAssist.value.ej2Instances.scrollToBottom();
     }
-  }, 1000);
+    await new Promise(resolve => setTimeout(resolve, 15)); // Delay for streaming effect
+  }
+  aiAssist.value.ej2Instances.promptSuggestions = suggestions.value;
+};
+ 
+const onPromptRequest = async (args) => {
+  try {
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const result = await model.generateContent(args.prompt || 'Hi');
+    const response = result.response.text();
+    stopStreaming.value = false;
+    await streamResponse(response);
+  } catch (error) {
+    console.error('Error fetching Gemini response:', error);
+    aiAssist.value.ej2Instances.addPromptResponse(
+      '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
+    );
+    stopStreaming.value = true;
+  }
+};
+ 
+const stopRespondingClick = () => {
+  stopStreaming.value = true;
 };
 </script>
 

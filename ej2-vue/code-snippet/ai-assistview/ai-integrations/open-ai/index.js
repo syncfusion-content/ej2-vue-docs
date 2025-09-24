@@ -12,6 +12,7 @@ new Vue({
   :toolbarSettings="toolbarSettings"
   bannerTemplate="bannerTemplate"
   :prompt-request="onPromptRequest"
+  :stop-responding-click="stopRespondingClick"
 >
 <template v-slot:bannerTemplate="">
 <div class="banner-content">
@@ -27,6 +28,7 @@ new Vue({
   data: function () {
      return {
     openaiApiKey: '', // Replace with your Open API key
+    stopStreaming: false,
     suggestions: [
       'What are the best tools for organizing my tasks?',
       'How can I maintain work-life balance effectively?',
@@ -41,32 +43,53 @@ new Vue({
   };
 },
 methods: {
-  async onPromptRequest(args) {
-    setTimeout(async () => {
-     let responseText = '';
-        try {
-          const response = await fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${this.openaiApiKey}`,
-            },
-            body: JSON.stringify({
-              model: 'gpt-4o-mini',
-              messages: [{ role: 'user', content: args.prompt }],
-              max_tokens: 150,
-              stream: false
-            }),
-          });
-          const data = await response.json();
-          responseText = data.choices[0].message.content.trim() || 'No response received.';
-          this.$refs.aiAssist.ej2Instances.addPromptResponse(marked.parse(responseText));
-        }  catch (error) {
+  async streamResponse(response) {
+    let lastResponse = '';
+    const responseUpdateRate = 10;
+    let i = 0;
+    const responseLength = response.length;
+    while (i < responseLength && !this.stopStreaming) {
+      lastResponse += response[i];
+      i++;
+      if (i % responseUpdateRate === 0 || i === responseLength) {
+        const htmlResponse = marked.parse(lastResponse);
+        this.$refs.aiAssist.ej2Instances.addPromptResponse(htmlResponse, i === responseLength);
+        this.$refs.aiAssist.ej2Instances.scrollToBottom();
+      }
+      await new Promise(resolve => setTimeout(resolve, 15)); // Delay for streaming effect
+    }
+    this.$refs.aiAssist.ej2Instances.promptSuggestions = this.suggestions;
+  },
+  onPromptRequest(args) {
+    fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${this.openaiApiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages: [{ role: 'user', content: args.prompt || 'Hi' }],
+        max_tokens: 150,
+        stream: false,
+      }),
+    })
+      .then(response => response.json())
+      .then(reply => {
+        const responseText = reply.choices[0].message.content.trim() || 'No response received.';
+        this.stopStreaming = false;
+        this.streamResponse(responseText);
+      })
+      .catch(error => {
+        console.error('Error fetching OpenAI response:', error);
         this.$refs.aiAssist.ej2Instances.addPromptResponse(
           '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
         );
-      }
-    }, 1000);
+        this.stopStreaming = true;
+      });
   },
-}
+  stopRespondingClick() {
+    this.stopStreaming = true;
+  },
+},
 });
