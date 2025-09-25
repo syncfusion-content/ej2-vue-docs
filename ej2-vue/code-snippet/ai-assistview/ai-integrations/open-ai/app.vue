@@ -84,7 +84,6 @@ methods: {
         this.streamResponse(responseText);
       })
       .catch(error => {
-        console.error('Error fetching OpenAI response:', error);
         this.$refs.aiAssist.ej2Instances.addPromptResponse(
           '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
         );
