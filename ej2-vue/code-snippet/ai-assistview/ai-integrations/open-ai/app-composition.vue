@@ -18,19 +18,23 @@
 </ejs-aiassistview>
 </div>
 </template>
+
 <script setup>
 import { ref } from 'vue';
 import { AIAssistViewComponent as EjsAiassistview } from '@syncfusion/ej2-vue-interactive-chat';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { marked } from 'marked';
-const openaiApiKey = ''; // Replace with your Gemini API key (WARNING: Do not expose in client-side code for production)
- 
+
+const azureOpenAIApiKey: '', // replace your key
+const azureOpenAIEndpoint: '', // replace your endpoint
+const azureOpenAIApiVersion: '', // replace to match your resource
+const azureDeploymentName: '', // your Azure OpenAI deployment name
 
 const suggestions = ref([
   'What are the best tools for organizing my tasks?',
   'How can I maintain work-life balance effectively?',
 ]);
-const stopStreaming = ref(false);
+const stopStreaming = false;
 const toolbarSettings = {
   items: [{ iconCss: 'e-icons e-refresh', align: 'Right', tooltip: 'Clear Prompts' }],
   itemClicked: (args) => {
@@ -42,6 +46,7 @@ const toolbarSettings = {
   },
 };
 const aiAssist = ref(null);
+
 const streamResponse = async (response) => {
   let lastResponse = '';
   const responseUpdateRate = 10;
@@ -60,11 +65,14 @@ const streamResponse = async (response) => {
   aiAssist.value.ej2Instances.promptSuggestions = suggestions.value;
 };
 const onPromptRequest = (args) => {
-  fetch('https://api.openai.com/v1/chat/completions', {
+    const url= this.azureOpenAIEndpoint.replace(/\/$/, '') +
+    `/openai/deployments/${encodeURIComponent(this.azureDeploymentName)}/chat/completions` +
+    `?api-version=${encodeURIComponent(this.azureOpenAIApiVersion)}`;
+    fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${openaiApiKey}`,
+      'api-key': azureOpenAIApiKey,
     },
     body: JSON.stringify({
       model: 'gpt-4o-mini',
@@ -81,8 +89,7 @@ const onPromptRequest = (args) => {
     })
     .catch(error => {
       aiAssist.value.ej2Instances.addPromptResponse(
-        '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
-      );
+        '⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.',true);
       stopStreaming.value = true;
     });
 };

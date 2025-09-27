@@ -26,8 +26,11 @@ new Vue({
 `,
 
   data: function () {
-     return {
-    openaiApiKey: '', // Replace with your Open API key
+    return {
+    azureOpenAIApiKey: '', // replace your key
+    azureOpenAIEndpoint: '', // replace your endpoint
+    azureOpenAIApiVersion: '', // replace to match your resource
+    azureDeploymentName: '', // your Azure OpenAI deployment name
     stopStreaming: false,
     suggestions: [
       'What are the best tools for organizing my tasks?',
@@ -61,11 +64,14 @@ methods: {
     this.$refs.aiAssist.ej2Instances.promptSuggestions = this.suggestions;
   },
   onPromptRequest(args) {
-    fetch('https://api.openai.com/v1/chat/completions', {
+    const url= this.azureOpenAIEndpoint.replace(/\/$/, '') +
+    `/openai/deployments/${encodeURIComponent(this.azureDeploymentName)}/chat/completions` +
+    `?api-version=${encodeURIComponent(this.azureOpenAIApiVersion)}`;
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${this.openaiApiKey}`,
+        'api-key': azureOpenAIApiKey,
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini',
@@ -82,8 +88,7 @@ methods: {
       })
       .catch(error => {
         this.$refs.aiAssist.ej2Instances.addPromptResponse(
-          '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
-        );
+         '⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.',true);
         this.stopStreaming = true;
       });
   },
