@@ -29,10 +29,10 @@ components: {
 },
 data() {
   return {
-    azureOpenAIApiKey: '', // replace your key
-    azureOpenAIEndpoint: '', // replace your endpoint
-    azureOpenAIApiVersion: '', // replace to match your resource
-    azureDeploymentName:'', // your Azure OpenAI deployment name
+    azureOpenAIApiKey: 'YOUR_AZURE_OPENAI_API_KEY', // replace your key
+    azureOpenAIEndpoint: 'YOUR_AZURE_OPENAI_API_ENDPOINT', // replace your endpoint
+    azureOpenAIApiVersion: 'YOUR_AZURE_OPENAI_API_VERSION', // replace to match your resource
+    azureDeploymentName:'YOUR_DEPLOYMENT_NAME', // your Azure OpenAI deployment name
     stopStreaming: false,
     suggestions: [
       'What are the best tools for organizing my tasks?',
