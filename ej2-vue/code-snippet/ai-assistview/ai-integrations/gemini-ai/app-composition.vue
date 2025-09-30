@@ -68,8 +68,8 @@ const streamResponse = async (response) => {
  
 const onPromptRequest = async (args) => {
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-    const result = await model.generateContent(args.prompt || 'Hi');
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); //Replace Your Model Name Here
+    const result = await model.generateContent(args.prompt);
     const response = result.response.text();
     stopStreaming.value = false;
     await streamResponse(response);
