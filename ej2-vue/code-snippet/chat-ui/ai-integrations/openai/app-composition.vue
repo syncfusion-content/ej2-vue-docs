@@ -5,7 +5,7 @@
       :user="currentUser"
       :messages="chatMessages"
       :typingUsers="typingUsers"
-      headerText="Chat UI with OpenAI"
+      headerText="Chat UI with Azure OpenAI"
       headerIconCss="e-icons e-ai-chat"
       :headerToolbar="headerToolbar"
       emptyChatTemplate="emptyChatTemplate"
@@ -14,31 +14,41 @@
       <template v-slot:emptyChatTemplate="">
         <div class="emptychat-content">
           <h3><span class="e-icons e-assistview-icon"></span></h3>
-          <div class="emptyChatText" style="font-size: 16px; font-style: italic">Syncfusion Chat UI with OpenAI</div>
+          <div class="emptyChatText" style="font-size: 16px; font-style: italic">
+            Syncfusion Chat UI with Azure OpenAI
+          </div>
         </div>
       </template>
     </ejs-chatui>
   </div>
 </template>
+
 <script setup>
 import { ref } from 'vue';
 import { ChatUIComponent as EjsChatui } from '@syncfusion/ej2-vue-interactive-chat';
 import { marked } from 'marked';
+
+const azureOpenAIApiKey = 'YOUR_AZURE_OPENAI_API_KEY';              // From Azure portal (Keys and Endpoint)
+const azureOpenAIEndpoint = 'YOUR_AZURE_OPENAI_API_ENDPOINT'; // e.g., https://my-resource.openai.azure.com
+const azureOpenAIApiVersion = 'YOUR_AZURE_OPENAI_API_VERSION';                          // Verify latest supported version
+const azureDeploymentName = 'YOUR_DEPLOYMENT_NAME';                  // Your model's deployment name
+
 const currentUser = { id: 'user1', user: 'You' };
-const aiModel = { id: 'ai', user: 'Open AI' };
-const openaiApiKey = ''; // Replace with your OpenAI API key
+const aiModel = { id: 'ai', user: 'Azure OpenAI' };
+
 const chatMessages = ref([]);
+const typingUsers = ref([]);
+
 const headerToolbar = {
-  items: [
-    { iconCss: 'e-icons e-refresh', align: 'Right', tooltip: 'Clear Chat' },
-  ],
+  items: [{ iconCss: 'e-icons e-refresh', align: 'Right', tooltip: 'Clear Chat' }],
   itemClicked: () => {
     chatMessages.value = [];
   },
 };
-const typingUsers = ref([]);
+
 const onMessageSend = async (args) => {
   args.cancel = true;
+
   // Add user message
   chatMessages.value = [
     ...chatMessages.value,
@@ -48,28 +58,47 @@ const onMessageSend = async (args) => {
       timeStamp: new Date(),
     },
   ];
+
   // Show typing indicator
   typingUsers.value = [aiModel];
+
   try {
-    if (!openaiApiKey) {
-      throw new Error('OpenAI API key is missing');
+    if (!azureOpenAIApiKey || !azureOpenAIEndpoint || !azureDeploymentName) {
+      throw new Error('Azure OpenAI configuration is missing (API Key, Endpoint, or Deployment Name).');
     }
-    // OpenAI API Call
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+
+    const base = azureOpenAIEndpoint.replace(/\/$/, '');
+    const url =
+      `${base}/openai/deployments/${encodeURIComponent(azureDeploymentName)}/chat/completions` +
+      `?api-version=${encodeURIComponent(azureOpenAIApiVersion)}`;
+
+    const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${openaiApiKey}`,
+        'api-key': azureOpenAIApiKey, // Azure uses 'api-key' header
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
         messages: [{ role: 'user', content: args.message.text }],
+        temperature: 0.7,
         max_tokens: 150,
       }),
     });
+
+    if (!response.ok) {
+      let details = `HTTP ${response.status}`;
+      try {
+        const err = await response.json();
+        details += ` - ${err?.error?.message || err?.message || JSON.stringify(err)}`;
+      } catch {
+      }
+      throw new Error(details);
+    }
+
     const data = await response.json();
-    const responseText = data.choices[0].message.content.trim() || 'No response received.';
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const responseText =
+      data?.choices?.[0]?.message?.content?.trim?.() || 'No response received.';
+
     // Add AI response
     chatMessages.value = [
       ...chatMessages.value,
@@ -80,12 +109,11 @@ const onMessageSend = async (args) => {
       },
     ];
   } catch (error) {
-    console.error('Error fetching OpenAI response:', error);
-    await new Promise(resolve => setTimeout(resolve, 2000));
     chatMessages.value = [
       ...chatMessages.value,
       {
-        text: 'Error generating response. Please check your API key and try again.',
+        text:
+          'Error generating response. Please verify your Azure OpenAI setup (API Key, Endpoint, Deployment Name, and API Version) and try again.',
         author: aiModel,
         timeStamp: new Date(),
       },

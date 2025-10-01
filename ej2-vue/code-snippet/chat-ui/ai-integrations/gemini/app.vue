@@ -71,10 +71,9 @@ methods: {
         throw new Error("Gemini API key is missing");
       }
       const genAI = new GoogleGenerativeAI(this.geminiApiKey);
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" }); // Replace Your Model Name Here
       const result = await model.generateContent(args.message.text);
       const response = result.response.text();
-      console.log("Gemini response:", response); // Debug log
 
       // Append the bot's response
       chatUI.addMessage({
@@ -82,7 +81,6 @@ methods: {
         author: this.aiModel,
       });
     } catch (error) {
-      console.error("Error fetching Gemini response:", error);
       chatUI.addMessage({
         text: "Error generating response. Please try again.",
         author: this.aiModel,

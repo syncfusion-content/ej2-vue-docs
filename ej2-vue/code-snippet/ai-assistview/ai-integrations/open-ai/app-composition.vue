@@ -25,10 +25,10 @@ import { AIAssistViewComponent as EjsAiassistview } from '@syncfusion/ej2-vue-in
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { marked } from 'marked';
 
-const azureOpenAIApiKey: '', // replace your key
-const azureOpenAIEndpoint: '', // replace your endpoint
-const azureOpenAIApiVersion: '', // replace to match your resource
-const azureDeploymentName: '', // your Azure OpenAI deployment name
+const azureOpenAIApiKey: 'YOUR_AZURE_OPENAI_API_KEY', // replace your key
+const azureOpenAIEndpoint: 'YOUR_AZURE_OPENAI_API_ENDPOINT', // replace your endpoint
+const azureOpenAIApiVersion: 'YOUR_AZURE_OPENAI_API_VERSION', // replace to match your resource
+const azureDeploymentName: 'YOUR_DEPLOYMENT_NAME', // your Azure OpenAI deployment name
 
 const suggestions = ref([
   'What are the best tools for organizing my tasks?',
@@ -76,7 +76,7 @@ const onPromptRequest = (args) => {
     },
     body: JSON.stringify({
       model: 'gpt-4o-mini',
-      messages: [{ role: 'user', content: args.prompt || 'Hi' }],
+      messages: [{ role: 'user', content: args.prompt }],
       max_tokens: 150,
       stream: false,
     }),

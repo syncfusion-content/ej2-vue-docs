@@ -15,7 +15,7 @@ Content in the Block Editor is managed through the [content](../api/blockeditor/
 
 Each content can have properties like [id](../api/blockeditor/contentModel/#id), [type](../api/blockeditor/contentModel/#type), [content](../api/blockeditor/contentModel/#content), [styles](../api/blockeditor/contentModel/#styles), and more to customize the appearance and behavior of your text.
 
-### Setting content type
+## Setting content type
 
 You can specify the type of content using the [type](../api/blockeditor/contentModel/#type) property. The Block Editor supports several content types through the `ContentType` enum:
 
