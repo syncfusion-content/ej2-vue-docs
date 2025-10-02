@@ -11,8 +11,7 @@
 <template v-slot:bannerTemplate>
 <div class="banner-content">
 <div class="e-icons e-assistview-icon"></div>
-<h3>AI Assistance</h3>
-<div>To get started, provide input or choose a suggestion.</div>
+<h3>How can I help you today?</h3>
 </div>
 </template>
 </ejs-aiassistview>

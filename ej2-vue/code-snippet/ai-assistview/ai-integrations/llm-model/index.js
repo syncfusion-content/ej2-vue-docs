@@ -1,35 +1,34 @@
 import Vue from 'vue';
 import { AIAssistViewPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { marked } from 'marked';
 Vue.use(AIAssistViewPlugin);
 
 new Vue({
 	el: '#app',
 	template: `
-<div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
-<ejs-aiassistview
-  ref="aiAssist"
-  :promptSuggestions="suggestions"
-  :toolbarSettings="toolbarSettings"
-  bannerTemplate="bannerTemplate"
-  :prompt-request="onPromptRequest"
-  :stop-responding-click="stopRespondingClick"
->
-<template v-slot:bannerTemplate="">
-<div class="banner-content">
-<div class="e-icons e-assistview-icon"></div>
-<h3>How can I help you today?</h3>
-</div>
-</template>
-</ejs-aiassistview>
-</div>
+  <div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
+  <ejs-aiassistview
+    id="aiAssistView"
+    ref="assistInstance"
+    :promptRequest="onPromptRequest"
+    :promptSuggestions="suggestions"
+    :bannerTemplate="bannerTemplate"
+    :toolbarSettings="toolbarSettings"
+  >
+  <template v-slot:bannerTemplate="">
+  <div class="banner-content">
+  <div class="e-icons e-assistview-icon"></div>
+  <h3>How can I help you today?</h3>
+  </div>
+  </template>
+  </ejs-aiassistview>
+  </div>
+    </ejs-aiassistview>
+  </div>
 `,
 
   data: function () {
     return {
-    azureOpenAIApiKey: '', // replace your key
-    azureOpenAIEndpoint: '', // replace your endpoint
-    azureOpenAIApiVersion: '', // replace to match your resource
-    azureDeploymentName: '', // your Azure OpenAI deployment name
     stopStreaming: false,
     suggestions: [
       'What are the best tools for organizing my tasks?',
@@ -40,6 +39,7 @@ new Vue({
       itemClicked: () => {
         this.$refs.aiAssist.ej2Instances.prompts = [];
         this.$refs.aiAssist.ej2Instances.promptSuggestions = this.suggestions;
+        this.stopStreaming = true;
       },
     },
   };
@@ -63,36 +63,31 @@ methods: {
     this.$refs.aiAssist.ej2Instances.promptSuggestions = this.suggestions;
   },
   onPromptRequest(args) {
-    const url= this.azureOpenAIEndpoint.replace(/\/$/, '') +
-    `/openai/deployments/${encodeURIComponent(this.azureDeploymentName)}/chat/completions` +
-    `?api-version=${encodeURIComponent(this.azureOpenAIApiVersion)}`;
-    fetch(url, {
+    fetch('http://localhost:11434/api/generate', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'api-key': azureOpenAIApiKey,
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        messages: [{ role: 'user', content: args.prompt || 'Hi' }],
-        max_tokens: 150,
-        stream: false,
-      }),
+          model: 'deepseek-r1',
+          prompt: `### Instruction:\nRespond in up to 5 lines.\n\n### Input:\n${args.prompt}`,
+          stream: false,
+      })
     })
       .then(response => response.json())
       .then(reply => {
-        const responseText = reply.choices[0].message.content.trim() || 'No response received.';
+        const responseText = reply.response?.trim() || 'No response received.';
         this.stopStreaming = false;
         this.streamResponse(responseText);
       })
       .catch(error => {
         this.$refs.aiAssist.ej2Instances.addPromptResponse(
-         '⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.',true);
+          '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
+        );
+        this.$refs.aiAssist.ej2Instances.promptSuggestions = this.suggestions;
         this.stopStreaming = true;
       });
   },
   stopRespondingClick() {
     this.stopStreaming = true;
   },
-},
+}
 });

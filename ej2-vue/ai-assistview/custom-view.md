@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom views in Angular AI AssistView component
+# Custom views in Vue AI AssistView component
 
 ## Adding custom views
 

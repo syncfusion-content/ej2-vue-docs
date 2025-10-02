@@ -1,51 +1,45 @@
 <template>
 <div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
-<ejs-aiassistview
-      ref="aiAssist"
-      :promptSuggestions="suggestions"
-      :toolbarSettings="toolbarSettings"
-      bannerTemplate="bannerTemplate"
-      :prompt-request="onPromptRequest"
-      :stop-responding-click="stopRespondingClick"
->
-<template v-slot:bannerTemplate>
-<div class="banner-content">
-<div class="e-icons e-assistview-icon"></div>
-<h3>How can I help you today?</h3>
-</div>
-</template>
-</ejs-aiassistview>
+  <ejs-aiassistview
+    ref="aiAssist"
+    :promptSuggestions="suggestions"
+    :toolbarSettings="toolbarSettings"
+    bannerTemplate="bannerTemplate"
+    :prompt-request="onPromptRequest"
+    :stop-responding-click="stopRespondingClick"
+  >
+    <template v-slot:bannerTemplate>
+      <div class="banner-content">
+        <div class="e-icons e-assistview-icon"></div>
+        <h3>How can I help you?</h3>
+      </div>
+    </template>
+  </ejs-aiassistview>
 </div>
 </template>
  
 <script setup>
 import { ref } from 'vue';
 import { AIAssistViewComponent as EjsAiassistview } from '@syncfusion/ej2-vue-interactive-chat';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { marked } from 'marked';
- 
-const geminiApiKey = ''; // Replace with your Gemini API key (WARNING: Do not expose in client-side code for production)
-const genAI = new GoogleGenerativeAI(geminiApiKey);
  
 const suggestions = ref([
   'What are the best tools for organizing my tasks?',
   'How can I maintain work-life balance effectively?',
 ]);
  
-const stopStreaming = ref(false);
- 
 const toolbarSettings = {
-  items: [{ iconCss: 'e-icons e-refresh', align: 'Right', tooltip: 'Clear Prompts' }],
+  items: [{ iconCss: 'e-icons e-refresh', align: 'Right' }],
   itemClicked: (args) => {
     if (args.item.iconCss === 'e-icons e-refresh') {
-      aiAssist.value.ej2Instances.prompts = [];
-      aiAssist.value.ej2Instances.promptSuggestions = suggestions.value;
-      stopStreaming.value = true;
+      aiAssist.value.prompts = [];
+      aiAssist.value.promptSuggestions = suggestions.value;
     }
   },
 };
  
 const aiAssist = ref(null);
+const stopStreaming: false;
  
 const streamResponse = async (response) => {
   let lastResponse = '';
@@ -64,24 +58,34 @@ const streamResponse = async (response) => {
   }
   aiAssist.value.ej2Instances.promptSuggestions = suggestions.value;
 };
- 
-const onPromptRequest = async (args) => {
-  try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); //Replace Your Model Name Here
-    const result = await model.generateContent(args.prompt);
-    const response = result.response.text();
-    stopStreaming.value = false;
-    await streamResponse(response);
-  } catch (error) {
-    aiAssist.value.ej2Instances.addPromptResponse(
-      '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
-    );
-    stopStreaming.value = true;
-  }
-};
- 
-const stopRespondingClick = () => {
-  stopStreaming.value = true;
+
+ const onPromptRequest(args) {
+    fetch('http://localhost:11434/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+          model: 'deepseek-r1',
+          prompt: `### Instruction:\nRespond in up to 5 lines.\n\n### Input:\n${args.prompt}`,
+          stream: false,
+      })
+    })
+      .then(response => response.json())
+      .then(reply => {
+        const responseText = reply.response?.trim() || 'No response received.';
+        this.stopStreaming = false;
+        this.streamResponse(responseText);
+      })
+      .catch(error => {
+        this.$refs.aiAssist.ej2Instances.addPromptResponse(
+          '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
+        );
+        this.$refs.aiAssist.ej2Instances.promptSuggestions = this.suggestions;
+        this.stopStreaming = true;
+      });
+  },
+  stopRespondingClick() {
+    this.stopStreaming = true;
+  },
 };
 </script>
 
