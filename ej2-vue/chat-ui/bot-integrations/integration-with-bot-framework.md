@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integration of Microsoft Bot Framework With vue Chat UI component
+# Microsoft Bot Framework with Vue Chat UI component
 
 The Syncfusion vue Chat UI supports integration with a [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0) bot hosted on Azure, enabling a custom chat interface for seamless user interaction. The process involves setting up a secure backend token server, configuring the bot in Azure, and integrating the Syncfusion Chat UI in a vue application.
 
-## Getting Started With the Chat UI Component
+## Getting Started with the Chat UI Component
 
 Before integrating Microsoft Bot Framework, ensure that the Syncfusion Chat UI component is correctly rendered in your vue app:
 
@@ -110,7 +110,7 @@ app.listen(port, () => console.log(`Token server running on http://localhost:${p
 {% endhighlight %}
 {% endtabs %}
 
-## Integrate ChatUI in Vue
+## Configure ChatUI
 
 Create `src/App.vue` to connect the Syncfusion Chat UI to the bot via the direct line API:
 
