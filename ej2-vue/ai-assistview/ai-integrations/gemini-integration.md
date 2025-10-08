@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Integration of Gemini AI With Vue AI AssistView component 
+# Gemini AI with Vue AI AssistView component 
 
 The Syncfusion AI AssistView supports integration with [Gemini](https://ai.google.dev/gemini-api/docs), enabling advanced conversational AI features in your Vue applications.
 
@@ -55,7 +55,7 @@ npm install @google/generative-ai
 
 > `Security Note`: Never commit the API key to version control. Use environment variables or a secret manager for production.
 
-##  Integration Gemini AI with AI AssistView
+## Configure Gemini AI with AI AssistView
 
 Create `src/App.Vue` to integrate the Gemini AI with AI AssistView component
 
