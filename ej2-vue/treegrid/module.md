@@ -14,19 +14,20 @@ The following value providers should be injected to extend TreeGrid's functional
 
 | Module | Description |
 |------|-------------|
-| [`PageService`](../treegrid/paging)| Inject this module to use paging feature.|
-| [`SortService`](../treegrid/sorting)| Inject this module to use sorting feature.|
-| [`FilterService`](../treegrid/filtering/filtering)| Inject this module to use filtering feature.|
-| [`EditService`](../treegrid/editing/edit)| Inject this module to use editing feature.|
-| [`AggregateService`](../treegrid/aggregates/aggregates)| Inject this module to use aggregate feature.|
-| [`ColumnMenuService`](../treegrid/columns/column-menu)| Inject this module to use column menu feature.|
-| [`CommandColumnService`](../treegrid/editing/command-column-editing)| Inject this module to use command column feature.|
-| [`ContextMenuService`](../treegrid/context-menu)| Inject this module to use context menu feature.
-| [`ResizeService`](../treegrid/columns/column-resizing)| Inject this module to use resize feature.|
-| [`ReorderService`](../treegrid/columns/column-reorder)| Inject this module to use reorder feature.|
-| [`PrintService`](../treegrid/print)| Inject this module to use to use print feature and this is a default injected module.|
-| [`ToolbarService`](../treegrid/tool-bar/tool-bar)| Inject this module to use toolbar feature.|
-| [`ExcelExportService`](../treegrid/excel-export/excel-export)| Inject this module to use Excel export feature.|
-| [`PdfExportService`](../treegrid/pdf-export/pdf-export)| Inject this module to use PDF export feature.|
+| [Page](../treegrid/paging)| Inject this module to use paging feature.|
+| [Sort](../treegrid/sorting)| Inject this module to use sorting feature.|
+| [Filter](../treegrid/filtering/filtering)| Inject this module to use filtering feature.|
+| [Edit](../treegrid/editing/edit)| Inject this module to use editing feature.|
+| [Aggregate](../treegrid/aggregates/aggregates)| Inject this module to use aggregate feature.|
+| [ColumnChooser](../treegrid/columns/column-chooser) | Inject to enable the column chooser feature. |
+| [ColumnMenu](../treegrid/columns/column-menu)| Inject this module to use column menu feature.|
+| [CommandColumn](../treegrid/editing/command-column-editing)| Inject this module to use command column feature.|
+| [ContextMenu](../treegrid/context-menu)| Inject this module to use context menu feature.
+| [Resize](../treegrid/columns/column-resizing)| Inject this module to use resize feature.|
+| [Reorder](../treegrid/columns/column-reorder)| Inject this module to use reorder feature.|
+| [Print](../treegrid/print)| Inject this module to use to use print feature and this is a default injected module.|
+| [Toolbar](../treegrid/tool-bar/tool-bar)| Inject this module to use toolbar feature.|
+| [ExcelExport](../treegrid/excel-export/excel-export)| Inject this module to use Excel export feature.|
+| [PdfExport](../treegrid/pdf-export/pdf-export)| Inject this module to use PDF export feature.|
 
 These modules should be injected into the `provide` section and use `treegrid` as a key of the object.
