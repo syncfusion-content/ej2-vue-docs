@@ -33,7 +33,7 @@ To render a [histogram](https://www.syncfusion.com/vue-components/vue-charts/cha
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -48,7 +48,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seri
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event allows you to customize each data point before it is rendered on the chart.
+The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#pointrender) event allows you to customize each data point before it is rendered on the chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -63,5 +63,6 @@ The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#point
 
 ## See also
 
-* [Data label](../data-labels/)
-* [Tooltip](../tool-tip/)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Change the Color of Distribution Line](https://support.syncfusion.com/kb/article/21255/how-to-change-the-color-of-distribution-line-in-vue-histogram-chart)
