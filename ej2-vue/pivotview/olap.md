@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Olap in Vue Pivot Table component | Syncfusion
-description: Learn here all about Olap in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
-control: Olap 
+title: OLAP in Vue Pivot Table component | Syncfusion
+description: Learn here all about OLAP in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+control: OLAP 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Olap in Vue Pivot Table component
+# OLAP in Vue Pivot Table component
 
 ## Getting Started
 
@@ -177,7 +177,7 @@ export default {
 
 Now that pivot table is initialized and assigned with sample OLAP data source, will further move to showcase the component by organizing appropriate [OLAP cube elements](#olap-cube-elements) in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) axes.
 
-In [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#datasourcesettings) property, four major axes [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) plays a vital role in defining and organizing [OLAP cube elements](#olap-cube-elements) from the bound data source, to render the entire pivot table component in a desired format.
+In [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) property, four major axes [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) plays a vital role in defining and organizing [OLAP cube elements](#olap-cube-elements) from the bound data source, to render the entire pivot table component in a desired format.
 
 [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) – Collection of [OLAP cube elements](#olap-cube-elements) (such as Hierarchies, NamedSet, Calculated Members etc.,) that needs to be displayed in row axis of the pivot table.
 
@@ -288,7 +288,7 @@ It can be customized using the [`calculatedFieldsSettings`](https://ej2.syncfusi
 
 You need to set [`isCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#iscalculatedfield) property to true, while adding calculated fields to respective axis through code behind.
 
-Also calculated fields can be added at run time through the built-in dialog. The dialog can be enabled by setting the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#allowcalculatedfield) property to **true** and by injecting the **CalculatedField** module as follows. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation.
+Also calculated fields can be added at run time through the built-in dialog. The dialog can be enabled by setting the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowcalculatedfield) property to **true** and by injecting the **CalculatedField** module as follows. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation.
 
 > If the **CalculatedField** module is not injected, the calculated field dialog will not be rendered with the pivot table component. Moreover calculated measure can be added only in value axis.
 
@@ -403,7 +403,7 @@ Previous changes can be cleared by using the "Clear" option while performing ope
 
 ### Virtual Scrolling
 
-Allows large amounts of data to be loaded without any performance degradation by rendering rows and columns in relation to the current viewport. Rest of the data will be brought into the viewport dynamically based on vertical or horizontal scroll position. This feature can be enabled by setting the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#enablevirtualization) property to **true**.
+Allows large amounts of data to be loaded without any performance degradation by rendering rows and columns in relation to the current viewport. Rest of the data will be brought into the viewport dynamically based on vertical or horizontal scroll position. This feature can be enabled by setting the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) property to **true**.
 
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the pivot table.
 
@@ -448,7 +448,7 @@ Output will be displayed as follows.
 
 ## Data Binding
 
-To bind OLAP datasource to the pivot table, you need to specify following properties under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#datasourcesettings) option.
+To bind OLAP datasource to the pivot table, you need to specify following properties under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) option.
 
 | Properties|Description |
 |-----|-----|
@@ -590,7 +590,7 @@ export default {
 
 ### Roles
 
-SQL Server Analysis Services uses [`roles`](https://learn.microsoft.com/en-us/analysis-services/multidimensional-models/roles-and-permissions-analysis-services?view=asallproducts-allversions) to limit data access within a cube. Each role defines a set of permissions that can be granted to a single user or groups of users. It is used to manage security by limiting access to sensitive data and determining who has access to and can change the cube. It can be configured using the [`roles`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#roles) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#datasourcesettings).
+SQL Server Analysis Services uses [`roles`](https://learn.microsoft.com/en-us/analysis-services/multidimensional-models/roles-and-permissions-analysis-services?view=asallproducts-allversions) to limit data access within a cube. Each role defines a set of permissions that can be granted to a single user or groups of users. It is used to manage security by limiting access to sensitive data and determining who has access to and can change the cube. It can be configured using the [`roles`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#roles) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
 
 > The [`roles`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#roles) property can be used to specify one or more roles to the OLAP cube, separated by commas.
 
@@ -715,3 +715,47 @@ The two types of calculated fields are as follows:
 | ![Attribute hierarchy in JavaScript pivot table control](images/AttributeHierarchy.png)| Attribute Hierarchy| Hierarchy| True|
 | ![First level icon in JavaScript pivot table control](images/FirstLevel.png)<br>![Second level icon in JavaScript pivot table control](images/SecondLevel.png)<br>![Third level icon in JavaScript pivot table control](images/ThirdLevel.png)| Levels (in order)| Level Element| True|
 | ![NamedSet icon in JavaScript pivot client control](images/NamedSet.png)| Named Set| Named Set| True|
+
+## Events
+
+### BeforeServiceInvoke
+
+The [`beforeServiceInvoke`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotViewModel/#beforeserviceinvoke) event is triggered before initiating any service communication with the OLAP server in the Pivot Table and Field List components.
+
+* This event allows you to inject custom properties or additional parameters dynamically before a request is made to the OLAP server.
+
+* It is particularly useful for passing contextual data such as user tokens, custom filters, or localization information along with the original server request.
+
+When the [`beforeServiceInvoke`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotViewModel/#beforeserviceinvoke) event is triggered, the event argument provides access to the request details and includes a [`customProperties`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/beforeServiceInvokeEventArgs/#customproperties) field.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/olap-beforeServiceInvoke/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/olap-beforeServiceInvoke/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/pivot-grid/olap-beforeServiceInvoke" %}
+
+### AfterServiceInvoke
+
+The [`afterServiceInvoke`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotViewModel/#afterserviceinvoke) event is triggered in the Pivot Table and Field List components during the onSuccess phase of every OLAP service request.
+
+* This event is useful for performing post-processing, logging actions, or updating the UI after receiving a successful response from the OLAP server.
+
+* You may use it to audit data, trigger notifications, or handle custom response-handling logic.
+
+When the [`afterServiceInvoke`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotViewModel/#afterserviceinvoke) event is triggered, the event argument provides access to the server response details, including properties such as the action performed and the result data returned from the OLAP server.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/olap-afterServiceInvoke/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/olap-afterServiceInvoke/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/pivot-grid/olap-afterServiceInvoke" %}

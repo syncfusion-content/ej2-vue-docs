@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perform cell selection and get selected cells information in Vue Pivotview component | Syncfusion
-description: Learn here all about Perform cell selection and get selected cells information in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Vue Pivot Table: Select Cells & Get Data | Syncfusion
+description: Select and retrieve data from cells in the Syncfusion EJ2 Vue Pivot Table. Learn to manage user interaction and data extraction.
 control: Perform cell selection and get selected cells information 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform cell selection and get selected cells information in Vue Pivotview component
+# Cell Selection and Getting Cell Information
 
 You can select any cell/row by setting the property `gridSettings.allowSelection` as `true` where the selected cells can be highlighted. It can be done through mouse down or arrow keys.
 
