@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { DiagramPlugin,Diagram,ConnectorConstraints, ConnectorEditing, UndoRedo } from '@syncfusion/ej2-vue-diagrams';
 Diagram.Inject(ConnectorEditing, UndoRedo);
 Vue.use(DiagramPlugin);
-// Initialize the nodes for the diagram.
+
 let nodes = [
     {
         id: 'sourcenode',
@@ -37,7 +37,6 @@ let nodes = [
         ],
     },
 ];
-// Initialize the connectors for the diagram.
 let connectors = [{
     id: 'connector1',
     sourceID: 'sourcenode',

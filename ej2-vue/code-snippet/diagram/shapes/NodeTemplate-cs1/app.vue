@@ -3,12 +3,10 @@
         <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
-
 <script>
 import { createApp } from "vue";
 import { DiagramComponent, NodeModel } from '@syncfusion/ej2-vue-diagrams';
 
-// Template for the HTML Shape.
 let itemVue = createApp({}).component("nodeTemplate", {
     template: `<div style="background:#6BA5D7;height:100%;width:100%;"><button type="button" style="width:100px"> Button</button></div> `,
     data() {
@@ -17,27 +15,32 @@ let itemVue = createApp({}).component("nodeTemplate", {
   });
 
 const nodes = [{
+    // Position of the node
     offsetX: 250,
     offsetY: 250,
+    // Size of the node
     width: 100,
     height: 100,
+    //sets the type of the shape as HTML
     shape: {
         type: 'HTML',
         content: function () {
             return { template: itemVue };
-        }
+          },
     }
 }];
 
 export default {
     name: "App",
-    components: { "ejs-diagram": DiagramComponent },
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
             height: "500px",
-            nodes: nodes
-        };
+            nodes: nodes,
+        }
     }
-};
+}
 </script>

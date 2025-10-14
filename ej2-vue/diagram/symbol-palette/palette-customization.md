@@ -123,7 +123,7 @@ The following code example illustrates how to set symbol size and symbol margin 
 ## Symbol preview
 
 The symbol preview size of the palette items can be customized using [`symbolPreview`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreviewModel/) property of symbol palette. 
-The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview/#width-number/) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview/#height-number/) properties of SymbolPalette allow you to define the preview size for all the symbol palette items. The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview/#offset-PointModel/) property specifies the position of the dragging helper relative to the mouse cursor.
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#width-number/) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#height-number/) properties of SymbolPalette allow you to define the preview size for all the symbol palette items. The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPreview#offset-PointModel/) property specifies the position of the dragging helper relative to the mouse cursor.
 
 The following code example illustrates how to change the preview size of a palette item.
 
@@ -220,7 +220,7 @@ The code provided below demonstrates how to define tooltip content to symbols wi
 
 ### How to enable or disable the default tooltip for shapes in the symbol palette
 
-By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the `showTooltip` property within the [`getSymbolInfo`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#getsymbolinfo) method. The `showTooltip` property is set to **true** by default, which enables the tooltip.
+By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`showTooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolInfo/#showTooltip) property within the [`getSymbolInfo`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#getsymbolinfo) method. The `showTooltip` property is set to **true** by default, which enables the tooltip.
 
 The following example demonstrates how to configure selective tooltip display:
 
