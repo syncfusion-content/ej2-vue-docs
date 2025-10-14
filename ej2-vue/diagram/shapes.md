@@ -179,12 +179,6 @@ Refer the code example below.
 
 Diagram provides support to embed SVG element into a node. The shape property of node allows you to set the type of node. To create a [`native`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#shape) node, it should be set as **native**. The following code illustrates how a native node is created.
 
-N> Like HTML node, the native node also cannot be exported to image format. Fill color of native node can be overridden by the inline style or fill of the SVG element specified in the template.
-
-### Native node with content template
-
-To render an SVG node using a content template, define the desired template string in the node's [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nativeModel/#content) property. The following example demonstrates how to create an SVG node using a content template.
-
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/Native-cs1/app-composition.vue %}
@@ -196,39 +190,7 @@ To render an SVG node using a content template, define the desired template stri
         
 {% previewsample "page.domainurl/code-snippet/diagram/shapes/Native-cs1" %}
 
-#### Functional content template
-
-Dynamic SVG content generation is supported through function-based templates that return SVG markup based on runtime conditions. This approach enables responsive graphics that adapt to node properties or the application's state.
-
-The following example demonstrates how to render an SVG node using a function and dynamically manipulate its content.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/shapes/FunctionalContentTemplate-cs2/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/shapes/FunctionalContentTemplate-cs2/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/shapes/FunctionalContentTemplate-cs2" %}
-
-#### Functional node template
-
-A functional `nodeTemplate` implementation provides maximum flexibility for generating SVG templates programmatically and creating dynamic content.
-
-The following example demonstrates this approach.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/shapes/NativeNodeTemplate-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/shapes/NativeNodeTemplate-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/shapes/NativeNodeTemplate-cs1" %}
+N> Like HTML node, the native node also cannot be exported to image format. Fill color of native node can be overridden by the inline style or fill of the SVG element specified in the template.
 
 ### SVG content alignment
 

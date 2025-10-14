@@ -14,7 +14,7 @@
       :getSymbolInfo="getSymbolInfo"
       :getNodeDefaults="getNodeDefaults"
     ></ejs-symbolpalette>
-    <input id="showTooltip" ref="checkBox" @click="showTooltip" checked type="checkbox" />Show
+    <input id="showTooltip" @click="showTooltip" checked type="checkbox" />Show
     Tooltip
   </div>
 </template>
@@ -29,7 +29,6 @@ import {
 } from "@syncfusion/ej2-vue-diagrams";
 
 let symbolPaletteInstance;
-let checkBoxInstance;
 const expandMode = ref("Multiple");
 const symbolPreview = ref({
   height: 80,
@@ -56,9 +55,6 @@ const palettes = ref([
   },
 ]);
 const symbolPaletteRef = ref(null);
-const checkBox = ref(null);
-
-// Initialize the flow shapes for the symbol palette.
 function getFlowShapes() {
   return [
     { id: "Terminator", shape: { type: "Flow", shape: "Terminator" } },
@@ -67,38 +63,40 @@ function getFlowShapes() {
     { id: "Document", shape: { type: "Flow", shape: "Document" } },
     { id: "PreDefinedProcess", shape: { type: "Flow", shape: "PreDefinedProcess" } },
     { id: "DirectData", shape: { type: "Flow", shape: "DirectData" } },
-    { id: "Card", shape: { type: "Flow", shape: "Card" } },
-    { id: "Collate", shape: { type: "Flow", shape: "Collate" } },
+    { id: "SequentialData", shape: { type: "Flow", shape: "Card" } },
+    { id: "Sort", shape: { type: "Flow", shape: "Collate" } },
   ];
 }
-
-// Initialize the basic shapes for the symbol palette.
 function getBasicShapes() {
   return [
     { id: "Rectangle", shape: { type: "Basic", shape: "Rectangle" } },
     { id: "Ellipse", shape: { type: "Basic", shape: "Ellipse" } },
-    { id: "Triangle", shape: { type: "Basic", shape: "Triangle" } },
-    { id: "Hexagon", shape: { type: "Basic", shape: "Hexagon" } },
-    { id: "Parallelogram", shape: { type: "Basic", shape: "Parallelogram" } },
+    { id: "Hexagon", shape: { type: "Basic", shape: "Triangle" } },
+    { id: "Star", shape: { type: "Basic", shape: "Hexagon" } },
+    { id: "Pentagon", shape: { type: "Basic", shape: "Parallelogram" } },
     { id: "Diamond", shape: { type: "Basic", shape: "Diamond" } },
     { id: "Pentagon", shape: { type: "Basic", shape: "Pentagon" } },
     { id: "Heptagon", shape: { type: "Basic", shape: "Heptagon" } },
   ];
 }
 function getSymbolInfo(symbol) {
-  return { showTooltip: checkBoxInstance && checkBoxInstance.checked };
+  return { showTooltip: true };
 }
 function getNodeDefaults(symbol) {
   symbol.style.fill = "#6495ED";
   symbol.style.strokeColor = "#6495ED";
-  return symbol;
 }
 function showTooltip(args) {
-  symbolPaletteInstance.refresh();
+  var checkBox = document.getElementById("showTooltip");
+  symbolPaletteInstance.getSymbolInfo = function (symbol) {
+    return {
+      showTooltip: checkBox.checked,
+    };
+  };
+  symbolPaletteInstance.dataBind();
 }
 onMounted(() => {
   symbolPaletteInstance = symbolPaletteRef.value.ej2Instances;
-  checkBoxInstance = checkBox.value;
 });
 </script>
 

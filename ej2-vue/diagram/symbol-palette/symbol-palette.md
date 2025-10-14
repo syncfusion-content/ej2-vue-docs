@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Symbol palette in Vue Diagram component | Syncfusion®
-description: Learn here all about Symbol Palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more
+description: Learn here all about Symbol palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Symbol palette 
 platform: ej2-vue
 documentation: ug
@@ -68,7 +68,7 @@ export default {
 
 The collection of predefined symbols can be added to palettes using the [`symbols`](https://ej2.syncfusion.com/vue/documentation/api/diagram/paletteModel/#symbols) property.
 
-A palette displays a group of related symbols and textually annotates the group with its header. A [`Palettes`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#palettes) can be added as a collection of symbol groups.
+A palette displays a group of related symbols and textually annotates the group with its header. A [`Palettes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette/) can be added as a collection of symbol groups.
 
 To initialize a palette, define a JSON object with the unique property [`ID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/paletteModel/#id). Additionally, include the symbols property, which contains an array of different symbols.
 
