@@ -8,46 +8,41 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Google Dialogflow With Vue Chat UI component
+# Integrate Google Dialogflow With Vue Chat UI component
 
-The Syncfusion Chat UI supports integration with Google Dialogflow, enabling advanced conversational AI features in your Vue applications.
-
-## Getting Started With the ChatUI Component
-
-Before integrating Dialogflow, ensure that the Syncfusion Chat UI component is correctly rendered in your Vue app:
-
-[Vue Getting Started Guide](../getting-started)
+The Chat UI component integrates with [Google Dialogflow](https://cloud.google.com/dialogflow/docs) to enable advanced conversational AI features in your vue applications. The component acts as a user interface for a support bot, where user prompts are sent to the Dialogflow service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 
-* Google account to access [Google Dialogflow](https://cloud.google.com/dialogflow/docs) and [Google Cloud Console](https://console.cloud.google.com/).
-* Backend requires `Node.js` (v16 or higher) and `npm`.
-* Syncfusion Chat UI for Vue `@syncfusion/ej2-vue-interactive-chat` installed in your Vue project.
+* **Node.js**: Version 16 or higher with npm.
+
+* **Google Account**: To access [Google Dialogflow](https://cloud.google.com/dialogflow/docs) and [Google Cloud Console](https://console.cloud.google.com/).
+
+* **Syncfusion Chat UI**: Package [@syncfusion/ej2-vue-interactive-chat](https://www.npmjs.com/package/@syncfusion/ej2-vue-interactive-chat) installed.
+
 * Dialogflow Service Account with the `Dialogflow API Client` role and its JSON key file.
 
-## Install Dependencies
+## Set Up the vue Environment
 
-* Install `backend` dependencies for Dialogflow and server setup:
+Follow the Syncfusion Chat UI [Getting Started](../getting-started) guide to configure and render the Chat UI component in your vue application.
+
+## Install Dependency
+
+`Backend` dependencies for Dialogflow and server setup:
 
 ```bash
 
 npm install express body-parser dialogflow cors
 
 ```
-* Install the Syncfusion Chat UI in your Vue project:
 
-```bash
-
-npm install @syncfusion/ej2-vue-interactive-chat --save
-
-```
 ## Set Up the Dialogflow Agent
 
 1. In the dialogflow console, create an [agent](https://cloud.google.com/agent-assist/docs), set a name (e.g., `MyChatBot`), and configure the default language (e.g., English - `en`).
 
 2. Add intents with training phrases and responses (e.g., greetings, FAQs). Test using the dialogflow simulator.
 
-3. In the Google Cloud Console, go to `APIs & Services` > `Credentials`, create a Service Account with the dialogflow API client role, and download the JSON key file.
+3. In the Google Cloud Console, go to `APIs & Services` > `Credentials`, create a service account with the dialogflow API client role, and download the JSON key file.
 
 > `Security Note`: Never commit the JSON key file to version control. Use environment variables or a secret manager (e.g., Google Cloud Secret Manager) for production.
 
@@ -122,6 +117,7 @@ app.listen(5000, () => console.log('Backend running on http://localhost:5000'));
 > Use a unique `sessionId` (e.g., UUID) for each user to maintain conversation context.
 
 ## Configure message send 
+
 Use the Chat UI `messageSend` event to exchanges  message. Each time a user sends a message, this event will be invoked with details of the sent message.
 
 ### Forward Message to backend:
@@ -130,7 +126,7 @@ Upon message submission, a POST request is sent to your backend API endpoint (`/
 
 ### Displaying Bot response:
 
-Create `src/App.vue` to integrate the Syncfusion Chat UI with the dialogflow backend:
+Modify the `src/App.vue` file to integrate the Syncfusion Chat UI with the dialogflow backend:
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
