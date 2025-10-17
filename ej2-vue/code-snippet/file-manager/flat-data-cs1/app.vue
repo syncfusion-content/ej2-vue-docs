@@ -15,12 +15,14 @@
 </template>
 <script>
 import {
+  Permission,
+  FileData,
+} from '@syncfusion/ej2-filemanager';
+import {
   FileManagerComponent,
   NavigationPane,
   Toolbar,
   DetailsView,
-  Permission,
-  FileData,
 } from '@syncfusion/ej2-vue-filemanager';
 
 let permission = {

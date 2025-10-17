@@ -21,7 +21,6 @@
 <script setup>
 import { ref } from 'vue';
 import { AIAssistViewComponent as EjsAiassistview } from '@syncfusion/ej2-vue-interactive-chat';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { marked } from 'marked';
 
 const azureOpenAIApiKey: 'YOUR_AZURE_OPENAI_API_KEY', // replace your key
