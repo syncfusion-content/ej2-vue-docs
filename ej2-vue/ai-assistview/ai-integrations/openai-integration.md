@@ -1,56 +1,56 @@
 ---
 layout: post
-title: Azure Open AI With Vue AI AssistView component | Syncfusion
-description:  Checkout and learn about Integration of Azure Open AI With Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Azure OpenAI With Vue AI AssistView component | Syncfusion
+description:  Checkout and learn about Integration of Azure OpenAI With Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Azure Open AI with Vue AI AssistView component 
+# Integrate Azure OpenAI with Vue AI AssistView component 
 
-The Syncfusion AI AssistView supports integration with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai), enabling advanced conversational AI features in your Vue applications.
-
-## Getting Started with the AI AssistView component
-
-Before integrating Azure Open AI, ensure that the Syncfusion AI AssistView component is correctly rendered in your Vue app:
-
-[Vue Getting Started Guide](../getting-started)
+The AI AssistView component integrates with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 
-* Requires `Node.js` (v16 or higher) and `npm`.
-* An Azure account with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.I
-* Syncfusion AI AssistView for Vue `@syncfusion/ej2-vue-interactive-chat` installed in your project.
+* **Node.js**: Version 16 or higher with npm.
 
-## Install Dependencies
+* **Azure Account**: With access to Azure OpenAI services and a generated API key.
 
-Install the Syncfusion AI AssistView in your project
+* **Syncfusion AI AssistView**: Package [@syncfusion/ej2-vue-interactive-chat](https://www.npmjs.com/package/@syncfusion/ej2-vue-interactive-chat) installed.
 
-```bash 
+* **Marked Library**: For parsing Markdown responses (`npm install marked --save`).
 
-npm install @syncfusion/ej2-vue-interactive-chat --save
+## Set Up the vue Environment
 
-```
+Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide to configure and render the AI AssistView component in your vue application.
 
-## Generate Azure API Key
+## Install Dependency
 
-1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure Open AI resource. 
+To install the marked library, run `npm install marked --save` in your project directory to add it as a dependency in your package.json file.
 
-2. Under Resource Management, select Keys and Endpoint to retrieve your API key and endpoint URL.  
+## Configure Azure OpenAI
 
-3. Copy the API key, endpoint, and deployment name (e.g., gpt-4o-mini). Ensure the API version matches your resource configuration.
+1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure OpenAI resource. 
+
+2. Under resource Management, select keys and endpoint to retrieve your API key and endpoint URL.
+
+3. Note the following values:
+   - API key
+   - Endpoint
+   - API version (must be supported by your resource)
+   - Deployment name (for example, gpt-4o-mini)
 
 4. Store these values securely, as they will be used in your application.
 
 > `Security Note`: Never expose your API key in client-side code for production applications. Use a server-side proxy or environment variables to manage sensitive information securely.
 
-##  Configure Open AI with AI AssistView
+##  Configure OpenAI with AI AssistView
 
-Create `src/App.js` to integrate the Azure Open AI with AI AssistView component
+Modify the `src/App.js` file to integrate the Azure OpenAI with AI AssistView component
 
-* Update the following configuration values with your Azure Open AI details:
+* Update the following configuration values with Azure OpenAI details:
 
 ```bash
 
@@ -71,15 +71,3 @@ const azureDeploymentName = 'Your_Deployment_Name';
 {% endtabs %}
   
 {% previewsample "page.domainurl/code-snippet/ai-assistview/ai-integrations/open-ai" %}
-
-## Run and Test 
-
-Run the application in the browser using the following command.
-
-```bash
-
-npm run dev
-
-```
-
-Open the hosted link to interact with your Azure Open AI for dynamic response.

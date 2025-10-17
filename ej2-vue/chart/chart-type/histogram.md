@@ -61,7 +61,7 @@ The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#poin
         
 {% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs5" %}
 
-## See also
+## See Also
 
 * [Data label](../data-labels)
 * [Tooltip](../tool-tip)
