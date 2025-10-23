@@ -92,6 +92,7 @@ const assistviewFooter = ref(null);
 const speechToTextObj = ref(null);
 const assistviewSendButton = ref(null);
 
+// Streams the AI response character by character to create a typing effect
 const streamResponse = async (response) => {
   let lastResponse = '';
   const responseUpdateRate = 10;
@@ -112,6 +113,8 @@ const streamResponse = async (response) => {
   }
   toggleButtons();
 };
+
+// Handles prompt requests by sending them to the Azure OpenAI API and streaming the response
 const onPromptRequest = (args) => {
     const url= azureOpenAIEndpoint.replace(/\/$/, '') +
     `/openai/deployments/${encodeURIComponent(azureDeploymentName)}/chat/completions` +
@@ -142,25 +145,37 @@ const onPromptRequest = (args) => {
       toggleButtons();
     });
 };
+
+// Stops the ongoing streaming response and toggles button visibility
 const stopRespondingClick = () => {
   stopStreaming.value = true;
   toggleButtons();
 };
+
+// Updates the footer input with the latest speech transcript
 const onTranscriptChange = (args) => {
   assistviewFooter.value.innerText = args.transcript;
 };
+
+// Toggles button visibility when speech-to-text listening stops
 const onListeningStop = () => {
   this.toggleButtons();
 };
+
+// Initializes button visibility when the speech-to-text component is created
 const created = () => {
   this.toggleButtons();
 };
+
+// Handles Enter key press in the input to send the prompt without Shift
 const handleEvent = (e) => {
   if (e.key === 'Enter' && !e.shiftKey) {
     this.sendIconClicked();
     e.preventDefault();
   }
 };
+
+// Toggles visibility of send and speech buttons based on whether the input has text
 const toggleButtons = () => {
   const assistviewFooterEl = assistviewFooter.value;
   const sendButtonEl = assistviewSendButton.value?.$el;
@@ -175,6 +190,8 @@ const toggleButtons = () => {
     assistviewFooterEl.innerHTML = '';
   }
 };
+
+// Executes the current prompt from the footer input and clears it
 const sendIconClicked = (args) => {
   aiAssist.value.ej2Instances.executePrompt(assistviewFooter.value.innerText);
   assistviewFooter.value.innerText = '';
