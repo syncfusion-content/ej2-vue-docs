@@ -56,6 +56,7 @@ const responseToolbarSettings = {
 
 const aiAssist = ref(null);
 
+// Streams the AI response character by character to create a typing effect
 const streamResponse = async (response) => {
   let lastResponse = '';
   const responseUpdateRate = 10;
@@ -75,6 +76,8 @@ const streamResponse = async (response) => {
     await new Promise((resolve) => setTimeout(resolve, 15)); // Delay for streaming effect
   }
 };
+
+// Handles prompt requests by sending them to the Azure OpenAI API and streaming the response
 const onPromptRequest = (args) => {
     const url= azureOpenAIEndpoint.replace(/\/$/, '') +
     `/openai/deployments/${encodeURIComponent(azureDeploymentName)}/chat/completions` +
@@ -104,9 +107,13 @@ const onPromptRequest = (args) => {
       stopStreaming.value = true;
     });
 };
+
+// Stops the ongoing streaming response
 const stopRespondingClick = () => {
   stopStreaming.value = true;
 };
+
+// Handles clicks on response toolbar items, such as copying, reading aloud, liking, or disliking the response
 const onResponseToolbarItemClicked = (args) => {
     const responseHtml = aiAssist.value.ej2Instances.prompts[args.dataIndex].response;
     if (responseHtml) {

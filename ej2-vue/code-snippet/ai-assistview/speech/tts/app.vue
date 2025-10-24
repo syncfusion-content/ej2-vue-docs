@@ -60,6 +60,7 @@ export default {
     };
   },
   methods: {
+    // Streams the AI response character by character to create a typing effect
     async streamResponse(response) {
       let lastResponse = '';
       const responseUpdateRate = 10;
@@ -79,6 +80,7 @@ export default {
         await new Promise((resolve) => setTimeout(resolve, 15)); // Delay for streaming effect
       }
     },
+    // Handles prompt requests by sending them to the Azure OpenAI API and streaming the response
     onPromptRequest(args) {
       if (!args?.prompt?.trim() || !this.$refs.aiAssist.ej2Instances) return;
       this.stopStreaming = false;
@@ -116,9 +118,11 @@ export default {
           this.stopStreaming = true;
         });
     },
+    // Stops the ongoing streaming response
     stopRespondingClick() {
       this.stopStreaming = true;
     },
+    // Handles clicks on response toolbar items, such as copying, reading aloud, liking, or disliking the response
     onResponseToolbarItemClicked(args) {
         const responseHtml = this.$refs.aiAssist.ej2Instances.prompts[args.dataIndex].response;
         if (responseHtml) {
