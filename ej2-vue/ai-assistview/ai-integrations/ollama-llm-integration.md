@@ -71,7 +71,7 @@ curl -fSSL https://ollama.com/install.sh | sh
 
 ## Download and run an Ollama model
 
-1. Download and run a model using the following command. Replace with your preferred model (e.g., `llama3`, `phi4`). See the [Ollama model](https://ollama.com/search) library for available models.
+* Download and run a model using the following command. Replace with your preferred model (e.g., `llama3`, `phi4`). See the [Ollama model](https://ollama.com/search) library for available models.
 
 ```bash
 
@@ -79,7 +79,7 @@ ollama run deepseek-r1
 
 ```
 
-2. After the model download completes, start the Ollama server to make the model accessible:
+* After the model download completes, start the Ollama server to make the model accessible:
 
 ```bash
 

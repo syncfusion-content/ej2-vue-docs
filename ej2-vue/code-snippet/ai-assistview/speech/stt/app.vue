@@ -100,6 +100,7 @@ export default {
     });
   },
   methods: {
+    // Streams the AI response character by character to create a typing effect
     async streamResponse(response) {
       let lastResponse = '';
       const responseUpdateRate = 10;
@@ -120,6 +121,7 @@ export default {
       }
       this.toggleButtons();
     },
+    // Handles prompt requests by sending them to the Azure OpenAI API and streaming the response
     onPromptRequest(args) {
       if (!args?.prompt?.trim() || !this.$refs.aiAssist.ej2Instances) return;
       this.stopStreaming = false;
@@ -158,25 +160,31 @@ export default {
           toggleButtons();
         });
     },
+    // Stops the ongoing streaming response and toggles button visibility
     stopRespondingClick() {
       this.stopStreaming = true;
       this.toggleButtons();
     },
+    // Updates the footer input with the latest speech transcript
     onTranscriptChange(args) {
       this.$refs.assistviewFooter.innerText = args.transcript;
     },
+    // Toggles button visibility when speech-to-text listening stops
     onListeningStop() {
       this.toggleButtons();
     },
+    // Initializes button visibility when the speech-to-text component is created
     created() {
       this.toggleButtons();
     },
+    // Handles Enter key press in the input to send the prompt without Shift
     handleEvent(e) {
       if (e.key === 'Enter' && !e.shiftKey) {
         this.sendIconClicked();
         e.preventDefault();
       }
     },
+    // Toggles visibility of send and speech buttons based on whether the input has text
     toggleButtons() {
       const assistviewFooter = this.$refs.assistviewFooter;
       const sendButton = this.$refs.assistviewSendButton?.$el;
@@ -191,6 +199,7 @@ export default {
         assistviewFooter.innerHTML = '';
       }
     },
+    // Executes the current prompt from the footer input and clears it
     sendIconClicked(args) {
       this.$refs.aiAssist.ej2Instances.executePrompt(this.$refs.assistviewFooter.innerText);
       this.$refs.assistviewFooter.innerText = '';
