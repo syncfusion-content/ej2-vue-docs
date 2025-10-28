@@ -24,7 +24,7 @@ The AI AssistView component integrates with Google’s [Gemini](https://ai.googl
 
 ## Set Up the Vue Environment
 
-Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide to configure and render the AI AssistView component in your Vue application.
+Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in your Vue application.
 
 ## Install Dependencies
 

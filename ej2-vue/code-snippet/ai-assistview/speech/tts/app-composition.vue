@@ -24,10 +24,10 @@ import { ref } from 'vue';
 import { AIAssistViewComponent as EjsAiassistview } from '@syncfusion/ej2-vue-interactive-chat';
 import { marked } from 'marked';
 
-const azureOpenAIApiKey: '', // YOUR_AZURE_OPENAI_API_KEY
-const azureOpenAIEndpoint: '', // YOUR_AZURE_OPENAI_API_ENDPOINT
-const azureOpenAIApiVersion: '', // YOUR_AZURE_OPENAI_API_VERSION
-const azureDeploymentName: '', // YOUR_DEPLOYMENT_NAME
+const azureOpenAIApiKey = ''; // YOUR_AZURE_OPENAI_API_KEY
+const azureOpenAIEndpoint = ''; // YOUR_AZURE_OPENAI_API_ENDPOINT
+const azureOpenAIApiVersion = ''; // YOUR_AZURE_OPENAI_API_VERSION
+const azureDeploymentName = ''; // YOUR_DEPLOYMENT_NAME // YOUR_DEPLOYMENT_NAME
 
 const stopStreaming = false;
 const currentUtterance = null;
@@ -52,9 +52,9 @@ const responseToolbarSettings = {
       { type: 'Button', iconCss: 'e-icons e-assist-dislike', tooltip: 'Need Improvement' },
   ],
   itemClicked: (args) => onResponseToolbarItemClicked(args)
-},
+};
 
-const aiAssist = ref(null);
+  const aiAssist = ref(null);
 
 // Streams the AI response character by character to create a typing effect
 const streamResponse = async (response) => {
@@ -144,9 +144,11 @@ const onResponseToolbarItemClicked = (args) => {
 </script>
 
 <style>
+
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
 </style>

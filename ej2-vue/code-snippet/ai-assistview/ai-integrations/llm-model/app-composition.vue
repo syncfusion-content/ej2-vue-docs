@@ -1,21 +1,21 @@
 <template>
-<div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
-  <ejs-aiassistview
-    ref="aiAssist"
-    :promptSuggestions="suggestions"
-    :toolbarSettings="toolbarSettings"
-    bannerTemplate="bannerTemplate"
-    :prompt-request="onPromptRequest"
-    :stop-responding-click="stopRespondingClick"
-  >
-    <template v-slot:bannerTemplate>
-      <div class="banner-content">
-        <div class="e-icons e-assistview-icon"></div>
-        <h3>How can I help you?</h3>
-      </div>
-    </template>
-  </ejs-aiassistview>
-</div>
+  <div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
+    <ejs-aiassistview
+      ref="aiAssist"
+      :promptSuggestions="suggestions"
+      :toolbarSettings="toolbarSettings"
+      bannerTemplate="bannerTemplate"
+      :prompt-request="onPromptRequest"
+      :stop-responding-click="stopRespondingClick"
+    >
+      <template v-slot:bannerTemplate>
+        <div class="banner-content">
+          <div class="e-icons e-assistview-icon"></div>
+          <h3>How can I help you?</h3>
+        </div>
+      </template>
+    </ejs-aiassistview>
+  </div>
 </template>
  
 <script setup>
@@ -28,25 +28,29 @@ const suggestions = ref([
   'How can I maintain work-life balance effectively?',
 ]);
  
+const aiAssist = ref(null);
+const stopStreaming = ref(false);
+
 const toolbarSettings = {
-  items: [{ iconCss: 'e-icons e-refresh', align: 'Right' }],
+  items: [{ iconCss: 'e-icons e-refresh', align: 'Right', tooltip: 'Clear Prompts' }], // Added tooltip for clarity
   itemClicked: (args) => {
     if (args.item.iconCss === 'e-icons e-refresh') {
-      aiAssist.value.prompts = [];
-      aiAssist.value.promptSuggestions = suggestions.value;
+      // Clear the prompts by resetting the prompts array
+      if (aiAssist.value && aiAssist.value.ej2Instances) {
+        aiAssist.value.ej2Instances.prompts = [];       // This empties the messages in the UI
+        aiAssist.value.ej2Instances.promptSuggestions = suggestions.value; // Reset suggestions
+        stopStreaming.value = true;                     // Stop any ongoing streaming
+      }
     }
   },
 };
- 
-const aiAssist = ref(null);
-const stopStreaming: false;
  
 const streamResponse = async (response) => {
   let lastResponse = '';
   const responseUpdateRate = 10;
   let i = 0;
   const responseLength = response.length;
-  while (i < responseLength && !stopStreaming.value) {
+  while (i < responseLength && !stopStreaming.value) { 
     lastResponse += response[i];
     i++;
     if (i % responseUpdateRate === 0 || i === responseLength) {
@@ -59,7 +63,7 @@ const streamResponse = async (response) => {
   aiAssist.value.ej2Instances.promptSuggestions = suggestions.value;
 };
 
- const onPromptRequest(args) {
+const onPromptRequest = async (args) => {
     fetch('http://localhost:11434/api/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -72,27 +76,30 @@ const streamResponse = async (response) => {
       .then(response => response.json())
       .then(reply => {
         const responseText = reply.response?.trim() || 'No response received.';
-        this.stopStreaming = false;
-        this.streamResponse(responseText);
+        stopStreaming.value = false;
+        streamResponse(responseText);
       })
       .catch(error => {
-        this.$refs.aiAssist.ej2Instances.addPromptResponse(
+        aiAssist.value.ej2Instances.addPromptResponse(
           '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
         );
-        this.$refs.aiAssist.ej2Instances.promptSuggestions = this.suggestions;
-        this.stopStreaming = true;
+        aiAssist.value.ej2Instances.promptSuggestions = suggestions.value;
+        stopStreaming.value = true;
       });
-  },
-  stopRespondingClick() {
-    this.stopStreaming = true;
-  },
+  };
+
+const stopRespondingClick = () => {
+    stopStreaming.value = true;
 };
+
 </script>
 
 <style>
+
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
 </style>
