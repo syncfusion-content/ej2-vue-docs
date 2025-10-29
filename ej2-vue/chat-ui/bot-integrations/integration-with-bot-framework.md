@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integrate Microsoft Bot Framework with Vue Chat UI component
 
-The Chat UI component integrates seamlessly with a [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0) bot hosted on Azure, enabling a custom chat interface for seamless user interaction. The process involves setting up a secure backend token server, configuring Direct Line in Azure, and integrating the Chat UI in the application.
+The Chat UI component integrates with a [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0) bot hosted on Azure, enabling a custom chat interface for seamless user interaction. The process involves setting up a secure backend token server, configuring Direct Line in Azure, and integrating the Chat UI in the application.
 
 ## Prerequisites
 
@@ -23,6 +23,10 @@ Before starting, ensure you have the following:
 * **Syncfusion Chat UI**: Package [@syncfusion/ej2-vue-interactive-chat](https://www.npmjs.com/package/@syncfusion/ej2-vue-interactive-chat) installed.
 
 * **Deployed Azure Bot**: A bot should be created and published using the [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0), which is accessible via an Azure App Service. Refer to Microsoft's Bot Creation Guide.
+
+## Set Up the vue Environment
+
+Follow the [Getting Started](../getting-started) guide to configure and render the Chat UI component in your vue application.
 
 ## Install Dependencies
   
@@ -108,7 +112,7 @@ app.listen(port, () => console.log(`Token server running on http://localhost:${p
 
 ## Configure ChatUI
 
-Modify the `src/App.vue` file to connect the Syncfusion Chat UI to the bot via the direct line API:
+Modify the `src/App.vue` file to connect the Chat UI to the bot via the direct line API:
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
