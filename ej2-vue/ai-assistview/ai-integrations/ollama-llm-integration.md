@@ -26,7 +26,7 @@ Before starting, ensure you have the following:
 
 ## Set Up the Vue Environment
 
-Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide to configure and render the AI AssistView component in your vue application.
+Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in your vue application.
 
 ## Install Dependency
 
