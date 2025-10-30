@@ -58,12 +58,13 @@ import { SpeechToTextComponent as EjsSpeechtotext } from "@syncfusion/ej2-vue-in
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { marked } from 'marked';
 
-const azureOpenAIApiKey: '', // YOUR_AZURE_OPENAI_API_KEY
-const azureOpenAIEndpoint: '', // YOUR_AZURE_OPENAI_API_ENDPOINT
-const azureOpenAIApiVersion: '', // YOUR_AZURE_OPENAI_API_VERSION
-const azureDeploymentName: '', // YOUR_DEPLOYMENT_NAME
+// Remove the colon after the variable names
+const azureOpenAIApiKey = ''; // YOUR_AZURE_OPENAI_API_KEY
+const azureOpenAIEndpoint = ''; // YOUR_AZURE_OPENAI_API_ENDPOINT
+const azureOpenAIApiVersion = ''; // YOUR_AZURE_OPENAI_API_VERSION
+const azureDeploymentName = ''; // YOUR_DEPLOYMENT_NAME
 
-const stopStreaming = false;
+const stopStreaming = ref(false); // This should also be ref for reactivity if it changes
 
 const toolbarSettings = {
   items: [
@@ -73,16 +74,18 @@ const toolbarSettings = {
       tooltip: 'Clear Prompts',
     },
   ],
-  itemClicked: () => {
+  // Corrected 'this' context issues for itemClicked
+  itemClicked: (args) => {
     aiAssist.value.ej2Instances.prompts = [];
     stopStreaming.value = true;
   },
 };
 const promptToolbarSettings = {
+  // Corrected 'this' context issues for itemClicked
   itemClicked: (args) => {
     if (args.item.iconCss === 'e-icons e-assist-edit') {
       assistviewFooter.value.innerHTML = aiAssist.value.ej2Instances.prompts[args.dataIndex].prompt;
-      this.toggleButtons();
+      toggleButtons(); // Call the function directly
     }
   },
 };
@@ -98,7 +101,8 @@ const streamResponse = async (response) => {
   const responseUpdateRate = 10;
   let i = 0;
   const responseLength = response.length;
-  while (i < responseLength && !this.stopStreaming) {
+  // Corrected 'this' context issues
+  while (i < responseLength && !stopStreaming.value) {
     lastResponse += response[i];
     i++;
     if (i % responseUpdateRate === 0 || i === responseLength) {
@@ -159,18 +163,18 @@ const onTranscriptChange = (args) => {
 
 // Toggles button visibility when speech-to-text listening stops
 const onListeningStop = () => {
-  this.toggleButtons();
+  toggleButtons(); // Call the function directly
 };
 
 // Initializes button visibility when the speech-to-text component is created
 const created = () => {
-  this.toggleButtons();
+  toggleButtons(); // Call the function directly
 };
 
 // Handles Enter key press in the input to send the prompt without Shift
 const handleEvent = (e) => {
   if (e.key === 'Enter' && !e.shiftKey) {
-    this.sendIconClicked();
+    sendIconClicked(); // Call the function directly
     e.preventDefault();
   }
 };
@@ -199,9 +203,13 @@ const sendIconClicked = (args) => {
 </script>
 
 <style>
+
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
 </style>
