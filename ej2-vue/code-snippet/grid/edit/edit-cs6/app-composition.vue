@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='280px'>
+    <ejs-grid ref="grid" :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='280px'>
         <e-columns>
           <e-column field='OrderID' headerText='Order ID' :isPrimaryKey='true' :validationRules='orderIDRules' textAlign='Right' width=100></e-column>
           <e-column field='CustomerID' headerText='Customer ID' :validationRules='customerIDRules' width=120></e-column>
@@ -9,7 +9,7 @@
           <e-column field="Verified" headerText="Verified" textAlign="Right" width="90" :template="'columnTemplate'" :validationRules='verifiedRules'></e-column>
         </e-columns>
         <template v-slot:columnTemplate="{data}">
-          <ejs-checkbox :checked="data.Verified"></ejs-checkbox>
+          <ejs-checkbox :checked="data.Verified" @change="onVerifiedChange($event, data)"></ejs-checkbox>
         </template>
     </ejs-grid>
   </div>
@@ -20,6 +20,7 @@ import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective 
 import { CheckBoxComponent as EjsCheckbox } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
 
+const grid=ref(null);
 const orderIDRules = { required: true };
 const customerIDRules = { required: true };
 const dateRules= { required: true  };
@@ -27,6 +28,15 @@ const verifiedRules = { required: true  };
 const freightRules = { required: true, min: 1, max: 1000 };
 const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+
+function onVerifiedChange(args, rowData) {
+  const rowIndex = grid.value.ej2Instances.getRowIndexByPrimaryKey(rowData.OrderID);
+  grid.value.ej2Instances.updateRow(rowIndex, {
+    ...rowData,
+    Verified: args.checked,
+  });
+}
+
 provide('grid', [Edit, Toolbar]);
 </script>
 <style>

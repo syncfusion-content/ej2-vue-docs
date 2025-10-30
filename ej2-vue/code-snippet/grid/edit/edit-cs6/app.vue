@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-grid :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='280px' >
+        <ejs-grid ref="grid" :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='280px' >
             <e-columns>
               <e-column field='OrderID' headerText='Order ID' :isPrimaryKey='true' :validationRules='orderIDRules' textAlign='Right' width=100></e-column>
               <e-column field='CustomerID' headerText='Customer ID' :validationRules='customerIDRules' width=120></e-column>
@@ -9,7 +9,7 @@
               <e-column field="Verified" headerText="Verified" textAlign="Right" width="90" :template="'columnTemplate'" :validationRules='verifiedRules'></e-column>
             </e-columns>
             <template v-slot:columnTemplate="{data}">
-              <ejs-checkbox :checked="data.Verified"></ejs-checkbox>
+              <ejs-checkbox :checked="data.Verified" @change="onVerifiedChange($event, data)"></ejs-checkbox>
           </template>
         </ejs-grid>
     </div>
@@ -38,6 +38,15 @@ components: {
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
       toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     };
+  },
+  methods: {
+    onVerifiedChange(args, rowData) {
+      const rowIndex = this.$refs.grid.getRowIndexByPrimaryKey(rowData.OrderID);
+      this.$refs.grid.updateRow(rowIndex, {
+        ...rowData,
+        Verified: args.checked,
+      });
+    },
   },
   provide: {
     grid: [Edit, Toolbar]
