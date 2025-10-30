@@ -44,7 +44,7 @@ The following example demonstrates how to activate default filtering in the grid
         
 {% previewsample "page.domainurl/code-snippet/grid/filter/filter-bar-cs1" %}
 
-> To enable or dynamically switch the filter type, you must set the [filterSettings.type](https://ej2.syncfusion.com/vue/documentation/api/grid/filtersettings/#type) as **FilterBar**.
+> If the [filterSettings.type](https://ej2.syncfusion.com/vue/documentation/api/grid/filtersettings/#type) is not explicitly specified, it defaults to **FilterBar**.
 
 ## Filter bar modes
 
