@@ -25,12 +25,12 @@
 <script setup>
 import { provide, ref } from "vue";
 import {
-  TabComponent,
-  TabItemsDirective,
-  TabItemDirective,
+  TabComponent as EjsTab,
+  TabItemsDirective as ETabitem,
+  TabItemDirective as ETabitems,
 } from '@syncfusion/ej2-vue-navigations';
 import {
-  RichTextEditorComponent,
+  RichTextEditorComponent as EjsRichtexteditor,
   Toolbar,
   Link,
   Image,

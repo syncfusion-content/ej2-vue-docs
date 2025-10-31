@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Module in Vue Grid component | Syncfusion
-description: Learn here all about Module in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Modules in Syncfusion Vue Grid component of Syncfusion Essential JS 2, how they extend grid features and more.
 control: Module 
 platform: ej2-vue
 documentation: ug
@@ -20,7 +20,7 @@ The available grid modules are
 | [`Sort`](https://ej2.syncfusion.com/vue/documentation/api/grid/sort/)| Inject this module to use sorting feature.|
 | [`Filter`](https://ej2.syncfusion.com/vue/documentation/api/grid/filter/)| Inject this module to use filtering feature.|
 | [`Group`](https://ej2.syncfusion.com/vue/documentation/api/grid/group/)| Inject this module to use grouping feature|
-| [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/grid/edit/)| Inject this module is use editing feature.|
+| [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/grid/edit/)| Inject this module to use editing feature.|
 | `Aggregate`| Inject this module to use aggregate feature.|
 | [`ColumnChooser`](https://ej2.syncfusion.com/vue/documentation/api/grid/columnChooser/)| Inject this module to use column chooser feature.|
 | `ColumnMenu`| Inject this module to use column menu feature.|

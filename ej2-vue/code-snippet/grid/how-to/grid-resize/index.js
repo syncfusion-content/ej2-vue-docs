@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import { GridPlugin } from "@syncfusion/ej2-vue-grids";
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
@@ -15,9 +14,9 @@ new Vue({
     <div id="app">
         <div style="display: inline-block;">
             <label> Enter the width: </label> 
-            <ejs-numerictextbox ref='widthTextbox' :min="400" :max="650" :step='5' :placeholder="400" format="n"  width='120px'></ejs-numerictextbox>
+            <ejs-numerictextbox ref='widthTextbox' :min="400" :max="650" :step='5' :placeholder="'400'" format="n"  width='120px'></ejs-numerictextbox>
             <label> Enter the height </label> 
-            <ejs-numerictextbox ref='heightTextbox' :min="200" :max="600" :step='5' :placeholder="200" format="n"  width='120px'></ejs-numerictextbox>
+            <ejs-numerictextbox ref='heightTextbox' :min="200" :max="600" :step='5' :placeholder="'200'" format="n"  width='120px'></ejs-numerictextbox>
             <ejs-button style='margin-left:5px' ref='button' cssClass='e-outline' v-on:click.native="onExternalResize">Update</ejs-button>
         </div>
         <div id="parent">
