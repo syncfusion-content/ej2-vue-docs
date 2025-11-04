@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Mentions in the Vue Rich Text Editor Component
 
-By integrating the [Mention](https://ej2.syncfusion.com/vue/documentation/mention/getting-started/) component with a Rich Text Editor, users can effortlessly mention or tag other users or objects from a suggested list. This eliminates the need to manually type out names or identifying information, improving efficiency and accuracy.
+By integrating the [Mention](https://ej2.syncfusion.com/vue/documentation/mention/getting-started) component with a Rich Text Editor, users can effortlessly mention or tag other users or objects from a suggested list. This eliminates the need to manually type out names or identifying information, improving efficiency and accuracy.
 
 ## Setup and configuration
 
@@ -31,7 +31,7 @@ You can control when the suggestion list appears by setting the [minLength](http
 
 By default, `minLength` is set to 0, which means the suggestion list appears immediately after the mention character is entered. However, you can increase this value to delay the search until the user has typed a specific number of characters.
 
-In the following example, the minLength is set to 3, so the suggestion list will only appear once the user types three or more characters after the @ symbol.
+In the following example, the `minLength` is set to 3, so the suggestion list will only appear once the user types three or more characters after the @ symbol.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

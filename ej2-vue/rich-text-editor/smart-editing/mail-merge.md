@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mail Merge in Vue Rich Text Editor Component
+# Mail merge in Vue Rich Text Editor Component
 
 The Rich Text Editor can be customized to implement **Mail Merge** functionality by inserting placeholders into the editor using custom toolbar items. These placeholders are later replaced with actual data to generate personalized content such as letters, invoices, and reports.
 
@@ -22,5 +22,3 @@ This feature simplifies the creation of dynamic documents by allowing users to i
 {% include code-snippet/rich-text-editor/mail-merge/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/mail-merge" %}
