@@ -34,15 +34,35 @@ items: [
         iconCss: 'e-icons e-signature',
         type: 'Custom',
         command: 'Signature'
+        },
+        {
+            text: 'HorizontalLine',
+            description: 'Insert a horizontal line',
+            iconCss: 'e-icons e-horizontal-line',
+            type: 'Custom',
+            command: 'HorizontalLine',
+        },
+        {
+            text: 'CheckList',
+            description: 'Insert a check list',
+            iconCss: 'e-icons e-checklist',
+            type: 'Custom',
+            command: 'CheckList',
         }
     ]
 };
 const onSlashMenuItemSelect = (args) => {
     if (args.itemData.command === 'MeetingNotes') {
-                smartEditor.value.ej2Instances.executeCommand('insertHTML', meetingNotes, { undo: true });
+        smartEditor.value.ej2Instances.executeCommand('insertHTML', meetingNotes, { undo: true });
     }
     if (args.itemData.command === 'Signature') {
-                smartEditor.value.ej2Instances.executeCommand('insertHTML', signature, { undo: true });
+        smartEditor.value.ej2Instances.executeCommand('insertHTML', signature, { undo: true });
+    }
+    if (args.itemData.command === 'HorizontalLine') {
+        smartEditor.value.ej2Instances.executeCommand('insertHTML', '<hr>');
+    }
+    if (args.itemData.command === 'CheckList') {
+        smartEditor.value.ej2Instances.executeCommand('insertHTML',`<ul class="e-rte-checklist"><li> Task 1</li><li> Task 2</li></ul>`);
     }
 };
 provide('richtexteditor', [SlashMenu, Toolbar, Link, Image, Audio, Table, Video, QuickToolbar, HtmlEditor, EmojiPicker, PasteCleanup, FormatPainter]);

@@ -18,7 +18,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -99,7 +99,7 @@ yarn add @syncfusion/ej2-vue-popups
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Dialog component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -147,7 +147,7 @@ components: {
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the Dialog component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/dialog#datasource) property and column definitions.
+2.In the `template` section, define the Dialog component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/dialog/index-default/) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -244,8 +244,12 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/dialog/getting-started-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs1" %}
 
-![Output](./images/vue3-dialog.png)
-
-> You can refer to our [Vue dialog](https://www.syncfusion.com/vue-components/vue-modal-dialog) feature tour page for its groundbreaking feature representations. You can also explore our [Vue dialog example](https://ej2.syncfusion.com/vue/documentation/dialog/getting-started/) that shows you how to render the dialog in Vue.
+> You can refer to our [Vue dialog](https://www.syncfusion.com/vue-components/vue-modal-dialog) feature tour page for its groundbreaking feature representations. You can also explore our [Vue dialog example](https://ej2.syncfusion.com/vue/documentation/dialog/getting-started) that shows you how to render the dialog in Vue.
