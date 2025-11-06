@@ -1,3 +1,4 @@
+{% raw %}
 <template>
   <div id="defaultRTE">
     <div class="control-section">
@@ -164,6 +165,7 @@ export default {
   },
 };
 </script>
+{% endraw %}
 
 <style>
 @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
