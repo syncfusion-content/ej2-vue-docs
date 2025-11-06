@@ -39,6 +39,20 @@ export default {
                         iconCss: 'e-icons e-signature',
                         type: 'Custom',
                         command: 'Signature'
+                    },
+                    {
+                        text: 'HorizontalLine',
+                        description: 'Insert a horizontal line',
+                        iconCss: 'e-icons e-horizontal-line',
+                        type: 'Custom',
+                        command: 'HorizontalLine',
+                    },
+                    {
+                        text: 'CheckList',
+                        description: 'Insert a check list',
+                        iconCss: 'e-icons e-checklist',
+                        type: 'Custom',
+                        command: 'CheckList',
                     }
                 ]
             }
@@ -54,6 +68,12 @@ export default {
             }
             if (args.itemData.command === 'Signature') {
                 this.$refs.smartEditor.ej2Instances.executeCommand('insertHTML', this.signature, { undo: true });
+            }
+            if (args.itemData.command === 'HorizontalLine') {
+                this.$refs.smartEditor.ej2Instances.executeCommand('insertHTML', '<hr>');
+            }
+            if (args.itemData.command === 'CheckList') {
+                this.$refs.smartEditor.ej2Instances.executeCommand('insertHTML',`<ul class="e-rte-checklist"><li> Task 1</li><li> Task 2</li></ul>`);
             }
         }
     }

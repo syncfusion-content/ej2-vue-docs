@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing placeholder text
+## Styling the placeholder text
 
 Use the following CSS to customize the default color in the Rich Text Editor's placeholder.
 
@@ -25,7 +25,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's p
 
 ```
 
-## Customizing editor content
+## Styling the editor content area
 
 Use the following CSS to customize the default Rich Text Editor's content properties like font-family, font-size and color.
 
@@ -45,7 +45,7 @@ Use the following CSS to customize the default Rich Text Editor's content proper
 }
 ```
 
-## Customizing editor toolbar
+## Customizing the toolbar appearance
 
 Use the following CSS to customize the default color in the Rich Text Editor's toolbar icon.
 
@@ -75,7 +75,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's t
 }
 ```
 
-## Customizing character count display
+## Styling the character count display
 
 Use the following CSS to customize the default color in the Rich Text Editor's character count.
 
@@ -91,7 +91,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's c
 }
 ```
 
-## Customizing border color
+## Modifying the editor container border
 
 Use the following CSS to customize the border color in the Rich Text Editor's container.
 
@@ -104,7 +104,7 @@ Use the following CSS to customize the border color in the Rich Text Editor's co
 
 ```
 
-## Highlight the specific lines
+## Highlighting specific text programmatically
 
 Programmatically highlight a portion of the text in the editor by setting the background color. This can be achieved by applying a background style to the selected text using the Rich Text Editor's `executeCommand` method.
 

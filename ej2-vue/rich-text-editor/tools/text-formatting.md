@@ -182,6 +182,14 @@ Below is an example of how to configure the Checklist in the Rich Text Editor:
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/checklist-cs1" %}
 
+## Nested list creation using Tab key
+
+In the Rich Text Editor, pressing the `Tab` key while the cursor is inside a list item automatically creates a nested list. This behavior allows users to structure their content hierarchically by indenting list items. Each press of the `Tab` key increases the nesting level, converting the current item into a sub-item of the previous one.
+
+Please refer to the below video for visual behavior and interaction examples:
+
+![Rich Text Editor list editing behaviour](../images/list-editing.gif)
+
 ## Increase and decrease indent
 
 The Rich Text Editor allows you to set indentation for text blocks such as paragraphs, headings, or lists. This feature helps you visually organize and structure your content, making it easier to read and understand.
@@ -315,6 +323,27 @@ Use the `Blockquote` tool in the editor below to see the feature in action.
 
 > In a markdown editor, blockquotes are represented using the `>` symbol.
 
+### Nested blockquotes
+
+The Rich Text Editor also supports nested blockquotes, allowing one blockquote to be placed inside another. 
+
+While the toolbar does not provide a direct method to apply blockquote formatting recursively (i.e., within an already blockquote section), nested blockquotes can still be achieved in the following ways:
+
+1. **Pasting preformatted content:** If you paste content that already contains nested blockquote tags (e.g., from another editor or email), the Rich Text Editor will preserve and render the nested structure correctly.
+2. **Pre-loading nested blockquote HTML:** You can initialize the editor with nested blockquote content using the value property.
+3. **Manual editing via Source Code view:** You can manually insert nested blockquote tags using the SourceCode toolbar option.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/nesting-blockquote/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/nesting-blockquote/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/nesting-blockquote" %}
+
 ## Horizontal line
 
 The Rich Text Editor enables users to insert horizontal dividers using the `HorizontalLine` tool available in the toolbar. Horizontal lines (<hr>) help visually separate sections of content, enhancing readability and structural clarity.
@@ -331,6 +360,8 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 {% include code-snippet/rich-text-editor/horizontal-line/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/horizontal-line" %}
 
 ## Format painter
 
