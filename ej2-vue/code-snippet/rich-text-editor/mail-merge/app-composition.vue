@@ -1,3 +1,4 @@
+{% raw %}
 <template>
   <div id="defaultRTE">
     <div class="control-section">
@@ -155,6 +156,7 @@ const replacePlaceholders = (tmpl, data) => {
   });
 };
 </script>
+{% endraw %}
 
 <style>
 @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
