@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       toolbarSettings: {
-          items: ['Blockquote','Bold', 'Italic', 'Underline', 'StrikeThrough',
+          items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
             'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
             'LowerCase', 'UpperCase', '|',
             'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
