@@ -1,5 +1,5 @@
 <template>
-  <ejs-richtexteditor ref="defaultRTE" :value="rteValue" :toolbarSettings="toolbarSettings">
+  <ejs-richtexteditor ref="defaultRTE" :value="rteValue">
   </ejs-richtexteditor>
 </template>
 
@@ -13,15 +13,6 @@ export default {
 
   data() {
     return {
-      toolbarSettings: {
-          items: ['Blockquote','Bold', 'Italic', 'Underline', 'StrikeThrough',
-            'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-            'LowerCase', 'UpperCase', '|',
-            'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
-            'Outdent', 'Indent', '|',
-            'CreateLink', 'Image', '|', 'ClearFormat',
-            'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
-      },
       rteValue: `<blockquote><p><strong>Outer Quote:</strong> The Rich Text Editor provides a flexible way to format quotations.</p><blockquote><p><em>Inner Quote:</em> You can even nest blockquotes to represent quoted replies or layered citations.</p><blockquote><p><em>Deep Quote:</em> This is useful in forums, emails, or academic writing where multiple levels of quoting are needed.</p></blockquote></blockquote></blockquote>`,
     }
   },
