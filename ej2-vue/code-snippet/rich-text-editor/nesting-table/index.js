@@ -1,27 +1,55 @@
 import Vue from 'vue';
-import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+import { RichTextEditorPlugin, Toolbar, Link, Image, Table, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
 
 Vue.use(RichTextEditorPlugin);
  
 new Vue({
 	el: '#app',
-	template: `<ejs-richtexteditor ref="defaultRTE" :readonly="true" :height="350" :value="rteValue" :toolbarSettings="toolbarSettings"></ejs-richtexteditor>`,
+	template: `<ejs-richtexteditor ref="defaultRTE" :value="rteValue" :toolbarSettings="toolbarSettings"></ejs-richtexteditor>`,
 
   data() {
     return {
       toolbarSettings: {
-        items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
-          'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-          'LowerCase', 'UpperCase', '|',
-          'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
-          'Outdent', 'Indent', '|',
-          'CreateLink', 'Image', '|', 'ClearFormat',
-          'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
+          items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
+            'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
+            'LowerCase', 'UpperCase', '|',
+            'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
+            'Outdent', 'Indent', '|',
+            'CreateLink', 'Image','CreateTable', '|', 'ClearFormat',
+            'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
       },
-      rteValue: `<p>The Syncfusion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul><li><p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes.</p></li><li><p>Bulleted and numbered lists.</p></li><li><p>Handles images, hyperlinks, videos, hyperlinks, uploads, etc.</p></li><li><p>Contains undo/redo manager. </p></li></ul><div style='display: inline-block; width: 60%; vertical-align: top; cursor: auto;'><img alt='Sky with sun' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png' width='309' style='min-width: 10px; min-height: 10px; width: 309px; height: 174px;' class='e-rte-image e-imginline e-rte-drag-image' height='174' /></div>`,
+      rteValue: `<table border="1" style="width:100%; border-collapse: collapse;">
+      <tr>
+        <th>Department</th>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td>Sales</td>
+        <td>
+          <table border="1" style="width:100%; border-collapse: collapse;">
+            <tr>
+              <th>Employee</th>
+              <th>Target</th>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>$50,000</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>$60,000</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>Marketing</td>
+        <td>Campaign planning in progress</td>
+      </tr>
+    </table>`,
     }
   },
   provide: {
-    richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
+    richtexteditor: [Toolbar, Link, Image, Table, HtmlEditor, QuickToolbar]
   }
 });
