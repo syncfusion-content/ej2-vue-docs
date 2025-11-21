@@ -1,15 +1,6 @@
-{% raw %}
-import Vue from 'vue';
-import { RichTextEditorPlugin, Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, Video, NodeSelection, Audio, PasteCleanup } from '@syncfusion/ej2-vue-richtexteditor';
-import { MentionPlugin } from '@syncfusion/ej2-vue-dropdowns';
-import { DropDownButtonPlugin } from '@syncfusion/ej2-vue-splitbuttons';
-Vue.use(RichTextEditorPlugin);
-Vue.use(MentionPlugin);
-Vue.use(DropDownButtonPlugin);
 
-new Vue({
-	el: '#app',
-	template: `  <div id="defaultRTE">
+<template>
+  <div id="defaultRTE">
     <div class="control-section">
       <div class="sample-container">
         <div class="default-section">
@@ -26,11 +17,22 @@ new Vue({
         </ejs-mention>
       </div>
     </div>
-  </div>`,
+  </div>
+</template>
 
+<script>
+import { RichTextEditorComponent, Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, Video, NodeSelection, Audio, PasteCleanup } from '@syncfusion/ej2-vue-richtexteditor';
+import { MentionComponent } from '@syncfusion/ej2-vue-dropdowns';
+import { DropDownButtonComponent } from '@syncfusion/ej2-vue-splitbuttons';
+export default {
+  components: {
+    'ejs-richtexteditor': RichTextEditorComponent,
+    'ejs-mention': MentionComponent,
+    'ejs-dropdownbutton': DropDownButtonComponent,
+  },
   data() {
     return {
-     selection: new NodeSelection(),
+      selection: new NodeSelection(),
       saveInterval: 1,
       ranges: null,
       saveSelection: null,
@@ -96,12 +98,14 @@ new Vue({
           'SourceCode', '|', 'Undo', 'Redo',
         ],
       },
-    }
+    };
   },
-  provide: {
-    richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
+  provide() {
+    return {
+      richtexteditor: [Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, Video, Audio, PasteCleanup],
+    };
   },
-   methods: {
+  methods: {
     onDropDownClose() {
       if (this.$refs.rteObj && this.$refs.rteObj.ej2Instances) {
   this.$refs.rteObj.ej2Instances.focusIn();
@@ -158,6 +162,18 @@ new Vue({
         return value !== undefined ? value : match;
       });
     },
-  }
-});
-{% endraw %}
+  },
+};
+</script>
+
+
+<style>
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
+</style>
