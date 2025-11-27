@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data labels in Vue Chart component
 
-Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings/#visible)
+Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#visible)
 option in the dataLabel. By default, the labels will arrange smartly without overlapping.
 
 {% tabs %}
@@ -28,7 +28,7 @@ option in the dataLabel. By default, the labels will arrange smartly without o
 
 ## Position
 
-Using [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings/#position) property, you can place the label either on
+Using [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#position) property, you can place the label either on
 `Top`, `Middle`,`Bottom` or `Outer` (outer is applicable for column and bar type series).
 
 {% tabs %}
@@ -46,7 +46,7 @@ Using [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLa
 
 ## Data Label Template
 
-Label content can be formatted by using the template option. Inside the template, you can add the placeholder text `${point.x}` and `${point.y}` to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings/#template) property, you can set data label template in chart.
+Label content can be formatted by using the template option. Inside the template, you can add the placeholder text `${point.x}` and `${point.y}` to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#template) property, you can set data label template in chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,7 +76,7 @@ Text from the data source can be mapped using `name` property.
 
 ## Format
 
-Data label for the chart can be formatted using [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings/#format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
+Data label for the chart can be formatted using [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -195,7 +195,7 @@ can be customized using `rx` and `ry` properties.
 
 ## Customizing Specific Point
 
-You can also customize the specific marker and label using [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs/)and[`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iTextRenderEventArgs/) event. `pointRender` event allows you to change the shape, color and border for a point, whereas the `textRender` event allows you to change the text for the point.
+You can also customize the specific marker and label using [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs)and[`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iTextRenderEventArgs) event. `pointRender` event allows you to change the shape, color and border for a point, whereas the `textRender` event allows you to change the text for the point.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -222,3 +222,39 @@ You can calculate the percentage value based on the sum for each series using th
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs9" %}
+
+## Last value label in Vue Chart component
+
+The `lastValueLabel` in a chart allows you to easily display the value of the last data point in a series. This feature provides an intuitive way to highlight the most recent or last data value in a series on your chart.
+
+### Enable last value label
+
+To show the last value label, make sure the `enable` property inside the `lastValueLabel` settings is set to `true` within the series configuration. 
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/last-value-label/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/last-value-label/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/last-value-label" %}
+
+> Note: To use the last value label feature, inject `LastValueLabel` module into the `provide`.
+
+### Customization
+
+The appearance of the last value label can be customized using style properties such as `font`, `background`, `border`, `dashArray`, `lineWidth`, `lineColor`, `rx`, and `ry` in the lastValueLabel property of the chart series. These settings allow you to tailor the label’s look to align with your desired visual presentation.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/last-value-label-customization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/last-value-label-customization/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/last-value-label-customization" %}
