@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview in Vue Visual studio code integration component | Syncfusion
+title: Overview in Vue Visual studio code integration | Syncfusion
 description: Learn here all about Overview in Syncfusion Vue Visual studio code integration component of Syncfusion Essential JS 2 and more.
 control: Overview 
 platform: ej2-vue
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio Web extension for Visual Studio Code allows you to use the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript components(React, Angular, and Vue) easily by configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages and themes.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio Web extension for Visual Studio Code allows you to use the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript components(React, Pure React,  Angular, and Vue) easily by configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages and themes.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Web Extension provides the following support in Visual Studio Code:
 
