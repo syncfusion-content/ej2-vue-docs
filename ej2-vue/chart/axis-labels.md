@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Smart Axis Labels
 
-When the axis labels overlap with each other, you can use [`labelIntersectAction`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#labelintersectaction) property in the axis, to place them smartly.
+When the axis labels overlap with each other, you can use [`labelIntersectAction`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#labelintersectaction) property in the axis, to place them smartly.
 
 When setting `labelIntersectAction` as `Hide`
 
@@ -160,7 +160,7 @@ are `Rectangle`, `Brace`, `WithoutBorder`, `WithoutTopBorder`, `WithoutTopandBot
 
 ## Edge Label Placement
 
-Labels with long text at the edges of an axis may appear partially in the chart. To avoid this, use [`edgeLabelPlacement`](https://ej2.syncfusion.com/vue/documentation/api/chart/axisModel/#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it. By default, the [`edgeLabelPlacement`](https://ej2.syncfusion.com/vue/documentation/api/chart/axisModel/#edgelabelplacement) property is set to **Shift** to ensure that labels are shifted inside the chart area, avoiding any overlap or coincidence.
+Labels with long text at the edges of an axis may appear partially in the chart. To avoid this, use [`edgeLabelPlacement`](https://ej2.syncfusion.com/vue/documentation/api/chart/axisModel#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it. By default, the [`edgeLabelPlacement`](https://ej2.syncfusion.com/vue/documentation/api/chart/axisModel#edgelabelplacement) property is set to **Shift** to ensure that labels are shifted inside the chart area, avoiding any overlap or coincidence.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -175,7 +175,7 @@ Labels with long text at the edges of an axis may appear partially in the chart.
 
 ## Labels Customization
 
-The [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#labelplacement) property of an axis provides options to customize the
+The [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#labelplacement) property of an axis provides options to customize the
 `color`, `font-family`, `font-size` and `font-weight` of the axis labels.
 
 {% tabs %}
@@ -206,7 +206,7 @@ You can customize the specific text in the axis labels using `axisLabelRender` e
 
 ## Trim using maximum label width
 
-You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#enabletrim) property and width of the labels can also be customized using [`maximumLabelWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#maximumlabelwidth) property in the axis, the value maximum label width is `34` by default.
+You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#enabletrim) property and width of the labels can also be customized using [`maximumLabelWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#maximumlabelwidth) property in the axis, the value maximum label width is `34` by default.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -233,3 +233,18 @@ Line break feature used to customize the long axis label text into multiple line
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs19" %}
+
+## Axis label template
+
+The axis label template allows you to customize axis labels by formatting them with HTML content, applying conditional styling, and including dynamic elements such as icons, images or additional data. This customization is enabled by setting the template content in the [labelTemplate](https://ej2.syncfusion.com/vue/documentation/api/chart/axismodel#labelTemplate) property of the `AxisModel`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs46/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs46/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs46" %}

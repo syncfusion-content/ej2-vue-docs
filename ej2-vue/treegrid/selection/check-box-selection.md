@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 Checkbox Selection provides an option to select multiple TreeGrid records with help of checkbox in each row.
 
 To render checkbox in each treegrid row, you need to use checkbox column with type as `CheckBox` using
-column [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#type) property.
+column [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#type) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,16 +27,16 @@ column [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column
 {% previewsample "page.domainurl/code-snippet/treegrid/selection/default-cs2" %}
 
 > By default selection is allowed by clicking a treegrid row or checkbox in that row. To allow Selection only through checkbox, you can set
-[`selectionSettings.checkboxOnly`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings/#checkboxonly) property to true.
+[`selectionSettings.checkboxOnly`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings#checkboxonly) property to true.
 > Selection can be persisted on all the operations
-using [`selectionSettings.persistSelection`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings/#persistselection) property.
+using [`selectionSettings.persistSelection`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings#persistselection) property.
 For persisting selection on the TreeGrid, any one of the column should be defined as a primary key
-using [`columns.isPrimaryKey`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#isprimarykey) property.
+using [`columns.isPrimaryKey`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#isprimarykey) property.
 
 ## Checkbox selection mode
 
 In checkbox selection, selection can also be done by clicking on rows. This selection provides two types of Checkbox Selection mode which can be set by using the following API,
-[`selectionSettings.checkboxMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings/#checkboxmode). The modes are;
+[`selectionSettings.checkboxMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings#checkboxmode). The modes are;
 
 * **`Default`**: This is the default value of the checkboxMode. In this mode, user can select multiple rows by clicking rows one by one.
 * **`ResetOnRowClick`**: In ResetOnRowClick mode, when user clicks on a row it will reset previously selected row. Also you can perform multiple-selection in this mode by press and hold CTRL key and click the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
@@ -54,9 +54,9 @@ In checkbox selection, selection can also be done by clicking on rows. This sele
 
 > Checkbox Selection feature is intended for row selection only; it is not compatible with cell selection mode.
 
-## Conditional row selection using isRowSelectable
+## Conditional row selection
 
-The TreeGrid supports conditional row selection through the [isRowSelectable](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#isRowSelectable) property. This feature enables dynamic business logic to determine which rows can be selected, ensuring that only rows meeting specific conditions are selectable. The `isRowSelectable` property accepts a function that evaluates each row’s data and returns **true** to enable selection or **false** to disable it. The function is executed for the entire data source before rendering, making it suitable for scenarios where selection must be restricted based on criteria.
+The TreeGrid supports conditional row selection through the [isRowSelectable](https://ej2.syncfusion.com/vue/documentation/api/treegrid#isRowSelectable) property. This feature enables dynamic business logic to determine which rows can be selected, ensuring that only rows meeting specific conditions are selectable. The `isRowSelectable` property accepts a function that evaluates each row’s data and returns **true** to enable selection or **false** to disable it. The function is executed for the entire data source before rendering, making it suitable for scenarios where selection must be restricted based on criteria.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -66,3 +66,39 @@ The TreeGrid supports conditional row selection through the [isRowSelectable](ht
 {% include code-snippet/treegrid/selection/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+In this sample, checkbox selection is disabled for rows where the "Progress" column has the value **"Completed"**.
+
+## Checkbox Selection In Tree Column
+
+1. ### Enable checkboxes in tree column
+
+    To render checkboxes in tree column, you need to set `columns.showCheckbox` property as `true`.
+
+   It is possible to select rows hierarchically using checkboxes in TreeGrid by enabling the `autoCheckHierarchy` property. When a parent record’s checkbox is checked, the checkboxes of its child records are automatically selected and vice-versa.
+
+    {% tabs %}
+    {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+    {% include code-snippet/treegrid/columns/default-cs13/app-composition.vue %}
+    {% endhighlight %}
+    {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+    {% include code-snippet/treegrid/columns/default-cs13/app.vue %}
+    {% endhighlight %}
+    {% endtabs %}
+        
+    {% previewsample "page.domainurl/code-snippet/treegrid/columns/default-cs13" %}
+
+2. ### Column cell checkbox support for row selection in virtualization
+
+    The TreeGrid component is designed to handle large datasets while providing flexible checkbox selection with virtualization enabled. The [`showCheckbox`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/columnmodel#showcheckbox) property property displays checkboxes in tree column cells, allowing users to select or deselect them directly. This functionality is enabled by setting the property to "**true**". Similarly, the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#enablevirtualization) property enhances performance by rendering only the visible rows and columns during scrolling. This feature is activated by setting the property to "**true**".
+
+    {% tabs %}
+    {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+    {% include code-snippet/treegrid/selection/default-cs8/app-composition.vue %}
+    {% endhighlight %}
+    {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+    {% include code-snippet/treegrid/selection/default-cs8/app.vue %}
+    {% endhighlight %}
+    {% endtabs %}
+        
+    {% previewsample "page.domainurl/code-snippet/treegrid/selection/default-cs8" %}
