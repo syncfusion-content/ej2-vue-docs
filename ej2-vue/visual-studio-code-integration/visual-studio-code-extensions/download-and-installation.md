@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Download and installation in Vue Visual studio code integration component | Syncfusion
+title: Download and installation in Visual studio code | Syncfusion
 description: Learn here all about Download and installation in Syncfusion Vue Visual studio code integration component of Syncfusion Essential JS 2 and more.
 control: Download and installation 
 platform: ej2-vue
@@ -14,7 +14,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio Cod
 
 ## Prerequisites
 
-The following prerequisites software needs to be installed for the Syncfusion<sup style="font-size:70%">&reg;</sup> Web extension installation and for creating the Syncfusion<sup style="font-size:70%">&reg;</sup> Web applications along with any one of the Framework(React, Angular, and Vue).
+The following prerequisites software needs to be installed for the Syncfusion<sup style="font-size:70%">&reg;</sup> Web extension installation and for creating the Syncfusion<sup style="font-size:70%">&reg;</sup> Web applications along with any one of the Framework(React, Pure React, Angular, and Vue).
 
 * [Visual Studio Code](https://code.visualstudio.com/download)
 

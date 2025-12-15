@@ -2,7 +2,7 @@ import Vue from "vue";
 import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar, Table, CodeBlock } from "@syncfusion/ej2-vue-richtexteditor";
 import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
 Vue.use(RichTextEditorPlugin);
-Vue.use(RichTextEditorPlugin);
+Vue.use(SliderPlugin);
 
 new Vue({
 	el: '#app',

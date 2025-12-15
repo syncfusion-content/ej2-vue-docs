@@ -1,3 +1,4 @@
+{% raw %}
 import Vue from 'vue';
 import { RichTextEditorPlugin, Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table, Video, NodeSelection, Audio, PasteCleanup } from '@syncfusion/ej2-vue-richtexteditor';
 import { MentionPlugin } from '@syncfusion/ej2-vue-dropdowns';
@@ -159,3 +160,4 @@ new Vue({
     },
   }
 });
+{% endraw %}
