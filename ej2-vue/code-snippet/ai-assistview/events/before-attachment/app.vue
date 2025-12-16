@@ -1,7 +1,7 @@
 <template>
   <div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
     <br />
-    <ejs-aiassistview id="aiAssistView" ref="aiassist" :promptRequest="onPromptRequest" :enableAttachments="true" :attachmentSettings="attachmentSettings"
+    <ejs-aiassistview id="aiAssistView" ref="aiassist" :beforeAttachmentUpload="beforeAttachmentUpload" :promptRequest="onPromptRequest" :enableAttachments="true" :attachmentSettings="attachmentSettings"
     ></ejs-aiassistview>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
         aiAssistInstance.addPromptResponse(defaultResponse);
       }, 1000);
     },
-    beforeAttachmentUpload() {
+    beforeAttachmentUpload(args) {
       // your code will be here
     }
   }

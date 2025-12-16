@@ -1,7 +1,7 @@
 <template>
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <br>
-    <ejs-chatui></ejs-chatui>
+    <ejs-chatui :user="currentUser"></ejs-chatui>
   </div>
 </template>
 <script>
@@ -13,6 +13,10 @@ export default {
   },
   data () {
     return {
+      currentUser: {
+        id: "user1",
+        user: "Albert",
+      }
     }
   }
 }

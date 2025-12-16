@@ -29,42 +29,42 @@ export default {
       blocksData : [
           {
             id: 'heading-block',
-            type: 'Heading',
+            blockType: 'Heading',
             props: { level: 1},
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Welcome to Block Editor'
                 }
             ]
         },
         {
             id: 'paragraph-1',
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
                     id: 'paragraph1-content',
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'This is the first paragraph with some sample text content for selection demonstration.'
                 }
             ]
         },
         {
             id: 'paragraph-2',
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'This is the second paragraph that can be used for various selection operations.'
                 }
             ]
         },
         {
             id: 'list-block',
-            type: 'BulletList',
+            blockType: 'BulletList',
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'First list item'
                 }
             ]
@@ -133,10 +133,12 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

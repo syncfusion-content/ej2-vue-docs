@@ -1,6 +1,6 @@
 <template>
   <div style="height: 380px; width: 450px; margin: 0 auto;">
-    <ejs-chatui 
+    <ejs-chatui :user="currentUserModel"
       :mentionUsers="mentionUsers" 
       :mentionSelect="mentionSelect" 
     ></ejs-chatui>

@@ -1,6 +1,6 @@
 <template>
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
-    <ejs-chatui :userTyping="userTyping"></ejs-chatui>
+    <ejs-chatui :userTyping="userTyping" :user="currentUser"></ejs-chatui>
   </div>
 </template>
 
@@ -13,6 +13,10 @@ export default {
   },
   data() {
     return {
+      currentUser: {
+        id: "user1",
+        user: "Albert",
+      },
       userTyping: () => {
         // Your required action here
       }

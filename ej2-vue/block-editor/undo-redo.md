@@ -22,7 +22,7 @@ The undo/redo feature in Block Editor enables users to revert or reapply changes
 
 ## Configuring Undo/Redo stack
 
-Block Editor allows up to `30` Undo/Redo actions by default. You can modify the number of undo/redo steps using the [undoRedoStack](../api/blockeditor/#undoRedoStack) property.
+The Block Editor stores a history of actions, allowing users to perform undo and redo operations. By default, it saves up to `30` actions. You can customize this limit using the [undoRedoStack](../api/blockeditor#undoRedoStack) property to control the maximum number of steps that can be undone or redone.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
