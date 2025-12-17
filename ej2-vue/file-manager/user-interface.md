@@ -34,7 +34,7 @@ The `Toolbar` provides easy access to the file operations using different button
 
 If the toolbar items exceed its size, the extra items will move to a toolbar popup accessible via a dropdown button.
 
-*Refer [Toolbar](./file-operations/#toolbar) section in file operations to know more about the buttons present in toolbar*.
+*Refer [Toolbar](./file-operations#toolbar) section in file operations to know more about the buttons present in toolbar*.
 
 ![Toolbar](./images/toolbar.png)
 
@@ -47,9 +47,13 @@ The File Manager provides navigation between files and folders using the followi
 
 ### Navigation pane
 
-The navigation pane is an injectable module, so it should be injected before rendering the File Manager to use its functionality. It displays the folder hierarchy of the file system and provides easy navigation to the desired folder. Using [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) minimum and maximum width of the navigation pane can be changed. The navigation pane can be shown or hidden using the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/file-manager/navigationPaneSettingsModel/#visible) option in the [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) property.
+The navigation pane is an injectable module, so it should be injected before rendering the File Manager to use its functionality. It displays the folder hierarchy of the file system and provides easy navigation to the desired folder. Using [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#navigationpanesettings) minimum and maximum width of the navigation pane can be changed. The navigation pane can be shown or hidden using the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/file-manager/navigationPaneSettingsModel#visible) option in the [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#navigationpanesettings) property.
 
 ![Navigation Pane](./images/filemanager-navigationpane.png)
+
+You can customize the appearance of the navigation pane by using the `navigationPaneTemplate` property. This enables you to modify icons, display text, and include additional elements to suit your application's requirements.
+
+![Navigation Pane Template Output](./images/navigationpane-template.png)
 
 ### Breadcrumb
 
@@ -65,7 +69,7 @@ View is the section where the files and folders are displayed for the user to br
 * [Large Icons View](#large-icons-view)
 * [Details View](#details-view)
 
-The `large icons view` is the default starting view in the File Manager. The view can be changed by using the [toolbar](#toolbar) view button or by using the view menu in [context menu](#context-menu). The [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) API can also be used to change the initial view of the File Manager.
+The `large icons view` is the default starting view in the File Manager. The view can be changed by using the [toolbar](#toolbar) view button or by using the view menu in [context menu](#context-menu). The [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#view) API can also be used to change the initial view of the File Manager.
 
 ### Large icons view
 
@@ -73,9 +77,13 @@ In the large icons view, thumbnails are shown in a larger size optimized for con
 
 ![LargeIconView](./images/largeiconsview.png)
 
+The `largeIconsTemplate` property enables complete customization of how folders and files are rendered in the `Large Icons View`. It allows you to enhance the layout by adding background images, custom file-type icons, and actions such as dropdown menus.
+
+![Large Icon View Template Output](./images/large-icons-view-template.png)
+
 ### Details view
 
-Details view is an injectable module in the File Manager, so it should be injected before rendering the File Manager to avail its functionality. In the details view, the files are displayed in a sorted list order. This file list includes columns like **Name**, **Date Modified**, **Type**, and **Size**. Each file has its own small icon representing the file type. Additional columns can be added using [detailsViewSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#detailsviewsettings) API. The details view allows you to perform sorting using column header.
+Details view is an injectable module in the File Manager, so it should be injected before rendering the File Manager to avail its functionality. In the details view, the files are displayed in a sorted list order. This file list includes columns like **Name**, **Date Modified**, **Type**, and **Size**. Each file has its own small icon representing the file type. Additional columns can be added using [detailsViewSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#detailsviewsettings) API. The details view allows you to perform sorting using column header.
 
 ![DetailsView](./images/detailsview.png)
 
@@ -83,8 +91,8 @@ Details view is an injectable module in the File Manager, so it should be inject
 
 The context menu appears on user interaction such as right-click. The File Manager is provided with context menu support to perform list of file operations with the files and folders. Context menu appears with varying menu items based on the targets such as file, folder (including navigation pane folders),  and layout (empty area in view).
 
-The context menu can be customized using the [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#contextmenusettings), [menuOpen](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#menuopen), and [menuClick](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#menuclick) events.
+The context menu can be customized using the [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#contextmenusettings), [menuOpen](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#menuopen), and [menuClick](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#menuclick) events.
 
-*Refer [Context Menu](./file-operations/#context-menu) section in file operations to know more about the menu items present in context menu*.
+*Refer [Context Menu](./file-operations#context-menu) section in file operations to know more about the menu items present in context menu*.
 
 ![Context Menu](./images/contextmenu.png)
