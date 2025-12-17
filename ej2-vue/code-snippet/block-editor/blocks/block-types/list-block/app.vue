@@ -15,42 +15,42 @@ export default {
     return {
       blocksData: [
           {
-              type: 'BulletList',
+              blockType: 'BulletList',
               content: [
                   {
-                      type: ContentType.Text,
+                      contentType: ContentType.Text,
                       content: 'Features of the Block Editor'
                   }
               ]
           },
           {
-              type: 'NumberedList',
+              blockType: 'NumberedList',
               content: [
                   {
-                      type: ContentType.Text,
+                      contentType: ContentType.Text,
                       content: 'Step 1: Initialize the Block Editor'
                   }
               ]
           },
           {
-              type: 'Checklist',
+              blockType: 'Checklist',
               content: [
                   {
-                      type: ContentType.Text,
+                      contentType: ContentType.Text,
                       content: 'Review documentation'
                   }
               ],
-              props: { isChecked: true }
+              properties: { isChecked: true }
           },
           {
-              type: 'Checklist',
+              blockType: 'Checklist',
               content: [
                   {
-                      type: ContentType.Text,
+                      contentType: ContentType.Text,
                       content: 'Implement drag and drop functionality'
                   }
               ],
-              props: { isChecked: false }
+              properties: { isChecked: false }
           }
       ]
     };
@@ -62,10 +62,12 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

@@ -36,13 +36,11 @@ Column spanning in the Vue TreeGrid has the following limitations:
 
 > When using column spanning, ensure that the spanned cells do not interfere with TreeGrid operations such as sorting, filtering, or editing, as this may lead to unexpected behavior.
 
-## Column spanning using enableColumnSpan property
+## Column spanning via API
 
-The Syncfusion Vue TreeGrid introduces a simplified approach to horizontally merge cells with identical values in the same row across adjacent columns.
+The column spanning feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid allows automatically merging cells with identical values in the same row across consecutive columns. This significantly enhances readability and delivers a cleaner layout by eliminating repetitive data such as "Status", "Permit Status", "Inspection Status" and "Punch List Status".
 
-The column spanning feature in the Syncfusion Vue TreeGrid can be enabled using `enableColumnSpan` property which significantly enhances readability and delivers a clean, professional look by eliminating repetitive data in columns such as "Status", "Permit Status", "Inspection Status" and "Punch List Status".
-
-To enable column spanning, set the `enableColumnSpan` property to **true** in the TreeGrid configuration.
+To enable column spanning, set the `enableColumnSpan` property to `true` in the Tree Grid configuration.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -55,11 +53,11 @@ To enable column spanning, set the `enableColumnSpan` property to **true** in th
         
 {% previewsample "page.domainurl/code-snippet/treegrid/columns/column-spanning-cs2" %}
 
-> In the sample, column spanning is disabled at the column level for the price based columns such as "Planned Budget" and "Actual Spend" by setting each column's `enableColumnSpan` property to **false**.
+> In the sample, column spanning is disabled at the column level for the price based columns such as "Planned Budget" and "Actual Spend" by setting each column's `enableColumnSpan` property to `false`.
 
 ### Limitations
 
-Column spanning feature is not compatible with all the features which are available in TreeGrid and it has limited features support. Here we have listed out the features which are not compatible with column spanning feature.
+The column spanning feature is not compatible with all functionalities available in TreeGrid and offers only limited feature support. The following list outlines the features that are not compatible with column spanning.
 
 * Virtualization
 * Infinite Scrolling
@@ -68,7 +66,3 @@ Column spanning feature is not compatible with all the features which are availa
 * Detail Template
 * Editing
 * Export
-
-## See Also
-
-* [Row spanning in Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid](https://ej2.syncfusion.com/vue/documentation/treegrid/row/row-spanning)

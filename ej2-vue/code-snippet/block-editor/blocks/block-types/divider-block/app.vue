@@ -15,22 +15,22 @@ export default {
     return {
       blocksData: [
           {
-              type: 'Paragraph',
+              blockType: 'Paragraph',
               content: [
                   {
-                      type: ContentType.Text,
+                      contentType: ContentType.Text,
                       content: 'This section discusses the features of the Block Editor.'
                   }
               ]
           },
           {
-              type: 'Divider'
+              blockType: 'Divider'
           },
           {
-              type: 'Paragraph',
+              blockType: 'Paragraph',
               content: [
                   {
-                      type: ContentType.Text,
+                      contentType: ContentType.Text,
                       content: 'This section covers implementation details and usage examples.' 
                   }
               ]
@@ -45,10 +45,12 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id='container'>
-    <ejs-blockeditor :blocks="blocksData" :pasteSettings="pasteSettings" :afterPaste="afterPaste"></ejs-blockeditor>
+    <ejs-blockeditor :blocks="blocksData" :pasteCleanupSettings="pasteCleanupSettings" :afterPasteCleanup="afterPasteCleanup"></ejs-blockeditor>
     <div id="controls">
         <h4>Test Content to Copy and Paste:</h4>
         <div class="test-content">
@@ -27,15 +27,14 @@ import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blo
 
 const blocksData = [
     {
-        id: 'demo-block',
-        type: 'Paragraph'
+        blockType: 'Paragraph'
     }
 ];
-const pasteSettings= {
+const pasteCleanupSettings= {
         keepFormat: false,
         plainText: true,
     };
-const afterPaste= (args) => {
+const afterPasteCleanup= (args) => {
     displayOutput(`After Paste Event: Processed content length: ${args.content.length} characters`);
 };
 
@@ -56,11 +55,12 @@ onMounted(() => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

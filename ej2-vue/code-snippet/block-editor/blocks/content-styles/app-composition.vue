@@ -5,26 +5,26 @@
 </template>
 
 <script setup>
-import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
+import { BlockEditorComponent as EjsBlockeditor, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 const blocksData = [
     {
-        type: 'Heading',
-        props: { level: 2 },
+        blockType: 'Heading',
+        properties: { level: 2 },
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Content Styling Options'
             }
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Bold text: ',
-                props: {
+                properties: {
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -32,9 +32,9 @@ const blocksData = [
                 }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text is bold.',
-                props: {
+                properties: {
                 styles: { 
                     bold: true 
                 }
@@ -43,12 +43,12 @@ const blocksData = [
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Italic text: ',
-                props: {
+                properties: {
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -56,9 +56,9 @@ const blocksData = [
                 }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text is italicized.',
-                props: {
+                properties: {
                 styles: { 
                     italic: true 
                 }
@@ -67,12 +67,12 @@ const blocksData = [
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Text with color: ',
-                props: {
+                properties: {
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -80,9 +80,9 @@ const blocksData = [
                 }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text has custom color.',
-                props: {
+                properties: {
                 styles: { 
                     color: '#e91e63' 
                 }
@@ -91,12 +91,12 @@ const blocksData = [
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Text with background: ',
-                props: {
+                properties: {
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -104,23 +104,23 @@ const blocksData = [
                 }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text has background color.',
-                props: {
+                properties: {
                 styles: { 
-                    bgColor: '#fff9c4' 
+                    backgroundColor: '#fff9c4' 
                 }
                 }
             }
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Multiple styles: ',
-                props: {
+                properties: {
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -128,9 +128,9 @@ const blocksData = [
                 }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text combines multiple styles.',
-                props: {
+                properties: {
                 styles: { 
                     bold: true,
                     italic: true,
@@ -146,11 +146,12 @@ const blocksData = [
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

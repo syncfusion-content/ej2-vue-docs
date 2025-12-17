@@ -16,79 +16,80 @@
 </template>
 
 <script setup>
-import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
+import { ref } from "vue";
+import { BlockEditorComponent as EjsBlockeditor, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 let blockEditor=ref(null);
 
 const blocksData = [
      {
         id: 'title-block',
-        type: 'Heading',
-        props: { level: 1},
+        blockType: 'Heading',
+        properties: { level: 1},
         content: [
             {
-                type: ej.blockeditor.ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Document Export Demo'
             }
         ]
     },
     {
         id: 'intro-block',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ej.blockeditor.ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This document demonstrates the data export capabilities of the Block Editor. You can export content as JSON or HTML formats.'
             }
         ]
     },
     {
         id: 'feature-heading',
-        type: 'Heading',
-        props: { level: 2},
+        blockType: 'Heading',
+        properties: { level: 2},
         content: [
             {
-                type: ej.blockeditor.ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Export Features'
             }
         ]
     },
     {
         id: 'features-list',
-        type: 'BulletList',
+        blockType: 'BulletList',
         content: [
             {
-                type: ej.blockeditor.ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'JSON export for data processing'
             }
         ]
     },
     {
         id: 'features-list-2',
-        type: 'BulletList',
+        blockType: 'BulletList',
         content: [
             {
-                type: ej.blockeditor.ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'HTML export for web display'
             }
         ]
     },
     {
         id: 'features-list-3',
-        type: 'BulletList',
+        blockType: 'BulletList',
         content: [
             {
-                type: ej.blockeditor.ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Print functionality for hard copies'
             }
         ]
     },
     {
         id: 'code-example',
-        type: 'Code',
+        blockType: 'Code',
         content: [
             {
-                type: ej.blockeditor.ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'const data = editor.getDataAsJson();\nconsole.log(data);'
             }
         ]
@@ -128,11 +129,12 @@ const displayOutput=(message)=> {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

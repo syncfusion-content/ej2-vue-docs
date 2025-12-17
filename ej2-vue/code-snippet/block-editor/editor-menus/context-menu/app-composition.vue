@@ -1,6 +1,6 @@
 <template>
   <div id='container'>
-    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :contextMenu="contextMenu"></ejs-blockeditor>
+    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :contextMenuSettings="contextMenuSettings"></ejs-blockeditor>
     <div id="controls">
         <h3>Context Menu Configuration Demo</h3>
         <div class="instructions">
@@ -16,26 +16,24 @@
 </template>
 
 <script setup>
-import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
+import { BlockEditorComponent as EjsBlockeditor, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
-const blockData = [
+const blocksData = [
     {
-        id: 'title-block',
-        type: 'Heading',
-        props: { level: 1},
+        blockType: 'Heading',
+        properties: { level: 1},
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Context Menu Demo'
             }
         ]
     },
     {
-        id: 'intro-block',
-        type: 'Quote',
+        blockType: 'Quote',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Right-click anywhere in this editor to open the custom context menu. Try different areas and blocks.'
             }
         ]
@@ -94,59 +92,17 @@ const customContextMenuItems = [
     }
 ];
 
-const blockActionsMenu= {
-        enable: true,
-        popupWidth: '180px',
-        popupHeight: '110px',
-        enableTooltip: false,
-        // Custom action items
-        items: [
-            {
-                id: 'highlight-action',
-                label: 'Highlight Block',
-                iconCss: 'e-icons e-highlight',
-                tooltip: 'Highlight this block'
-            },
-            {
-                id: 'copy-content-action',
-                label: 'Copy Content',
-                iconCss: 'e-icons e-copy',
-                tooltip: 'Copy block content to clipboard'
-            },
-            {
-                id: 'block-info-action',
-                label: 'Block Info',
-                tooltip: 'Show block information'
-            }
-        ],
-        open: () => {
-            // Your actions here
-        },
-        close: () => {
-            // Your actions here
-        },
-        itemClick: () => {
-            // Handle custom block actions
-        }
-    };
-
-    const contextMenu= {
+    const contextMenuSettings= {
         enable: true,
         showItemOnClick: true,
         items: customContextMenuItems,
-        beforeOpen: (args) => {
+        opening: () => {
             // Your actions here
         },
-        open: (args) => {
+        closing: () => {
             // Your actions here
         },
-        beforeClose: (args) => {
-            // Your actions here
-        },
-        close: (args) => {
-            // Your actions here
-        },
-        itemClick: (args) => {
+        itemSelect: () => {
             // Handle custom actions here
         }
     };
@@ -154,11 +110,12 @@ const blockActionsMenu= {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

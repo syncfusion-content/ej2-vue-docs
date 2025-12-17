@@ -1,6 +1,6 @@
 <template>
   <div id='container'>
-    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :commandMenu="commandMenu"></ejs-blockeditor>
+    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :commandMenuSettings="commandMenuSettings"></ejs-blockeditor>
     <div id="controls">
         <h3>Slash Command Menu Configuration Demo</h3>
         <div class="instructions">
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { BlockEditorComponent } from "@syncfusion/ej2-vue-blockeditor";
+import { BlockEditorComponent, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 export default {
   components: {
@@ -28,46 +28,38 @@ export default {
     return {
       blocksData: [
         {
-            id: 'demo-block',
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Type "/" anywhere in this editor to open the custom slash command menu.'
                 }
             ]
         }
       ],
-      commandMenu: {
+      commandMenuSettings: {
         popupWidth: '350px',
         popupHeight: '400px',
-        enableTooltip: false,
         // Custom command items
         commands: [
             {
                 id: 'line-cmd',
-                type: BlockType.Divider,
-                groupHeader: 'Utility',
+                type: 'Divider',
+                groupBy: 'Utility',
                 label: 'Insert a Line',
                 iconCss: 'e-icons e-divider',
             },
             {
                 id: 'timestamp-cmd',
-                groupHeader: 'Actions',
+                groupBy: 'Actions',
                 label: 'Insert Timestamp',
                 iconCss: 'e-icons e-schedule',
             }
         ],
-        itemClicked: (args) => {
+        itemSelect: () => {
             // Handle custom command actions
         },
-        open: (args) => {
-            // Your actions here
-        },
-        close: (args) => {
-            // Your actions here
-        },
-        queryFiltering: (args) => {
+        filtering: () => {
             // Your actions here
         }
       }
@@ -80,10 +72,12 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

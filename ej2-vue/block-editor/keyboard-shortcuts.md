@@ -76,6 +76,6 @@ These shortcuts cover general editor functionality including undo/redo operation
 
 You can customize menu level shortcuts such as `Slash Command Menu`, `Block Action Menu` and `Context Menu` on the respective menu settings config by modifying it's `shortcut` property.
 
-For other operations, you can customize the keyboard shortcuts by configuring the [keyConfig](../api/blockeditor/#keyconfig)` property when initializing the Block Editor. This allows you to override default shortcuts or add new ones according to your application's requirements.
+For other operations, you can customize the keyboard shortcuts by configuring the [keyConfig](../api/blockeditor#keyconfig) property when initializing the Block Editor component. This allows you to override default shortcuts or add new ones according to your application's requirements.
 
 In the below example, the shortcut for bold formatting is changed to <kbd>Alt</kbd> + <kbd>B</kbd> and for italic formatting to <kbd>Alt</kbd> + <kbd>I</kbd>.

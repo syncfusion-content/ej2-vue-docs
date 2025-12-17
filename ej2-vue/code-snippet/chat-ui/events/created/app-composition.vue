@@ -1,6 +1,6 @@
 <template>
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
-    <ejs-chatui :created="created"></ejs-chatui>
+    <ejs-chatui :created="created" :user="currentUser"></ejs-chatui>
   </div>
 </template>
 
@@ -9,6 +9,11 @@ import { ChatUIComponent as EjsChatui } from "@syncfusion/ej2-vue-interactive-ch
 
 const created = () => {
   // Your required action here
+};
+
+const currentUser = {
+  id: "user1",
+  user: "Albert"
 };
 
 </script>

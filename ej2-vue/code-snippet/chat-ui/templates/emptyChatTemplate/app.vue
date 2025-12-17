@@ -1,6 +1,6 @@
 <template>
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
-    <ejs-chatui emptyChatTemplate="emptyChatTemplate">
+    <ejs-chatui emptyChatTemplate="emptyChatTemplate" :user="currentUser">
       <template v-slot:emptyChatTemplate="">
         <div class="empty-chat-text">
             <h4><span class="e-icons e-comment-show"></span></h4>
@@ -13,23 +13,17 @@
 </template>
 
 <script>
-import { ChatUIComponent, MessagesDirective, MessageDirective } from "@syncfusion/ej2-vue-interactive-chat";
+import { ChatUIComponent } from "@syncfusion/ej2-vue-interactive-chat";
 
 export default {
   components: {
-    'ejs-chatui': ChatUIComponent,
-    'e-messages': MessagesDirective,
-    'e-message': MessageDirective
+    'ejs-chatui': ChatUIComponent
   },
   data() {
     return {
       currentUser: {
         id: "user1",
         user: "Albert",
-      },
-      michaleUser: {
-        id: "user2",
-        user: "Michale Suyama",
       }
     };
   },

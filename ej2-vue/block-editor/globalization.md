@@ -62,7 +62,7 @@ The below example shows adding the German culture locale(`de-DE`)
 
 ## RTL
 
-RTL provides an option to switch the text direction and layout of the Block Editor control from right to left by setting the [enableRtl](../api/blockeditor/#enablertl) property to `true`.
+The Block Editor supports Right-to-Left (RTL) mode, which reverses the layout of the component to accommodate languages read from right to left, such as Arabic, Hebrew, and Persian. This feature can be enabled by setting the [enableRtl](../api/blockeditor#enablertl) property to `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

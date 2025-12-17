@@ -17,7 +17,7 @@ The Block Editor component provides a comprehensive set of public methods that a
 
 ### Adding a block
 
-you can add a new block to the editor at a specified position using the [addBlock](../api/blockeditor/#addblock) method. You can also insert the block before or after a target block.
+Add a new block to the editor at a specified position using the [addBlock](../api/blockeditor#addblock) method. This method can also insert the block before or after a target block.
 
 ```
 <template>
@@ -47,10 +47,10 @@ export default {
     addBlock: function() {
         const newBlock = {
             id: 'new-block',
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This is a newly added block'
             }
             ]
@@ -64,23 +64,23 @@ export default {
 
 ### Removing a block
 
-You can remove a block from the editor using the [removeBlock](../api/blockeditor/#removeblock) method.
+Remove a block from the editor using the [removeBlock](../api/blockeditor#removeblock) method.
 
 ### Moving a block
 
-You can move a block from one position to another within the editor using the [moveBlock](../api/blockeditor/#moveblock) method.
+Move a block from one position to another within the editor using the [moveBlock](../api/blockeditor#moveblock) method.
 
 ### Updating a block
 
-You can update the properties of an existing block using the [updateBlock](../api/blockeditor/#updateblock) method. Only the specified properties are modified while others remain unchanged. Returns `true` if the update was successful, `false` otherwise.
+Update the properties of an existing block with the [updateBlock](../api/blockeditor#updateblock) method. Only the specified properties are modified, while others remain unchanged. It returns `true` if the update was successful and `false` otherwise.
 
 ### Getting a block
 
-You can retrieve a block model by its unique identifier using the [getBlock](../api/blockeditor/#getblock) method. Returns `null` if the block is not found.
+Retrieve a block model by its unique identifier using the [getBlock](../api/blockeditor#getblock) method. It returns `null` if the block is not found.
 
 ### Getting block count
 
-You can utilize the [getBlockCount](../api/blockeditor/#getblockcount) method to retrieve the total number of blocks in the editor.
+Use the [getBlockCount](../api/blockeditor#getblockcount) method to retrieve the total number of blocks in the editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -97,31 +97,31 @@ You can utilize the [getBlockCount](../api/blockeditor/#getblockcount) method to
 
 ### Setting text selection
 
-You can set the text selection within a specific content element using start and end positions with the [setSelection](../api/blockeditor/#setselection) method.
+Set the text selection within a specific content element using start and end positions with the [setSelection](../api/blockeditor#setselection) method.
 
 ### Setting cursor position
 
-You can place the cursor at a specific position within a block using the [setCursorPosition](../api/blockeditor/#setcursorposition) method.
+Place the cursor at a specific position within a block using the [setCursorPosition](../api/blockeditor#setcursorposition) method.
 
 ### Getting selected blocks
 
-You can retrieve the currently selected blocks in the editor using the [getSelectedBlocks](../api/blockeditor/#getselectedblocks) method. Returns `null` if no blocks are selected.
+Retrieve the currently selected blocks in the editor with the [getSelectedBlocks](../api/blockeditor#getselectedblocks) method. It returns `null` if no blocks are selected.
 
 ### Getting selection range
 
-You can get the current selection range  in the editor using the [getRange](../api/blockeditor/#getrange) method. This method returns a `Range` object representing the selected text. Returns `null` if no selection is active.
+Get the current selection range in the editor using the [getRange](../api/blockeditor#getrange) method. This method returns a `Range` object representing the selected text, or `null` if no selection is active.
 
 ### Setting selection range
 
-You can set the selection range in the editor using the [selectRange](../api/blockeditor/#selectrange) method. This method accepts a `Range` object that defines the start and end positions of the selection within the editor.
+Set the selection range in the editor using the [selectRange](../api/blockeditor#selectrange) method. This method accepts a `Range` object that defines the start and end positions of the selection.
 
 ### Selecting a block
 
-You can select a specific block in the editor using the [selectBlock](../api/blockeditor/#selectblock) method.
+Select a specific block in the editor using the [selectBlock](../api/blockeditor#selectblock) method.
 
 ### Selecting all blocks
 
-You can select all blocks in the editor using the [selectAllBlocks](../api/blockeditor/#selectallblocks) method.
+Select all blocks in the editor using the [selectAllBlocks](../api/blockeditor#selectallblocks) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -138,25 +138,25 @@ You can select all blocks in the editor using the [selectAllBlocks](../api/block
 
 ### FocusIn
 
-You can utilize the [focusIn](../api/blockeditor/#focusin) method to give focus to the editor. This method ensures that the editor is ready for user input.
+Use the [focusIn](../api/blockeditor#focusin) method to programmatically set focus on the editor, making it ready for user input.
 
 ### FocusOut
 
-You can remove focus from the editor using the [focusOut](../api/blockeditor/#focusout) method. This method clears any active selections and makes the editor inactive for user input.
+Use the [focusOut](../api/blockeditor#focusout) method to programmatically remove focus from the editor. This clears any active selections and makes the editor inactive.
 
 ## Formatting Methods
 
 ### Executing toolbar action
 
-You can execute a built-in toolbar formatting command using the [executeToolbarAction](../api/blockeditor/#executetoolbaraction) method. This method is used to apply formatting such as bold, italic, or color to the selected text.
+Execute a built-in toolbar formatting command using the [executeToolbarAction](../api/blockeditor#executetoolbaraction) method. Use this to apply formatting such as bold, italic, or color to the selected text.
 
 ### Enabling toolbar items
 
-You can enable specific toolbar items in the inline toolbar using the [enableToolbarItems](../api/blockeditor/#enabletoolbaritems) method. This method accepts a single item or an array of items to be enabled.
+Enable specific items in the inline toolbar using the [enableToolbarItems](../api/blockeditor#enabletoolbaritems) method. This method accepts a single item or an array of items to enable.
 
 ### Disabling toolbar items
 
-You can disable specific toolbar items in the inline toolbar using the [disableToolbarItems](../api/blockeditor/#disabletoolbaritems) method. This method accepts a single item or an array of items to be disabled.
+Disable specific items in the inline toolbar using the [disableToolbarItems](../api/blockeditor#disabletoolbaritems) method. This method accepts a single item or an array of items to disable.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -173,21 +173,39 @@ You can disable specific toolbar items in the inline toolbar using the [disableT
 
 ### Getting data as JSON
 
-You can export the editor content in JSON format using the [getDataAsJson](../api/blockeditor/#getdataasjson) method. This method allows you to export all blocks or a specific block.
+Export the editor content in JSON format using the [getDataAsJson](../api/blockeditor#getdataasjson) method. This method allows exporting all blocks or a specific block.
 
 ### Getting data as HTML
 
-You can export the editor content in HTML format using the [getDataAsHtml](../api/blockeditor/#getdataashtml) method. This method allows you to export all blocks or a specific block.
+Export the editor content in HTML format using the [getDataAsHtml](../api/blockeditor#getdataashtml) method. This method allows exporting all blocks or a specific block.
 
-## Utility Methods
+### Rendering Blocks from JSON
 
-### Getting block count
+Renders blocks from JSON data using the [renderBlocksFromJson](../api/blockeditor#renderblocksfromjson) method. This method allows either replacing all existing content or inserting at the cursor position.
 
-You can utilize the [getBlockCount](../api/blockeditor/#getblockcount) method to retrieve the total number of blocks in the editor.
+```typescript
+// Replace all existing content
+const replaceAllBlocks = editor.renderBlocksFromJson(jsonData, true);
+
+// Insert at cursor (default behavior)
+// Insert at cursor without replacing existing blocks (default behavior)
+const insertedAtCursor = editor.renderBlocksFromJson(jsonData);
+
+// Insert after a specific block (only applicable when replace = false)
+const insertedAfterTarget = editor.renderBlocksFromJson(jsonData, false, 'target-block-id');
+```
+
+### Parsing HTML to Blocks
+Convert an HTML string into an array of `BlockModel` objects using the [parseHtmlToBlocks](../api/blockeditor#parsehtmltoblocks) method. This method allows transforming HTML content into structured editor blocks.
+
+```typescript
+// Parse HTML into block
+const blocks: BlockModel[] = editor.parseHtmlToBlocks(html);
+```
 
 ### Printing editor content
 
-You can print the editor content using the [print](../api/blockeditor/#print) method. This method opens a print dialog with the current editor content formatted for printing.
+Print the editor content using the [print](../api/blockeditor#print) method. This action opens the browser's print dialog with the current editor content.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

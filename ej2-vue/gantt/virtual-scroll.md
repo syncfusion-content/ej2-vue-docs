@@ -35,7 +35,7 @@ This mode can be enable by setting the `enableVirtualization` property to `true`
 
 Timeline virtualization allows you to load a data source having large timespan with high performance. Initially, it renders the timeline with thrice the width of the gantt element, while other timeline cells render on-demand during horizontal scrolling.
 
-This mode can be enable by setting the [enableTimelineVirtualization](https://ej2.syncfusion.com/vue/documentation/api/gantt/#enabletimelinevirtualization) property to `true`.
+This mode can be enable by setting the [enableTimelineVirtualization](https://ej2.syncfusion.com/vue/documentation/api/gantt#enabletimelinevirtualization) property to `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -51,6 +51,6 @@ This mode can be enable by setting the [enableTimelineVirtualization](https://ej
 ## Limitations for virtual scroll
 
 * Due to the element height limitation in browsers, the maximum number of records loaded is limited by the browser capacity.
-* Cell selection will not be persisted.
+* Cell selection is not persisted due to on-demand rendering.
 * The number of records rendered will be determined by the `height` property.
 * It is necessary to mention the height of the Gantt in pixels when enabling Virtual Scrolling.

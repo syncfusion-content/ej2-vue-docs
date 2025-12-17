@@ -1,6 +1,6 @@
 <template>
   <div id='container'>
-    <ejs-blockeditor :blocks="blocksData"></ejs-blockeditor>
+    <ejs-blockeditor :blocks="blocksData" :codeBlockSettings="codeBlockData"></ejs-blockeditor>
   </div>
 </template>
 
@@ -15,24 +15,26 @@ export default {
     return {
       blocksData: [
            {
-            type: 'Code',
+            blockType: 'Code',
             content: [
                 {
-                    type: ContentType.Text,  
+                    contentType: ContentType.Text,  
                     content: 'function greeting() {\n  console.log("Hello, world!");\n}'
                 }
-            ],
-            props: {
-                defaultLanguage: 'javascript',
-                languages: [
-                    { language: 'javascript', label: 'JavaScript' },
-                    { language: 'typescript', label: 'TypeScript' },
-                    { language: 'html', label: 'HTML' },
-                    { language: 'css', label: 'CSS' }
-                ]
-            }
+            ]
         }
-      ]
+      ],
+
+      codeBlockData: {
+        defaultLanguage: 'javascript',
+        languages: [
+            { language: 'javascript', label: 'JavaScript' },
+            { language: 'typescript', label: 'TypeScript' },
+            { language: 'html', label: 'HTML' },
+            { language: 'css', label: 'CSS' }
+        ]
+      }
+
     };
   },
   methods: {
@@ -42,10 +44,12 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

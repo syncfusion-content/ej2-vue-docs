@@ -76,3 +76,18 @@ You can use the `maxFileSize` property to allow the maximum file size of the upl
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/file-attachments/file-size" %}
+
+### Setting maximum count
+
+Restrict how many files can be attached at once using [maximumCount](../api/ai-assistview/attachmentSettings#maximumcount) property. The default value is `10`. If users select more than the allowed count, the maximum count reached error will be displayed.
+
+{% tabs %}
+{% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/file-attachments/maximum-count/app-composition.vue%}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/file-attachments/maximum-count/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ai-assistview/file-attachments/maximum-count" %}
