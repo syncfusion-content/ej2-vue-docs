@@ -1,6 +1,6 @@
 <template>
   <div style="height: 380px; width: 450px; margin: 0 auto;">
-    <ejs-chatui 
+    <ejs-chatui :user="currentUser"
       :mentionUsers="mentionUsers" 
       :mentionSelect="mentionSelect" 
     ></ejs-chatui>
@@ -20,6 +20,10 @@ export default {
   },
   data() {
     return {
+      currentUser: {
+        id: "user1",
+        user: "Albert",
+      },
       // Define user models for mentions
       mentionUsers: [
         {

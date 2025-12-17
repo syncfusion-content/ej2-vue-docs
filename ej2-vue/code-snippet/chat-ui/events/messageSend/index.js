@@ -6,12 +6,16 @@ new Vue({
 	el: '#app',
 	template: `
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
-    <ejs-chatui :messageSend="messageSend"></ejs-chatui>
+    <ejs-chatui :messageSend="messageSend" :user="currentUser"></ejs-chatui>
   </div>
 `,
 
   data () {
     return {
+      currentUser: {
+        id: "user1",
+        user: "Albert",
+      },
       messageSend: () => {
         // Your required action here
       }

@@ -14,7 +14,7 @@ This section describes the AI AssistView events that will be triggered when appr
 
 ## created
 
-The AI AssistView component triggers the [created](../api/ai-assistview/#created) event when the component rendering is completed.
+The AI AssistView component triggers the [created](../api/ai-assistview#created) event when the component rendering is completed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The AI AssistView component triggers the [created](../api/ai-assistview/#created
 
 ## promptRequest
 
-The [promptRequest](../api/ai-assistview/#promptrequest) event is triggered when the prompt request is made in the AI AssistView control.
+The [promptRequest](../api/ai-assistview#promptrequest) event is triggered when the prompt request is made in the AI AssistView control.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -40,7 +40,7 @@ The [promptRequest](../api/ai-assistview/#promptrequest) event is triggered when
 
 ## promptChanged
 
-The [promptChanged](../api/ai-assistview/#promptchanged) event is triggered when the prompt text is changed in the AI AssistView control.
+The [promptChanged](../api/ai-assistview#promptchanged) event is triggered when the prompt text is changed in the AI AssistView control.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -53,7 +53,7 @@ The [promptChanged](../api/ai-assistview/#promptchanged) event is triggered when
 
 ## beforeAttachmentUpload
 
-The [beforeAttachmentUpload](../api/ai-assistview/#beforeattachmentupload) event is triggered before the attached files upload begins in the AI AssistView
+The [beforeAttachmentUpload](../api/ai-assistview#beforeattachmentupload) event is triggered before the attached files upload begins in the AI AssistView
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -66,7 +66,7 @@ The [beforeAttachmentUpload](../api/ai-assistview/#beforeattachmentupload) event
 
 ## attachmentUploadSuccess
 
-The [attachmentUploadSuccess](../api/ai-assistview/#attachmentuploadsuccess) event is triggered when the attached file is successfully uploaded in the AI AssistView.
+The [attachmentUploadSuccess](../api/ai-assistview#attachmentuploadsuccess) event is triggered when the attached file is successfully uploaded in the AI AssistView.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -79,7 +79,7 @@ The [attachmentUploadSuccess](../api/ai-assistview/#attachmentuploadsuccess) eve
 
 ## attachmentUploadFailure
 
-The [attachmentUploadFailure](../api/ai-assistview/#attachmentuploadfailure) event is triggered when the attached file upload fails in the AI AssistView.
+The [attachmentUploadFailure](../api/ai-assistview#attachmentuploadfailure) event is triggered when the attached file upload fails in the AI AssistView.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -92,7 +92,7 @@ The [attachmentUploadFailure](../api/ai-assistview/#attachmentuploadfailure) eve
 
 ## attachmentRemoved
 
-The [attachmentRemoved](../api/ai-assistview/#attachmentremoved) event is triggered when an attached file is removed in the AI AssistView.
+The [attachmentRemoved](../api/ai-assistview#attachmentremoved) event is triggered when an attached file is removed in the AI AssistView.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -100,5 +100,18 @@ The [attachmentRemoved](../api/ai-assistview/#attachmentremoved) event is trigge
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ai-assistview/events/attachment-removed/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+## attachmentClick
+
+The [attachmentClick](../api/ai-assistview#attachmentclick) event is triggered when an attached file is clicked in the AI AssistView.
+
+{% tabs %}
+{% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/events/attachment-click/app-composition.vue%}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/events/attachment-click/app.vue %}
 {% endhighlight %}
 {% endtabs %}

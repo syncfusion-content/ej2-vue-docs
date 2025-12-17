@@ -5,59 +5,54 @@
 </template>
 
 <script setup>
-import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
+import { BlockEditorComponent as EjsBlockeditor, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 const blocksData = [
     {
         id: 'security-callout',
-        type: 'Callout',
-        props: {
+        blockType: 'Callout',
+        properties: {
         children: [
             { 
-                id: 'security-title',
                 parentId: 'security-callout',
-                type: 'Heading',
+                blockType: 'Heading',
                 props: { level: 3},
                 content: [{
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Security Notice'
                 }]
             },
             { 
-                id: 'security-warning',
                 parentId: 'security-callout',
-                type: 'Paragraph',
+                blockType: 'Paragraph',
                 content: [{
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Always validate user input before processing to prevent security vulnerabilities.'
                 }]
             },
             { 
-                id: 'security-tips',
                 parentId: 'security-callout',
-                type: 'Paragraph',
+                blockType: 'Paragraph',
                 content: [{
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Use HTTPS for all data transmission'
                 }],
                 indent: 1
             },
             { 
-                id: 'security-tips-2',
                 parentId: 'security-callout',
-                type: 'Paragraph',
+                blockType: 'Paragraph',
                 content: [{
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Implement proper authentication mechanisms'
                 }],
                 indent: 1
             },
             { 
-                id: 'security-tips-3',
                 parentId: 'security-callout',
-                type: 'Paragraph',
+                blockType: 'Paragraph',
                 content: [{
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Regularly update dependencies and libraries'
                 }],
                 indent: 1
@@ -70,11 +65,12 @@ const blocksData = [
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

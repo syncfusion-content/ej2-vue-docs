@@ -5,54 +5,54 @@
 </template>
 
 <script setup>
-import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
+import { BlockEditorComponent as EjsBlockeditor, ContentType  } from "@syncfusion/ej2-vue-blockeditor";
 
 const blocksData = [
     {
-        type: 'CollapsibleHeading',
+        blockType: 'CollapsibleHeading',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Collapsible Section'
             }
         ],
-        props: {
-        level: 1,
-        isExpanded: true,
-        children: [
-            {
-                type: 'Paragraph',
-                content: [
-                    {
-                        type: ContentType.Text,
-                        content: 'This content is inside a toggle section and can be collapsed.'
-                    }
-                ]
-            }
-        ]
+        properties: {
+            level: 1,
+            isExpanded: true,
+            children: [
+                {
+                    blockType: 'Paragraph',
+                    content: [
+                        {
+                            contentType: ContentType.Text,
+                            content: 'This content is inside a toggle section and can be collapsed.'
+                        }
+                    ]
+                }
+            ]
         }
     },
     {
-        type: 'CollapsibleParagraph',
+        blockType: 'CollapsibleParagraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Toggle paragraph section'
             }
         ],
-        props: {
-        isExpanded: false,
-        children: [
-            {
-                type: 'Paragraph',
-                content: [
-                    {
-                        type: ContentType.Text,
-                        content: 'This content is initially hidden because isExpanded is set to false.'
-                    }
-                ]
-            }
-        ]
+        properties: {
+            isExpanded: false,
+            children: [
+                {
+                    blockType: 'Paragraph',
+                    content: [
+                        {
+                            contentType: ContentType.Text,
+                            content: 'This content is initially hidden because isExpanded is set to false.'
+                        }
+                    ]
+                }
+            ]
         }
     }
 ];
@@ -60,11 +60,12 @@ const blocksData = [
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+  @import '../node_modules/@syncfusion/ej2-blockeditor/styles/fluent2.css';
 </style>

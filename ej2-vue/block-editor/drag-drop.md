@@ -15,7 +15,7 @@ The drag and drop feature in Block Editor allows users to easily rearrange block
 
 ## Enable Drag and Drop
 
-You can control drag and drop operations within Block Editor using the [enableDragAndDrop](../api/blockeditor/#enabledraganddrop) property. By default, it is set to `true`.
+You can control the drag and drop functionality within the Block Editor using the [enableDragAndDrop](../api/blockeditor#enabledraganddrop) property. This feature is enabled by default (`true`).
 
 ## Dragging blocks
 

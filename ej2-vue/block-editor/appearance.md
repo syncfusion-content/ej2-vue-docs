@@ -15,15 +15,15 @@ The Block Editor control provides various appearance customization options to ma
 
 ## Setting width and height
 
-You can specify the width and height for the Block Editor control using the [width](../api/blockeditor/#width) and [height](../api/blockeditor/#height) properties.
+You can specify the width and height for the Block Editor component using the [width](../api/blockeditor#width) and [height](../api/blockeditor#height) properties.
 
 ## Setting readonly mode
 
-You can utilize the [readonly](../api/blockeditor/#readonly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it.
+You can utilize the [readOnly](../api/blockeditor#readOnly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it.
 
 ## Customization using CSS Class
 
-You can use the [cssClass](../api/blockeditor/#cssclass) property to customize the appearance of the Block Editor control.
+You can use the [cssClass](../api/blockeditor#cssClass) property to customize the appearance of the Block Editor control.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

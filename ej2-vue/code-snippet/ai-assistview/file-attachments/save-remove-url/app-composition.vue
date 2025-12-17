@@ -1,7 +1,7 @@
 <template>
    <div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
     <br />
-    <ejs-aiassistview id="aiAssistView" ref="aiassist" :promptRequest="onPromptRequest" :enableAttachments="true" ></ejs-aiassistview>
+    <ejs-aiassistview id="aiAssistView" ref="aiassist" :promptRequest="onPromptRequest" :enableAttachments="true" :attachmentSettings="attachmentSettings"></ejs-aiassistview>
   </div>
 </template>
 
@@ -16,8 +16,7 @@ const aiassist = ref(null);
 
 const attachmentSettings = {
   saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',
-  removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove',
-  maxFileSize: 1000000
+  removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
 };
 
 // Prompt request handler

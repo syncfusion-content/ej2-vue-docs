@@ -1,6 +1,6 @@
 <template>
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
-    <ejs-chatui :userTyping="userTyping"></ejs-chatui>
+    <ejs-chatui :userTyping="userTyping" :user="currentUser"></ejs-chatui>
   </div>
 </template>
 
@@ -10,7 +10,10 @@ import { ChatUIComponent as EjsChatui } from "@syncfusion/ej2-vue-interactive-ch
 const userTyping = () => {
   // Your required action here
 };
-
+const currentUser = {
+  id: "user1",
+  user: "Albert"
+};
 </script>
 
 <style>
