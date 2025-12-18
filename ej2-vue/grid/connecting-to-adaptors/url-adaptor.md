@@ -1277,7 +1277,7 @@ if (batchOperation.deleted != null)
 
 ## Foreign key column with UrlAdaptor
 
-Configuration of foreign key column with remote data using `UrlAdaptor` requires assigning the `DataManager` instance with the endpoint URL to the particular column dataSource along with foreign key field and foreign key value properties. When both grid and foreign key column uses a `UrlAdaptor`, the grid data and the foreign key data are fetched separately from their respective remote endpoints. During operations such as filtering or sorting, the grid sends requests to the server based on the foreign key field and its corresponding value.
+Configuration of foreign key column with remote data using `UrlAdaptor` requires assigning the `DataManager` instance with the endpoint URL to the particular column data source along with foreign key field and foreign key value properties. When both grid and foreign key column uses a `UrlAdaptor`, the grid data and the foreign key data are fetched separately from their respective remote endpoints. During operations such as filtering or sorting, the grid sends requests to the server based on the foreign key field and its corresponding value.
 
 {% tabs%}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1455,7 +1455,7 @@ export default {
 
 ### Handling filter and search operation
 
-Filtering a foreign‑key column automatically shows the related text value through `foreignKeyValue`, while the actual filtering is performed using the `foreignKeyField` value. This ensures that the filter request sent to the server uses the actual "CustomerID" field value, allowing the main data source to be filtered accurately.
+Filtering a foreign-key column automatically shows the related text value via `foreignKeyValue` property, while the actual filtering is performed using the `foreignKeyField` property. This ensures that the filter request sent to the server uses the actual "CustomerID" field value, allowing the main data source to be filtered accurately.
 
 ![ForeignKey column filtering](../images/foreign-key-filter.png)
 

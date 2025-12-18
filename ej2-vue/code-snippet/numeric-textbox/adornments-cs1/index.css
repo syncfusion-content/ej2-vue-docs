@@ -1,0 +1,42 @@
+    .adornment-numeric .content-wrapper {
+        width: 35% !important;
+        margin: 0 auto;
+        min-width: 250px;
+    }
+    .adornment-numeric .custom-margin {
+        margin: 25px 0;
+    }
+    .adornment-numeric .e-icons.e-search {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+    .adornment-numeric .e-numeric.e-control-wrapper.e-input-group .e-input-group-icon {
+        background-color: rgba(0,0,0,0) !important;
+    }
+    .bootstrap5_3 .e-icontemplate .e-numerictextbox,
+    .bootstrap5_3 .e-prependtemplate .e-numerictextbox,
+    .bootstrap5_3-dark .e-icontemplate .e-numerictextbox,
+    .bootstrap5_3-dark .e-prependtemplate .e-numerictextbox,
+    .tailwind3 .e-icontemplate .e-numerictextbox,
+    .tailwind3 .e-prependtemplate .e-numerictextbox,
+    .tailwind3-dark .e-icontemplate .e-numerictextbox,
+    .tailwind3-dark .e-prependtemplate .e-numerictextbox {
+        padding-left: 0 !important;
+    }
+    .bootstrap5_3 .adornment-numeric .e-prepend-template,
+    .bootstrap5_3-dark .adornment-numeric .e-prepend-template {
+        padding-right: 0 !important;
+    }
+    .fluent2 .adornment-numeric .e-prepend-template,
+    .fluent2-dark .adornment-numeric .e-prepend-template,
+    .fluent2-highcontrast .adornment-numeric .e-prepend-template {
+        padding-left: 8px !important;
+    }
+    .material3 .adornment-numeric .e-prepend-template,
+    .material3-dark .adornment-numeric .e-prepend-template {
+        padding-left: 0 !important;
+    }
+    .e-icontemplate .e-icons.e-reset,
+    .e-icontemplate .e-icons.e-horizontal-line,
+    .e-icontemplate .e-icons.e-plus {
+        cursor: pointer;
+    }
