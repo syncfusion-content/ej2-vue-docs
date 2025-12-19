@@ -295,15 +295,9 @@ In the demo below, the expand/collapse icons have been changed to arrow-down and
 
 ## Detail row events
 
-The Grid component provides the `detailExpand` and `detailCollapse` events, which are triggered when a detail row is about to expand or collapse. These events fire before the detail row actually expands or collapses, allowing you to control whether the action should proceed.
+The Grid control's `detailExpand` and `detailCollapse` events fire before a detail row actually expands or collapses, allowing you a chance to control whether the action should continue. The `detailExpand` event is raised just before a row expands, and `detailCollapse` fires just before a row collapses, with both events providing respective details through their event arguments.
 
-`detailExpand` – This event is triggered before a detail row begins to expand. You can access the expansion details through the event arguments and optionally prevent the expansion by setting:
-`args.cancel = true`;
-
-`detailCollapse` – This event is triggered before a detail row begins to collapse. You can access the collapse details through the event arguments and optionally prevent the collapse by setting:
-`args.cancel = true`;
-
-In the example below, expansion is prevented for the **Nancy** row, and collapse is prevented for the **Andrew** row.
+In the example below, expansion is prevented for the "Nancy" row, and collapse is prevented for the "Andrew" row.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

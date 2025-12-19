@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Upload in Vue File Manager component
 
-The Vue File Manager component provides a [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
+The Vue File Manager component provides a [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
 
 ## Directory Upload
 
-The [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettingsModel/#directoryupload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component. 
+The [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#directoryupload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component. 
 
 To enable directory upload, set the `directoryUpload` property to `true` in the `uploadSettings` configuration.
 
@@ -35,9 +35,34 @@ When set to `true`, this property enables directory upload in the File Manager, 
 
 To learn more about the folder upload actions, refer to this [link](https://ej2.syncfusion.com/vue/documentation/file-manager/file-operations#folder-upload-support)
 
+## Sequential Upload
+
+The [sequentialUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#sequentialupload) property controls whether users can upload files one by one in a sequential manner in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component. 
+
+To enable sequential upload, set the `sequentialUpload` property to `true` in the `uploadSettings` configuration.
+
+When set to `true`, the selected files will process sequentially (one after the other) to the server. If the file uploaded successfully or failed, the next file will upload automatically in this sequential upload. This feature helps to reduce the upload traffic and reduce the failure of file upload.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload/sequential-upload/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload/sequential-upload/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/sequential-upload" %}
+
+The screenshot below shows that each file begins uploading only after the previous one completes. This demonstrates how the `sequentialUpload` property works in the File Manager component.
+
+![File Manager with sequentialUpload](./images/filemanager-sequentialupload.png)
+
+To learn more about the folder upload actions, refer to this [link](https://ej2.syncfusion.com/vue/documentation/file-manager/file-operations#folder-upload-support)
+
 ## Chunk Upload
 
-The [chunkSize](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettingsModel/#chunksize) property specifies the size of each chunk when uploading large files. It divides the file into smaller parts, which are uploaded sequentially to the server.
+The [chunkSize](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#chunksize) property specifies the size of each chunk when uploading large files. It divides the file into smaller parts, which are uploaded sequentially to the server.
 
 This property allows you to enable chunked uploads for large files by specifying a `chunkSize`.
 
@@ -66,7 +91,7 @@ With chunk upload, the pause and resume options gives users enhanced control ove
 
 ## Auto Upload
 
-The [autoUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettingsModel/#autoupload) property controls whether files are automatically uploaded when they are added to the upload queue in the File Manager component.
+The [autoUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#autoupload) property controls whether files are automatically uploaded when they are added to the upload queue in the File Manager component.
 
 The default value is `true`, the File Manager will automatically upload files as soon as they are added to the upload queue. If set to `false`, the files will not be uploaded automatically, giving you the chance to manipulate the files before uploading them to the server.
 
@@ -83,7 +108,7 @@ The default value is `true`, the File Manager will automatically upload files as
 
 ## Auto Close
 
-The [autoClose](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettingsModel/#autoclose) property controls whether the upload dialog automatically closes after all the files have been uploaded.
+The [autoClose](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#autoclose) property controls whether the upload dialog automatically closes after all the files have been uploaded.
 
 The default value is set to `false`, the upload dialog remains open even after the upload process is complete. If `autoClose` set to `true`, the upload dialog will automatically close after all the files in the upload queue are uploaded.
 
@@ -101,7 +126,7 @@ The default value is set to `false`, the upload dialog remains open even after t
 
 ## Prevent upload based on file extensions
 
-The [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettingsModel/#allowedextensions) property specifies which file types are allowed for upload in the File Manager component by defining their extensions.
+The [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#allowedextensions) property specifies which file types are allowed for upload in the File Manager component by defining their extensions.
 
 This property lets you define which file types can be uploaded by specifying allowed extensions, separated by commas. For example, to allow only image files, you would set the `allowedExtensions` property to .jpg,.png.
 
