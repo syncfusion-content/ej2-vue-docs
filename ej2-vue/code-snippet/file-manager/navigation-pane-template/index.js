@@ -3,9 +3,8 @@ import Vue from "vue";
 import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
 Vue.use(FileManagerPlugin);
-import { createApp } from 'vue';
-const app = createApp();
-const demoNavigationPaneTemplate = app.component('navigationPaneTemplate', {
+
+const demoNavigationPaneTemplate = Vue.component("navigationPaneTemplate", {
   template: `
     <div class="e-nav-pane-node" style="display:inline-flex;align-items:center;">
       <span class="folder-name" style="margin-left:8px;">{{ data?.name }}</span>

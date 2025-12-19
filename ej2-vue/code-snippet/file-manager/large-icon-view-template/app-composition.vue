@@ -2,20 +2,25 @@
     <div id="app">
         <ejs-filemanager id="file-manager" :cssClass="cssClass" :ajaxSettings="ajaxSettings" :largeIconsTemplate="'largeTpl'">
             <template v-slot:largeTpl="{ data }">
-                <div style="display: flex; flex-direction: column; gap: 2px;">
-                    <span><strong>{{ data.name }}</strong></span>
-                    <span><strong>Type: </strong>{{ data.isFile ? 'File' : 'Folder' }}</span>
-                    <span><strong>Modified: </strong>
-                        <template v-if="data.dateModified">
-                            {{
-                                new Date(data.dateModified).toLocaleDateString('en-US', {
+                <div class="custom-icon-card">
+                <div class="file-header">
+                    <div class="file-name" :title="data.name">{{ data.name }}</div>
+                </div>
+                <div :class="['e-list-icon', getFileIconCssClass(data)]"></div>
+                <div class="file-formattedDate">
+                    <template v-if="data.dateCreated">
+                        Created on
+                        <span
+                            v-text="
+                            new Date(data.dateCreated).toLocaleDateString('en-US', {
                                 year: 'numeric',
                                 month: 'long',
-                                day: 'numeric'
-                                })
-                            }}
-                        </template>
-                    </span>
+                                day: 'numeric',
+                            })
+                            "
+                        ></span>
+                    </template>
+                </div>
                 </div>
             </template>
         </ejs-filemanager>
@@ -24,6 +29,39 @@
 <script setup>
 import { provide } from "vue";
 import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+const getFileIconCssClass = function (item) {
+    if (!item.isFile) return 'e-fe-folder';
+    const extensionMap = {
+        jpg: 'image',
+        jpeg: 'image',
+        png: 'image',
+        gif: 'image',
+        mp3: 'music',
+        wav: 'music',
+        mp4: 'video',
+        avi: 'video',
+        doc: 'doc',
+        docx: 'docx',
+        ppt: 'pptx',
+        pptx: 'pptx',
+        xls: 'xlsx',
+        xlsx: 'xlsx',
+        txt: 'txt',
+        js: 'js',
+        css: 'css',
+        html: 'html',
+        exe: 'exe',
+        msi: 'msi',
+        php: 'php',
+        xml: 'xml',
+        zip: 'zip',
+        rar: 'rar',
+        pdf: 'pdf',
+    };
+    const extension = (item.name.split('.').pop() || '').toLowerCase();
+    const iconType = extensionMap[extension] || 'unknown';
+    return `e-fe-${iconType}`;
+}
 const ajaxSettings =
 {
     url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
@@ -32,7 +70,7 @@ const ajaxSettings =
     downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
 };
 provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
-const cssClass = 'fm_template';
+const cssClass = 'e-fm-template-sample';
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -46,7 +84,43 @@ const cssClass = 'fm_template';
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 
-.fm_template .e-large-icons .e-list-item {
-    width: 190px;
+.e-fm-template-sample .custom-icon-card {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.e-fm-template-sample .file-header {
+  display: contents;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.e-fm-template-sample .file-name {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 110px;
+}
+
+.e-fm-template-sample .file-formattedDate {
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.e-filemanager.e-fm-template-sample .e-large-icons .e-list-item {
+  height: 150px;
+  width: 135px;
 }
 </style>

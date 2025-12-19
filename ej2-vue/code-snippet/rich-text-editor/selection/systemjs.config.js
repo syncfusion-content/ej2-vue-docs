@@ -13,8 +13,8 @@ System.config({
         "syncfusion:": "https://cdn.syncfusion.com/ej2/20.3.56/"
     },
     map: {
-        typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
-vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
+        typescript: 'https://unpkg.com/typescript@4.9.5/lib/typescript.js',
+        vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
             "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
             "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
             "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
@@ -43,7 +43,9 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
             "@syncfusion/ej2-vue-splitbuttons": "syncfusion:ej2-vue-splitbuttons/dist/ej2-vue-splitbuttons.umd.min.js",
             "@syncfusion/ej2-vue-dropdowns": "syncfusion:ej2-vue-dropdowns/dist/ej2-vue-dropdowns.umd.min.js",
             "@syncfusion/ej2-vue-navigations": "syncfusion:ej2-vue-navigations/dist/ej2-vue-navigations.umd.min.js",
-            "@syncfusion/ej2-vue-richtexteditor": "syncfusion:ej2-vue-richtexteditor/dist/ej2-vue-richtexteditor.umd.min.js"
+            "@syncfusion/ej2-vue-richtexteditor": "syncfusion:ej2-vue-richtexteditor/dist/ej2-vue-richtexteditor.umd.min.js",
+            "@syncfusion/ej2-interactive-chat":"syncfusion:ej2-interactive-chat/dist/ej2-interactive-chat.umd.min.js",
+            "@syncfusion/ej2-markdown-converter":"syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
     }
 });
 
