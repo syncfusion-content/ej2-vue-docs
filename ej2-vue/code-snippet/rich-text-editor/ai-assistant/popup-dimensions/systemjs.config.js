@@ -42,7 +42,9 @@ System.config({
         "@syncfusion/ej2-vue-popups": "syncfusion:ej2-vue-popups/dist/ej2-vue-popups.umd.min.js",
         "@syncfusion/ej2-vue-splitbuttons": "syncfusion:ej2-vue-splitbuttons/dist/ej2-vue-splitbuttons.umd.min.js",
         "@syncfusion/ej2-vue-navigations": "syncfusion:ej2-vue-navigations/dist/ej2-vue-navigations.umd.min.js",
-        "@syncfusion/ej2-vue-richtexteditor": "syncfusion:ej2-vue-richtexteditor/dist/ej2-vue-richtexteditor.umd.min.js"
+        "@syncfusion/ej2-vue-richtexteditor": "syncfusion:ej2-vue-richtexteditor/dist/ej2-vue-richtexteditor.umd.min.js",
+            "@syncfusion/ej2-interactive-chat":"syncfusion:ej2-interactive-chat/dist/ej2-interactive-chat.umd.min.js",
+            "@syncfusion/ej2-markdown-converter":"syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
     }
 });
 
