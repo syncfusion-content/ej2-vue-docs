@@ -59,8 +59,11 @@ import {
   TreeGridComponent as EjsTreegrid,
   ColumnDirective as EColumn,
   ColumnsDirective as EColumns,
+  Freeze,
+  Page
 } from "@syncfusion/ej2-vue-treegrid";
 import { rowSpanData } from "./datasource.js";
+import { provide } from "vue";
 
 const data = rowSpanData;
 const pageSettings = { pageSize: 18, pageSizeMode: 'All' };
@@ -93,4 +96,6 @@ const scheduleColumns: [
         { field: 'totalBudget', headerText: 'Planned Budget', width: 140, format: 'C2', textAlign: 'Center', enableRowSpan: false },
         { field: 'paidToDate', headerText: 'Actual Spend', width: 140, format: 'C2', textAlign: 'Center', enableRowSpan: false }
       ];
+
+provide('treegrid',  [Page, Freeze]);
 </script>
