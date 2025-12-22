@@ -1,4 +1,3 @@
-define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var NUM_ROOTS = 60;
@@ -41,7 +40,7 @@ define(["require", "exports"], function (require, exports) {
         var d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
         return d.toISOString().split('T')[0];
     }
-    exports.taskData = [];
+    export var taskData = [];
     let id = 1;
     for (let i = 0; i < NUM_ROOTS; i++) {
         var start = randomDate(START_DATE, END_DATE);
@@ -78,4 +77,3 @@ define(["require", "exports"], function (require, exports) {
             id++;
         }
     }
-});
