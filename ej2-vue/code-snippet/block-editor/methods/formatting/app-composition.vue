@@ -19,7 +19,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { BlockEditorComponent as EjsBlockeditor, ContentType } from "@syncfusion/ej2-vue-blockeditor";
+import { BlockEditorComponent as EjsBlockeditor, ContentType, CommandName } from "@syncfusion/ej2-vue-blockeditor";
 
 let blockEditor=ref(null);
 
@@ -55,16 +55,20 @@ const blocksData = [
 ];
 
 const applyBold=()=> {
-  blockEditor.executeToolbarAction(BuiltInToolbar.Bold);
+  blockEditor.executeToolbarAction(CommandName.Bold);
   displayOutput('Bold formatting applied to selected text');
 };
 const applyColor=()=> {
-  blockEditor.executeToolbarAction(BuiltInToolbar.Color, '#ff6b35');
+  blockEditor.executeToolbarAction(CommandName.Color, '#ff6b35');
   displayOutput('Orange color (#ff6b35) applied to selected text');
 };
 const enableToolbar=()=> {
   blockEditor.enableToolbarItems(['bold', 'italic', 'underline']);
   displayOutput('Toolbar items (bold, italic, underline) have been enabled');
+};
+disableToolbar: function(){
+  blockEditor.disableToolbarItems(['bold', 'italic']);
+  displayOutput('Toolbar items (bold, italic) have been disabled');
 };
 const displayOutput=(message)=> {
   var outputDiv = document.getElementById('output');

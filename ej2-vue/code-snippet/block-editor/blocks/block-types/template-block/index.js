@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -15,7 +15,7 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'Template',
+            blockType: 'Template',
             template: `<div class="notification-card">
                 <div class="notification-header">
                     <span class="notification-icon">📢</span>

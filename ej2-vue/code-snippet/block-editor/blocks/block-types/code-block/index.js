@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin,  ContentType } from "@syncfusion/ej2-vue-blockeditor"
 
 Vue.use(BlockEditorPlugin);
 
@@ -7,32 +7,33 @@ new Vue({
 	el: '#app',
 	template: `
   <div id='container'>
-    <ejs-blockeditor :blocks="blocksData"></ejs-blockeditor>
+    <ejs-blockeditor :blocks="blocksData" :codeBlockSettings="codeBlockData"></ejs-blockeditor>
   </div>
 `,
 
   data () {
     return {
       blocksData: [
-         {
-            type: 'Code',
+           {
+            blockType: 'Code',
             content: [
                 {
-                    type: ContentType.Text,  
+                    contentType: ContentType.Text,  
                     content: 'function greeting() {\n  console.log("Hello, world!");\n}'
                 }
-            ],
-            props: {
-                defaultLanguage: 'javascript',
-                languages: [
-                    { language: 'javascript', label: 'JavaScript' },
-                    { language: 'typescript', label: 'TypeScript' },
-                    { language: 'html', label: 'HTML' },
-                    { language: 'css', label: 'CSS' }
-                ]
-            }
+            ]
         }
-      ]
+      ],
+
+      codeBlockData: {
+        defaultLanguage: 'javascript',
+        languages: [
+            { language: 'javascript', label: 'JavaScript' },
+            { language: 'typescript', label: 'TypeScript' },
+            { language: 'html', label: 'HTML' },
+            { language: 'css', label: 'CSS' }
+        ]
+      }
     }
   },
   methods: {

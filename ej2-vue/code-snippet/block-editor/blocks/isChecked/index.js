@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -15,53 +15,53 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Task List:'
                 }
             ]
         },
         {
-            type: 'Checklist',
+            blockType: 'Checklist',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Completed task (checked)'
                 }
             ],
-            props: { isChecked: true}
+            properties: { isChecked: true }
         },
         {
-            type: 'Checklist',
+            blockType: 'Checklist',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Pending task (unchecked)'
                 }
             ],
-            props: { isChecked: false}
+            properties: { isChecked: false }
         },
         {
-            type: 'Checklist',
+            blockType: 'Checklist',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'High priority task'
                 }
             ],
-            props: { isChecked: true}
+            properties: { isChecked: true }
         },
         {
-            type: 'Checklist',
+            blockType: 'Checklist',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Low priority task'
                 }
             ],
-            props: { isChecked: false}
+            properties: { isChecked: false }
         }
       ]
     }

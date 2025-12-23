@@ -15,7 +15,7 @@ The `Attachment` support in AI AssistView specifies user to include file attachm
 
 ## Enable attachment
 
-You can enable the attachment by using the `enableAttachments` property. By default, it is set to `false`.
+You can enable the attachment by using the [enableAttachments](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview#enableattachments) property. By default, it is set to `false`.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -30,11 +30,11 @@ You can enable the attachment by using the `enableAttachments` property. By defa
 
 ## Configuring attachments
 
-You can use the `attachmentSettings` property to configure the attachments in the AI AssistView.
+You can use the [attachmentSettings](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings) property to configure the attachments in the AI AssistView.
 
 ### Setting saveUrl and removeUrl
 
-You can use the `saveUrl` and `removeUrl` property to add the save and remove the URL for the file uploaded in the AI AssistView.
+You can use the [saveUrl](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#saveurl) and [removeUrl](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#removeurl) property to add the save and remove the URL for the file uploaded in the AI AssistView.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -49,7 +49,7 @@ You can use the `saveUrl` and `removeUrl` property to add the save and remove th
 
 ### Setting file type
 
-You can use the `allowedFileType` property to upload the specific file types in the attachment.
+You can use the [allowedFileType](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#allowedfiletypes) property to upload the specific file types in the attachment.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -64,7 +64,7 @@ You can use the `allowedFileType` property to upload the specific file types in 
 
 ### Setting file size
 
-You can use the `maxFileSize` property to allow the maximum file size of the upload file in the AI AssistView. By default, it is set to `2000000` bytes.
+You can use the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#maxfilesize) property to allow the maximum file size of the upload file in the AI AssistView. By default, it is set to `2000000` bytes.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}

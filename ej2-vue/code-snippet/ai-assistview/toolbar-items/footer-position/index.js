@@ -7,10 +7,10 @@ new Vue({
 	template: `
   <div id='container' style="height: 350px; width: 650px; margin: 0 auto;">
     <br>
-    <ejs-aiassistview id='aiAssistView' :prompts="promptsData" :prompt-toolbar-settings="promptToolbarSettings" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
+    <button id="toolbarBtn" class="e-btn" @click="updateToolbarPosition">UpdateToolbarPosition</button>
+    <ejs-aiassistview id='aiAssistView' :prompts="promptsData" :footer-toolbar-settings="footerToolbarSettings" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
   </div>
 `,
-
   data: function () {
     return {
       promptsData: [
@@ -19,10 +19,8 @@ new Vue({
           response: `<div>AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making.</div>`
         }
       ],
-      promptToolbarSettings: {
-        items: [
-          { type: 'Button', iconCss: 'e-icons e-edit' }
-        ]
+      footerToolbarSettings: {
+        toolbarPosition: 'Bottom'
       }
     }
   },
@@ -34,6 +32,16 @@ new Vue({
         let defaultResponse = 'For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
         defaultAiassist.addPromptResponse(foundPrompt ? foundPrompt.response : defaultResponse);
       }, 1000);
+    },
+    updateToolbarPosition: function () {
+      let defaultAiassist = this.$refs.aiassist.ej2Instances;
+      if (defaultAiassist.footerToolbarSettings.toolbarPosition === 'Inline') {
+        defaultAiassist.footerToolbarSettings.toolbarPosition = 'Bottom';
+      }
+      else {
+        defaultAiassist.footerToolbarSettings.toolbarPosition = 'Inline';
+      }
+      defaultAiassist.dataBind();
     }
   }
 

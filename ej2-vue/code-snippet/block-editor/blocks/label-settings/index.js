@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -15,100 +15,100 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'Heading',
-            props: { level:1},
+            blockType: 'Heading',
+            properties: { level: 1},
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Project Planning with Custom Labels'
                 }
             ]
         },
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Type # to add status labels to your tasks.'
                 }
             ]
         },
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Fix homepage layout issue - '
                 },
                 {
-                    type: ej.blockeditor.ContentType.Label,
-                    props: { labelId: 'bug' }
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'bug' }
                 },
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: ' '
                 },
                 {
-                    type: ej.blockeditor.ContentType.Label,
-                    props: { labelId: 'high' }
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'high' }
                 }
             ]
         },
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Update user documentation - '
                 },
                 {
-                    type: ej.blockeditor.ContentType.Label,
-                    props: { labelId: 'task' }
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'task' }
                 },
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: ' '
                 },
                 {
-                    type: ej.blockeditor.ContentType.Label,
-                    props: { labelId: 'medium' }
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'medium' }
                 }
             ]
         },
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Implement payment gateway - '
                 },
                 {
-                    type: ej.blockeditor.ContentType.Label,
-                    props: { labelId: 'feature' }
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'feature' }
                 },
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: ' '
                 },
                 {
-                    type: ej.blockeditor.ContentType.Label,
-                    props: { labelId: 'critical' }
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'critical' }
                 }
             ]
         }
       ],
     labelSettings : {
         triggerChar: '#',
-        labelItems: [
-            { id: 'bug', text: 'Bug', labelColor: '#ff5252', groupHeader: 'Status' },
-            { id: 'task', text: 'Task', labelColor: '#90caf9', groupHeader: 'Status' },
-            { id: 'feature', text: 'Feature', labelColor: '#81c784', groupHeader: 'Status' },
-            { id: 'enhancement', text: 'Enhancement', labelColor: '#ba68c8', groupHeader: 'Status' },
+        items: [
+            { id: 'bug', text: 'Bug', labelColor: '#ff5252', groupBy: 'Status' },
+            { id: 'task', text: 'Task', labelColor: '#90caf9', groupBy: 'Status' },
+            { id: 'feature', text: 'Feature', labelColor: '#81c784', groupBy: 'Status' },
+            { id: 'enhancement', text: 'Enhancement', labelColor: '#ba68c8', groupBy: 'Status' },
             
-            { id: 'low', text: 'Low Priority', labelColor: '#c5e1a5', groupHeader: 'Priority' },
-            { id: 'medium', text: 'Medium Priority', labelColor: '#fff59d', groupHeader: 'Priority' },
-            { id: 'high', text: 'High Priority', labelColor: '#ffab91', groupHeader: 'Priority' },
-            { id: 'critical', text: 'Critical', labelColor: '#ef9a9a', groupHeader: 'Priority' }
+            { id: 'low', text: 'Low Priority', labelColor: '#c5e1a5', groupBy: 'Priority' },
+            { id: 'medium', text: 'Medium Priority', labelColor: '#fff59d', groupBy: 'Priority' },
+            { id: 'high', text: 'High Priority', labelColor: '#ffab91', groupBy: 'Priority' },
+            { id: 'critical', text: 'Critical', labelColor: '#ef9a9a', groupBy: 'Priority' }
         ]
     }
     };

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -15,10 +15,10 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'This is a paragraph block example.'
                 }
             ]

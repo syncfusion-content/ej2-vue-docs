@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -15,17 +15,17 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'Image',
-            props: {
+            blockType: 'Image',
+            properties: {
                 src: 'https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png',
                 altText: 'Sample image'
             }
         },
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'You can customize images further by configuring properties like allowedTypes for file upload restrictions, saveFormat for storage preferences, and cssClass for custom styling.'
                 }
             ]
