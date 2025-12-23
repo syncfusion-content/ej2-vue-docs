@@ -81,3 +81,24 @@ export default {
 };
 
 </script>
+<style>
+    .adornment-textarea .content-wrapper div.multiline-row {
+        margin: 0 auto;
+        padding: 40px 0px 0px;
+    }
+    .adornment-textarea.control-section {
+        padding-top: 0 !important;
+    }
+    .adornment-textarea .property-panel-content td {
+        padding: 10px 0px;
+        width: 50%;
+    }
+    .material3 .adornment-textarea .e-label-bottom,
+    .material3-dark .adornment-textarea .e-label-bottom {
+        top: -5px !important;
+    }
+    .fluent2 .adornment-textarea .e-label-bottom,
+    .fluent2-dark .adornment-textarea .e-label-bottom {
+        top: -10px !important;
+    }
+</style>
