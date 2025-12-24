@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin,  ContentType } from "@syncfusion/ej2-vue-blockeditor"
 
 Vue.use(BlockEditorPlugin);
 
@@ -14,23 +14,23 @@ new Vue({
   data () {
     return {
       blocksData: [
-        {
-              type: 'Paragraph',
+          {
+              blockType: 'Paragraph',
               content: [
                   {
-                      type: ContentType.Text,
+                      contentType: ContentType.Text,
                       content: 'This section discusses the features of the Block Editor.'
                   }
               ]
           },
           {
-              type: 'Divider'
+              blockType: 'Divider'
           },
           {
-              type: 'Paragraph',
+              blockType: 'Paragraph',
               content: [
                   {
-                      type: ContentType.Text,
+                      contentType: ContentType.Text,
                       content: 'This section covers implementation details and usage examples.' 
                   }
               ]

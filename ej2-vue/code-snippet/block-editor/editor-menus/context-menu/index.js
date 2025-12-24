@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -7,7 +7,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div id='container'>
-    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :blockActionsMenu="blockActionsMenu"></ejs-blockeditor>
+    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :contextMenuSettings="contextMenu"></ejs-blockeditor>
     <div id="controls">
         <h3>Context Menu Configuration Demo</h3>
         <div class="instructions">
@@ -78,22 +78,20 @@ new Vue({
       ],
       blocksData: [
         {
-            id: 'title-block',
-            type: 'Heading',
-            props: { level:1},
+            blockType: 'Heading',
+            properties: { level: 1},
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Context Menu Demo'
                 }
             ]
         },
         {
-            id: 'intro-block',
-            type: 'Quote',
+            blockType: 'Quote',
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Right-click anywhere in this editor to open the custom context menu. Try different areas and blocks.'
                 }
             ]

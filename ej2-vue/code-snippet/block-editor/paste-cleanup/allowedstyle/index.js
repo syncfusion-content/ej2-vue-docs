@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -36,7 +36,7 @@ new Vue({
       blocksData : [
           {
               id: 'demo-block',
-              type: 'Paragraph'
+              blockType: 'Paragraph'
           }
       ],
       pasteSettings: {

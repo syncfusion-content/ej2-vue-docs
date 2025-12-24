@@ -30,7 +30,7 @@ export default {
           {
             id: 'heading-block',
             blockType: 'Heading',
-            props: { level: 1},
+            properties: { level: 1},
             content: [
                 {
                     contentType: ContentType.Text,
@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     setSelection: function() {
-      this.$refs.blockEditor.ej2Instances.setSelection('paragraph-1', 5, 15);
+      this.$refs.blockEditor.ej2Instances.setSelection('paragraph1-content', 5, 15);
       this.displayOutput('Text selection set in "paragraph-1" block from position 5 to 15');
     },
     setCursorPosition: function() {
@@ -84,7 +84,7 @@ export default {
     getSelectedBlocks: function() {
       const selectedBlocks = this.$refs.blockEditor.ej2Instances.getSelectedBlocks();
       if (selectedBlocks && selectedBlocks.length > 0) {
-        const blockInfo = selectedBlocks.map(block => `ID: ${block.id}, Type: ${block.type}`).join('\n');
+        const blockInfo = selectedBlocks.map(block => `ID: ${block.id}, Type: ${block.blockType}`).join('\n');
         this.displayOutput(`Selected blocks (${selectedBlocks.length}):\n${blockInfo}`);
       } else {
         this.displayOutput('No blocks are currently selected');

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -15,10 +15,10 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'Quote',
+            blockType: 'Quote',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'The greatest glory in living lies not in never falling, but in rising every time we fall.'
                 }
             ]

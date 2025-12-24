@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -22,57 +22,59 @@ new Vue({
             ]
         },
       blocksData: [
-        {
-            type: 'Heading',
-            props: { level: 2},
+          {
+            blockType: 'Heading',
+            properties: { level: 2 },
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Different Content Types'
                 }
             ]
         },
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'The Block Editor supports various content types: '
                 },
                 {
-                    type: ContentType.Link,
+                    contentType: ContentType.Link,
                     content: 'hyperlinks',
-                    props: {
+                    properties: {
                         url: 'https://ej2.syncfusion.com/documentation/',
-                        openInNewWindow: true
                     }
                 },
                 {
-                    type: ContentType.Text,
-                    content: ', inline '
+                    contentType: ContentType.Text,
+                    content: ', inline ',
                 },
                 {
-                    type: ContentType.Code,
-                    content: 'code snippets.'
+                    contentType: ContentType.Text,
+                    content: 'code snippets.',
+                    properties: {
+                        styles: { inlineCode: true },
+                    }
                 },
                 {
-                    type: ContentType.Text,
-                    content: '\nUser mentions like '
+                    contentType: ContentType.Text,
+                    content: '\nUser mentions like'
                 },
                 {
-                    type: ContentType.Mention,
-                    id: 'user1'
+                    contentType: ContentType.Mention,
+                    properties: { userId: "user1" }
                 },
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: ', and labels such as '
                 },
                 {
-                    type: ContentType.Label,
-                    props: { labelId: 'label1'}
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'label1' }
                 },
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: '.'
                 }
             ]

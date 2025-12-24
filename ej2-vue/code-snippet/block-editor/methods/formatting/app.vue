@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { BlockEditorComponent, ContentType } from "@syncfusion/ej2-vue-blockeditor";
+import { BlockEditorComponent, ContentType, CommandName } from "@syncfusion/ej2-vue-blockeditor";
 
 export default {
   components: {
@@ -60,20 +60,20 @@ export default {
   },
   methods: {
     applyBold: function() {
-      this.$refs.blockEditor.ej2Instances.executeToolbarAction(BuiltInToolbar.Bold);
-      this.displayOutput('Bold formatting applied to selected text');
-    },
-    applyBold: function() {
-      this.$refs.blockEditor.ej2Instances.executeToolbarAction(BuiltInToolbar.Bold);
+      this.$refs.blockEditor.ej2Instances.executeToolbarAction(CommandName.Bold);
       this.displayOutput('Bold formatting applied to selected text');
     },
     applyColor: function() {
-      this.$refs.blockEditor.ej2Instances.executeToolbarAction(BuiltInToolbar.Color, '#ff6b35');
+      this.$refs.blockEditor.ej2Instances.executeToolbarAction(CommandName.Color, '#ff6b35');
       this.displayOutput('Orange color (#ff6b35) applied to selected text');
     },
     enableToolbar: function() {
       this.$refs.blockEditor.ej2Instances.enableToolbarItems(['bold', 'italic', 'underline']);
       this.displayOutput('Toolbar items (bold, italic, underline) have been enabled');
+    },
+    disableToolbar: function(){
+      this.$refs.blockEditor.ej2Instances.disableToolbarItems(['bold', 'italic']);
+      this.displayOutput('Toolbar items (bold, italic) have been disabled');
     },
     displayOutput: function(message) {
       var outputDiv = document.getElementById('output');

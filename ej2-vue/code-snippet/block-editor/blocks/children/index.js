@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -16,60 +16,55 @@ new Vue({
       blocksData: [
          {
             id: 'security-callout',
-            type: 'Callout',
-            props: {
+            blockType: 'Callout',
+            properties: {
             children: [
                 { 
-                    id: 'security-title',
                     parentId: 'security-callout',
-                    type: 'Heading',
-                    props: { level: 3},
+                    blockType: 'Heading',
+                    properties: { level: 3},
                     content: [{
-                        type: ej.blockeditor.ContentType.Text,
+                        contentType: ContentType.Text,
                         content: 'Security Notice'
                     }]
                 },
                 { 
-                    id: 'security-warning',
                     parentId: 'security-callout',
-                    type: 'Paragraph',
+                    blockType: 'Paragraph',
                     content: [{
-                        type: ej.blockeditor.ContentType.Text,
+                        contentType: ContentType.Text,
                         content: 'Always validate user input before processing to prevent security vulnerabilities.'
                     }]
                 },
                 { 
-                    id: 'security-tips',
                     parentId: 'security-callout',
-                    type: 'Paragraph',
+                    blockType: 'Paragraph',
                     content: [{
-                        type: ej.blockeditor.ContentType.Text,
+                        contentType: ContentType.Text,
                         content: 'Use HTTPS for all data transmission'
                     }],
                     indent: 1
                 },
                 { 
-                    id: 'security-tips-2',
                     parentId: 'security-callout',
-                    type: 'Paragraph',
+                    blockType: 'Paragraph',
                     content: [{
-                        type: ej.blockeditor.ContentType.Text,
+                        contentType: ContentType.Text,
                         content: 'Implement proper authentication mechanisms'
                     }],
                     indent: 1
                 },
                 { 
-                    id: 'security-tips-3',
                     parentId: 'security-callout',
-                    type: 'Paragraph',
+                    blockType: 'Paragraph',
                     content: [{
-                        type: ej.blockeditor.ContentType.Text,
+                        contentType: ContentType.Text,
                         content: 'Regularly update dependencies and libraries'
                     }],
                     indent: 1
                 }
             ]
-        }
+            }
         }
       ]
     }

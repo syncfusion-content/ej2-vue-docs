@@ -11,7 +11,7 @@ export default {
   components: {
     'ejs-blockeditor': BlockEditorComponent,
   },
-  data() {
+  data: function () {
     return {
       blocksData: [
       {

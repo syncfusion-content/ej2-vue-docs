@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -15,17 +15,18 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ej.blockeditor.ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'This is a sample paragraph block.'
                 }
             ]
         },
         {
-            type: 'Paragraph',
-            props: { placeholder: 'Start typing your notes or press "/" for commands...' }
+            blockType: 'Paragraph',
+            properties: { placeholder: 'Start typing your notes or press "/" for commands...'},
+            content: [ { contentType: ContentType.Text, content: '' } ]
         }
       ]
     }

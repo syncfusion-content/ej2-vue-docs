@@ -7,7 +7,7 @@ new Vue({
 	template: `
   <div id='container' style="height: 350px; width: 650px; margin: 0 auto;">
     <br>
-    <ejs-aiassistview id='aiAssistView' :prompts="promptsData" :prompt-toolbar-settings="promptToolbarSettings" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
+    <ejs-aiassistview id='aiAssistView' :prompts="promptsData" :footer-toolbar-settings="footerToolbarSettings" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
   </div>
 `,
 
@@ -19,10 +19,9 @@ new Vue({
           response: `<div>AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making.</div>`
         }
       ],
-      promptToolbarSettings: {
-        items: [
-          { type: 'Button', iconCss: 'e-icons e-edit' }
-        ]
+      footerToolbarSettings: {
+        toolbarPosition: 'Bottom',
+        items: [{iconCss: 'e-icons e-assistview-icon', align: 'Left'}]
       }
     }
   },

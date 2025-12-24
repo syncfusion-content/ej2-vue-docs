@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -7,7 +7,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div id='container'>
-    <ejs-blockeditor :blocks="blocksData" :undoRedoStack="20"></ejs-blockeditor>
+    <ejs-blockeditor :blocks="blocksData" :readOnly="true"></ejs-blockeditor>
   </div>
 `,
 
@@ -15,29 +15,13 @@ new Vue({
     return {
       blocksData: [
         {
-          id: 'block-1',
-          type: 'Heading',
-          props: { level:1},
-          content: [
-            {
-              type: ContentType.Text,
-              content: 'Sample Heading'
-            }
-          ]
-        },
-        {
-          id: 'block-2',
-          type: 'Paragraph',
-          content: [
-            {
-              type: ContentType.Text,
-              content: 'This is a sample paragraph block.'
-            }
-          ]
-        },
-        {
-          id: 'block-3',
-          type: 'Paragraph'
+            blockType: 'Paragraph',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'The Block Editor supports various content types. When the readOnly property is set to true, it prevents users from editing the content, making the editor display-only.'
+                }
+            ]
         }
       ]
     }

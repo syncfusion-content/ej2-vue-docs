@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -15,45 +15,45 @@ new Vue({
     return {
       blocksData: [
         {
-            type: 'CollapsibleHeading',
+            blockType: 'CollapsibleHeading',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Collapsible Section'
                 }
             ],
-            props: {
+            properties: {
             level: 1,
             isExpanded: true,
             children: [
                 {
-                    type: 'Paragraph',
+                    blockType: 'Paragraph',
                     content: [
                         {
-                            type: ContentType.Text,
+                            contentType: ContentType.Text,
                             content: 'This content is inside a toggle section and can be collapsed.'
                         }
                     ]
                 }
             ]
-        }
+            }
         },
         {
-            type: 'CollapsibleParagraph',
+            blockType: 'CollapsibleParagraph',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Toggle paragraph section'
                 }
             ],
-            props:{
+            properties: {
             isExpanded: false,
             children: [
                 {
-                    type: 'Paragraph',
+                    blockType: 'Paragraph',
                     content: [
                         {
-                            type: ContentType.Text,
+                            contentType: ContentType.Text,
                             content: 'This content is initially hidden because isExpanded is set to false.'
                         }
                     ]

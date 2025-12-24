@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin , ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -26,31 +26,26 @@ new Vue({
     return {
       blocksData: [
         {
-          id: 'title-block',
-          type: 'Heading',
-          props: { level: 1},
-          content: [{ type: ContentType.Text, content: 'Appearance Configuration Demo' }],
+          blockType: 'Heading',
+          properties: { level: 1},
+          content: [{ contentType: ContentType.Text, content: 'Appearance Configuration Demo' }],
         },
         {
-          id: 'intro-block',
-          type: 'Paragraph',
-          content: [{ type: ContentType.Text, content: 'This demo showcases different appearance configurations including readonly mode and a custom CSS theme.' }],
+          blockType: 'Paragraph',
+          content: [{ contentType: ContentType.Text, content: 'This demo showcases different appearance configurations including readonly mode and a custom CSS theme.' }],
         },
         {
-          id: 'features-heading',
-          type: 'Heading',
-          props: { level: 2},
-          content: [{ type: ContentType.Text, content: 'Configured Custom Theme' }],
+          blockType: 'Heading',
+          properties: { level: 2},
+          content: [{ contentType: ContentType.Text, content: 'Configured Custom Theme' }],
         },
         {
-          id: 'theme-list-1',
-          type: 'BulletList',
-          content: [{ type: ContentType.Text, content: 'Gradient background with modern styling' }],
+          blockType: 'BulletList',
+          content: [{ contentType: ContentType.Text, content: 'Gradient background with modern styling' }],
         },
         {
-          id: 'readonly-info',
-          type: 'Paragraph',
-          content: [{ type: ContentType.Text, content: 'Use the readonly toggle to switch between editable and read-only modes. In readonly mode, you can view content but cannot make changes.' }],
+          blockType: 'Paragraph',
+          content: [{ contentType: ContentType.Text, content: 'Use the readonly toggle to switch between editable and read-only modes. In readonly mode, you can view content but cannot make changes.' }],
         }
       ],
       isReadonly : false,

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -7,7 +7,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div id='container'>
-    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :inlineToolbar="inlineToolbar"></ejs-blockeditor>
+    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :inlineToolbarSettings="inlineToolbarSettings"></ejs-blockeditor>
     <div id="controls">
         <h3>Inline Toolbar Configuration Demo</h3>
         <div class="instructions">
@@ -23,49 +23,39 @@ new Vue({
 
  data() {
     return {
-      customToolbarItems : [
-          { id: 'clear', iconCss: 'e-icons e-format-painter', item: BuiltInToolbar.Custom, tooltip: 'Format Painter' },
-          { id: 'highlight', iconCss: 'e-icons e-highlight', item: BuiltInToolbar.Custom, tooltip: 'Highlight' },
-      ],
+      customToolbarItems : [ 'Bold', 'Italic' ],
       blocksData: [
         {
-            id: 'title-block',
-            type: 'Heading',
-            props: { level:1},
+            blockType: 'Heading',
+            properties: { level: 1},
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Inline Toolbar Demo'
                 }
             ]
         },
         {
-            id: 'intro-block',
-            type: 'Quote',
+            blockType: 'Quote',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Select any text in the editor to open the Inline Toolbar'
                 }
             ]
         }
       ],
-      inlineToolbar: {
-        width: '80px',
+      inlineToolbarSettings: {
+        popupWidth: '80px',
         enable: true,
-        items: this.customToolbarItems,
-        enableTooltip: true,
-        open: (args) => {
-            // Your actions here
-        },
-        close: (args) => {
-            // Your actions here
-        },
-        itemClicked: (args) => {
+        itemClick: () => {
             // Handle custom actions here
-        }
-      }
-    };
+        },
+        items: [
+          'Bold', 'Italic', 'Underline', 'Strikethrough'
+        ]
+    }
+}   
   },
 methods: {
 

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType, CommandName } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -28,55 +28,52 @@ new Vue({
     return {
       blocksData : [
           {
-        id: 'sample-heading',
-        type: 'Heading',
-        props: { level: 1 },
-        content: [
-            {
-                type: ej.blockeditor.ContentType.Text,
-                content: 'Formatting Demo'
-            }
-        ]
-    },
-    {
-        id: 'sample-paragraph-1',
-        type: 'Paragraph',
-        content: [
-            {
-                type: ej.blockeditor.ContentType.Text,
-                content: 'Select this text and apply different formatting options using the buttons below. You can make text bold or change colors for the text.'
-            }
-        ]
-    },
-    {
-        id: 'sample-list',
-        type: 'BulletList',
-        content: [
-            {
-                type: ej.blockeditor.ContentType.Text,
-                content: 'List item for formatting demonstration'
-            }
-        ]
-    }
+            blockType: 'Heading',
+            properties: { level: 1},
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Formatting Demo'
+                }
+            ]
+        },
+        {
+            blockType: 'Paragraph',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Select this text and apply different formatting options using the buttons below. You can make text bold or change colors for the text.'
+                }
+            ]
+        },
+        {
+            blockType: 'BulletList',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'List item for formatting demonstration'
+                }
+            ]
+        }
       ]     
     };
   },
   methods: {
     applyBold: function() {
-      this.$refs.blockEditor.ej2Instances.executeToolbarAction(BuiltInToolbar.Bold);
-      this.displayOutput('Bold formatting applied to selected text');
-    },
-    applyBold: function() {
-      this.$refs.blockEditor.ej2Instances.executeToolbarAction(BuiltInToolbar.Bold);
+      this.$refs.blockEditor.ej2Instances.executeToolbarAction(CommandName.Bold);
       this.displayOutput('Bold formatting applied to selected text');
     },
     applyColor: function() {
-      this.$refs.blockEditor.ej2Instances.executeToolbarAction(BuiltInToolbar.Color, '#ff6b35');
+      this.$refs.blockEditor.ej2Instances.executeToolbarAction(CommandName.Color, '#ff6b35');
       this.displayOutput('Orange color (#ff6b35) applied to selected text');
     },
     enableToolbar: function() {
       this.$refs.blockEditor.ej2Instances.enableToolbarItems(['bold', 'italic', 'underline']);
       this.displayOutput('Toolbar items (bold, italic, underline) have been enabled');
+    },
+    disableToolbar: function(){
+      this.$refs.blockEditor.ej2Instances.disableToolbarItems(['bold', 'italic']);
+      this.displayOutput('Toolbar items (bold, italic) have been disabled');
     },
     displayOutput: function(message) {
       var outputDiv = document.getElementById('output');
