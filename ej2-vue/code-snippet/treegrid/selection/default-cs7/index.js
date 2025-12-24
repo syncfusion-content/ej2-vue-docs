@@ -10,7 +10,7 @@ new Vue({
   template: `
 <div id="app">
   <ejs-treegrid :dataSource='data' idMapping='TaskID' parentIdMapping='ParentID' :treeColumnIndex='1'
-    :enableVirtualization="true" :selectionSettings='selectionOptions' :isRowSelectable="isRowSelectable"
+    :enableVirtualization="true" :selectionSettings='selectionOptions' :isRowSelectable='isRowSelectable'
     :height="600">
     <e-columns>
       <e-column type="checkbox" width= '90'></e-column>
@@ -36,7 +36,7 @@ new Vue({
     treegrid: [VirtualScroll]
   },
   methods: {
-    isRowSelectable(data, columns) {
+    isRowSelectable: function(data, columns) {
       return data.Progress !== 'Completed';
     }
   }

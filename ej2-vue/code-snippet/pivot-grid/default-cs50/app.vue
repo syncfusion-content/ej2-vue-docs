@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -37,15 +37,17 @@ export default {
   methods: {
     btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      let pivotGridObj2 = document.getElementById('pivotview2').ej2_instances[0];
       let excelExportProperties = {
-        multipleExport: { type: 'NewSheet' }
+        multipleExport: { type: 'NewSheet' },
+        pivotTableIds: ['pivotview', 'pivotview2']
       };
-      let firstGridExport = pivotGridObj.grid.excelExport(excelExportProperties, true);
-      firstGridExport.then((fData) => {
-        pivotGridObj2.excelExport(excelExportProperties, false, fData);
-      });
+      pivotGridObj.excelExport(excelExportProperties, true);
     }
+  },
+  provide: {
+    pivotview: [
+      ExcelExport
+    ]
   }
 }
 </script>

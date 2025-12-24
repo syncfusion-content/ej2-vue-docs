@@ -1,16 +1,18 @@
 
 import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
-
+Vue.use(ButtonPlugin);
 
 new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :gridSettings="gridSettings" :allowExcelExport="allowExcelExport"> </ejs-pivotview>
+        <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">Excel Export</ejs-button>
+        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :gridSettings="gridSettings" :allowExcelExport="allowExcelExport"> </ejs-pivotview>
     </div>
 `,
 
@@ -33,14 +35,19 @@ new Vue({
         excelQueryCellInfo: function(args){
             //triggers for every header cell while Excel/CSV export
         }
-      }
+      },
+      isPrimary: true
     }
-  }
+  },
   methods:{
     btnClick: function(args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.excelExport();
     }
+  },
+  provide: {
+    pivotview: [
+      ExcelExport
+    ]
   }
-
 });
