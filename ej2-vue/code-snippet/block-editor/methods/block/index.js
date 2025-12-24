@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin,ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -26,33 +26,33 @@ new Vue({
   data () {
     return {
       blocksData : [
-              {
+      {
         id: 'block-1',
-        type: 'Heading',
-        props: { level: 1},
+        blockType: 'Heading',
+        properties: { level: 1},
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Sample Heading'
             }
         ]
     },
     {
         id: 'block-2',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This is a sample paragraph block.'
             }
         ]
     },
     {
         id: 'block-3',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This is another paragraph block.'
             }
         ]
@@ -64,10 +64,10 @@ new Vue({
     addBlock: function() {
       const newBlock = {
         id: 'new-block',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
           {
-            type: ContentType.Text,
+            contentType: ContentType.Text,
             content: 'This is a newly added block'
           }
         ]
@@ -92,7 +92,7 @@ new Vue({
       this.displayOutput('Block "block-2" moved successfully');
     },
     updateBlock: function() {
-      const success = this.$refs.blockEditor.ej2Instances.updateBlock('block-2', { indent: 1, content: [{ content: 'Updated content' }] });
+      const success = this.$refs.blockEditor.ej2Instances.updateBlock('block-2', { indent: 1, content: [{ contentType: ContentType.Text,content: 'Updated content' }] });
       const updatedBlock = this.$refs.blockEditor.ej2Instances.getBlock('block-2');
       if (success && updatedBlock && updatedBlock.content) {
         this.displayOutput(`Block ${updatedBlock.id} updated successfully\nNew content: "${updatedBlock.content[0].content}" \nNew indent: ${updatedBlock.indent}`);

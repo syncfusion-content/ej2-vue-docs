@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 import { L10n } from '@syncfusion/ej2-base';
 
 Vue.use(BlockEditorPlugin);
@@ -15,37 +15,33 @@ new Vue({
   data () {
     return {
       blocksData: [
-        {
-          id: 'block-1',
-          type: 'Heading',
-          props: { level:1},
-          content: [
-            {
-              type: ContentType.Text,
-              content: 'Sample Heading'
-            }
-          ]
-        },
-        {
-          id: 'block-2',
-          type: 'Paragraph',
-          content: [
-            {
-              type: ContentType.Text,
-              content: 'This is a sample paragraph block.'
-            }
-          ]
-        },
-        {
-          id: 'block-3',
-          type: 'Paragraph'
-        }
+          {
+              blockType: 'Heading',
+              properties: { level: 1},
+              content: [
+                  {
+                      contentType: ContentType.Text,
+                      content: 'Sample Heading'
+                  }
+              ]
+          },
+          {
+              blockType: 'Paragraph',
+              content: [
+                  {
+                      contentType: ContentType.Text,
+                      content: 'This is a sample paragraph block.'
+                  }
+              ]
+          },
+          {
+              blockType: 'Paragraph'
+          }
       ]
     }
   },
   methods: {
     created() {
-      this.typingUsers = [this.michaleUser];
       L10n.load({
         'de': {
           "blockeditor": {

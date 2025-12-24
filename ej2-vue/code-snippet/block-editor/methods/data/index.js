@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -25,89 +25,89 @@ new Vue({
   data() {
     return {
       blocksData : [
-          {
-            id: 'title-block',
-            type: 'Heading',
-            props: { level:1},
-            content: [
-                {
-                    type: ContentType.Text,
-                    content: 'Document Export Demo'
-                }
-            ]
-        },
-        {
-            id: 'intro-paragraph',
-            type: 'Paragraph',
-            content: [
-                {
-                    type: ContentType.Text,
-                    content: 'This document demonstrates the data export capabilities of the Block Editor. You can export content as JSON or HTML formats.'
-                }
-            ]
-        },
-        {
-            id: 'features-heading',
-            type: 'Heading',
-            props: { level: 2},
-            content: [
-                {
-                    type: ContentType.Text,
-                    content: 'Export Features'
-                }
-            ]
-        },
-        {
-            id: 'features-list',
-            type: 'BulletList',
-            content: [
-                {
-                    type: ContentType.Text,
-                    content: 'JSON export for data processing'
-                }
-            ]
-        },
-        {
-            id: 'features-list-2',
-            type: 'BulletList',
-            content: [
-                {
-                    type: ContentType.Text,
-                    content: 'HTML export for web display'
-                }
-            ]
-        },
-        {
-            id: 'features-list-3',
-            type: 'BulletList',
-            content: [
-                {
-                    type: ContentType.Text,
-                    content: 'Print functionality for hard copies'
-                }
-            ]
-        },
-        {
-            id: 'code-example',
-            type: 'Code',
-            content: [
-                {
-                    type: ContentType.Text,
-                    content: 'const data = editor.getDataAsJson();\nconsole.log(data);'
-                }
-            ]
-        }
-      ]     
+     {
+        id: 'title-block',
+        blockType: 'Heading',
+        properties: { level: 1},
+        content: [
+            {
+                contentType: ContentType.Text,
+                content: 'Document Export Demo'
+            }
+        ]
+    },
+    {
+        id: 'intro-block',
+        blockType: 'Paragraph',
+        content: [
+            {
+                contentType: ContentType.Text,
+                content: 'This document demonstrates the data export capabilities of the Block Editor. You can export content as JSON or HTML formats.'
+            }
+        ]
+    },
+    {
+        id: 'feature-heading',
+        blockType: 'Heading',
+        properties: { level: 2},
+        content: [
+            {
+                contentType: ContentType.Text,
+                content: 'Export Features'
+            }
+        ]
+    },
+    {
+        id: 'features-list',
+        blockType: 'BulletList',
+        content: [
+            {
+                contentType: ContentType.Text,
+                content: 'JSON export for data processing'
+            }
+        ]
+    },
+    {
+        id: 'features-list-2',
+        blockType: 'BulletList',
+        content: [
+            {
+                contentType: ContentType.Text,
+                content: 'HTML export for web display'
+            }
+        ]
+    },
+    {
+        id: 'features-list-3',
+        blockType: 'BulletList',
+        content: [
+            {
+                contentType: ContentType.Text,
+                content: 'Print functionality for hard copies'
+            }
+        ]
+    },
+    {
+        id: 'code-example',
+        blockType: 'Code',
+        content: [
+            {
+                contentType: ContentType.Text,
+                content: 'const data = editor.getDataAsJson();\nconsole.log(data);'
+            }
+        ]
+    }
+]    
     };
   },
   methods: {
-    getJsonBlock: function() {
-      const blockData = this.$refs.blockEditor.ej2Instances.getDataAsJson('block-1');
+    getJsonAll: function() {
+      const blockData = this.$refs.blockEditor.ej2Instances.getDataAsJson();
       const formattedJson = JSON.stringify(blockData, null, 2);
       this.displayOutput(`Block "block-1" as JSON:\n\n${formattedJson}`);
     },
     getJsonBlock: function() {
-      const blockData = this.$refs.blockEditor.ej2Instances.getDataAsJson('block-1');
+      const blockData = this.$refs.blockEditor.ej2Instances.getDataAsJson('intro-block');
       const formattedJson = JSON.stringify(blockData, null, 2);
       this.displayOutput(`Block "block-1" as JSON:\n\n${formattedJson}`);
     },
@@ -116,7 +116,7 @@ new Vue({
       this.displayOutput(`All blocks as HTML:\n\n${htmlData}`);
     },
     getHtmlBlock: function() {
-      const blockHtml = this.$refs.blockEditor.ej2Instances.getDataAsHtml('block-2');
+      const blockHtml = this.$refs.blockEditor.ej2Instances.getDataAsHtml('intro-block');
       this.displayOutput(`Block "block-2" as HTML:\n\n${blockHtml}`);
     },
     printContent: function() {

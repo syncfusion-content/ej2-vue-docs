@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BlockEditorPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { BlockEditorPlugin, ContentType } from "@syncfusion/ej2-vue-blockeditor";
 
 Vue.use(BlockEditorPlugin);
 
@@ -7,7 +7,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div id='container'>
-    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :inlineToolbar="inlineToolbar"></ejs-blockeditor>
+    <ejs-blockeditor id="blockeditor" :blocks="blocksData" :commandMenuSettings="commandMenu"></ejs-blockeditor>
     <div id="controls">
         <h3>Inline Toolbar Configuration Demo</h3>
         <div class="instructions">
@@ -25,11 +25,10 @@ new Vue({
     return {
       blocksData: [
         {
-            id: 'demo-block',
-            type: 'Paragraph',
+            blockType: 'Paragraph',
             content: [
                 {
-                    type: ContentType.Text,
+                    contentType: ContentType.Text,
                     content: 'Type "/" anywhere in this editor to open the custom slash command menu.'
                 }
             ]
@@ -43,28 +42,22 @@ new Vue({
         commands: [
             {
                 id: 'line-cmd',
-                type: BlockType.Divider,
-                groupHeader: 'Utility',
+                type: 'Divider',
+                groupBy: 'Utility',
                 label: 'Insert a Line',
                 iconCss: 'e-icons e-divider',
             },
             {
                 id: 'timestamp-cmd',
-                groupHeader: 'Actions',
+                groupBy: 'Actions',
                 label: 'Insert Timestamp',
                 iconCss: 'e-icons e-schedule',
             }
         ],
-        itemClicked: (args) => {
+        itemSelect: () => {
             // Handle custom command actions
         },
-        open: (args) => {
-            // Your actions here
-        },
-        close: (args) => {
-            // Your actions here
-        },
-        queryFiltering: (args) => {
+        filtering: () => {
             // Your actions here
         }
       }

@@ -67,6 +67,17 @@ You can use the [footerToolbarSettings](../api/ai-assistview#footertoolbarsettin
 
 The [itemClick](../api/ai-assistview/footerToolbarSettingsModel#itemclick) event is triggered when the footer toolbar item is clicked.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/toolbar-items/itemClicked/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/toolbar-items/itemClicked/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/itemClicked" %}
+
 ## Adding header toolbar items
 
 ### Items
