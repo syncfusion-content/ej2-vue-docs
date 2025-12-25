@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue Pivot Table: Select Cells & Get Data | Syncfusion
+title: Select cells and get selection info in Vue Pivotview | Syncfusion
 description: Select and retrieve data from cells in the Syncfusion EJ2 Vue Pivot Table. Learn to manage user interaction and data extraction.
 control: Perform cell selection and get selected cells information 
 platform: ej2-vue

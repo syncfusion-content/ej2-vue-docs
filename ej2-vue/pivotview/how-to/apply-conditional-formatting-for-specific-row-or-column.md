@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue Pivot Table: Conditional Formatting | Syncfusion
+title: Apply conditional formatting for row or column in Vue | Syncfusion
 description: Apply conditional formatting to rows or columns in the Syncfusion EJ2 Vue Pivot Table. Customize cell styles based on values to highlight key data.
 control: Apply conditional formatting for specific row or column 
 platform: ej2-vue

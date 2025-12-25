@@ -1,8 +1,8 @@
 ----
 layout: post
-title: AI Assistant Configuration in Vue Rich Text Editor component | Syncfusion
-description: Learn about the AI Assistant feature in the Syncfusion Vue Rich Text Editor component of Syncfusion Essential JS 2 and more.
-control: Integrating the AI Assistant
+title: Configure AI Assistant in Vue Rich Text Editor | Syncfusion
+description: Learn about the AI Assistant feature configuration in the Syncfusion Vue Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: Properties of AI Assistant
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -45,14 +45,14 @@ In the below example, a set of prompts and texts are configured to demonstrate t
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/commands/app-composition.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/commands/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/commands/app.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/commands/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/commands" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/commands" %}
 
 ## Preloading Prompts, Response and Suggestions
 
@@ -64,14 +64,14 @@ In the below sample, the `prompts` and `suggestions` properties of the `aiAssist
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/prompts/app-composition.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompts/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/prompts/app.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompts/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/prompts" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/prompts" %}
 
 ## Header, Prompt and Response Toolbar
 
@@ -101,14 +101,14 @@ In the below sample, the toolbar settings are configured to modify the order and
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-settings/app-composition.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-settings/app.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-settings" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/toolbar-settings" %}
 
 ## Popup Dimensions
 
@@ -120,14 +120,14 @@ In the below sample, the popup width and maximum height are configured.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/popup-dimensions/app-composition.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/popup-dimensions/app.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/popup-dimensions" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/popup-dimensions" %}
 
 ## Setting Maximum Conversation History Length
 
@@ -139,14 +139,14 @@ In the below sample, the maximum prompt history is configured to `30`, and when 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/prompt-history/app-composition.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompt-history/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/prompt-history/app.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompt-history/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/prompt-history" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/prompt-history" %}
 
 ## Setting the Banner
 
@@ -158,11 +158,11 @@ In the below sample, a custom banner template is applied to the AI Assistant.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/banner/app-composition.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/banner/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/banner/app.vue %}
+{% include code-snippet/rich-text-editor/ai-assistant/banner/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/banner" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/banner" %}

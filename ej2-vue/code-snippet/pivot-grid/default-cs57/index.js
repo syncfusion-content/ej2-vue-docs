@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { PivotViewPlugin, VirtualScroll, } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, VirtualScroll, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -37,7 +37,7 @@ new Vue({
     }
   },
   provide: {
-    pivotview: [VirtualScroll]
+    pivotview: [VirtualScroll, ExcelExport]
   }
   methods: {
     btnClick: function(args) {

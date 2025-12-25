@@ -40,13 +40,13 @@
         var d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
         return d.toISOString().split('T')[0];
     }
-    export var taskData = [];
+    exports.taskData = [];
     let id = 1;
     for (let i = 0; i < NUM_ROOTS; i++) {
         var start = randomDate(START_DATE, END_DATE);
         var due = randomDate(new Date(start), END_DATE);
         var state = progressStates[Math.floor(Math.random() * progressStates.length)];
-        taskData.push({
+        exports.taskData.push({
             TaskID: id,
             ParentID: null,
             Task: rootTasks[i % rootTasks.length] + (i >= rootTasks.length ? ` ${i + 1}` : ''),
@@ -63,7 +63,7 @@
             var cStart = randomDate(new Date(start), new Date(due));
             var cDue = randomDate(new Date(cStart), new Date(due));
             var cState = progressStates[Math.floor(Math.random() * progressStates.length)];
-            taskData.push({
+            exports.taskData.push({
                 TaskID: id,
                 ParentID: rootId,
                 Task: childTasks[c % childTasks.length] + (c >= childTasks.length ? ` ${c + 1}` : ''),
