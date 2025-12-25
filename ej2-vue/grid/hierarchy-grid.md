@@ -314,7 +314,7 @@ In the example below, expansion is prevented for the **Nancy** row, and collapse
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid/ddetail-row-events" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid/detail-row-events" %}
 
 ## Customize the child grid
 

@@ -10,7 +10,7 @@ new Vue({
   el: '#app',
   template: `
   <div id="app">
-    <ejs-grid :dataSource='data' :isRowPinned="isRowPinned" :allowPaging="true" :pageSettings="pageSettings" :toolbar="toolbar" :editSettings="editSettings" height='200px'>
+    <ejs-grid :dataSource='data' :height='150' :isRowPinned="isRowPinned" :allowPaging="true" :pageSettings="pageSettings" :toolbar="toolbar" :editSettings="editSettings" >
       <e-columns>
         <e-column field="TaskID" headerText="Task ID" :isPrimaryKey="true" textAlign="Right" width="100"></e-column>
         <e-column field="Title" headerText="Title" width="120"></e-column>
