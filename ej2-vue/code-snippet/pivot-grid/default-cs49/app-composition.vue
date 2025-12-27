@@ -10,7 +10,7 @@
 
 <script setup>
 
-import { PivotViewComponent as EjsPivotview } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent as EjsPivotview, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -29,15 +29,17 @@ const isPrimary = true;
 
 const btnClick = () => {
   let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-  let pivotGridObj2 = document.getElementById('pivotview2').ej2_instances[0];
   let excelExportProperties = {
-    multipleExport: { type: 'AppendToSheet', blankRows: 2 }
+    multipleExport: { type: 'AppendToSheet', blankRows: 2 },
+    pivotTableIds: ['pivotview', 'pivotview2']
   };
-  let firstGridExport = pivotGridObj.grid.excelExport(excelExportProperties, true);
-  firstGridExport.then((fData) => {
-    pivotGridObj2.excelExport(excelExportProperties, false, fData);
-  });
+  pivotGridObj.excelExport(excelExportProperties, true);
 }
+
+provide('pivotview', [
+  ExcelExport
+]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";

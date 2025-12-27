@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue Pivot Table: Conditional Hyperlinks | Syncfusion
+title: Apply conditional hyper link for row or column in Vue | Syncfusion
 description: Apply conditional hyperlinks to rows or columns in the Syncfusion EJ2 Vue Pivot Table. Dynamically create unique cell links based on values.
 control: Apply condition based hyper link for specific row or column 
 platform: ej2-vue

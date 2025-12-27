@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import { PivotViewComponent, VirtualScroll, } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, VirtualScroll, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -37,7 +37,7 @@ export default {
     }
   },
   provide: {
-    pivotview: [VirtualScroll]
+    pivotview: [VirtualScroll, ExcelExport]
   },
   methods: {
     btnClick: function () {

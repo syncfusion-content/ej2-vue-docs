@@ -1,7 +1,7 @@
 
 import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
+import { PivotViewPlugin, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonPlugin, ChangeEventArgs } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
@@ -9,15 +9,15 @@ Vue.use(ButtonPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
         <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">Excel Export</ejs-button>
         <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowExcelExport="allowExcelExport"> </ejs-pivotview>
     </div>
 `,
 
-  data () {
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -35,10 +35,15 @@ new Vue({
     }
   },
   methods: {
-    btnClick: function(args) {
+    btnClick: function (args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.csvExport();
     }
+  },
+  provide: {
+    pivotview: [
+      ExcelExport
+    ]
   }
 
 });

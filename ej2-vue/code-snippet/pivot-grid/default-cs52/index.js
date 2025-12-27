@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
 import { ExcelExportProperties } from '@syncfusion/ej2-grids';
 import { pivotData } from './pivotData.js';
@@ -55,6 +55,10 @@ new Vue({
       };
       pivotGridObj.excelExport(excelExportProperties);
     }
+  },
+  provide: {
+    pivotview: [
+      ExcelExport
+    ]
   }
-
 });

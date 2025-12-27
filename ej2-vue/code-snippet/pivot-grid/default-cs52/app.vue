@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -53,6 +53,11 @@ export default {
       };
       pivotGridObj.excelExport(excelExportProperties);
     }
+  },
+  provide: {
+    pivotview: [
+      ExcelExport
+    ]
   }
 }
 </script>
