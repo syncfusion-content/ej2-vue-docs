@@ -37,5 +37,5 @@ The following example demonstrates how to add adornments in the MaskedTextBox co
 {% include code-snippet/masked-textbox/adornments-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/masked-textbox/adornments-cs1" %}
+
+You can view the demo here: [MaskedTextBox Adornments demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/maskedtextbox/adornments.html).

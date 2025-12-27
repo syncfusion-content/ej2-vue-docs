@@ -50,4 +50,4 @@ The following example demonstrates how to add adornments with orientation in the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/textarea/adornments-cs1" %}
+You can view the demo here: [TextArea Adornments demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/textarea/adornments.html).
