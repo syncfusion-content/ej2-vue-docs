@@ -37,5 +37,5 @@ The following example demonstrates how to add adornments in the NumericTextBox c
 {% include code-snippet/numeric-textbox/adornments-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/numeric-textbox/adornments-cs1" %}
+
+You can view the demo here: [NumericTextBox Adornments demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/numerictextbox/adornments.html).
