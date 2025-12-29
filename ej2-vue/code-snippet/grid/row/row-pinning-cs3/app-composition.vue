@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <ejs-grid :dataSource='data' :isRowPinned="isRowPinned" :allowPaging="true" :pageSettings="pageSettings" :isRowPinned='isRowPinned' height="200px">
+      <ejs-grid :dataSource='data' :isRowPinned="isRowPinned" :allowPaging="true" :pageSettings="pageSettings"  height="200px">
         <e-columns>
           <e-column type="checkbox" width="70"></e-column>
           <e-column field="TaskID" headerText="Task ID" textAlign="Right" width="100"></e-column>
