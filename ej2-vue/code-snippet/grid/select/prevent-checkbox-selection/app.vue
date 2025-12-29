@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref="grid" :dataSource='data' allowPaging='true' allowSorting='true' allowFiltering='true' :filterSettings='filterSettings' 
+    <ejs-grid ref="grid" :dataSource='data' :height="260" allowPaging='true' allowSorting='true' allowFiltering='true' :filterSettings='filterSettings' 
       :editSettings='editSettings' :toolbar='toolbarSettings' :isRowSelectable='isRowSelectable' :allowSelection='true' :selectionSettings='selectionOptions'>
       <e-columns>
         <e-column type='checkbox' width='50' ></e-column>

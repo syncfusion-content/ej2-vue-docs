@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid :dataSource='parentData' height='315px' :childGrid='childGrid' :detailExpand='detailExpand' :detailCollapse='detailCollapse'>
+    <ejs-grid :dataSource='parentData' :height='345' :childGrid='childGrid' :detailExpand='detailExpand' :detailCollapse='detailCollapse'>
       <e-columns>
         <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=120></e-column>
         <e-column field='FirstName' headerText='FirstName' width=150></e-column>
@@ -38,13 +38,13 @@ components: {
   methods: {
     // Prevent expanding detail row.
     detailExpand: function(args){
-      if (args.data.FirstName === 'Nancy') {
+      if (args.rowData.FirstName === 'Nancy') {
         args.cancel = true;
       }
     },
     // Prevent collapsing detail row.
     detailCollapse: function(args){
-      if (args.data.FirstName === 'Andrew') {
+      if (args.rowData.FirstName === 'Andrew') {
         args.cancel = true;
       }
     }

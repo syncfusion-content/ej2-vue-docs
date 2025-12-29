@@ -23,9 +23,7 @@ const insertImageSettings ={
     path: "[SERVICE_HOSTED_PATH]/Files/"
 }
 const onImageUpload = (args) => {
-    let accessToken = "Authorization_token";
-    // adding custom form Data
-    args.customFormData = [ { 'Authorization': accessToken}];
+    args.currentRequest.setRequestHeader('Authorization', 'Syncfusion');
 }
 provide('richtexteditor', [Toolbar, Link, Image, HtmlEditor]); 
 </script>
