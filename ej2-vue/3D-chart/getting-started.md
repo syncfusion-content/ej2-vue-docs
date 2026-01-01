@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -182,9 +182,9 @@ export default {
 };
 ```
 
-* Add a series object to the 3D Chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D/) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D/#datasource) property.
+* Add a series object to the 3D Chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseries) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseries#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseries#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseries#datasource) property.
 
-Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/valueType/) for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
+Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/valueType) for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -194,11 +194,11 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
         
 {% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs2" %}
 
-* The sales data are in thousands, so format the vertical axis label by adding <b>$</b> as a prefix and <b>K</b> as a suffix to each label. This can be achieved by setting the ${value}K to the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
+* The sales data are in thousands, so format the vertical axis label by adding <b>$</b> as a prefix and <b>K</b> as a suffix to each label. This can be achieved by setting the ${value}K to the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3daxis#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
 
 ## Add 3D chart title
 
-You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#title) property to the 3D Chart to provide quick information to the user about the data plotted in the 3D Chart.
+You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#title) property to the 3D Chart to provide quick information to the user about the data plotted in the 3D Chart.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -210,7 +210,7 @@ You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation
 
 ## Enable legend
 
-You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/threeDimensionalLegendSettingsModel/#visible) property to true in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#legendsettings) object and by injecting the `Legend3D` into the `provide`.
+You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dlegendsettingsmodel#visible) property to true in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#legendsettings) object and by injecting the `Legend3D` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -222,7 +222,7 @@ You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncf
 
 ## Add data label
 
-You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#visible) property to true in the [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#datalabel) object and by injecting `DataLabel3D` into the `provide`.
+You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel#visible) property to true in the [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#datalabel) object and by injecting `DataLabel3D` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -234,7 +234,7 @@ You can add data labels to improve the readability of the 3D Chart. This can be 
 
 ## Enable tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/threeDimensionalTooltipSettingsModel/#enable) property as true in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#tooltip) object and by injecting `Tooltip3D` into the `provide`.
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dtooltipsettingsmodel#enable) property as true in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#tooltip) object and by injecting `Tooltip3D` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
