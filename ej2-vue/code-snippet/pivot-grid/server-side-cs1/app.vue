@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-pivotview id="pivotview-template" ref="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"
       :beforeServiceInvoke="beforeServiceInvoke"> </ejs-pivotview>
   </div>
 </template>
