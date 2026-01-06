@@ -10,18 +10,18 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Treegrid Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Treegrid component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Treegrid component
 
 To get start quickly with Vue tree grid, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=FEMyOHKjjao" %}
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -64,7 +64,7 @@ yarn add @syncfusion/ej2-vue-treegrid
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 The TreeGrid has different themes. They are:
 * Material
@@ -273,7 +273,7 @@ The TreeGrid has an option to define the columns as an array. In these columns, 
 * The `textAlign` has been used to change the alignment of columns. By default, columns will be left aligned. To change the columns to right align, define the `textAlign` to `Right`.
 * Also, the another useful property, `format` has been used. Using this, you can format number and date values to standard or custom formats. Here it is defined for the conversion of date objects to formatted strings.
 
-Tree Column is used to expand or collapse child rows is defined by using the [`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#treecolumnindex) property.
+Tree Column is used to expand or collapse child rows is defined by using the [`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#treecolumnindex) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -290,7 +290,7 @@ Tree Column is used to expand or collapse child rows is defined by using the [`t
 {% endhighlight %}
 {% endtabs %}
 
-In the above code example, we represent the hierarchical data binding in which [`chilMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#chilmapping)  property denotes the hierarchy relationship; whereas in self-referencing data binding [`idMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#idmapping)  and [`parentIdMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#parentidmapping) denotes the hierarchy relationship.
+In the above code example, we represent the hierarchical data binding in which [`childMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#childmapping)  property denotes the hierarchy relationship; whereas in self-referencing data binding [`idMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#idmapping)  and [`parentIdMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#parentidmapping) denotes the hierarchy relationship.
 
 ## Module injection
 
@@ -308,9 +308,9 @@ Register the required array of modules under the key `treegrid` in the `provide`
 
 ## Enable Paging
 
-The paging feature enables users to view the TreeGrid record in a paged view. It can be enabled by setting the  [`allowPaging`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowpaging) property to true. Also, need to inject the `Page` module in the `provide` section as follows. If the `Page` module is not injected, the pager will not be rendered in the TreeGrid. The pager can be customized using the [`pageSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettings) property.
+The paging feature enables users to view the TreeGrid record in a paged view. It can be enabled by setting the  [`allowPaging`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#allowpaging) property to true. Also, need to inject the `Page` module in the `provide` section as follows. If the `Page` module is not injected, the pager will not be rendered in the TreeGrid. The pager can be customized using the [`pageSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettings) property.
 
-In root-level paging mode, paging is based on the root-level rows only i.e., it ignores the child rows count and it can be enabled by using the [`pageSettings.pageSizeMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettingsModel/#pagesizemode) property.
+In root-level paging mode, paging is based on the root-level rows only i.e., it ignores the child rows count and it can be enabled by using the [`pageSettings.pageSizeMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettingsModel#pagesizemode) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -325,7 +325,7 @@ In root-level paging mode, paging is based on the root-level rows only i.e., it 
 
 ## Enable Sorting
 
-The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowsorting) property to true. Also, need to inject the `Sort` module in the `provide` section as follow.
+The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#allowsorting) property to true. Also, need to inject the `Sort` module in the `provide` section as follow.
 If we didn't inject the `Sort` module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/sortSettings) property.
 
 {% tabs %}
@@ -341,9 +341,9 @@ If we didn't inject the `Sort` module, then user not able to sort when click on 
 
 ## Enable Filtering
 
-The filtering feature enables you to view the reduced amount of records based on the filter criteria. It can be enabled by setting the [`allowFiltering`](../api/treegrid/#allowfiltering) property to true.  Also, need to inject the `Filter` module in the `provide` section as follow. If `Filter` module is not injected, filter bar will not be rendered in TreeGrid. Filtering feature can be customized using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#filterSettings) property.
+The filtering feature enables you to view the reduced amount of records based on the filter criteria. It can be enabled by setting the [`allowFiltering`](../api/treegrid#allowfiltering) property to true.  Also, need to inject the `Filter` module in the `provide` section as follow. If `Filter` module is not injected, filter bar will not be rendered in TreeGrid. Filtering feature can be customized using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#filterSettings) property.
 
-By default, filtered records are shown along with its parent records. This behavior can be changed by using the [`filterSettings-hierarchyMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterSettings/#hierarchymode) property.
+By default, filtered records are shown along with its parent records. This behavior can be changed by using the [`filterSettings-hierarchyMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterSettings#hierarchymode) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -377,24 +377,24 @@ npm run dev
 
 ## Handling errors
 
-Error handling in Tree Grid identifies exceptions and notifies them through the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actionfailure) event. When configuring the Tree Grid or enabling specific features through its API, mistakes can occur. The `actionFailure` event can be used to manage these errors. This event triggers when such mistakes happen. The `actionFailure` event handles various scenarios, including:
+Error handling in Tree Grid identifies exceptions and notifies them through the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event. When configuring the Tree Grid or enabling specific features through its API, mistakes can occur. The `actionFailure` event can be used to manage these errors. This event triggers when such mistakes happen. The `actionFailure` event handles various scenarios, including:
 
-* For CRUD operations, row drag and drop, and persisiting the selection, ensure the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#isprimarykey) property is mapped to a unique data column. Failure to do so will cause an error.
+* For CRUD operations, row drag and drop, and persisting the selection, ensure the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#isprimarykey) property is mapped to a unique data column. Failure to do so will cause an error.
 * [Paging](https://ej2.syncfusion.com/vue/documentation/treegrid/paging) is not supported with [virtualization](https://ej2.syncfusion.com/vue/documentation/treegrid/virtual-scroll). Enabling `paging` with `virtualization` will result in an error.
-* To render the Tree Grid, map either the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#datasource) or [columns](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#columns) property. Failure to do so will result in an error.
-* Freeze columns by mapping either [isFrozen](https://helpej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel/#isfrozen) or [frozenColumns](https://ej2.syncfusion.com/vue/documentation/api/treegrid#frozencolumns). Enabling both properties simultaneously will result in an error.
+* To render the Tree Grid, map either the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/treegrid#datasource) or [columns](https://ej2.syncfusion.com/vue/documentation/api/treegrid#columns) property. Failure to do so will result in an error.
+* Freeze columns by mapping either [isFrozen](https://helpej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel#isfrozen) or [frozenColumns](https://ej2.syncfusion.com/vue/documentation/api/treegrid#frozencolumns). Enabling both properties simultaneously will result in an error.
 * The [detailTemplate](https://ej2.syncfusion.com/vue/documentation/api/treegrid#detailtemplate) is not supported with `virtualization` and `stacked header`. Enabling them with these features will result in an error.
-* The [frozenRows](https://ej2.syncfusion.com/vue/documentation/api/treegrid#frozenrows) and `frozenColumns` are not supported with [rowtemplate](https://ej2.syncfusion.com/vue/documentation/api/treegrid#rowtemplate), `detailTemplate`, and [cell editing](https://ej2.syncfusion.com/vue/documentation/treegrid/editing/cell-editing). Enabling them with these features will result in an error.
-* In `stacked header`, the [freeze](https://ej2.syncfusion.com/vue/documentation/api/treegrid/columnDirective/#freeze) direction is incompatible with [column reordering](https://ej2.syncfusion.com/vue/documentation/treegrid/columns/column-reorder).
+* The [frozenRows](https://ej2.syncfusion.com/vue/documentation/api/treegrid#frozenrows) and `frozenColumns` are not supported with [rowTemplate](https://ej2.syncfusion.com/vue/documentation/api/treegrid#rowtemplate), `detailTemplate`, and [cell editing](https://ej2.syncfusion.com/vue/documentation/treegrid/editing/cell-editing). Enabling them with these features will result in an error.
+* In `stacked header`, the [freeze](https://ej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel#freeze) direction is incompatible with [column reordering](https://ej2.syncfusion.com/vue/documentation/treegrid/columns/column-reorder).
 * [Selection](https://ej2.syncfusion.com/vue/documentation/treegrid/selection/selection) functionality is not supported when using `rowTemplate`. Enabling both properties simultaneously will result in an error.
 * Set the [treeColumnIndex](https://ej2.syncfusion.com/vue/documentation/api/treegrid#treecolumnindex) value to display the tree structure. Make sure the value does not exceed the total column count, or it will result in an error.
 * For `virtualization`, do not specify height and width in percentages. Using percentages will result in an error.
-* When using the default filter ([filterbar](https://ej2.syncfusion.com/vue/documentation/treegrid/filtering/filter-bar)) type, do not apply the other [filterType](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterType/) to columns  within the same tree grid, as this will result in an error.
+* When using the default filter ([filterbar](https://ej2.syncfusion.com/vue/documentation/treegrid/filtering/filter-bar)) type, do not apply the other [filterType](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterType) to columns  within the same tree grid, as this will result in an error.
 * In Tree Grid, avoid enabling [idMapping](https://ej2.syncfusion.com/vue/documentation/api/treegrid#idmapping) and [childMapping](https://ej2.syncfusion.com/vue/documentation/api/treegrid#childmapping) simultaneously. Enabling both properties at the same time will result in an error.
-* The [showCheckbox](https://ej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel/#showcheckbox) column should only be defined in the tree column. Defining it elsewhere will result in an error.
-* The [textAlign](https://ej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel/#textalign) right is not applicable for tree columns in the Tree Grid. Enabling right alignment for tree columns will result in an error.
+* The [showCheckbox](https://ej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel#showcheckbox) column should only be defined in the tree column. Defining it elsewhere will result in an error.
+* The [textAlign](https://ej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel#textalign) right is not applicable for tree columns in the Tree Grid. Enabling right alignment for tree columns will result in an error.
 
-The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actionfailure) event in the Tree Grid control to display an exception when `isPrimaryKey`are not configured properly in the Tree Grid.
+The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event in the Tree Grid control to display an exception when `isPrimaryKey`are not configured properly in the Tree Grid.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
