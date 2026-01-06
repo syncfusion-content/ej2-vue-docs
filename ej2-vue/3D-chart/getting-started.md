@@ -182,7 +182,7 @@ export default {
 };
 ```
 
-* Add a series object to the 3D Chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseries) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseries#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseries#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseries#datasource) property.
+* Add a series object to the 3D Chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#datasource) property.
 
 Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/valueType) for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
@@ -194,7 +194,7 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
         
 {% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs2" %}
 
-* The sales data are in thousands, so format the vertical axis label by adding <b>$</b> as a prefix and <b>K</b> as a suffix to each label. This can be achieved by setting the ${value}K to the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3daxis#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
+* The sales data are in thousands, so format the vertical axis label by adding <b>$</b> as a prefix and <b>K</b> as a suffix to each label. This can be achieved by setting the ${value}K to the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3daxismodel#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
 
 ## Add 3D chart title
 
@@ -222,7 +222,7 @@ You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncf
 
 ## Add data label
 
-You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel#visible) property to true in the [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#datalabel) object and by injecting `DataLabel3D` into the `provide`.
+You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3ddatalabelsettingsmodel#visible) property to true in the [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#datalabel) object and by injecting `DataLabel3D` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
