@@ -32,6 +32,7 @@ export default {
     }
   },
   methods: {
+    // Attach an Authorization header before each server call
     beforeServiceInvoke: function (args) {
       const token = this.getAuthToken(); // obtain securely at runtime
 
