@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
 
@@ -32,6 +31,7 @@ new Vue({
     }
   },
   methods: {
+    // Attach an Authorization header before each server call
     beforeServiceInvoke: function (args) {
       const token = this.getAuthToken(); // obtain securely at runtime
 
