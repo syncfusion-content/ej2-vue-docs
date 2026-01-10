@@ -25,6 +25,7 @@ const dataSourceSettings = {
 
 const height = 350;
 
+// Attach an Authorization header before each server call
 const beforeServiceInvoke = (args) => {
   const token = getAuthToken(); // obtain securely at runtime
 

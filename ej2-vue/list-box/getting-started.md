@@ -103,7 +103,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the List box component with the [dataSource](https://ej2.syncfusion.com/staging/vue/documentation/api/list-box/#datasource) property.
+2\. In the `template` section, define the List box component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/list-box#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -121,7 +121,7 @@ export default {
 
 ## Binding data source
 
-After initialization, populate the ListBox with data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/list-box/#datasource) property. Here, an array of object is passed to the ListBox component.
+After initialization, populate the ListBox with data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/list-box#datasource) property. Here, an array of object is passed to the ListBox component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
