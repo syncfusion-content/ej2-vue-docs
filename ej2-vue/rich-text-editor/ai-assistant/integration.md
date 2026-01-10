@@ -1,4 +1,4 @@
-----
+---
 layout: post
 title: AI Assistant in Vue Rich Text Editor component | Syncfusion
 description: Learn about the AI Assistant feature in the Syncfusion Vue Rich Text Editor component of Syncfusion Essential JS 2 and more.
@@ -6,7 +6,7 @@ control: Integrating the AI Assistant
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
-----
+---
 
 # Integrating the AI Assistant
 
@@ -37,7 +37,7 @@ The AI Assistant interface can be opened through the following options:
 
 ## Request and Response Handling
 
-Executing a prompt triggers the `aiAssistantPromptRequest` event. This event provides the selected text and the prompt, which can be combined and forwarded to an AI provider or backend service.
+Executing a prompt triggers the `aiAssistantPromptRequest` event. This event provides the selected text and the prompt, which can be combined and forwarded to an AI provider or back end service.
 
 Once a response is received either as a stream or as a single output it can be added to the AssistView using the `addAIPromptResponse` method.
 
