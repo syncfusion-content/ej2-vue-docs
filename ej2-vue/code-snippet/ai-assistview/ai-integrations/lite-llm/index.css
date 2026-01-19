@@ -1,0 +1,10 @@
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-content .e-assistview-icon:before {
+    font-size: 35px;
+}
