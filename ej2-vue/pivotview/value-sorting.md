@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value sorting in Vue Pivotview component | Syncfusion
-description: Learn here all about Value sorting in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Value sorting in Vue Pivot Table component | Syncfusion
+description: Learn here all about Value sorting in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
 control: Value sorting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value sorting in Vue Pivotview component
+# Value sorting in Vue Pivot Table component
 
 Value sorting allows you to sort individual column based on it's values either in ascending or descending order. It can been enabled by setting the `enableValueSorting` property to **true**. You can sort the column values by clicking the column header.
 

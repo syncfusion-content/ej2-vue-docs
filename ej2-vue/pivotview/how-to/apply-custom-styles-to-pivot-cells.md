@@ -1,18 +1,31 @@
 ---
 layout: post
-title: Apply custom style to pivot cells in Vue Pivotview component | Syncfusion
-description: Learn here all about Apply custom style to pivot cells in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Apply custom style to pivot cells in Vue  | Syncfusion
+description: Learn here all about Apply custom style to pivot cells in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
 control: Apply custom style to pivot cells 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Apply custom style to pivot cells in Vue Pivotview component
+# Apply custom style to pivot cells in Vue Pivot Table component
 
-The [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings) can be used to apply custom style to row and value cells, and the [`headerCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#headercellinfo) event in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) can be used to apply custom styles to column cells.
+The Vue Pivot Table component allows you to alter the appearance of pivot cells using event handlers. This guide demonstrates how to apply custom styling to specific cells in your pivot table.
 
-In the following example, a custom style has been applied to the column header **"Sold Amount"** under **"FY 2016"** via the [`headerCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#headercellinfo) event and to the row header **"Germany"** and its aggregated value via the [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event by adding the **"e-custom"** class to the cell element.
+## Overview
+
+You can apply custom styles to different types of cells in the pivot table:
+- Use the [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid#querycellinfo) event to style row headers and value cells.
+- Use the [`headerCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid#headercellinfo) event to style column headers.
+
+Both events are available through the [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings) property of the Pivot Table component.
+
+## Implementation example
+
+The following example shows how to apply styles to:
+- The column header **"Sold Amount"** under **"FY 2016"** using the [`headerCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid#headercellinfo) event.
+- The row header **"Germany"** and its aggregated values using the [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid#querycellinfo) event.
+- Styles are applied by adding the **"e-custom"** CSS class to the cell elements.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,4 +38,4 @@ In the following example, a custom style has been applied to the column header *
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs262" %}
 
-N> The **dot(.)** character in **FY 2016.Sold Amount** is used by default to identify the header levels in the pivot table's row and column. It can be changed by setting the [`headerDelimiter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iValueSortSettings/#headerdelimiter) in the [`valueSortSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iValueSortSettings/) property to any other delimiter instead of the default separator.
+N> The **dot(.)** character in **FY 2016.Sold Amount** is used by default to identify the header levels in the pivot table's row and column. It can be changed by setting the [`headerDelimiter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iValueSortSettings#headerdelimiter) in the [`valueSortSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iValueSortSettings) property to any other delimiter instead of the default separator.
