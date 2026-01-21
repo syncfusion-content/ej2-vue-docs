@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value filtering in Vue Pivotview component | Syncfusion
-description: Learn here all about Value filtering in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Value filtering in Vue Pivot Table component | Syncfusion
+description: Learn here all about Value filtering in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
 control: Value filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value filtering in Vue Pivotview component
+# Value filtering in Vue Pivot Table component
 
 Value filtering allows you to perform filtering operation to be performed based on the aggregate values. For example, to show the data where the total sum of units sold for each country exceeds 2000, apply a value filter **2000** with filter operator **GreaterThan** on the country field.
 

@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Conditional formatting in Vue Pivotview component | Syncfusion
-description: Learn here all about Conditional formatting in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Conditional formatting in Vue Pivot Table component | Syncfusion
+description: Learn here all about Conditional formatting in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
 control: Conditional formatting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Conditional formatting in Vue Pivotview component
+# Conditional formatting in Vue Pivot Table component
 
-Allows end user to change the appearance of the pivot table value cells with its background color, font color, font family, and font size based on specific conditions.
+The conditional formatting feature enables users to customize the appearance of Pivot Table value cells by modifying background color, font color, font family, and font size based on specific conditions. This powerful visualization feature helps highlight important value cells and makes them stand out in the Pivot Table.
 
-The conditional formatting can be applied at runtime through the built-in dialog, invoked from the toolbar. To do so, set [allowConditionalFormatting](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowconditionalformatting) and [showToolbar](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showtoolbar) properties in pivot table to **true**. Also, include the item **ConditionalFormatting** within the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#toolbar) property in pivot table. End user can now see the "Conditional Formatting" icon in toolbar UI automatically, which on clicking will invoke the formatting dialog to perform necessary operations.
+The conditional formatting can be applied at runtime through the built-in dialog, invoked from the toolbar. To enable this functionality, set the [allowConditionalFormatting](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#allowconditionalformatting) and [showToolbar](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#showtoolbar) properties to **true**. Additionally, include the **ConditionalFormatting** item within the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#toolbar) property. Users will see the "Conditional Formatting" icon in the toolbar UI automatically, which opens the formatting dialog when clicked.
 
-To learn about the **Conditional Formatting** feature in the Vue Pivot Table component, you can watch this video.
+> To use the conditional formatting feature, you need to inject the `ConditionalFormatting` module in Pivot Table.
+
+To learn how to work with conditional formatting options, you can check out this video on Vue Pivot Table.
 
 {% youtube "https://www.youtube.com/watch?v=6XeuaF6Ev4s&t=227s" %}
 
@@ -29,23 +31,27 @@ To learn about the **Conditional Formatting** feature in the Vue Pivot Table com
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/pivot_data-cs1" %}
 
-Conditional formatting can also be included in the pivot table through code-behind using the [conditionalFormatSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings/#iconditionalformatsettings). The required properties to apply a new conditional formatting are,
+## Configure conditional formatting through code-behind
 
-* [applyGrandTotals](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings/#applygrandtotals): This boolean property allows you to restrict conditional formatting for grand totals in the row and column axes. By default, this property is set to true.
-* [measure](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings/#measure): Specifies the value field name for which style will be applied.
-* [conditions](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings/#conditions): Defines the operator type used for conditional formatting, such as equals, greater than, less than, etc.
-* [value1](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings/#value1): Specifies the starting value for the conditional formatting.
-* [value2](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings/#value2): Specifies the ending value for the conditional formatting range. This property is applicable only for conditions like **Between** and **NotBetween**.
-* [style](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings/#style): Specifies the custom styling applied to the cell.
+Conditional formatting can also be applied programmatically during component initialization using the [conditionalFormatSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings#iconditionalformatsettings) property in the [dataSourceSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings). This approach allows you to define formatting rules directly in the code-behind, ensuring that specific styling conditions are automatically applied when the Pivot Table loads. The required properties to apply a new conditional formatting are,
 
-The available style properties in [style](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings/#style), to set in value cells are:
+* [applyGrandTotals](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings#applygrandtotals): This boolean property allows you to restrict conditional formatting for grand totals in the row and column axes. By default, this property is set to **true**.
+* [measure](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings#measure): Specifies the value field name for which style will be applied.
+* [conditions](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings#conditions): Defines the operator type used for conditional formatting, such as equals, greater than, less than, etc.
+* [value1](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings#value1): Specifies the starting value for the conditional formatting.
+* [value2](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings#value2): Specifies the ending value for the conditional formatting range. This property is applicable only for conditions like **Between** and **NotBetween**.
+* [style](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings#style): Specifies the custom styling applied to the cell.
 
-* [backgroundColor](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iStyle/#backgroundcolor): It allows to set the background color to the value cell in the pivot table.
-* [color](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iStyle/#color): It allows to set the font color to the value cell in the pivot table.
-* [fontFamily](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iStyle/#fontfamily): It allows to set the font family to the value cell in the pivot table.
-* [fontSize](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iStyle/#fontsize): It allows to set the font size to the value cell in the pivot table.
+The [style](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iConditionalFormatSettings#style) object includes the following properties, which you can use to customize the appearance of value cells:
 
-Meanwhile, user can also view conditional formatting dialog in UI by invoking [showConditionalFormattingDialog](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showconditionalformattingdialog) method on an external button click which is shown in the below code sample.
+* [backgroundColor](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iStyle#backgroundcolor): It allows to set the background color to the value cell in the Pivot Table.
+* [color](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iStyle#color): It allows to set the font color to the value cell in the Pivot Table.
+* [fontFamily](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iStyle#fontfamily): It allows to set the font family to the value cell in the Pivot Table.
+* [fontSize](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iStyle#fontsize): It allows to set the font size to the value cell in the Pivot Table.
+
+## Opening conditional formatting dialog programmatically
+
+Users can also access the conditional formatting dialog through external UI elements by calling the [showConditionalFormattingDialog](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#showconditionalformattingdialog) method. In the following example, an external button is used to open the conditional formatting dialog programmatically.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -60,7 +66,9 @@ Meanwhile, user can also view conditional formatting dialog in UI by invoking [s
 
 ## Conditional formatting for all fields
 
-Allows end user to apply conditional formatting commonly for all value fields just by ignoring the [measure](https://ej2.syncfusion.com/vue/documentation/api/pivotview/conditionalFormatSettings/#measure) property and setting rest of the properties in [conditionalFormatSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/conditionalFormatSettings/).
+The Pivot Table component allows you to apply conditional formatting to all value fields simultaneously. This approach ensures consistent highlighting and styling of value cells across the entire Pivot Table, removing the need to configure formatting for each value field individually.
+
+To format all value fields together, use the [conditionalFormatSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings#conditionalformatsettings) property without specifying the [measure](https://ej2.syncfusion.com/vue/documentation/api/pivotview/conditionalFormatSettings#measure) property. When the [measure](https://ej2.syncfusion.com/vue/documentation/api/pivotview/conditionalFormatSettings#measure) property is omitted, the formatting rules are automatically applied to every value field in your Pivot Table, resulting in a uniform appearance for all value cells.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -75,7 +83,7 @@ Allows end user to apply conditional formatting commonly for all value fields ju
 
 ## Conditional formatting for specific value field
 
-Allows end user to apply conditional formatting to a specific value field by setting the [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting~Measure.html) property with specific value field name in [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting_properties.html) class.
+To apply conditional formatting exclusively to a particular value field, set the [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting~Measure.html) property with the specific value field name in [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting_properties.html).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -90,7 +98,7 @@ Allows end user to apply conditional formatting to a specific value field by set
 
 ## Editing and removing existing conditional format
 
-Editing and removing existing conditional format can be done through the UI at runtime. To do so, open the conditional formatting dialog and edit the "Value", "Condition" and "Format" options based on user requirement and click "OK". To remove a conditional format, click the "Delete" icon besides the respective condition.  
+Editing and removing existing conditional format can be done through the UI at runtime. To do so, open the conditional formatting dialog and edit the "Value", "Condition" and "Format" options based on user requirement and click "OK". To remove a conditional format, click the "Delete" icon besides the respective condition.
 
 ![output](images/cformatting_remove.png)
 
@@ -98,15 +106,15 @@ Editing and removing existing conditional format can be done through the UI at r
 
 ### ConditionalFormatting
 
-The event [conditionalFormatting](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#conditionalformatting) is triggered initially while clicking the “ADD CONDITION” button inside the conditional formatting dialog in-order to fill user specific condition instead of default condition at runtime. To use this event, [allowConditionalFormatting](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowconditionalformatting) property in PivotView must be set to **true**. It has following parameters -
+The [conditionalFormatting](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#conditionalformatting) event is triggered when the “ADD CONDITION” button is clicked in the conditional formatting dialog, enabling users to define custom conditions instead of default conditions at runtime. To utilize this event, the [allowConditionalFormatting](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#allowconditionalformatting) property of the Pivot Table component must be set to **true**. This event provides the following parameters:
 
-* `applyGrandTotals` - Allows to apply conditional formatting to the grand totals of row and column axis in the pivot table.
+* `applyGrandTotals` - Allows to apply conditional formatting to the grand totals of row and column axis in the Pivot Table.
 * `conditions` - Allows you to choose the operator type such as equals, greater than, less than, etc. for conditional formatting.
 * `label` - Allows to set the header text of a specific row/column field to apply conditional formatting.
 * `measure` - Allows to set the value field name to apply conditional formatting.
-* `style` - Allows to set the custom styles for the formatting applied values in the pivot table.
-* `value1` - Allows you to set the start value for applying conditional formatting.
-* `value2` - Allows you to set the end value for applying conditional formatting. This property is applicable only for conditions like **Between** and **NotBetween**.
+* `style` - Allows to set the custom styles for the formatting applied values in the Pivot Table.
+* `value1` - Allows to set the start value for applying conditional formatting.
+* `value2` - Allows to set the end value for applying conditional formatting. This property is applicable only for conditions like **Between** and **NotBetween**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

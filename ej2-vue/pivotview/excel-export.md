@@ -10,11 +10,13 @@ domainurl: ##DomainURL##
 
 # Excel export in Vue Pivot Table component
 
-The Pivot Table component supports exporting pivot data to **Excel** and **CSV** file formats. This enables data sharing and analysis in spreadsheet applications such as Microsoft Excel, Google Sheets, and more. To enable the export functionality, inject the `ExcelExport` module into the Pivot Table and set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowexcelexport) property to **true**.
+The Pivot Table component supports exporting pivot data to **Excel** and **CSV** file formats. This enables data sharing and analysis in spreadsheet applications such as Microsoft Excel, Google Sheets, and more. To enable the export functionality, inject the `ExcelExport` module into the Pivot Table and set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#allowexcelexport) property to **true**.
 
 ## Export data to an Excel file
 
-Pivot Table data can be exported to an Excel file (.xlsx format) while preserving all formatting and structure. This format is compatible with Microsoft Excel and other spreadsheet applications. To export the data to Excel, invoke the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
+Pivot Table data can be exported to an Excel file (.xlsx format) while preserving all formatting and structure. This format is compatible with Microsoft Excel and other spreadsheet applications. To export the data to Excel, invoke the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#excelexport) method.
+
+> The Pivot Table component can be exported to Excel format using options available in the toolbar. For more details, [`refer`](./tool-bar) here.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -30,6 +32,8 @@ Pivot Table data can be exported to an Excel file (.xlsx format) while preservin
 ## Export data to a CSV file
 
 Pivot Table data can be exported to a plain text CSV file. The CSV format is lightweight and compatible with most spreadsheet and data analysis applications. To export the data to CSV, invoke the [`csvExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#csvexport) method.
+
+> The Pivot Table component can be exported to CSV format using options available in the toolbar. For more details, [`refer`](./tool-bar) here.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -50,7 +54,7 @@ Multiple Pivot Tables can be exported to a single Excel file, allowing for side-
 
 Data from multiple Pivot Tables can be organized in a single view by exporting them to the same worksheet. Set the **multipleExport.type** property to **AppendToSheet** in the `excelExportProperties`, which will append each Pivot Table to the same sheet.
 
-To add visual separation between Pivot Tables, use the **multipleExport.blankRows** property to specify the number of blank rows to insert between them. This helps maintain readability when multiple Pivot Tables are added in a single worksheet. After configuring these options, call the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method with the `isMultipleExport` parameter set to **true**.
+To add visual separation between Pivot Tables, use the **multipleExport.blankRows** property to specify the number of blank rows to insert between them. This helps maintain readability when multiple Pivot Tables are added in a single worksheet. After configuring these options, call the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#excelexport) method with the `isMultipleExport` parameter set to **true**.
 
 > By default, the **multipleExport.blankRows** property is set to **5** blank rows.
 
@@ -67,7 +71,7 @@ To add visual separation between Pivot Tables, use the **multipleExport.blankRow
 
 ### Exporting to a new worksheet
 
-Multiple Pivot Tables can be organized into separate worksheets within a single Excel file for better structured data management. Set the **multipleExport.type** property to **NewSheet** in the `excelExportProperties`. Each Pivot Table will be exported to its own dedicated worksheet. After configuring these options, call the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method with the `isMultipleExport` parameter set to **true**.
+Multiple Pivot Tables can be organized into separate worksheets within a single Excel file for better structured data management. Set the **multipleExport.type** property to **NewSheet** in the `excelExportProperties`. Each Pivot Table will be exported to its own dedicated worksheet. After configuring these options, call the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#excelexport) method with the `isMultipleExport` parameter set to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -108,7 +112,7 @@ To add custom aggregates, follow these steps:
 3.  Use the [`aggregateCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#aggregatecellinfo) event to specify the calculation logic for each custom type. This event is triggered for every aggregate cell, allowing you to apply your custom formulas.
 4.  Finally, call the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#excelexport) method to export the Pivot Table with all custom aggregations applied.
 
-For detailed information about adding custom aggregation types, refer to the [custom aggregation documentation](./how-to/add-custom-aggregation-type-in-menu).
+For detailed information about adding custom aggregation types, refer to the [custom aggregation documentation](https://ej2.syncfusion.com/vue/documentation/pivotview/how-to/add-custom-aggregation-type-in-menu).
 
 The following example demonstrates how to add two custom aggregate types to the aggregate menu: **CustomAggregateType 1**, which calculates a weighted average, and **CustomAggregateType 2**, which calculates the percentage of the total.
 
@@ -165,7 +169,7 @@ Row headers can be excluded from the exported Excel file when only values and co
 
 By default, all columns in the Pivot Table, including hidden ones, are exported. To exclude hidden columns, set the `includeHiddenColumn` property to **false** in `excelExportProperties`.
 
-To hide a column, use the [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridsettingsmodel#columnrender) event in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#gridsettings) to set the `visible` property of the target column to **false**. For more information, see the [Hide Specific Columns in Pivot Table](./how-to/hide-specific-columns-in-pivot-table.md) documentation.
+To hide a column, use the [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridsettings#columnrender) event in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#gridsettings) to set the `visible` property of the target column to **false**. For more information, see the [Hide Specific Columns in Pivot Table](https://ej2.syncfusion.com/vue/documentation/pivotview/how-to/hide-specific-columns-in-pivot-table) documentation.
 
 After hiding the columns, set `includeHiddenColumn` to **false** in `excelExportProperties` to exclude them from the exported file. The exported file will then match the column structure shown in the Pivot Table UI.
 
@@ -189,7 +193,7 @@ To rotate text, use the following events:
 *   [`excelHeaderQueryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridsettingsmodel#excelheaderquerycellinfo): Triggered for column headers. This event is used to customize column header cell styles.
 *   [`excelQueryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridsettingsmodel#excelquerycellinfo): Triggered for row and value cells. This event is used to customize row header and value cell styles.
 
-Within these events, set the [`rotation`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelstyle#rotation) property in the [`style`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelquerycellinfoeventargs#style) argument to rotate the text to the desired angle.
+Within these events, set the [`rotation`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelstyle#rotation) property in the [`style`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelheaderquerycellinfoeventargs#style) argument to rotate the text to the desired angle.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -219,11 +223,11 @@ The following example demonstrates how to apply conditional formatting to the **
  
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs283" %}
 
-## Changing the pivot table style while exporting
+## Changing the Pivot Table style while exporting
 
-The Excel export provides an option to change the colors of headers, captions, and records in a pivot table before exporting. To apply colors, define `theme` settings in `excelExportProperties` and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
+The Excel export provides an option to change colors for headers, caption, and records in Pivot Table before exporting. To apply colors, define [`theme`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelexportproperties#theme) settings in [`excelExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelexportproperties) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#excelexport) method.
 
-> By default, the material theme is applied to the exported Excel document.
+> By default, material theme is applied to exported Excel document.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -238,7 +242,7 @@ The Excel export provides an option to change the colors of headers, captions, a
 
 ## Add header and footer while exporting
 
-The Excel export provides an option to include header and footer content in the Excel document before exporting. To add a header and footer, define the `header` and `footer` properties in `excelExportProperties` and pass them as parameters to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
+The Excel export provides an option to include header and footer content for the Excel document before exporting. To add header and footer, define [`header`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelexportproperties#header) and [`footer`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelexportproperties#footer) properties in [`excelExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelexportproperties) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#excelexport) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -253,7 +257,7 @@ The Excel export provides an option to include header and footer content in the 
 
 ## Changing the file name while exporting
 
-This option provides flexibility to specify a custom file name for your exported Excel document, making it easier to organize and identify your exported data. The Excel export provides an option to change the file name of the document before exporting. To change the file name, define the `fileName` property in the `excelExportProperties` object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
+This option provides flexibility to specify a custom file name for your exported Excel document, making it easier to organize and identify your exported data files. The Excel export provides an option to change the file name of the document before exporting. To change the file name, define the [`fileName`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelexportproperties#filename) property in the [`excelExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelexportproperties) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#excelexport) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -283,7 +287,7 @@ When exporting data, displaying a spinner provides visual feedback to end users 
 
 ## Export only the current page
 
-By default, the Pivot Table exports all data records, which can result in larger file sizes when a large data source is assigned to the Pivot Table. To improve performance, export only the data records currently visible in the viewport by setting the [`exportAllPages`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#exportallpages) property to **false**.
+By default, the Pivot Table exports all data records, which can result in larger file sizes when a large data source is assigned to the Pivot Table. To improve performance, export only the data records currently visible in the viewport by setting the [`exportAllPages`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#exportallpages) property to **false**.
 
 > This option is applicable only when the virtualization or paging feature is enabled.
 
@@ -342,7 +346,7 @@ The [`excelHeaderQueryCellInfo`](https://ej2.syncfusion.com/vue/documentation/ap
 
 ### ExportComplete
 
-The [`exportComplete`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#exportcomplete) event triggers after the Pivot Table data exports to an Excel or CSV document. This event enables acquiring blob stream data for further processing and customization by setting the `isBlob` parameter to **true** when calling the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method. The event includes the following parameters:
+The [`exportComplete`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#exportcomplete) event triggers after the Pivot Table data exports to an Excel or CSV document. This event enables acquiring blob stream data for further processing and customization by setting the `isBlob` parameter to **true** when calling the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#excelexport) method. The event includes the following parameters:
 
 * [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/exportcompleteeventargs#type) – Specifies the current export format such as PDF, Excel, or CSV.
 * [`promise`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/exportcompleteeventargs#promise) – Contains the promise object that resolves with blob data for the exported file.
