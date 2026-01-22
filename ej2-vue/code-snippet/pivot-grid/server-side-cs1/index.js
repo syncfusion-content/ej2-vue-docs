@@ -1,3 +1,4 @@
+
 import Vue from "vue";
 import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
 

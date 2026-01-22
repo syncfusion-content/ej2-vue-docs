@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grid customization in Vue Pivotview component | Syncfusion
-description: Learn here all about Grid customization in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Grid customization in Vue Pivot Table component | Syncfusion
+description: Learn here all about Grid customization in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
 control: Grid customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grid customization in Vue Pivotview component
+# Grid customization in Vue Pivot Table component
 
 ## Width And Height
 
@@ -16,7 +16,7 @@ In pivot table component, the `height` and `width` properties are used to set th
 
 To set the `width` and `height`, you can provide the pixel values either in number or string format. Also, you can specify the `width` and `height` as `100%` to make the grid element fill its parent container.
 
-> The Pivot table will not be displayed less than **500px**, since it's the minimum width of the widget.
+> The pivot table will not be displayed less than **500px**, since it's the minimum width of the.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -152,8 +152,7 @@ Selection provides an option to highlight a row or a cell. It can be done throug
 The pivot table supports two types of selection that can be set using `selectionSettings.type`. They are:
 
 * **`Single`**: The `Single` value is set by default, and it only allows selection of a single row or a column or a cell.
-* **`Multiple`**: Allows you to select multiple rows or columns or cells.
-To perform the multi-selection, press and hold CTRL key and click the desired rows or cells. To select range of rows or cells, press and hold the SHIFT key and click the rows or columns or cells.
+* **`Multiple`**: Allows you to select multiple rows or columns or cells. To perform the multi-selection, press and hold CTRL key and click the desired rows or cells. To select range of rows or cells, press and hold the SHIFT key and click the rows or columns or cells.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -210,7 +209,7 @@ The pivot table supports two types of cell selection mode that can be set using 
 
 ### Clip Mode
 
-The clip mode provides options to display its overflow cell content in the pivot table. It can be configured using the `clipMode` property. pivot table supports three types of clip modes. They are:
+The clip mode provides options to display its overflow cell content in the pivot table. It can be configured using the `clipMode` property. The pivot table supports three types of clip modes. They are:
 
 * **`Clip`**: Truncates the cell content when it overflows its area.
 * **`Ellipsis`**: Displays ellipsis when the cell content overflows its area.
