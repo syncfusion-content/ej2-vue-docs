@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To have a quick glance on how to enable grouping bar in the Vue Pivot Table, watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=6zKDyLyPnmg" %}
+{% youtube "https://www.youtube.com/watch?v=RuG1DqScgMA" %}
 
 The Grouping Bar option in the Pivot Table automatically displays fields from the bound data source. It allows users to drag and drop fields between different axes such as columns, rows, values, and filters to create a pivot table at runtime. You can enable it by setting the [`showGroupingBar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#showgroupingbar) property to **true**.
 
@@ -46,21 +46,15 @@ The fields panel appears above the grouping bar and shows all the fields that ar
 To display the fields panel, set the [`showFieldsPanel`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupingBarSettingsModel#showfieldspanel) property to **true** within the [`groupingBarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#groupingbarsettings) configuration.
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/pivot-table/default-cs125/app/App.jsx %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs287/app-composition.vue %}
 {% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/pivot-table/default-cs125/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs125/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs125/app/datasource.tsx %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs287/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs125" %}
+        
+{% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs287" %}
 
 ## Show or hide all filter icon
 

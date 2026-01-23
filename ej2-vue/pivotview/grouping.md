@@ -26,7 +26,7 @@ To use the grouping feature, you need to inject the `Grouping` module in the Piv
 
 To have a quick glance on how to group row and column field items in the Vue Pivot Table, watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=5UOKVbdZTCA" %}
+{% youtube "https://www.youtube.com/watch?v=delA1hfIvPw" %}
 
 > Similar to Excel, only one type of grouping can be applied to a field at a time.
 

@@ -12,11 +12,9 @@ domainurl: ##DomainURL##
 
 > This feature is applicable only for the relational data source.
 
-The cell editing option allows users to directly change data in the pivot table by adding, updating, or deleting raw data items within any value cell. When you double-click a value cell, the raw items appear in a data grid within a new window. In this data grid, you can perform CRUD operations by double-clicking cells or using toolbar options. After you finish editing the raw items, the pivot table automatically updates the aggregated values. To enable this option, set the [`allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#allowediting) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-editsettings) to **true**.
+The cell editing option allows users to directly change data in the pivot table by adding, updating, or deleting raw data items within any value cell. When you double-click a value cell, the raw items appear in a data grid within a new window. In this data grid, you can perform CRUD operations by double-clicking cells or using toolbar options. After you finish editing the raw items, the pivot table automatically updates the aggregated values. To enable this option, set the [`allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#allowediting) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#editsettings) to **true**.
 
-The [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-editsettings) property provides comprehensive control over editing behavior through the following options:
+The [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#editsettings) property provides comprehensive control over editing behavior through the following options:
 
 * [`allowAdding`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#allowadding): Enables adding new rows to the data grid.
 * [`allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#allowediting): Allows editing existing records in the data grid.
@@ -45,14 +43,9 @@ The following are the supported edit types in the data grid:
 * Batch
 * Command Columns
 
-To learn about how to work with Editing options, you can check on this video for Vue Pivot Table.
-
-{% youtube "https://www.youtube.com/watch?v=Z3vb_MY4pjo" %}
-
 ## Normal
 
-Normal edit mode allows users to edit one row at a time in the editing dialog with simple data changes and updates. In normal edit mode, when editing begins, the selected row changes to edit state. Cell values can be modified and saved to the data source by clicking the "Update" toolbar button. To enable normal edit mode, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-editsettings) to **Normal**.
+Normal edit mode allows users to edit one row at a time in the editing dialog with simple data changes and updates. In normal edit mode, when editing begins, the selected row changes to edit state. Cell values can be modified and saved to the data source by clicking the "Update" toolbar button. To enable normal edit mode, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#editsettings) to **Normal**.
 
 > The normal edit mode **Normal** is set as the default mode for editing.
 
@@ -69,8 +62,7 @@ editsettings) to **Normal**.
 
 ## Dialog
 
-The dialog edit mode provides a focused editing environment by displaying the selected row data in an exclusive dialog window, ensuring clear visibility and controlled data modification. In dialog edit mode, when editing begins, the currently selected row data appears in a dedicated dialog. Cell values can be modified and saved to the data source by clicking the "Save" button in the dialog. To enable dialog editing, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-editsettings) to **Dialog**.
+The dialog edit mode provides a focused editing environment by displaying the selected row data in an exclusive dialog window, ensuring clear visibility and controlled data modification. In dialog edit mode, when editing begins, the currently selected row data appears in a dedicated dialog. Cell values can be modified and saved to the data source by clicking the "Save" button in the dialog. To enable dialog editing, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#editsettings) to **Dialog**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -85,8 +77,7 @@ editsettings) to **Dialog**.
 
 ## Batch
 
-Batch editing enables users to make multiple changes to data grid cells and save them all at once, improving efficiency for bulk updates. When a user double-clicks any data grid cell in batch mode, the target cell changes to edit state. Users can perform multiple changes and save all modifications (added, changed, and deleted data) to the data source by clicking the **Update** toolbar button. To enable batch editing, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-editsettings) to **Batch**.
+Batch editing enables users to make multiple changes to data grid cells and save them all at once, improving efficiency for bulk updates. When a user double-clicks any data grid cell in batch mode, the target cell changes to edit state. Users can perform multiple changes and save all modifications (added, changed, and deleted data) to the data source by clicking the **Update** toolbar button. To enable batch editing, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#editsettings) to **Batch**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -101,8 +92,7 @@ editsettings) to **Batch**.
 
 ## Command column
 
-The command column option provides dedicated action buttons within the data grid for streamlined CRUD operations as an alternative to using toolbar options. An additional column appears in the data grid layout containing command buttons to perform the CRUD operations. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#allowcommandcolumns) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-editsettings) to **true**.
+The command column option provides dedicated action buttons within the data grid for streamlined CRUD operations as an alternative to using toolbar options. An additional column appears in the data grid layout containing command buttons to perform the CRUD operations. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel#allowcommandcolumns) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#editsettings) to **true**.
 
 The available built-in command buttons are:
 
@@ -130,8 +120,7 @@ N>
 
 ## Inline Editing
 
-The inline editing option provides streamlined data modification by allowing direct editing of value cells without opening an external dialog, improving workflow efficiency for quick data updates. This editing mode applies only when a single raw data item corresponds to the value of the cell and works with all editing modes including normal, batch, dialog, and column commands. Enable inline editing by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettings#allowinlineediting) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-editsettings) to **true**.
+The inline editing option provides streamlined data modification by allowing direct editing of value cells without opening an external dialog, improving workflow efficiency for quick data updates. This editing mode applies only when a single raw data item corresponds to the value of the cell and works with all editing modes including normal, batch, dialog, and column commands. Enable inline editing by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettings#allowinlineediting) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#editsettings) to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -165,8 +154,7 @@ Clicking a data point in the pivot chart displays the underlying raw items in a 
 
 ### EditCompleted
 
-The event [`editCompleted`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-editcompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the data source which is connected to the component. It has the following parameters.
+The event [`editCompleted`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#editcompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the data source which is connected to the component. It has the following parameters.
 
 * [`currentData`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/editCompletedEventArgs#currentdata) - It holds the current raw data of the edited cells.
 * [`previousData`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/editCompletedEventArgs#previousdata) - It holds the previous raw data of the edited cells.
@@ -194,8 +182,7 @@ For more information [`refer`](./drill-through#begindrillthrough) here.
 
 ### ActionBegin
 
-The [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-actionbegin) event triggers when editing actions such as add, edit, save, or delete are started through the UI (either by dialog or inline editing). This event lets users monitor the editing workflow and take action before the operation completes. The following parameters are available in the event:
+The [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#actionbegin) event triggers when editing actions such as add, edit, save, or delete are started through the UI (either by dialog or inline editing). This event lets users monitor the editing workflow and take action before the operation completes. The following parameters are available in the event:
 
 - [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionBeginEventArgs#datasourcesettings): Contains the current data source settings, including all input data, rows, columns, values, filters, and format settings.
 - [`actionName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionBeginEventArgs#actionname): Shows the name of the editing action that has started. The following are the UI actions and their names:
@@ -209,8 +196,7 @@ actionbegin) event triggers when editing actions such as add, edit, save, or del
 
 - [`cancel`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionBeginEventArgs#cancel): Allows users to stop (cancel) the action by setting this option to **true**.
 
-For example, you can restrict add and save actions by setting **args.cancel** to **true** in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-actionbegin) event.
+For example, you can restrict add and save actions by setting **args.cancel** to **true** in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -225,8 +211,7 @@ actionbegin) event.
 
 ### ActionComplete
 
-The [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-actioncomplete) event triggers whenever a UI action, such as add, update, remove, or save (using dialog or inline editing), is finished. This lets users know exactly what kind of action has just been completed. The event provides the following details:
+The [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#actioncomplete) event triggers whenever a UI action, such as add, update, remove, or save (using dialog or inline editing), is finished. This lets users know exactly what kind of action has just been completed. The event provides the following details:
 
 * [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionCompleteEventArgs#datasourcesettings): Contains the current data source settings, including input data, rows, columns, values, filters, format settings, and more.
 * [`actionName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionCompleteEventArgs#actionname): It holds the name of the current action completed. The following are the UI actions and their names:
@@ -253,8 +238,7 @@ actioncomplete) event triggers whenever a UI action, such as add, update, remove
 
 ### ActionFailure
 
-The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#
-actionfailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
+The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#actionfailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
 
 * [`actionName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionFailureEventArgs#actionname): It holds the name of the current action failed. The following are the UI actions and their names:
 
