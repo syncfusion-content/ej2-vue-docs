@@ -9,10 +9,6 @@ domainurl: ##DomainURL##
 ---
 # Data binding in Vue Pivot Table component
 
-To get start quickly with Data Binding, you can check on this video:
-
-{% youtube "https://www.youtube.com/watch?v=_sKndiVl5w0" %}
-
 ## JSON
 
 The Pivot Table supports JSON data binding by setting the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings#type) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#datasourcesettings) to `JSON`. Since JSON is the default data type, you can bind JSON data without setting this property.
@@ -45,7 +41,7 @@ You can also bind JSON data using the [`DataManager`](https://ej2.syncfusion.com
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs20" %}
 
-You can also load JSON data from a local *.json file using the file uploader option. After uploading the file, convert the resulting string to JSON data and assign it to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#datasourcesettings). The following code example demonstrates this approach.
+You can also load JSON data from a local *.json file using the file upload option. After uploading the file, convert the resulting string to JSON data and assign it to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#datasourcesettings). The following code example demonstrates this approach.
 
 ```javascript
 import Vue from "vue";
@@ -124,7 +120,7 @@ To bind local CSV data to the Pivot Table, convert the data into a string array 
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/csvdata-cs1" %}
 
-You can also connect CSV data from a local *.csv file to the Pivot Table using the file uploader option. After uploading the file, convert the resulting string to a string array and assign it to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#datasourcesettings). The following code example shows how to implement this:
+You can also connect CSV data from a local *.csv file to the Pivot Table using the file upload option. After uploading the file, convert the resulting string to a string array and assign it to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#datasourcesettings). The following code example shows how to implement this:
 
 ```javascript
 import Vue from "vue";

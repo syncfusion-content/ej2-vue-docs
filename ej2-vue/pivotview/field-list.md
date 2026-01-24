@@ -10,10 +10,6 @@ domainurl: ##DomainURL##
 
 # Field list in Vue Pivot Table component
 
-To have a quick glance on how to enable field list in the Vue Pivot Table, watch this video:
-
-{% youtube "https://www.youtube.com/watch?v=YBjR8HiyyFw" %}
-
 The Field List makes it easy to organize and analyze data in your Pivot Table. It provides a user-friendly interface similar to Microsoft Excel that allows you to add or remove fields and move them between different axes like columns, rows, values, and filters. You can also apply sorting and filtering options while working with your data.
 
 The Field List can be displayed in two different ways to work with your Pivot Table:
@@ -122,7 +118,7 @@ The field list provides a simple way to organize fields in different orders, mak
 
 > By default, fields are displayed in the default order as they appear in the data source.
 
-![Field list with sorting options](images/fieldlist_default_sort.png)
+![Field list with sorting options](images/fieldlist-default-sort.png)
 
 ### Sort fields in a desired order
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To have a quick glance on how to sort data in the Vue Pivot Table, watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=x4xAFXkbq2E" %}
+{% youtube "https://www.youtube.com/watch?v=TIXRaEdmAks" %}
 
 ## Member Sorting
 
