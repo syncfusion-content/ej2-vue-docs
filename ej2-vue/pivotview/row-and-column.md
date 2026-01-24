@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 To learn about how to use the row and column options effectively in the Vue Pivot Table, watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=eZipGFIYI7E" %}
+{% youtube "https://www.youtube.com/watch?v=19VTDjTjYOs" %}
 
 ## Width and Height
 
