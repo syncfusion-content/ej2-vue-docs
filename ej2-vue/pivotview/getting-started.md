@@ -96,6 +96,7 @@ The pivot table has different themes. They are:
 * Material
 * Fabric
 * Bootstrap
+* Tailwind3
 * High Contrast
 
 import pivot table component CSS as given below in `<style>` section of the `App.vue` file.
@@ -104,16 +105,16 @@ import pivot table component CSS as given below in `<style>` section of the `App
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-pivotview/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -224,16 +225,16 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-pivotview/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -453,4 +454,4 @@ Output will be displayed as follows.
 
 For more information and to access the quick start project, visit: [GitHub Repository](https://github.com/SyncfusionExamples/getting-started-with-the-vue2-pivot-table-component)
 
-> You can also explore our [Vue Pivot Table example](https://ej2.syncfusion.com/vue/demos/#/material/pivot-table/default.html) that shows how to rendering of the pivot table with drill-up and drill-down functionality bound to a relational report.
+> You can also explore our [Vue Pivot Table example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/pivot-table/default.html) that shows how to rendering of the pivot table with drill-up and drill-down functionality bound to a relational report.

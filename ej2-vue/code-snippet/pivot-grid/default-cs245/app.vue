@@ -180,4 +180,4 @@ export default {
   }
 }
 </script>
-<style>@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";</style>
+<style>@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";</style>
