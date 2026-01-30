@@ -79,7 +79,7 @@ export default {
 }
 </script>
     < style >
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
 </style>
 
 ```
@@ -161,7 +161,7 @@ export default {
 }
 </script>
 < style >
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
 </style>
 
 ```

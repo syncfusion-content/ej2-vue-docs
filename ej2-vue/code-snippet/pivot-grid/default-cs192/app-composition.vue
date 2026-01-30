@@ -28,4 +28,4 @@ const chartSettings = {
 provide('pivotview', [PivotChart]);
 
 </script>
-<style>@import "@syncfusion/ej2-vue-pivotview/styles/material.css";</style>
+<style>@import "@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";</style>
