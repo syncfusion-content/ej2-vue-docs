@@ -42,5 +42,5 @@ provide('pivotview', [Pager]);
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
 </style>
