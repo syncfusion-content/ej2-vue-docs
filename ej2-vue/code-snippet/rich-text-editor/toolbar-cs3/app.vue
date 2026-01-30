@@ -30,5 +30,5 @@ export default {
 </script>
 
 <style>
-@import 'https://ej2.syncfusion.com/vue/documentation./node_modules/@syncfusion/ej2/material.css';
+@import 'https://ej2.syncfusion.com/vue/documentation./node_modules/@syncfusion/ej2/tailwind3.css';
 </style>

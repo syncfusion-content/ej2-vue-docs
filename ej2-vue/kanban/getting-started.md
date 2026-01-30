@@ -8,140 +8,70 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Kanban Component in Vue 2
+# Getting Started with the Vue Kanban Component
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Kanban component
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion Vue Kanban component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
-To get start quickly with Vue Kanban, you can check on this video:
+## Create the Vue application
 
-{% youtube "https://www.youtube.com/watch?v=4W5mUhEzYqY" %}
-
-## Prerequisites
-
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
-
-## Setting up the Vue 2 project
-
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Run the following commands to set up a Vue application:
 
 ```bash
-npm install -g @vue/cli
-vue create quickstart
-cd quickstart
-npm run serve
+npm create vite@7 my-app
 ```
-
-or
+To set-up a Vue application , run the following command.
 
 ```bash
-yarn global add @vue/cli
-vue create quickstart
-cd quickstart
-yarn run serve
+npm create vite@7 my-vue-app -- --template vue-ts
+cd my-app
+npm run dev
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+## Adding CSS reference
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+The following CSS files are available in ../node_modules/@syncfusion package folder. This can be referenced in the `<style>` section of **src/App.vue** file using the following code.
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
-
-This article uses the [Vue Kanban component](https://www.syncfusion.com/vue-components/vue-kanban-board) as an example. Install the `@syncfusion/ej2-vue-kanban` package by running the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-kanban --save
-```
-or
-
-```bash
-yarn add @syncfusion/ej2-vue-kanban
+```css
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-kanban/styles/tailwind3.css';
 ```
 
-> The **--save** will instruct NPM to include the Kanban package inside of the `dependencies` section of the `package.json`.
+## Adding Kanban component
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Kanban component and its dependents were imported into the `<style>` section of **src/App.vue** file.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-Follow the below steps to add the Vue Kanban component using `Composition API` or `Options API`:
-
-1\. First, import and register the Kanban component in the `script` section of the **src/App.vue** file.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<script setup>
-  import { KanbanComponent as EjsKanban, ColumnDirective as EColumn, ColumnsDirective as EColumns } from '@syncfusion/ej2-vue-kanban';
-
-</script>
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-
-<script>
-  import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
-  export default {
-name: "App",
-    components: {
-      'ejs-kanban': KanbanComponent,
-      'e-column': ColumnDirective,
-      'e-columns': ColumnsDirective
-    }
-   }
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section, define the Kanban component with [keyField](https://ej2.syncfusion.com/vue/documentation/api/kanban#keyfield) property. 
+Now, you can start adding Vue kanban component in the application. For getting started, add the kanban component in src/App.vue file using below sample.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-  <div id='app'>
-      <ejs-kanban id="kanban" keyField="Status">
-          <e-columns>
-            <e-column headerText="To Do" keyField="Open"></e-column>
-            <e-column headerText="In Progress" keyField="InProgress"></e-column>
-            <e-column headerText="Testing" keyField="Testing"></e-column>
-            <e-column headerText="Done" keyField="Close"></e-column>
-          </e-columns>
-      </ejs-kanban>
-  </div>
+  <ejs-kanban>
+    <e-columns>
+      <e-column headerText="To Do" keyField="Open"></e-column>
+      <e-column headerText="In Progress" keyField="InProgress"></e-column>
+      <e-column headerText="Testing" keyField="Testing"></e-column>
+      <e-column headerText="Done" keyField="Close"></e-column>
+    </e-columns>
+  </ejs-kanban>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize the Kanban
+## Run the application
 
-Add the EJ2 Vue Kanban using `<ejs-kanban>` to the `<template>` section of the `App.vue` file in src directory.
+Use the following command to run the application in the browser.
+
+```bash
+npm run dev
+```
+
+Output will be displayed as follows
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -167,6 +97,9 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/kanban/getting-started-key-field-cs2/app.vue %}
 {% endhighlight %}
+{% highlight js tabtitle="~/src/datasource.js" %}
+{% include code-snippet/kanban/getting-started-key-field-cs2/datasource.js %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/kanban/getting-started-key-field-cs2" %}
@@ -181,6 +114,9 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 {% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/kanban/getting-started-swimlane-cs1/app.vue %}
+{% endhighlight %}
+{% highlight js tabtitle="~/src/datasource.js" %}
+{% include code-snippet/kanban/getting-started-swimlane-cs1/datasource.js %}
 {% endhighlight %}
 {% endtabs %}
         

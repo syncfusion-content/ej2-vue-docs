@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open event editor manually in Vue Schedule component
+# Open Event Editor Manually in Vue Schedule Component
 
-## Open Editor Window externally
+## Open Editor Window Externally
 
-Scheduler allows the user to manually open the event editor on specific time or on certain events using [`openEditor`](../api/schedule/#openeditor) method. To open the editor on specific range of time, user need to pass the cell details as first argument and **Add** as second argument whereas to open it on event pass that event detail and **Save** as arguments. In the following code example, on clicking the respective button will open the respective editor window manually.
+The Vue Schedule component allows manually opening the event editor for a specific time range or an existing event by using the [`openEditor`](../api/schedule#openeditor) method. To open the editor for a selected time range, pass the cell details as the first argument and **Add** as the second argument. To open the editor for an existing event, pass that event’s details as the first argument and **Save** as the second argument. In the following example, clicking the corresponding button opens the respective editor window manually.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,9 +25,9 @@ Scheduler allows the user to manually open the event editor on specific time or 
         
 {% previewsample "page.domainurl/code-snippet/schedule/open-editor-cs1" %}
 
-## Open editor window on single click
+## Open Editor Window on Single Click
 
-By default, Scheduler Editor window will open when double clicking the cells or appointments. You can also open the editor window with single click by using [`openEditor`](../api/schedule/#openeditor) method in [`eventClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#eventclick) and [`cellClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#cellclick) events of scheduler and setting `false` to [`showQuickInfo`](../api/schedule/#showquickinfo). The following example shows how to open editor window on single click of cells and appointments.
+By default, the editor window opens when cells or appointments are double-clicked. You can enable opening the editor with a single click by calling the [`openEditor`](../api/schedule#openeditor) method inside the [`eventClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventclick) and [`cellClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule#cellclick) , and by setting the [`showQuickInfo`](../api/schedule#showquickinfo)property to `false`. The following example shows how to open the editor window on a single click of cells or appointments.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
