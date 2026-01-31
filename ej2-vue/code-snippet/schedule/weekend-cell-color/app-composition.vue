@@ -40,14 +40,14 @@ const onRenderCell = function (args) {
 
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css';
 
 .schedule-cell-customization.e-schedule .e-month-view .e-work-cells:not(.e-work-days) {
     background-color: #f08080;

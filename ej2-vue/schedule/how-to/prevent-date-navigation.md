@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent date navigation in Vue Schedule component
+# Prevent Date Navigation in Vue Schedule Component
 
-We can prevent navigation while clicking on the date header by simply removing `e-navigate` class from header cells which can be achieved in the [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#rendercell) event as shown in the following code example.
+Date navigation triggered by clicking on the date header can be disabled by removing the `e-navigate` class from the header cells. This can be achieved using the [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule#rendercell) event, where the class can be conditionally removed during the cell rendering process, as demonstrated in the example below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

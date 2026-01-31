@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Diagram Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion® Vue Diagram component
+This guide walks you through creating a Vue 2 application using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion® Vue Diagram component
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/vue/documentation/ai-coding-assistant/overview)
 
@@ -36,37 +36,41 @@ The following list of dependencies are required to use the `Diagram` component i
     |-- @syncfusion/ej2-vue-base
 ```
 
-## Setting up the Vue 2 project
-
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+## Setup Vue Environment
+Use [Vue CLI](https://cli.vuejs.org/) to set up your Vue project. Install Vue CLI globally with the following command:
 
 ```bash
 npm install -g @vue/cli
-vue create my-diagram-app
-cd my-diagram-app
-npm run serve
-```
-
+``` 
 or
 
 ```bash
 yarn global add @vue/cli
+```
+
+## Create a Vue 2 Application
+
+Create a new project using the [vue create](https://cli.vuejs.org/#getting-started) command.
+
+```bash
 vue create my-diagram-app
-cd my-diagram-app
-yarn run serve
 ```
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](./images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png) 
 
-Once the `my-diagram-app` project is set up with default settings, proceed to add Syncfusion® components to the project.
+once the `my-diagram-app` project is created, navigate to the project folder:
 
-## Add Syncfusion® Vue packages
+```bash
+cd my-diagram-app
+```
 
-Syncfusion® packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+## Add Syncfusion® Vue Diagram packages
 
-This article uses the [Vue Diagram component](https://www.syncfusion.com/vue-components/vue-diagram) as an example. Install the `@syncfusion/ej2-vue-diagrams` package by running the following command:
+All Syncfusion® packages are published to the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry.
+
+Install the `@syncfusion/ej2-vue-diagrams` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-diagrams --save
@@ -79,26 +83,119 @@ yarn add @syncfusion/ej2-vue-diagrams
 
 ## Import Syncfusion® CSS styles
 
-You can import themes for the Syncfusion® Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion® Vue component in multiple ways—CSS/SASS from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Diagram component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this guide, the `Tailwind` theme is applied using CSS files available in the installed packages. Add the following imports in the `<style>` section of **src/App.vue**:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
- > Diagram components use other Syncfusion® components as well, so CSS references for the dependent component must be added in order to use all diagram functionalities. Use this same order to display the Syncfusion® Diagram component’s predefined appearance.
+ > Diagram components use other Syncfusion® components internally. So, CSS references for dependent components must be added to ensure all features render correctly.
 
+## Add the Syncfusion® Vue Diagram component
+
+Follow these steps to render the Diagram component in your Vue app.
+
+### Import and register the component
+
+In **src/App.vue**, import and register `DiagramComponent` in the `<script>` section:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+<script>
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+export default {
+    components: {
+        'ejs-diagram': DiagramComponent
+    }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+### Add the Diagram in the template
+
+Define the Diagram component with [height](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#height) and [width](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#width). 
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+    <div id="app">
+        <ejs-diagram id="diagram"  :width='width' :height='height' ></ejs-diagram>
+    </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Provide values for height and width
+
+Declare `width` and `height` in the `data()` section:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+<script>
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+export default {
+  name: "App",
+  components: {
+      "ejs-diagram": DiagramComponent
+
+  },
+  data() {
+      return {
+          width: "100%",
+          height: "350px",
+      }
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+### Run the project
+
+Use either npm or yarn:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
+
+N> Vue CLI projects automatically rebuild when you save changes—no need to rerun the command each time.
+
+## Defining Basic Diagram
+
+The below examples shows the basic diagram component which renders an empty diagram.
+
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/initialize-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/initialize-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/getting-started/initialize-cs1" %}
 
 ## Module Injection
 
@@ -151,102 +248,16 @@ export default {
 
 ```
 
-## Add Syncfusion® Vue component
-
-Follow the below steps to add the Vue Diagram component:
-
-1\. First, import and register the Diagram component in the `script` section of the **src/App.vue** file.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-<script>
-import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
-export default {
-    components: {
-        'ejs-diagram': DiagramComponent
-    }
-}
-</script>
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section, define the Diagram component with [height](https://ej2.syncfusion.com/vue/documentation/api/diagram#height) and [width](https://ej2.syncfusion.com/vue/documentation/api/diagram#width) property. 
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' ></ejs-diagram>
-    </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3\. Declare the value for the `height` and `width` properties in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-<script>
-import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
-export default {
-  name: "App",
-  components: {
-      "ejs-diagram": DiagramComponent
-
-  },
-  data() {
-      return {
-          width: "100%",
-          height: "350px",
-      }
-  }
-}
-</script>
-{% endhighlight %}
-{% endtabs %}
-
-## Defining Basic Diagram
-
-The below examples shows the basic diagram component which renders an empty diagram.
-
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/getting-started/initialize-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/getting-started/initialize-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/getting-started/initialize-cs1" %}
-
-To run the project, use the following command:
-
-```bash
-npm run serve
-```
-
-or
-
-```bash
-yarn run serve
-```
 ## Basic Diagram elements
 
-* `Node`: Visualizes any graphical object using nodes, which can also be arranged and manipulated on a diagram page.
+Diagrams are built using the following core elements:
+
+* `Node`: Visualizes any graphical object using nodes, which can be arranged and manipulated on a diagram page.
 * `Connector`: Represents the relationship between two nodes. Three types of connectors provided as follows:
-
-```
-
-1) Orthogonal
-2) Bezier
-3) Straight
-
-```
-* `Port`: Acts as the connection points of node or connector and allows you to create connections with only specific points.
+  * Orthogonal
+  * Bezier
+  * Straight
+* `Port`: Acts as connection points on nodes or connectors, allowing connections only at specific points.
 * `Annotation`: Shows additional information by adding text or labels on nodes and connectors.
 
 ## Flow Diagram
@@ -271,7 +282,7 @@ Create and add a `node` (JSON data) with specific position, size, label, and sha
 Syncfusion® diagram control provides support to render many built-in shapes in diagram.
 Please refer to [`Shapes`](shapes) to know about built-in Shapes.
 
-The appearance of a node can be customized by changing its [`fill`](../api/diagram/shapeStyleModel#fill-string) color, [`strokeColor`](../api/diagram/shapeStyleModel#strokecolor-string), [`strokeWidth`](../api/diagram/shapeStyleModel#strokewidth-number), [`borderColor`](../api/diagram/node#borderColor-string), [`borderWidth`](../api/diagram/node#borderWidth-number), [`strokeDashArray`](../api/diagram/shapeStyleModel#strokeDashArray-number),  [`opacity`](../api/diagram/shapeStyleModel#opacity-number), and [`shadow`](../api/diagram/shapeStyleModel#shadow-number).
+Customize the appearance of a node by changing its [`fill`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapestylemodel#fill) color, [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapestylemodel#strokecolor), [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapestylemodel#strokewidth), [`borderColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#bordercolor), [`borderWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#borderwidth), [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapestylemodel#strokedasharray), [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapestylemodel#opacity), and [`shadow`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shadow) properties:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -286,84 +297,24 @@ The appearance of a node can be customized by changing its [`fill`](../api/diagr
 
 ### Add other flowchart nodes to the diagram
 
-You can add multiple nodes with different shapes into diagram.
+Add multiple nodes with different shapes to create a comprehensive diagram:
 
-```javascript
-<template>
-  <div id="app">
-      <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'
-          :getNodeDefaults='getNodeDefaults'></ejs-diagram>
-  </div>
-</template>
-<script>
-import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
-
-const nodes = [
-        {
-            id: "node1",
-            offsetY: 50,
-            shape: { type: "Flow", shape: "Terminator" },
-            annotations: [
-                {
-                    content: "Start"
-                }
-            ]
-        },
-        {
-            id: "node2",
-            offsetY: 140,
-            shape: { type: "Flow", shape: "Process" },
-            annotations: [
-                {
-                    content: "var i = 0;"
-                }
-            ]
-        },
-        {
-            id: "node3",
-            offsetY: 230,
-            shape: { type: "Flow", shape: "Decision" },
-            annotations: [
-                {
-                    content: "i < 10?"
-                }
-            ]
-        },
-    ];
-
-export default {
-  name: "App",
-  components: {
-      "ejs-diagram": DiagramComponent
-
-  },
-  data() {
-      return {
-          width: "100%",
-          height: "600px",
-          nodes: nodes,
-          getNodeDefaults: (node) => {
-            node.height = 50;
-            node.width = 140;
-            node.style = { fill: "skyblue", strokeColor: "skyblue" };
-            node.offsetX = 300;
-            return node;
-          },
-      }
-  }
-}
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
-
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/connectnode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/connectnode-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/getting-started/connectnode-cs1" %}
 
 ### Connect flow chart nodes
 
-Connect these nodes by adding a connector using the [`connectors`](../api/diagram/connectorModel/) property of diagram and refer the source and target end by using the [`sourceID`](../api/diagram/connectorModel/#sourceid) and [`targetID`](../api/diagram/connectorModel/#targetid) properties.
-The required nodes and connectors can be added to form a complete flow diagram.
+Connect nodes by adding connectors using the [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectormodel) property of the diagram. Reference the source and target endpoints using the [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectormodel#sourceid) and [`targetID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectormodel#targetid) properties.
+
+Combine the required nodes and connectors to form a complete flow diagram:
 
 
 {% tabs %}
@@ -378,19 +329,19 @@ The required nodes and connectors can be added to form a complete flow diagram.
 {% previewsample "page.domainurl/code-snippet/diagram/getting-started/flowdiagram-cs1" %}
 
 
-Default values for all [`nodes`](../api/diagram/nodemodel/) and [`connectors`](../api/diagram/connectorModel/) can be set using the [`getNodeDefaults`](../api/diagram/#getnodedefaults) and [`getConnectorDefaults`](../api/diagram/#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
+Set default values for all [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodemodel) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectormodel) using the [`getNodeDefaults`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#getnodedefaults) and [`getConnectorDefaults`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, move such properties into `getNodeDefaults`.
 
 ## Automatic Organization Chart
 
-In the 'Flow Diagram' section, how to create a diagram manually was discussed. This section explains how to create and position the diagram automatically.
+The previous 'Flow Diagram' section explained how to create a diagram manually. This section demonstrates how to create and position diagrams automatically using data binding.
 
 ### Create Business object (Employee information)
 
-Define Employee Information as JSON data. The following code example shows an employee array whose, `Name` is used as an unique identifier and `ReportingPerson` is used to identify the person to whom an employee report to, in the organization.
+Define Employee Information as JSON data. The following code example shows an employee array where `Name` serves as a unique identifier and `ReportingPerson` identifies the person to whom an employee reports in the organization:
 
-```ts
+```javascript
 
-    public data: Object[] = [
+    let data = [
         {
             Name: "Elizabeth",
             Role: "Director"
@@ -431,85 +382,88 @@ Define Employee Information as JSON data. The following code example shows an em
 
 ### Map data source
 
-You can configure the above "Employee Information" with diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example show how `dataSourceSettings` is used to map ID and parent with property name identifiers for employee information.
+Configure the above "Employee Information" with the diagram so that nodes and connectors are automatically generated using the mapping properties.
+
+The following code example demonstrates how to use [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/datasourcemodel) to map [`id`](https://ej2.syncfusion.com/vue/documentation/api/diagram/datasourcemodel#id) and [`parentId`](https://ej2.syncfusion.com/vue/documentation/api/diagram/datasourcemodel#parentid) with the corresponding property names of employee information:
 
 ```javascript
 <template>
-  <div id="app">
-      <ejs-diagram id="diagram" :width='width' :height='height' :dataSourceSettings='dataSourceSettings' ></ejs-diagram>
-  </div>
+    <div id="app">
+        <ejs-diagram id="diagram" :width='width' :height='height' :dataSourceSettings='dataSourceSettings'></ejs-diagram>
+    </div>
 </template>
 <script>
- import { DiagramComponent, HierarchicalTree, DataBinding } from '@syncfusion/ej2-vue-diagrams';
- import { DataManager } from "@syncfusion/ej2-data";
-  export let localdata = [
-      {
-          Name: "Elizabeth",
-          Role: "Director"
-      },
-      {
-          Name: "Christina",
-          ReportingPerson: "Elizabeth",
-          Role: "Manager"
-      },
-      {
-          Name: "Yoshi",
-          ReportingPerson: "Christina",
-          Role: "Lead"
-      },
-      {
-          Name: "Philip",
-          ReportingPerson: "Christina",
-          Role: "Lead"
-      },
-      {
-          Name: "Yang",
-          ReportingPerson: "Elizabeth",
-          Role: "Manager"
-      },
-      {
-          Name: "Roland",
-          ReportingPerson: "Yang",
-          Role: "Lead"
-      },
-      {
-          Name: "Yvonne",
-          ReportingPerson: "Yang",
-          Role: "Lead"
-      }
-  ];
-  export default {
-      components: {
-          'ejs-diagram': DiagramComponent
-      },
-      name: 'app',
-      data () {
-          return {
-              width: "100%",
-              height: "350px",
-              dataSourceSettings: {
-                  id: 'Name', parentId: 'ReportingPerson',
-                  dataManager: new DataManager(localdata),
-                  doBinding: (nodeModel, localdata) => {
-                      nodeModel.shape = {
-                          type: "Text",
-                          content: (localdata).Role,
-                      }
-                  }
-              }
-          }
-      },
-      provide: {diagram: [DataBinding, HierarchicalTree]},
-  }
-</script>
+import { DiagramComponent, HierarchicalTree, DataBinding } from '@syncfusion/ej2-vue-diagrams';
+import { DataManager } from "@syncfusion/ej2-data";
 
+export let localdata = [
+    {
+        Name: "Elizabeth",
+        Role: "Director",
+
+    },
+    {
+        Name: "Christina",
+        ReportingPerson: "Elizabeth",
+        Role: "Manager",
+
+    },
+    {
+        Name: "Yoshi",
+        ReportingPerson: "Christina",
+        Role: "Lead",
+
+    },
+    {
+        Name: "Philip",
+        ReportingPerson: "Christina",
+        Role: "Lead",
+
+    },
+    {
+        Name: "Yang",
+        ReportingPerson: "Elizabeth",
+        Role: "Manager",
+
+    },
+    {
+        Name: "Roland",
+        ReportingPerson: "Yang",
+        Role: "Lead",
+    },
+    {
+        Name: "Yvonne",
+        ReportingPerson: "Yang",
+        Role: "Lead",
+
+    }
+];
+export default {
+    components: {
+        'ejs-diagram': DiagramComponent
+    },
+    name: 'app',
+    data() {
+        return {
+            width: "100%",
+            height: "350px",
+            dataSourceSettings: {
+                id: 'Name', parentId: 'ReportingPerson',
+                dataManager: new DataManager(localdata),
+            }
+        }
+    },
+    provide: { diagram: [DataBinding, HierarchicalTree] },
+}
+</script>
 
 ```
 
 ### Rendering layout with Datasource
 
-To create an organizational chart, the [`type`](../api/diagram/layout/#type) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
+To create an organizational chart, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layouttype) of layout as `OrganizationalChart`.
 
+The following code example shows how DataManager generates layouts based on the DataSourceSettings of the Diagram:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -524,7 +478,7 @@ To create an organizational chart, the [`type`](../api/diagram/layout/#type) of 
 
 ### Customize employee appearance
 
-The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](../api/diagram/#setnodetemplate) is used to update each node based on employee data.
+The following code examples show how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#setnodetemplate) method updates each node based on employee data:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -536,5 +490,3 @@ The following code examples indicate how to define the default appearance of nod
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/getting-started/orgchart-cs2" %}
-
-> You can refer to our [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Diagram example](https://ej2.syncfusion.com/vue/demos/#/material/diagram/default-functionality.html) that shows how to render the Diagram in Vue.
