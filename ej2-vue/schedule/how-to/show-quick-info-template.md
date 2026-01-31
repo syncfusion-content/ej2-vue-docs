@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show quick info template in Vue Schedule component
+# Show Quick Info Template in Vue Schedule Component
 
-This demo showcases the quick popups for cells and appointments with the customized templates.
+Quick info popups for cells and appointments can be customized through templates to display tailored information. The following example demonstrates the usage of customized quick info templates rendered through the built‑in popup behavior.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

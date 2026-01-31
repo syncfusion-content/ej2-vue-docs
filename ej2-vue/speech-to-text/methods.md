@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Methods in Vue SpeechToText component
 
-## Startlistening
+## Start Listening
 
-You can use the [startListening](../api/speech-to-text/#startListening) public method to initiate the speech recognition and begins the conversion of the speech to text.
+The [startListening()](../api/speech-to-text/#startlistening) method initiates speech recognition and begins converting speech to text. This is used to programmatically start the recognition process without user interaction on the microphone button.
 
-## Stoplistening
+## Stop Listening
 
-You can use the [stopListening](../api/speech-to-text/#stopListening) public method to stop capturing your speech and ends the speech recognition.
+The [stopListening()](../api/speech-to-text/#stoplistening) method terminates the speech recognition process. This can be used to programmatically stop the recognition when an action is completed.
 
-Below sample demonstrates the SpeechToText control configured with above methods.
+The following example demonstrates how to use the `startListening` and `stopListening` methods in the SpeechToText component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

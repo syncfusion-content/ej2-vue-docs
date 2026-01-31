@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in Vue Ribbon component
 
-This section describes the ribbon events that will be triggered when appropriate actions are performed. The following events are available in the ribbon component.
+The Vue Ribbon component triggers a variety of events in response to user interactions, such as selecting a tab, clicking a button, or expanding the ribbon. This section provides detailed explanations and code examples for each available event.
 
 ## tabSelected
 
-The [tabSelected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#tabselected) event is triggered after selecting the tab item.
+The [tabSelected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#tabselected) event is triggered after a tab is successfully selected, allowing you to execute logic based on the newly active tab.
 
 ```html
 <template>
@@ -58,21 +58,21 @@ The [tabSelected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 ```
 
 ## tabSelecting
 
-The [tabSelecting](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#tabselecting) event is triggered before selecting the tab item.
+The [tabSelecting](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#tabselecting) event is triggered before a tab is selected. This event can be canceled to prevent the tab selection.
 
 ```html
 <template>
@@ -116,22 +116,22 @@ The [tabSelecting](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ## ribbonCollapsing
 
-The [ribbonCollapsing](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#ribboncollapsing) event is triggered before collapsing the ribbon.
+The [ribbonCollapsing](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#ribboncollapsing) event is triggered before the ribbon is collapsed. This action can be canceled.
 
 ```html
 <template>
@@ -175,22 +175,22 @@ The [ribbonCollapsing](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ## ribbonExpanding
 
-The [ribbonExpanding](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#ribbonexpanding) event is triggered before expanding the ribbon.
+The [ribbonExpanding](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#ribbonexpanding) event is triggered before the ribbon is expanded. This action can be canceled.
 
 ```html
 <template>
@@ -234,22 +234,22 @@ The [ribbonExpanding](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ri
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ## launcherIconClick
 
-The [launcherIconClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#launchericonclick) event is triggered when the launcher icon of the group is clicked.
+The [launcherIconClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#launchericonclick) event is triggered when the launcher icon of a group is clicked. This is useful for opening dialogs or performing group-specific actions.
 
 ```html
 <template>
@@ -293,28 +293,28 @@ The [launcherIconClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ## overflowPopupOpen
 
-The [overflowPopupOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#overflowpopupopen) event is triggered while opening the overflow popup.
+The [overflowPopupOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#overflowpopupopen) event is triggered while the overflow popup is opening.
 
 ## overflowPopupClose
 
-The [overflowPopupClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#overflowpopupclose) event is triggered while closing the overflow popup.
+The [overflowPopupClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#overflowpopupclose) event is triggered while the overflow popup is closing.
 
-The following code example demonstrates the ribbon rendered with `overflowPopupOpen` and `overflowPopupClose` events.
+The following code example demonstrates the ribbon with the `overflowPopupOpen` and `overflowPopupClose` events.
 
 ```html
 <template>
@@ -361,15 +361,15 @@ The following code example demonstrates the ribbon rendered with `overflowPopupO
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -378,7 +378,7 @@ The following code example demonstrates the ribbon rendered with `overflowPopupO
 
 ### clicked
 
-The [clicked](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettings/#clicked) event is triggered when the Button is clicked.
+The [clicked](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettings/#clicked) event is triggered when a ribbon button is clicked.
 
 ```html
 <template>
@@ -423,22 +423,22 @@ The [clicked](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButt
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### created
 
-The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettings/#created) event is triggered when the Button is created.
+The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettings/#created) event is triggered when a ribbon button is created.
 
 ```html
 <template>
@@ -483,15 +483,15 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButt
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -500,7 +500,7 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButt
 
 ### change
 
-The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettings/#change) event is triggered when the Checkbox state is changed.
+The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettings/#change) event is triggered when the state of the checkbox is changed.
 
 ```html
 <template>
@@ -545,22 +545,22 @@ The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheck
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### created
 
-The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettings/#created) event is triggered once the Checkbox is created.
+The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettings/#created) event is triggered once the checkbox is created.
 
 ```html
 <template>
@@ -605,15 +605,15 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonChec
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -622,7 +622,7 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonChec
 
 ### change
 
-The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#change) event is triggered while changing the colors.
+The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#change) event is triggered when changing the color value.
 
 ```html
 <template>
@@ -668,15 +668,15 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -729,22 +729,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### open
 
-The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#open) event is triggered while opening the ColorPicker popup.
+The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#open) event is triggered while the ColorPicker popup is opening.
 
 ```html
 <template>
@@ -790,22 +790,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### select
 
-The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#select) event is triggered while selecting the color in picker/palette, when showButtons property is enabled.
+The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#select) event is triggered when selecting a color from the picker or palette, particularly when the `showButtons` property is enabled.
 
 ```html
 <template>
@@ -851,22 +851,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#beforeclose) event is triggered before closing the ColorPicker popup.
+The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#beforeclose) event is triggered before the ColorPicker popup closes.
 
 ```html
 <template>
@@ -912,22 +912,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#beforeopen) event is triggered before opening the ColorPicker popup.
+The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#beforeopen) event is triggered before the ColorPicker popup opens.
 
 ```html
 <template>
@@ -973,22 +973,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeTileRender
 
-The [beforeTileRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettingsModel/#beforetilerender) event is triggered while rendering each palette tile.
+The [beforeTileRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#beforetilerender) event is triggered while rendering each palette tile, allowing for customization.
 
 ```html
 <template>
@@ -1034,15 +1034,15 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -1051,7 +1051,7 @@ import { provide } from "vue";
 
 ### change
 
-The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#change) event is triggered when an item in a popup is selected or when the model value is changed by the user.
+The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#change) event is triggered when an item in a popup is selected or the model value is changed by the user.
 
 ```html
 <template>
@@ -1096,15 +1096,15 @@ The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCombo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -1156,15 +1156,15 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboB
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -1216,22 +1216,22 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### created
 
-The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#created) event is triggered once the Combobox is created.
+The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#created) event is triggered when the ComboBox is created.
 
 ```html
 <template>
@@ -1276,22 +1276,22 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComb
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### filtering
 
-The [filtering](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#filtering) event triggers on typing a character in the Combobox.
+The [filtering](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#filtering) event triggers when typing a character in the ComboBox.
 
 ```html
 <template>
@@ -1336,15 +1336,15 @@ The [filtering](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -1396,22 +1396,22 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCombo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#beforeOpen) event triggers before opening the popup.
+The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#beforeopen) event triggers before the popup opens.
 
 ```html
 <template>
@@ -1456,15 +1456,15 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonC
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -1473,7 +1473,7 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonC
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeclose) event is triggered before closing the DropdownButton popup.
+The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeclose) event is triggered before the DropDownButton popup closes.
 
 ```html
 <template>
@@ -1519,22 +1519,22 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeopen) event is triggered before opening the Dropdown button popup.
+The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeopen) event is triggered before the DropDownButton popup opens.
 
 ```html
 <template>
@@ -1580,22 +1580,22 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonD
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeItemRender
 
-The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeitemrender) event is triggered while rendering each popup item of the Dropdown button.
+The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeitemrender) event is triggered while rendering each popup item of the DropDownButton.
 
 ```html
 <template>
@@ -1641,22 +1641,22 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### open
 
-The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#open) event is triggered while opening the Dropdown button popup.
+The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#open) event is triggered when the DropDownButton popup opens.
 
 ```html
 <template>
@@ -1702,22 +1702,22 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDow
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### close
 
-The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#close) event is triggered while closing the Dropdown button popup.
+The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#close) event is triggered when the DropDownButton popup closes.
 
 ```html
 <template>
@@ -1763,22 +1763,22 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### created
 
-The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#created) event is triggered when the DropDown is created.
+The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#created) event is triggered when the DropDownButton is created.
 
 ```html
 <template>
@@ -1824,22 +1824,22 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDrop
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### select
 
-The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#select) event is triggered while selecting an action item in the Dropdown button popup.
+The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#select) event is triggered when an action item is selected in the DropDownButton popup.
 
 ```html
 <template>
@@ -1885,15 +1885,15 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropD
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -1902,7 +1902,7 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropD
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeclose) event is triggered before closing the SplitButton popup.
+The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeclose) event is triggered before the SplitButton popup closes.
 
 ```html
 <template>
@@ -1948,22 +1948,22 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeopen) event is triggered before opening the SplitButton popup.
+The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeopen) event is triggered before the SplitButton popup opens.
 
 ```html
 <template>
@@ -2009,15 +2009,15 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonS
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -2070,22 +2070,22 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### open
 
-The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#open) event is triggered while opening the SplitButton popup.
+The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#open) event is triggered when the SplitButton popup opens.
 
 ```html
 <template>
@@ -2131,22 +2131,22 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitBu
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### close
 
-The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#close) event is triggered while closing the SplitButton popup.
+The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#close) event is triggered when the SplitButton popup closes.
 
 ```html
 <template>
@@ -2192,15 +2192,15 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitB
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -2253,22 +2253,22 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSpli
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### select
 
-The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#select) event is triggered while selecting an action item in the SplitButton popup.
+The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#select) event is triggered when an action item is selected in the SplitButton popup.
 
 ```html
 <template>
@@ -2314,22 +2314,22 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplit
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### click
 
-The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#click) event is triggered while clicking the primary button in the SplitButton.
+The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#click) event is triggered when clicking the primary button in the SplitButton.
 
 ```html
 <template>
@@ -2375,15 +2375,15 @@ The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitB
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -2392,7 +2392,7 @@ The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitB
 
 ### beforeClick
 
-The [beforeClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before selecting a button from the group button items.
+The [beforeClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#beforeclick) event is triggered before a button is selected from the GroupButton items.
 
 ```html
 
@@ -2450,22 +2450,22 @@ The [beforeClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### click
 
-The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when selecting a button from the group button items.
+The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#click) event is triggered when a button is selected from the GroupButton items.
 
 ```html
 
@@ -2521,15 +2521,15 @@ The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupB
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -2538,7 +2538,7 @@ The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupB
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeclose) event is triggered before closing the fileMenu popup.
+The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeclose) event is triggered before the File Menu popup closes.
 
 ```html
 <template>
@@ -2594,22 +2594,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeopen) event is triggered before opening the fileMenu popup.
+The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeopen) event is triggered before the File Menu popup opens.
 
 ```html
 <template>
@@ -2665,22 +2665,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### beforeItemRender
 
-The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeitemrender) event is triggered while rendering each ribbon fileMenu item.
+The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeitemrender) event is triggered while rendering each ribbon File Menu item.
 
 ```html
 <template>
@@ -2736,22 +2736,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### open
 
-The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#open) event is triggered when the fileMenu popup is opened.
+The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#open) event is triggered when the File Menu popup opens.
 
 ```html
 <template>
@@ -2807,22 +2807,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### close
 
-The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#close) event is triggered when the fileMenu popup is closed.
+The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#close) event is triggered when the File Menu popup closes.
 
 ```html
 <template>
@@ -2878,22 +2878,22 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
 
 ### select
 
-The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#select) event is triggered while selecting an item in the ribbon fileMenu.
+The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#select) event is triggered when an item is selected in the ribbon File Menu.
 
 ```html
 <template>
@@ -2949,15 +2949,15 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -2966,7 +2966,7 @@ import { provide } from "vue";
 
 ### backStageItemClick
 
-The [backStageItemClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageItemClickArgs/) event is triggered when backstage item is selected.
+The [backStageItemClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageItemModel/#backstageitemclick) event is triggered when a backstage item is selected.
 
 ```html
 <template>
@@ -3018,15 +3018,15 @@ import { provide } from "vue";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 ```
@@ -3061,7 +3061,7 @@ The [popupClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonG
 
 ### itemHover
 
-The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hover over the gallery item.
+The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hovering over a gallery item.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -3074,7 +3074,7 @@ The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGa
 
 ### beforeItemRender
 
-The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#beforeitemrender) event is triggered while rendering each gallery item.
+The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#beforeitemrender) event is triggered before each gallery item is rendered.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -3087,7 +3087,7 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 
 ### beforeSelect
 
-The [beforeSelect](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#beforeselect) event is triggered before selecting an item in the Ribbon gallery.
+The [beforeSelect](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#beforeselect) event is triggered before an item is selected in the Ribbon gallery.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -3100,7 +3100,7 @@ The [beforeSelect](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbo
 
 ### select
 
-The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#select) event is triggered while selecting an item in the Ribbon gallery.
+The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#select) event is triggered when an item is selected in the Ribbon Gallery.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

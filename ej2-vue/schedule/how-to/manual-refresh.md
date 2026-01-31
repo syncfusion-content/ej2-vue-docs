@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manual refresh in Vue Schedule component
+# Manual Refresh in Vue Schedule Component
 
-In Scheduler, we can able to refresh the layout manually without re-render the DOM element by using the [`refreshLayout`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#refreshlayout) public method.  The following example code explains to know how to use the refreshLayout method.
+In the Vue Schedule component, the layout can be manually refreshed without re-rendering the entire DOM by using the [`refreshLayout`](https://ej2.syncfusion.com/vue/documentation/api/schedule#refreshlayout) public method. This method updates the layout to reflect changes such as style adjustments or structural modifications. The following example demonstrates how to use the `refreshLayout` method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

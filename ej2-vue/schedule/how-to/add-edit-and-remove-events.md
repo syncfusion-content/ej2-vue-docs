@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add edit and remove events in Vue Schedule component
+# Add, Edit, and Remove Events in Vue Schedule Component
 
-CRUD actions can be manually performed on appointments using [`addEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#addevent), [`saveEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#saveevent) and [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#deleteevent) methods as shown below.
+CRUD actions can be manually performed on events using [`addEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#addevent), [`saveEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#saveevent) and [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#deleteevent) methods. These methods allow creating new events, updating existing ones, and removing events from the Schedule.
 
-## Normal event
+## Normal Event
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,7 +25,7 @@ CRUD actions can be manually performed on appointments using [`addEvent`](https:
         
 {% previewsample "page.domainurl/code-snippet/schedule/app-crud-cs1" %}
 
-## Recurrence event
+## Recurrence Event
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

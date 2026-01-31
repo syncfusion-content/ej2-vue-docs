@@ -98,14 +98,14 @@ function getCurrentUserInfo() {
 </script>
 
 <style>
-@import "@syncfusion/ej2-base/styles/material.css";
-@import "@syncfusion/ej2-buttons/styles/material.css";
-@import "@syncfusion/ej2-calendars/styles/material.css";
-@import "@syncfusion/ej2-dropdowns/styles/material.css";
-@import "@syncfusion/ej2-inputs/styles/material.css";
-@import "@syncfusion/ej2-navigations/styles/material.css";
-@import "@syncfusion/ej2-popups/styles/material.css";
-@import "@syncfusion/ej2-schedule/styles/material.css";
+@import "@syncfusion/ej2-base/styles/tailwind3";
+@import "@syncfusion/ej2-buttons/styles/tailwind3";
+@import "@syncfusion/ej2-calendars/styles/tailwind3";
+@import "@syncfusion/ej2-dropdowns/styles/tailwind3";
+@import "@syncfusion/ej2-inputs/styles/tailwind3";
+@import "@syncfusion/ej2-navigations/styles/tailwind3";
+@import "@syncfusion/ej2-popups/styles/tailwind3";
+@import "@syncfusion/ej2-schedule/styles/tailwind3";
 
 .e-schedule .e-schedule-toolbar .e-icon-schedule-print::before {
     content: '\e813';

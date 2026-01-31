@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Keytips in Vue Ribbon component
 
-The Ribbon supports keyboard navigations to interact the ribbon items using the keytips which can be enabled by setting the [enableKeyTips](https://ej2.syncfusion.com/vue/documentation/api/ribbon#enablekeytips) property.
+The Ribbon component supports KeyTips to provide keyboard navigation for its items. This feature can be enabled by setting the [enableKeyTips](https://ej2.syncfusion.com/vue/documentation/api/ribbon#enablekeytips) property to `true`.
 
-The keytips will be shown when the `Alt + Windows/Command` keys are pressed.
+The keytips will be shown when the `Alt + Windows/Command` keys are pressed. This allows users to access any Ribbon element by pressing the corresponding keys.
 
 ## Ribbon items keytip
 
-You can add keytips to all the ribbon items by using the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#keytip) property.
+You can assign a KeyTip to any Ribbon item, including tabs, groups, and individual controls, using the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#keytip) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,7 +31,7 @@ You can add keytips to all the ribbon items by using the [keyTip](https://ej2.sy
 
 ## File menu keytip
 
-You can add keytips to the file menu by using the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#keytip) property.
+A KeyTip can be assigned to the File Menu button using the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#keytip) property within the `fileMenuSettings`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -46,7 +46,7 @@ You can add keytips to the file menu by using the [keyTip](https://ej2.syncfusio
 
 ## Backstage menu keytip
 
-You can add keytips to backstage menu items by using the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageItem/#keytip) property.
+You can assign KeyTips to Backstage menu items by defining the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageItem/#keytip) property for each item in the Backstage configuration.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ You can add keytips to backstage menu items by using the [keyTip](https://ej2.sy
 
 ## Ribbon layout switcher keytip
 
-You can add keytip to the layout switcher by using the [layoutSwitcherKeyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#layoutswitcherkeytip) property.
+A KeyTip can be added to the layout switcher button using the [layoutSwitcherKeyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#layoutswitcherkeytip) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,7 +76,7 @@ You can add keytip to the layout switcher by using the [layoutSwitcherKeyTip](ht
 
 ## Ribbon launcher icon keytip
 
-You can add keytip to the launcher icon by using the [launcherIconKeyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroup/#launchericonkeytip) property.
+A KeyTip can be assigned to a group's launcher icon using the [launcherIconKeyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroup/#launchericonkeytip) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -93,13 +93,11 @@ You can add keytip to the launcher icon by using the [launcherIconKeyTip](https:
 
 ### Show keytips
 
-You can use the [showKeyTips](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonKeyTip/#showkeytips) method to shown the keytips dynamically.
-
-In order to show specific keytips, pass the key string as an argument in the `showKeyTips('H')` method.
+Use the [showKeyTips](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonKeyTip/#showkeytips) method to display the KeyTips dynamically. To navigate into a specific tab's or group's KeyTips, pass its KeyTip as an argument. For instance, `showKeyTips('H')` will show the KeyTips for all items under the element assigned the 'H' KeyTip.
 
 ### Hide keytips
 
-You can use the [hideKeyTips](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonKeyTip/#hidekeytips) method in Ribbon to remove the keytips dynamically. This will remove all the visible keytips.
+Use the [hideKeyTips](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonKeyTip/#hidekeytips) method to hide all visible KeyTips on the Ribbon.
 
 ## Guidelines for adding keytips
 
