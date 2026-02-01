@@ -25,9 +25,9 @@ The modules that are available in Gantt are as follows.
 | [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/edit)| Inject this module is use editing feature.|
 | [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/gantt/selection)| Inject this module to use selection feature.|
 | [`DayMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/dayMarkers)| Inject this module to use event markers.|
-| [`ContextMenu`](https://ej2.syncfusion.com/documentation/api/gantt/contextMenu/)| Inject this module to use context menu feature.|
-| [`ColumnMenu`](https://ej2.syncfusion.com/vue/documentation/api/gantt/columnMenu)| Inject this module to use column menu feature.|
-| [`VirtualScroll`]| Inject this module to use virtual scroll feature.|
+| [`ContextMenu`](https://ej2.syncfusion.com/vue/documentation/api/gantt/contextmenu)| Inject this module to use context menu feature.|
+| `ColumnMenu`| Inject this module to use column menu feature.|
+| `VirtualScroll`| Inject this module to use virtual scroll feature.|
 | `CriticalPath` | Inject this module to use critical path feature.|
 
 These modules should be injected into the Gantt using the **Gantt.Inject** method.
