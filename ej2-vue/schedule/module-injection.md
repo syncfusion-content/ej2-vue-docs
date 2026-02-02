@@ -42,4 +42,4 @@ The required modules should be injected into the Scheduler using the `provide` m
 
 **Note:** If a Scheduler [`currentView`](https://ej2.syncfusion.com/vue/documentation/api/schedule#currentview) is set to any one of the available views without injecting that respective view module, then a script error will occur and the Scheduler will not render.
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> Visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for a complete overview. Explore live examples at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) to knows how to present and manipulate data.

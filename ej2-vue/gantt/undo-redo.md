@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Undo Redo in Vue Gantt component | Syncfusion
-description: Learn here all about Undo Redo in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Undo Redo in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about Undo Redo in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
 control: Undo Redo 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Undo Redo in Vue Gantt component
+# Undo Redo in Vue Gantt Chart Component
 
 The Undo feature enables users to revert the most recent action performed in the Gantt Chart. It helps undo changes made to tasks, dependencies, or other actions within the Gantt Chart.
 
 The Redo feature can reapply an action that was previously undone using the Undo feature. This allows users to revert their decision to undo an action.
 
-The undo redo feature can be enabled in Gantt by using the [enableUndoRedo](https://ej2.syncfusion.com/vue/documentation/api/gantt/#enableundoredo) property.
+The undo redo feature can be enabled in Gantt by using the [enableUndoRedo](https://ej2.syncfusion.com/vue/documentation/api/gantt#enableundoredo) property.
 
-To Undo Redo, inject the [`UndoRedo`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#undoredomodule) module into the Gantt component.
+To Undo Redo, inject the [UndoRedo](https://ej2.syncfusion.com/vue/documentation/api/gantt#undoredomodule) module into the Gantt Chart component.
 
 ## Configure the feature set for undo redo actions
 
-By default, all the gantt features listed in the below table will be restored for undo and redo actions. However, you have the option to specify only the required actions to be restored using [undoRedoActions](https://ej2.syncfusion.com/vue/documentation/api/gantt/#undoredoactions) property.
+By default, all the gantt features listed in the below table will be restored for undo and redo actions. However, you have the option to specify only the required actions to be restored using [undoRedoActions](https://ej2.syncfusion.com/vue/documentation/api/gantt#undoredoactions) property.
 
 | Built-in Undo Redo Items | Actions |
 |------------------------|---------|
@@ -58,7 +58,7 @@ In the following code example, `Edit` and `Delete` actions are specified in `und
 
 ## Configuring the Storage Step Count for Undo and Redo Actions
 
-You can specify the number of actions to be stored for undo and redo operations using the [undoRedoStepsCount](https://ej2.syncfusion.com/vue/documentation/api/gantt/#undoredostepscount) property.
+You can specify the number of actions to be stored for undo and redo operations using the [undoRedoStepsCount](https://ej2.syncfusion.com/vue/documentation/api/gantt#undoredostepscount) property.
 
 By default, the value of `undoRedoStepsCount` is set to 10.
 
@@ -79,7 +79,7 @@ In the following example, `undoRedoStepsCount` value is set to 5.
 
 ## Perform undo redo actions programatically
 
-You can perform undo and redo actions programatically using [undo](https://ej2.syncfusion.com/vue/documentation/api/gantt/#undo) and [redo](https://ej2.syncfusion.com/vue/documentation/api/gantt/#redo) methods.
+You can perform undo and redo actions programatically using [undo](https://ej2.syncfusion.com/vue/documentation/api/gantt#undo) and [redo](https://ej2.syncfusion.com/vue/documentation/api/gantt#redo) methods.
 
 The following code example demonstrates how to invoke the `undo` and `redo` method by clicking the external button.
 
@@ -96,7 +96,7 @@ The following code example demonstrates how to invoke the `undo` and `redo` meth
 
 ## Retrieve undo and redo stack collection
 
-By default, when an undo or redo action is performed, the actions are stored in an array collection. To retrieve the undo and redo stack array collections, you can use the [getUndoActions](https://ej2.syncfusion.com/vue/documentation/api/gantt/#getundoactions) and [getRedoActions](https://ej2.syncfusion.com/vue/documentation/api/gantt/#getredoactions) methods.
+By default, when an undo or redo action is performed, the actions are stored in an array collection. To retrieve the undo and redo stack array collections, you can use the [getUndoActions](https://ej2.syncfusion.com/vue/documentation/api/gantt#getundoactions) and [getRedoActions](https://ej2.syncfusion.com/vue/documentation/api/gantt#getredoactions) methods.
 
 The following code example demonstrates how to retrieve the undo and redo collection using method by clicking the external button.
 
@@ -113,7 +113,7 @@ The following code example demonstrates how to retrieve the undo and redo collec
 
 ## Clear undo and redo collection
 
-At any point, you can clear the undo and redo collections using the [clearUndoCollection](https://ej2.syncfusion.com/vue/documentation/api/gantt/#clearundocollection) and [clearRedoCollection](https://ej2.syncfusion.com/vue/documentation/api/gantt/#clearredocollection) methods. This allows you to reset the undo and redo stacks as needed during runtime.
+At any point, you can clear the undo and redo collections using the [clearUndoCollection](https://ej2.syncfusion.com/vue/documentation/api/gantt#clearundocollection) and [clearRedoCollection](https://ej2.syncfusion.com/vue/documentation/api/gantt#clearredocollection) methods. This allows you to reset the undo and redo stacks as needed during runtime.
 
 The following code example demonstrates how to clear the undo and redo collection using method by clicking the external button.
 

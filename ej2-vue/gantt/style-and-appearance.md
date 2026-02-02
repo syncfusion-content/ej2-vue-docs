@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Style and appearance in Vue Gantt component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in Vue Gantt Chart component | Syncfusion
+description: Learn here all about Style and appearance in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Gantt component
+# Style and appearance in Vue Gantt Chart component
 
-To modify the Gantt Chart appearance, you need to override the default CSS of gantt chart. Please find the list of CSS classes and its corresponding section in Gantt Chart. Also, you have an option to create your own custom theme for all the JavaScript controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=tailwind3).
+To modify the Gantt Chart appearance, you need to override the default CSS of gantt chart. Please find the list of CSS classes and its corresponding section in Gantt Chart. Also, you have an option to create your own custom theme for all the JavaScript controls using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=tailwind3).
 
 Section | CSS Class | Purpose of Class
 -----|-----|-----
@@ -52,18 +52,18 @@ Section | CSS Class | Purpose of Class
 
 ## Grid lines
 
-In Gantt component, you can show or hide the grid lines in the TreeGrid side and chart side by using the [`gridLines`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#gridlines) property.
+In Gantt Chart component, you can show or hide the grid lines in the TreeGrid side and chart side by using the [gridLines](https://ej2.syncfusion.com/vue/documentation/api/gantt#gridlines) property.
 
-The following options are available in Gantt component for rendering grid lines,
+The following options are available in Gantt Chart component for rendering grid lines,
 
 * Horizontal: The horizontal grid lines alone will be visible.
 * Vertical: The vertical grid lines alone will be visible.
 * Both: Both the horizontal and vertical grid lines will be visible on the TreeGrid and chart sides.
 * None: Gridlines will not be visible on TreeGird and chart sides.
 
-> By default, the [`gridLines`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#gridLines) property is set with `Horizontal` type.
+> By default, the [gridLines](https://ej2.syncfusion.com/vue/documentation/api/gantt#gridLines) property is set with `Horizontal` type.
 
-The following code example shows how to change the gridlines rendering mode in the Gantt component.
+The following code example shows how to change the gridlines rendering mode in the Gantt Chart component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

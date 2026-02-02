@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 # Attachments in Vue AI AssistView control
 
 
-The `Attachment` support in AI AssistView specifies user to include file attachments along with their prompts in the AI AssistView. This enhances the interaction by allowing users to provide additional context through files. You can enable this feature using the `enableAttachments` property, and customize its behavior using the `attachmentSettings` configuration.
+The AI AssistView component supports file attachments, allowing users to include files along with their prompts to provide additional context and enhance interactions. Users can upload documents, images, and other file types to supplement their queries. Enable this functionality using the `enableAttachments` property and customize the behavior through the `attachmentSettings` configuration.
 
 ## Enable attachment
 
-You can enable the attachment by using the [enableAttachments](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview#enableattachments) property. By default, it is set to `false`.
+Enable file attachment support by setting the [enableAttachments](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview#enableattachments) property to `true`. By default, it is disabled.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -30,11 +30,11 @@ You can enable the attachment by using the [enableAttachments](https://ej2.syncf
 
 ## Configuring attachments
 
-You can use the [attachmentSettings](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings) property to configure the attachments in the AI AssistView.
+Use the [attachmentSettings](../api/ai-assistview/attachmentSettings) property to customize file attachment behavior, including upload endpoints, file type restrictions, and size limits.
 
 ### Setting saveUrl and removeUrl
 
-You can use the [saveUrl](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#saveurl) and [removeUrl](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#removeurl) property to add the save and remove the URL for the file uploaded in the AI AssistView.
+Set the [saveUrl](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#saveurl) and [removeUrl](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#removeurl) properties to specify server endpoints for handling file uploads and removals. The `saveUrl` processes file uploads, while the `removeUrl` handles file deletion requests.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -49,7 +49,7 @@ You can use the [saveUrl](https://ej2.syncfusion.com/vue/documentation/api/ai-as
 
 ### Setting file type
 
-You can use the [allowedFileType](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#allowedfiletypes) property to upload the specific file types in the attachment.
+Use the [allowedFileTypes](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#allowedfiletypes) property to specify which file types users can upload. This property accepts file extensions (e.g., '.pdf', '.docx') or MIME types to control the types of files that can be attached.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -64,7 +64,7 @@ You can use the [allowedFileType](https://ej2.syncfusion.com/vue/documentation/a
 
 ### Setting file size
 
-You can use the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#maxfilesize) property to allow the maximum file size of the upload file in the AI AssistView. By default, it is set to `2000000` bytes.
+Configure the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/attachmentSettings#maxfilesize) property to define the maximum file size allowed for uploads. Specify the size in bytes. The default value is `2000000` bytes (2 MB). Files exceeding this limit will not be uploaded.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}

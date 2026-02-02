@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Common Installation Errors
 
-This article describes the most common installation errors, as well as the causes and solutions to those errors.
+This article describes common installation errors, their causes, and solutions.
 
 * Unlocking the license installer using the trial key
 * License has expired
@@ -36,17 +36,16 @@ This article describes the most common installation errors, as well as the cause
 
 ![license download](images/error2.png)
 
-**Reason** <br /> This error message will appear if your license has expired.
+**Reason** <br /> This error appears if the license has expired.
 
 **Suggested solution** <br /> You can choose from the options below.
 
-1. You can renew your subscription [here](https://www.syncfusion.com/account/my-renewals).
+Choose from the following options:
 
-2. You can get a new license [here](https://www.syncfusion.com/sales/products).
-
-3. You can reach out to our sales team by emailing sales@syncfusion.com.
-
-4. You can also extend the 30-day trial period after your trial license has expired.
+1. Renew the subscription [here](https://www.syncfusion.com/account/my-renewals).
+2. Obtain a new license [here](https://www.syncfusion.com/sales/products).
+3. Contact the sales team at sales@syncfusion.com.
+4. Extend the 30-day trial period after the trial license expires.
 
 ## Unable to find a valid license or trial
 
@@ -64,20 +63,21 @@ This article describes the most common installation errors, as well as the cause
 
 The following are possible causes of this error:
 
-* When your trial period expired
-* When you don’t have a license or an active trial
-* You are not the license holder of your license
-* Your account administrator has not yet assigned you a license.
+* Trial period has expired
+* No license or active trial exists
+* User is not the license holder
+* Account administrator has not assigned a license
 
 **Suggested solution** <br />
 
-1. You can get a new license [here](https://www.syncfusion.com/sales/products).
 
-2. Contact your account administrator.
+1. Obtain a new license [here](https://www.syncfusion.com/sales/products).
+2. Contact the account administrator.
 
 3. Send an email to clientrelations@syncfusion.com to request a license.
 
-4. You can reach out to our sales team by emailing sales@syncfusion.com.
+4. Contact the sales team at sales@syncfusion.com.
+
 
 ## Unable to install because of another installation
 
@@ -90,10 +90,8 @@ The following are possible causes of this error:
 **Suggested solution** <br /> Open and kill the msiexec process in the task manager and then continue to install Syncfusion<sup style="font-size:70%">&reg;</sup>. If the problem is still present, restart the computer and try Syncfusion<sup style="font-size:70%">&reg;</sup> installer.
 
 1. Open the Windows Task Manager.
-
-2. Browse the Details tab.
-
-3. Select the msiexec.exe and click **End task**.
+2. Go to the **Details** tab.
+3. Select **msiexec.exe** and click **End task**.
 
 ![license download](images/error6.png)
 
@@ -121,4 +119,4 @@ The following are possible causes of this error:
 3. You can enable this option after the installing our Syncfusion<sup style="font-size:70%">&reg;</sup> setup.
 
 **Suggestion 2:** <br />
-1. If you do not want to disable controlled folder access, you can install our demos in another directory.
+If disabling controlled folder access is not desired, install the demos in a different directory.

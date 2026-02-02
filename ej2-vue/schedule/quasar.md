@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue Schedule Component | Syncfusion
+title: Getting Started with Quasar Framework and Vue Schedule | Syncfusion
 description: Check out and learn about getting started with the Quasar Framework and Vue Schedule Component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Schedule Component in the Quasar Framework
+# Getting Started with Vue Schedule Component in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Schedule component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Schedule component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
-The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
+Quasar is a Vue.js–based open-source framework designed to build high‑performance, responsive applications for web, mobile, and desktop platforms from a single code base.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ The `Quasar` Framework is a Vue.js-based open-source framework that empowers dev
 
 ## Set up the Quasar project
 
-To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start/) project, use the following commands:
+To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start) project, use the following commands:
 
 ```bash
 npm init quasar
@@ -54,22 +54,22 @@ npm install @syncfusion/ej2-vue-schedule --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Schedule component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
+In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Schedule component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css';
 </style>
 
 {% endhighlight %}
@@ -307,14 +307,14 @@ const ownerDataSource = [
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css';
 </style>
 
 {% endhighlight %}
@@ -394,14 +394,14 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css';
 </style>
 
 {% endhighlight %}
@@ -415,6 +415,6 @@ To run the project, use the following command:
 npm run dev
 ```
 
-The output will appear as follows:
+The application launches and displays the Vue Schedule component as shown below:
 
 ![Quasar output](./images/quasar.png)

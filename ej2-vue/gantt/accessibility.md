@@ -1,31 +1,30 @@
 ---
 layout: post
-title: Accessibility in Vue Gantt component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Gantt component
+# Accessibility in Vue Gantt Chart Component
 
-The Gantt component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Gantt Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Gantt component is outlined below.
+The accessibility compliance for the Gantt Chart component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| https://www.section508.gov Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
-|
+| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -41,7 +40,7 @@ The accessibility compliance for the Gantt component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Gantt component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns) patterns to meet the accessibility. The following ARIA attributes are used in the Gantt component:
+The Gantt Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns) patterns to meet accessibility.
 
 The following ARIA attributes are used in Gantt:
 
@@ -53,25 +52,25 @@ The following ARIA attributes are used in Gantt:
 | `separator (role)` | This attribute is added to the `e-split-bar` element, which represents the splitter between the Grid table and Chart |
 | `dialog (role)` | This attribute is added to the `e-dialog` element, which represents the pop-up dialog |
 | `toolbar (role)` | This attribute is added to the `e-gantt-toolbar` element, which represents the toolbars of Gantt |
-| `aria-label` | It indicates the element's information`<br>` It is assigned to the Gantt UI elements such as timeline cell, taskbar, left label, right label, dependency line, and event markers. |
-| `aria-selected` | This attribute is assigned to the Gantt chart row, and it defaults to `false`. The value is changed to `true` when the user selects a grid cell or task |
-| `aria-expanded` | This attribute is assigned to the Gantt chart parent task row. The value is changed to `true` when the user clicks a parent taskbar to expand. After the user clicked a parent taskbar to collapse, the attribute value is changed to `false` |
-| `aria-grabbed` | This attribute is assigned to the taskbars of Gantt when the user tries to achieve taskbar editing |
+| `aria-label` | Indicates the element’s information. Assigned to timeline cells, taskbars, labels, dependency lines, and event markers. |
+| `aria-selected` | Assigned to the Gantt chart row. Defaults to `false`, becomes `true` on selection. |
+| `aria-expanded` | Assigned to the parent task row; changes on expand/collapse. |
+| `aria-grabbed` | Assigned when the user starts taskbar editing. |
 
 ## Keyboard navigation
 
-The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns) guideline, ensuring accessibility for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component:
+The Gantt Chart component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns) guideline, ensuring accessibility for users of assistive technologies(AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component:
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Alt + J</kbd> | Focus Gantt component. |
+| <kbd>Alt + J</kbd> | Focus Gantt Chart component. |
 | <kbd>Tab / Shift + Tab</kbd> | Focus the next or previous element. |
 | <kbd>Home</kbd> | Selects the first row. |
 | <kbd>End</kbd> | Selects the last row. |
 | <kbd>DownArrow</kbd> | Moves the row selection downward. |
-| <kbd>UpArrow</kbd> | Moves the row  selection upward. |
-| <kbd>LeftArrow</kbd> | Moves the cell focus/cell selection left side. |
-| <kbd>RightArrow</kbd> | Moves the cell focus/cell selection right side. |
+| <kbd>UpArrow</kbd> | Moves the row selection upward. |
+| <kbd>LeftArrow</kbd> | Moves the cell selection left. |
+| <kbd>RightArrow</kbd> | Moves the cell selection right. |
 | <kbd>Ctrl + Up Arrow</kbd> | Collapses all tasks. |
 | <kbd>Ctrl + Down Arrow</kbd> | Expands all tasks. |
 | <kbd>Ctrl + Shift + Up Arrow</kbd> | Collapses the selected row. |
@@ -84,21 +83,19 @@ The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/AR
 | <kbd>Delete</kbd> | Deletes the selected row. |
 | <kbd>Shift + F5</kbd> | FocusTask |
 | <kbd>Ctrl + Shift + F</kbd> | Focus search |
-| <kbd>Shift + DownArrow</kbd> | Extends the cell selection downwards. |
-| <kbd>Shift + UpArrow</kbd> | Extends the cell selection upwards. |
-| <kbd>Shift + LeftArrow</kbd> | Extends the cell selection to the left side. |
-| <kbd>Shift + RightArrow</kbd> | Extends the cell selection to the right side. |
-| <kbd>Ctrl + Z</kbd> | Undo the last action. |
-| <kbd>Ctrl + Y</kbd> | Redo the last action. |
+| <kbd>Shift + DownArrow</kbd> | Extends the cell selection downward. |
+| <kbd>Shift + UpArrow</kbd> | Extends the cell selection upward. |
+| <kbd>Shift + LeftArrow</kbd> | Extends the cell selection left. |
+| <kbd>Shift + RightArrow</kbd> | Extends the cell selection right. |
+| <kbd>Ctrl + Z</kbd> | Undo. |
+| <kbd>Ctrl + Y</kbd> | Redo. |
 
 **Navigate between toolbar items using keyboard**
 
-In the Gantt component, follow these steps to navigate between toolbar items using the keyboard:
-
-**Step 1**: Press `ALT + J` to focus on the gantt component.
-**Step 2**: Press the `Tab` key to navigate to the first item in the toolbar.
-**Step 3**: Use the `LeftArrow` or `RightArrow` keys to move between toolbar items.
-**Step 4**: Press `Tab` key again to remove focus from the toolbar and return focus to the Gantt component.
+**Step 1**: Press <kbd>ALT + J</kbd> to focus on the Gantt component  
+**Step 2**: Press <kbd>Tab</kbd> to move to the first toolbar item  
+**Step 3**: Use <kbd>LeftArrow</kbd> / <kbd>RightArrow</kbd> to navigate  
+**Step 4**: Press <kbd>Tab</kbd> again to move focus back to Gantt  
 
 ## Ensuring accessibility
 
@@ -110,4 +107,4 @@ The accessibility compliance of the Gantt component is shown in the following sa
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)
+* [Accessibility in Syncfusion® Vue components](../common/accessibility)

@@ -8,11 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Schedule component
+# Accessibility in Vue Schedule Component
 
-The Scheduler has been designed based on the WAI-ARIA specifications, thus applying the appropriate ARIA roles, states and properties for the Scheduler elements. It is also available with a built-in keyboard navigation support, making it easier for the people who use assistive technologies or who completely rely on the Keyboard support. As per the accessibility standard, the navigated dates, views and other interactive actions performed on the Scheduler will be read out to the target users who use assistive technologies such as screen readers.
-
-The Scheduler makes use of the most required ARIA attributes such as `aria-label` and `role` to support the accessibility in it. To be more accurate, it must be used with an ARIA compliant browser along with the screen reader running from backend.
+The Schedule component is designed in accordance with WAI‑ARIA specifications, applying appropriate ARIA roles, states, and properties to all relevant elements. Built‑in keyboard navigation support is provided to ensure effective interaction for individuals relying on assistive technologies or keyboard input. According to accessibility standards, navigated dates, views, and interactive actions performed on the component are announced by screen reader software. The component uses essential ARIA attributes such as `aria-label` and `role` to ensure accessibility compliance. For accurate interpretation, an ARIA‑compliant browser running with an active screen reader is required.
 
 The accessibility compliance for the Schedule component is outlined below.
 
@@ -56,9 +54,9 @@ The following ARIA attributes are used in the Scheduler.
 | aria-describedby | It indicates editor dialog content description to the user through assistive technologies. |
 | aria-disabled | Attribute is set to the appointment element to indicates the disabled state of the Scheduler.
 
-## Keyboard interaction
+## Keyboard Interaction
 
-All the Scheduler actions can be controlled via keyboard keys by using the `allowKeyboardInteraction` property which is set to `true` by default. The following are the standard keys that work on Scheduler.
+All Schedule component actions can be performed using keyboard input when the `allowKeyboardInteraction` property is set to `true` (enabled by default). The following keys are supported:
 
 | Keys | Description |
 |-----|-----|
@@ -81,16 +79,14 @@ All the Scheduler actions can be controlled via keyboard keys by using the `allo
 | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Y</kbd> | To navigate to today date. |
 | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd> | To open editor window. |
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> Refer to the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for comprehensive feature representations. Additional examples are available in the [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) page, demonstrating data presentation and manipulation.
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
-The Scheduler component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
-
-The accessibility compliance of the Scheduler component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/schedule.html) in a new window to evaluate the accessibility of the Scheduler component with accessibility tools.
+Accessibility levels for the Schedule component are validated through automated testing tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core). Accessibility compliance can be evaluated using the following sample: open the [sample](https://ej2.syncfusion.com/accessibility/schedule.html) to review the component with accessibility tools.
 
 {% previewsample "page.domainurl/code-snippet/schedule/event-cs1" %}
 
-## See also
+## See Also
 
 - [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)

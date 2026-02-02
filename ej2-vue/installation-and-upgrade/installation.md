@@ -14,26 +14,28 @@ domainurl: ##DomainURL##
 
 ## Install by using npm CLI
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published in [npm](https://www.npmjs.com/search?q=scope:syncfusion). You can install the necessary packages from npm’s install command. For example, vue grid package can be installed using following command.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on [npm](https://www.npmjs.com/search?q=scope:syncfusion). You can install the required packages using npm. For example, the Vue Grid package can be installed with the following command:
 
-```
+```bash
 npm install @syncfusion/ej2-vue-grids --save
 ```
 
 ## Install by using package.json
 
-1. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) package references in the `dependencies` of `~/package.json` file.
+1. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) package references to the `dependencies` section of your project's `package.json` file:
 
-    ```
-    {
-        "dependencies": {
-            "@syncfusion/ej2-vue-grids": "*",
-            "@syncfusion/ej2-vue-charts": "*"
-        }
+```json
+{
+    "dependencies": {
+        "@syncfusion/ej2-vue-grids": "*",
+        "@syncfusion/ej2-vue-charts": "*"
     }
-    ```
-    > The `*` indicates the latest version of npm package. Refer the [documentation](https://docs.npmjs.com/files/package.json) for more details about npm versioning.
+}
+```
 
-2. Now, open the command prompt and run the `npm install` command line. This will install all npm dependencies in a single command line.
+> The `*` indicates the latest version of the npm package. Refer to the [npm documentation](https://docs.npmjs.com/files/package.json) for more details about versioning.
 
-    > Refer the [documentation](https://docs.npmjs.com/files/package.json) for more details about npm package.json
+2. Open a terminal and run `npm install`. This installs all npm dependencies listed in `package.json`.
+
+> Refer to the [npm documentation](https://docs.npmjs.com/files/package.json) for additional details about `package.json`.
+```

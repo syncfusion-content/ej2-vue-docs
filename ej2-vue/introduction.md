@@ -184,16 +184,15 @@ letter-spacing: 0.7px;
 
 ## How to best read this user guide
 
-* The best way to get started would be to read the "Getting Started" section of the documentation for the component that you would like to start using first. The "Getting Started" guide gives just enough information that you need to know before starting to write code. This is the only section that we recommend reading end-to-end before starting to write code, all other information can be referred as needed.
+* The best way to get started is to read the "Getting Started" section for the component you want to use. The "Getting Started" guide provides the essential information needed before writing code. This is the only section recommended to read in full before beginning development; all other information can be referenced as needed.
 
-* Now that you are familiar with the basics of using the component, the next step would be to start integrating the component into your application. A good starting point would be to refer to the code snippets in the [online sample browser](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/grid/grid-overview.html) which contains hundreds of code samples, it is very likely that you will find a code sample that resembles your intended usage scenario.
+* After becoming familiar with the basics, the next step is to integrate the component into your application. A good starting point is the code snippets in the [online sample browser](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/grid/grid-overview.html), which contains hundreds of examples. It is very likely you will find a code sample that matches your intended usage scenario.
 
-* Another valuable resource is the API reference which provides detailed information on the object hierarchy as well as the settings available on every object.
+* Another valuable resource is the API reference, which provides detailed information on the object hierarchy and available settings for each object.
 
 ## Getting help
 
-If you are still not able to find the information that you are looking for at the self-help resources mentioned above then please contact us by creating a support ticket in our support site, or ask your query in StackOverflow with tag `syncfusion-ej2`.
-
+If you cannot find the information you need in the self-help resources mentioned above, contact us by creating a support ticket on our [support site](https://support.syncfusion.com/support/tickets/create) or ask your question on StackOverflow with the tag `syncfusion-ej2`.
 >Note: Syncfusion<sup style="font-size:70%">&reg;</sup> does not collect any kind of information when our components are used in customer applications.
 
 ## See also

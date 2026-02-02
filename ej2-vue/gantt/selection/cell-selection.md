@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Cell selection in Vue Gantt component | Syncfusion
-description: Learn here all about Cell selection in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Cell Selection in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about Cell selection in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Cell selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell selection in Vue Gantt component
+# Cell Selection in Vue Gantt Chart Component
 
-You can select a cell in the Gantt component by setting the [`selectionSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/selectionSettings#mode) property to cell. You can get the selected cell information using the [`getSelectedRowCellIndexes`](https://ej2.syncfusion.com/vue/documentation/api/gantt/selection#getselectedrowcellindexes) method. This method returns the result as an object collection, which has `cellIndexes` and `rowIndex` information of the selected cells.
+You can select a cell in the Gantt Chart component by setting the https://ej2.syncfusion.com/vue/documentation/api/gantt/selectionSettings#mode property to `cell`. You can get the selected cell information using the https://ej2.syncfusion.com/vue/documentation/api/gantt/selection#getselectedrowcellindexes method. This method returns the result as an object collection, which contains the `cellIndexes` and `rowIndex` information of the selected cells.
 
-Refer to the following code example to enable the cell selection in Gantt.
+Refer to the following code example to enable cell selection in Gantt.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ Refer to the following code example to enable the cell selection in Gantt.
 
 ## Selecting multiple cells
 
-You can select multiple cells by setting the [`selectionSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/gantt/selectionSettings#type) property to multiple and the [`selectionSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/selectionSettings#mode) property to cell. Multiple cells can be selected by holding the CTRL key and selecting the cells. The following code example demonstrates how to select multiple cells.
+You can select multiple cells by setting the https://ej2.syncfusion.com/vue/documentation/api/gantt/selectionSettings#type property to `multiple` and the https://ej2.syncfusion.com/vue/documentation/api/gantt/selectionSettings#mode property to `cell`. Multiple cells can be selected by holding the CTRL key and selecting the cells. The following code example demonstrates how to select multiple cells.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ You can select multiple cells by setting the [`selectionSettings.type`](https://
 
 ## Selecting a cell dynamically
 
-You can select a cell dynamically using the [`selectCell`](https://ej2.syncfusion.com/vue/documentation/api/gantt/selection#selectcell) method. Refer to the following code example for details.
+You can select a cell dynamically using the https://ej2.syncfusion.com/vue/documentation/api/gantt/selection#selectcell method. Refer to the following code example for details.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ You can select a cell dynamically using the [`selectCell`](https://ej2.syncfusio
 
 ## Customize cell selection action
 
-While selecting a cell in Gantt, the [`cellSelecting`](https://ej2.syncfusion.com/vue/documentation/api/gantt#cellselecting) and [`cellSelected`](https://ej2.syncfusion.com/vue/documentation/api/gantt#cellselected) event will be triggered. The [`cellSelecting`](https://ej2.syncfusion.com/vue/documentation/api/gantt#cellselecting) event will be triggered on initialization of cell selection action, and you can get the current selecting cell information to prevent the selection of a particular cell in a particular row. The [`cellSelected`](https://ej2.syncfusion.com/vue/documentation/api/gantt#cellselected) event will be triggered on completion of cell selection action, and you can get the current selected cell’s information. The following code example demonstrates how to prevent the selection of the cell using the [`cellSelecting`](https://ej2.syncfusion.com/vue/documentation/api/gantt#cellselecting) event.
+While selecting a cell in Gantt, the https://ej2.syncfusion.com/vue/documentation/api/gantt#cellselecting and https://ej2.syncfusion.com/vue/documentation/api/gantt#cellselected events will be triggered. The `cellSelecting` event will be triggered at the initialization of the cell selection action, and you can get the currently selecting cell information to prevent the selection of a particular cell in a particular row. The `cellSelected` event will be triggered upon completion of the cell selection action, and you can get the currently selected cell’s information. The following code example demonstrates how to prevent the selection of a cell using the `cellSelecting` event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

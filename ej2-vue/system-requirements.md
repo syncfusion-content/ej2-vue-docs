@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # System Requirements for Vue UI Components
 
-This section explains the basic system requirements to work with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components.
+This section explains the basic system requirements for working with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components.
 
 * Vue supported version >= `2.6+`.
 
-* Required [node](https://nodejs.org/en/) version >= `16+`, and the supported [npm](https://www.npmjs.com/) version will be installed along with the node version. Use the following command to check the node's version.
+* Required [Node.js](https://nodejs.org/en/) version >= `16+`. The supported [npm](https://www.npmjs.com/) version is installed along with Node.js. Use the following command to check the Node.js version:
 
 ```bash
 node --version
@@ -26,12 +26,11 @@ node --version
 >    * `Vue 3+` - Use `^8.0.0-rc.1` version. 
 
 ## Browser support
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components are supported only in modern browsers. For more information, refer to the [browser compatibility](./browser/) section.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components are supported only in modern browsers. For more information, refer to the [browser compatibility](./browser/) section.
 
 ## Vue supported versions
 
-The following table represents the supported Vue versions by different Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components releases.
+The following table shows the supported Vue versions for different Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI component releases:
 
 | Version | Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components version |
 | ------------- | ------------- |

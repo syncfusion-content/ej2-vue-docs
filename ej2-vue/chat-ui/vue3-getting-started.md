@@ -107,13 +107,13 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -184,13 +184,13 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-  @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+  @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -216,13 +216,13 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
   }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-  @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+  @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -244,7 +244,7 @@ yarn run dev
 
 ## Configure messages and user
 
-You can use the `<e-messages>` tag directive to group all the messages and `<e-message>` tag to define each message and the [user](../api/chat-ui/user/) property to configure the current user for the chat.
+To define the chat content, use the `<e-messages>` tag to group all messages, and the `<e-message>` tag for each individual message. The [user](../api/chat-ui#user) property assigns an identity to the current user, which is essential for distinguishing the user's messages from those of other participants.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -259,7 +259,7 @@ The output will appear as follows:
 
 ![Output](./images/defaultMessageSample.png)
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the [migration](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 

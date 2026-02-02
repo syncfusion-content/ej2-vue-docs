@@ -32,13 +32,13 @@ const suggestions = ["Okay will check it", "Sounds good!"];
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
 
 #suggestionTemplate .e-suggestion-list li {
   padding: 0;

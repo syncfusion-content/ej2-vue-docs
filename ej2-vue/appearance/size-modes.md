@@ -41,7 +41,7 @@ The user can enable touch mode (bigger) for a component by adding the `e-bigger`
 
 ## Change size mode for application at runtime
 
-The user can change the size mode of the application between touch and normal (mouse) mode at runtime by adding and removing the `e-bigger` class. The following steps explain how to change the size mode of an application at runtime:
+Switch between normal and touch modes dynamically by adding or removing the `e-bigger` class from the `body` element. This approach is useful for applications that support both desktop and mobile users.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,3 +78,4 @@ The user can change the size mode of a component between touch and normal (mouse
 * [Kanban responsiveness](https://ej2.syncfusion.com/vue/documentation/kanban/responsive-mode)
 * [Toolbar responsiveness](https://ej2.syncfusion.com/vue/documentation/toolbar/responsive-mode)
 * [Tab responsiveness](https://ej2.syncfusion.com/vue/documentation/tab/adaptive)
+* [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Syncfusion<sup style="font-size:70%">&reg;</sup> Licensing Errors
 
-Licensing error popup is displayed with various messages under different circumstances. Here are some ways to resolve different issues.
+Licensing error messages appear under different circumstances. This page lists common errors and concise steps to resolve them.
 
 ## Licensing errors
 
-### License key not registered\trial expired
+### License key not registered / trial expired
 
-The following error message will be shown if a Syncfusion<sup style="font-size:70%">&reg;</sup> license key has not been registered in your application or if the trial key has expired after 30 days.
+This error appears when a Syncfusion<sup style="font-size:70%">&reg;</sup> license key has not been registered in the application or when a trial key has expired after 30 days.
 
 **Error message :** <br /> This application was built using a trial version of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio. You should include the valid license key to remove the license validation message permanently.
 
@@ -42,7 +42,7 @@ The following error message will be shown if a Syncfusion<sup style="font-size:7
 
 ### Invalid key
 
-If the application is registered with an invalid key, another version of license key, or another platform's license key, the following error message will pop up when launching the application.
+This error occurs when the registered key is invalid, belongs to a different platform, or is for another version.
 
 **Error Message:** <br /> The included Syncfusion<sup style="font-size:70%">&reg;</sup> license key is invalid.
 
@@ -174,7 +174,7 @@ If the application is registered with another version’s license key, the follo
 
 ### Invalid key
 
-If you are using `npx syncfusion-license activate` command with an invalid license key structure, the following console error message will appear in the CI or terminal.
+When running `npx syncfusion-license activate` with an invalid key structure, the command will return an error:
 
 **Error message:** <br /> (Error) License key is not valid.
 

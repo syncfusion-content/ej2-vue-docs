@@ -10,19 +10,18 @@ domainurl: ##DomainURL##
 
 # Predefined Icons Library in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Component
 
-Syncfusion<sup style="font-size:70%">&reg;</sup>'s icon library is a collection of pre-designed icons that can be used to enhance the user interface of an application. This pre-designed icons are set of `base64` formatted font icons. Utilizing this icon library can make it simpler to create a cohesive, visually pleasing design for an application.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> icon library provides a collection of pre-designed icons to enhance application user interfaces. These icons are base64-formatted font icons that help create a cohesive, visually appealing design across applications.
 
 ## Referring icons in the Vue application
 
 Using the below approaches, the icons can be referenced in the Vue application.
 
-* [npm package](#the-npm-package) - Use the npm package to access icons.
-
-* [CDN reference](#cdn-reference) - Use the static web asset to access icons.
+* [npm package](#the-npm-package) - Install and import icons from the npm package
+* [CDN reference](#cdn-reference) - Link to icons via CDN for quick setup
 
 ### The npm package
 
-All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are shipped in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package, which is published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. This package contains both CSS and SCSS theme files for all themes.
+All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are available in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package, published on [npmjs.com](https://www.npmjs.com/~syncfusionorg). This package contains CSS and SCSS theme files for all Syncfusion<sup style="font-size:70%">&reg;</sup> themes.
 
 Icons can be used from the npm package `ej2-icons`. To use the icons, install the npm package using the following command:
 
@@ -113,21 +112,19 @@ The following steps explain the direct rendering of the Syncfusion<sup style="fo
 {% previewsample "page.domainurl/code-snippet/common/animation-multiple-cs1" %}
 
 ### Icon size
+The `ej2-icons` package supports different icon sizes to optimize for touch or mouse interactions. Use the pre-defined size classes to adjust icon dimensions:
 
-The `ej2-icons` package offers options to display icons in different size modes. A user can use different icon sizes in their application based on touch or mouse mode. If the user is using touch mode, add `e-large` class to the element to make the icon easily interactive, or add the `e-small` or `e-medium` class in mouse mode.
+* `e-small` - Sets the icon size to 8px
+* `e-medium` - Sets the icon size to 16px
+* `e-large` - Sets the icon size to 24px
 
-The pre-defined icon size is present in the available classes listed below.
-* `e-small` - Sets the icon size as `8px`.
-* `e-medium` - Sets the icon size to `16px`.
-* `e-large` - Sets the icon size to `24px`.
+**Example:**
 
-  **Example:**
-
-    ```
-    <span class="e-icons e-small e-search"></span>
-    <span class="e-icons e-medium e-search"></span>
-    <span class="e-icons e-large e-search"></span>
-    ```
+```html
+<span class="e-icons e-small e-search"></span>
+<span class="e-icons e-medium e-search"></span>
+<span class="e-icons e-large e-search"></span>
+```
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

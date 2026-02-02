@@ -12,15 +12,14 @@ domainurl: ##DomainURL##
 
 ## Accessibility overview
 
-Accessibility in components refers to the practice of designing and building user interface elements in a way that makes them accessible to users with disabilities. This can include a variety of things, such as making sure that text is high-contrast and easy to read, providing alternative text for images, and designing controls and interactions that can be used with a keyboard or assistive technology.
-
+Accessibility in components means designing and building user interface elements so they are usable by people with disabilities. This includes ensuring readable contrast, providing alternative text for images, and designing controls and interactions that work with a keyboard and assistive technologies.
 ## Accessibility standards
 
-The component is said to be accessible when it is constructed in accordance with certain standards that are required to make it accessible.
+A component is considered accessible when it conforms to recognized standards required to make it usable for people with disabilities.
 
 The accessibility of the components consists of the following standards and aspects:
 
-* [ADA](https://www.ada.gov/) - A law to ensure that people with disabilities have the same opportunities and access as people without disabilities.
+* [ADA](https://www.ada.gov/) — Ensures people with disabilities have the same opportunities and access as people without disabilities.
 
 * [WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/) - The Web Content Accessibility Guidelines (WCAG) provide guidelines developed by the World Wide Web Consortium (W3C) to ensure web content is accessible to people with disabilities. `WCAG 2.2` establishes a framework of accessibility principles and their associated success criteria. The level of accessibility conformance achieved by a web application is determined by the extent to which it meets these success criteria, categorized into three levels: A, AA, and AAA.
 
@@ -28,7 +27,7 @@ The accessibility of the components consists of the following standards and aspe
 
 * [WAI-ARIA](https://www.w3.org/WAI/ARIA/) - WAI-ARIA stands for "Web Accessibility Initiative - Accessible Rich Internet Applications." It is a set of technical specifications and guidelines developed by the World Wide Web Consortium (W3C) as part of the Web Accessibility Initiative (WAI). WAI-ARIA is designed to enhance the accessibility of dynamic web content, particularly web applications and rich internet applications (RIAs), for people with disabilities. WAI-ARIA provides a set of roles, states, and properties that can be added to HTML elements to provide additional context and information about the purpose and behavior of those elements. This can help assistive technologies better understand and interpret web content and interact with web applications.
 
-* [Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) - It refers to the ability to use a keyboard to interact with and navigate through a user interface. It is an important aspect of web accessibility, as it allows people who cannot use a mouse or other pointing device to access and use web content and applications.
+* [Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) — Ensures user interfaces can be operated using a keyboard alone.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components adhere to these established standards.
 
@@ -52,11 +51,11 @@ A screen reader allows people who are blind or visually impaired to use a comput
 
 ### Right-To-Left support
 
-Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc. Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support the Right-to-Left feature. Refer to the [Right-to-Left documentation](https://ej2.syncfusion.com/vue/documentation/common/right-to-left) to learn more about this support.
+Right-to-left (RTL) support lets applications work correctly with languages written right to left (for example, Arabic and Hebrew). Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support RTL. See the [Right-to-Left documentation](https://ej2.syncfusion.com/vue/documentation/common/right-to-left) for details.
 
 ### Color contrast
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components come equipped with [predefined themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) that guarantee the presence of satisfactory color contrast, benefiting individuals with visual impairments.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components include [predefined themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) that provide sufficient color contrast for users with visual impairments.
 
 ### Mobile device support
 

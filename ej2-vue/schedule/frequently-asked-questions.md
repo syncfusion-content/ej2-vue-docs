@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently asked questions in Vue Schedule component
+# Frequently Asked Questions in Vue Schedule Component
 
-In this article, you can find some frequently asked questions and corresponding solutions while getting hands-on experience with scheduler control.
+This section provides solutions to common issues encountered while working with the Vue Schedule component.
 
-## Maximum call stack size exceeded
+## Maximum Call Stack Size Exceeded
 
 **Error Image:**
 
@@ -20,9 +20,9 @@ In this article, you can find some frequently asked questions and corresponding 
 
 **Solution:**
 
-The above error occurs when using scheduler views that were not imported into the project. You can resolve this issue by importing the required view modules.
+This error occurs when a view used in the Schedule component is not imported and injected. Each view such as `Day`, `TimelineWeek`, `TimelineMonth`, and `Agenda` must be injected before use. If a view is referenced without injection, the Schedule component throws a **Maximum call stack size exceeded** error.
 
-In the below code, `Day` option is used without injecting, So, it throws the above error. You can resolve this problem by simply injecting the day module in below code.
+In the following example, the `Day` view is used without injection, which results in the issue. Injecting the required view modules resolves the problem.
 
 ```
 <template>
@@ -52,7 +52,7 @@ import {
 } from "@syncfusion/ej2-vue-schedule";
 ```
 
-## Grouping with empty resources
+## Grouping with Empty Resources
 
 Grouping without providing any resource data will throw the following problems.
 
@@ -65,9 +65,9 @@ So, we suggest to avoid grouping with empty resources in the scheduler.
 
 **Error:** While using editor template, value of  `e-field` is missing in editor window.
 
-**Solution:** `e-field` value is mandatory, we need to add it. Please refer [here](https://ej2.syncfusion.com/vue/documentation/schedule/editor-template/#customizing-event-editor-using-template) for more info.
+**Solution:** The `e-field` attribute is mandatory for processing field values within the editor window. Refer to the detailed guidance in the editor template documentation: [here](https://ej2.syncfusion.com/vue/documentation/schedule/editor-template#customizing-event-editor-using-template)
 
-## Missing CSS reference
+## Missing CSS Reference
 
 **Error Image:**
 
@@ -75,31 +75,31 @@ So, we suggest to avoid grouping with empty resources in the scheduler.
 
 **Solution:**
 
-The above problem occurs when missing CSS references for the scheduler in a project. You can resolve this issue by providing proper CSS for the scheduler.
+This issue occurs when the required CSS files for the Schedule component are not included. Adding the appropriate CSS references resolves the problem.
 
 ```
 
       <! –– scheduler CSS is referred from this link ––>
-<link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
+<link href="https://cdn.syncfusion.com/ej2/tailwind3.css" rel="stylesheet">
                       or
       <! –– From here ––>
 
 <style>
-@import "/node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "/node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "/node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "/node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "/node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "/node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "/node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "/node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "/node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "/node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "/node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "/node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "/node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "/node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "/node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "/node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css";
 </style>
 
 ```
 
 ## QuickInfoTemplate at bottom
 
-When using the [`quickInfoTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule#quickinfotemplates) in scheduler, sometimes quickinfo popup not shown fully at the bottom area of scheduler. You can resolve this by using [`cellClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule#cellclick) and [`eventClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventclick) events and below code snippet.
+When using the [`quickInfoTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule#quickinfotemplates) in scheduler, sometimes quickinfo popup not shown fully at the bottom area of scheduler. This can be resolved by using the [`cellClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule#cellclick) and [`eventClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventclick) events and below code snippet.
 
 ```
 <template>
@@ -129,13 +129,13 @@ methods: {
 }
 ```
 
-## Not importing culture files while using localization
+## Not Importing Culture Files When using Localization
 
 **Error Image:**
 
 ![Locale import issue](./images/locale-import-issue.png)
 
- While using [`locale`](https://ej2.syncfusion.com/vue/documentation/schedule/localization/) in scheduler, not importing the required culture files properly throws the problem.
+ While using [`locale`](https://ej2.syncfusion.com/vue/documentation/schedule/localization) in scheduler, not importing the required culture files properly throws the problem.
 
 **Solution:** Properly add and import the culture files(numberingSystems, timeZoneNames, loadCldr, L10n etc.,) in your project will resolve the problem.
 

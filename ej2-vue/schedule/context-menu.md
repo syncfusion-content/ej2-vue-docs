@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in Vue Schedule component
+# Context Menu in Vue Schedule Component
 
-You can display context menu on work cells and appointments of Scheduler by making use of the [`ContextMenu`](https://ej2.syncfusion.com/vue/documentation/context-menu/getting-started) control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler`.
+A context menu can be displayed on work cells and appointments in the Vue Schedule component by manually integrating the [`ContextMenu`](https://ej2.syncfusion.com/vue/documentation/context-menu/getting-started) ContextMenu control. In this approach, the ContextMenu component is added at the application level and its `target` property is set to the Schedule component’s DOM element.
 
-On Scheduler cells, you can display the menu items such as `New Event`, `New Recurring Event` and `Today` option. For appointments, you can display its related options such as `Edit Event` and `Delete Event`. The default event window can be opened for appointment creation and editing using the [`openEditor`](../api/schedule/#openeditor) method of Scheduler.
+On Scheduler cells, menu items such as `New Event`, `New Recurring Event` and `Today` can be displayed. For appointments, context menu options such as `Edit Event` and `Delete Event`. The default event editor can be opened for creating and editing appointments using the [`openEditor`](../api/schedule#openeditor) method of the Schedule component.
 
-The deletion of appointments can be done by using the [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#deleteevent) public method. Also, the [`selectedDate`](../api/schedule/#selecteddate) property can be used to navigate between different dates.
+Appointment deletion can be performed using the [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#deleteevent) public method. Date navigation can be achieved using the [`selectedDate`](../api/schedule#selecteddate) property to programmatically move to the desired date.
 
-> You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
+> Custom menu items can also be displayed for both cells and appointments. In responsive mode, the context menu opens on tap‑hold interaction.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,4 +29,4 @@ The deletion of appointments can be done by using the [`deleteEvent`](https://ej
         
 {% previewsample "page.domainurl/code-snippet/schedule/context-menu-cs1" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> Refer to the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) Vue Scheduler feature tour page for detailed feature descriptions. Explore the [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) examples for demonstrations of scheduling and interaction behaviors.

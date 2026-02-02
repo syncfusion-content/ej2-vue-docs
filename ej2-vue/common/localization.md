@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting started with Localization
 
-Localization library allows you to localize the text content of the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components. This is useful if you want to display the UI in a language other than English.
+The localization library allows you to localize the text content of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components. This is useful when you want to display the UI in a language other than English.
 
 ## Loading translations
 
-To load a translation object in your application, you can use the load function from the @syncfusion/ej2-base module. This function takes an object that contains the translations for various languages, with the keys being the language codes and the values being the translation objects.
+To load translation data in your application, use the L10n.load function from the @syncfusion/ej2-base module. This function takes an object that maps locale codes to translation objects.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ To load a translation object in your application, you can use the load function 
 
 ## Changing current locale
 
-The current locale can be changed for all the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components in your application by invoking `setCulture` function with your desired culture name.
+Change the current locale for all Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components by calling `setCulture` with the desired culture name. Ensure the locale translations have been loaded via `L10n.load` before changing the culture.
 
 ```ts
 import {L10n, setCulture} from '@syncfusion/ej2-base';

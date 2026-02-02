@@ -7,28 +7,29 @@ platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
 # Crud actions in Vue Schedule component
 
-Events, a.k.a. Appointments, play an important role in Scheduler with which the users mostly interact. You can easily manipulate (add/edit/delete) the desired appointments as and when required either using the editor window or through the drag and resize action.
+Events, a.k.a. Appointments, play an important role in Scheduler with which the users mostly interact. Appointments can be manipulated (add, edit, delete) through the editor window or by using drag and resize actions.
 
 ## Add
 
-Any kind of appointments such as normal, all-day, spanned or recurring events can be easily added on Scheduler using any one of the following ways.
+Appointments such as normal, all-day, spanned, or recurring events can be added to the Schedule component using any of the following approaches.
 
 * [Creation using editor window](#creation-using-editor-window)
 * [Creation Using addEvent method](#creation-using-addevent-method)
 
-### Creation using editor window
+### Creation using Editor Window
 
-The default editor window opens when you double click on the Scheduler cells. It provides you with event related options such as Subject, Location, Start and End time, All-day, Timezone, Description and other recurrence options. With these available fields, you can choose to provide detailed information to the events. Once the fields are filled with proper values, enter the `Save` button to add an event.
+Double-clicking on Schedule cells opens the default editor window. The editor provides fields such as **Subject**, **Location**, **Start** and **End** time, **All-day**, **Timezone**, **Description**, and recurrence options. Once the fields are filled with proper values, enter the `Save` button to add an event.
 
-In case, if you want to simply provide the Subject alone for appointments, just single click on the required cells which will open the quick popup expecting you to enter subject alone and save it. You can also select multiple cells and press `Enter` key to open the quick popup for selected time range and save the appointment for that time range.
+For quick entry of only the **Subject**, single-clicking the required cells opens the quick popup. Multiple cells can also be selected and the **Enter** key pressed to open the quick popup for the selected time range, then save the appointment for that range.
 
-In case, if you need to add some other additional fields to the editor window, then you can opt for [custom editor window](./editor-template/#customizing-event-editor-using-template) which allows you to include fields as per your application needs. If you need to add just one or two [additional fields to the existing default editor window](./editor-template/#add-additional-fields-to-the-default-editor), you can do so by defining it manually and then appending it to the editor window.
+To include additional fields in the editor, use the [custom editor window](./editor-template#customizing-event-editor-using-template). To add one or two [additional fields to the existing default editor window](./editor-template#add-additional-fields-to-the-default-editor), define and append them to the editor.
 
-### Creation using addEvent method
+### Creation using addEvent Method
 
-The appointments can be created dynamically by using [`addEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#addevent) method. Either you can add a single or a collection of appointment objects using `addEvent` method. The following code example let you know how to use the `addEvent` method to create multiple appointments simultaneously.
+Appointments can be created dynamically using the [`addEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#addevent) method. A single appointment object or a collection of objects can be passed to `addEvent`. The following example demonstrates creating multiple appointments simultaneously.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -41,9 +42,9 @@ The appointments can be created dynamically by using [`addEvent`](https://ej2.sy
         
 {% previewsample "page.domainurl/code-snippet/schedule/add-event-cs1" %}
 
-### Inserting events into database at server-side
+### Inserting Events into Database at Server-Side
 
-While adding the normal or recurring events to the Scheduler, `insert` action takes place and the following code example describes how to add a new event into database at server side.
+While adding normal or recurring events, an `insert` action occurs. The following example illustrates inserting a new event into a database on the server side.
 
 ```ts
 if (param.action == "insert" || (param.action == "batch" && param.added != null)) // this block of code will execute while inserting the appointments
@@ -72,7 +73,7 @@ if (param.action == "insert" || (param.action == "batch" && param.added != null)
 
 ![adding event](./images/add.png)
 
-### Restricting add action based on specific criteria
+### Restricting add Action based on Specific Criteria
 
 In the following example, the specific fields of Scheduler editor window such as Subject and Location are made to undergo validation such that if it is left as blank, then the default `Required` validation message will be displayed, while clicking on a save button.
 
@@ -89,7 +90,7 @@ Additionally, the regex condition has been added to the Location field, so that 
         
 {% previewsample "page.domainurl/code-snippet/schedule/default-cs1" %}
 
-You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the [`actionBegin`](../api/schedule/#actionbegin) event.
+Creation of appointments can also be prevented dynamically. For example, to decline creation on weekend days, the appropriate condition can be checked within the [`actionBegin`](../api/schedule#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,20 +105,20 @@ You can also dynamically prevent the creation of appointments on Scheduler. For 
 
 ## Edit
 
-The same way the appointments such as normal, all-day, spanned or recurring events are created, it can be easily edited using any of the following ways.
+The same way the appointments such as normal, all-day, spanned or recurring events are created, it can be easily edited using any of the following approaches.
 
 * [Update using editor window](#update-using-editor-window)
 * [Update using saveEvent method](#update-using-saveevent-method)
 
-### Update using editor window
+### Update using Editor Window
 
-You can open the default editor window filled with appointment details by double clicking on the required events. It gets pre-filled with event options such as Subject, Location, Start and End time, All-day, timezone, description and other recurrence options, from which you can edit the desired field values and, then enter the `Save` button to update it.
+Double-clicking an event opens the default editor window, automatically populated with the appointment's details. Edit the desired fields—Subject, Location, Start and End time, All-day, Timezone, Description, and recurrence options—and select Save to update.
 
-> You can also single click on appointments, which opens the quick info popup with edit and delete options. Clicking on the `edit` option will open the default editor filled with event details and `delete` option will prompt for delete confirmation.
+> Single-clicking appointments opens the quick info popup with Edit and Delete options. Selecting Edit opens the default editor. Selecting Delete prompts for confirmation.
 
-### Update using saveEvent method
+### Update using SaveEvent Method
 
-The appointments can be edited and updated manually using the [`saveEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#saveevent) method. The following code examples shows how to edit the normal and recurring events.
+Appointments can be edited and updated manually using the [`saveEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#saveevent) method. The following code examples shows how to edit the normal and recurring events.
 
 **Normal event** - Here, an event with ID `3` is edited and its subject is changed with a new text. When the modified data object is passed onto the [`saveEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#saveevent) method, the changes gets reflected onto the original event. The `Id` field is mandatory in this edit process, where the modified event object should hold the valid `Id` value that exists in the Scheduler data source.
 
@@ -132,11 +133,11 @@ The appointments can be edited and updated manually using the [`saveEvent`](http
         
 {% previewsample "page.domainurl/code-snippet/schedule/edit-event-cs1" %}
 
-**Recurring event** - The following code example shows how to edit a single occurrence of a recurring event. In this case, the modified data should hold an additional field namely [`RecurrenceID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrenceid) mapping to its parent recurring event's Id value. Also, this modified occurrence will be considered as a new event in the Scheduler dataSource, where it is linked with its parent event through the [`RecurrenceID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrenceid) field value. The [`saveEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#saveevent) method takes 2 arguments, first one accepting the modified event data object and second argument accepting either of the 2 text values - `EditOccurrence` or `EditSeries`.
+**Recurring event** - The following code example shows how to edit a single occurrence of a recurring event. In this case, the modified data should hold an additional field namely [`RecurrenceID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrenceid) mapping to its parent recurring event's Id value. Also, this modified occurrence will be considered as a new event in the Scheduler dataSource, where it is linked with its parent event through the [`RecurrenceID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrenceid) field value. The [`saveEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#saveevent) method takes 2 arguments, first one accepting the modified event data object and second argument accepting either of the 2 text values - `EditOccurrence` or `EditSeries`.
 
 When the second argument is passed as `EditOccurrence`, which means that the passed event data is a single modified occurrence - whereas if the second argument is passed as `EditSeries`, it means that the modified data needs to be edited as a whole series and therefore no new event object will be maintained in the Scheduler dataSource.
 
-In case of modifying the single occurrence, it is also necessary to update the [`RecurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrenceexception) field of parent event altogether with the occurrence editing. To know more about how to set [`RecurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrenceexception) values, refer the [recurring events](./appointments/#adding-exceptions) topic.
+In case of modifying the single occurrence, it is also necessary to update the [`RecurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrenceexception) field of parent event altogether with the occurrence editing. To know more about how to set [`RecurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrenceexception) values, refer the [recurring events](./appointments#adding-exceptions) topic.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -149,7 +150,7 @@ In case of modifying the single occurrence, it is also necessary to update the [
         
 {% previewsample "page.domainurl/code-snippet/schedule/edit-event-cs2" %}
 
-### Updating events in database at server-side
+### Updating Events in Database at Server-Side
 
 While editing the normal events in the Scheduler, `update` action takes place and the following code example describes how to update event into database at server side.
 
@@ -181,16 +182,16 @@ if (param.action == "update" || (param.action == "batch" && param.changed != nul
 
 ### How to edit a single occurrence or entire series and update it in database at server-side
 
-The recurring appointments can be edited in either of the following two ways.
+Recurring appointments can be edited in either of the following ways.
 
 * Single occurrence
 * Entire series
 
 **Editing single occurrence** - When you double click on a recurring event, a popup prompts you to choose either to edit the single event or entire series. From this, if you choose to select **EDIT EVENT** option, a single occurrence of the recurring appointment alone will be edited. The following process takes place while editing a single occurrence,
 
-* A new event will be created from the parent event data and added to the Scheduler dataSource, with all its default field values overwritten with the newly modified data and additionally, the [`recurrenceID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrenceid) field will be added to it, that holds the `id` value of the parent recurring event. Also, a new `Id` will be generated for this event in the dataSource.
+* A new event will be created from the parent event data and added to the Scheduler dataSource, with all its default field values overwritten with the newly modified data and additionally, the [`recurrenceID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrenceid) field will be added to it, that holds the `id` value of the parent recurring event. Also, a new `Id` will be generated for this event in the dataSource.
 
-* The parent recurring event needs to be updated with appropriate [`recurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrenceexception) field to hold the edited occurrence appointment's date collection.
+* The parent recurring event needs to be updated with appropriate [`recurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrenceexception) field to hold the edited occurrence appointment's date collection.
 
 Therefore, when a single occurrence is edited from a recurring event, the batch action takes place by allowing both the `Add` and `Edit` action requests to take place together.
 
@@ -288,17 +289,17 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-> To know more about handling recurrence exceptions, refer the [Adding exceptions](./appointments/#adding-exceptions) topic.
+> To know more about handling recurrence exceptions, refer the [Adding exceptions](./appointments#adding-exceptions) topic.
 
-### How to edit from the current and following events of a series
+### How to Edit from the Current and following Events of a Series
 
-The recurring appointments can be edited from current and following events when enable the property [`editFollowingEvents`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#editfollowingevents).
+The recurring appointments can be edited from current and following events when enable the property [`editFollowingEvents`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#editfollowingevents).
 
 **Editing Following Events** - When you double click on a recurring event, a popup prompts you to choose either to edit the single event or Edit Following Events or entire series. From this, if you choose to select **EDIT FOLLOWING EVENTS** option, a current and following events of the recurring appointment will be edited. The following process takes place while editing a following events,
 
-* A new event will be created from the parent event data and added to the Scheduler dataSource, with all its default field values overwritten with the newly modified data and additionally, the [`followingID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#followingid) field will be added to it, that holds the [`id`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#id) value of the immediate parent recurring event. Also, a new `Id` will be generated for this event in the dataSource.
+* A new event will be created from the parent event data and added to the Scheduler dataSource, with all its default field values overwritten with the newly modified data and additionally, the [`followingID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#followingid) field will be added to it, that holds the [`id`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#id) value of the immediate parent recurring event. Also, a new `Id` will be generated for this event in the dataSource.
 
-* The parent recurring event needs to be updated with appropriate [`recurrenceRule`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrencerule) field to hold the modified occurrence appointment's end date.
+* The parent recurring event is updated with an appropriate [`recurrenceRule`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrencerule) value to set the modified series end date.
 
 Therefore, when a following events are edited from a recurring event, the batch action takes place by allowing the `Add`, `Edit` and `Delete` action requests to take place together.
 
@@ -368,9 +369,9 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-### Restricting edit action based on specific criteria
+### Restricting Edit Action based on Specific Criteria
 
-You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the [`actionBegin`](../api/schedule/#actionbegin) event.
+Editing of appointments can be prevented dynamically. For example, to restrict updates during non-working hours, evaluate the appropriate condition within the [`actionBegin`](../api/schedule#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -394,15 +395,15 @@ The appointments can be deleted in either of the following ways,
 
 While performing all these above mentioned actions, a pop-up with a delete confirmation message will be displayed prompting either to proceed with deleting an appointment.
 
-### Deletion using editor window
+### Deletion using Editor Window
 
-When you double click an event, the default editor window will be opened which includes a `Delete` button at the bottom left position to allow you to delete that particular appointment. When deleting an appointment through this editor window, the delete alert confirmation will not be asked and the event will be deleted immediately.
+When an event is double-clicked, the default editor window includes a Delete button at the bottom-left. Deleting from the editor removes the appointment immediately without displaying an additional confirmation alert.
 
-### Deletion using deleteEvent method
+### Deletion using deleteEvent Method
 
-The appointments can be removed manually using the [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#deleteevent) method. The following code examples shows how to edit the normal and recurring events.
+Appointments can be removed programmatically using the [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#deleteevent) method. The following examples demonstrate deleting normal and recurring events.
 
-**Normal event** - You can delete the normal appointments of Scheduler by simply passing its `Id` value or the entire event object collection to the [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#deleteevent) method.
+**Normal event** - Normal appointments can be deleted by passing either the appointment Id value or the event object collection to [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#deleteevent) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -415,7 +416,7 @@ The appointments can be removed manually using the [`deleteEvent`](https://ej2.s
         
 {% previewsample "page.domainurl/code-snippet/schedule/delete-event-cs1" %}
 
-**Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the deleteEvent method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters. The following code example shows how to delete entire series.
+**Recurring Event** - Recurring events can be removed as an entire series or as a single occurrence by passing DeleteSeries or DeleteOccurrence to the deleteEvent method. The following example demonstrates deleting an entire series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -428,7 +429,7 @@ The appointments can be removed manually using the [`deleteEvent`](https://ej2.s
         
 {% previewsample "page.domainurl/code-snippet/schedule/delete-event-cs2" %}
 
-### Removing events from database at server-side
+### Removing Events from Database at Server-Side
 
 While deleting the event from the Scheduler, `remove` action takes place and the following code example describes how to delete event from database at server side.
 
@@ -462,14 +463,14 @@ The recurring events can be deleted in either of the following two ways.
 * Single occurrence
 * Entire series
 
-**Single occurrence** - When you attempt to delete the recurring events, a popup prompts you to choose either to delete the single event or entire series. From this, if you choose to select **DELETE EVENT** option, a single occurrence of the recurring appointment alone will be removed. The following process takes place while removing a single occurrence,
+**Single occurrence** - When deletion is initiated on a recurring event, a popup prompts for deleting a single event or the entire series. Selecting DELETE EVENT removes only that occurrence. The following process occurs:
 
 * The selected occurrence will be deleted from the Scheduler user interface.
-* In code, the parent recurring event object will be updated with appropriate  [`recurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrenceexception) field, to hold the deleted occurrence appointment's date collection.
+* In code, the parent recurring event object will be updated with appropriate  [`recurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrenceexception) field, to hold the deleted occurrence appointment's date collection.
 
 Therefore, when a single occurrence is deleted from a recurring event, the `update` action takes place on the parent recurring event as shown in the following code example.
 
-> In case, if you delete an existing edited occurrence of a recurring event, only those edited occurrence which present in the database as an individual event object will get removed. In this case, `delete` action takes place instead of `update` action and the parent recurring event object remains same with no changes.
+> When an edited occurrence is deleted, only that occurrence object (stored as an individual event) is removed. In this case, a delete action occurs instead of `update` action and the parent recurring event remains unchanged.
 
 ```ts
 if (param.action == "update" || (param.action == "batch" && param.changed != null)) // this block of code will execute while updating the appointment
@@ -520,12 +521,12 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 ### How to delete only the current and following events of a series
 
-The recurring events can be deleted from current and following events only when enable [`editFollowingEvents`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#editfollowingevents) property.
+Recurring events can be deleted from the current and following events when the [`editFollowingEvents`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#editfollowingevents) property is enabled.
 
-**Delete Following Events** - When you attempt to delete the recurring events, a popup prompts you to choose either to delete the single event or Following Events or entire series. From this, if you choose to select **FOLLOWING EVENT** option, a current and following events of the recurring appointment alone will be removed. The following process takes place while removing a single occurrence,
+**Delete Following Events** - When deletion is initiated on a recurring event, a popup prompts for deleting a single event, following events, or the entire series. Selecting FOLLOWING EVENT removes the current and subsequent events in the series. The following process occurs:
 
 * The selected occurrence and the following events in same series will be deleted from the Scheduler user interface.
-* In code, the parent recurring event object will be updated with appropriate [`recurrenceRule`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/#recurrencerule) field, to update the end date of the recurring events.
+* In code, the parent recurring event object will be updated with appropriate [`recurrenceRule`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrencerule) field, to update the end date of the recurring events.
 
 Therefore, when following events are deleted from a recurring event, the `remove` and `update` action takes place on the immediate parent recurring event as shown in the following code example.
 
@@ -572,11 +573,11 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-## Drag and drop
+## Drag and Drop
 
-When you drag and drop a normal event on the Scheduler, the event editing action takes place. When a recurring event is drag and dropped on a desired time range, the batch action explained in `Editing a single occurrence` process will takes place - thus allowing both the `Add` and `Edit` action to take place together.
+Dragging and dropping a normal event performs an edit action. Dragging and dropping a recurring event to a new time range triggers the batch action described in Editing a single occurrence, allowing both Add and Edit actions to occur together.
 
-> By default, when you drag a recurring instance, only the occurrence of the event gets edited and not a whole series.
+> By default, dragging a recurring instance edits only the occurrence, not the entire series.
 
 You can watch the following video to learn more about Vue Scheduler's advanced drag and resize options:
 
@@ -595,7 +596,7 @@ You can watch the following video to learn more about Vue Scheduler's advanced d
 
 ## Resize
 
-When you resize a normal event on the Scheduler, the event editing action takes place. When a recurring event is resized to a new desired time, the batch action explained in `Editing a single occurrence` process will takes place - thus allowing both the `Add` and `Edit` action to take place together.
+Resizing a normal event performs an edit action. Resizing a recurring event to a new time triggers the batch action described in Editing a single occurrence, allowing both Add and Edit actions to occur together.
 
 > By default, when you resize a recurring instance, only the occurrence of the event gets edited and not a whole series.
 
@@ -610,4 +611,4 @@ When you resize a normal event on the Scheduler, the event editing action takes 
         
 {% previewsample "page.domainurl/code-snippet/schedule/event-cs39" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> Refer to the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for detailed information. Explore the [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) example to see how data is presented and manipulated.

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Localization in Vue Schedule component
 
-The Scheduler integrates different date-time formats and cultures, which allows it to function globally, thus meeting the diverse needs of different regions.
+The Vue Schedule component supports globalization and localization features that allow it to adapt to different cultures, languages, date formats, and time formats. These capabilities enable applications to deliver a consistent and region‑specific scheduling experience for users across the globe.
 
-You can adapt the Scheduler to various languages by parsing and formatting the date or number ([`Internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization/)), adding culture specific customization and translation to the text ([`Localization`](https://ej2.syncfusion.com/documentation/common/localization/)).
+You can adapt the Scheduler to various languages by parsing and formatting the date or number ([`Internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization)), adding culture specific customization and translation to the text ([`Localization`](https://ej2.syncfusion.com/documentation/common/localization)).
 
 ## Globalization
 
-The Internationalization library provides support for formatting and parsing the number, date, and time by using the official [`Unicode CLDR`](https://cldr.unicode.org/) JSON data and also provides the `loadCldr` method to load the culture specific CLDR JSON data.
+The Internationalization library provides support for formatting and parsing the number, date, and time by using the official [`Unicode CLDR`](https://cldr.unicode.org) JSON data and also provides the `loadCldr` method to load the culture specific CLDR JSON data.
 
 By default, Scheduler is set to follow the English culture ('en-US'). If you want to go with different culture other than English, follow the below steps.
 
@@ -65,7 +65,7 @@ Once the package is installed, you can find the culture specific JSON data under
 
 ## Localizing the static Scheduler text
 
-[`Localization`](https://ej2.syncfusion.com/documentation/common/localization/) library allows to display all the static text, date content, and time mode of the Scheduler following the localized language. To achieve this, set the `locale` property of Scheduler, as well as define the translation text of static words of Scheduler through the `load` method.
+[`Localization`](https://ej2.syncfusion.com/documentation/common/localization) library allows to display all the static text, date content, and time mode of the Scheduler following the localized language. To achieve this, set the `locale` property of Scheduler, as well as define the translation text of static words of Scheduler through the `load` method.
 
 For example, the following code example lets you to define the French translation words for all the static words used in Scheduler. You can access the static text for all cultures from [`here`](https://github.com/syncfusion/ej2-locale).
 
@@ -225,7 +225,7 @@ Scheduler can be used with all valid date formats and by default it follows the 
 
 ## Setting the time format
 
-Time formats is a way of representing the time value in different string formats in the Scheduler. By default, the time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the `locale` set to the Scheduler. Since the default `locale` value of the Scheduler is en-US, the time mode will be set to 12 hours format automatically. You can also customize the format by using the [`timeFormat`](https://ej2.syncfusion.com/vue/documentation/api/schedule#timeformat) property. To know more about the time format standards, refer to the [Date and Time Format](https://ej2.syncfusion.com/vue/documentation/common/internationalization/#custom-formats) section.
+Time formats is a way of representing the time value in different string formats in the Scheduler. By default, the time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the `locale` set to the Scheduler. Since the default `locale` value of the Scheduler is en-US, the time mode will be set to 12 hours format automatically. You can also customize the format by using the [`timeFormat`](https://ej2.syncfusion.com/vue/documentation/api/schedule#timeformat) property. To know more about the time format standards, refer to the [Date and Time Format](https://ej2.syncfusion.com/vue/documentation/common/internationalization#custom-formats) section.
 
 The following example demonstrates the Scheduler component in 24 hours format.
 
@@ -244,7 +244,7 @@ The following example demonstrates the Scheduler component in 24 hours format.
 
 ## Displaying Scheduler in RTL mode
 
-The Scheduler layout and its behavior can be changed as per the common RTL (Right to Left) conventions by setting [`enableRtl`](../api/schedule/#enablertl) to `true`. By doing so, the Scheduler will display its usual layout from right to left. It's default value is `false`.
+The Scheduler layout and its behavior can be changed as per the common RTL (Right to Left) conventions by setting [`enableRtl`](../api/schedule#enablertl) to `true`. By doing so, the Scheduler will display its usual layout from right to left. It's default value is `false`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -257,8 +257,8 @@ The Scheduler layout and its behavior can be changed as per the common RTL (Righ
         
 {% previewsample "page.domainurl/code-snippet/schedule/localization-cs5" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> Visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for a complete overview. Explore live examples at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) to knows how to present and manipulate data.
 
 ## See Also
 
-* [How to change first day of the week in the Scheduler](./working-days/#setting-start-day-of-the-week)
+* [How to change first day of the week in the Scheduler](./working-days#setting-start-day-of-the-week)

@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Maintaining data in server in Vue Gantt component | Syncfusion
-description: Learn here all about Maintaining data in server in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Maintaining Data in Server in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about maintaining data in server in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Maintaining data in server 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maintaining data in server in Vue Gantt component
+# Maintaining Data in Server in Vue Gantt Chart Component
 
-All the modified data in Gantt control can be maintained in the database using RESTful web services.
+All the modified data in Gantt Chart control can be maintained in the database using RESTful web services.
 
-All the CRUD operations in the gantt are done through DataManager. The DataManager has an option to bind all the CRUD related data in server-side.
+All the CRUD operations in the Gantt Chart are done through DataManager. The DataManager has an option to bind all the CRUD-related data in server-side.
 
 In the below section, we have explained how to get the edited data details on the server-side using the `UrlAdaptor`.
 
 ## URL Adaptor
 
-In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [`here`](https://ej2.syncfusion.com/javascript/documentation/data/adaptors/?no-cache=1).
+In Gantt Chart, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [here](https://ej2.syncfusion.com/javascript/documentation/data/adaptors/?no-cache=1).
 
-> Please refer the [link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs) to create the `ADO.NET` Entity Data Model in Visual studio,
+> Please refer to the [link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs) to create the `ADO.NET` Entity Data Model in Visual Studio.
 
-We can define data source for Gantt as instance of DataManager using `url` property of DataManager. Please Check the below code snippet to assign data source to Gantt.
+We can define data source for Gantt Chart as instance of DataManager using the `url` property of DataManager. Please check the below code snippet to assign data source to Gantt Chart.
 
 ```
 <template>

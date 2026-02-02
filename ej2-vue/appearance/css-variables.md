@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # About CSS variables in themes
 
-[CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), also known as custom properties, are entities defined by CSS authors that contain specific values that can be reused throughout a CSS file. They are identified by their name, which must begin with two hyphens (--) followed by an identifier. These variables can be assigned any valid CSS value, such as colors, lengths, or fonts. To retrieve the value of a CSS variable, the var() function is used.
+[CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), also known as custom properties, are author-defined entities that store values for reuse throughout a stylesheet. Variable names begin with two hyphens (--) followed by an identifier. Any valid CSS value can be assigned (colors, lengths, fonts, etc.). Retrieve a variable value using the var() function.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> currently offers two modern and highly customizable themes using CSS variables. These themes are designed to provide a consistent and visually appealing look and feel across all Syncfusion<sup style="font-size:70%">&reg;</sup> components. The themes available are:
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides four modern, highly customizable themes that use CSS variables to enable consistent styling across all Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components:
 
 * Material 3 Theme
 * Fluent 2 Theme
@@ -21,7 +21,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> currently offers two modern and
 
 ## CSS themes - Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components
 
-[Material 3](https://m3.material.io/), [Fluent 2](https://fluent2.microsoft.design/get-started/whatisnew), [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and [Tailwind 3.4](https://tailwindcss.com/docs/installation/using-vite) themes have been introduced across all EJ2 Controls, featuring both `light` and `dark` variants. This themes utilizes `CSS variables` to allow easy customization of control colors in CSS format. With this implementation, users can seamlessly switch between light and dark color schemes, providing a flexible solution to meet their preferences and application needs.
+Material 3, Fluent 2, Bootstrap 5.3, and Tailwind 3.4 themes are available across EJ2 controls. Each theme includes both light and dark variants and exposes CSS variables so control colors can be adjusted directly in CSS. This implementation enables easy switching between light and dark color schemes and simplifies theme customization across an application.
 
 > Kindly note that in the Material 3 theme, CSS variables with rgb() values are used for color variables. The use of hex values in this context may lead to improper functionality. For example, in previous versions of the Material theme or other themes, the primary color variable was defined as follows: $primary: #6200ee;. However, in the Material 3 theme, the primary color variable is defined as follows: --color-sf-primary: 98, 0, 238;.
 
@@ -146,7 +146,7 @@ With this CSS variable support, you can effortlessly customize the color variabl
 
 ### Switching Light and Dark mode with CSS variables
 
-Switching between modes has become easier with the updated modern themes, which offer Light and Dark variants. In all themes, there are distinct class variables for light and dark modes in a `single file`, providing flexibility for seamless switching between the two modes within your application.
+Modern themes provide light and dark variants and expose class-level variables to switch modes. Use the theme-provided classes or update root-level variables to toggle between light and dark palettes.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -194,7 +194,7 @@ Similar to `Fluent 2`, we offer both Light and Dark variants with `Tailwind 3.4`
 
 ### How to switch dark mode?
 
-To activate dark mode, just append the `e-dark-mode` class to the body section of your application for both `Material 3`, `Fluent 2`, `Bootstrap 5.3` and `Tailwind 3.4` themes. Once applied, the theme seamlessly switches to dark mode. Please refer to the example image below for visual guidance.
+To enable dark mode for Material 3, Fluent 2, Bootstrap 5.3, or Tailwind 3.4 themes, append the e-dark-mode class to the application's body element. Applying the class switches the theme to its dark variant.
 
 `Material 3` dark mode
 
