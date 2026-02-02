@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Tooltip
 
-The Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item.
+The Ribbon component supports tooltips to show additional information on Ribbon items. The tooltip appears when the user hovers over a Ribbon item.
 
 ## Adding title
 
-You can use the [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#title) property to set the tooltip title for each Ribbon item.
+The [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#title) property can be used to set the tooltip title for each Ribbon item.
 
 ```html
 <template>
@@ -76,21 +76,21 @@ You can use the [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 ```
 
 ## Adding content
 
-You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#content) property to set the tooltip content for each Ribbon item.
+The [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#content) property is used to set the tooltip content for each Ribbon item.
 
 ```html
 <template>
@@ -152,21 +152,21 @@ You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 ```
 
 ## Adding icon
 
-You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#iconcss) property to specify the icons to be displayed in the tooltip.
+The [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#iconcss) property is used to specify an icon for the tooltip.
 
 ```html
 <template>
@@ -227,15 +227,15 @@ You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 ```
 
@@ -243,7 +243,7 @@ You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 
 ## Customization
 
-You can use the [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#cssclass) property to customize the appearance of the tooltip with your own custom styles.
+The [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#cssclass) property allows for customizing the appearance of the tooltip by applying custom CSS styles.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

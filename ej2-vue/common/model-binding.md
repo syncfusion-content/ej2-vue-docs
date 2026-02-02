@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Integrating Vue model binding in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components support model binding through the `v-model` directive. The model binding support in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components uses custom 'modelchanged' event, which is used to notify Vue that a model is changed.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components support model binding through the `v-model` directive. Model binding in Syncfusion Vue components uses a custom `modelchanged` event to notify Vue when the model value has changed.
 
-* Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components that are initialized from form elements support model binding.
+- Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components that are initialized from form elements support model binding.
 
 Refer to the following code snippet.
 
@@ -26,5 +26,5 @@ Refer to the following code snippet.
 {% include code-snippet/common/model-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/common/model-cs1" %}

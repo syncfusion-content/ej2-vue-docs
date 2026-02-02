@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { GanttPlugin, Selection, Toolbar, DayMarkers, Edit, Filter, Sort, ContextMenu } from '@syncfusion/ej2-vue-gantt';
-import { constraintData } from './data-source';
+import { constraintData } from './data-source.js';
 
 Vue.use(GanttPlugin);
 

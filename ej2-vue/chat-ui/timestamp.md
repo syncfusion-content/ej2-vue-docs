@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Timestamp in Vue Chat UI component
 
-## Show or hide timestamp
+## Show or Hide Timestamps
 
-You can use the [showTimeStamp](../api/chat-ui#showtimestamp) property to enable or disable timestamps for all messages which displays the exact date and time when they were sent. By default, the value is `true`.
+The [showTimeStamp](../api/chat-ui#showtimestamp) property is used to enable or disable timestamps for all messages. Timestamps display the exact date and time that a message was sent. By default, this property is set to `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,9 +25,9 @@ You can use the [showTimeStamp](../api/chat-ui#showtimestamp) property to enable
   
 {% previewsample "page.domainurl/code-snippet/chat-ui/timestamp" %}
 
-## Setting time stamp format
+## Setting the Timestamp Format
 
-You can use the [timeStampFormat](../api/chat-ui#timestampformat) property to display time formats for all the messages which are displayed with the messages being sent. By default, the value is `dd/MM/yyyy hh:mm a`.
+The [timeStampFormat](../api/chat-ui#timestampformat) property defines the display format for timestamps that appear with each message. The default format is `dd/MM/yyyy hh:mm a`. The format string conforms to the standard date and time formatting rules.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

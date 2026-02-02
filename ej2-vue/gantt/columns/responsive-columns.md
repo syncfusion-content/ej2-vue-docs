@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Responsive columns in Vue Gantt component | Syncfusion
-description: Learn here all about Responsive columns in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
-control: Responsive columns 
+title: Responsive Columns in Vue Gantt Chart Component | Syncfusion
+description: Learn all about responsive columns in the Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2.
+control: Responsive columns
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Responsive columns in Vue Gantt component
+# Responsive Columns in Vue Gantt Chart Component
 
-You can toggle the column visibility based on media queries, which are defined in the [`hideAtMedia`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#hideatmedia). The [`hideAtMedia`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#hideatmedia) accepts valid [Media Queries]( http://cssmediaqueries.com/what-are-css-media-queries.html ).
+You can toggle column visibility based on media queries using the [hideAtMedia](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#hideatmedia) property. The [hideAtMedia](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#hideatmedia) property accepts valid [CSS Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html), allowing columns to be hidden dynamically depending on the device size or viewport width.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -20,5 +20,5 @@ You can toggle the column visibility based on media queries, which are defined i
 {% include code-snippet/gantt/columns-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs18" %}

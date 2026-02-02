@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Prompt Library - AI Coding Assistant
 
-Speed up your Vue projects using these ready-made prompts for popular Syncfusion components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
+## Overview
+
+The Prompt Library provides ready-made, customizable prompts for popular Syncfusion Vue components. Each prompt is designed to handle real-world tasks—from initial setup to feature configuration and troubleshooting. Use these prompts as starting points; customize them to match specific project requirements and use cases.
 
 ## How to Use
 

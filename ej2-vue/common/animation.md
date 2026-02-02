@@ -10,15 +10,16 @@ domainurl: ##DomainURL##
 
 # Animation in Vue
 
-The **Animation** is used to perform animation effects on HTML elements by running a sequence of frames. It can be used to enhance the user experience.
+Animation provides visual effects on HTML elements by running a sequence of frames. It enhances user experience by making interactions feel more natural.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports animating the HTML elements using the [animate](https://ej2.syncfusion.com/documentation/api/base/animation/#animate) method. This method adds the `e-animate`, `e-animation-id` attributes, and CSS style to the HTML element and removes them after the animation effect is completed.
+Syncfusion<sup style="font-size:70%">&reg;</sup> [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports animating the HTML elements using the [animate](https://ej2.syncfusion.com/documentation/api/base/animation/#animate) method. This method temporarily adds attributes and inline styles (for example, `e-animate` and `e-animation-id`) to the target element while the animation runs, and removes them when the animation completes.
+
 
 ## Animation effects
 
 An animation effect refers to the visual change that occurs over a period of time in HTML elements. The [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports different types of animation [effects](https://ej2.syncfusion.com/documentation/api/base/effect/#effect). The [name](https://ej2.syncfusion.com/documentation/api/base/animation/#name) property is used to specify the animation effect of an animation.
 
-Here is an example code snippet using the `FadeOut` and `ZoomOut` animation effects:
+Example (FadeOut and ZoomOut) — Composition API and Options API examples are included in the code samples referenced below:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -75,9 +76,10 @@ Here is an example code snippet using the animation effects with a delay of `200
 
 Enable or disable animation for all Vue components globally by using the `setGlobalAnimation` method with one of the below options:
 
-* `GlobalAnimationMode.Enable` - Enables the animation for all components, regardless of the individual component's animation settings.
-* `GlobalAnimationMode.Disable` - Disables the animation for all components, regardless of the individual component's animation settings.
-* `GlobalAnimationMode.Default` - Animation is enabled or disabled based on the component's animation settings.
+Options:
+* `GlobalAnimationMode.Enable` — enable animations globally
+* `GlobalAnimationMode.Disable` — disable animations globally
+* `GlobalAnimationMode.Default` — use each component's own animation setting
 
 In the below code snippet, animation is disabled.
 

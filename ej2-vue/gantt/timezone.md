@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timezone in Vue Gantt component | Syncfusion
-description: Learn here all about Timezone in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Timezone in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about Timezone in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Timezone 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timezone in Vue Gantt component
+# Timezone in Vue Gantt Chart Component
 
 The Gantt makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the `timezone` property needs to be used.
 

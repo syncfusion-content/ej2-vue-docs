@@ -12,10 +12,9 @@ domainurl: ##DomainURL##
 
 ## Step-by-Step Installation
 
-The steps below show how to install JavaScript Linux installer.
+The steps below show how to install the JavaScript Linux installer.
 
-1. Extract the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer(.zip) file. The files are extracted in your machine.
-
+1. Extract the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer (.zip) file. The files are extracted to the specified location on the machine.
    ![Welcome wizard](images/Linux_Installer1.png)
    
 
@@ -32,8 +31,8 @@ The steps below show how to install JavaScript Linux installer.
 
 ## License key registration in samples
 
-After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the JavaScript - EJ2 Linux installer, please refer to this.
+After installation, a license key is required to register the demo source included in the Linux installer. To learn about the steps for license registration for the JavaScript - EJ2 Linux installer, refer to the following:
 
-* [Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in the project](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-project)
+* [Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key in the project](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-project)
 * [Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key in the Nuxt project](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-nuxt-project)
 * [Register the license key using the npx command](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command)

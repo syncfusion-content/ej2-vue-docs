@@ -33,7 +33,7 @@
 
 <script>
 import { GanttComponent, Selection, Toolbar, DayMarkers, Edit, Filter, Sort, ContextMenu } from '@syncfusion/ej2-vue-gantt';
-import { WBSData } from './data-source';
+import { WBSData } from './data-source.js';
 
 export default {
   name: 'App',

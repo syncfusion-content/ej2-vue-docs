@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Taskdependency in Vue Gantt component | Syncfusion
-description: Learn here all about Taskdependency in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Task Dependency in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about Taskdependency in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Taskdependency 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Task dependency in Vue Gantt component
+# Task Dependency in Vue Gantt Chart Component
 
 Task dependency or task relationship can be established between two tasks in Gantt. This dependency affects the project schedule. If you change the predecessor of a task, it will affect the successor task, which will affect the next task, and so on. Relationship can be established between parent-parent tasks, child-child tasks, parent-child and child-parent task.
 
-In Gantt, you can enable or disable the parent predecessor using [`allowParentDependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowparentdependency) property.
+In Gantt, you can enable or disable the parent predecessor using [allowParentDependency](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowparentdependency) property.
 
 By default, the `allowParentDependency` property will be `true`.
 
@@ -46,7 +46,7 @@ You cannot finish a task until the dependent task is completed.
 
 ## Define task relationship
 
-Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt component by using the [`taskFields.dependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) property. The following code example demonstrates how to enable the predecessor in the Gantt component.
+Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt Chart component by using the [taskFields.dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#dependency) property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ Task relationship is defined in the data source as a string value, and this valu
 
 ## Predecessor offset with duration units
 
-In the Gantt component, the predecessor offset can be defined with the following duration units:
+In the Gantt Chart component, the predecessor offset can be defined with the following duration units:
 
 * Day
 * Hour
@@ -82,7 +82,7 @@ You can define an offset with various offset duration units for predecessors by 
 
 ## Disabling automatic dependency offset updates
 
-By default, the dependency offsets are automatically updated in the Gantt chart whenever a task's start or end date is changed. However, if you want to disable this feature, you can do so by disabling the [`updateOffsetOnTaskbarEdit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#updateOffsetOnTaskbarEdit) property. Once this property is disabled, you can only update the offset value by editing the predecessor column cell or the offset column in the dependency tab of the edit dialog.
+By default, the dependency offsets are automatically updated in the Gantt chart whenever a task's start or end date is changed. However, if you want to disable this feature, you can do so by disabling the [updateOffsetOnTaskbarEdit](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#updateOffsetOnTaskbarEdit) property. Once this property is disabled, you can only update the offset value by editing the predecessor column cell or the offset column in the dependency tab of the edit dialog.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -97,13 +97,13 @@ By default, the dependency offsets are automatically updated in the Gantt chart 
 
 ## Validate predecessor links on editing
 
-In the Gantt component, the task relationship link can be broken by editing the start date, end date, and duration value of task. When the task relationship is broken on any edit action, this can be handled in the Gantt component using the following two ways:
+In the Gantt Chart component, the task relationship link can be broken by editing the start date, end date, and duration value of task. When the task relationship is broken on any edit action, this can be handled in the Gantt Chart component using the following two ways:
 * actionBegin event.
 * Predecessor validation dialog.
 
 ### Using actionBegin event
 
-When the task relationship link is broken on any edit action, then the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#actionbegin) event will be triggered with `requestType` argument as `validateLinkedTask`. You can validate the editing action within the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#actionbegin) event using the `validateMode` event argument. The `validateMode` event argument has the following properties:
+When the task relationship link is broken on any edit action, then the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionbegin) event will be triggered with `requestType` argument as `validateLinkedTask`. You can validate the editing action within the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionbegin) event using the `validateMode` event argument. The `validateMode` event argument has the following properties:
 
 Argument |Default value |Description
 -----|-----|-----
@@ -113,7 +113,7 @@ args.validateMode.preserveLinkWithEditing | true | In this validation mode, task
 
 By default, the `preserveLinkWithEditing` validation mode will be enabled, so the predecessors are updated with offset values.
 
-The following sample explains enabling the `respectLink` validation mode while editing the linked tasks in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#actionbegin) event.
+The following sample explains enabling the `respectLink` validation mode while editing the linked tasks in the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -128,7 +128,7 @@ The following sample explains enabling the `respectLink` validation mode while e
 
 ### Using validation dialog
 
-When disabling all the validation modes in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#actionbegin) event, a validation pop-up will be displayed prompting users to select the validation mode to validate taskbar editing.
+When disabling all the validation modes in the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionbegin) event, a validation pop-up will be displayed prompting users to select the validation mode to validate taskbar editing.
 
 This validation pop-up will display different options based on the successor task’s start date after editing.
 

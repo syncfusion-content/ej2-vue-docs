@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Cross hair and track ball in Vue Chart component
 
-Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.
+The crosshair feature displays vertical and horizontal guide lines that intersect at the mouse or touch position, helping to identify the corresponding axis values precisely.
 
-Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#enable) property in the `crosshair`.
+Crosshair lines can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#enable) property in the `crosshair` settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/v
 
 ## Tooltip for axis
 
-Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property of `crosshairTooltip` in the corresponding axis.
+Axis tooltip labels can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property of `crosshairTooltip` in the corresponding axis. This tooltip displays the current axis value at the crosshair position.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,8 +42,9 @@ Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfu
 
 ## Customization
 
-The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#fill) and [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#textstyle)
-property of the `crosshairTooltip` is used to customize the background color and font style of the crosshair label respectively. Color and width of the crosshair line can be customized by using the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#line) property in the crosshair.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#fill) and [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#textstyle) properties of `crosshairTooltip` are used to customize the background color and font style of the crosshair label.
+
+The color and width of the crosshair lines can be customized by using the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#line) property in the crosshair settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -56,11 +57,11 @@ property of the `crosshairTooltip` is used to customize the background color and
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs3" %}
 
->Note: To use crosshair feature, we need to inject `Crosshair` into the `provide`.
+> Note: To use the crosshair feature, inject `Crosshair` into the `provide`.
 
-**Snap to data**
+## Snap to data
 
-Enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
+By enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#snaptodata) property, the crosshair snaps to the nearest data point instead of following the exact mouse position. This improves accuracy when inspecting values.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -75,11 +76,11 @@ Enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/cha
 
 ## Trackball
 
-Trackball is used to track a data point closest to the mouse or touch position. Trackball marker indicates the
-closest point and trackball tooltip displays the information about the point. To use trackball feature,
-we need to inject `Crosshair` and `Tooltip` into the `provide`.
+The trackball feature tracks the data point closest to the mouse or touch position. A trackball marker highlights the nearest point, and the trackball tooltip displays detailed information about that point.
 
-Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#enable) property of the crosshair to true and [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings/#shared) property in `tooltip` to true in chart.
+To use the trackball feature, inject both `Crosshair` and `Tooltip` into the `provide`.
+
+Trackball functionality can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#enable) property of the crosshair to **true** and the [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings/#shared) property of the tooltip to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -94,7 +95,9 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vu
 
 ## Crosshair highlight
 
-The [`highlightCategory`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#highlightcategory) property in the crosshair highlights the background of the entire category when hovered over. The crosshair color can be customized using the [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#color) property within the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/) configuration.
+The [`highlightCategory`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#highlightcategory) property highlights the background of the entire category when the crosshair is moved over the chart.
+
+The crosshair line color can be customized using the [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#color) property within the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/) configuration.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

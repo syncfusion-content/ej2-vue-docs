@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open add edit dialog in Vue Gantt component | Syncfusion
-description: Learn here all about Open add edit dialog in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Open Add Edit Dialog In Vue Gantt Chart Component | Syncfusion
+description: Learn here all about open add edit dialog in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Open add edit dialog 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open add edit dialog in Vue Gantt component
+# Open Add Edit Dialog in Vue Gantt Chart Component
 
-In the Gantt component, add and edit dialogs can be opened dynamically by using [`openAddDialog`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#openadddialog) and [`openEditDialog`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#openeditdialog) methods. The following code example shows how to open add and dialog on separate button click actions.
+In the Gantt Chart component, add and edit dialogs can be opened dynamically by using [openAddDialog](https://ej2.syncfusion.com/vue/documentation/api/gantt#openadddialog) and [openEditDialog](https://ej2.syncfusion.com/vue/documentation/api/gantt#openeditdialog) methods. The following code example shows how to open add and edit dialog on separate button click actions.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -23,4 +23,4 @@ In the Gantt component, add and edit dialogs can be opened dynamically by using 
         
 {% previewsample "page.domainurl/code-snippet/gantt/how-to/open-add-edit-cs1" %}
 
->NOTE: You should select any one of the row in the Gantt to open the edit dialog.
+> NOTE: You should select any one of the rows in the Gantt Chart to open the edit dialog.

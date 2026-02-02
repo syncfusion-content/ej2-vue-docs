@@ -86,15 +86,15 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -164,7 +164,7 @@ In Ribbon, the options are arranged in tabs for easy access. You can use the `e-
 
 ## Adding Ribbon Group
 
-To define a ribbon group under each tab, you can use the `e-ribbon-group` directive like below. The `orientation` property of ribbon group defines whether the collection of items will be rendered column-wise or row-wise.
+To define a ribbon group under each tab, you can use the `<e-ribbon-group>` selector like below. The `orientation` property of ribbon group defines whether the collection of items will be rendered column-wise or row-wise.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -199,7 +199,7 @@ export default {
 
 ## Adding Ribbon Items
 
-You can use the `e-ribbon-collection` directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `e-ribbon-item` directive and the `type` property to specify the type of component to be rendered, like a button, a drop-down button, a combo box, and more.
+You can use the `e-ribbon-collection` selector to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `e-ribbon-item` selector and the `type` property to specify the type of component to be rendered, like a button, a drop-down button, a combo box, and more.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

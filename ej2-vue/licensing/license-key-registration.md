@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in Vue application
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> license key should be registered, if your project using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages reference. The generated license key is a string that needs to be registered after any [Syncfusion<sup style="font-size:70%">&reg;</sup> Vue reference](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/#creating-vue-sample).
+A Syncfusion<sup style="font-size:70%">&reg;</sup> license key must be registered if your project references Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages. The generated license key is a string that needs to be registered after any [Syncfusion<sup style="font-size:70%">&reg;</sup> Vue reference](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/#creating-vue-sample).
 
->Note: Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is done offline during application execution and does not require internet access. Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system that does not have an internet connection.
+> Note: Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is performed offline during application execution and does not require internet access. Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system without an internet connection.
 
-Generate the [Syncfusion<sup style="font-size:70%">&reg;</sup> license key](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-generation) and register it in one of the following ways,
+Generate the [Syncfusion<sup style="font-size:70%">&reg;</sup> license key](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-generation) and register it using one of the following methods:
 
 * [Register the license key in the project](#register-syncfusion-license-key-in-the-project)
 * [Register the license key in the Nuxt project](#register-syncfusion-license-key-in-the-nuxt-project)
@@ -34,7 +34,7 @@ registerLicense('Replace your generated license key here');
 createApp(App).mount('#app')
 ```
 
->Only from 2022 Vol 1 v20.1.0.47, license key registration required for Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 products.
+> License key registration is required from 2022 Vol 1 v20.1.0.47 onwards for Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 products.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key in the Nuxt project
 
@@ -56,7 +56,7 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key throug
 * [Register the license key with the license file](#register-the-license-key-with-the-license-file)
 * [Register the license key with the environment variable](#register-the-license-key-with-the-environment-variable)
 
->If both the license text file and the environment variable are used for license registration, priority is set to `syncfusion-license.txt` file. If you want to use the environment variable for license registration, then remove the license text file from the application.
+> If both the license text file and the environment variable are used for license registration, priority is given to the `syncfusion-license.txt` file. To use the environment variable for license registration, remove the license text file from the application.
 
 ### Register the license key with the license file
 
@@ -64,9 +64,9 @@ The following steps show how to register the Syncfusion<sup style="font-size:70%
 
 * Create the `syncfusion-license.txt` file in the application root directory and paste the license key.
 
-* Open the command prompt in the application root directory and activate the license key by using the below command,
+* Open the command prompt in the application root directory and activate the license key using the following command:
 
-  ```
+  ```bash
   npx syncfusion-license activate
   ```
 
@@ -74,15 +74,15 @@ The following steps show how to register the Syncfusion<sup style="font-size:70%
 
   **License message:** <br /> (INFO) Syncfusion<sup style="font-size:70%">&reg;</sup> License imported successfully.
 
-* Remove the `.cache` folder from node modules in the application.
+* Remove the `.cache` folder from `node_modules` in the application.
 
-* Now run the application. If you are facing a license validation error, refer to this [link](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequent license registration questions from this [`link`](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-troubleshoot).
+* Run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-errors) to resolve it. For frequently asked license registration questions, refer to this [link](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-troubleshoot).
 
 >If you don't want to use the license text file in the application, refer to this [link](#register-the-license-key-with-the-environment-variable) to use an environment variable and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key. Also, check out some common licensing FAQs while registering the license key using the npx command from this [link](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-troubleshoot#Reactivating-license-once-after-updating-the-package-version-while-using-npx)
 
 ### Register the license key with the environment variable
 
-You can set the environment variable as `SYNCFUSION_LICENSE` in the system and paste the license key as a value. It can be used in all applications on your machine.
+Set the environment variable `SYNCFUSION_LICENSE` in the system with the license key as the value. This can be used across all applications on your machine.
 
 The following steps show how to set environment variable in different operating systems and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
 
@@ -90,27 +90,28 @@ The following steps show how to set environment variable in different operating 
 
 #### Windows
 
-* Open the command prompt and use [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) command to add the new environment variable.
+Open the command prompt and use the [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) command to add the new environment variable:
 
-  ```
-  setx SYNCFUSION_LICENSE "license key"
-  ```
+```bash
+setx SYNCFUSION_LICENSE "license key"
+```
+
+> Restart the terminal or IDE after setting the environment variable for changes to take effect.
 
 #### Mac
 
 * Open the terminal and use the `env` command to view the variables list.
 
 * You can set the environment variable by using below command,
-
-  ```
-  echo 'export SYNCFUSION_LICENSE="license key"' >> ~/.  bash_profile
-  ```
+```bash
+echo 'export SYNCFUSION_LICENSE="license key"' >> ~/.bash_profile
+```
 
 * If you want to modify the environment variable in the bash profile. Use the below command,
 
-  ```
-  nano .bash_profile
-  ```
+```bash
+nano .bash_profile
+```
 
 * Once modified the variable. Press `ctrl+x` to exit then `Y` and `Enter` button to save the changes.
 
@@ -122,17 +123,17 @@ The following steps show how to set environment variable in different operating 
 
 * You can set or modify the [environment variable](https://help.ubuntu.com/community/EnvironmentVariables) by using below command,
 
-  ```
-  export SYNCFUSION_LICENSE='license key'
-  ```
+```bash
+export SYNCFUSION_LICENSE='license key'
+```
 
 * Once set the `SYNCFUSION_LICENSE` environment variable, restart the IDE or application terminal before using the license activation command.
 
 * Open the command prompt in the application root directory and activate the license key by using the below command,
 
-  ```
-  npx syncfusion-license activate
-  ```
+```bash
+npx syncfusion-license activate
+```
 
 * Once the Syncfusion<sup style="font-size:70%">&reg;</sup> license key is activated, the following console message will appear.
 
@@ -152,17 +153,16 @@ The following sections show how to use an environment variable in CI services.
 
 * Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn like below,
 
-```bash
-  steps:
-  - name: Install node modules
-    run: npm install
+```yaml
+steps:
+- name: Install node modules
+  run: npm install
 
-  - name: Activate Syncfusion License
-    run: npx syncfusion-license activate
-    env:
-      SYNCFUSION_LICENSE: ${{ secrets.SYNCFUSION_LICENSE }}
+- name: Activate Syncfusion License
+  run: npx syncfusion-license activate
+  env:
+    SYNCFUSION_LICENSE: ${{ secrets.SYNCFUSION_LICENSE }}
 ```
-
 #### Azure Pipelines (YAML)
 
 * Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) named `SYNCFUSION_LICENSE`. Use the license key as a value.
@@ -187,18 +187,18 @@ steps:
 
 The following example shows the syntax for Linux build agents.
 
-```bash
+```yaml
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - script: npm install
-    displayName: 'Install node modules'
+- script: npm install
+  displayName: 'Install node modules'
 
-  - script: npx syncfusion-license activate
-    displayName: 'Activate Syncfusion License'
-    env:
-      SYNCFUSION_LICENSE: $(SYNCFUSION_LICENSE)
+- script: npx syncfusion-license activate
+  displayName: 'Activate Syncfusion License'
+  env:
+    SYNCFUSION_LICENSE: $(SYNCFUSION_LICENSE)
 ```
 
 #### Azure Pipelines (Classic)

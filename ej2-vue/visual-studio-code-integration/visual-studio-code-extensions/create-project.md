@@ -12,12 +12,9 @@ domainurl: ##DomainURL##
 
 ## Create project
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides **project templates** for **Visual Studio Code** to create Syncfusion<sup style="font-size:70%">&reg;</sup> Web applications. The Syncfusion<sup style="font-size:70%">&reg;</sup> Web Project template creates applications with the selected Framework (React, Pure React, Angular, and Vue), required Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages, component render code for the Grid, Chart, and Scheduler components, and a style to make development with Syncfusion<sup style="font-size:70%">&reg;</sup> components easier.
-
-   > The Syncfusion<sup style="font-size:70%">&reg;</sup> Visual Studio Code project template provides support for Web project templates from v18.3.0.47.
-
-The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;</sup> Web Applications** through the **Visual Studio Code:**
-
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides project templates for Visual Studio Code to create Syncfusion<sup style="font-size:70%">&reg;</sup> web applications. The Syncfusion<sup style="font-size:70%">&reg;</sup> Web Project template creates applications with the selected framework (React, Pure React, Angular, and Vue), required Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages, component render code for the Grid, Chart, and Scheduler components, and styles to simplify development with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+> The Syncfusion<sup style="font-size:70%">&reg;</sup> Visual Studio Code project template is supported from v18.3.0.47.
+The steps below describe how to create Syncfusion<sup style="font-size:70%">&reg;</sup> web applications using Visual Studio Code:
 1. In Visual Studio Code, open the command palette by pressing Ctrl+Shift+P. The Visual Studio Code palette opens, search the word Syncfusion<sup style="font-size:70%">&reg;</sup>, so you can get the templates provided.
 
     ![CreateProjectPalette](../images/CreateProjectPalette.png)
@@ -52,10 +49,8 @@ The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;<
 
 ## Run the application
 
-1. Click on **F5** or navigate to **Run>Start debugging**
-
+1. Press **F5** or navigate to **Run > Start Debugging**.
     ![Run](../images/run.png)
 
-2. After compilation process completed, open the local host link in browser to see the output.
-
+2. After compilation completes, open the provided localhost URL in a browser to view the application output.
     ![Output](../images/vue-compilation.png)

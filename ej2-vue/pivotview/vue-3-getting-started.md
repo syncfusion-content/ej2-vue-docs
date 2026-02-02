@@ -14,11 +14,11 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -95,7 +95,7 @@ yarn add @syncfusion/ej2-vue-pivotview
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Pivotview component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -149,7 +149,7 @@ Follow the below steps to add the Vue Pivotview component using `Composition API
 {% endhighlight %}
 {% endtabs %}
 
-**2.** In the `template` section, define the Pivotview component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property and column definitions.
+**2.** In the `template` section, define the Pivotview component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/pivotview/idataoptions#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -355,7 +355,9 @@ The output will appear as follows:
 
 ![vue-3-js-pivot-table](./images/vue-3-js-pivot-table.png)
 
-### Using template properties in the component
+> **Sample**: [vue-3-pivot-table-getting-started](https://github.com/SyncfusionExamples/vue3-pivottable-getting-started).
+
+## Using template properties in the component
 
 The following sample uses the HTML elements to showcase each cell with custom format using the Pivot Table's `cellTemplate` property.
 
@@ -368,9 +370,21 @@ The following sample uses the HTML elements to showcase each cell with custom fo
 </template>
 
 <script setup>
+  import { ref } from "vue";
   import { PivotViewComponent as EjsPivotview } from "@syncfusion/ej2-vue-pivotview";
   import { createApp } from 'vue';
-  const app = createApp();
+  import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
+
+  const pivotview = ref(null);
 
   var dataSourceSettings = {
     dataSource: [
@@ -383,7 +397,7 @@ The following sample uses the HTML elements to showcase each cell with custom fo
       { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
       { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
       { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
-    ],
+    ], // Dummy data source. Find the original data source from the below github sample,
     rows: [{ name: "Country" }],
     columns: [{ name: "Date" }],
     values: [{ name: "Amount" }, { name: "Total", type: 'CalculatedField' }],
@@ -391,90 +405,112 @@ The following sample uses the HTML elements to showcase each cell with custom fo
     calculatedFieldSettings: [{ name: 'Total', formula: '"Sum(Amount)"+"Sum(Quantity)"' }]
   };
 
-  var colVue = app.component("cellTemplate", {
-    data() {
-      return {
-        data: {},
-      };
-    },
-    methods: {
-      getCellContent: function () {
-        return '<span class="tempwrap sb-icon-neutral pv-icons"></span>';
-      },
-    },
-    template: `<span class="template-wrap"><span class="tempwrap sb-icon-neutral pv-icons"></span></span>`,
-  });
-
-  const cellTemplate = () => {
-    return { template: colVue };
-  };
+  const cellTemplate = `<span class="template-wrap"><span class="tempwrap sb-icon-neutral pv-icons"></span></span>`;
 
   const trend = () => {
-    let pivotGridObj = this.$refs.pivotview.ej2Instances;
-    var cTable = document.getElementsByClassName("e-table");
-    var colLen = pivotGridObj.pivotValues[3].length;
-    var cLen = cTable[3].children[0].children.length;
-    var rLen = cTable[3].children[1].children.length;
+    let pivotObj = pivotview.value.ej2Instances;
+    let cTable = [].slice.call(document.getElementsByClassName("e-table"));
+    let colLen = pivotObj.pivotValues[3].length;
+    let cLen = cTable[1].children[0].children.length - 1;
+    let rLen = cTable[1].children[1].children.length;
+    let rowIndx;
+
     for (let k = 0; k < rLen; k++) {
-      if (
-        pivotGridObj.pivotValues[k] &&
-        pivotGridObj.pivotValues[k][0] !== undefined
-      ) {
+      if (pivotObj.pivotValues[k] && pivotObj.pivotValues[k][0] !== undefined) {
+        rowIndx = (pivotObj.pivotValues[k][0]).rowIndex;
         break;
       }
     }
-    var rowHeaders = [].slice.call(
-      cTable[2].children[1].querySelectorAll("td")
-    );
-    var rows = pivotGridObj.dataSourceSettings.rows;
+    let rowHeaders = [].slice.call(cTable[1].children[1].querySelectorAll('.e-rowsheader'));
+    let rows = pivotObj.dataSourceSettings.rows;
     if (rowHeaders.length > 1) {
-      for (var i = 0, Cnt = rows; i < Cnt.length; i++) {
-        var fields = {};
-        var fieldHeaders = [];
-        for (var j = 0, Lnt = rowHeaders; j < Lnt.length; j++) {
-          var header = rowHeaders[j];
-          if (
-            header.className.indexOf("e-gtot") === -1 &&
-            header.className.indexOf("e-rowsheader") > -1 &&
-            header.getAttribute("fieldname") === rows[i].name
-          ) {
-            fields[rowHeaders[j].textContent] = j;
+      for (let i = 0, Cnt = rows; i < Cnt.length; i++) {
+        let fields = {};
+        let fieldHeaders = [];
+        for (let j = 0, Lnt = rowHeaders; j < Lnt.length; j++) {
+          let header = rowHeaders[j];
+          if (header.className.indexOf("e-gtot") === -1 && header.className.indexOf("e-rowsheader") > -1 &&
+            header.getAttribute("fieldname") === rows[i].name) {
+            var headerName = rowHeaders[j].getAttribute("fieldname") + "_" + rowHeaders[j].textContent;
+            fields[(rowHeaders[j]).textContent] = j;
             fieldHeaders.push(rowHeaders[j].textContent);
           }
         }
         if (i === 0) {
-          for (var rnt = 0, Lnt1 = fieldHeaders; rnt < Lnt1.length; rnt++) {
+          for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
             if (rnt !== 0) {
-              var row = fields[fieldHeaders[rnt]];
-              var prevRow = fields[fieldHeaders[rnt - 1]];
-              for (var k = 0, ci = 1; k < cLen && ci < colLen; k++, ci++) {
-                var node = cTable[3].children[1].children[row].childNodes[k];
-                var prevNode =
-                  cTable[3].children[1].children[prevRow].childNodes[k];
-                var ri = node.getAttribute("index");
-                var prevRi = prevNode.getAttribute("index");
-                if (ri < pivotGridObj.pivotValues.length) {
-                  if (
-                    pivotGridObj.pivotValues[prevRi][ci].value >
-                      pivotGridObj.pivotValues[ri][ci].value &&
-                    node.querySelector(".tempwrap")
-                  ) {
-                    var trendElement = node.querySelector(".tempwrap");
+              let row = fields[fieldHeaders[rnt]];
+              let prevRow = fields[fieldHeaders[rnt - 1]];
+              for (let j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+                if (!cTable[1].children[1].children[row]) {
+                    break;
+                }
+                let node = cTable[1].children[1].children[row].childNodes[j];
+                let prevNode = cTable[1].children[1].children[prevRow].childNodes[j];
+                let ri = undefined;
+                let prevRi = undefined;
+                if (node) {
+                  ri = node.getAttribute("index");
+                }
+                if (prevNode) {
+                  prevRi = prevNode.getAttribute("index");
+                }
+                if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
+                  if (((pivotObj.pivotValues[prevRi][ci]).value) > ((pivotObj.pivotValues[ri][ci]).value) && node.querySelector(".tempwrap")) {
+                    let trendElement = node.querySelector(".tempwrap");
                     trendElement.className = trendElement.className.replace(
                       "sb-icon-neutral",
                       "sb-icon-loss"
                     );
                   } else if (
-                    pivotGridObj.pivotValues[prevRi][ci].value <
-                      pivotGridObj.pivotValues[ri][ci].value &&
-                    node.querySelector(".tempwrap")
+                    ((pivotObj.pivotValues[prevRi][ci]).value) < ((pivotObj.pivotValues[ri][ci]).value) && node.querySelector(".tempwrap")
                   ) {
-                    var trendElement1 = node.querySelector(".tempwrap");
-                    trendElement1.className = trendElement1.className.replace(
+                    let trendElement = node.querySelector(".tempwrap");
+                    trendElement.className = trendElement.className.replace(
                       "sb-icon-neutral",
                       "sb-icon-profit"
                     );
                   }
+                }
+              }
+            }
+          }
+        } else {
+          for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
+            var row = fields[fieldHeaders[rnt]];
+            for (let j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+              if (!cTable[1].children[1].children[row]) {
+                  break;
+              }
+              let node = cTable[1].children[1].children[row].childNodes[j];
+              let prevNode = cTable[1].children[1].children[row - 1].childNodes[j];
+              let ri = undefined;
+              let prevRi = undefined;
+              if (node) {
+                ri = node.getAttribute("index");
+              }
+              if (prevNode) {
+                prevRi = prevNode.getAttribute("index");
+              }
+              if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
+                let cRowFieldName = (cTable[1].children[1].children[row].childNodes[0]).getAttribute("fieldname");
+                let prevRowFieldName = (cTable[1].children[1].children[row - 1].childNodes[0]).getAttribute("fieldname");
+                if (((pivotObj.pivotValues[prevRi][ci]).value) > ((pivotObj.pivotValues[ri][ci]).value) &&
+                  node.querySelector(".tempwrap") && cRowFieldName === prevRowFieldName) {
+                  let trendElement = node.querySelector(".tempwrap");
+                  trendElement.className = trendElement.className.replace(
+                    "sb-icon-neutral",
+                    "sb-icon-loss"
+                  );
+                } else if (
+                  ((pivotObj.pivotValues[prevRi][ci]).value) < ((pivotObj.pivotValues[ri][ci]).value) &&
+                  node.querySelector(".tempwrap") && cRowFieldName === prevRowFieldName
+                ) {
+                  let trendElement = node.querySelector(".tempwrap");
+                  trendElement.className = trendElement.className.replace(
+                    "sb-icon-neutral",
+                    "sb-icon-profit"
+                  );
                 }
               }
             }
@@ -486,28 +522,18 @@ The following sample uses the HTML elements to showcase each cell with custom fo
 </script>
 
 <style scoped>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
-
-  #pivotview {
+  /deep/ #pivotview {
     width: 100%;
   }
 
   @font-face {
     font-family: "e-pivot";
-    src: /* To get the output shown below, add the resource containing font data from the below reference sample. */
+    src: /* To get the output shown below, add the resource containing font data from the below reference sample. */;
     font-weight: normal;
     font-style: normal;
   }
 
-  .pv-icons {
+  /deep/ .pv-icons {
     font-family: "e-pivot";
     font-style: normal;
     font-variant: normal;
@@ -516,7 +542,7 @@ The following sample uses the HTML elements to showcase each cell with custom fo
     line-height: 1;
   }
 
-  .sb-icon-profit::before {
+  /deep/ .sb-icon-profit::before {
     content: "\e234";
     padding-left: 30px;
     margin: auto !important;
@@ -524,42 +550,42 @@ The following sample uses the HTML elements to showcase each cell with custom fo
     size: 20px;
   }
 
-  .sb-icon-neutral::before {
+  /deep/ .sb-icon-neutral::before {
     content: "\e84d";
     padding-left: 30px;
     margin: auto !important;
     color: #82b5e9;
   }
 
-  .sb-icon-loss::before {
+  /deep/ .sb-icon-loss::before {
     content: "\e239";
     padding-left: 30px;
     margin: auto !important;
     color: #ff2222;
   }
 
-  .sb-sample-content-area {
+  /deep/ .sb-sample-content-area {
     min-height: 255px !important;
   }
 
-  .control-section {
+  /deep/ .control-section {
     min-height: 255px !important;
   }
 
-  .e-columnsheader .tempwrap.sb-icon-neutral.pv-icons{
+  /deep/ .e-columnsheader .tempwrap.sb-icon-neutral.pv-icons{
     display: none !important;
   }
 
-  .e-rowsheader .tempwrap.sb-icon-neutral.pv-icons {
+  /deep/ .e-rowsheader .tempwrap.sb-icon-neutral.pv-icons {
     display: none !important;
   }
 
-  .e-pivotview .e-grid .e-rowcell {
-    font-size: 13px;
-    padding-left: 8px;
+  /deep/ .e-pivotview .e-grid .e-rowcell {
+      font-size: 13px;
+      padding-left: 8px;
   }
 
-  .e-cellvalue {
+  /deep/ .e-cellvalue {
     margin-top: 8px;
     display: flex;
     margin-left: 30px;
@@ -576,6 +602,16 @@ The following sample uses the HTML elements to showcase each cell with custom fo
 <script>
   import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
   import { createApp } from 'vue/dist/vue.esm-bundler';
+  import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+  import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
 
   const app = createApp();
 
@@ -612,7 +648,7 @@ The following sample uses the HTML elements to showcase each cell with custom fo
             { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
             { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
             { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
-          ],
+          ], // Dummy data source. Find the original data source from the below github sample,
           rows: [{ name: "Country" }],
           columns: [{ name: "Date" }],
           values: [{ name: "Amount" }, { name: "Total", type: 'CalculatedField' }],
@@ -627,67 +663,65 @@ The following sample uses the HTML elements to showcase each cell with custom fo
     },
     methods: {
       trend: function () {
-        let pivotGridObj = this.$refs.pivotview.ej2Instances;
-        var cTable = document.getElementsByClassName("e-table");
-        var colLen = pivotGridObj.pivotValues[3].length;
-        var cLen = cTable[3].children[0].children.length;
-        var rLen = cTable[3].children[1].children.length;
+        let pivotObj = ((this).$refs.pivotview).ej2Instances;
+        let cTable = [].slice.call(document.getElementsByClassName("e-table"));
+        let colLen = pivotObj.pivotValues[3].length;
+        let cLen = cTable[1].children[0].children.length - 1;
+        let rLen = cTable[1].children[1].children.length;
+        let rowIndx;
+
         for (let k = 0; k < rLen; k++) {
-          if (
-            pivotGridObj.pivotValues[k] &&
-            pivotGridObj.pivotValues[k][0] !== undefined
-          ) {
+          if (pivotObj.pivotValues[k] && pivotObj.pivotValues[k][0] !== undefined) {
+            rowIndx = (pivotObj.pivotValues[k][0]).rowIndex;
             break;
           }
         }
-        var rowHeaders = [].slice.call(
-          cTable[2].children[1].querySelectorAll("td")
-        );
-        var rows = pivotGridObj.dataSourceSettings.rows;
+        let rowHeaders = [].slice.call(cTable[1].children[1].querySelectorAll('.e-rowsheader'));
+        let rows = pivotObj.dataSourceSettings.rows;
         if (rowHeaders.length > 1) {
-          for (var i = 0, Cnt = rows; i < Cnt.length; i++) {
-            var fields = {};
-            var fieldHeaders = [];
-            for (var j = 0, Lnt = rowHeaders; j < Lnt.length; j++) {
-              var header = rowHeaders[j];
-              if (
-                header.className.indexOf("e-gtot") === -1 &&
-                header.className.indexOf("e-rowsheader") > -1 &&
-                header.getAttribute("fieldname") === rows[i].name
-              ) {
-                fields[rowHeaders[j].textContent] = j;
+          for (let i = 0, Cnt = rows; i < Cnt.length; i++) {
+            let fields = {};
+            let fieldHeaders = [];
+            for (let j = 0, Lnt = rowHeaders; j < Lnt.length; j++) {
+              let header = rowHeaders[j];
+              if (header.className.indexOf("e-gtot") === -1 && header.className.indexOf("e-rowsheader") > -1 &&
+                header.getAttribute("fieldname") === rows[i].name) {
+                var headerName = rowHeaders[j].getAttribute("fieldname") + "_" + rowHeaders[j].textContent;
+                fields[(rowHeaders[j]).textContent] = j;
                 fieldHeaders.push(rowHeaders[j].textContent);
               }
             }
             if (i === 0) {
-              for (var rnt = 0, Lnt1 = fieldHeaders; rnt < Lnt1.length; rnt++) {
+              for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
                 if (rnt !== 0) {
-                  var row = fields[fieldHeaders[rnt]];
-                  var prevRow = fields[fieldHeaders[rnt - 1]];
-                  for (var k = 0, ci = 1; k < cLen && ci < colLen; k++, ci++) {
-                    var node = cTable[3].children[1].children[row].childNodes[k];
-                    var prevNode =
-                      cTable[3].children[1].children[prevRow].childNodes[k];
-                    var ri = node.getAttribute("index");
-                    var prevRi = prevNode.getAttribute("index");
-                    if (ri < pivotGridObj.pivotValues.length) {
-                      if (
-                        pivotGridObj.pivotValues[prevRi][ci].value >
-                          pivotGridObj.pivotValues[ri][ci].value &&
-                        node.querySelector(".tempwrap")
-                      ) {
-                        var trendElement = node.querySelector(".tempwrap");
+                  let row = fields[fieldHeaders[rnt]];
+                  let prevRow = fields[fieldHeaders[rnt - 1]];
+                  for (let j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+                    if (!cTable[1].children[1].children[row]) {
+                        break;
+                    }
+                    let node = cTable[1].children[1].children[row].childNodes[j];
+                    let prevNode = cTable[1].children[1].children[prevRow].childNodes[j];
+                    let ri = undefined;
+                    let prevRi = undefined;
+                    if (node) {
+                      ri = node.getAttribute("index");
+                    }
+                    if (prevNode) {
+                      prevRi = prevNode.getAttribute("index");
+                    }
+                    if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
+                      if (((pivotObj.pivotValues[prevRi][ci]).value) > ((pivotObj.pivotValues[ri][ci]).value) && node.querySelector(".tempwrap")) {
+                        let trendElement = node.querySelector(".tempwrap");
                         trendElement.className = trendElement.className.replace(
                           "sb-icon-neutral",
                           "sb-icon-loss"
                         );
                       } else if (
-                        pivotGridObj.pivotValues[prevRi][ci].value <
-                          pivotGridObj.pivotValues[ri][ci].value &&
-                        node.querySelector(".tempwrap")
+                        ((pivotObj.pivotValues[prevRi][ci]).value) < ((pivotObj.pivotValues[ri][ci]).value) && node.querySelector(".tempwrap")
                       ) {
-                        var trendElement1 = node.querySelector(".tempwrap");
-                        trendElement1.className = trendElement1.className.replace(
+                        let trendElement = node.querySelector(".tempwrap");
+                        trendElement.className = trendElement.className.replace(
                           "sb-icon-neutral",
                           "sb-icon-profit"
                         );
@@ -696,32 +730,62 @@ The following sample uses the HTML elements to showcase each cell with custom fo
                   }
                 }
               }
+            } else {
+              for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
+                var row = fields[fieldHeaders[rnt]];
+                for (let j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+                  if (!cTable[1].children[1].children[row]) {
+                      break;
+                  }
+                  let node = cTable[1].children[1].children[row].childNodes[j];
+                  let prevNode = cTable[1].children[1].children[row - 1].childNodes[j];
+                  let ri = undefined;
+                  let prevRi = undefined;
+                  if (node) {
+                    ri = node.getAttribute("index");
+                  }
+                  if (prevNode) {
+                    prevRi = prevNode.getAttribute("index");
+                  }
+                  if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
+                    let cRowFieldName = (cTable[1].children[1].children[row].childNodes[0]).getAttribute("fieldname");
+                    let prevRowFieldName = (cTable[1].children[1].children[row - 1].childNodes[0]).getAttribute("fieldname");
+                    if (((pivotObj.pivotValues[prevRi][ci]).value) > ((pivotObj.pivotValues[ri][ci]).value) &&
+                      node.querySelector(".tempwrap") && cRowFieldName === prevRowFieldName) {
+                      let trendElement = node.querySelector(".tempwrap");
+                      trendElement.className = trendElement.className.replace(
+                        "sb-icon-neutral",
+                        "sb-icon-loss"
+                      );
+                    } else if (
+                      ((pivotObj.pivotValues[prevRi][ci]).value) < ((pivotObj.pivotValues[ri][ci]).value) &&
+                      node.querySelector(".tempwrap") && cRowFieldName === prevRowFieldName
+                    ) {
+                      let trendElement = node.querySelector(".tempwrap");
+                      trendElement.className = trendElement.className.replace(
+                        "sb-icon-neutral",
+                        "sb-icon-profit"
+                      );
+                    }
+                  }
+                }
+              }
             }
           }
         }
-      },
+      }
     },
   };
 </script>
 
 <style scoped>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
-
   /deep/ #pivotview {
     width: 100%;
   }
 
   @font-face {
     font-family: "e-pivot";
-    src: /* To get the output shown below, add the resource containing font data from the below reference sample. */
+    src: /* To get the output shown below, add the resource containing font data from the below reference sample. */;
     font-weight: normal;
     font-style: normal;
   }
@@ -792,10 +856,7 @@ The output will appear as follows:
 
 ![Vue3-pivottable-celltemplate](./images/Vue3-pivottable-celltemplate.png)
 
-Refer the following sample, [vue3-pivottable-celltemplate](https://github.com/SyncfusionExamples/vue3-pivottable-celltemplate).
-
-> **Sample**: [vue-3-pivottable-getting-started](https://github.com/SyncfusionExamples/vue3-pivottable-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+Refer the following sample, [vue3-pivot-table-cell-template](https://github.com/SyncfusionExamples/vue3-pivottable-celltemplate).
 
 ## See also
 

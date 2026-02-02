@@ -10,13 +10,15 @@ domainurl: ##DomainURL##
 
 # Custom views in Vue AI AssistView component
 
+The AI AssistView component supports multiple views that allow you to organize different types of content within the same component.
+
 ## Adding custom views
 
-By using the `e-views` tag directive you can define the collection of different assist view models in the AI AssistView. You can customize the default and the custom views added.
+The `e-views` selector enables you to define a collection of different view models within the AI AssistView component. Each view can be independently customized with different appearances and content.
 
 ### Setting view type
 
-You can set the type of view by using the [type](../api/ai-assistview/assistViewType/) property within the `e-view` tag directive. It accepts two values such as `Assist`, and `Custom`.
+You can specify the type of view using the [type](../api/ai-assistview#assistViewType) property within the `e-view` selector. It accepts two values such as `Assist`, and `Custom`.
 
 ```html
 
@@ -56,18 +58,18 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 ```
 
 ### Setting name
 
-You can use the [name](../api/ai-assistview/assistViewModel/#name) property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
+You can use the [name](../api/ai-assistview/assistViewModel#name) property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
 
 ```html
 
@@ -107,18 +109,18 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 ```
 
 ### Setting iconCss
 
-You can customize the view icons by using the [iconCss](../api/ai-assistview/assistViewModel/#iconcss) property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
+You can customize the view icons using the [iconCss](../api/ai-assistview/assistViewModel#iconcss) property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
 
 ```html
 
@@ -158,11 +160,11 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 ```
@@ -182,7 +184,7 @@ The following example illustrates how types, name, and iconCss are used in a AI 
 
 ### Setting view template 
 
-You can use the [viewTemplate](../api/ai-assistview/assistViewModel/#viewtemplate) property to add the view content of the multiple views added in the AI AssistView.
+The [viewTemplate](../api/ai-assistview/assistViewModel#viewtemplate) property allows to define custom content for multiple views within the AI AssistView.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -195,9 +197,9 @@ You can use the [viewTemplate](../api/ai-assistview/assistViewModel/#viewtemplat
   
 {% previewsample "page.domainurl/code-snippet/ai-assistview/custom-view/viewTemplate" %}
 
-## Setting active view
+## Setting activeView
 
-You can use the [activeView](../api/ai-assistview/#activeview) property to set the active view in the AI AssistView. By default, the value is `0`.
+You can use the [activeView](../api/ai-assistview#activeview) property to specify which view should be displayed when the AI AssistView component initializes. By default, the first view (index 0) is set as active.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

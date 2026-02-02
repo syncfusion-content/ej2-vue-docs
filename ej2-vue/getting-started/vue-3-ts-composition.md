@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue using TypeScript and Composition API
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/) project with a TypeScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -20,7 +20,7 @@ The `Composition API` is a new feature introduced in Vue.js 3 that provides an a
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vite.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -129,7 +129,7 @@ Follow the below steps to add the Vue Schedule component using `Composition API`
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
-<script setup>
+<script setup lang="ts">
   import { ScheduleComponent as EjsSchedule, ViewsDirective as EViews, ViewDirective as EView, ResourcesDirective as EResources, ResourceDirective as EResource, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 </script>
 
@@ -168,7 +168,7 @@ Follow the below steps to add the Vue Schedule component using `Composition API`
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
-<script setup>
+<script setup lang="ts">
 const eventSettings: EventSettingsModel = {
   dataSource: [
     {
@@ -315,6 +315,6 @@ The output will appear as follows:
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and JavaScript](./vue3-js-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](./vue3-ts-options)
-* [Getting Started with Vue UI Components using Options API and JavaScript](./vite-vue)
+* [Getting Started with Vue UI Components using Composition API and JavaScript](./vue-3-js-composition)
+* [Getting Started with Vue UI Components using Options API and TypeScript](./vue-3-ts-options)
+* [Getting Started with Vue UI Components using Options API and JavaScript](./vue-3-js-options)

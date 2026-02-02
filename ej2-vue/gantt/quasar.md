@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue Gantt Component | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue Gantt Component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Quasar Framework and Vue Gantt Chart component | Syncfusion
+description: Check out and learn about getting started with the Quasar Framework and Vue Gantt Chart component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Gantt Component in the Quasar Framework
+# Getting Started with the Vue Gantt Chart component in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
@@ -20,7 +20,7 @@ The `Quasar` Framework is a Vue.js-based open-source framework that empowers dev
 
 ## Set up the Quasar project
 
-To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start/) project, use the following commands:
+To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start) project, use the following commands:
 
 ```bash
 npm init quasar
@@ -46,7 +46,7 @@ Now that `quasar-project` is ready to run with default settings, let's add Syncf
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Gantt component](https://www.syncfusion.com/vue-components/vue-gantt-chart) as an example. To use the Vue Gantt component in the project, the `@syncfusion/ej2-vue-gantt` package needs to be installed using the following command:
+This article uses the [Vue Gantt Chart component](https://www.syncfusion.com/vue-components/vue-gantt-chart) as an example. To use the Vue Gantt Chart component in the project, the `@syncfusion/ej2-vue-gantt` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-gantt --save
@@ -54,9 +54,9 @@ npm install @syncfusion/ej2-vue-gantt --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Tailwind 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind 3` CSS styles for the Gantt component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
+In this article, the `Tailwind 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind 3` CSS styles for the Gantt Chart component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -83,9 +83,9 @@ In this article, the `Tailwind 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Gantt component:
+Follow the below steps to add the Vue Gantt Chart component:
 
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Gantt component and its child directives in the `script` section of the **src/app.vue** file.
+1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Gantt Chart component and its child directives in the `script` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -97,7 +97,7 @@ Follow the below steps to add the Vue Gantt component:
 {% endhighlight %}
 {% endtabs %}
    
-2\. Then, define the Gantt component in the **src/app.vue** file, as shown below:
+2\. Then, define the Gantt Chart component in the **src/app.vue** file, as shown below:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Toolbar in Vue Gantt component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Toolbar in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about Toolbar in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Toolbar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in Vue Gantt component
+# Toolbar in Vue Gantt Chart Component
 
-The Gantt component provides the toolbar support to handle Gantt actions. The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.
+The Gantt Chart component provides the toolbar support to handle Gantt actions. The [toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.
 
 To use toolbar feature, inject the `Toolbar` module in the `provide` section.
 
@@ -19,7 +19,7 @@ To learn about Gantt Chart Toolbar Options, you can check on this video:
 
 ## Built-in toolbar items
 
-Built-in toolbar items execute standard actions of the Gantt component, and these items can be added to toolbar by defining the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) as a collection of built-in items. It renders the button with icon and text.
+Built-in toolbar items execute standard actions of the Gantt Chart component, and these items can be added to toolbar by defining the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) as a collection of built-in items. It renders the button with icon and text.
 
 The following table shows built-in toolbar items and its actions.
 
@@ -49,12 +49,12 @@ The following table shows built-in toolbar items and its actions.
         
 {% previewsample "page.domainurl/code-snippet/gantt/toolbar-cs1" %}
 
-> * The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) has options to define both built-in and custom toolbar items.
+> * The [toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) has options to define both built-in and custom toolbar items.
 
 ## Custom toolbar items
 
-Custom toolbar items can be added to the toolbar by defining the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) property as a collection of `ItemModels`.
-Actions for this customized toolbar items are defined in the [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbarclick) event.
+Custom toolbar items can be added to the toolbar by defining the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) property as a collection of `ItemModels`.
+Actions for this customized toolbar items are defined in the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbarclick) event.
 
 By default, the custom toolbar items are at left position. You can change the position by using the `align` property. In the following sample, the `Quick Filter` toolbar item is positioned at right.
 
@@ -69,12 +69,12 @@ By default, the custom toolbar items are at left position. You can change the po
         
 {% previewsample "page.domainurl/code-snippet/gantt/toolbar-cs2" %}
 
-> * The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) has options to define both built-in and custom toolbar items.
+> * The [toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) has options to define both built-in and custom toolbar items.
 > * If a toolbar item does not match the built-in items, it will be treated as a custom toolbar item.
 
 ## Built-in and custom items in toolbar
 
-The Gantt component has an option to use both built-in and custom toolbar items at the same time.
+The Gantt Chart component has an option to use both built-in and custom toolbar items at the same time.
 
 In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar items and `Test` is the custom toolbar item.
 

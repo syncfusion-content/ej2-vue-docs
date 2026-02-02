@@ -12,16 +12,17 @@ domainurl: ##DomainURL##
 
 ## CDN
 
-The CDN links are provided individually for all the scripts and style sheets of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components.
+CDN links are provided for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI component scripts and styles.
 
-The CDN link is provided to following files in the package
+The CDN provides the following file types:
 
-1. UMD Files
-2. CSS Files
+1. UMD files
+2. CSS files
 
-> The un-versioned CDN links, which always maintain the latest version scripts are deprecated from 2022 Vol1 - 20.1 version. These links are available with `19.4` version scripts to avoid breaking in sites and apps that use un-versioned links.
+> Note: Unversioned CDN links (which always point to the latest scripts) were deprecated in the 2022 Vol 1 (20.1) release. Those unversioned links still exist for v19.4 to avoid breaking sites that used them, but you should use versioned CDN links going forward.
 
 _The latest minified versions of all UMD, Global and CSS files are available on CDN:_
+
 
 * **`https://cdn.syncfusion.com/ej2/PACKAGENAME/dist/PACKAGENAME.umd.min.js`**
 * **`https://cdn.syncfusion.com/ej2/PACKAGENAME/styles/THEMENAME.css`**
@@ -43,7 +44,7 @@ For example
 
 ## Packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages is published and available in public [npm](https://www.npmjs.com/search?q=ej2-vue&page=1&ranking=optimal) registry.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published to the public npm registry.
 
 ### Anatomy of NPM packages
 

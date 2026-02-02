@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion AI Coding Assistant Overview | Syncfusion
-description: Learn how Syncfusion AI Coding Assistant boost Vue productivity by generating accurate code snippets, configuration examples, and contextual guidance.
+description: Learn how Syncfusion AI Coding Assistant boosts Vue productivity by generating accurate code snippets, configuration examples, and contextual guidance for Syncfusion components.
 control: Syncfusion AI Coding Assistant Overview
 platform: ej2-vue
 documentation: ug
@@ -57,7 +57,8 @@ This ensures users can fully leverage Syncfusion<sup style="font-size:70%">&reg;
 
 ## Privacy & Data Handling
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant is designed with privacy in mind:
+The Syncfusion<sup style="font-size:70%">&reg;</sup>  AI Coding Assistant is designed with privacy as a core principle:
+
 
 * The tools do not access your project files or workspace directly.
 * User prompts are not stored by any of the tools or used for any other purpose.

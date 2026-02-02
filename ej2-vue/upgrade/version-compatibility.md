@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Vue version compatibility
 
-The following table represents the supported Vue versions by different Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components releases.
+The following table shows the supported Vue versions for different Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI component releases:
 
 | Version | Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components version |
 | ------------- | ------------- |
@@ -21,15 +21,15 @@ The following table represents the supported Vue versions by different Syncfusio
 
 ## Syncfusion<sup style="font-size:70%">&reg;</sup> version information
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
+Syncfusion<sup style="font-size:70%">&reg;</sup> follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components use a sequence-based identifier system with the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
 
-For example, if the release package version is `22.1.34`, the version number can be interpreted as follows:
+For example, if the release package version is `22.1.34`, the version number is interpreted as follows:
 
-* **22** represents the `major release` version. This number changes every three months and encompasses significant updates, new features, as well as bug fixes and breaking changes.
+* **22** represents the `major release` version. This number changes every three months and includes significant updates, new features, bug fixes, and breaking changes.
 
-* **1** corresponds to the `minor release` version. This number signifies releases primarily focused on new features and addressing bugs, without introducing breaking changes.
+* **1** corresponds to the `minor release` version. This number indicates releases primarily focused on new features and bug fixes, without introducing breaking changes.
 
-* **34** denotes the `revision number`, also referred to as the `patch number`. This number increases for weekly patch releases, which predominantly consist of bug fixes and do not introduce new features or breaking changes.
+* **34** denotes the `revision number`, also referred to as the `patch number`. This number increases for weekly patch releases, which consist primarily of bug fixes and do not introduce new features or breaking changes.
 
 ## See also
 

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in Vue AI AssistView component
 
-This section describes the AI AssistView events that will be triggered when appropriate actions are performed. The following events are available in the AI AssistView component.
+The Vue AI AssistView component provides a comprehensive set of events that enable developers to customize behavior and handle user interactions effectively. The following events are available in the AI AssistView component.
 
 ## created
 
-The AI AssistView component triggers the [created](../api/ai-assistview#created) event when the component rendering is completed.
+The [created](../api/ai-assistview#created) event is triggered when the AI AssistView component rendering is completed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The AI AssistView component triggers the [created](../api/ai-assistview#created)
 
 ## promptRequest
 
-The [promptRequest](../api/ai-assistview#promptrequest) event is triggered when the prompt request is made in the AI AssistView control.
+The [promptRequest](../api/ai-assistview#promptrequest) event is triggered when a user sends a prompt request in the AI AssistView component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -40,7 +40,7 @@ The [promptRequest](../api/ai-assistview#promptrequest) event is triggered when 
 
 ## promptChanged
 
-The [promptChanged](../api/ai-assistview#promptchanged) event is triggered when the prompt text is changed in the AI AssistView control.
+The [promptChanged](../api/ai-assistview#promptchanged) event is triggered whenever the prompt text is modified in the AI AssistView component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -53,7 +53,7 @@ The [promptChanged](../api/ai-assistview#promptchanged) event is triggered when 
 
 ## beforeAttachmentUpload
 
-The [beforeAttachmentUpload](../api/ai-assistview#beforeattachmentupload) event is triggered before the attached files upload begins in the AI AssistView
+The [beforeAttachmentUpload](../api/ai-assistview#beforeattachmentupload) event is triggered before attached files begin uploading in the AI AssistView.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -66,7 +66,7 @@ The [beforeAttachmentUpload](../api/ai-assistview#beforeattachmentupload) event 
 
 ## attachmentUploadSuccess
 
-The [attachmentUploadSuccess](../api/ai-assistview#attachmentuploadsuccess) event is triggered when the attached file is successfully uploaded in the AI AssistView.
+The [attachmentUploadSuccess](../api/ai-assistview#attachmentuploadsuccess) event is triggered when an attached file is successfully uploaded in the AI AssistView.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -79,7 +79,7 @@ The [attachmentUploadSuccess](../api/ai-assistview#attachmentuploadsuccess) even
 
 ## attachmentUploadFailure
 
-The [attachmentUploadFailure](../api/ai-assistview#attachmentuploadfailure) event is triggered when the attached file upload fails in the AI AssistView.
+The [attachmentUploadFailure](../api/ai-assistview#attachmentuploadfailure) event is triggered when an attached file upload fails in the AI AssistView.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
@@ -92,7 +92,7 @@ The [attachmentUploadFailure](../api/ai-assistview#attachmentuploadfailure) even
 
 ## attachmentRemoved
 
-The [attachmentRemoved](../api/ai-assistview#attachmentremoved) event is triggered when an attached file is removed in the AI AssistView.
+The [attachmentRemoved](../api/ai-assistview#attachmentremoved) event is triggered when an attached file is removed from the AI AssistView.
 
 {% tabs %}
 {% highlight ts tabtitle="Composition API (~/src/App.vue)" %}

@@ -160,9 +160,11 @@ yarn run serve
 
 > The SpeechToText component requires an internet connection and browser support for the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition).
 
-## Adding button content
+## Customizing button content
 
- You can use the [content](../api/speech-to-text/buttonSettingsModel/#content) property to display the start listening text and [stopContent](../api/speech-to-text/buttonSettingsModel/#stopContent) to display the stop listening text by using the [buttonSettings](../api/speech-to-text/#buttonSettings) property.
+The content of the SpeechToText button can be customized for its active and inactive states. Use the [`content`](../api/speech-to-text/buttonSettingsModel/#content) property to define the text for the start listening state and the [`stopContent`](../api/speech-to-text/buttonSettingsModel/#stopContent) property for the stop listening state. These properties are configured within the [`buttonSettings`](../api/speech-to-text/#buttonSettings) property.
+
+The following example shows how to configure `buttonSettings` in the SpeechToText component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

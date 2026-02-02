@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in Vue Chat UI component component
 
-This section describes the Chat UI events that will be triggered when appropriate actions are performed. The following events are available in the Chat UI component.
+This section describes the events that the Chat UI component triggers when specific actions are performed. The following events are available:
 
-## Created
+## created
 
-The Chat UI component triggers the [created](../api/chat-ui#created) event when the component rendering is completed.
+The Chat UI component triggers the [created](../api/chat-ui#created) event after the component has been rendered. This event is useful for performing actions once the Chat UI is fully initialized and ready for interaction.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,9 +25,9 @@ The Chat UI component triggers the [created](../api/chat-ui#created) event when 
 {% endhighlight %}
 {% endtabs %}
 
-## Sending message
+## messageSend
 
-The [messageSend](../api/chat-ui#messagesend) event is triggered before sending a message in the Chat UI component.
+The [messageSend](../api/chat-ui#messagesend) event is triggered before a message is sent from the Chat UI component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -38,9 +38,9 @@ The [messageSend](../api/chat-ui#messagesend) event is triggered before sending 
 {% endhighlight %}
 {% endtabs %}
 
-## User Typing
+## userTyping
 
-The [userTyping](../api/chat-ui#usertyping) event is triggered when the user is typing a message in the Chat UI component.
+The [userTyping](../api/chat-ui#usertyping) event is triggered as a user types a message in the Chat UI input field. This is useful for implementing features like typing indicators ("User is typing...").
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -51,22 +51,22 @@ The [userTyping](../api/chat-ui#usertyping) event is triggered when the user is 
 {% endhighlight %}
 {% endtabs %}
 
-## Before attachment upload
+## beforeAttachmentUpload
 
 The [beforeAttachmentUpload](../api/chat-ui#beforeattachmentupload) event is triggered before attached files begin uploading in the Chat UI.
 
-## Attachment upload success
+## attachmentUploadSuccess
 
 The [attachmentUploadSuccess](../api/chat-ui#attachmentuploadsuccess) event is triggered when an attached file is successfully uploaded in the Chat UI.
 
-## Attachment upload failure
+## attachmentUploadFailure
 
 The [attachmentUploadFailure](../api/chat-ui#attachmentuploadfailure) event is triggered when an attached file upload fails in the Chat UI.
 
-## Attachment removed
+## attachmentRemoved
 
 The [attachmentRemoved](../api/chat-ui#attachmentremoved) event is triggered when an attached file is removed from the Chat UI.
 
-## Attachment click
+## attachmentClick
 
 The [attachmentClick](../api/chat-ui#attachmentclick) event is triggered when an attached file is clicked in the Chat UI.

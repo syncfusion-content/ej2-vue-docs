@@ -38,13 +38,16 @@ The following dependency tree shows the required packages for the Vue Pivot Tabl
     |-- @syncfusion/ej2-pdf-export
         |-- @syncfusion/ej2-file-utils
         |-- @syncfusion/ej2-compression
-    |-- @syncfusion/ej2-grids
+     |-- @syncfusion/ej2-charts
+        |-- @syncfusion/ej2-svg-base
     |-- @syncfusion/ej2-inputs
     |-- @syncfusion/ej2-buttons
+    |-- @syncfusion/ej2-splitbuttons
     |-- @syncfusion/ej2-dropdowns
     |-- @syncfusion/ej2-lists
     |-- @syncfusion/ej2-popups
     |-- @syncfusion/ej2-navigations
+    |-- @syncfusion/ej2-grids
 ```
 
 ## Setting up the Vue 2 project

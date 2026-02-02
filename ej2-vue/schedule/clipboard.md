@@ -13,9 +13,9 @@ domainurl: ##DomainURL##
 The Clipboard functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule control enhances scheduling efficiency by enabling users to cut, copy, and paste appointments with ease. This feature is especially beneficial for those managing multiple appointments, as it eliminates the need for repetitive data entry and allows users to quickly adjust their schedules without hassle.
 To activate the clipboard feature in the scheduler, simply set the [`allowClipboard`](https://ej2.syncfusion.com/vue/documentation/api/schedule#allowclipboard) property to **true**.
 
->Note: The [`allowKeyboardInteraction`](https://ej2.syncfusion.com/vue/documentation/api/schedule#allowkeyboardinteraction) property must be true for proper functionality of the clipboard feature.
+>Note: The [`allowKeyboardInteraction`](https://ej2.syncfusion.com/vue/documentation/api/schedule#allowkeyboardinteraction) property must also be set to **true** for clipboard operations to function correctly.
 
-## Cut, copy and paste using keyboard
+## Cut, Copy and Paste using Keyboard
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule control supports keyboard shortcuts to streamline the process of managing appointments.
 
@@ -27,7 +27,7 @@ These keyboard shortcuts enable users to efficiently manage their schedules:
 | Cut       | Ctrl+X   | Move appointments to a new time slot without duplicates.         |
 | Paste     | Ctrl+V   | Place copied or cut appointments into the desired time slot.     |
 
-To use these shortcuts, simply click on the appointment and press **Ctrl+C** to copy or **Ctrl+X** to cut. To paste the copied or cut appointment, click on the desired time slot and press **Ctrl+V**
+When an appointment is selected, pressing **Ctrl+C** copies it, while **Ctrl+X** cuts it. Clicking a target time slot and pressing **Ctrl+V** pastes the appointment into the selected location.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,19 +42,19 @@ To use these shortcuts, simply click on the appointment and press **Ctrl+C** to 
 
 >Note: For Mac users, use **Cmd** instead of **Ctrl** for copy, cut, and paste operations.
 
-## Cut, copy, and paste using context menu
+## Cut, Copy, and Paste using Context Menu
 
-You can programmatically manage appointments by using the public methods **cut**, **copy**, and **paste**. These methods allow you to perform the same actions as the context menu or external buttons.
+Clipboard operations can also be performed programmatically using the Schedule component’s public methods **cut**, **copy**, and **paste**. These methods allow users to perform the same actions as the context menu or external buttons.
 
 Utilize these public methods to manage appointments programmatically in Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule control:
 
 | Method | Parameters                     | Description                                                                                     |
 |--------|--------------------------------|-------------------------------------------------------------------------------------------------|
-| [`copy`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#copy)   | None                           | Duplicate the selected appointment for reuse.                                                   |
-| [`cut`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#cut)    | None                           | Remove the selected appointment from its current slot for moving.                               |
-| [`paste`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#paste)  | targetElement (Scheduler's work-cell) | Insert the copied or cut appointment into the specified time slot.                              |
+| [`copy`](https://ej2.syncfusion.com/vue/documentation/api/schedule#copy)   | None                           | Duplicate the selected appointment for reuse.                                                   |
+| [`cut`](https://ej2.syncfusion.com/vue/documentation/api/schedule#cut)    | None                           | Remove the selected appointment from its current slot for moving.                               |
+| [`paste`](https://ej2.syncfusion.com/vue/documentation/api/schedule#paste)  | targetElement (Scheduler's work-cell) | Insert the copied or cut appointment into the specified time slot.                              |
 
-By using these methods, you can programmatically cut, copy, and paste appointments in the scheduler, providing more control over the appointment management process.
+These methods enable direct programmatic control over appointment manipulation, replicating the behavior of context menu actions and keyboard shortcuts.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -67,19 +67,18 @@ By using these methods, you can programmatically cut, copy, and paste appointmen
 
 {% previewsample "page.domainurl/code-snippet/schedule/clipboard-cs2" %}
 
+## Modifying Content before Pasting
 
-## Modifying content before pasting
+Appointment content can be altered before it is pasted by handling the [`beforePaste`](https://ej2.syncfusion.com/vue/documentation/api/schedule#beforepaste) event. This event exposes the appointment details prior to insertion, enabling modifications such as adjusting times or updating additional fields.
 
-You can modify the content of an appointment before pasting it by using [`beforePaste`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#beforepaste) event accessing the appointment details and making necessary changes.
-
-The following example demonstrates how to seamlessly copy and paste content from a grid to a scheduler. To do this, follow these steps:
+The following workflow outlines how data copied from an external source, such as a grid, can be pasted into the Schedule component:
 
 1. **Select an Item**: Click on an item in the grid.
 2. **Copy the Details**: Press **Ctrl + C** to copy the selected event details.
 3. **Choose a Time Slot**: Click on the desired time slot in the scheduler.
 4. **Paste the Details**: Press **Ctrl + V** to paste the copied appointment details into the selected time slot.
 
-In this example, the `beforePaste` event can be utilized to intercept the event details before they are pasted. This allows you to modify the content as needed. Such modifications could include adjusting the time, adding notes, or altering other specifics of the appointment.
+By using the `beforePaste` event, the copied details can be intercepted and updated before insertion to match required field mappings, such as adjusting start and end times or adding additional descriptive fields.
 
 >Note: Ensure that the field mapping matches with the fields in the scheduler.
 
@@ -96,4 +95,4 @@ In this example, the `beforePaste` event can be utilized to intercept the event 
 
 
 
->  You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+>  For more information on Schedule component capabilities, visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page. Explore live examples at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview) for more usage scenarios.

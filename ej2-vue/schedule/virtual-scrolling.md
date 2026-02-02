@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Virtual scrolling in Vue Schedule component
 
-To achieve better performance in the Scheduler when loading a large number of resources and events, we have added virtual scrolling support load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in the Scheduler by setting `true` to the [`allowVirtualScrolling`](https://ej2.syncfusion.com/vue/documentation/api/schedule/viewsModel/#allowvirtualscrolling) property within the view specific settings. The virtual loading of events is possible in Agenda view, by setting [`allowVirtualScrolling`](https://ej2.syncfusion.com/vue/documentation/api/schedule/viewsModel/#allowvirtualscrolling) property to `true` within the agenda view specific settings.
+To achieve better performance in the Scheduler when loading a large number of resources and events, we have added virtual scrolling support load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in the Scheduler by setting `true` to the [`allowVirtualScrolling`](https://ej2.syncfusion.com/vue/documentation/api/schedule/viewsModel#allowvirtualscrolling) property within the view specific settings. The virtual loading of events is possible in Agenda view, by setting [`allowVirtualScrolling`](https://ej2.syncfusion.com/vue/documentation/api/schedule/viewsModel#allowvirtualscrolling) property to `true` within the agenda view specific settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,14 +27,26 @@ To achieve better performance in the Scheduler when loading a large number of re
 
 ## Enabling lazy loading for appointments
 
-The lazy loading feature provides a convenient way to efficiently load resource appointments into the Scheduler using an on-demand approach. With this feature, you can seamlessly load a large volume of appointment data into the Scheduler without experiencing any performance degradation.
+**Lazy loading** complements virtual scrolling by fetching appointment data from the server **on demand**, instead of loading all events upfront.
 
-By default, the Scheduler fetches all the relevant appointments from the server with in the current date range. However, enabling this feature will trigger query requests to the server for appointment retrieval whenever new resources are rendered due to scroll actions. These queries contain the resource IDs of currently displayed resources along with current date range, which can be passed as a comma-separated string. In the server controller, these resource IDs are parsed to filter the necessary appointments to render in the scheduler. 
+### How lazy loading works
 
-When you enable this feature, the Scheduler becomes capable of fetching events from remote services only for the current view port alone to optimize the data retrieval. The remaining appointment data is fetched form the server on-demand based on currently rendered view port resources as you scroll's through the scheduler content.
+When lazy loading is enabled:
 
-To enable this feature, you have to set the [`enableLazyLoading`](https://ej2.syncfusion.com/vue/documentation/api/schedule/viewsModel/#enablelazyloading) property to `true` within the view specific settings.
+- Initially, events are fetched only for the visible resources and current date range.
+- As the user scrolls, the Scheduler issues additional server requests.
+- Each request includes:
+  - The resource IDs currently in view
+  - The active date range
+- The server returns only the events relevant to those resources and dates.
 
+This ensures optimal network usage and faster initial load times.
+
+---
+
+## Enabling lazy loading
+
+To enable lazy loading, set the [`enableLazyLoading`](https://ej2.syncfusion.com/vue/documentation/api/schedule/viewsModel#enablelazyloading) property to `true` in the view configuration.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/schedule/lazy-loading-cs1/app-composition.vue %}
@@ -89,10 +101,10 @@ namespace LazyLoadingServices.Controllers
 
 **Note:** 
 * The property will be effective, when large number of resources and appointments bound to the Scheduler.
-* This property is applicable only when [resource grouping](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#resources) is enabled in Scheduler.
+* This property is applicable only when [resource grouping](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#resources) is enabled in Scheduler.
 
 ## See Also
 
-* [Virtual scrolling in Agenda view](./views/#agenda-view)
+* [Virtual scrolling in Agenda view](./views#agenda-view)
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> For a complete overview of resource scheduling features, visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page. Explore live examples at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) to knows how to present and manipulate data.

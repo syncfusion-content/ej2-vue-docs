@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Is an internet connection required for license validation
 
-No, Internet connection is not required for the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio license validation. The Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is done offline during application execution. Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system that does not have an internet connection.
+No, an internet connection is not required for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio license validation. License validation is performed offline during application execution. Applications registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on systems without internet access.
 
-## Upgrade from the trial version after purchasing a license
+## Upgrade from trial version after purchasing a license
 
 To upgrade from the trial version, there are two possible solutions:
 
@@ -30,15 +30,15 @@ License keys can be generated from the [License & Downloads](https://syncfusion.
 
 ![Get Community License](images/get-community-license-key.png)
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are the **version and platform-specific**, refer to the [KB](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products) to generate the license key for the required version and platform. Also, refer to this [KB](https://www.syncfusion.com/kb/8951/which-version-syncfusion-license-key-should-i-use-in-my-application) to know which version of the Syncfusion<sup style="font-size:70%">&reg;</sup> license key should be used in the application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are version- and platform-specific. Refer to the [KB article](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products) to generate the license key for the required version and platform. Also refer to this [KB article](https://www.syncfusion.com/kb/8951/which-version-syncfusion-license-key-should-i-use-in-my-application) to determine which version of the license key should be used.
 
-> While using the ASP.NET Core controls with the Javascript(ES5) components, you need to register the license key in both the Javascript(ES5) and the [ASP.NET core](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/license-key-registration). Since the license is validated at the client side for Javascript(ES5) components and server-side for the ASP.NET core components.
+> When using ASP.NET Core controls with JavaScript (ES5) components, register the license key in both the JavaScript (ES5) and [ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/license-key-registration) applications, as license validation occurs on both client and server sides.
 
 ## Will the registered license key expire
 
-No, the Syncfusion<sup style="font-size:70%">&reg;</sup> license keys won't expire for a particular version and you can continue to use it. So, you won't face any problems on the live site. If you have used the trial key, it will expire in 30 days and we don't recommend using it in production.
+No, Syncfusion<sup style="font-size:70%">&reg;</sup> license keys do not expire for a particular version and can be used indefinitely. Trial keys expire after 30 days and should not be used in production.
 
-> If you upgrade to newer versions of the Syncfusion<sup style="font-size:70%">&reg;</sup> packages, you have to generate new license keys and use them.
+> When upgrading to newer versions of Syncfusion<sup style="font-size:70%">&reg;</sup> packages, generate and register new license keys.
 
 ## When to generate new license key while upgrading
 
@@ -79,29 +79,22 @@ The application registered license key is set priority and used for license vali
 
 It is essential to reactivate the license key when upgrading the Syncfusion<sup style="font-size:70%">&reg;</sup> packages while the license has been registered through the `npx` command.
 
-## Potential causes of licensing errors in applications.
+## Potential causes of licensing errors
 
- Below are the possible reasons that could lead to a license error within the application:
+Common causes of licensing errors:
 
- * The application may have a license issue due to duplicate Syncfusion<sup style="font-size:70%">&reg;</sup> packages. 
-
- * An invalid license issue may occur because of Syncfusion<sup style="font-size:70%">&reg;</sup> packages being referred with multiple versions. 
-
- * Registering the license key of a different version than the referred Syncfusion<sup style="font-size:70%">&reg;</sup> package version in the application can also cause licensing errors.
-
- * Inclusion of [non-Vue](#license-issue-due-to-including-non-vue-packages-in-the-dependencies) packages in the dependencies may lead to licensing errors due to the presence of duplicate instances of our packages.
+* Duplicate Syncfusion<sup style="font-size:70%">&reg;</sup> packages in the application.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> packages referenced with multiple versions.
+* License key version mismatch with the referenced Syncfusion<sup style="font-size:70%">&reg;</sup> package version.
+* Inclusion of [non-Vue packages](#license-issue-due-to-including-non-vue-packages-in-the-dependencies) in dependencies.
 
 ### License issue due to duplicate Syncfusion<sup style="font-size:70%">&reg;</sup> packages in the application
 
-One of the possible cases on experiencing license issues in your application is due to duplicate packages exists after upgrading packages to next or latest version. To remove the duplicate packages follow the below steps.
-
-* Delete the `@Syncfusion` folder from `node_modules` and [`package-lock.json`](https://docs.npmjs.com/cli/v6/commands/npm-dedupe) file from app `root folder`.
-
-* Clear the npm `.cache` by running the command `npm cache clean –force` or you can directly delete the file present in the application.
-
-* It is recommended to update all Syncfusion<sup style="font-size:70%">&reg;</sup> components in the package.json file to the `same major version`. This ensures consistency and compatibility across the project. For instance, if the updated version being utilized is `v20.4.XX`, it is advised to upgrade all components to the `same version`.
-
-* Run `npm install` Command.
+Duplicate packages may exist after upgrading. To resolve:
+1. Delete the `@syncfusion` folder from `node_modules` and the `package-lock.json` file from the application root.
+2. Clear the npm cache: `npm cache clean --force` or delete the cache folder.
+3. Update all Syncfusion<sup style="font-size:70%">&reg;</sup> components in `package.json` to the same major version (e.g., all components to `20.4.XX`).
+4. Run `npm install`.
 
 ### Invalid license issue because of Syncfusion<sup style="font-size:70%">&reg;</sup> packages referred with multiple version
 
@@ -126,3 +119,8 @@ Avoid including our TypeScript packages separately.
 ![Including NonVue component packages](images/nonvuepackages.png)
 
 These are sub-dependencies of our Vue component packages and are automatically installed along with them. Including them separately may sometimes result in duplicate instances of packages, which can lead to issues with license validation. Therefore, to ensure proper license validation and avoid conflicts, stick to including our Vue component packages alone in your project dependencies.
+## See also
+
+* [License key generation](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-generation)
+* [License key registration](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration)
+* [Licensing errors](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-errors)

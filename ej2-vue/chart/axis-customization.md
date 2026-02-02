@@ -12,10 +12,7 @@ domainurl: ##DomainURL##
 
 ## Axis Crossing
 
-An axis can be positioned in the chart area using `crossesAt` and `crossesInAxis` properties. The `crossesAt`
-property specifies the values (datetime, numeric, or logarithmic) at which the axis line has to be intersected
-with the vertical axis or vice-versa, and the `crossesInAxis` property specifies the axis name with which the
-axis line has to be crossed.
+An axis can be positioned dynamically within the chart area using the `crossesAt` and `crossesInAxis` properties. The `crossesAt` property specifies the value (date-time, numeric, or logarithmic) at which the axis line intersects another axis, while the `crossesInAxis` property defines the name of the axis with which the current axis should intersect. This customization is useful for emphasizing specific reference points or thresholds in the chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -30,7 +27,7 @@ axis line has to be crossed.
 
 ## Title
 
-You can add a title to the axis using [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#title) property to provide quick information to the user about the data plotted in the axis.
+A title can be added to an axis using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#title) property. Axis titles provide context and help users quickly understand the data represented along the axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -45,7 +42,7 @@ You can add a title to the axis using [`title`](https://ej2.syncfusion.com/vue/d
 
 ## Title Rotation
 
-By using the [`titleRotation`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#titlerotation) property, you can rotate the axis title from 0 to 360 degree.
+The orientation of the axis title can be adjusted using the [`titleRotation`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#titlerotation) property. This property supports rotation values from 0 to 360 degrees, allowing better alignment based on the chart layout and available space.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -60,7 +57,7 @@ By using the [`titleRotation`](https://ej2.syncfusion.com/vue/documentation/api/
 
 ## Tick Lines Customization
 
-You can customize the  `width`, `color` and `size` of the minor and major tick lines, using [`majorTickLines`](https://ej2.syncfusion.com/vue/documentation/api/chart/majorTickLines/) and [`minorTickLines`](https://ej2.syncfusion.com/vue/documentation/api/chart/minorTickLines/) properties in the axis.
+The appearance of both major and minor tick lines can be customized using the [`majorTickLines`](https://ej2.syncfusion.com/vue/documentation/api/chart/majorTickLines) and [`minorTickLines`](https://ej2.syncfusion.com/vue/documentation/api/chart/minorTickLines) properties. These properties allow customization of the `width`, `color`, and `size` of tick lines to enhance chart readability.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -75,7 +72,7 @@ You can customize the  `width`, `color` and `size` of the minor and major 
 
 ## Grid Lines Customization
 
-You can customize the `width`, `color` and `dashArray` of the minor and major grid lines, using [`majorGridLines`](https://ej2.syncfusion.com/vue/documentation/api/chart/minorGridLines/) and [`minorGridLines`](https://ej2.syncfusion.com/vue/documentation/api/chart/minorGridLines/) properties in the axis.
+Grid lines can be styled using the [`majorGridLines`](https://ej2.syncfusion.com/vue/documentation/api/chart/majorGridLines) and [`minorGridLines`](https://ej2.syncfusion.com/vue/documentation/api/chart/minorGridLines) properties. These options support customization of `width`, `color`, and `dashArray`, helping users distinguish data points and scales more effectively.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -90,8 +87,7 @@ You can customize the `width`, `color` and `dashArray` of the minor and maj
 
 ## Multiple Axis
 
-In addition to primary X and Y axis, we can add n number of axis to the chart. Series can be associated with
-this axis, by mapping with axis's unique name.
+In addition to the primary X and Y axes, multiple additional axes can be added to a chart. Each series can be associated with a specific axis by mapping it to the axis using a unique axis name. This is useful for visualizing datasets with different units or scales within the same chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -108,7 +104,7 @@ this axis, by mapping with axis's unique name.
 
 <!-- markdownlint-disable MD033 -->
 
-When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner set this property [`isInversed`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#isinversed) to true.
+When an axis is inversed, the highest value is displayed closer to the origin, and the lowest value appears farther away. This behavior can be enabled by setting the [`isInversed`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#isinversed) property to `true`. Inversed axes are commonly used in scenarios such as ranking or inverted value representations.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -124,8 +120,9 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 ## Opposed Position
 
 <!-- markdownlint-disable MD012 -->
-To place an axis opposite from its original position, set [`opposedPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#opposedposition)
-property of the axis to true.
+
+An axis can be placed on the opposite side of its default position by setting the [`opposedPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#opposedposition) property to `true`. This option is useful when displaying multiple axes or when optimizing space usage in complex chart layouts.
+
 <!-- markdownlint-disable MD012 -->
 
 {% tabs %}
