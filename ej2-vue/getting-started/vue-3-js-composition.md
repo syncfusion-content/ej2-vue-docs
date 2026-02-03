@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue using JavaScript and Composition API
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -246,6 +246,6 @@ The output will appear as follows:
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](./vue3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and JavaScript](./vite-vue)
-* [Getting Started with Vue UI Components using Options API and TypeScript](./vue3-ts-options)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](./vue-3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and JavaScript](./vue-3-js-options)
+* [Getting Started with Vue UI Components using Options API and TypeScript](./vue-3-ts-options)

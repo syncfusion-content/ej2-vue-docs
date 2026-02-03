@@ -8,9 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components and Vue CLI
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3 with Vue CLI and SCSS
 
-This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application. To get started with Vue 2 application, refer to the [getting started with Vue 2](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial) section.
+This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application with SCSS styling. To get started with Vue 3 using Composition API and Vite, refer to the [getting started with Vue 3 Composition API](./vue-3-js-composition) section.
+
+> Note: Vue CLI is now in maintenance mode. For new projects, we recommend using [Vite](https://vite.dev/) with the official [create-vue](https://github.com/vuejs/create-vue) scaffolding tool.
 
 ## Prerequisites
 
@@ -18,7 +20,7 @@ This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup
 
 ## Create the Vue 3 application
 
-The best way to create a Vue 3 application is to use the [vue create](https://cli.vuejs.org/#getting-started) command.
+To create a Vue 3 application using Vue CLI with SCSS support, use the [vue create](https://cli.vuejs.org/#getting-started) command.
 
 ```bash
 npm install -g @vue/cli
@@ -30,6 +32,8 @@ npm run serve
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Manually select features` from the menu and then select the required features as shown in the following screenshot.
 
 ![Reference](../appearance/images/vue3-scss-terminal.png)
+
+> **Recommended Alternative:** For new projects, consider using [Vite](https://vite.dev/) with `npm create vue@latest`, which provides faster development experience and modern tooling with built-in SCSS support.
 
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -124,8 +128,8 @@ Add the styles of Grid component to the `<style>` section of the `App.vue` file 
 
 <style lang="scss">
 // syncfusion styles
-@import "../node_modules/@syncfusion/ej2-base/styles/material.scss";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.scss";
+@use "../node_modules/@syncfusion/ej2-base/styles/material" as *;
+@use "../node_modules/@syncfusion/ej2-vue-grids/styles/material" as *;
 </style>
 
 {% endhighlight %}
@@ -174,4 +178,6 @@ Refer the following sample, [vue3-grid-getting-started](https://github.com/Syncf
 
 ## See also
 
-* [Getting started with Vue 3 application](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-js-composition)
+* [Getting Started with Vue UI Components using Composition API and JavaScript](./vue-3-js-composition)
+* [Getting Started with Vue UI Components using Options API and JavaScript](./vue-3-js-options)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](./vue-3-ts-composition)
