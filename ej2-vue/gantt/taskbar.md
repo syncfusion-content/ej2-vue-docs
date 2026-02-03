@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Taskbar in Vue Gantt component | Syncfusion
-description: Learn here all about Taskbar in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Taskbar in Vue Gantt Chart component | Syncfusion
+description: Learn here all about Taskbar in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Taskbar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Taskbar in Vue Gantt component
+# Taskbar in Vue Gantt Chart component
 
 ## Taskbar template
 
-You can design your own taskbars to view the tasks in Gantt using the [`taskbarTemplate`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskbartemplate) property. You can customize the parent taskbars and milestones with custom templates using the [`parentTaskbarTemplate`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#parenttaskbartemplate) and [`milestoneTemplate`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#milestonetemplate) properties.
+You can design your own taskbars to view the tasks in Gantt using the [taskbarTemplate](https://ej2.syncfusion.com/vue/documentation/api/gantt#taskbartemplate) property. You can customize the parent taskbars and milestones with custom templates using the [parentTaskbarTemplate](https://ej2.syncfusion.com/vue/documentation/api/gantt#parenttaskbartemplate) and [milestoneTemplate](https://ej2.syncfusion.com/vue/documentation/api/gantt#milestonetemplate) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ You can design your own taskbars to view the tasks in Gantt using the [`taskbarT
 
 ### Taskbar height
 
-The height of child taskbars and parent taskbars can be customized by using [`taskbarHeight`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskbarheight) property. The following code example shows how to use the [`taskbarHeight`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskbarheight) property.
+The height of child taskbars and parent taskbars can be customized by using [taskbarHeight](https://ej2.syncfusion.com/vue/documentation/api/gantt#taskbarheight) property. The following code example shows how to use the [taskbarHeight](https://ej2.syncfusion.com/vue/documentation/api/gantt#taskbarheight) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -43,13 +43,13 @@ The height of child taskbars and parent taskbars can be customized by using [`ta
 {% previewsample "page.domainurl/code-snippet/gantt/appearance-customization-cs1" %}
 
 > NOTE
-The [`taskbarHeight`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskbarheight) value should be lower than [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#rowheight) property value and these properties accept only pixel values.
+The [taskbarHeight](https://ej2.syncfusion.com/vue/documentation/api/gantt#taskbarheight) value should be lower than [rowHeight](https://ej2.syncfusion.com/vue/documentation/api/gantt#rowheight) property value and these properties accept only pixel values.
 
 
 
 ### Conditional formatting
 
-The default taskbar UI can be replaced with custom templates by using the [`queryTaskbarInfo`](https://ej2.syncfusion.com/vue/documentation/api/gantt/iQueryTaskbarInfoEventArgs) event. The following code example shows customizing the taskbar UI based on task progress values in Gantt component.
+The default taskbar UI can be replaced with custom templates by using the [queryTaskbarInfo](https://ej2.syncfusion.com/vue/documentation/api/gantt/iQueryTaskbarInfoEventArgs) event. The following code example shows customizing the taskbar UI based on task progress values in Gantt Chart component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -79,9 +79,9 @@ You can change the gripper icon in the taskbar by applying styles to their respe
 
 ## Multi Taskbar support in project view
 
-The Gantt component, supports rendering multi-taskbars in the project view. With this feature the parent taskbar, when it is collapsed, visually summarize the progress of all its child taskbars.
+The Gantt Chart component, supports rendering multi-taskbars in the project view. With this feature the parent taskbar, when it is collapsed, visually summarize the progress of all its child taskbars.
 
-This feature can be enabled by setting the [enableMultiTaskbar](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#enablemultitaskbar) property value to `true`. 
+This feature can be enabled by setting the [enableMultiTaskbar](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings#enablemultitaskbar) property value to `true`. 
 
 
 The following code example shows how to use this property.
@@ -99,7 +99,7 @@ The following code example shows how to use this property.
 
 ## Connector lines
 
-The width and background color of connector lines in Gantt can be customized using the [`connectorLineWidth`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#connectorlinewidth) and [`connectorLineBackground`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#connectorlinebackground) properties. The following code example shows how to use these properties.
+The width and background color of connector lines in Gantt can be customized using the [connectorLineWidth](https://ej2.syncfusion.com/vue/documentation/api/gantt#connectorlinewidth) and [connectorLineBackground](https://ej2.syncfusion.com/vue/documentation/api/gantt#connectorlinebackground) properties. The following code example shows how to use these properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -114,7 +114,7 @@ The width and background color of connector lines in Gantt can be customized usi
 
 ## Tooltip
 
-In the Gantt component, you can enable or disable the mouse hover tooltip for the following UI elements using the [`tooltipSettings.showTooltip`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#showtooltip) property:
+In the Gantt Chart component, you can enable or disable the mouse hover tooltip for the following UI elements using the [tooltipSettings.showTooltip](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings#showtooltip) property:
 
 * Taskbar
 * Connector line
@@ -132,13 +132,13 @@ In the Gantt component, you can enable or disable the mouse hover tooltip for th
         
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs1" %}
 
-> The default value of the [`tooltipSettings.showTooltip`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#showtooltip) property is `true`.
+> The default value of the [tooltipSettings.showTooltip](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings#showtooltip) property is `true`.
 
 ## Tooltip template
 
 ### Taskbar tooltip
 
-The default tooltip in the Gantt component can be customized using the [`tooltipSettings.taskbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#taskbar) property.
+The default tooltip in the Gantt Chart component can be customized using the [tooltipSettings.taskbar](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings#taskbar) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -153,7 +153,7 @@ The default tooltip in the Gantt component can be customized using the [`tooltip
 
 ### Connector line tooltip
 
-The default connector line tooltip in the Gantt component can be customized using the [`tooltipSettings.connectorLine`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#connectorline) property. The following code example shows how to use the [`tooltipSettings.connectorLine`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#connectorline) property.
+The default connector line tooltip in the Gantt Chart component can be customized using the [tooltipSettings.connectorLine](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings#connectorline) property. The following code example shows how to use the [tooltipSettings.connectorLine](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings#connectorline) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -170,7 +170,7 @@ The default connector line tooltip in the Gantt component can be customized usin
 
 ### Baseline tooltip
 
-A baseline tooltip can be customized using the [`tooltipSettings.baseline`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#baseline) property. The following code example shows how to customize the baseline tooltip in Gantt.
+A baseline tooltip can be customized using the [tooltipSettings.baseline](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings#baseline) property. The following code example shows how to customize the baseline tooltip in Gantt.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -185,7 +185,7 @@ A baseline tooltip can be customized using the [`tooltipSettings.baseline`](http
 
 ### Timeline tooltip
 
-A timeline tooltip can be customized using the [`tooltipSettings.timeline`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#timeline) property. This allows modifying the appearance and content of the tooltip displayed over the timeline. The following code example shows how to customize the timeline tooltip in Gantt.
+A timeline tooltip can be customized using the [tooltipSettings.timeline](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings#timeline) property. This allows modifying the appearance and content of the tooltip displayed over the timeline. The following code example shows how to customize the timeline tooltip in Gantt.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

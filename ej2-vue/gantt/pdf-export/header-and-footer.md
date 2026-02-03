@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and footer of PDF export in Vue Gantt component | Syncfusion
-description: Learn here all about Header and footer of PDF export in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Header and footer of PDF export in Vue Gantt Chart component | Syncfusion
+description: Learn here all about Header and footer of PDF export in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Header and footer of PDF export
 platform: ej2-vue
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Customizing header and footer of PDF export in ##Platform_Name## Gantt control
 
-PDF export provides an option to specify and customize text, page number, line and image in header and footer of exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties/).
+PDF export provides an option to specify and customize text, page number, line and image in header and footer of exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties).
 
 ## Write a text in header and footer
 
-This functionality helps to customize the text that appears in the header or footer sections of a PDF document. Text can be added to [header](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfHeader/) or [footer](https://helpej2.syncfusion.com/react/documentation/api/vue/pdfFooter/) of exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties/).
+This functionality helps to customize the text that appears in the header or footer sections of a PDF document. Text can be added to [header](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfHeader) or [footer](https://helpej2.syncfusion.com/react/documentation/api/vue/pdfFooter) of exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties).
 
 * `type` property in the content array indicates the content type, such as 'Text'.
 * `Value` property determines the text. 
@@ -42,7 +42,7 @@ let exportProperties: PdfExportProperties = {
 
 ## Draw a line in header and footer
 
-This functionality helps to customize the line that appears in the header or footer sections of the PDF document. A line can be added to [header](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfHeader/) or [footer](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfFooter/) of the exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties/).
+This functionality helps to customize the line that appears in the header or footer sections of the PDF document. A line can be added to [header](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfHeader) or [footer](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfFooter) of the exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties).
 
 * `type` determines content type, such as 'Line'.
 * `style` is used to set properties like the color (penColor), size (penSize), and style (dashStyle) of the line.
@@ -75,7 +75,7 @@ let exportProperties: PdfExportProperties = {
 
 ## Add page number in header and footer
 
-This feature allows to customize the page number that appears in the header or footer sections of the PDF document. Page numbers can be added in [header](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfHeader/) or [footer](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfFooter/) of the exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/).
+This feature allows to customize the page number that appears in the header or footer sections of the PDF document. Page numbers can be added in [header](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfHeader) or [footer](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfFooter) of the exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties).
 
 * `type` indicates that the content is a page number.
 * `pageNumberType` specifies the type of numbering to be used.
@@ -112,7 +112,7 @@ Supported page number types:
 
 ## Insert an image in header and footer
 
-This feature allows to customize the image that appears in the header or footer sections of the PDF document. Image (Base64 string) can be added in the exported document in [header](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfHeader/) or [footer](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfFooter/) of the exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/).
+This feature allows to customize the image that appears in the header or footer sections of the PDF document. Image (Base64 string) can be added in the exported document in [header](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfHeader) or [footer](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfFooter) of the exported PDF document by using [pdfExportProperties](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties).
 
 * `type` indicates that the content is an image.
 * `src` specifies the source of the image, which should be Base64 string. 
@@ -157,7 +157,7 @@ The below code illustrates the pdf export customization.
 
 ## Disable footer 
 
-By default, the exported PDF file includes a footer. The footer can be disabled by setting the [enableFooter](https://ej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties/#enablefooter) property to `false`. 
+By default, the exported PDF file includes a footer. The footer can be disabled by setting the [enableFooter](https://ej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties#enablefooter) property to `false`. 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

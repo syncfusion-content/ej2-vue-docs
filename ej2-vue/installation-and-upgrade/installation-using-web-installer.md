@@ -15,10 +15,9 @@ You can refer to the [Download](https://ej2.syncfusion.com/vue/documentation/ins
 
 ## Overview
 
-For the Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 product, Syncfusion<sup style="font-size:70%">&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential<sup style="font-size:70%">&reg;</sup> Studio products you have chosen. You can get the most recent version of Essential<sup style="font-size:70%">&reg;</sup> Studio Web Installer [here](https://www.syncfusion.com/account/downloads).
+For the Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 product, Syncfusion<sup style="font-size:70%">&reg;</sup> offers a Web Installer. This installer reduces the download burden by providing a smaller installer that downloads and installs only the selected products. The most recent version of the Essential<sup style="font-size:70%">&reg;</sup> Studio Web Installer is available [here](https://www.syncfusion.com/account/downloads).
 
-The frameworks listed below are supported in this installer.
-
+The frameworks supported by this installer:
 * JavaScript
 * Angular
 * React
@@ -27,18 +26,18 @@ The frameworks listed below are supported in this installer.
 
 ## Installation
 
-The steps below show how to install Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 Web Installer.
+The steps below describe how to install Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 Web Installer.
 1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![license download](images/1.png)
 
-    >Note: The installer wizard extracts the syncfusionejs2webinstaller_{version}.exe dialog, which displays the package’s unzip operation.
+    > Note: The installer wizard displays a dialog showing the package extraction progress.
 
-2. The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Web Installer’s welcome wizard will be displayed. Click the Next button.
+2. The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Web Installer's welcome wizard appears. Click Next.
 
     ![license download](images/2.png)
 
-3. The Platform Selection Wizard will appear. From the **Available** tab, select the products to be installed. Select the Install All checkbox to **install all** products.
+3. The Platform Selection Wizard appears. Select products to install from the **Available** tab. Check **Install All** to install all products.
 
     **Available**
 
@@ -50,19 +49,19 @@ The steps below show how to install Essential<sup style="font-size:70%">&reg;</s
 
     ![license download](images/4.png)
 
-    >Important: If the required software for the selected product isn’t already installed, the **Additional Software Required** alert will appear. You can, however, continue the installation and install the necessary software later.
+    > Important: If required software for the selected product is not installed, the **Additional Software Required** alert appears. Installation can proceed, and required software can be installed later.
 
     **Required software**
 
     ![license download](images/5.png)
 
-4. If previous version(s) for the selected products are installed, the Uninstall previous version wizard will be displayed. You can see the list of previously installed versions for the products you’ve chosen here. To remove all versions, check the **Uninstall All** checkbox. Click the Next button.
+4. If previous versions of the selected products are installed, the Uninstall Previous Version wizard appears. View the list of previously installed versions. Check **Uninstall All** to remove all previous versions. Click Next.
 
     ![license download](images/6.png)
 
-    >Note: From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
+    > Note: Starting from 2021 Volume 1, Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall versions from 18.1 onward when installing a new version.
 
-5. Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
+5. A pop-up appears to confirm uninstallation of selected previous versions.
 
     ![license download](images/7.png)
 
@@ -143,8 +142,7 @@ You can uninstall all the installed products by selecting the **Syncfusion<sup s
     **Available**
     ![license download](images/u5.png)
 
-2. If any other products selected for installation, Uninstall previous version wizard will be displayed with previous version(s) installed for the selected products. Here you can view the list of installed previous versions for the selected products. Select **Uninstall All** checkbox to select all the versions. Click Next.
-
+2. If other products are selected for installation, the Uninstall Previous Version wizard appears with previous versions installed for the selected products. Check **Uninstall All** to select all versions. Click Next.
     ![license download](images/u6.png)
 
 3. Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
@@ -157,7 +155,7 @@ You can uninstall all the installed products by selecting the **Syncfusion<sup s
 
     >Note: By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
 
-5. The Configuration Wizard will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
+5. The Configuration Wizard appears. Change Download, Install, and Demos locations if desired. Modify Additional settings as needed. Click Next to proceed with default settings.
 
     ![license download](images/u9.png)
 
@@ -169,7 +167,7 @@ You can uninstall all the installed products by selecting the **Syncfusion<sup s
 
     >Important: The products you have chosen will be installed based on your Syncfusion<sup style="font-size:70%">&reg;</sup> License (Trial or Licensed).
 
-8. The download, installation, and uninstallation progresses will be shown.
+8. Download, installation, and uninstallation progress is displayed.
 
     ![license download](images/u11.png)
 

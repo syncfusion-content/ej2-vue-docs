@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Templates in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components are rendered with a pre-defined layout or structure that is used to define how the component should be rendered on the user interface. The user wants to customise the appearance of the component and add functionality that is specific to the needs of the application. Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components have the option to achieve this using template support.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components render with a predefined layout or structure that defines how the component appears in the UI. When you need to customize appearance or add application-specific functionality, Syncfusion<sup style="font-size:70%">&reg;</sup>  Vue components provide template support to achieve this.
 
 ## Types of templates
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components have three types of templates, such as:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support three types of templates:
 
 * [Slot template](#Slot-template)
 * [Inline template](#Inline-template)
@@ -24,7 +24,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components have three types
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components do support [slots](https://vuejs.org/guide/components/slots.html), which can help reduce the number of properties that need to be defined and increase the readability of the component. This is because using slots allows defining the content or behaviour of the component in the parent component rather than in the component's own code. This can make it easier to understand the purpose and functionality of the component at a glance and make the component more modular and flexible.
 
-In the Vue component, the `v-slot` directive is used to define a slot template in the component's template where users can insert custom content. Refer to the following code sample.
+In a Vue component, use the `v-slot` directive to define a slot template where users can insert custom content. See the sample below.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -46,7 +46,7 @@ In the Vue component, the `v-slot` directive is used to define a slot template i
 
 ### Render scope
 
-In a single-page application, there may be a need to access the parent component scope in the template. The slot content has access to the data scope of the parent component. To access the component's data source value inside the template, pass the props ({data}) to the `v-slot` directive. Expressions within the slot can access the component's data source.
+Slot content has access to the parent component scope. To access a component's data source value inside the template, accept props (for example { data }) in the `v-slot` directive. Expressions within the slot can then access the component's data.
 
 ```html
 <template v-slot:templateName="{data}">

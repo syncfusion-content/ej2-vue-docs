@@ -33,7 +33,7 @@ In the following example, AI AssistView component rendered with footer toolbar i
 
 You can use the [toolbarPosition](../api/ai-assistview/footerToolbarSettingsModel#toolbarPosition) property to customize footer toolbar position. It has two modes such as `Inline`, and `Bottom`. By default, the toolbarPosition is `Inline`.
 
-By settings toolbarPosition as `Bottom`, footer items will be rendered at the bottom with a dedicated footer area .
+By settings toolbarPosition as `Bottom`, footer items will be rendered at the bottom with a dedicated footer area.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -253,11 +253,11 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 ```
@@ -303,11 +303,11 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 ```

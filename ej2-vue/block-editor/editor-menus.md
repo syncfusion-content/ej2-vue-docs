@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Editor Menus in Vue Block Editor component
 
-The Block Editor component provides several interactive menus to enhance content creation and editing. These menus offer quick access to various commands and formatting options.
+The Block Editor component includes several intuitive, context-aware menus that streamline content creation and editing. These menus provide quick access to formatting options and commands, improving user productivity.
 
 ## Slash command menu
 
@@ -21,14 +21,14 @@ The Slash Command menu allows users to quickly insert or transform blocks by typ
 
 The Slash Command menu comes with a set of pre-defined commands for all block types:
 
--   **Headings(Level 1 to 4)**: to insert respective heading blocks.
--   **Lists(Bullet, Numbered, Checklist)**: for different list types.
--   **Paragraph**: for standard text blocks.
--   **Image**: for media insertion.
+-   **Headings (Level 1 to 4)**: Inserts a heading block of the corresponding level.
+-   **Lists (Bullet, Numbered, Checklist)**: Creates a block for the specified list type.
+-   **Paragraph**: Inserts a standard text block.
+-   **Image**: Inserts a media block for images.
 -   **Table**: Inserts a table block.
--   **Toggle**: for collapsible content.
--   **Callout**: for highlighting important information.
--   **Utility(Divider, Quote, Code)**: for other utility blocks.
+-   **Toggle**: Creates a collapsible content block.
+-   **Callout**: Inserts a block for highlighting important information.
+-   **Utility (Divider, Quote, Code)**: Inserts a utility block like a divider, quote, or code block.
 
 ### Customize Slash command menu
 
@@ -36,14 +36,14 @@ You can use the [commandMenuSettings](../api/blockeditor#commandmenusettings) pr
 
 ### Events
 
-The following events are available in the Slash Command menu.
+The following events are available for the Slash Command menu:
 
 |Name|Args|Description|
 |---|---|---|
 |[filtering](../api/blockeditor/commandMenuSettingsModel#filtering)|CommandFilteringEventArgs|Triggers when the user types to filter the command menu items.|
 |[itemSelect](../api/blockeditor/commandMenuSettingsModel#itemselect)|CommandItemSelectEventArgs|Triggers when the user clicks on a command menu item.|
 
-Below example demonstrates how to configure the events in the Slash Command menu.
+The following example demonstrates how to customize the Slash Command menu.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -62,22 +62,20 @@ The Context menu appears when a user right-clicks within a specific block. It pr
 
 ### Built-in items
 
-The Context menu offers different built-in options:
+The Context menu offers the following built-in options:
 
--  **Undo/Redo**: Undo and redo actions.
--  **Cut/Copy/Paste**: Standard clipboard actions.
--  **Indent**: Increase or decrease the indent level of the selected block.
--  **Link**: Add or edit a hyperlink.
+-  **Undo/Redo**: Reverses or re-applies the last action.
+-  **Cut/Copy/Paste**: Standard clipboard actions for selected content.
+-  **Indent**: Increases or decreases the indent level of the selected block.
+-  **Link**: Adds or edits a hyperlink for the selected text.
 
 ### Customize Context menu
 
 You can use the [contextMenuSettings](../api/blockeditor#contextmenusettings) property to customize the Context menu. This allows you to add specific actions or modify existing items based on your application needs.
 
-Below example demonstrates how to customize the Context menu.
-
 ### Events
 
-The following events are available in the Context menu.
+The following events are available for the Context menu:
 
 |Name|Args|Description|
 |---|---|---|
@@ -85,7 +83,7 @@ The following events are available in the Context menu.
 |[closing](../api/blockeditor/contextMenuSettingsModel#closing)|ContextMenuClosingEventArgs|Triggers before the context menu closes.|
 |[itemSelect](../api/blockeditor/contextMenuSettingsModel#itemselect)|ContextMenuItemSelectEventArgs|Triggers when a context menu item is clicked.|
 
-Below example demonstrates how to configure the events in the Context menu.
+The following example demonstrates how to customize the Context menu.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -100,22 +98,20 @@ Below example demonstrates how to configure the events in the Context menu.
 
 ## Block action menu
 
-The Block Action menu typically appears next to a block when you hover over it and click on the drag handle icon, offering quick actions specific to that block.
+The Block Action menu appears next to a block when you hover over it and click the drag handle icon, offering quick actions specific to that block.
 
 ### Built-in items
 
 The Block Action menu provides convenient actions for managing individual blocks:
 
--   **Duplicate**: Create a copy of the current block.
--   **Delete**: Remove the block from the editor.
--   **Move Up**: Move the block one level up in the hierarchy.
--   **Move Down**: Move the block one level down in the hierarchy.
+-   **Duplicate**: Creates an exact copy of the current block.
+-   **Delete**: Removes the block from the editor.
+-   **Move Up**: Moves the block one position higher.
+-   **Move Down**: Moves the block one position lower.
 
 ### Customize Block action menu
 
 You can use the [blockActionMenuSettings](../api/blockeditor#blockactionmenusettings) property to customize the Block action menu. This enables you to add block-specific commands that are relevant to your application, allowing for a highly tailored user experience.
-
-Below example demonstrates how to customize the Block action menu.
 
 #### Show or hide tooltip
 
@@ -123,7 +119,7 @@ By default, a tooltip is displayed when the user hovers over an action item. You
 
 ### Events
 
-The following events are available in the Block action menu.
+The following events are available for the Block action menu:
 
 |Name|Args|Description|
 |---|---|---|
@@ -131,7 +127,7 @@ The following events are available in the Block action menu.
 |[closing](../api/blockeditor/blockActionMenuSettingsModel#closing)|BlockActionMenuClosingEventArgs|Triggers when the block action menu is closed.|
 |[itemSelect](../api/blockeditor/blockActionMenuSettingsModel#itemselect)|BlockActionItemSelectEventArgs|Triggers when a block action menu item is clicked.|
 
-Below example demonstrates how to configure the events in the Blockaction menu.
+The following example demonstrates how to customize the Block action menu.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -150,13 +146,13 @@ The Inline Toolbar appears when a text is selected in the editor, providing quic
 
 ### Built-in items
 
-The Inline Toolbar includes below built-in formatting options:
+The Inline Toolbar includes the following built-in formatting options:
 
--   **Text Styles**: Bold, Italic, Underline, Strikethrough.
+-   **Text Styles**: Bold, Italic, Underline, and Strikethrough.
 -   **Superscript/Subscript**: For mathematical or scientific notations.
--   **Case Conversion**: Uppercase, Lowercase.
--   **Text Color**: Change text color.
--   **Background Color**: Change background color.
+-   **Case Conversion**: Change text to uppercase or lowercase.
+-   **Text Color**: Change the color of the selected text.
+-   **Background Color**: Change the background color of the selected text.
 
 ### Customize Inline Toolbar
 
@@ -164,13 +160,13 @@ You can use the [inlineToolbarSettings](../api/blockeditor#inlinetoolbarsettings
 
 ### Events
 
-The following events are available in the Inline Toolbar.
+The following events are available for the Inline Toolbar:
 
 |Name|Args|Description|
 |---|---|---|
 |[itemClick](../api/blockeditor/inlineToolbarSettingsModel#itemclick)|ToolbarItemClickEventArgs|Triggers when the user clicks on an inline toolbar item.|
 
-Below example demonstrates how to configure the events in the Inline Toolbar.
+The following example demonstrates how to customize the Inline Toolbar.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

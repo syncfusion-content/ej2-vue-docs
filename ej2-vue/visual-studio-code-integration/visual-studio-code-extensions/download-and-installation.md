@@ -10,19 +10,14 @@ domainurl: ##DomainURL##
 
 # Download and Installation
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio Code extension in [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Angular-VSCode-Extensions). You can either install it from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
-
+Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio Code extension in the Visual Studio Code Marketplace. Install the extension either directly from Visual Studio Code or from the Marketplace website.
 ## Prerequisites
 
 The following prerequisites software needs to be installed for the Syncfusion<sup style="font-size:70%">&reg;</sup> Web extension installation and for creating the Syncfusion<sup style="font-size:70%">&reg;</sup> Web applications along with any one of the Framework(React, Pure React, Angular, and Vue).
 
-* [Visual Studio Code](https://code.visualstudio.com/download)
-
- > The minimum version of the Visual Studio Code is 1.38.0 to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Web Extension.
-
-* [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
-
-* [Node.js](https://nodejs.org/en/download/)
+* [Visual Studio Code](https://code.visualstudio.com/download) — minimum version 1.38.0
+* [C# Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+* [Node.js](https://nodejs.org/en/download/) — install a current LTS version
 
 ## Install through the Visual Studio Code extensions
 

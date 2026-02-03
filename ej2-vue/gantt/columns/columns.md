@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Columns in Vue Gantt component | Syncfusion
-description: Learn here all about Columns in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
-control: Columns 
+title: Columns in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about columns in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
+control: Columns
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in Vue Gantt component
+# Columns in Vue Gantt Chart Component
 
-The column displays information from a bound data source, and you can edit the values of column to update the task details through TreeGrid. The operations such as sorting, filtering, and searching can be performed based on column definitions. To display a Gantt column, the [`field`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#field) property should be mapped from the data source to the column.
+Columns display information from the bound data source, and you can edit column values to update task details through the TreeGrid. Operations such as sorting, filtering, and searching can be performed based on column definitions. To display a Gantt Chart column, the [field](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#field) property should be mapped from the data source to the column.
 
-> If the column [`field`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#field) is not specified in the dataSource, the column values will be empty.
+> If the column [field](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#field) is not specified in the data source, the column values will be empty.
 
-The [`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#treecolumnindex) property is used to define the expander column in the Gantt component to expand and collapse the child rows.
+The [treeColumnIndex](https://ej2.syncfusion.com/vue/documentation/api/gantt#treecolumnindex) property is used to define the expander column in the Gantt Chart component to expand and collapse child rows.
 
-To learn about Gantt Chart Customize Column Data, you can check on this video:
+To learn about customizing Gantt Chart column data, you can check this video:
 {% youtube "https://www.youtube.com/watch?v=LvB4lvlm1J8" %}
 
 ## Defining columns
 
-Using the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#columns) property, you can define the columns in Gantt. If the columns are not defined, then the default columns will be rendered based on the mapped data source fields in the [`taskFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskfields) property. Refer to the following code example for defining the columns in Gantt along with their widths.
+Using the [columns](https://ej2.syncfusion.com/vue/documentation/api/gantt#columns) property, you can define the columns in the Gantt Chart. If columns are not defined, default columns will be rendered based on the mapped data source fields in the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt#taskfields) property. Refer to the following code example for defining columns with widths.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,12 +31,12 @@ Using the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#co
 {% include code-snippet/gantt/columns-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs14" %}
 
 ## Custom column header
 
-The column header text can be defined using the [`headerText`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#headertext) property, and you can customize the column headers using the [`headerTemplate`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#headertemplate) property.
+The column header text can be defined using the [headerText](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#headertext) property. You can also customize column headers using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#headertemplate) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -46,12 +46,12 @@ The column header text can be defined using the [`headerText`](https://ej2.syncf
 {% include code-snippet/gantt/columns-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs15" %}
 
 ## Format
 
-To format the cell values based on a specific culture, use the [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#format) property. The Gantt component uses the [`Internationalization`](../../common/internationalization/) library to format `number` and `date` values.
+To format cell values based on a specific culture, use the [columns.format](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#format) property. The Gantt Chart component uses the [Internationalization](../../common/internationalization) library to format `number` and `date` values.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,34 +61,34 @@ To format the cell values based on a specific culture, use the [`columns.format`
 {% include code-snippet/gantt/columns-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs16" %}
 
-> By default, the number and date values are formatted in `en-US` culture.
+> By default, number and date values are formatted in the `en-US` culture.
 
 ### Number formatting
 
-The number or integer values can be formatted using the following format strings.
+Number or integer values can be formatted using the following format strings:
 
-Format |Description |Remarks
------|-----
-N | Denotes numeric type. | The numeric format is followed by an integer value like N2 or N3, which denotes the number of precisions to be allowed.
-C | Denotes currency type. | The currency format is followed by an integer value like C2 or C3, which denotes the number of precisions to be allowed.
-P | Denotes percentage type | The percentage format expects the input value to be in the range of 0 to 100. For example, the cell value `0.2` is formatted as `20%`. The percentage format is followed by an integer value like P2, P3, which denotes the number of precisions to be allowed.
+Format | Description | Remarks
+-----|-------------|---------
+N | Numeric type | Followed by precisions like N2, N3, etc.
+C | Currency type | Followed by precisions like C2, C3, etc.
+P | Percentage type | Expects a value from 0 to 1. Example: `0.2` formats to `20%`.
 
 ### Date formatting
 
-You can format date values either using built-in date format string or custom format string.
+You can format date values using built‑in or custom date format strings.
 
-For the built-in date format, you can specify the [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#format) property as string (example: `yMd`).
+For built‑in date formats, specify the [columns.format](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#format) value as a string (e.g., `yMd`).
 
-You can also use the custom format string to format the date values. Some of the custom formats and the formatted date values are given in the following table.
+You can also use custom format objects. Examples:
 
 Format | Formatted value
------|-----
-{ type:'date', format:'dd/MM/yyyy' } | 04/07/1996
-{ type:'date', format:'dd.MM.yyyy' } | 04.07.1996
-{ type:'date', skeleton:'short' } | 7/4/96
+------|-----------------
+{ type: 'date', format: 'dd/MM/yyyy' } | 04/07/1996
+{ type: 'date', format: 'dd.MM.yyyy' } | 04.07.1996
+{ type: 'date', skeleton: 'short' } | 7/4/96
 { type: 'dateTime', format: 'dd/MM/yyyy hh:mm a' } | 04/07/1996 12:00 AM
 { type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss a' } | 07/04/1996 12:00:00 AM
 
@@ -100,12 +100,12 @@ Format | Formatted value
 {% include code-snippet/gantt/columns-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs17" %}
 
 ## Change tree/expander column
 
-The tree/expander column is a column in the Gantt component, that has icons to expand or collapse the parent records. You can define the tree column index in the Gantt component by using the [`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#treecolumnindex) property and the default value of this property is `0`. The following code example shows how to use this property.
+The tree/expander column contains icons to expand or collapse parent records. You can define the tree column index using the [treeColumnIndex](https://ej2.syncfusion.com/vue/documentation/api/gantt#treecolumnindex) property. Its default value is `0`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -115,12 +115,12 @@ The tree/expander column is a column in the Gantt component, that has icons to e
 {% include code-snippet/gantt/columns-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs19" %}
 
-## Show or Hide columns dynamically
+## Show or hide columns dynamically
 
-You can show or hide gantt columns dynamically using external buttons by invoking the [`showColumn`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#showcolumn) or [`hideColumn`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#hidecolumn) method.
+You can show or hide Gantt Chart columns dynamically using external buttons by invoking the [showColumn](https://ej2.syncfusion.com/vue/documentation/api/gantt#showcolumn) or [hideColumn](https://ej2.syncfusion.com/vue/documentation/api/gantt#hidecolumn) methods.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -130,12 +130,16 @@ You can show or hide gantt columns dynamically using external buttons by invokin
 {% include code-snippet/gantt/columns-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs20" %}
 
-## Controlling Gantt column actions
+## Controlling Gantt Chart column actions
 
-You can enable or disable gantt action for a particular column by setting the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowfiltering), [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowsorting), [`allowReordering`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowreordering),and [`allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editsettings) properties.
+You can enable or disable Gantt Chart actions for a particular column by using the following properties:  
+[allowFiltering](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowfiltering),  
+[allowSorting](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowsorting),  
+[allowReordering](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowreordering),  
+[allowEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt#editsettings).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -145,21 +149,22 @@ You can enable or disable gantt action for a particular column by setting the [`
 {% include code-snippet/gantt/columns-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs2" %}
 
 ## Column type
 
-Column type can be specified using the `columns.type` property. It specifies the type of data the column binds.
+The column type can be specified using the `columns.type` property. It specifies the type of data bound to the column.
 
-If the `format` is defined for a column, the column uses `type` to select the appropriate format option [number](https://ej2.syncfusion.com/vue/documentation/common/internationalization/#number-formatting) or [date](https://ej2.syncfusion.com/vue/documentation/common/internationalization/#manipulating-datetime).
+If a `format` is defined, the column uses `type` to select an appropriate formatting option such as [number](https://ej2.syncfusion.com/vue/documentation/common/internationalization#number-formatting) or [date](https://ej2.syncfusion.com/vue/documentation/common/internationalization#manipulating-datetime).
 
-Gantt column supports the following types:
-* string
-* number
-* boolean
-* date
-* datetime
+Gantt Chart columns support the following types:
 
-> If the `type` is not defined, it will be determined from the first record of the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#datasource).
-> In case if the first record of the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#datasource) is null/blank value for a column then it is necessary to define the `type` for that column.
+* string  
+* number  
+* boolean  
+* date  
+* datetime  
+
+> If `type` is not defined, it is inferred from the first record of the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource).  
+> If the first record contains a null or blank value, you must explicitly define the column `type`.

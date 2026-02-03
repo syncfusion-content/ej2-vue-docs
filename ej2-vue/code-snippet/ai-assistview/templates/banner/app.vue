@@ -35,11 +35,11 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 
 #aiAssistView .e-view-container {
   margin: auto;

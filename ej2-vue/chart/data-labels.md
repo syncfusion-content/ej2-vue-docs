@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Data labels in Vue Chart component
 
-Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#visible)
-option in the dataLabel. By default, the labels will arrange smartly without overlapping.
+Data labels display the values of data points directly on the chart, reducing the need to reference axes for exact values. Enable data labels by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#visible) option to `true` in the `dataLabel` configuration. Labels automatically adjust to avoid overlapping and maintain readability.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -24,12 +23,11 @@ option in the dataLabel. By default, the labels will arrange smartly without o
         
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs1" %}
 
->Note: To use datalabel feature, we need to inject `DataLabel` into the `provide`.
+> Note: To use the data label feature, the `DataLabel` module must be injected into the `provide`.
 
 ## Position
 
-Using [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#position) property, you can place the label either on
-`Top`, `Middle`,`Bottom` or `Outer` (outer is applicable for column and bar type series).
+Use the [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#position) property to place data labels at `Top`, `Middle`, `Bottom`, or `Outer` (applicable to column and bar series). Appropriate label positioning enhances clarity and preserves chart readability.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,11 +40,11 @@ Using [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLa
         
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs2" %}
 
->Note: The position `Outer` is applicable for column and bar type series.
+> Note: The `Outer` position applies only to column and bar series types.
 
-## Data Label Template
+## Data label template
 
-Label content can be formatted by using the template option. Inside the template, you can add the placeholder text `${point.x}` and `${point.y}` to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#template) property, you can set data label template in chart.
+Customize label content using templates. Use placeholders such as `${point.x}` and `${point.y}` to display data point values. The [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#template) property enables fully customizable and visually rich labels.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -59,9 +57,9 @@ Label content can be formatted by using the template option. Inside the template
         
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs3" %}
 
-## Text Mapping
+## Text mapping
 
-Text from the data source can be mapped using `name` property.
+Display custom text using the `name` property, which maps label text from a specific field in the data source. This feature is useful for descriptive or category‑based labels.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,7 +74,10 @@ Text from the data source can be mapped using `name` property.
 
 ## Format
 
-Data label for the chart can be formatted using [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
+Apply number or date formatting using the  [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#format)  property. Global formatting symbols include:
+- `n` – number format  
+- `p` – percentage format  
+- `c` – currency format  
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -99,55 +100,55 @@ Data label for the chart can be formatted using [`format`](https://ej2.syncfusio
     <td>1000</td>
     <td>n1</td>
     <td>1000.0</td>
-    <td>The number is rounded to 1 decimal place.</td>
+    <td>Rounded to 1 decimal place.</td>
   </tr>
   <tr>
     <td>1000</td>
     <td>n2</td>
     <td>1000.00</td>
-    <td>The number is rounded to 2 decimal places.</td>
+    <td>Rounded to 2 decimal places.</td>
   </tr>
    <tr>
     <td>1000</td>
     <td>n3</td>
     <td>1000.000</td>
-    <td>The number is rounded to 3 decimal place.</td>
+    <td>Rounded to 3 decimal places.</td>
   </tr>
   <tr>
     <td>0.01</td>
     <td>p1</td>
     <td>1.0%</td>
-    <td>The number is converted to percentage with 1 decimal place.</td>
+    <td>Converted to percentage with 1 decimal place.</td>
   </tr>
   <tr>
     <td>0.01</td>
     <td>p2</td>
     <td>1.00%</td>
-    <td>The number is converted to percentage with 2 decimal place.</td>
+    <td>Converted to percentage with 2 decimal places.</td>
   </tr>
    <tr>
     <td>0.01</td>
     <td>p3</td>
     <td>1.000%</td>
-    <td>The number is converted to percentage with 3 decimal place.</td>
+    <td>Converted to percentage with 3 decimal places.</td>
   </tr>
   <tr>
     <td>1000</td>
     <td>c1</td>
     <td>$1000.0</td>
-    <td>The currency symbol is appended to number and number is rounded to 1 decimal place.</td>
+    <td>Currency with 1 decimal place.</td>
   </tr>
    <tr>
     <td>1000</td>
     <td>c2</td>
     <td>$1000.00</td>
-    <td>The currency symbol is appended to number and number is rounded to 2 decimal place.</td>
+    <td>Currency with 2 decimal places.</td>
   </tr>
 </table>
 
 ## Margin
 
-`margin` for data label can be applied to using `left`, `right`, `bottom` and `top` properties.
+Adjust spacing around labels using the `margin` property, which includes `left`, `right`, `bottom`, and `top` values. Margins help prevent labels from overlapping chart elements.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -160,9 +161,9 @@ Data label for the chart can be formatted using [`format`](https://ej2.syncfusio
         
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs6" %}
 
-## DataLabel Rotation
+## Data label rotation
 
-Using `angle` property, you can rotate the data label by its given angle.
+Rotate data labels using the `angle` property. Rotation improves readability when labels are long or when space is limited.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -177,8 +178,7 @@ Using `angle` property, you can rotate the data label by its given angle.
 
 ## Customization
 
-`stroke` and `border` of data label can be customized using `fill` and `border` properties. Rounded corners
-can be customized using `rx` and `ry` properties.
+Enhance label appearance using properties such as `fill` (background), `border`, and corner radius (`rx`, `ry`). Refine text appearance using the `font` settings, which support `color`, `fontFamily`, `fontWeight`, and `size`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -191,12 +191,13 @@ can be customized using `rx` and `ry` properties.
         
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs7" %}
 
->Note: `rx` and `ry` properties requires `border` values not to be null.
+> Note: The `rx` and `ry` properties require non‑null `border` values.
 
-## Customizing Specific Point
+## Customizing a specific point
 
-You can also customize the specific marker and label using [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs)and[`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iTextRenderEventArgs) event. `pointRender` event allows you to change the shape, color and border for a point, whereas the `textRender` event allows you to change the text for the point.
-
+Customize individual markers or labels using the [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs)and[`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iTextRenderEventArgs) events.  
+- `pointRender` modifies shape, color, or border of a point.  
+- `textRender` customizes the label text for specific points.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chart/data-marker/datalabel-cs8/app-composition.vue %}
@@ -210,7 +211,9 @@ You can also customize the specific marker and label using [`pointRender`](http
 
 ## Show percentage based on each series points
 
-You can calculate the percentage value based on the sum for each series using the `seriesRender` and `textRender` events in the chart. In `seriesRender` calculate the sum of each series y values and In `textRender` calculate percentage value based on the sum value and modify the text.
+Calculate and display percentage values based on each series’ total using the `seriesRender` and `textRender` events.  
+- In `seriesRender`, compute the total of `y` values.  
+- In `textRender`, calculate the percentage for each point and update the label text.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -225,11 +228,11 @@ You can calculate the percentage value based on the sum for each series using th
 
 ## Last value label in Vue Chart component
 
-The `lastValueLabel` in a chart allows you to easily display the value of the last data point in a series. This feature provides an intuitive way to highlight the most recent or last data value in a series on your chart.
+The `lastValueLabel` feature highlights the final data point in a series, making the latest trend or value easy to identify.
 
 ### Enable last value label
 
-To show the last value label, make sure the `enable` property inside the `lastValueLabel` settings is set to `true` within the series configuration. 
+Enable the label by setting the `enable` property inside the `lastValueLabel` configuration.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -242,11 +245,11 @@ To show the last value label, make sure the `enable` property inside the `lastVa
 
 {% previewsample "page.domainurl/code-snippet/chart/last-value-label" %}
 
-> Note: To use the last value label feature, inject `LastValueLabel` module into the `provide`.
+> Note: To use the last value label feature, inject the `LastValueLabel` module into the `provide`.
 
 ### Customization
 
-The appearance of the last value label can be customized using style properties such as `font`, `background`, `border`, `dashArray`, `lineWidth`, `lineColor`, `rx`, and `ry` in the lastValueLabel property of the chart series. These settings allow you to tailor the label’s look to align with your desired visual presentation.
+Customize the appearance using properties such as `font`, `background`, `border`, `dashArray`, `lineWidth`, `lineColor`, `rx`, and `ry`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

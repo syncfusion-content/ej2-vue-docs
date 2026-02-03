@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started vue with Vue Gantt component | Syncfusion
-description:  Checkout and learn about Getting started vue with Vue Gantt component of Syncfusion Essential JS 2 and more details.
+title: Getting started vue with Vue Gantt Chart component | Syncfusion
+description:  Checkout and learn about Getting started vue with Vue Gantt Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started vue 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Gantt Component in Vue 3
+# Getting Started with the Vue Gantt Chart component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -18,11 +18,11 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Gantt component](https://www.syncfusion.com/vue-components/vue-Gantt) as an example. To use the Vue Gantt component in the project, the `@syncfusion/ej2-vue-gantt` package needs to be installed using the following command:
+This article uses the [Vue Gantt Chart component](https://www.syncfusion.com/vue-components/vue-Gantt) as an example. To use the Vue Gantt Chart component in the project, the `@syncfusion/ej2-vue-gantt` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-gantt --save
@@ -99,9 +99,9 @@ yarn add @syncfusion/ej2-vue-gantt
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Gantt component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Gantt Chart component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -130,9 +130,9 @@ In this article, `Tailwind3` theme is applied using CSS styles, which are availa
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Gantt component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Gantt Chart component using `Composition API` or `Options API`:
 
-    1.First, import and register the Gantt component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+    1.First, import and register the Gantt Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -160,7 +160,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the Gantt component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource) property and column definitions.
+2.In the `template` section, define the Gantt Chart component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -478,7 +478,7 @@ The output will appear as follows:
 
 ### Using local style
 
-Import the needed css styles for the Gantt component along with dependency styles in the `<style>` section of the `src/App.vue` file as follows.
+Import the needed css styles for the Gantt Chart component along with dependency styles in the `<style>` section of the `src/App.vue` file as follows.
 
 ```
 <style>
@@ -499,7 +499,7 @@ Import the needed css styles for the Gantt component along with dependency style
 
 ```
 
-Note: Gantt component use other Syncfusion<sup style="font-size:70%">&reg;</sup> components too, the dependent component's CSS references need to be added for using all the Gantt functionalities.
+Note: Gantt Chart component use other Syncfusion<sup style="font-size:70%">&reg;</sup> components too, the dependent component's CSS references need to be added for using all the Gantt functionalities.
 
 ### Using CDN link for style
 
@@ -513,7 +513,7 @@ Refer to the Gantt's CDN links as follows.
 
 **Example:**
 
-> Styles: [`https://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css`](https://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css)
+> Styles: [https://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css](https://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css)
 
 ```js
 <!-- Tailwind3 theme used for this sample -->
@@ -535,7 +535,7 @@ Refer to the Gantt's CDN links as follows.
 
 ## Binding Gantt with data
 
-Bind data with the Gantt component by using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#datasource) property. It accepts an array of JavaScript object or the DataManager instance.
+Bind data with the Gantt Chart component by using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource) property. It accepts an array of JavaScript object or the DataManager instance.
 
 ```
 
@@ -612,7 +612,7 @@ export default {
 
 ## Mapping task fields
 
-The data source fields that are required to render the tasks are mapped to the Gantt control using the [`taskFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskfields) property.
+The data source fields that are required to render the tasks are mapped to the Gantt control using the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt#taskfields) property.
 
 ```
 
@@ -690,7 +690,7 @@ export default {
 
 ## Defining timeline
 
-The Gantt has an option to define timeline using [`timelineSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings/) property with various options. Using this property we can customize the Gantt timeline.
+The Gantt has an option to define timeline using [timelineSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings) property with various options. Using this property we can customize the Gantt timeline.
 
 ```
 
@@ -778,7 +778,7 @@ export default {
 
 ## Enable Toolbar
 
-The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) property is used to add the toolbar items like Add, Remove, Edit, Update, Delete, Expand All,Collapse All in Gantt.
+The [toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) property is used to add the toolbar items like Add, Remove, Edit, Update, Delete, Expand All,Collapse All in Gantt.
 
 To use toolbar, inject the `Toolbar` module in the `provide` section.
 
@@ -869,9 +869,9 @@ export default {
 
 ## Enabling editing
 
-The editing feature enables you to edit the tasks in Gantt component. It can be enabled by using the [`editSettings.allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowediting) and [`editSettings.allowTaskbarEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowtaskbarediting) properties.
+The editing feature enables you to edit the tasks in Gantt Chart component. It can be enabled by using the [editSettings.allowEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowediting) and [editSettings.allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) properties.
 
-To use Editing, inject the [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editmodule) module in the `provide` section.
+To use Editing, inject the [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module in the `provide` section.
 
 The following editing options are available to update the tasks in Gantt:
 
@@ -882,7 +882,7 @@ The following editing options are available to update the tasks in Gantt:
 
 ### Cell editing
 
-Modify the task details through cell editing by setting the edit [`mode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#mode) property as `Auto`. To enable edit support [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editmodule) module should be injected in Gantt. If [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editmodule) module is not injected, you cannot do any editing action in Gantt.
+Modify the task details through cell editing by setting the edit [mode](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#mode) property as `Auto`. To enable edit support [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module should be injected in Gantt. If [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module is not injected, you cannot do any editing action in Gantt.
 
 ```
 
@@ -977,7 +977,7 @@ export default {
 
 ### Dialog editing
 
-Modify the task details through dialog by setting edit [`mode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#mode) property as `Dialog`.
+Modify the task details through dialog by setting edit [mode](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#mode) property as `Dialog`.
 
 ```
 
@@ -1056,7 +1056,7 @@ export default {
 
 ### Taskbar editing
 
-Modify the task details through user interaction such as resizing and dragging the taskbar by enabling the [`allowTaskbarEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowtaskbarediting) property.
+Modify the task details through user interaction such as resizing and dragging the taskbar by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) property.
 
 ```
 
@@ -1148,7 +1148,7 @@ export default {
 
 ### Dependency editing
 
-Modify the task dependencies using mouse interactions by enabling the [`allowTaskbarEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowtaskbarediting) property along with mapping the task dependency data source field to the [`dependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) property.
+Modify the task dependencies using mouse interactions by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) property along with mapping the task dependency data source field to the [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#dependency) property.
 
 ```
 
@@ -1241,14 +1241,14 @@ export default {
 
 ## Enabling predecessors or task relationships
 
-Predecessor or task dependency in the Gantt component is used to depict the relationship between the tasks.
+Predecessor or task dependency in the Gantt Chart component is used to depict the relationship between the tasks.
 
 Start to Start (SS) : You cannot start a task until the dependent task starts.
 Start to Finish (SF) : You cannot finish a task until the dependent task finishes.
 Finish to Start (FS) : You cannot start a task until the dependent task completes.
 Finish to Finish (FF) : You cannot finish a task until the dependent task completes.
 
-You can show the relationship in tasks, by using the [`dependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) property as shown in the following code example:
+You can show the relationship in tasks, by using the [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#dependency) property as shown in the following code example:
 
 ```
 
@@ -1328,9 +1328,9 @@ export default {
 ## Assigning resources
 
 You can display and assign the resource for each task in the Gantt control.
-Create a collection of JSON object, which contains id, name, unit and group of the resources and assign it to the [`resources`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#resources) property. 
+Create a collection of JSON object, which contains id, name, unit and group of the resources and assign it to the [resources](https://ej2.syncfusion.com/vue/documentation/api/gantt#resources) property. 
 
-Map these fields to the Gantt control using the [`resourceFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#resourceFields) property.
+Map these fields to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/vue/documentation/api/gantt#resourceFields) property.
 
 ```
 
@@ -1434,9 +1434,9 @@ export default {
 
 ## Enable filtering
 
-The filtering feature enables you to view reduced amount of records based on filter criteria. Gantt provides support for menu filtering support for each columns. It can be enabled by setting the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowfiltering) property to `true` along with injecting the `Filter` module as shown in the following code example. Filtering feature can also be customized using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/filterSettings/) property.
+The filtering feature enables you to view reduced amount of records based on filter criteria. Gantt provides support for menu filtering support for each columns. It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowfiltering) property to `true` along with injecting the `Filter` module as shown in the following code example. Filtering feature can also be customized using the [filterSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/filterSettings) property.
 
-To use Filtering, inject the [`Filter`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#filtermodule) module in the `provide` section.
+To use Filtering, inject the [Filter](https://ej2.syncfusion.com/vue/documentation/api/gantt#filtermodule) module in the `provide` section.
 
 ```
 
@@ -1543,7 +1543,7 @@ export default {
 
 ## Enable Sorting
 
-The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowsorting) property to true. Also, need to inject the `Sort` module in the `provide` section as follow. If we didn't inject the `Sort` module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/sortSettings) property.
+The sorting feature enables the user to order the records. It can be enabled by setting [allowSorting](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowsorting) property to true. Also, need to inject the `Sort` module in the `provide` section as follow. If we didn't inject the `Sort` module, then user not able to sort when click on headers. Sorting feature can be customized using [sortSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/sortSettings) property.
 
 ```
 <template>
@@ -1632,7 +1632,7 @@ export default {
 
 ## Defining event markers
 
-The [`eventMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#eventmarkers) property in Gantt component is used to highlight the important event in Gantt chart part. By using this feature, you can add the lines and label to highlight important days in your project.
+The [eventMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt#eventmarkers) property in Gantt Chart component is used to highlight the important event in Gantt chart part. By using this feature, you can add the lines and label to highlight important days in your project.
 
 To highlight the days, inject the `DayMarkers` module in the `provide` section.
 
@@ -1718,20 +1718,20 @@ Web server will be initiated, Open the quick start app in the browser at port `l
 
 ## Error handling
 
-Error handling is used to identify errors, display them and develop recovery strategies to handle errors from gantt. In Gantt, error handling is done by using the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/gantt/#actionfailure) event. Some of the scenarios that this event handles are:
-* Invalid duration : The [duration](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#duration) field accepts only numerical values with an optional decimal point. Entering non-numerical values triggers the `actionFailure` event and displays issue information in the event argument.
-* Invalid dependency: The [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) field accepts only a number followed by a predecessor type (FS, FF, SS, SF).  Entering invalid values, such as special characters or incorrect predecessor types, triggers the `actionFailure` event and displays issue information in the event argument.
-* Invalid offset : The [offset](https://ej2.syncfusion.com/vue/documentation/api/gantt/iPredecessor/#offset) accepts only numerical values or their word equivalents followed by a unit. Entering invalid values, such as special characters triggers `actionFailure` event and displays issue information in the event argument.
-* Failure to map task fields : The data source fields necessary for rendering tasks should be mapped to the Gantt control using the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/) property. Failure to map `taskFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
-* Failure to map resource fields : To assign resources to a task, resource fields should be mapped to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/resourceFields/). Failure to map `resourceFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
-* Failure to map `isPrimaryKey` : [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#isprimarykey) field is crucial for CRUD operations. Failure to map [id](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#id) column in gantt column collection or [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#isprimarykey) field in one of the columns will trigger `actionFailure` event and display issue information in the event argument.
-* Invalid date format : [format](https://ej2.syncfusion.com/vue/documentation/api/gantt/iTimelineFormatter/) property under `topTier` and `bottomTier` determines how the timelines are displayed in the top tier and bottom tier of the Gantt chart timeline. If the `format` does not contain a valid standard [date format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), it triggers the `actionFailure` event, displaying issue information in the event argument.
-* Failure to map `hasChildMapping` : [hasChildMapping](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#haschildmapping) property should configured for [load-on-demand](https://ej2.syncfusion.com/vue/documentation/gantt/data-binding#load-child-on-demand). Ensure it properly configured in the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/). Failure to map `hasChildMapping` in the `load-on-demand` sample triggers `actionFailure` event and displays issue information in the event argument.
-* Invalid day in event markers : [day](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker/#day) should configured in [eventMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker/) to render striplines in a particular day. Failure to configure the `day` in `eventMarkers` triggers `actionFailure` event and displays issue information in the event argument.
+Error handling is used to identify errors, display them and develop recovery strategies to handle errors from gantt. In Gantt, error handling is done by using the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionfailure) event. Some of the scenarios that this event handles are:
+* Invalid duration : The [duration](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#duration) field accepts only numerical values with an optional decimal point. Entering non-numerical values triggers the `actionFailure` event and displays issue information in the event argument.
+* Invalid dependency: The [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#dependency) field accepts only a number followed by a predecessor type (FS, FF, SS, SF).  Entering invalid values, such as special characters or incorrect predecessor types, triggers the `actionFailure` event and displays issue information in the event argument.
+* Invalid offset : The [offset](https://ej2.syncfusion.com/vue/documentation/api/gantt/iPredecessor#offset) accepts only numerical values or their word equivalents followed by a unit. Entering invalid values, such as special characters triggers `actionFailure` event and displays issue information in the event argument.
+* Failure to map task fields : The data source fields necessary for rendering tasks should be mapped to the Gantt control using the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields) property. Failure to map `taskFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
+* Failure to map resource fields : To assign resources to a task, resource fields should be mapped to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/resourceFields). Failure to map `resourceFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
+* Failure to map `isPrimaryKey` : [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#isprimarykey) field is crucial for CRUD operations. Failure to map [id](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#id) column in gantt column collection or [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#isprimarykey) field in one of the columns will trigger `actionFailure` event and display issue information in the event argument.
+* Invalid date format : [format](https://ej2.syncfusion.com/vue/documentation/api/gantt/iTimelineFormatter) property under `topTier` and `bottomTier` determines how the timelines are displayed in the top tier and bottom tier of the Gantt chart timeline. If the `format` does not contain a valid standard [date format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), it triggers the `actionFailure` event, displaying issue information in the event argument.
+* Failure to map `hasChildMapping` : [hasChildMapping](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#haschildmapping) property should configured for [load-on-demand](https://ej2.syncfusion.com/vue/documentation/gantt/data-binding#load-child-on-demand). Ensure it properly configured in the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields). Failure to map `hasChildMapping` in the `load-on-demand` sample triggers `actionFailure` event and displays issue information in the event argument.
+* Invalid day in event markers : [day](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker#day) should configured in [eventMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker) to render striplines in a particular day. Failure to configure the `day` in `eventMarkers` triggers `actionFailure` event and displays issue information in the event argument.
 
 > Additionally, TreeGrid side error handling information is also displayed from the Gantt `actionFailure` event. For more details on TreeGrid side error handling, refer [here](https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started#handling-errors).
 
-The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/gantt/#actionfailure) event in the Gantt control to display an exception when `isPrimaryKey` is not configured properly in the Gantt Chart column.
+The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionfailure) event in the Gantt control to display an exception when `isPrimaryKey` is not configured properly in the Gantt Chart column.
 
 ```
 <template>

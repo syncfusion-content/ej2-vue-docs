@@ -8,11 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Title and Subtitle in Vue Chart component
+# Title and Subtitle in Vue Chart Component
+
+Chart titles and subtitles help provide context for the visualized data. The title typically indicates the main subject or metric represented in the chart, while the subtitle adds supporting details such as data sources, time ranges, or explanatory notes. Both elements can be customized in terms of position, alignment, and style to align with application design requirements.
 
 ## Chart title
 
-Chart can be given a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#title) property, to show the information about the data plotted.
+Add a chart title using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#title)  property. The title appears at the top of the chart by default and is used to describe the purpose or subject of the visualization.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +29,7 @@ Chart can be given a title using [`title`](https://ej2.syncfusion.com/vue/docume
 
 ### Title position
 
-By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings#position) property in [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#titlestyle), you can position the [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#title) at left, right, top or bottom of the chart. The title is positioned at the top of the chart, by default.
+Use the [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings#position) property within [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#titlestyle) to place the title at the left, right, top, or bottom of the chart. The default position is at the top.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -40,7 +42,7 @@ By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/char
         
 {% previewsample "page.domainurl/code-snippet/chart/chart-title-cs8" %}
 
-* The custom option helps you to position the title anywhere in the chart using [`x`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings#x) and [`y`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings#y) coordinates.
+To manually position the title anywhere within the chart, use the [`x`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings#x) and [`y`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings#y) coordinates.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -55,7 +57,7 @@ By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/char
 
 ### Title alignment
 
-You can align the title to the near, far, or center of the chart using the [`textAlignment`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings#textalignment) property.
+Align the chart title to the near, center, or far side of the chart using the [`textAlignment`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings#textalignment) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

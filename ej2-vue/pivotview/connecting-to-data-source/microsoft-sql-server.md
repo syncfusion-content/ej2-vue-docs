@@ -118,7 +118,7 @@ This section explains how to connect the Pivot Table component to a Microsoft SQ
 2. Ensure your Vue project is configured with the necessary EJ2 Pivot Table dependencies by following the [Getting Started](https://ej2.syncfusion.com/vue/documentation/pivotview/getting-started) documentation.
 
 ### Step 2: Configure the Web API URL in the Pivot Table
-1. In the **App.ts** or **App.js** file, configure the Pivot Table to use the hosted Web API URL (`https://localhost:7139/pivot`) by setting the [url](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings) object.
+1. In the **App.vue** file, configure the Pivot Table to use the hosted Web API URL (`https://localhost:7139/pivot`) by setting the [url](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings) object.
 2. Below is the sample code to configure the Pivot Table to fetch data from the Web API:
 
 ```typescript
@@ -146,11 +146,11 @@ export default {
 ```
 
 ### Step 3: Define the Pivot Table Report
-1. Configure the Pivot Table report in the **App.ts** or **App.js** file to structure the data retrieved from the SQL Server database.
+1. Configure the Pivot Table report in the **App.vue** file to structure the data retrieved from the SQL Server database.
 2. Add fields to the [rows](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings#rows), [columns](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings#columns), [values](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings#values), and [filters](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings#filters) properties of [dataSourceSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings) to define how data fields are organized and aggregated in the Pivot Table.
 3. Enable the field list by setting the [showFieldList](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#showfieldlist) property to **true** and including the `FieldList` module in the services section. This allows users to dynamically add or rearrange fields across the columns, rows, and values axes using an interactive user interface.
 
-Here’s the updated sample code for **App.js** with the report configuration and field list support:
+Here’s the updated sample code for **App.vue** with the report configuration and field list support:
 
 ```typescript
 <template>

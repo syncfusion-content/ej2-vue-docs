@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Theme studio in Vue Appearance component
+# Theme Studio in Vue Appearance component
 
 Theme Studio for Essential<sup style="font-size:70%">&reg;</sup> JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
 
@@ -97,3 +97,9 @@ When you want to change your application theme and UI design in the future, you 
 ![filter-customized](images/filter-customized.png)
 
 **Step 5:** The exported file will contain your latest changes. You can just replace the older custom style with the newer one to refresh your application.
+
+## See also
+
+* [Available themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme)
+* [Common theme variables](https://ej2.syncfusion.com/vue/documentation/appearance/theme#common-variables)
+* [CSS variables for theme customization](https://ej2.syncfusion.com/vue/documentation/appearance/css-variables)

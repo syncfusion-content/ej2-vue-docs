@@ -12,19 +12,18 @@ domainurl: ##DomainURL##
 
 ## Steps to resolve the warning message in Catalina OS or later
 
-   While running Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript - EJ2 Mac Installer on Catalina MacOS or later, the below alert will be displayed.
+While running the Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript - EJ2 Mac Installer on macOS Catalina or later, the alert below may be displayed.
 
    ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)
 
-   If you receive this alert, follow the below steps for the easiest solution.
+If this alert appears, follow these steps:
 
-   1. Right-click the downloaded dmg file.
-   2. Select the "Open With" option and choose "DiskImageMounter (Default)". The following pop-up appears.
+1. Right-click the downloaded .dmg file.
+2. Select "Open With" and choose "DiskImageMounter (Default)". A confirmation pop-up appears.
 
       ![pop-up Image](images/Mac_Catalina_MacOS_Alert2.png)
 
-   3. When you click "Open" the installer window will be opened.
-
+3. Click "Open" to launch the installer window.
 ## Step-by-Step Installation
 
 The steps below show how to install the Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript - EJ2 Mac installer.
@@ -33,11 +32,11 @@ The steps below show how to install the Essential<sup style="font-size:70%">&reg
 
    ![Welcome wizard](images/Mac_Installer1.png)
 
-2. This action will automatically mount the disk image and create a virtual drive on your desktop or in the Finder sidebar.
+2. The disk image will be mounted and a virtual drive is created on the desktop or in Finder.
 
    ![License Agreement](images/Mac_Installer2.png)
 
-3. Copy the mounted disk file.
+3. Copy the mounted disk contents.
 
    ![License Agree Confirmation](images/Mac_Installer3.png)
 
@@ -45,7 +44,7 @@ The steps below show how to install the Essential<sup style="font-size:70%">&reg
 
    ![License Agree Confirmation](images/Mac_Installer4.png)
 
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript - EJ2 Mac installer can be used for development purposes without registering the Unlock key.
+> Note: An unlock key is not required to install the Mac installer. The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript - EJ2 Mac installer can be used for development purposes without registering an unlock key.
 
 5. Now you can open the folder to explore the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio Mac installer.
 
@@ -57,7 +56,7 @@ The steps below show how to install the Essential<sup style="font-size:70%">&reg
 
 ## License key registration in samples
 
-After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the JavaScript - EJ2 Mac installer, please refer to this.
+After installation, a license key is required to register the demo source included with the Mac installer. For instructions on registering the license key for JavaScript - EJ2, refer to:
 
 * [Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in the project](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-project)
 * [Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key in the Nuxt project](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-nuxt-project)

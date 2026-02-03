@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Excel export in Vue Gantt component | Syncfusion
-description: Learn here all about Excel export in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
-control: Excel export 
+title: Excel Export in Vue Gantt Chart Component | Syncfusion
+description: Learn all about Excel export in the Syncfusion Vue Gantt Chart component of Essential JS 2.
+control: Excel export
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel export in Vue Gantt component
+# Excel export in Vue Gantt Chart Component
 
-Gantt supports client-side exporting, which allows you to export its data to the Excel and CSV formats. Use the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#excelexport) and [`csvExport`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#csvexport) methods for exporting. To enable Excel export in the Gantt, set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowexcelexport) to true.
+The Gantt Chart component supports client‑side exporting, allowing you to export its data to Excel and CSV formats. Use the [excelExport](https://ej2.syncfusion.com/vue/documentation/api/gantt#excelexport) and [csvExport](https://ej2.syncfusion.com/vue/documentation/api/gantt#csvexport) methods to perform exporting. To enable Excel export, set the [allowExcelExport](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowexcelexport) property to `true`.
 
-To get a configured Gantt chart Exporting, you can follow the steps outlined in the video linked below:
+To learn how to configure Excel export in the Gantt Chart component, you can follow the steps explained in this video:
 {% youtube "https://www.youtube.com/watch?v=UOx3TGsL48c" %}
 
-To export data to Excel and CSV, inject the `ExcelExport` module in Gantt.
+To export data to Excel or CSV, you must inject the `ExcelExport` module in the Gantt Chart component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,5 +25,5 @@ To export data to Excel and CSV, inject the `ExcelExport` module in Gantt.
 {% include code-snippet/gantt/excel-export-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs2" %}

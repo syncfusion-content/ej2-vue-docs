@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Custom color palette
 
-You can customize the default color of series or points by providing a custom color palette of your choice by
-using the [`palettes`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#palettes) property.
+Customize the default color of series or points by providing a custom color palette using the [`palettes`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#palettes) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -62,9 +61,9 @@ You can differentiate data points based on their y values using [`rangeColorSett
 
 ## Point level customization
 
-Marker, datalabel and fill color of each data point can be customized with
+Marker, data label, and fill color of individual data points can be customized using the 
 [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs) and
-[`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iTextRenderEventArgs) event.
+[`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iTextRenderEventArgs) events.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -83,10 +82,10 @@ Marker, datalabel and fill color of each data point can be customized with
 
 <!-- markdownlint-disable MD036 -->
 
-**Customize the chart background**
+**Customize the Chart Background**
 
 <!-- markdownlint-disable MD013 -->
-Using [`background`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#background) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#border) properties, you can change the background color and border of the chart.
+Using [`background`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#background) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#border) properties on the chart to change its background color and border.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -101,7 +100,7 @@ Using [`background`](https://ej2.syncfusion.com/vue/documentation/api/chart/char
 
 **Chart margin**
 
-You can set margin for chart from its container through [`margin`](https://ej2.syncfusion.com/vue/documentation/api/chart/margin) property.
+Set the chart margin relative to its container using the [`margin`](https://ej2.syncfusion.com/vue/documentation/api/chart/margin) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -116,7 +115,7 @@ You can set margin for chart from its container through [`margin`](https://ej2.s
 
 **Chart area customization**
 
-Using [`background`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartArea#background) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart#border) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartArea#width) property.
+To customize the plotting region (chart area), use the `chartArea` properties: [`background`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartArea#background) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart#border) change the chart area's appearance, and [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartArea#width) adjusts its size.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -146,7 +145,7 @@ You can customize the space between the chart area from its chart container thro
 
 ## Animation
 
-You can customize animation for a particular series using [`animation`](https://ej2.syncfusion.com/vue/documentation/api/chart/animationModel) property. You can enable or disable animation of the series using `enable` property, `duration` specifies the duration of an animation and `delay` allows us to start the animation at desire time.
+Customize animation for a series using the [`animation`](https://ej2.syncfusion.com/vue/documentation/api/chart/animationModel) property. Use `enable` to turn animation on or off; `duration` controls the animation length and `delay` sets when the animation starts.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

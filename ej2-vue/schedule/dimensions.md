@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in Vue Schedule component
+# Dimensions in Vue Schedule Component
 
-The Scheduler dimensions refers to both height and width of the entire layout and it accepts 3 types of values.
+The dimensions of the Schedule component refer to its overall height and width. These properties accept the following value types:
 
 * auto
 * pixel
@@ -31,9 +31,9 @@ When height and width of the Scheduler are set to `auto`, it will try as hard as
         
 {% previewsample "page.domainurl/code-snippet/schedule/dimension-cs1" %}
 
-## Height and Width in pixel
+## Height and Width in Pixel
 
-The Scheduler height and width will be rendered exactly as per the given pixel values. It accepts both string and number values.
+The Schedule component renders its height and width based on exact pixel values when these values are specified. Both string and numeric formats are supported.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -46,9 +46,9 @@ The Scheduler height and width will be rendered exactly as per the given pixel v
         
 {% previewsample "page.domainurl/code-snippet/schedule/dimension-cs2" %}
 
-## Height and Width in percentage
+## Height and Width in Percentage
 
-When height and width of the Scheduler are given as percentage, it will make the Scheduler as wide as the parent container.
+When height and width are defined as percentage values, the Schedule component adjusts proportionally to the size of its parent container.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,8 +61,8 @@ When height and width of the Scheduler are given as percentage, it will make the
         
 {% previewsample "page.domainurl/code-snippet/schedule/dimension-cs3" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> Refer to the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for an overview of capabilities. Explore the [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) for demonstrations of layout and data manipulation.
 
 ## See Also
 
-* [How to Change Scheduler Cell Dimensions](./cell-customization/#setting-cell-dimensions-in-all-views)
+* [How to Change Scheduler Cell Dimensions](./cell-customization#setting-cell-dimensions-in-all-views)

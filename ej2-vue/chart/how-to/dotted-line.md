@@ -12,15 +12,15 @@ domainurl: ##DomainURL##
 
 # Dotted line in Vue Chart component
 
-By using `annotation`, you can add dotted lines in the chart.
+Dotted lines can be added to a chart by using the `annotation` feature. This approach is commonly used to highlight thresholds, reference values, or specific data points without modifying the series itself.
 
-To add dotted lines in the chart, follow the given steps:
+To add dotted lines to the chart, follow the steps below.
 
 **Step 1**:
 
-Initialize the custom elements by using the `annotation` property.
+Initialize the custom elements by using the `annotation` property. Annotations allow custom shapes or HTML elements to be rendered at specific positions within the chart area.
 
-By setting `coordinateUnits` value as `point` in annotation object you can placed dotted lines in the chart based on point x and y values.
+By setting the `coordinateUnits` value to `point` in the annotation object, dotted lines can be positioned based on the corresponding x and y data point values. This ensures that the dotted line aligns accurately with the underlying data points, even when the axis scale or range changes.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,4 +31,3 @@ By setting `coordinateUnits` value as `point` in annotation object you can place
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs28" %}

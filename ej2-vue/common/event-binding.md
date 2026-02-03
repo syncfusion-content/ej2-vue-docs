@@ -10,11 +10,13 @@ domainurl: ##DomainURL##
 
 # Event Binding
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components support Binding of both Custom and Native Events. For more information, refer official [Vue Documentation](https://vuejs.org/v2/guide/events.html)
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components support binding both custom component events and native DOM events. For general Vue guidance, see the official Vue documentation: https://vuejs.org/v2/guide/events.html
 
 ## Custom events
 
-Custom events are the `Component` specific events provided by Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components supported through `v-on` directive. The Syntax for Binding Custom Event is `v-on:event-name="function"`.
+Custom events are component-specific events provided by Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components. Bind them using the v-on directive or its shorthand @. Syntax:
+
+v-on:event-name="handler"  or  @event-name="handler"
 
 Refer the below code snippet for Binding of Custom Events.
 
@@ -51,9 +53,9 @@ const display = () => {
 
 ## Native events
 
-Native events are the DOM events of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component's root element. `.native` modifier for `v-on` directive is used for binding these events. The Syntax for Binding Native Event is `v-on:event-name.native="function"`.
+Native events are DOM events fired by a component's root element. In Vue 2, you bind them with the `.native` modifier:
 
-Refer the below code snippet for Binding Native Events.
+v-on:event-name.native="handler"  or  @event-name.native="handler"
 
 ```
 

@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Data binding in Vue Schedule component
 
-The Scheduler uses `DataManager`, which supports both RESTful data service binding and JavaScript object array binding. The [`dataSource`](../api/schedule/eventSettings/#datasource) property of Scheduler can be assigned either with the instance of `DataManager` or JavaScript object array collection, as it supports the following two kind of data binding methods:
+The Schedule component supports data binding through `DataManager`, which provides both RESTful data-service binding and JavaScript object array binding. The [`dataSource`](../api/schedule/eventSettings#datasource) property can be assigned either a `DataManager` instance or a JavaScript object array. The component supports the following types of data binding:
 
 * Local data
 * Remote data
 
-## Binding local data
+## Binding Local Data
 
-To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](../api/schedule/eventSettings/#datasource) option of the scheduler within the [`eventSettings`](../api/schedule/eventSettings/) property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
+To bind local JSON data to the Schedule component, assign a JavaScript object array to the [`dataSource`](../api/schedule/eventSettings#datasource) property within [`eventSettings`](../api/schedule/eventSettings). Local data can also be supplied as a `DataManager` instance assigned to the Schedule `dataSource` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -32,15 +32,15 @@ To bind local JSON data to the Scheduler, you can simply assign a JavaScript obj
 
 > By default, `DataManager` uses `JsonAdaptor` for binding local data.
 
-> You can also bind different field names to the default event fields as well as include additional `custom fields` to the event object collection which can be referred [here](./appointments/#event-fields).
+> You can also bind different field names to the default event fields as well as include additional `custom fields` to the event object collection which can be referred [here](./appointments#event-fields).
 
-## Binding remote data
+## Binding Remote Data
 
-Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](../api/schedule/eventSettings/#datasource) property within [`eventSettings`](../api/schedule/eventSettings/).
+Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](../api/schedule/eventSettings#datasource) property within [`eventSettings`](../api/schedule/eventSettings).
 
 ### Using ODataV4Adaptor
 
-[ODataV4](https://www.odata.org/documentation/) is a standardized protocol for creating and consuming data. Refer to the following code example to retrieve the data from ODataV4 service using the DataManager. To connect with ODataV4 service end points, it is necessary to make use of `ODataV4Adaptor` within `DataManager`.
+[ODataV4](https://www.odata.org/documentation/) is a standardized protocol for creating and consuming data services. The following example demonstrates retrieving data from an ODataV4 service using `DataManager`. To connect with ODataV4 service endpoints, use `ODataV4Adaptor`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -53,9 +53,9 @@ Any kind of remote data services can be bound to the Scheduler. To do so, create
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs2" %}
 
-### Filter events using the in-built query
+### Filter Events using the in-built Query
 
-To enable server-side filtering operations based on predetermined conditions, the [`includeFiltersInQuery`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventsettingsmodel/#includefiltersinquery) API can be set to true, this allows the filter query to be constructed using the start date, end date, and recurrence rule which in turn enables the request to be filtered accordingly.
+To enable server-side filtering operations based on predetermined conditions, the [`includeFiltersInQuery`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventsettingsmodel#includefiltersinquery) API to **true**. This constructs a filter query using the start date, end date, and recurrence rule, ensuring that only relevant data is requested from the server.
 
 This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
 
@@ -74,9 +74,9 @@ The following image represents how the parameters are passed using ODataV4 filte
 
 ![ODataV4 filter](images/odatav4-filter.png)
 
-### Using custom adaptor
+### Using Custom Adaptor
 
-It is possible to create your own custom adaptor by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to add a custom field `EventID` for the appointments by overriding the built-in response processing using the `processResponse` method of the `ODataV4Adaptor`.
+Custom adaptors can be created by extending available built‑in adaptors. The following example demonstrates the custom adaptor usage and how to add a custom field `EventID` for the appointments by overriding the built-in response processing using the `processResponse` method of the `ODataV4Adaptor`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -89,9 +89,9 @@ It is possible to create your own custom adaptor by extending the built-in avail
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs3" %}
 
-## Loading data via AJAX post
+## Loading Data via AJAX Post
 
-You can bind the event data through external ajax request and assign it to the [`dataSource`](../api/schedule/eventSettings#datasource) property of Scheduler. In the following code example, we have retrieved the data from server with the help of ajax request and assigned the resultant data to the `dataSource` property of Scheduler within the `onSuccess` event of Ajax.
+The event data can be loaded using an external AJAX request and assigned to the [`dataSource`](../api/schedule/eventSettings#datasource) property of Scheduler. In the following example, data is retrieved from the server through an AJAX call and assigned to the Schedule component inside the `onSuccess` callback.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -165,9 +165,9 @@ export default {
 
 > Definition for the controller method `GetData` can be referred [here](#scheduler-crud-actions).
 
-## Passing additional parameters to the server
+## Passing Additional Parameters to the Server
 
-To send an additional custom parameter to the server-side post, you need to make use of the `addParams` method of `Query`. Now, assign this `Query` object with additional parameters to the [`query`](../api/schedule/eventSettings/#query) property of Scheduler.
+To send an additional custom parameter to the server-side post, you need to make use of the `addParams` method of `Query`. Now, assign this `Query` object with additional parameters to the [`query`](../api/schedule/eventSettings#query) property of Scheduler.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -180,13 +180,13 @@ To send an additional custom parameter to the server-side post, you need to make
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs4" %}
 
-> The parameters added using the [`query`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#query) property will be sent along with the data request sent to the server on every scheduler actions.
+> The parameters added using the [`query`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#query) property will be sent along with the data request sent to the server on every scheduler actions.
 
-## Handling failure actions
+## Handling Failure Actions
 
-During the time of Scheduler interacting with server, there are chances that some server-side exceptions may occur. You can acquire those error messages or exception details in client-side using the [`actionFailure`](../api/schedule/#actionfailure) event of Scheduler.
+During the time of Scheduler interacting with server, there are chances that some server-side exceptions may occur. You can acquire those error messages or exception details in client-side using the [`actionFailure`](../api/schedule#actionfailure) event of Scheduler.
 
-The argument passed to the [`actionFailure`](../api/schedule/#actionfailure) event contains the error details returned from the server.
+The argument passed to the [`actionFailure`](../api/schedule#actionfailure) event contains the error details returned from the server.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -199,9 +199,9 @@ The argument passed to the [`actionFailure`](../api/schedule/#actionfailure) eve
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs5" %}
 
-> The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
+> The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/schedule#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
 
-## Scheduler CRUD actions
+## Scheduler CRUD Actions
 
 The CRUD (Create, Read, Update and Delete) actions can be performed easily on Scheduler appointments using the various adaptors available within the `DataManager`. Most preferably, we will be using `UrlAdaptor` for performing CRUD actions on scheduler appointments.
 
@@ -380,7 +380,7 @@ namespace ScheduleSample.Controllers
 
 ## Configuring Scheduler with Google API service
 
-We have assigned our custom created Google Calendar url to the DataManager and assigned the same to the Scheduler [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#datasource). Since the events data retrieved from the Google Calendar will be in its own object format, therefore it needs to be resolved manually within the Scheduler’s [`dataBinding`](https://ej2.syncfusion.com/vue/documentation/api/schedule#databinding) event. Within this event, the event fields needs to be mapped properly and then assigned to the result.
+A custom Google Calendar URL can be assigned to the DataManager, which is then used as the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#datasource). Since the events data retrieved from the Google Calendar will be in its own object format, therefore it needs to be resolved manually within the Scheduler’s [`dataBinding`](https://ej2.syncfusion.com/vue/documentation/api/schedule#databinding) event. Within this event, the event fields needs to be mapped properly and then assigned to the result.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -393,4 +393,4 @@ We have assigned our custom created Google Calendar url to the DataManager and a
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs6" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> For more information, refer to the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations and explore the [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) to knows how to present and manipulate data.

@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Download JavaScript – EJ2 Installer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 installer can be downloaded from the Syncfusion<sup style="font-size:70%">&reg;</sup> website. You can either download the licensed installer or try our trial installer depending on your license.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 installer can be downloaded from the Syncfusion<sup style="font-size:70%">&reg;</sup> website. Download either the licensed installer or the trial installer depending on the license type.
 
 * Trial Installer
 * Licensed Installer
 
 ## Download the trial version
 
-Our 30-day trial can be downloaded in two ways.
+The 30-day trial can be downloaded in two ways:
 
 * Download free trial setup
 * Start trials if using components [through npm](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-vue)
@@ -74,9 +74,9 @@ You should initiate an evaluation if you have already obtained our components th
 
 3. Begin your trial by selecting the JavaScript – EJ2 product.
 
-    >Note: If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
-
-4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/start-trials) page to get the latest version trial installer. You can generate the [unlock](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) key here at any time before the trial period expires. (See the screenshot below.)
+    > Note: If trial products have already been used and have not expired, starting a new trial for the same product is not possible.
+    
+4. After starting the trial, visit the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/start-trials) page to download the latest trial installer. Generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) at any time before the trial expires (see screenshot below).
 
     ![start trial download installer](images/start-trial-download-installer.png)
 
@@ -84,20 +84,20 @@ You should initiate an evaluation if you have already obtained our components th
 
 ### Download the license version
 
-1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page under the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
-2. You can view all the licenses (both active and expired) associated with your account.
+2. All licenses (both active and expired) associated with the account can be viewed.
 
-3. Click the Download (element 1 in the screenshot below) button to download the respective product’s installer.
+3. Click the **Download** button (element 1 in the screenshot below) to download the respective product's installer.
 
-4. The most recent version of the installer will be downloaded from this page.
+4. The most recent version of the installer is downloaded from this page.
 
-5. To download older version installers, go to [Downloads Older Versions](https://www.syncfusion.com/account/downloads/studio) (element 2 in the screenshot below).
+5. To download older version installers, visit [Downloads Older Versions](https://www.syncfusion.com/account/downloads/studio) (element 2 in the screenshot below).
 
-6. You can download other platform/add-on installers by going to More Downloads Options (element 3 in the screenshot below).
+6. Download other platform/add-on installers by selecting **More Downloads Options** (element 3 in the screenshot below).
 
 7. For Windows OS, EXE and Zip formats are available for download. They are both Offline Installers.
 
     ![license download](images/license-download.png)
 
-You can also refer to the [Online installer](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/installation-using-web-installer) and [Offline installer](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/installation-using-offline-installer) links for step-by-step installation guidelines.
+For step-by-step installation guidelines, refer to the [Online installer](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/installation-using-web-installer) and [Offline installer](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/installation-using-offline-installer) documentation.

@@ -61,4 +61,4 @@ var Promise = require('es6-promise').Promise;
 
 ```
 
-For further details, refer to the link [here](https://github.com/stefanpenner/es6-promise).
+* [ES6 Promise (es6-promise) GitHub](https://github.com/stefanpenner/es6-promise)

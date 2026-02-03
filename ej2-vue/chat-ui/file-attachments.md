@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # File Attachments in Vue Chat UI control
 
-The Chat UI component supports message attachments, enabling users to upload and send files (images, documents, and more) alongside messages for richer, more contextual conversations. Enable this functionality using the [enableAttachments](https://ej2.syncfusion.com/vue/documentation/api/chat-ui#enableAttachments) property and customize the behavior through the [attachmentSettings](https://ej2.syncfusion.com/vue/documentation/api/chat-ui#attachmentSettings) configuration.
+The Chat UI component supports message attachments, enabling users to upload and send files (images, documents, and more) alongside messages for richer, more contextual conversations. Enable this functionality using the [enableAttachments](https://ej2.syncfusion.com/vue/documentation/api/chat-ui/index-default#enableattachments) property and customize the behavior through the [attachmentSettings](https://ej2.syncfusion.com/vue/documentation/api/chat-ui/index-default#attachmentsettings) configuration.
 
 ## Enable file attachments
 

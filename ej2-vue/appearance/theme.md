@@ -38,9 +38,12 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue library has provided th
 
 ## Optimized CSS files
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components provide two size modes for each theme: **normal** and **bigger**. 
 
-The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of components.
+- **Normal size mode** (default): Provides standard sizing suitable for desktop and general-purpose applications
+- **Bigger size mode**: Increases element sizes, spacing, and touch targets for enhanced touch interactions and accessibility
+
+By default, theme files include styles for both modes, which increases file size. To optimize performance, Syncfusion<sup style="font-size:70%">&reg;</sup> offers **lite** theme files containing only normal mode styles.
 
 Below is a comparison of the Button component in normal and bigger size modes:
 

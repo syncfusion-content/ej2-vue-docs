@@ -1,16 +1,17 @@
----
+
+--
 layout: post
-title: Maintain record index in Vue Gantt component | Syncfusion
-description: Learn here all about Maintain record index in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
-control: Maintain record index 
+title: Maintain Record Index In Vue Gantt Chart Component | Syncfusion
+description: Learn here all about Maintain record index in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
+control: Maintain record index
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maintain record index in Vue Gantt component
+# Maintain Record Index In Vue Gantt Chart Component
 
-Row dropped record’s index position can be maintained in the Gantt chart by changing the database table index position using the `rowDrop` event. In this event, the `fromIndex` and `dropIndex` values can be passed to the server side using Ajax request. On the server side, the `insert` and `insertAtTop` methods are used to update the row index position. The following code snippets explain the solution.
+Row dropped record’s index position can be maintained in the Gantt Chart by changing the database table index position using the `rowDrop` event. In this event, the `fromIndex` and `dropIndex` values can be passed to the server side using an Ajax request. On the server side, the `insert` and `insertAtTop` methods are used to update the row index position. The following code snippets explain the solution.
 
 ```ts
 

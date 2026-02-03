@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Multiple gantt exporting in Vue Gantt component | Syncfusion
-description: Learn here all about Multiple gantt exporting in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
-control: Multiple gantt exporting 
+title: Multiple Gantt Exporting in Vue Gantt Chart Component | Syncfusion
+description: Learn how to perform multiple Gantt Chart exports in the Syncfusion Vue Gantt Chart component.
+control: Multiple gantt exporting
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple gantt exporting in Vue Gantt component
+# Multiple Gantt exporting in Vue Gantt Chart Component
 
-In Gantt, the Excel export provides support to export multiple Gantt data in new sheet or same sheet.
+The Gantt Chart component provides support for exporting multiple Gantt Chart instances into Excel. You can export them either into a single sheet or multiple sheets based on your requirements.
 
 ## Same sheet
 
-The Excel export provides support to export multiple Gantt data in the same sheet. To export in same sheet, define `multipleExport.type` as `AppendToSheet` in `ExcelExportProperties`. You can also provide blank rows between exported multiple Gantt data. These blank rows count can be defined using `multipleExport.blankRows`.
+The Excel export feature allows exporting multiple Gantt Chart data sets into the same sheet. To export them in the same sheet, set `multipleExport.type` to `AppendToSheet` in the `ExcelExportProperties`.  
+You can also add blank rows between exported Gantt Chart data by defining the `multipleExport.blankRows` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -24,14 +25,14 @@ The Excel export provides support to export multiple Gantt data in the same shee
 {% include code-snippet/gantt/excel-export-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs3" %}
 
->By default, `multipleExport.blankRows` value is 5.
+> By default, the value of `multipleExport.blankRows` is **5**.
 
 ## New sheet
 
-The Excel exporting provides support to export multiple Gantt in new sheet. To export in new sheet, define `multipleExport.type` as `NewSheet` in `ExcelExportProperties`.
+The Excel export feature also allows exporting multiple Gantt Chart instances into separate sheets. To export each Gantt Chart in a new sheet, set `multipleExport.type` to `NewSheet` in the `ExcelExportProperties`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -41,16 +42,16 @@ The Excel exporting provides support to export multiple Gantt in new sheet. To e
 {% include code-snippet/gantt/excel-export-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs4" %}
 
 ## Customize the Excel export
 
-Gantt Excel export allows the users to customize the exported document based on requirement.
+The Gantt Chart Excel export supports several customization options to tailor the exported document to your needs.
 
 ### Export hidden columns
 
-In Gantt, the Excel export provides an option to export hidden columns by defining `includeHiddenColumn` as `true`.
+You can export hidden columns by setting the `includeHiddenColumn` property to `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -60,16 +61,15 @@ In Gantt, the Excel export provides an option to export hidden columns by defini
 {% include code-snippet/gantt/excel-export-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs5" %}
 
-### Show or hide columns on exported Excel
+### Show or hide columns during export
 
-In Gantt, while exporting, you can show a hidden column or hide a visible column using the [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbarclick) and [`excelExportComplete`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#excelexportcomplete) events.
+During Excel export, you can dynamically show or hide columns using the https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbarclick and https://ej2.syncfusion.com/vue/documentation/api/gantt#excelexportcomplete events.
 
-In the `toolbarClick` event, using the `args.item.id` property, you can show or hide columns by setting the `column.visible` property to `true` or `false` respectively.
-
-Similarly, in the excelExportComplete event, you can revert the columns visibility back to the previous state.
+- In the `toolbarClick` event, use the `args.item.id` property to modify `column.visible` to show or hide columns.
+- In the `excelExportComplete` event, you can revert the columns to their original visibility.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -79,14 +79,15 @@ Similarly, in the excelExportComplete event, you can revert the columns visibili
 {% include code-snippet/gantt/excel-export-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs6" %}
 
 ### Cell formatting during export
 
-In Gantt, you can customize the TreeGrid cells in the exported document using the [`excelQueryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#excelquerycellinfo)event. In this event, you can format the TreeGrid cells of exported Excel and CSV documents based on the required condition.
+You can customize the TreeGrid cells in the exported document using the https://ej2.syncfusion.com/vue/documentation/api/gantt#excelquerycellinfo event.  
+In this event, you can apply conditional formatting to Excel and CSV exports.
 
-In the following sample, the background color has been customized for `TaskID` column in the exported Excel using the `args.style` and `backColor` properties.
+In the example below, the background color is customized for the `TaskID` column using the `args.style.backColor` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -96,14 +97,12 @@ In the following sample, the background color has been customized for `TaskID` c
 {% include code-snippet/gantt/excel-export-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs7" %}
 
 ### Theme
 
-The Excel export also provides an option to include custom theme for exported Excel document.
-
-To apply theme in exported Excel, define the `theme` in `ExcelExportProperties`.
+You can apply custom themes to the exported Excel document by defining the `theme` property in `ExcelExportProperties`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -113,14 +112,14 @@ To apply theme in exported Excel, define the `theme` in `ExcelExportProperties`.
 {% include code-snippet/gantt/excel-export-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs8" %}
 
-> By default, tailwind3 theme is applied to the exported Excel document.
+> By default, the **Tailwind CSS v3** theme is applied to exported Excel files.
 
 ### Add header and footer
 
-The Excel export also allows users to include header and footer contents to the exported Excel document.
+You can include custom header and footer content in the exported Excel document.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -130,12 +129,12 @@ The Excel export also allows users to include header and footer contents to the 
 {% include code-snippet/gantt/excel-export-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs9" %}
 
 ### File name for exported document
 
-You can set the required file name for the exported document by defining the `fileName` property in `ExcelExportProperties`.
+You can define a custom file name for the exported Excel document using the `fileName` property of the `ExcelExportProperties`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -145,5 +144,5 @@ You can set the required file name for the exported document by defining the `fi
 {% include code-snippet/gantt/excel-export-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/excel-export-cs10" %}

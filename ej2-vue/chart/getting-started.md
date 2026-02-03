@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Chart component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Chart component of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about Getting started with Vue Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
@@ -10,21 +10,24 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component.
+This section provides a step-by-step guide to creating a Vue 2 application using [`Vue CLI`](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component. It helps new users quickly configure a project and render an interactive chart.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/vue/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?**  
+> Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with the Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. It simplifies integration, configuration, and feature discovery through intelligent, context-aware code suggestions and is available in popular AI-powered IDEs such as VS Code, Cursor, and Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio.  
+> [`Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant`](https://ej2.syncfusion.com/vue/documentation/ai-coding-assistant/overview)
 
-To get start quickly with Vue Charts, you can check on this video:
+To get started quickly with Vue Charts, refer to the following introductory video:
 
 {% youtube "https://www.youtube.com/watch?v=RplZL-3B1G4&t=3s" %}
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the required criteria listed in  
+[`System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the chart component.
+The following are the minimum required dependencies to use the Vue Chart component:
 
 ```javascript
 |-- @syncfusion/ej2-vue-charts
@@ -40,7 +43,7 @@ Below is the list of minimum dependencies required to use the chart component.
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [`vue create`](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -66,9 +69,9 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [`npmjs.com`](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Charts component](https://www.syncfusion.com/vue-components/vue-charts) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+This article uses the [`Vue Charts component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -256,4 +259,4 @@ The tooltip is useful when you cannot display information by using the data labe
         
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs2" %}
 
-> You can refer to our [Vue Charts](https://www.syncfusion.com/vue-ui-components/vue-charts) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Charts example](https://ej2.syncfusion.com/vue/demos/#/material/chart/line.html) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our [`Vue Charts`](https://www.syncfusion.com/vue-ui-components/vue-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Vue Charts example`](https://ej2.syncfusion.com/vue/demos/#/material/chart/line.html) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

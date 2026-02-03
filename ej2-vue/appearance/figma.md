@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> offers [Figma UI kits](https://www.figma.com/@syncfusion) to facilitate effective collaboration between designers and developers. The Figma UI kits are available in four themes: [Material 3](https://www.figma.com/community/file/1385969023252455137), [Fluent](https://www.figma.com/community/file/1385969120047188707), [Tailwind](https://www.figma.com/community/file/1385969065626384098), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272). These kits match the themes used in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components.
 
-The kits contain reusable design components with various possible states and variants, along with detailed figures, measurements, and icons, representing the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components.
+Each kit contains reusable design components with states and variants, detailed measurements, and icons that represent Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components.
 
 ![Material 3](./images/material3.png)
 
@@ -26,7 +26,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kit offers the fol
 
 ## Downloading the UI kits
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits are available in the [Figma community](https://www.figma.com/@syncfusion). You can download the Syncfusion<sup style="font-size:70%">&reg;</sup> theme-specific Figma UI kits from the following links:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits are hosted in the [Figma community](https://www.figma.com/@syncfusion). Download the theme-specific kits here:
 
 - [Material 3](https://www.figma.com/community/file/1385969023252455137)
 - [Fluent](https://www.figma.com/community/file/1385969120047188707)
@@ -101,4 +101,4 @@ To upgrade your UI kits, download the latest version from the provided links. Fo
 ## See also
 
 * [Available themes](https://ej2.syncfusion.com/documentation/appearance/theme)
-* [Customizing themes](https://ej2.syncfusion.com/documentation/appearance/theme-studio#customizing-theme-color-from-theme-studio)
+* [Customizing themes with Theme Studio](https://ej2.syncfusion.com/documentation/appearance/theme-studio#customizing-theme-color-from-theme-studio)

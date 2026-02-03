@@ -19,14 +19,14 @@ Each [contentModel](../../api/blockeditor/contentModel) is an object with proper
 
 The Block Editor supports several inline content types through the `ContentType` enum, which can be set using the [contentType](../../api/blockeditor/contentModel#contentType) property.
 
-| Built-in Content Type  | Description                         |
-|------------------------|-------------------------------------|
-| Text                   | Represents plain text content.      |
-| Link                   | Represents a hyperlink.             |
-| Mention                | Represents a user mention.          |
-| Label                  | Represents a label or tag.          |
+| Built-in Content Type | Description                    |
+| ----------------------- | ------------------------------ |
+| Text                    | Represents plain text content. |
+| Link                    | Represents a hyperlink.        |
+| Mention                 | Represents a user mention.     |
+| Label                   | Represents a label or tag.     |
 
-> By default, the content type is set to `Text`.
+By default, the content type is `Text`.
 
 ## Configure text content
 
@@ -80,7 +80,7 @@ Link settings accepts the following options:
 
 ## Configure Label
 
-To render labels, set the [contentType](../../api/blockeditor/contentModel#contentType) property to `Label`. The `properties` property allows you to specify which label to display.
+To render labels, set the [contentType](../../api/blockeditor/contentModel#contentType) property to [Label](../../api/blockeditor/contentType). The `properties` property allows you to specify which label to display.
 
 ### Built-in items
 
@@ -125,7 +125,6 @@ Each item in the [items](../../api/blockeditor/labelSettingsModel#items) array s
 | [groupBy](../../api/blockeditor/labelItemModel#groupBy)         | The category name for grouping similar labels.      |
 | [labelColor](../../api/blockeditor/labelItemModel#labelcolor)   | The background color of the label.                  |
 | [iconCss](../../api/blockeditor/labelItemModel#iconcss)         | A CSS class for an icon to display with the label.  |
-
 
 When users type the trigger character followed by text, a popup will appear showing matching label items from which they can select. The selected label will be inserted into the content as a Label content item.
 
@@ -200,7 +199,7 @@ The `styles` property supports the following options:
 | [lowercase](../../api/blockeditor/styleModel#lowercase)               | Converts the text to lowercase.            | `false`       |
 | [inlineCode](../../api/blockeditor/styleModel#inlineCode)             | Converts the text to InlineCode.           | `false`          |
 
-You can apply one or more of these styles to any content element for rich text formatting:
+You can apply one or more of these styles to any supported content element for rich text formatting.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -18,25 +18,25 @@ The HTML5 JavaScript Scheduler groups the resources based on different criteria.
 
 ## Resource fields
 
-The default options available within the [`resources`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#resources) collection are as follows,
+The default options available within the [`resources`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#resources) collection are as follows,
 
 | Field name      |  Type   | Description |
 |-----------------|---------|----------------|
-| [`field`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#field) | String | A value that binds to the resource field of event object. |
-| [`title`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#title) | String | It holds the title of the resource field to be displayed on the event editor window. |
-| [`name`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#name) | String | A unique resource name used for differentiating various resource objects while grouping. |
-| [`allowMultiple`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#allowmultiple) | Boolean | When set to `true`, allows multiple selection of resource names, thus creating multiple instances of same appointment for the selected resources. |
-| [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#datasource) | Object | Assigns the resource `dataSource`, where data can be passed either as an array of JavaScript objects, or else can create an instance of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) in case of processing remote data and can be assigned to the `dataSource` property. With the remote data assigned to `dataSource`, check the available [adaptors](https://ej2.syncfusion.com/documentation/data/adaptors/) to customize the data processing. |
-| [`query`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#query) | Query | Defines the external [`query`](https://ej2.syncfusion.com/documentation/api/data/query/) that will be executed along with the data processing. |
-| [`idField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#idfield) | String | Binds the resource ID field name from the resources `dataSource`. |
-| [`expandedField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#expandedfield) | String | Binds the `expandedField` name from the resources `dataSource`. It usually holds boolean value which decide whether the resource of timeline views is in collapse or expand state on initial load. |
-| [`textField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#textfield) | String | Binds the text field name from the resources `dataSource`. It usually holds the resource names. |
-| [`groupIDField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#groupidfield) | String | Binds the group ID field name from the resource `dataSource`. It usually holds the value of resource IDs of parent level resources. |
-| [`colorField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#colorfield) | String | Binds the color field name from the resource `dataSource`. The color value mapped in this field will be applied to the events of resources. |
-| [`startHourField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#starthourfield)  | String | Binds the start hour field name from the resource `dataSource`. It allows to provide different work start hour for the resources. |
-| [`endHourField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#expandedfield) | String | Binds the end hour field name from the resource `dataSource`. It allows to provide different work end hour for the resources. |
-| [`workDaysField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#workdaysfield) | String | Binds the work days field name from the resources `dataSource`. It allows to provide different working days collection for the resources. |
-| [`cssClassField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#cssclassfield) | String | Binds the custom CSS class field name from the resources `dataSource`. It maps the CSS class written for the specific resources and applies it to the events of those resources. |
+| [`field`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#field) | String | A value that binds to the resource field of event object. |
+| [`title`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#title) | String | It holds the title of the resource field to be displayed on the event editor window. |
+| [`name`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#name) | String | A unique resource name used for differentiating various resource objects while grouping. |
+| [`allowMultiple`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#allowmultiple) | Boolean | When set to `true`, allows multiple selection of resource names, thus creating multiple instances of same appointment for the selected resources. |
+| [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#datasource) | Object | Assigns the resource `dataSource`, where data can be passed either as an array of JavaScript objects, or else can create an instance of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager) in case of processing remote data and can be assigned to the `dataSource` property. With the remote data assigned to `dataSource`, check the available [adaptors](https://ej2.syncfusion.com/documentation/data/adaptors) to customize the data processing. |
+| [`query`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#query) | Query | Defines the external [`query`](https://ej2.syncfusion.com/documentation/api/data/query) that will be executed along with the data processing. |
+| [`idField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#idfield) | String | Binds the resource ID field name from the resources `dataSource`. |
+| [`expandedField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#expandedfield) | String | Binds the `expandedField` name from the resources `dataSource`. It usually holds boolean value which decide whether the resource of timeline views is in collapse or expand state on initial load. |
+| [`textField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#textfield) | String | Binds the text field name from the resources `dataSource`. It usually holds the resource names. |
+| [`groupIDField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#groupidfield) | String | Binds the group ID field name from the resource `dataSource`. It usually holds the value of resource IDs of parent level resources. |
+| [`colorField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#colorfield) | String | Binds the color field name from the resource `dataSource`. The color value mapped in this field will be applied to the events of resources. |
+| [`startHourField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#starthourfield)  | String | Binds the start hour field name from the resource `dataSource`. It allows to provide different work start hour for the resources. |
+| [`endHourField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#expandedfield) | String | Binds the end hour field name from the resource `dataSource`. It allows to provide different work end hour for the resources. |
+| [`workDaysField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#workdaysfield) | String | Binds the work days field name from the resources `dataSource`. It allows to provide different working days collection for the resources. |
+| [`cssClassField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#cssclassfield) | String | Binds the custom CSS class field name from the resources `dataSource`. It maps the CSS class written for the specific resources and applies it to the events of those resources. |
 
 ## Resource data binding
 
@@ -44,7 +44,7 @@ The data for resources can bind with Scheduler either as a local JSON collection
 
 ### Using local JSON data
 
-The following code example depicts how to bind the local JSON data to the `dataSource` of [`resources`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#resources) collection.
+The following code example depicts how to bind the local JSON data to the `dataSource` of [`resources`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#resources) collection.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -94,14 +94,14 @@ provide('schedule', [Week, Month, Agenda, TimelineViews, TimelineMonth]);
 
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -164,14 +164,14 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -179,7 +179,7 @@ export default {
 
 ### Using remote service URL
 
-The following code example depicts how to bind the remote data for resources `dataSource`.
+Resources can also be retrieved from a remote endpoint using `DataManager` with an adaptor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -232,14 +232,14 @@ provide('schedule', [Week, Month, Agenda, TimelineViews, TimelineMonth]);
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -305,14 +305,14 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -341,7 +341,7 @@ Learn how to add appointments from multiple resources to Vue Scheduler by watchi
         
 {% previewsample "page.domainurl/code-snippet/schedule/multiple-resources-cs1" %}
 
-> Setting [`allowMultiple`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#allowmultiple) to `true` in the above code example allows you to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
+> Setting [`allowMultiple`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#allowmultiple) to `true` in the above code example allows you to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
 
 ## Resource grouping
 
@@ -381,7 +381,7 @@ The following code example depicts how to group the multiple resources on Timeli
 
 ### Grouping single-level resources
 
-This kind of grouping allows the Scheduler to display all the resources at a single level simultaneously. The appointments mapped under resources will be displayed with the colors as per the [`colorField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#colorfield) defined on the resources collection.
+This kind of grouping allows the Scheduler to display all the resources at a single level simultaneously. The appointments mapped under resources will be displayed with the colors as per the [`colorField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#colorfield) defined on the resources collection.
 
 **Example:** To display the Scheduler with single level resource grouping,
 
@@ -400,7 +400,7 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 
 ### Grouping multi-level resources
 
-It is possible to group the resources of Scheduler in multiple levels, by mapping the child resources to each parent resource. In the following example, there are 2 levels of resources, on which the second level resources are defined with [`groupID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#groupidfield) mapping to the first level resource's ID so as to establish the parent-child relationship between them.
+It is possible to group the resources of Scheduler in multiple levels, by mapping the child resources to each parent resource. In the following example, there are 2 levels of resources, on which the second level resources are defined with [`groupID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#groupidfield) mapping to the first level resource's ID so as to establish the parent-child relationship between them.
 
 To get start quickly about Grouping Multiple Resources in Vue Scheduler, you can check on this video:
 
@@ -421,7 +421,7 @@ To get start quickly about Grouping Multiple Resources in Vue Scheduler, you can
 
 ### One-to-One grouping
 
-In multi-level grouping, Scheduler usually groups the resources on the child level based on the [`GroupID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#groupidfield) that maps with the `Id` field of parent level resources (as [`byGroupID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#bygroupid) set to true by default). There are also option which allows you to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the [`byGroupID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#bygroupid) option within the [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule#group) property. In the following code example, there are two levels of resources, on which all the 3 resources at the child level is mapped one to one with each resource on the first level.
+In multi-level grouping, Scheduler usually groups the resources on the child level based on the [`GroupID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#groupidfield) that maps with the `Id` field of parent level resources (as [`byGroupID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#bygroupid) set to true by default). There are also option which allows you to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the [`byGroupID`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#bygroupid) option within the [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule#group) property. In the following code example, there are two levels of resources, on which all the 3 resources at the child level is mapped one to one with each resource on the first level.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -436,7 +436,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
 
 ### Grouping resources by date
 
-It groups the number of resources under each date and is applicable only on the calendar views such as Day, Week, Work Week, Month, Agenda and Month-Agenda. To enable such grouping, set [`byDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#bydate) option to `true` within the [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule#group) property.
+It groups the number of resources under each date and is applicable only on the calendar views such as Day, Week, Work Week, Month, Agenda and Month-Agenda. To enable such grouping, set [`byDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#bydate) option to `true` within the [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule#group) property.
 
 **Example:** To display the Scheduler with resources grouped by date,
 
@@ -455,7 +455,7 @@ It groups the number of resources under each date and is applicable only on the 
 
 ## Customizing parent resource cells
 
-In timeline view work cells of parent resource can be customized by checking the [`elementType`](https://ej2.syncfusion.com/vue/documentation/api/schedule/renderCellEventArgs/#elementtype) as `resourceGroupCells` in the event [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule#rendercell). In the following code example, background color of the work hours has been changed.
+In timeline view work cells of parent resource can be customized by checking the [`elementType`](https://ej2.syncfusion.com/vue/documentation/api/schedule/renderCellEventArgs#elementtype) as `resourceGroupCells` in the event [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule#rendercell). In the following code example, background color of the work hours has been changed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -470,7 +470,7 @@ In timeline view work cells of parent resource can be customized by checking the
 
 ## Working with shared events
 
-Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set [`allowGroupEdit`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#allowgroupedit) option to `true` within the [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/) property. With this property enabled, a single appointment
+Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set [`allowGroupEdit`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#allowgroupedit) option to `true` within the [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group) property. With this property enabled, a single appointment
 object will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment object will be in array which hold the IDs of the multiple resources.
 
 > Any actions such as create, edit or delete held on any one of the shared event instances, will be reflected on all other related instances visible on the UI.
@@ -492,7 +492,7 @@ object will be maintained within the appointment collection, even if it is share
 
 It is possible to customize the resource header cells using built-in template option and change the look and appearance of it in both the vertical and timeline view modes. All the resource related fields and other information can be accessed within the resource header template option.
 
-**Example:** To customize the resource header and display it along with designation [`resource field`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/resources/), refer the below code example.
+**Example:** To customize the resource header and display it along with designation [`resource field`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/resources), refer the below code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -526,7 +526,7 @@ It is possible to customize the resource headers to display with multiple column
 
 ## Collapse/Expand child resources in timeline views
 
-It is possible to expand and collapse the resources which have child resource in timeline views dynamically. By default, resources are in expanded state with their child resource. We can collapse and expand the child resources in UI by setting [`expandedField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#expandedfield) option as `false` whereas its default value is `true`.
+It is possible to expand and collapse the resources which have child resource in timeline views dynamically. By default, resources are in expanded state with their child resource. We can collapse and expand the child resources in UI by setting [`expandedField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#expandedfield) option as `false` whereas its default value is `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -541,7 +541,7 @@ It is possible to expand and collapse the resources which have child resource in
 
 ## Displaying tooltip for resource headers
 
-It is possible to display tooltips over the resource headers showing the resource information. By default, there won't be any tooltips displayed on the resource headers, and to enable it, you need to assign the customized template design to the [`headerTooltipTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#headertooltiptemplate) option within the  [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/) property.
+It is possible to display tooltips over the resource headers showing the resource information. By default, there won't be any tooltips displayed on the resource headers, and to enable it, you need to assign the customized template design to the [`headerTooltipTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#headertooltiptemplate) option within the  [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -556,7 +556,7 @@ It is possible to display tooltips over the resource headers showing the resourc
 
 ## Choosing among resource colors for appointments
 
-By default, the colors defined on the top level resources collection will be applied for the events. In case, if you want to apply specific resource color to events irrespective of its top-level parent resource color, it can be achieved by defining [`resourceColorField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#resourcecolorfield) option within the [`eventSettings`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/) property.
+By default, the colors defined on the top level resources collection will be applied for the events. In case, if you want to apply specific resource color to events irrespective of its top-level parent resource color, it can be achieved by defining [`resourceColorField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#resourcecolorfield) option within the [`eventSettings`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings) property.
 
 In the following example, the colors mentioned in the second level will get applied over the events.
 
@@ -571,7 +571,7 @@ In the following example, the colors mentioned in the second level will get appl
         
 {% previewsample "page.domainurl/code-snippet/schedule/resource-color-cs1" %}
 
-> The value of the `resourceColorField` field should be mapped with the [`name`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#name) value given within the [`resources`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/) property.
+> The value of the `resourceColorField` field should be mapped with the [`name`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#name) value given within the [`resources`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources) property.
 
 ## Dynamically add and remove resources
 
@@ -599,7 +599,7 @@ Each resource in the Scheduler can have different working hours as well as diffe
 
 ### Set different work days
 
-Different `working days` can be set for the resources of Scheduler using the [`workDaysField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#workdaysfield) property which maps the working days field from the resource dataSource. This field accepts the collection of day indexes (from 0 to 6) of a week. By default, it is set to [1, 2, 3, 4, 5] and in the following example, each resource has been set with different values and therefore each of them will render only those working days. This option is applicable only on the calendar views and is not applicable on timeline views.
+Different `working days` can be set for the resources of Scheduler using the [`workDaysField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#workdaysfield) property which maps the working days field from the resource dataSource. This field accepts the collection of day indexes (from 0 to 6) of a week. By default, it is set to [1, 2, 3, 4, 5] and in the following example, each resource has been set with different values and therefore each of them will render only those working days. This option is applicable only on the calendar views and is not applicable on timeline views.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -614,7 +614,7 @@ Different `working days` can be set for the resources of Scheduler using the [`w
 
 ### Set different work hours
 
-Different `working Hours` can be set for the resources of Scheduler using the [`startHourField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#starthourfield) and [`endHourField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources/#endhourfield) property which maps the `startHourField` and `endHourField` field from the resource dataSource.
+Different `working Hours` can be set for the resources of Scheduler using the [`startHourField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#starthourfield) and [`endHourField`](https://ej2.syncfusion.com/vue/documentation/api/schedule/resources#endhourfield) property which maps the `startHourField` and `endHourField` field from the resource dataSource.
 
 * `startHourField` - Denotes the start time of the working/business hour in a day.
 * `endHourField` - Denotes the end time limit of the working/business hour in a day.
@@ -636,9 +636,9 @@ In this example, a resource named `Will Smith` is depicted with working hours ra
 
 ## Hide non-working days when grouped by date
 
-In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property to only display the custom work days in the Scheduler.
+In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#hidenonworkingdays) property to only display the custom work days in the Scheduler.
 
-To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) to `true` to enable this feature.
+To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#hidenonworkingdays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#hidenonworkingdays) to `true` to enable this feature.
 
 **Example:** To display the Scheduler with resources grouped by date for custom working days,
 
@@ -653,11 +653,11 @@ To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/a
         
 {% previewsample "page.domainurl/code-snippet/schedule/single-level-resource-cs3" %}
 
-> The [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property only applies when the Scheduler is grouped [`byDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#bydate).
+> The [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#hidenonworkingdays) property only applies when the Scheduler is grouped [`byDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#bydate).
 
 ## Compact view in mobile
 
-Although the Scheduler views are designed keeping in mind the responsiveness of the control in mobile devices, however when using Scheduler with multiple resources - it is difficult to view all the resources and its relevant events at once on the mobile. Therefore, we have introduced a new compact mode specially for displaying multiple resources of Scheduler on mobile devices. By default, this mode is enabled while using Scheduler with multiple resources on mobile devices. If in case, you need to disable this compact mode, set `false` to the [`enableCompactView`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#enablecompactview) option within the [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/) property. Disabling this option will display the exact desktop mode of Scheduler view on mobile devices.
+Although the Scheduler views are designed keeping in mind the responsiveness of the control in mobile devices, however when using Scheduler with multiple resources - it is difficult to view all the resources and its relevant events at once on the mobile. Therefore, we have introduced a new compact mode specially for displaying multiple resources of Scheduler on mobile devices. By default, this mode is enabled while using Scheduler with multiple resources on mobile devices. If in case, you need to disable this compact mode, set `false` to the [`enableCompactView`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group#enablecompactview) option within the [`group`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group) property. Disabling this option will display the exact desktop mode of Scheduler view on mobile devices.
 
 With this compact view enabled on mobile, you can view only single resource at a time and to switch to other resources, there is a treeview at the left listing out all other available resources - clicking on which will display that particular resource and its related appointments.
 
@@ -688,4 +688,4 @@ Some of the default changes made for compact Scheduler to render in desktop devi
         
 {% previewsample "page.domainurl/code-snippet/schedule/resource-grouping-cs7" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> For a complete overview of resource scheduling features, visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page. Explore live examples at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) to knows how to present and manipulate data.

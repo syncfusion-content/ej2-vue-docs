@@ -153,7 +153,6 @@ app.post('/assist/chat', express.json(), async (req, res) => {
       for (const p of unique) {
         try {
           const full = safeJoin(FS_BASE_DIR, p);
-          await fs.access(full);
           const stat = await fs.stat(full);
           if (stat.isFile()) {
             const data = await fs.readFile(full);

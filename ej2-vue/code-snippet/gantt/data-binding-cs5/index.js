@@ -7,8 +7,8 @@ Vue.use(ButtonPlugin);
 Vue.use(GanttPlugin);
 ;
 new Vue({
-	el: '#app',
-	template: `
+    el: '#app',
+    template: `
      <div>
         <ejs-button id="databind"  v-on:click.native="databind">Bind Data</ejs-button>
         <br>
@@ -17,9 +17,9 @@ new Vue({
     </div>
 `,
 
-  data: function() {
-      return{
-        data:[],
+    data: function () {
+        return {
+            data: [],
             height: '450px',
             taskFields: {
                 id: 'TaskId',
@@ -31,20 +31,21 @@ new Vue({
                 child: 'SubTasks'
             },
             projectStartDate: new Date('02/24/2019'),
-            projectEndDate: new Date('07/20/2019')  
+            projectEndDate: new Date('07/20/2019')
         };
-  },
-  methods: {
-      databind: function(e){
-        let ajax = new Ajax("https://services.syncfusion.com/vue/production/api/GanttData","GET");
-        this.$refs.gantt.showSpinner();
-        ajax.send();
-        ajax.onSuccess = function (data) {
-        this.hideSpinner();
-        this.dataSource = (JSON.parse(data)).Items;
-        this.refresh();
-    };
-      },
-  }
+    },
+    methods: {
+        databind: function () {
+            let ajax = new Ajax("https://services.syncfusion.com/vue/production/api/GanttData", "GET");
+            this.$refs.gantt.showSpinner();
+
+            ajax.send();
+            ajax.onSuccess = (data) => {
+                this.$refs.gantt.hideSpinner();
+                this.data = JSON.parse(data).Items;
+            };
+        },
+
+    }
 
 });

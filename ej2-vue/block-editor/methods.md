@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Methods in Vue Block Editor component
 
-The Block Editor component provides a comprehensive set of public methods that allow you to programmatically interact with and manipulate the editor content. These methods enable you to add, remove, update, and manage blocks, as well as control selection, formatting, and other editor operations. 
+The Block Editor component provides a comprehensive set of public methods to programmatically interact with and manipulate the editor content. These methods enable adding, removing, updating, and managing blocks, as well as controlling selection, formatting, and other editor operations.
 
 ## Block Management Methods
 

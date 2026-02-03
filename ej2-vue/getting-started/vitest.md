@@ -47,6 +47,13 @@ Vue.js - The Progressive JavaScript Framework
 √ Add an End-to-End Testing Solution? » No
 √ Add ESLint for code quality? ... No
 ```
+These are the additional options while creating a vue application 
+
+![alt](../images/experimental.png)
+
+![alt](../images/skipcode.png)
+
+If you want to skip the example code, select 'yes' if don't want to skip the code select 'no'.
 
 3\. Upon completing the aforementioned steps to create  `my-project`, run the following command to install its dependencies:
 

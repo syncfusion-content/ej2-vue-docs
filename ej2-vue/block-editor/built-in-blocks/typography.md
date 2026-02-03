@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Typography Blocks in Vue Block Editor component
 
-Typography blocks are essential for organizing and presenting text-based content in your documents. The BlockEditor component supports various structural blocks—such as Paragraph, Heading, Collapsible Block, Divider, Quote, and Callout to help you format and structure content effectively.
+Typography blocks are essential for organizing and presenting text-based content. The Block Editor component supports various structural blocks—such as Paragraph, Heading, Collapsible (CollapsibleParagraph and CollapsibleHeading), Divider, Quote, and Callout—to help you format and structure content effectively.
 
 ## Configure paragraph block
 
@@ -178,7 +178,7 @@ You can control whether a block is expanded or collapsed using the [isExpanded](
 }
 ```
 
-The below sample demonstrates the configuration of collapsibleHeading and collapsibleParagraph blocks in the Block Editor.
+This example shows how to configure `CollapsibleHeading` and `CollapsibleParagraph` blocks.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -240,7 +240,7 @@ A Divider block inserts a horizontal line to separate content. Render it by sett
 }
 ```
 
-The below sample demonstrates the configuration of divider block in the Block Editor.
+This sample shows how to place a divider between two blocks.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -270,7 +270,7 @@ Quote blocks are styled for displaying quotations or excerpts. Render a Quote bl
 }
 ```
 
-The below sample demonstrates the configuration of quote block in the Block Editor.
+The following sample shows how to configure a quote block.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -317,7 +317,7 @@ Callout blocks highlight important information such as notes, warnings, or tips.
  }
 ```
 
-The below sample demonstrates the configuration of callout block in the Block Editor.
+The following sample adds a callout block to the editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -340,7 +340,7 @@ Child blocks can be configured with all the same properties as top-level blocks.
 
 To establish a clear parent-child relationship, the [parentId](../../api/blockeditor/blockModel#parentid) of each child block must match the [id](../../api/blockeditor/blockModel#id) of its parent block.
 
-The below sample demonstrates the configuration of children in the Block Editor using parentId.
+This structure is essential for maintaining nested relationships within the editor. The following sample demonstrates how to create a nested hierarchy.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

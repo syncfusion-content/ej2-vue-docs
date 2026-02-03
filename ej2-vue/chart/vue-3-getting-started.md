@@ -10,19 +10,18 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Chart Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to setting up a [`Vite`](https://vitejs.dev/) project using a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component with either the [`Composition API`](https://vuejs.org/guide/introduction.html#composition-api) or the [`Options API`](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
-
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The **Composition API** is a modern approach introduced in Vue 3 that enables better organization and reuse of component logic by grouping related code into reusable functions.  
+The **Options API** is the conventional component structure used in earlier Vue versions, where component logic is organized using predefined options such as `data`, `methods`, and lifecycle hooks.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[`System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+The recommended way to start a Vue 3 application is by scaffolding a project using [`Vite`](https://vitejs.dev/). Create a new Vite project using one of the following commands:
 
 ```bash
 npm create vite@latest
@@ -85,7 +84,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Chart component](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -129,7 +128,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the Chart component with the [dataSource](https://helpej2.syncfusion.com/vue/documentation/api/chart/#datasource) property.
+2.In the `template` section, define the Chart component with the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/chart/#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -277,7 +276,7 @@ The output will appear as follows:
 
 ![vue3-chart-demo](./images/vue3-chart-demo.png)
 
-> **Sample**: [vue-3-chart-getting-started](https://github.com/SyncfusionExamples/vue3-chart-getting-started).
+> **Sample**: [`vue-3-chart-getting-started`](https://github.com/SyncfusionExamples/vue3-chart-getting-started).
 For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also

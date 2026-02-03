@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Installation using Offline Installer
 
-You can refer to the [Download](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/download) section to learn how to get the JavaScript – EJ2 trial or licensed installer.
+Refer to the [Download](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/download) section to learn how to obtain the JavaScript – EJ2 trial or licensed installer.
 
-The frameworks listed below are supported in this installer.
+The frameworks supported by this installer:
 
 * JavaScript
 * Angular
@@ -22,22 +22,21 @@ The frameworks listed below are supported in this installer.
 
 ## Installing with UI
 
-The steps below show how to install the Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 installer.
+The steps below describe how to install the Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 installer.
 
 1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package
 
     ![license download](images/offline1.png)
 
-    >Note: The Installer wizard extracts the syncfusionejs2 (version).exe dialog, which displays the package’s unzip operation.
+    > Note: The Installer wizard displays a dialog showing the package extraction progress.
 
-2. To unlock the Syncfusion<sup style="font-size:70%">&reg;</sup> offline installer, you have two options:
+2. To unlock the Syncfusion<sup style="font-size:70%">&reg;</sup> offline installer, choose one of the following options:
 
     * Login To Install
     * Use Unlock Key
 
     **Login To Install**
-    You must enter your Syncfusion<sup style="font-size:70%">&reg;</sup> email address and password. If you don’t already have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can sign up for one by clicking **“Create an account”**. If you have forgotten your password, click on **“Forgot Password”** to create a new one. Once you’ve entered your Syncfusion<sup style="font-size:70%">&reg;</sup> email and password, click Next.
-
+    Enter the Syncfusion<sup style="font-size:70%">&reg;</sup> email address and password. If you do not have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, click **"Create an account"** to sign up. If you have forgotten the password, click **"Forgot Password"** to reset it. After entering credentials, click Next.
     ![license download](images/offline2.png)
 
     **Use Unlock Key**
@@ -96,14 +95,14 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-s
 
 ### Command line installation
 
-To install through the Command Line in Silent mode, follow the steps below.
+To install through the command line in silent mode:
 
-1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
-2. The file syncfusionejs2_(version).exe file will be extracted into the Temp directory.
-3. Run %temp%. The Temp folder will be opened. The syncfusionejs2_(version).exe file will be located in one of the folders.
-4. Copy the extracted syncfusionejs2_(version).exe file in local drive.
+1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 installer by double-clicking it. The Installer Wizard opens and extracts the package.
+2. The `syncfusionejs2_(version).exe` file is extracted to the Temp directory.
+3. Run `%temp%` to open the Temp folder. Locate the `syncfusionejs2_(version).exe` file in one of the subfolders.
+4. Copy the extracted `syncfusionejs2_(version).exe` file to a local drive.
 5. Exit the Wizard.
-6. Run Command Prompt in administrator mode and enter the following arguments.
+6. Run Command Prompt in administrator mode and enter the following arguments:
 
     Arguments: “installer file path/SyncfusionEssentialStudio(product)_(version).exe” /Install silent /UNLOCKKEY:“(product unlock key)” [/log “{Log file path}”] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/InstallAssemblies:{true/false}] [/UninstallExistAssemblies:{true/false}] [/InstallToolbox:{true/false}]
 
@@ -119,14 +118,10 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 can be uninstalled silently using the Command Line.
 
-1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
-
-2. The syncfusionejs2_(version).exe file will be extracted into the Temp directory.
-
-3. Run %temp%. The Temp folder will be opened. The syncfusionejs2_(version).exe file will be located in one of the folders.
-
-4. Copy the extracted syncfusionejs2_(version).exe file in local drive.
-
+1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 installer by double-clicking it. The Installer Wizard opens and extracts the package.
+2. The `syncfusionejs2_(version).exe` file is extracted to the Temp directory.
+3. Run `%temp%` to open the Temp folder. Locate the `syncfusionejs2_(version).exe` file in one of the subfolders.
+4. Copy the extracted `syncfusionejs2_(version).exe` file to a local drive.
 5. Exit the Wizard.
 
 6. Run Command Prompt in administrator mode and enter the following arguments.

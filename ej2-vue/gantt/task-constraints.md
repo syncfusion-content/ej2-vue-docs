@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Task Constraints in Vue Gantt Component | Syncfusion 
-description: Learn how to implement and manage task constraints in the Syncfusion Vue Gantt component to enforce scheduling rules and dependencies.
+title: Task Constraints in Vue Gantt Chart component | Syncfusion 
+description: Learn how to implement and manage task constraints in the Syncfusion Vue Gantt Chart component to enforce scheduling rules and dependencies.
 platform: ej2-vue
 control: Task Constraints 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Task constraints in Vue Gantt Component
+# Task constraints in Vue Gantt Chart component
 
 Task constraints define rules that control when a task is allowed to start or finish in the project timeline. They help ensure that tasks follow a logical sequence, align with fixed deadlines, and make efficient use of resources. Constraints also support planning for real-world limitations like material delays, team availability, or mandatory compliance dates—making your schedule more realistic and reliable.
 
@@ -43,11 +43,11 @@ Task constraints help guide the schedule of each task by applying real-world rul
 
 ## Configuration and implementation
 
-To enable and manage task constraints in the Gantt component, you need to configure specific fields under the `taskFields` mapping. These fields tell the Gantt component which type of constraint to apply and the relevant date to enforce it.
+To enable and manage task constraints in the Gantt Chart component, you need to configure specific fields under the `taskFields` mapping. These fields tell the Gantt Chart component which type of constraint to apply and the relevant date to enforce it.
 
 ### Step 1: Define taskFields mappings
 
-In your Gantt component configuration, map the following fields:
+In your Gantt Chart component configuration, map the following fields:
 
 ```ts
 taskFields: {
@@ -64,7 +64,7 @@ These mappings ensure that each task can interpret and apply its constraints cor
 
 ### Step 2: Provide constraint data
 
-In your project data source, ensure that each task includes values for the [`constraintType`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFieldsModel/#constrainttype) and [`constraintDate`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFieldsModel/#constraintdate) fields if constraints need to be applied.
+In your project data source, ensure that each task includes values for the [constraintType](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFieldsModel#constrainttype) and [constraintDate](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFieldsModel#constraintdate) fields if constraints need to be applied.
 
 #### Example data format:
 
@@ -92,11 +92,9 @@ This task is constrained to must start on July 1, 2025.
         
 {% previewsample "page.domainurl/code-snippet/gantt/task-constraints-cs1" %}
 
----
-
 ### Managing scheduling conflicts due to constraint violations
 
-When scheduling changes conflict with applied constraints, the Gantt component shows a violation popup to alert users. This validation applies specifically to strict constraint types:
+When scheduling changes conflict with applied constraints, the Gantt Chart component shows a violation popup to alert users. This validation applies specifically to strict constraint types:
 - MustStartOn
 - MustFinishOn
 - StartNoLaterThan

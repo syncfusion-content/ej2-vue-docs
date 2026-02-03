@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Schedule Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Schedule component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Schedule component. It covers project setup, component installation, module injection, data binding, and basic customization.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/vue/documentation/ai-coding-assistant/overview)
 
-Check out this video to see how to develop a Vue Scheduler application:
+Check the following video to learn how to build a Vue Scheduler application:
 
 {% youtube "https://www.youtube.com/watch?v=Wak6k6cYPiA" %}
 
@@ -24,7 +24,7 @@ Check out this video to see how to develop a Vue Scheduler application:
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -67,22 +67,22 @@ yarn add @syncfusion/ej2-vue-schedule
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Schedule component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Schedule component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import '/node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '/node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '/node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '/node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '/node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '/node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '/node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '/node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+@import '/node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '/node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '/node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '/node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '/node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '/node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '/node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '/node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css';
 </style>
 
 {% endhighlight %}
@@ -171,9 +171,9 @@ yarn run serve
 
 The output will display the empty Scheduler.
 
-## Populating appointments
+## Populating Appointments
 
-To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#datasource) property available within the [`eventSettings`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/) option. To define any appointments, start and end time fields are mandatory. In the following example, you can see the appointment defined with default fields such as Id, Subject, StartTime and EndTime.
+To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#datasource) property available within the [`eventSettings`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings) option. To define any appointments, start and end time fields are mandatory. In the following example, you can see the appointment defined with default fields such as Id, Subject, StartTime and EndTime.
 
 ```html
 <template>
@@ -252,11 +252,11 @@ You can also provide different names to these default fields, for which the cust
 </script>
 ```
 
-The other fields available in Scheduler can be referred from [here](./appointments/#event-fields).
+The other fields available in Scheduler can be referred from [here](./appointments#event-fields).
 
-## Setting date
+## Setting Date
 
-Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the [`selectedDate](../api/schedule/#selecteddate) property.
+Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the [`selectedDate](../api/schedule#selecteddate) property.
 
 `[src/app/app.vue]`
 
@@ -285,9 +285,9 @@ Scheduler usually displays the system date as its current date. To change the cu
 </script>
 ```
 
-## Setting view
+## Setting View
 
-Scheduler displays `week` view by default. To change the current view, define the applicable view name to the [`currentView`](../api/schedule/#currentview) property. The applicable view names are,
+Scheduler displays `week` view by default. To change the current view, define the applicable view name to the [`currentView`](../api/schedule#currentview) property. The applicable view names are,
 
 * Day
 * Week
@@ -328,7 +328,7 @@ Scheduler displays `week` view by default. To change the current view, define th
 </script>
 ```
 
-## Individual view customization
+## Individual View Customization
 
 Each individual Scheduler views can be customized with its own options such as setting different start and end hour on Week and Work Week views, whereas hiding the weekend days on Month view alone.
 This can be achieved by defining views property to accept the array of object type, where each object depicts the individual view customization.
@@ -346,4 +346,4 @@ The output will display the Scheduler with the specified view configuration.
         
 {% previewsample "page.domainurl/code-snippet/schedule/view-cs1" %}
 
-> You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/schedule/overview.html) that shows how to use the toolbar buttons to play with Scheduler functionalities.
+> Explore the live demo at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/schedule/overview.html) to see Scheduler view customizations in action.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Timezone in Vue Schedule component
 
-The Scheduler makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the [`timezone`](../api/schedule/#timezone) property needs to be used. Apart from the default action of applying specific timezone to the Scheduler, it is also possible to set different time zone values for each appointments through the properties [`startTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field/#starttimezone) and [`endTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field/#endtimezone) which can be defined as separate fields within the event fields collection.
+The Scheduler makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the [`timezone`](../api/schedule#timezone) property needs to be used. Apart from the default action of applying specific timezone to the Scheduler, it is also possible to set different time zone values for each appointments through the properties [`startTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field#starttimezone) and [`endTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field#endtimezone) which can be defined as separate fields within the event fields collection.
 
 >Note: **timezone** property only applicable for the appointment processing and current time indication.
 
@@ -20,9 +20,12 @@ The `new Date()` in JavaScript returns the exact current date object with comple
 
 ## Scheduler with no timezone
 
-When no specific time zone is set to Scheduler, appointments will be displayed based on the client system's timezone which is the default behavior. Here, the same appointment when viewed from different timezone will have different start and end times.
+When no timezone is explicitly set, the Scheduler uses the **client browser’s timezone**. As a result:
 
-The following code example displays an appointment from 9.00 AM to 10.00 AM when you open the Scheduler from any of the timezone. This is because, we are providing the start and end time enclosing with `new Date()` which works based on the client browser's timezone.
+- Events are displayed based on the viewer’s local timezone.
+- The same event may appear at different times for users in different regions.
+
+In the following example, an appointment is displayed from **9:00 AM to 10:00 AM** regardless of the viewer’s timezone because the start and end times are provided using `new Date()` and interpreted locally.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -35,9 +38,11 @@ The following code example displays an appointment from 9.00 AM to 10.00 AM when
         
 {% previewsample "page.domainurl/code-snippet/schedule/time-zone-cs1" %}
 
-## Scheduler set to specific timezone
+## Scheduler set to a specific timezone
 
-When a time zone is set to Scheduler through [`timezone`](../api/schedule/#timezone) property, the appointments will be displayed exactly based on the Scheduler timezone regardless of its client timezone. In the following code example, appointments will be displayed based on Eastern Time (UTC -05:00).
+A fixed timezone can be applied to the Scheduler using the  [`timezone`](../api/schedule#timezone) property. When this property is set, all appointments are rendered based on the specified timezone, regardless of the user’s local system timezone.
+
+In the following example, the Scheduler is configured to use **Eastern Time (UTC −05:00)**:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -52,7 +57,7 @@ When a time zone is set to Scheduler through [`timezone`](../api/schedule/#timez
 
 ## Display events on same time everywhere with no time difference
 
-Setting [`timezone`](../api/schedule/#timezone) to UTC for Scheduler will display the appointments on same time as in the database for all the users in different time zone.
+To display events **at the same time across all timezones**, set the Scheduler’s [`timezone`](../api/schedule#timezone) property to `UTC`. This ensures that event times stored in the database are displayed consistently for every user, without conversion.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -67,7 +72,7 @@ Setting [`timezone`](../api/schedule/#timezone) to UTC for Scheduler will displa
 
 ## Set specific timezone for events
 
-It is possible to set different timezone for Scheduler events by setting [`startTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field/#starttimezone) and [`endTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field/#endtimezone) properties within the [`eventSettings`](../api/schedule/eventSettings/) option. It allows each appointment to maintain different timezone and displays on Scheduler with appropriate time differences.
+It is possible to set different timezone for Scheduler events by setting [`startTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field#starttimezone) and [`endTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field#endtimezone) properties within the [`eventSettings`](../api/schedule/eventSettings) option. It allows each appointment to maintain different timezone and displays on Scheduler with appropriate time differences.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -99,7 +104,7 @@ Instead of displaying all the timezone names within the timezone collection (mor
 
 ### offset
 
-This method is used to calculate the difference between passed UTC date and timezone.
+Calculates the offset (in minutes) between a UTC date and a specific timezone.
 
 | Parameters | Type | Description |
 |------------|------|-------------|
@@ -194,4 +199,4 @@ Returns `Date`
     console.log(convertedDate); //2018-12-05T15:25:11.000Z
 ```
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> For a complete overview of resource scheduling features, visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page. Explore live examples at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) to knows how to present and manipulate data.

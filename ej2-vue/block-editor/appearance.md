@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Appearance in Vue Block Editor component
 
-The Block Editor control provides various appearance customization options to match your application's design requirements. These properties allow you to control the visual styling, layout, and overall look and feel of the editor.
+The Block Editor component provides several properties to customize its visual appearance, allowing you to control its dimensions, styling, and behavior.
 
 ## Setting width and height
 

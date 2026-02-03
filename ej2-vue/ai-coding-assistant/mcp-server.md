@@ -87,15 +87,23 @@ Below are setup instructions for popular MCP clients:
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio
 
-* In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace and navigate to the `Custom Servers` tab.
-* Enter the Server Name as `vue-mcp`, choose Server Type as npm package, and set the NPM Package name to `@syncfusion/vue-assistant`.
-* Add an environment variable as `Syncfusion_API_Key` and value as your [Syncfusion API key](https://syncfusion.com/account/api-key), then click **Install Server**.
-* Once installed, the server will appear in the User Installed Server list, and will be added to the **config.yaml** file.
-* The server is now ready for use in Code Studio. For more details, refer to the [Code Studio documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers#npm-server).
+1. Open [Code Studio](https://www.syncfusion.com/code-studio/) and navigate to **MCP Marketplace**
+2. Select the **Custom Servers** tab
+3. Enter the following details:
+   * **Server Name**: `vue-mcp`
+   * **Server Type**: npm package
+   * **NPM Package Name**: `@syncfusion/vue-assistant`
+4. Add an environment variable:
+   * **Name**: `Syncfusion_API_Key`
+   * **Value**: Your [Syncfusion API key](https://syncfusion.com/account/api-key)
+5. Click **Install Server**
+6. The server appears in the **User Installed Server** list and is added to `config.yaml`
+
+For detailed guidance, refer to the [Code Studio MCP Documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers#npm-server).
 
 ### VS Code (GitHub Copilot MCP)
 
-* To configure an MCP server for a specific workspace, you can create a `.vscode/mcp.json` file in your workspace folder.
+1. Create or edit `.vscode/mcp.json` in your workspace root:
 
 ```json
 {
@@ -117,15 +125,14 @@ Below are setup instructions for popular MCP clients:
 }
 ```
 
-* After updating the configuration in mcp.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the [SyncfusionVueAssistant](https://www.npmjs.com/package/@syncfusion/vue-assistant) server directly from the settings interface without additional commands.
+2. A **Start** option appears at the top of the configuration file; click it to launch the server
+3. Verify activation by checking the output for: `SyncfusionVueAssistant is running...`
 
-* Confirm the server is active by checking for a message like: `SyncfusionVueAssistant is running...` in the output.
-
-* For additional guidance, refer to the [VS Code documentation](https://code.visualstudio.com/docs/copilot/customization/mcp-servers#_add-an-mcp-server).
+For more information, see the [VS Code MCP Documentation](https://code.visualstudio.com/docs/copilot/customization/mcp-servers#_add-an-mcp-server).
 
 ### Cursor
 
-To configure an MCP server for a specific workspace, you can create a `.cursor/mcp.json` file in your workspace folder.
+1. Create or edit `.cursor/mcp.json` in your workspace root:
 
 ```json
 {
@@ -237,3 +244,5 @@ Product support is available through the following mediums.
 ## See also
 
 * [Syncfusion Vue Documentation](https://ej2.syncfusion.com/vue/documentation)
+* [Model Context Protocol Overview](https://modelcontextprotocol.io/docs/getting-started/intro)
+* [Syncfusion Code Studio](https://www.syncfusion.com/code-studio/)

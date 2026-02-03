@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Paste Clean-up in Vue Block Editor component
 
-The Block Editor component provides robust paste clean-up functionalities to ensure that pasted content integrates seamlessly and maintains consistency with the editor's styling and structure. This helps in removing unwanted formatting, scripts, or elements often copied from external sources like web pages or word processors.
+The Block Editor component provides robust paste clean-up functionalities to ensure that pasted content integrates seamlessly and maintains styling and structural consistency. This feature helps remove unwanted formatting, scripts, and elements copied from external sources like web pages or word processors.
 
 You can configure the paste behavior using the [pasteCleanupSettings](../api/blockeditor#pastecleanupsettings) property, which allows you to define how content is handled when pasted into the editor.
 
@@ -19,7 +19,7 @@ You can configure the paste behavior using the [pasteCleanupSettings](../api/blo
 
 The [allowedStyles](../api/blockeditor/pasteCleanupSettingsModel#allowedstyles) property lets you define which CSS styles are permitted in pasted content. Any style not in this list is stripped out, ensuring that only desired visual attributes are preserved.
 
-By default, following styles are allowed:
+By default, the following styles are allowed:
 
 ['font-weight', 'font-style', 'text-decoration', 'text-transform'].
 
@@ -63,7 +63,7 @@ To paste content as plain text, stripping all HTML tags and inline styles, set t
 
 ### Events
 
-The following events are available when pasting content into the editor.
+The Block Editor provides events to monitor and interact with the paste action.
 
 |Name|Args|Description|
 |---|---|---|

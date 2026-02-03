@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Recurrence editor in Vue Schedule component
 
-The Recurrence editor is integrated into Scheduler editor window by default, to process the recurrence rule generation for events. Apart from this, it can also be used as an individual component referring from the Scheduler repository to work with the recurrence related processes.
+The **Recurrence Editor** is a built-in component integrated into the Scheduler editor window. It enables the creation and management of recurring events by generating recurrence rule strings. The Recurrence Editor can also be used as a standalone component to handle recurrence-related operations independently.
 
 > All the valid recurrence rule string mentioned in the [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications are applicable to use with the recurrence editor.
 
-## Customizing the repeat type option in editor
+## Customizing the repeat type options in the editor
 
-By default, there are 5 types of repeat options available in recurrence editor such as,
+By default, the Recurrence Editor provides the following repeat options:
 
 * Never
 * Daily
@@ -54,13 +54,13 @@ The other properties available in recurrence editor are tabulated below,
 
 ## Customizing the End Type Option in Editor
 
-By default, there are 3 types of end options available in the recurrence editor such as:
+By default, the Recurrence Editor supports three end options:
 
 * Never
 * Until
 * Count
 
-It is possible to customize the recurrence editor to display only the specific end options, such as the `Until` and `Count` options alone, by setting the appropriate [`endTypes`](https://ej2.syncfusion.com/vue/documentation/api/recurrence-editor/#endtypes) option.
+It is possible to customize the recurrence editor to display only the specific end options, such as the `Until` and `Count` options alone, by setting the appropriate [`endTypes`](https://ej2.syncfusion.com/vue/documentation/api/recurrence-editor#endtypes) option.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -92,7 +92,7 @@ There is a `change` event available in recurrence editor, that triggers on every
 
 ## Set specific value on recurrence editor
 
-It is possible to display the recurrence editor with specific options loaded initially, based on the rule string that we provide. The fields of recurrence editor will change its values accordingly, when we provide a particular rule through the `setRecurrenceRule` method.
+The Recurrence Editor can be initialized with a predefined recurrence rule. When a rule string is passed using the `setRecurrenceRule` method, all related editor fields are updated automatically to reflect the corresponding configuration.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -128,7 +128,7 @@ You can parse the `recurrenceRule` of an event to generate the date instances on
         
 {% previewsample "page.domainurl/code-snippet/schedule/recur-editor-cs3" %}
 
-> Above example will generate two dates January 7, 2018 & January 9 2018 by excluding the in between dates January 8 2018 & January 10 2018, since those dates were given in the exclusion list. Generated dates can then be utilised to create appointments.
+> The above example generates two dates—**January 7, 2018** and **January 9, 2018**—while excluding **January 8, 2018** and **January 10, 2018** using the exclusion list. Generated dates can then be utilized to create appointments.
 
 ## Recurrence date generation in server-side
 
@@ -151,4 +151,4 @@ In case, if the rule is given in "NEVER ENDS" category, then you can mention the
         
 {% previewsample "page.domainurl/code-snippet/schedule/recur-editor-cs4" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> For a complete overview of Scheduler capabilities, visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour. Explore live examples at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) to knows how to present and manipulate data.

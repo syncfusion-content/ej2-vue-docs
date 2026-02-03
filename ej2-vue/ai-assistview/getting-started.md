@@ -67,11 +67,11 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -145,7 +145,7 @@ yarn run serve
 
 ## Configure suggestions and responses
 
-You can use the [promptSuggestions](../api/ai-assistview/#promptsuggestions) property to add prompt suggestions and the [promptRequest](../api/ai-assistview/#promptrequest) event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
+Use the [promptSuggestions](../api/ai-assistview#promptsuggestions) property to display a list of predefined suggestion chips. To provide custom responses, handle the [promptRequest](../api/ai-assistview#promptrequest) event, which is triggered when a user query is sent.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

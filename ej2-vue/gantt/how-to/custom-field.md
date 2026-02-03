@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Custom field in Vue Gantt component | Syncfusion
-description: Learn here all about Custom field in Syncfusion Vue Gantt component of Syncfusion Essential JS 2 and more.
+title: Custom Field in Vue Gantt Chart Component | Syncfusion
+description: Learn here all about custom fields in the Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Custom field 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom field in Vue Gantt component
+# Custom field in Vue Gantt Chart Component
 
-Generally in Gantt, Custom fields are displayed in the Custom Tab of the Add/Edit dialogs. However, they can be included in the General Tab of Add/Edit Dialog Box using `actionBegin` and `actionComplete` events. These events are used to append the custom field to the dialog box. The following code snippets demonstrate the solution.
+Generally, in the Gantt Chart, custom fields are displayed in the Custom tab of the Add/Edit dialogs. However, they can be included in the General tab of the Add/Edit dialog box using the `actionBegin` and `actionComplete` events. These events are used to append the custom field to the dialog box. The following code snippets demonstrate the solution.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

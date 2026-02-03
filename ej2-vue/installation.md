@@ -16,15 +16,15 @@ domainurl: ##DomainURL##
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published in [npm](https://www.npmjs.com/search?q=ej2-vue). You can install the necessary packages from npm’s install command. For example, grid package can be installed using the following command.
 
-```
-npm install @syncfusion/ej2-vue-grids --save
+```bash
+npm install @syncfusion/ej2-vue-grids
 ```
 
 ## Install by using package.json
 
-1. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) package references in the `dependencies` of `~/package.json` file.
+1. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue (Essential<sup style="font-size:70%">&reg;</sup> JS 2) package references in the `dependencies` section of the `~/package.json` file:
 
-    ```
+    ```json
     {
         "dependencies": {
             "@syncfusion/ej2-vue-grids": "*",
@@ -34,6 +34,6 @@ npm install @syncfusion/ej2-vue-grids --save
     ```
     > The `*` indicates the latest version of npm package. Refer the [documentation](https://docs.npmjs.com/misc/semver#versions) for more details about npm versioning.
 
-2. Now, open the command prompt and run the `npm install` command line. This will install all npm dependencies in a single command line.
+2. Now, open the terminal and run the `npm install` command. This will install all npm dependencies.
 
-> Refer the [documentation](https://docs.npmjs.com/files/package.json) for more details about npm package.json
+> Refer to the [documentation](https://docs.npmjs.com/files/package.json) for more details about npm package.json.

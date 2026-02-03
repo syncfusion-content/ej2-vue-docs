@@ -8,9 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3 with Vue CLI
 
-This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application. To get started with Vue 2 application, refer to the [getting started with Vue 2](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial) section.
+This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application using Vue CLI. For modern setup with Vite and Composition API, refer to the [Getting Started with Composition API](./vue-3-js-composition) section.
+
+> Note: Vue CLI is now in maintenance mode. For new projects, we recommend using [Vite](https://vite.dev/) with the official [create-vue](https://github.com/vuejs/create-vue) scaffolding tool.
 
 ## Prerequisites
 
@@ -18,7 +20,7 @@ This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup
 
 ## Create the Vue 3 application
 
-The best way to create a Vue 3 application is to use the [vue create](https://cli.vuejs.org/#getting-started) command.
+To create a Vue 3 application using Vue CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command.
 
 ```bash
 npm install -g @vue/cli
@@ -30,6 +32,8 @@ npm run serve
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 3] babel, eslint)` from the menu.
 
 ![Reference](../appearance/images/vue3-terminal.png)
+
+> **Recommended Alternative:** For new projects, consider using [Vite](https://vite.dev/) with `npm create vue@latest`, which provides faster development experience and modern tooling.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -47,10 +51,10 @@ After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component 
 
 Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) section to know more about built-in themes and different ways (npm packages, CDN and CRG) to refer the themes in the Vue application.
 
-Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. Let’s import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
+Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. Let's import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight css tabtitle="~/src/App.vue" %}
 
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -67,11 +71,11 @@ Here the themes are referred through the installed npm packages which contains t
 {% endhighlight %}
 {% endtabs %}
 
->Grid components use other Syncfusion<sup style="font-size:70%">&reg;</sup> components as well, so CSS references for the dependent component must be added in order to use all grid functionalities. Use this same order to display the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component's predefined appearance.
+> Grid components use other Syncfusion<sup style="font-size:70%">&reg;</sup> components as well, so CSS references for the dependent component must be added in order to use all grid functionalities. The order of importing CSS styles should be in line with its dependency graph.
 
 ## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Import the Grid component along with the required child directives from the installed packages into the `<script>` section of the `src/App.vue` file. Register the Grid component along with the required child directives using following code.
+Import the Grid component along with the required child directives from the installed packages into the `<script>` section of the `src/App.vue` file. Register the Grid component along with the required child directives using the Options API as follows:
 
 {% tabs %}
 {% highlight js tabtitle="~/src/App.vue" %}
@@ -81,9 +85,9 @@ Import the Grid component along with the required child directives from the inst
   export default {
     name: "App",
     components: {
-      'ejs-grid' : GridComponent,
-      'e-columns' : ColumnsDirective,
-      'e-column' : ColumnDirective
+      'ejs-grid': GridComponent,
+      'e-columns': ColumnsDirective,
+      'e-column': ColumnDirective
     }
   }
 
@@ -91,6 +95,8 @@ Import the Grid component along with the required child directives from the inst
 {% endtabs %}
 
 Now, the Grid and column directives are registered to use it in this application.
+
+> **Modern Alternative:** For improved development experience, consider using the [Composition API](./vue-3-js-composition) with direct component imports instead of global registration.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
@@ -155,7 +161,7 @@ Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` 
 
 ## Run the application
 
-Run the application using the following command.
+Run the application using the following command:
 
 ```bash
 npm run serve
@@ -364,5 +370,7 @@ The following sample uses the Button component within the grid's template proper
 
 ## See also
 
-* [Getting started with Vue 2 application](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial)
+* [Getting Started with Vue UI Components using Composition API and JavaScript](./vue-3-js-composition)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](./vue-3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and TypeScript](./vue-3-ts-options)
 * [Getting started with Vue component using direct script](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

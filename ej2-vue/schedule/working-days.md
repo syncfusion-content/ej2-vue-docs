@@ -21,13 +21,24 @@ The Scheduler can be customized on various aspects as well as it inherits almost
 
 ## Set working days
 
-By default, Scheduler considers the week days from Monday to Friday as `Working days` and therefore defaults to [1,2,3,4,5] - where 1 represents Monday, 2 represents Tuesday and so on. The days which are not defined in this working days collection are considered as non-working days. Therefore, when the weekend days are set to hide from Scheduler, all those non-working days too gets hidden from the layout.
+By default, the Scheduler considers **Monday to Friday** as working days and assigns the value `[1, 2, 3, 4, 5]`, where:
 
-The Work week and Timeline Work week views displays exactly the defined working days on Scheduler layout, whereas other views displays all the days and simply differentiates the non-working days on UI with inactive cell color.
+- `0` = Sunday  
+- `1` = Monday  
+- `2` = Tuesday  
+- `3` = Wednesday  
+- `4` = Thursday  
+- `5` = Friday  
+- `6` = Saturday  
 
-> The working or business hours depiction on Scheduler are usually valid only on these specified working days.
+Days not included in this collection are treated as **non‑working days**.
 
-The following example code depicts how to set the Scheduler to display Monday, Wednesday and Friday as working days of a week.
+- **Work Week** and **Timeline Work Week** views display only the defined working days.
+- Other views display all days but visually differentiate non‑working days using inactive cell styles.
+
+> Working or business hours are applied only to the defined working days.
+
+The following example configures **Monday, Wednesday, and Friday** as working days.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,9 +53,9 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 ## Hiding weekend days
 
-The [`showWeekend`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views/#showweekend) property is used to either show or hide the weekend days of a week and it is not applicable on Work week view (as non-working days are usually not displayed on work week view). By default, it is set to `true`. The days which are not a part of the working days collection of a Scheduler are usually considered as non-working or weekend days.
+The [`showWeekend`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views#showweekend) property is used to either show or hide the weekend days of a week and it is not applicable on Work week view (as non-working days are usually not displayed on work week view). By default, it is set to `true`. The days which are not a part of the working days collection of a Scheduler are usually considered as non-working or weekend days.
 
-Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore the remaining days (0, 2, 6 – Sunday, Tuesday and Saturday) are considered as non-working or weekend days and will be hidden from all the views when [`showWeekend`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views/#showweekend) property is set to `false`.
+Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore the remaining days (0, 2, 6 – Sunday, Tuesday and Saturday) are considered as non-working or weekend days and will be hidden from all the views when [`showWeekend`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views#showweekend) property is set to `false`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -59,9 +70,9 @@ Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore th
 
 ## Show week numbers
 
-It is possible to show the week number count of a week in the header bar of the Scheduler by setting true to [`showWeekNumber`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views/#showweeknumber) property. By default, its default value is `false`. In Month view, the week numbers are displayed as a first column.
+It is possible to show the week number count of a week in the header bar of the Scheduler by setting true to [`showWeekNumber`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views#showweeknumber) property. By default, its default value is `false`. In Month view, the week numbers are displayed as a first column.
 
-> The [`showWeekNumber`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views/#showweeknumber) property is not applicable on Timeline views, as it has the equivalent [headerRows](./header-rows/#display-week-numbers-in-timeline-views) property to handle such requirement with additional customizations.
+> The [`showWeekNumber`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views#showweeknumber) property is not applicable on Timeline views, as it has the equivalent [headerRows](./header-rows#display-week-numbers-in-timeline-views) property to handle such requirement with additional customizations.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -97,15 +108,15 @@ For more details refer to [this link](https://docs.microsoft.com/en-us/dotnet/ap
         
 {% previewsample "page.domainurl/code-snippet/schedule/working-days-cs8" %}
 
- **Note**: Enable the [`showWeekNumber`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views/#showweeknumber) property to configure the `weekRule` property. Also, the weekRule property depends on the value of the [`firstDayOfWeek`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views/#firstdayofweek) property.
+ **Note**: Enable the [`showWeekNumber`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views#showweeknumber) property to configure the `weekRule` property. Also, the weekRule property depends on the value of the [`firstDayOfWeek`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/views#firstdayofweek) property.
 
 ## Set working hours
 
 Working hours indicates the work hour limit within the Scheduler, which is visually highlighted with an active color on work cells. The working hours can be set on Scheduler using the [`workHours`](https://helpej2.syncfusion.com/vue/documentation/api/schedule#workhours) property which is of object type and includes the following sub-options,
 
-* [`highlight`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/workHoursModel/#highlight) – enables/disables the highlighting of work hours.
-* [`start`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/workHoursModel/#start) - sets the start time of the working/business hour of a day.
-* [`end`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/workHoursModel/#end) - sets the end time limit of the working/business hour of a day.
+* [`highlight`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/workHoursModel#highlight) – enables/disables the highlighting of work hours.
+* [`start`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/workHoursModel#start) - sets the start time of the working/business hour of a day.
+* [`end`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/workHoursModel#end) - sets the end time limit of the working/business hour of a day.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -154,7 +165,7 @@ By default, Scheduler defaults to `Sunday` as its first day of a week. To change
 
 ## Scroll to specific time and date
 
-You can manually scroll to a specific time on Scheduler by making use of the [`scrollTo`](https://helpej2.syncfusion.com/vue/documentation/api/schedule#scrollto) method as depicted in the following code example.
+The Scheduler provides the [`scrollTo`](https://helpej2.syncfusion.com/vue/documentation/api/schedule#scrollto) method to programmatically scroll to a specific date and time.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -182,11 +193,11 @@ There are scenarios where you may need to load the Scheduler displaying the syst
         
 {% previewsample "page.domainurl/code-snippet/schedule/working-days-cs12" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> For a complete overview of resource scheduling features, visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page. Explore live examples at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) to knows how to present and manipulate data.
 
 ## See Also
 
-* [To display the current time indicator](./timescale/#highlighting-current-date-and-time)
+* [To display the current time indicator](./timescale#highlighting-current-date-and-time)
 * [To set different working hours dynamically](./how-to/set-different-work-hours)
-* [To set different working hours for each resources](./resources/#set-different-work-hours)
-* [To set different working days for each resources](./resources/#set-different-work-days)
+* [To set different working hours for each resources](./resources#set-different-work-hours)
+* [To set different working days for each resources](./resources#set-different-work-days)
