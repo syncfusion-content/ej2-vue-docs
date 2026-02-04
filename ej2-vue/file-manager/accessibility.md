@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Accessibility in Vue File Manager component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+description: Learn about accessibility support and features in the Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
+control: File Manager 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue File Manager component
 
-The File Manager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The File Manager component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It implements WAI-ARIA roles and attributes commonly used to evaluate accessibility.
 
-The accessibility compliance for the File Manager component is outlined below.
+The File Manager component's accessibility compliance is summarized below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,7 +40,7 @@ The accessibility compliance for the File Manager component is outlined below.
 
 ## WAI-ARIA attributes
 
-The File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns) patterns to meet the accessibility. The following ARIA attributes are used in the File Manager component:
+The File Manager implements WAI-ARIA patterns to improve accessibility. The table below lists ARIA attributes used by the component and their purpose:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -70,7 +70,7 @@ The File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 ## Keyboard interaction
 
-The File Manager component followed the `keyboard interaction` guidelines, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the File Manager component.
+The File Manager supports keyboard interaction to help users who rely on the keyboard or assistive technologies. The following shortcuts are supported:
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -104,9 +104,9 @@ The File Manager component followed the `keyboard interaction` guidelines, makin
 
 ## Ensuring accessibility
 
-The File Manager component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+Accessibility compliance is validated using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during testing.
 
-The accessibility compliance of the File Manager component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/file-manager.html) in a new window to evaluate the accessibility of the File Manager component with accessibility tools.
+Open the accessibility evaluation sample in a new window to review accessibility behavior:
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/file-manager.html" %}
 

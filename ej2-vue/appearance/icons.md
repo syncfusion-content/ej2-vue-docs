@@ -42,7 +42,7 @@ Refer to the following syntax to use icons in a Vue application:
 **Example:**
 
 ```
-@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
 ```
 
 ### CDN reference

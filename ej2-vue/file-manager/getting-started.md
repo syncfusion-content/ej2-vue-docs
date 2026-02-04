@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Vue File Manager component | Syncfusion
 description:  Checkout and learn about Getting started with Vue File Manager component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: File Manager 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue File Manager Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Filemanager component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -85,7 +85,7 @@ yarn add @syncfusion/ej2-vue-filemanager
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -212,7 +212,7 @@ yarn run serve
 
 ## File Download support
 
-To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#ajaxsettings) of File Manager component.
+To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -255,7 +255,7 @@ To perform the download operation, initialize the `downloadUrl` property in a [a
 
 ## File Upload support
 
-To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#ajaxsettings) of File Manager Component.
+To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager Component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -298,7 +298,7 @@ To perform the upload operation, initialize the `uploadUrl` property in a [ajaxS
 
 ## Image Preview support
 
-To perform the image preview support in the File Manager component, need to initialize the `getImageUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#ajaxsettings) of File Manager component.
+To perform the image preview support in the File Manager component, need to initialize the `getImageUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -313,7 +313,7 @@ To perform the image preview support in the File Manager component, need to init
 
 ## Injecting feature modules
 
-Basically, the File Manager component contains large-icons view for displaying the files and folders, a breadcrumbbar for navigation and context menu for performing operations. However, these basic functionalities can be extended by using the additional feature modules like detailsview, toolbar, navigation pane, and context menu to change the layout and to simplify the navigation and file operations within the file system. The above modules can be injected using `provide`.
+Basically, the File Manager component contains large-icons view for displaying the files and folders, a breadcrumb bar for navigation and context menu for performing operations. However, these basic functionalities can be extended by using the additional feature modules like details view, toolbar, navigation pane, and context menu to change the layout and to simplify the navigation and file operations within the file system. The above modules can be injected using `provide`.
 
 The following example shows you the File Manager with all feature modules.
 
@@ -328,11 +328,11 @@ The following example shows you the File Manager with all feature modules.
         
 {% previewsample "page.domainurl/code-snippet/file-manager/overview-cs1" %}
 
->**Note:** The appearance of the File Manager can be customized by using [cssClass](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#cssclass) property. This adds a css class to the root of the File Manager which can be used to add new styles or override existing styles to the File Manager.
+>**Note:** The appearance of the File Manager can be customized by using [cssClass](https://ej2.syncfusion.com/vue/documentation/api/file-manager#cssclass) property. This adds a css class to the root of the File Manager which can be used to add new styles or override existing styles to the File Manager.
 
 ## Switching initial view of the File Manager
 
-The initial view of the File Manager can be changed to details or largeicons view with the help of [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) property. By default, the File Manager will be rendered in large icons view. When the File Manager is initially rendered, [created](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#created) will be triggered. This event can be utilized for performing operations once the File Manager has been successfully created.
+The initial view of the File Manager can be changed to details or large icons view with the help of [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager#view) property. By default, the File Manager will be rendered in large icons view. When the File Manager is initially rendered, [created](https://ej2.syncfusion.com/vue/documentation/api/file-manager#created) will be triggered. This event can be utilized for performing operations once the File Manager has been successfully created.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -347,12 +347,12 @@ The initial view of the File Manager can be changed to details or largeicons vie
 
 ## Maintaining component state on page reload
 
-The File Manager supports maintaining the component state on page reload. This can be achieved by enabling [enablePersistence](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#enablepersistence) property which maintains the following,
-* Previous view of the File Manager - [View](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view)
-* Previous path of the File Manager - [Path](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#path)
-* Previous selected items of the File Manager - [SelectedItems](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#selecteditems)
+The File Manager supports maintaining the component state on page reload. This can be achieved by enabling [enablePersistence](https://ej2.syncfusion.com/vue/documentation/api/file-manager#enablepersistence) property which maintains the following,
+* Previous view of the File Manager - [View](https://ej2.syncfusion.com/vue/documentation/api/file-manager#view)
+* Previous path of the File Manager - [Path](https://ej2.syncfusion.com/vue/documentation/api/file-manager#path)
+* Previous selected items of the File Manager - [SelectedItems](https://ej2.syncfusion.com/vue/documentation/api/file-manager#selecteditems)
 
-For every operation in File Manager, ajax request will be sent to the server which then processes the request and sends back the response. When the ajax request is success, [success](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#success) event will be triggered and [failure](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#failure) event will be triggered if the request gets failed.
+For every operation in File Manager, ajax request will be sent to the server which then processes the request and sends back the response. When the ajax request is success, [success](https://ej2.syncfusion.com/vue/documentation/api/file-manager#success) event will be triggered and [failure](https://ej2.syncfusion.com/vue/documentation/api/file-manager#failure) event will be triggered if the request gets failed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -365,11 +365,11 @@ For every operation in File Manager, ajax request will be sent to the server whi
         
 {% previewsample "page.domainurl/code-snippet/file-manager/persistence-cs1" %}
 
->**Note:** The files of the current folder opened in the File Manager can be refreshed programatically by calling [refreshFiles](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#refreshfiles) method.
+>**Note:** The files of the current folder opened in the File Manager can be refreshed programmatically by calling [refreshFiles](https://ej2.syncfusion.com/vue/documentation/api/file-manager#refreshfiles) method.
 
 ## Rendering component in right-to-left direction
 
-It is possible to render the File Manager in right-to-left direction by setting the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#enablertl) API to true.
+It is possible to render the File Manager in right-to-left direction by setting the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/file-manager#enablertl) API to true.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -384,7 +384,7 @@ It is possible to render the File Manager in right-to-left direction by setting 
 
 ## Specifying the current path of the File Manager
 
-The current path of the File Manager can be specified initially or dynamically using the [path](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#path) property.
+The current path of the File Manager can be specified initially or dynamically using the [path](https://ej2.syncfusion.com/vue/documentation/api/file-manager#path) property.
 
 The following code snippet demonstrates specifying the current path in File Manager on rendering.
 

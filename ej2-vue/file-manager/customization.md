@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Customization in Vue File Manager component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: Customization 
+description: Learn how to customize the File Manager component's behavior and appearance in Vue using available APIs.
+control: File Manager 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in Vue File Manager component
 
-The File Manager component allows customization of its functionalities, such as the context menu, searching, uploading, and toolbar, using APIs. Given below are some of the functionalities that can be customized in the File Manager,
+The File Manager component allows customization of its functionality and UI—such as the context menu, searching, uploading, and toolbar—using public APIs. The following topics describe customization options:
 
 * [Context menu customization](#context-menu-customization)
 * [Details view customization](#details-view-customization)
@@ -24,7 +24,7 @@ The File Manager component allows customization of its functionalities, such as 
 
 ## Context menu customization
 
-The context menu settings, such as the items to be displayed on files, folders, and layout clicks, can be customized using [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#contextmenusettings) property.
+Customize the context menu items shown for files, folders, and layout clicks using the [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#contextmenusettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -39,7 +39,7 @@ The context menu settings, such as the items to be displayed on files, folders, 
 
 ## Details view customization
 
-The details view settings, including column width, header text, and templates for each field, can be customized using [detailsViewSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#detailsviewsettings) property.
+Configure details view columns (header text, width, templates, formats) using the [detailsViewSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#detailsviewsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -54,7 +54,7 @@ The details view settings, including column width, header text, and templates fo
 
 ## Navigation pane customization
 
-The navigation pane settings like, minimum and maximum width, visibility and sort order can be customized using [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) property.
+Control navigation pane behavior—such as minimum/maximum width, visibility, and sort order—using the [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#navigationpanesettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -69,9 +69,9 @@ The navigation pane settings like, minimum and maximum width, visibility and sor
 
 ## Show/Hide file extension
 
-The file extensions are displayed in the File Manager by default. This can be hidden by disabling the [showFileExtension](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#showfileextension) property.
+File extensions are displayed by default. Disable them by setting the [showFileExtension](https://ej2.syncfusion.com/vue/documentation/api/file-manager#showfileextension) property to `false`.
 
-In File Manager [fileLoad](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#fileload) and [fileOpen](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#fileopen) events are triggered before the file/folder is rendered and before the file/folder is opened respectively. These events can be utilized to perform operations before a file/folder is rendered or opened.
+The [fileLoad](https://ej2.syncfusion.com/vue/documentation/api/file-manager#fileload) and [fileOpen](https://ej2.syncfusion.com/vue/documentation/api/file-manager#fileopen) events fire before a file/folder is rendered and before a file/folder is opened, respectively. Use these events to perform operations prior to rendering or opening.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -86,7 +86,7 @@ In File Manager [fileLoad](https://ej2.syncfusion.com/vue/documentation/api/file
 
 ## Show/Hide hidden items
 
-The File Manager provides support to show/hide the hidden items by enabling/disabling the [showHiddenItems](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#showhiddenitems) property.
+Show or hide hidden files and folders by toggling the [showHiddenItems](https://ej2.syncfusion.com/vue/documentation/api/file-manager#showhiddenitems) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -101,7 +101,7 @@ The File Manager provides support to show/hide the hidden items by enabling/disa
 
 ## Show/Hide thumbnail images in large icons view
 
-The thumbnail images are displayed in the File Manager's large icons view by default. This can be hidden by disabling the [showThumbnail](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#showthumbnail) property.
+Thumbnails are displayed by default in the large icons view. Disable them by setting the [showThumbnail](https://ej2.syncfusion.com/vue/documentation/api/file-manager#showthumbnail) property to `false`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -116,7 +116,7 @@ The thumbnail images are displayed in the File Manager's large icons view by def
 
 ## Toolbar customization
 
-The toolbar settings, including the items to be displayed and their visibility, can be customized using [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#toolbarsettings) property.
+Customize toolbar items and their visibility using the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#toolbarsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -135,7 +135,7 @@ The toolbar settings, including the items to be displayed and their visibility, 
 
 ## Upload customization
 
-The upload settings like, minimum and maximum file size and enabling auto upload can be customized using [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#uploadsettings) property.
+Configure upload behavior (min/max file size, `autoUpload`, allowed extensions, sequential uploads, etc.) using the [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#uploadsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

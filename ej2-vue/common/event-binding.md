@@ -39,9 +39,9 @@ const display = () => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
 
 #calendar {
   max-width: 250px;
@@ -77,8 +77,8 @@ const clicked = () => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
 </style>
 
 ```

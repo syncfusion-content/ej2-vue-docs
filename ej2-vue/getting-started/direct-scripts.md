@@ -70,12 +70,12 @@ Include the appropriate version of the Vue.js library in the **index.html** file
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS from CDN, [CRG] and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in CDN. Add the `Material` CSS styles to the head section of the **index.html** file.
+In this article, `Material3` theme is applied using CSS styles, which are available in CDN. Add the `Material3` CSS styles to the head section of the **index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
 
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/21.2.3/material.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/material3.css" rel="stylesheet" type="text/css" />
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +87,7 @@ To integrate Syncfusion<sup style="font-size:70%">&reg;</sup> components into yo
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
 
-<script src="https://cdn.syncfusion.com/ej2/21.2.3/ej2-vue-es5/dist/ej2-vue.min.js"></script>
+<script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-vue-es5/dist/ej2-vue.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}

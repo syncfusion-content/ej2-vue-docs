@@ -128,8 +128,8 @@ Add the styles of Grid component to the `<style>` section of the `App.vue` file 
 
 <style lang="scss">
 // syncfusion styles
-@use "../node_modules/@syncfusion/ej2-base/styles/material" as *;
-@use "../node_modules/@syncfusion/ej2-vue-grids/styles/material" as *;
+@use "../node_modules/@syncfusion/ej2-base/styles/material3" as *;
+@use "../node_modules/@syncfusion/ej2-vue-grids/styles/material3" as *;
 </style>
 
 {% endhighlight %}

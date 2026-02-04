@@ -147,8 +147,8 @@ Add the styles of Grid component to the `<style>` section of the `App.vue` file 
 
 <style lang="scss">
 // syncfusion styles
-@import "../node_modules/@syncfusion/ej2-base/styles/material.scss";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.scss";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.scss";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.scss";
 </style>
 
 {% endhighlight %}
@@ -226,8 +226,8 @@ $accent: black;
 $primary: blue;
 
 // syncfusion styles
-@import "../node_modules/@syncfusion/ej2-base/styles/material.scss";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.scss";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.scss";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.scss";
 
 </style>
 
