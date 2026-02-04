@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue Chart component
 
-The Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Chart component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22), and relevant [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) roles.
 
-The accessibility compliance for the Chart component is outlined below.
+The Chart component's accessibility compliance is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -52,7 +52,7 @@ The Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patt
 
 ## Keyboard interaction
 
-The Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Chart component.
+The Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it easier for assistive technology users and keyboard-only users to navigate the chart. The following keyboard shortcuts are supported by the Chart component
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -77,9 +77,9 @@ The Chart component followed the [keyboard interaction](https://www.w3.org/WAI/A
 
 ## Ensuring accessibility
 
-The Chart component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Chart component's accessibility levels are ensured through an [`accessibility-checker`](https://www.npmjs.com/package/accessibility-checker) and [`axe-core`](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Chart component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/chart.html) in a new window to evaluate the accessibility of the Chart component with accessibility tools.
+The accessibility compliance of the Chart component is shown in the following sample. Open the [`sample`](https://ej2.syncfusion.com/accessibility/chart.html) in a new window to evaluate the accessibility of the Chart component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/chart.html" %}
 

@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Bar
 
-To render a [bar](https://www.syncfusion.com/vue-components/vue-charts/chart-types/bar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+To render a [`bar`](https://www.syncfusion.com/vue-components/vue-charts/chart-types/bar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  
-* **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Bar` in your chart configuration. This indicates that the data should be represented as a bar chart, which makes it easy to compare values across categories.
+* **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type) as `Bar` in your chart configuration. This indicates that the data should be represented as a bar chart, which makes it easy to compare values across categories.
 
 * **Inject the BarSeries module**: Use the `provide: { chart: [BarSeries]}` method to inject the `BarSeries` module into your chart. This step is essential, as it ensures that the necessary functionalities for rendering bar series are available in your chart.
 
@@ -31,7 +31,7 @@ To render a [bar](https://www.syncfusion.com/vue-components/vue-charts/chart-typ
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#yname) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -50,7 +50,7 @@ The following properties can be used to customize the `bar` series.
 
 **Fill**
 
-The [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#fill) property determines the color applied to the series.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#fill) property determines the color applied to the series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -63,7 +63,7 @@ The [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#fill) 
         
 {% previewsample "page.domainurl/code-snippet/chart/series/bar-cs5" %}
 
-The [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#fill) property can be used to apply a gradient color to the bar series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#fill) property can be used to apply a gradient color to the bar series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,7 +78,7 @@ The [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#fill) 
 
 **Opacity**
 
-The [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#opacity) property specifies the transparency level of the fill. Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
+The [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -93,7 +93,7 @@ The [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#opa
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#border) property to customize the width, color and dash array of the series border.
+Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#border) property to configure the border width, color, and dash array of the bar series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -110,7 +110,7 @@ Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/series
 
 ### Bar space
 
-Use the [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#columnspacing) property in the series to adjust the space between bars.
+Use the [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#columnspacing) property in the series to adjust the space between bars.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -125,7 +125,7 @@ Use the [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 ### Bar width
 
-Use the [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#columnwidth) property in the series to adjust the width of the bars.
+Use the [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#columnwidth) property in the series to adjust the width of the bars.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -140,7 +140,7 @@ Use the [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/s
 
 ### Bar width in pixel
 
-Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#columnwidthinpixel) property in the series to define the exact width of the bars in pixels. This property ensures that each bar maintains the specified width, providing a uniform appearance throughout the chart.
+Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#columnwidthinpixel) property in the series to define the exact width of the bars in pixels. This property ensures that each bar maintains the specified width, providing a uniform appearance throughout the chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -155,7 +155,7 @@ Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/vue/documentation/api/
 
 ## Grouped bar
 
-Use the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#groupname) property to group the data points in bar type charts. Data points with the same group name will be grouped together in the chart, making it easy to compare different sets of data.
+Use the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#groupname) property to group the data points in bar type charts. Data points with the same group name will be grouped together in the chart, making it easy to compare different sets of data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -170,7 +170,7 @@ Use the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/chart/ser
 
 ## Cylindrical bar chart
 
-To render a cylindrical bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#columnfacet) property to `Cylinder` in the chart series. This property transforms the regular bars into cylindrical shapes, enhancing the visual representation of the data.
+To render a cylindrical bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#columnfacet) property to `Cylinder` in the chart series. This property transforms the regular bars into cylindrical shapes, enhancing the visual representation of the data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -189,8 +189,7 @@ Data points with `null` or `undefined` values are considered empty. Empty data p
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is `Gap`.
-
+Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/bar-cs16/app-composition.vue %}
@@ -204,7 +203,7 @@ Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPoi
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#fill) property to customize the fill color of empty points in the series.
+Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -219,7 +218,7 @@ Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPoi
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#border) property to customize the width and color of the border for empty points.
+Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -234,7 +233,7 @@ Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyP
 
 ## Corner radius
 
-The [`cornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#cornerradius) property in the chart series is used to customize the corner radius for bar series. This allows you to create bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the bars using the topLeft, topRight, bottomLeft, and bottomRight properties.
+The [`cornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#cornerradius) property in the chart series is used to customize the corner radius for bar series. This allows you to create bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the bars using the topLeft, topRight, bottomLeft, and bottomRight properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -249,7 +248,7 @@ The [`cornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/seri
 
 ### Point corner radius
 
-We can customize the corner radius for individual points in the chart series using the [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs/) event by setting the [`cornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs/#cornerradius) property in its event argument.
+You can customize the corner radius for individual points in the chart series using the [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs) event by setting the [`cornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointRenderEventArgs#cornerradius) property in its event argument.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -265,7 +264,7 @@ We can customize the corner radius for individual points in the chart series usi
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -280,7 +279,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seri
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event allows you to customize each data point before it is rendered on the chart.
+The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -297,5 +296,5 @@ The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#point
 
 ## See also
 
-* [Data label](../data-labels/)
-* [Tooltip](../tool-tip/)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)

@@ -140,8 +140,8 @@ Add the styles of calendar component to the `<style>` section of the `App.vue` f
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
 </style>
 
 {% endhighlight %}

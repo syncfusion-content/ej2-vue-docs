@@ -1,8 +1,8 @@
 ---
 layout: post
 title: File system provider in Vue File Manager component | Syncfusion
-description: Learn here all about File system provider in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: File system provider 
+description: Learn how to configure and integrate various file system providers in the Syncfusion Vue File Manager component.
+control: File Manager 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # File system provider in Vue File Manager component
 
-The file system provider allows the File Manager component to manage the files and folders in a physical or cloud-based file system. It provides the methods for performing various file actions like creating a new folder, copying and moving of files or folders, deleting uploading, and downloading the files or folders in the file system.
+The file system provider enables the File Manager component to manage files and folders in physical or cloud-based storage. It exposes server-side methods for common file actions such as creating folders, copying and moving items, deleting, uploading, and downloading.
 
 The following file providers are added in Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 File Manager component.
 
@@ -20,7 +20,7 @@ The following file providers are added in Syncfusion<sup style="font-size:70%">&
 * [SharePoint file provider](#SharePoint-file-provider)
 * [File Transfer Protocol file system provider](#file-transfer-protocol-file-system-provider)
 * [SQL database file system provider](#sql-database-file-system-provider)
-* [NodeJS file system provider](#nodejs-file-system-provider)
+* [Node file system provider](#node-file-system-provider)
 * [Google Drive file system provider](#google-drive-file-system-provider)
 * [Firebase Realtime Database file system provider](#firebase-file-system-provider)
 * [IBM Cloud Object Storage provider](#ibm-cloud-object-storage-file-provider)
@@ -109,7 +109,17 @@ void setBlobContainer( Blob-contatiner-url, Root-blob-directory-url)
 
 ```
 
-> **Note:** Also, assign the same *blobPath URL* and *filePath URL* in [**AzureFileOperations** and **AzureUpload**](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs) methods in the FileManager controller to determine the original path of the Azure blob.
+> **Note:** Also, **blobPath** is a container path in Azure Blob Storage, and **filePath** is the file location path. For example, create a **files** container in the mentioned Azure blob storage. Inside that container, create a new folder, **Files** which includes all files and folders that need to be viewed in FileManager. Check out the below path for an example.
+
+```ts
+
+  public AzureProviderController(IHostingEnvironment hostingEnvironment)
+  {
+      this.operation = new AzureFileProvider();
+      blobPath = "https://azure_service_account.blob.core.windows.net/files/";
+      filePath = "https://azure_service_account.blob.core.windows.net/files/Files";
+
+```
 
 After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
 
@@ -515,9 +525,9 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 > **Note:** To learn more about file actions that can be performed with Google drive file system provider, refer to this [link](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider#key-features)
 
-## NodeJS file system provider
+## Node file system provider
 
-In ASP.NET Core, NodeJS file system provider allows the users to manage the files and folders in a physical file system. It provides methods for performing all basic file operations like creating a folder, copy, move, delete, and download files and folders in the file system. We can use of the NodeJS file system provider either by installing the [ej2-filemanager-node-filesystem](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-node-filesystem) package or by cloning the [file system provider](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem) from the GitHub.
+In ASP.NET Core, Node file system provider allows the users to manage the files and folders in a physical file system. It provides methods for performing all basic file operations like creating a folder, copy, move, delete, and download files and folders in the file system. We can use of the Node file system provider either by installing the [ej2-filemanager-node-filesystem](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-node-filesystem) package or by cloning the [file system provider](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem) from the GitHub.
 
 ### Using ej2-filemanager-node-filesystem package
 
@@ -556,7 +566,7 @@ To set the port in which the project to be hosted and the root directory of the 
 
 > **Note:** By default, the service will run `8090` port.
 
-Now, mapping the ajaxSettings property of the FileManager component to the appropriate file operation methods in the filesystem-server.js file will allow to manage the physical file system with NodeJS file system provider.
+Now, mapping the ajaxSettings property of the FileManager component to the appropriate file operation methods in the filesystem-server.js file will allow to manage the physical file system with Node file system provider.
 
 ```
 
@@ -571,7 +581,7 @@ import { provide } from "vue";
 
 import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-// Initializing File Manager NodeJS file system service.
+// Initializing File Manager Node file system service.
 const ajaxSettings = 
 {
     // Replace the hosted port number in the place of "{port}"
@@ -598,7 +608,7 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 ```
 
-> **Note:** To learn more about file actions that can be performed with NodeJS file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem#key-features)
+> **Note:** To learn more about file actions that can be performed with Node file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem#key-features)
 
 ## Firebase Realtime Database file system provider
 
@@ -689,7 +699,7 @@ Here, the `Files` denotes the `rootNode` and the subsequent object refers to the
 
 ![generate_key](images/generate_key.png)
 
-* Next, you will need to clone the [`firebase-realtime-database-apscore-file-provider`](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) repository. Once cloned, simply open the project in Visual Studio and restore the NuGet package.
+* Next, you will need to clone the [`firebase-realtime-database-aspcore-file-provider`](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) repository. Once cloned, simply open the project in Visual Studio and restore the NuGet package.
 
 * Once you have generated the secret key, you will need to replace the JSON in the `access_key.json` file in the Firebase Realtime Database provider project with the newly generated key. This will enable authentication and allow you to perform read and write operations.
 
@@ -736,7 +746,7 @@ import { provide } from "vue";
 
 import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-// Initializing File Manager NodeJS file system service.
+// Initializing File Manager Node file system service.
 const ajaxSettings = 
 {
     // Replace the hosted port number in the place of "{port}"
@@ -767,7 +777,7 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 ## IBM Cloud Object Storage file provider
 
-The IBM Cloud Object Storage file provider module allows you work with the IBM Cloud Object Storage. It also provides the methods for performing various file actions such as creating a new folder, renaming files, and deleting files. The IBM Cloud Object Storage file provider serves the file provider support for the File Manager component with the IBM Cloud Object Storage. We can make use of IBM Cloud Object Storage file provider by installing the [ej2-filemanager-ibm-cos-node-file-provider](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-ibm-cos-node-file-provider)npm package or by cloning the [file provider](https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider) from the GitHub.
+The IBM Cloud Object Storage file provider module allows you work with the IBM Cloud Object Storage. It also provides the methods for performing various file actions such as creating a new folder, renaming files, and deleting files. The IBM Cloud Object Storage file provider serves the file provider support for the File Manager component with the IBM Cloud Object Storage. We can make use of IBM Cloud Object Storage file provider by installing the [ej2-filemanager-ibm-cos-node-file-provider](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-ibm-cos-node-file-provider) npm package or by cloning the [file provider](https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider) from the GitHub.
 
 ### Using ej2-filemanager-ibm-cos-node-file-provider npm package
 
@@ -814,7 +824,7 @@ import { provide } from "vue";
 
 import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-// Initializing File Manager NodeJS file system service.
+// Initializing File Manager Node file system service.
 const ajaxSettings = 
 {
     // Replace the hosted port number in the place of "{port}"

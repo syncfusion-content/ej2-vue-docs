@@ -2,7 +2,7 @@
 layout: post
 title: Vue 3 getting started with the File Manager component | Syncfusion
 description: Check out and learn about Vue 3 getting started with the Vue File Manager component of Syncfusion Essential JS 2 and more details.
-control: Vue 3 getting started
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 To get start quickly with Vue File Manager, you can check on this video:
 
@@ -106,7 +106,7 @@ yarn add @syncfusion/ej2-vue-filemanager
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -274,7 +274,7 @@ The output will appear as follows:
 
 ![vue-3-js-file-manager](./images/vue3-filemanager-demo.PNG)
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 

@@ -16,7 +16,7 @@ Pareto charts are used to find the cumulative values of data in different catego
 
 To render a `pareto` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  
-* **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Pareto` in your chart configuration. This indicates that the data should be represented as a pareto chart, will use a combination of column and line series.
+* **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type) as `Pareto` in your chart configuration. This indicates that the data should be represented as a pareto chart, will use a combination of column and line series.
 
 * **Inject the necessary modules**: Use the `provide: { chart: [ParetoSeries, ColumnSeries, LineSeries]}` method to inject the `ParetoSeries`, `ColumnSeries`, `LineSeries` modules into your chart. This step is essential, as it ensures that the necessary functionalities for rendering pareto series are available in your chart.
 
@@ -33,7 +33,7 @@ To render a `pareto` series in your chart, you need to follow a few steps to con
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#yname) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -50,7 +50,7 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ### Fill
 
-Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#fill) property to apply a color to the pareto line. By default, a color based on the theme is used.
+Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions#fill) property to apply a color to the pareto line. By default, a color based on the theme is used.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -65,7 +65,7 @@ Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOp
 
 ### Width
 
-Use the [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#width) property to control the thickness of the line for the pareto series, which affects its visual weight on the chart.
+Use the [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions#width) property to control the thickness of the line for the pareto series, which affects its visual weight on the chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -80,7 +80,7 @@ Use the [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoO
 
 ### Dash array
 
-The [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#dasharray) property determines the pattern of dashes and gaps in the pareto line series.
+The [`dashArray`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions#dasharray) property determines the pattern of dashes and gaps in the pareto line series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -95,7 +95,7 @@ The [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOpt
 
 ### Marker
 
-Use the [`marker`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#marker) property to display and customize markers for individual points in a pareto line.
+Use the [`marker`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions#marker) property to display and customize markers for individual points in a pareto line.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -110,7 +110,7 @@ Use the [`marker`](https://ej2.syncfusion.com/vue/documentation/api/chart/pareto
 
 ### Show axis
 
-Use the [`showAxis`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#showaxis) property to show or hide the secondary axis for the pareto series.
+Use the [`showAxis`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions#showaxis) property to show or hide the secondary axis for the pareto series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -129,7 +129,7 @@ Data points with `null` or `undefined` values are considered empty. Empty data p
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -144,7 +144,7 @@ Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPoi
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#fill) property to customize the fill color of empty points in the series.
+Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -159,7 +159,7 @@ Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPoi
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#border) property to customize the width and color of the border for empty points.
+Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -176,7 +176,7 @@ Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyP
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -191,7 +191,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seri
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event allows you to customize each data point before it is rendered on the chart.
+The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

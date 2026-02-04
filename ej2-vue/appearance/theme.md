@@ -85,8 +85,8 @@ Referring individual control from individual package
 **Example:**
 
 ```scss
-@import "ej2-base/styles/material.scss";
-@import "ej2-buttons/styles/button/material.scss";
+@import "ej2-base/styles/material3.scss";
+@import "ej2-buttons/styles/button/material3.scss";
 ```
 
 > `ej2-base` is common dependent package for all Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript control styles. So, it needs first to be added in the import statement.
@@ -101,8 +101,8 @@ Referring individual control from ej2 package
 **Example:**
 
 ```scss
-@import "ej2/base/material.scss";
-@import "ej2/button/material.scss";
+@import "ej2/base/material3.scss";
+@import "ej2/button/material3.scss";
 ```
 
 > The individual control theme will not include its dependent control styles. I.e. The dependent controls theme should be added before adding the individual control themes.

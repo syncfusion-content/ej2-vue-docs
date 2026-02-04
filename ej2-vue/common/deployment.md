@@ -30,7 +30,7 @@ _The latest minified versions of all UMD, Global and CSS files are available on 
 For example
 
 * [https://cdn.syncfusion.com/ej2/ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js](https://cdn.syncfusion.com/ej2/ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js)
-* [https://cdn.syncfusion.com/ej2/ej2-vue-inputs/styles/material.css](https://cdn.syncfusion.com/ej2/ej2-vue-inputs/styles/material.css)
+* [https://cdn.syncfusion.com/ej2/ej2-vue-inputs/styles/material.css](https://cdn.syncfusion.com/ej2/ej2-vue-inputs/styles/material3.css)
 
 _Versioned files are also available on CDN._
 
@@ -39,8 +39,8 @@ _Versioned files are also available on CDN._
 
 For example
 
-* [https://cdn.syncfusion.com/ej2/1.0.18/ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js](https://cdn.syncfusion.com/ej2/1.0.18/ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js)
-* [https://cdn.syncfusion.com/ej2/1.0.18/ej2-vue-inputs/styles/material.css](https://cdn.syncfusion.com/ej2/1.0.18/ej2-vue-inputs/styles/material.css)
+* [https://cdn.syncfusion.com/ej2/32.1.19/ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js](https://cdn.syncfusion.com/ej2/32.1.19/ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js)
+* [https://cdn.syncfusion.com/ej2/32.1.19/ej2-vue-inputs/styles/material.css](https://cdn.syncfusion.com/ej2/32.1.19/ej2-vue-inputs/styles/material.css)
 
 ## Packages
 

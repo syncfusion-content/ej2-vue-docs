@@ -1,8 +1,8 @@
 ---
 layout: post
 title: User Interface in Vue File Manager component | Syncfusion
-description: Learn here all about User interface in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: User interface 
+description: Learn here all about the File Manager UI sections and features in the Syncfusion Vue File Manager component.
+control: File Manager 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

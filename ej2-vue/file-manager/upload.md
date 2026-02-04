@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Upload in Vue File Manager component | Syncfusion
-description: Learn here all about Upload in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: Upload 
+description: Explore the upload options and advanced capabilities of the Syncfusion Vue File Manager, empowering smoother file handling and a more efficient user experience.
+control: File Manager 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Vue File Manager component provides a [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
 
-## Directory Upload
+## Directory upload
 
 The [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#directoryupload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component. 
 
@@ -35,7 +35,7 @@ When set to `true`, this property enables directory upload in the File Manager, 
 
 To learn more about the folder upload actions, refer to this [link](https://ej2.syncfusion.com/vue/documentation/file-manager/file-operations#folder-upload-support)
 
-## Sequential Upload
+## Sequential upload
 
 The [sequentialUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#sequentialupload) property controls whether users can upload files one by one in a sequential manner in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component. 
 
@@ -60,7 +60,7 @@ The screenshot below shows that each file begins uploading only after the previo
 
 To learn more about the folder upload actions, refer to this [link](https://ej2.syncfusion.com/vue/documentation/file-manager/file-operations#folder-upload-support)
 
-## Chunk Upload
+## Chunk upload
 
 The [chunkSize](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#chunksize) property specifies the size of each chunk when uploading large files. It divides the file into smaller parts, which are uploaded sequentially to the server.
 
@@ -89,7 +89,7 @@ With chunk upload, the pause and resume options gives users enhanced control ove
 >1. Chunk upload will work when the selected file size is greater than the specified chunk size. Otherwise, it upload the files normally. 
 >2. The pause and resume features available only when the chunk upload is enabled.
 
-## Auto Upload
+## Auto upload
 
 The [autoUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#autoupload) property controls whether files are automatically uploaded when they are added to the upload queue in the File Manager component.
 
@@ -106,7 +106,7 @@ The default value is `true`, the File Manager will automatically upload files as
         
 {% previewsample "page.domainurl/code-snippet/file-manager/upload/auto-upload" %}
 
-## Auto Close
+## Auto close
 
 The [autoClose](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#autoclose) property controls whether the upload dialog automatically closes after all the files have been uploaded.
 
@@ -145,7 +145,7 @@ If you want to allow only image files like .jpg and .png, you would set the prop
         
 {% previewsample "page.domainurl/code-snippet/file-manager/upload/prevent-upload" %}
 
-## Restrict drag and drop upload
+## Restrict external drag-and-drop upload
 
 The File Manager component provides support for external drag-and-drop functionality for uploading files by dragging it from local file system to File Manager.
 

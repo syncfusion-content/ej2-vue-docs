@@ -1,8 +1,8 @@
 ---
 layout: post
 title: File Operations in Vue File Manager component | Syncfusion
-description: Learn here all about File operations in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: File operations 
+description: Learn how to perform, manage and customize file operations in the Syncfusion Vue File Manager component.
+control: File Manager 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,28 +10,28 @@ domainurl: ##DomainURL##
 
 # File Operations in Vue File Manager component
 
-The File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming the existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
+The File Manager component enables browsing, managing, and organizing files and folders in a file system from a web application. Common file operations—creating folders, uploading and downloading files, deleting and renaming items, and previewing images—are supported by the component.
 
-The following table represents the basic operations available in the File Manager and their corresponding functions.
+The following table lists the basic operations available in the File Manager and their purpose.
 
-|Operation Name|Function|
-|----|----|
-|read|Read the details of files or folders available in the given path from the file system, so users can view and browse the files.|
-|create|Creates a new folder in the current path of the file system.|
-|delete|Removes the file or folder from the file server.|
-|rename|Rename the selected file or folder in the file system.|
-|search|Searches for items matching the search string in the current and child directories.|
-|details|Gets the detail of the selected item(s) from the file server.|
-|copy|Copy the selected file or folder in the file system.|
-|move|Cut the selected file or folder in the file server.|
-|upload|Upload files to the current path or directory in the file system.|
-|download|Downloads the file from the server and the multiple files can be downloaded as ZIP files.|
+| Operation Name | Function |
+| ---- | ---- |
+| read | Reads details of files or folders available at a given path so users can view and browse files. |
+| create | Creates a new folder in the current path. |
+| delete | Removes files or folders from the file server. |
+| rename | Renames the selected file or folder. |
+| search | Searches for items that match the search string in the current and child directories. |
+| details | Retrieves details for the selected item(s) from the file server. |
+| copy | Copies the selected file or folder. |
+| move | Moves (cuts) the selected file or folder. |
+| upload | Uploads files to the current path or directory. |
+| download | Downloads files; multiple files can be downloaded as a ZIP archive. |
 
->The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the File Manager only after the successful response from the server.
+> The *CreateFolder*, *Remove*, and *Rename* actions are reflected in the File Manager only after a successful server response.
 
-## Folder Upload support
+## Folder upload support
 
-To enable directory (folder) upload in the File Manager, set the [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettings/#directoryupload) property to true within the [`uploadSettings`](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#uploadsettings) configuration. The ability to upload either folders or files is determined by the value of the **directoryUpload** property, which can be enabled or disabled as needed. This directory upload feature is supported by the following file service providers:
+To enable directory (folder) upload in the File Manager, set the [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadSettings#directoryupload) property to true within the [`uploadSettings`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#uploadsettings) configuration. The ability to upload either folders or files is determined by the value of the **directoryUpload** property, which can be enabled or disabled as needed. This directory upload feature is supported by the following file service providers:
 * Physical file service provider.
 * Azure file service provider.
 * NodeJS file service provider.
@@ -52,7 +52,7 @@ In the following example, directory upload is enabled/disabled on DropDownButton
 
 ### Physical file service provider
 
-To achieve the directory upload in the physical file service provider, use the below code snippet in `IActionResult Upload` method in the `Controllers/FileManagerController.cs` file.
+To support directory upload in the physical file service provider, update the `IActionResult Upload` method in `Controllers/FileManagerController.cs` as shown:
 
 ```ts
 [Route("Upload")]
@@ -108,9 +108,9 @@ public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string ac
 }
 ```
 
-Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Controllers/FileManagerController.cs#L76) for more details
+Refer to the [GitHub example](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Controllers/FileManagerController.cs#L76) for details.
 
-And also add the below code snippet in `FileManagerResponse Upload` method in `Models/PhysicalFileProvider.cs` file.
+Also update the `FileManagerResponse Upload` implementation in `Models/PhysicalFileProvider.cs`:
 
 ```ts
 string[] folders = name.Split('/');
@@ -118,17 +118,17 @@ string fileName = folders[folders.Length - 1];
 var fullName = Path.Combine((this.contentRootPath + path), fileName);
 ```
 
-Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Models/PhysicalFileProvider.cs#L1185) for more details.
+Refer to the [GitHub example](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Models/PhysicalFileProvider.cs#L1185) for details.
 
 ### Azure file service provider
 
-For Azure file service provider, no customizations are needed for directory upload with server side and this will work with the below default upload method code.
+No server-side changes are required for directory upload when using the Azure file service provider; the default upload method supports it.
 
-Refer to the [GitHub](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs#L94) for more details.
+Refer to the [GitHub example](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs#L94) for details.
 
 ### NodeJS file service provider
 
-To perform the directory upload in the NodeJS file service provider, use the below code snippet in `app.post` method in the `filesystem-server.js` file.
+For NodeJS, handle directory paths and creation on the server in `filesystem-server.js` as shown:
 
 ```ts
 var folders = (path.normalize(req.body.filename).replace(/^(\.\.[\/\\])+/, '').replace(/\\/g, "/")).split('/');
@@ -174,7 +174,7 @@ if (folders.length > 1)
 }
 ```
 
-Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem/blob/master/filesystem-server.js#L788) for more details.
+Refer to the [GitHub example](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem/blob/master/filesystem-server.js#L788) for details.
 
 ### Amazon file service provider
 
@@ -199,20 +199,20 @@ foreach (var file in uploadFiles)
 }
 ```
 
-Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs#L83) for more details.
+Refer to the [GitHub example](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs#L83) for details.
 
-And also add the below code snippet in `AsyncUpload` method in `Models/AmazonS3FileProvider.cs` file.
+Also add the following in `AsyncUpload` in `Models/AmazonS3FileProvider.cs`:
 
 ```ts
 string[] folders = file.FileName.Split('/');
 string name = folders[folders.Length - 1];
 ```
 
-Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Models/AmazonS3FileProvider.cs#L585) for more details.
+Refer to the [GitHub example](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Models/AmazonS3FileProvider.cs#L585) for details.
 
-## File operation request and response Parameters
+## File operation request and response parameters
 
-The default parameters available in file operation request from the File Manager and the corresponding response parameters required by the File Manager are listed as follows.
+The default parameters sent with File Manager requests and the expected response parameters are described below.
 
 ### Read
 
@@ -844,7 +844,7 @@ The following table represents the request parameters of *GetImage* operations.
 
 Return the image as a file stream in response.
 
-The request from the File Manager can be customized using the [beforeSend](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#beforesend) event. Additional information can be passed to the File Manager in file operation response and can be used in customization.
+The request from the File Manager can be customized using the [beforeSend](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforesend) event. Additional information can be passed to the File Manager in file operation response and can be used in customization.
 
 ## File request and response contents
 

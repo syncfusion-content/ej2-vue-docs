@@ -12,17 +12,17 @@ domainurl: ##DomainURL##
 
 # Dynamic chart in Vue Chart component
 
-By using html button, you can add the chart dynamically when click the button.
+A chart can be rendered dynamically by using an HTML button. This approach is useful in scenarios where charts need to be created or updated based on user interaction, such as loading data on demand or rendering multiple charts conditionally.
 
-To add the chart dynamically through button click, follow the given steps:
+To add a chart dynamically through a button click, follow the steps below.
 
 **Step 1**:
 
-Initially create the html button.
+Create an HTML button initially.
 
-Then create chart inside of button `onClick` function. Now click the button charts will render based on click count.
+Define the chart creation logic inside the button’s `onClick` event handler. Each time the button is clicked, the chart is rendered dynamically based on the click count or the associated logic defined in the handler.
 
-The following code sample demonstrates the output.
+The following example demonstrates dynamically rendering a chart when the button is clicked.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

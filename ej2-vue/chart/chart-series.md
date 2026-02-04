@@ -12,8 +12,9 @@ domainurl: ##DomainURL##
 
 ## Multiple Series
 
-You can add multiple series to the chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/) property.
-The series are rendered in the order as it is added to the series array.
+Multiple series can be added to a chart by using the [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel) property. Each series represents a distinct set of data, and all configured series are rendered in the same chart area for easy comparison.
+
+The series are rendered in the same order in which they are defined in the `series` collection. This ordering determines the visual stacking of series when multiple series overlap.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -28,9 +29,9 @@ The series are rendered in the order as it is added to the series array.
 
 ## Combination Series
 
-Combination of different types like Line, column etc, can be rendered in a chart.
+A combination chart allows different series types, such as Line and Column, to be rendered together in a single chart. This is useful for comparing multiple datasets that have different visual representation requirements.
 
->Bar series cannot be combined with any other series as the axis orientation is different from other series.
+> Note: Bar series cannot be combined with other series types because their axis orientation differs from other series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -45,7 +46,7 @@ Combination of different types like Line, column etc, can be rendered in a chart
 
 ## Enable Complex Property in Series
 
-By setting `enableComplexProperty` value as `true` in series you can bind complex data to the chart.
+By setting the `enableComplexProperty` value to `true` in a series, complex data objects can be bound directly to the chart. This enables mapping of nested object values to the series data fields, which is useful when working with structured or hierarchical data sources.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

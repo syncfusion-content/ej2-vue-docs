@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Step Line
 
-To render a [step line](https://www.syncfusion.com/vue-components/vue-charts/chart-types/stepline-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+To render a [`step line`](https://www.syncfusion.com/vue-components/vue-charts/chart-types/stepline-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
  
-* **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `StepLine` in your chart configuration. This indicates that the data should be represented as a step line chart, which connects data points with horizontal and vertical lines, creating a staircase effect. This type is ideal for displaying data that changes at distinct points.
+* **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type) as `StepLine` in your chart configuration. This indicates that the data should be represented as a step line chart, which connects data points with horizontal and vertical lines, creating a staircase effect. This type is ideal for displaying data that changes at distinct points.
 
 * **Inject the StepLineSeries module**: Use the `provide: { chart: [StepLineSeries]}` method to inject the `StepLineSeries` module into your chart. This step is essential, as it ensures that the necessary functionalities for rendering step line series are available in your chart.
 
@@ -31,7 +31,7 @@ To render a [step line](https://www.syncfusion.com/vue-components/vue-charts/cha
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#yname) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -50,7 +50,7 @@ The following properties can be used to customize the `step line` series.
 
 **Fill**
 
-The [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#fill) property determines the color applied to the series.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#fill) property determines the color applied to the series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -63,7 +63,7 @@ The [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#fill) 
         
 {% previewsample "page.domainurl/code-snippet/chart/series/stepline-cs" %}
 
-The [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#fill) property can be used to apply a gradient color to the step line series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#fill) property can be used to apply a gradient color to the step line series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,7 +78,7 @@ The [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#fill) 
 
 **Opacity**
 
-The [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#opacity) property specifies the transparency level of the fill. Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
+The [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -93,7 +93,7 @@ The [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#opa
 
 **Dash array**
 
-The [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#dasharray) property determines the pattern of dashes and gaps in the series.
+The [`dashArray`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#dasharray) property determines the pattern of dashes and gaps in the series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -108,7 +108,7 @@ The [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#d
 
 **Width**
 
-The [width](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#width) property specifies the stroke width applied to the series.
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#width) property specifies the stroke width applied to the series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -123,7 +123,7 @@ The [width](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#width
 
 **Step**
 
-Use the [`step`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#step) property to change the position of the steps in a step line series.
+Use the [`step`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#step) property to change the position of the steps in a step line series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -138,7 +138,7 @@ Use the [`step`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#
 
 **No risers**
 
-You can eliminate the vertical lines between points by using the [`noRisers`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#norisers) property in a series. This approach is useful for highlighting trends without the distraction of risers.
+You can eliminate the vertical lines between points by using the [`noRisers`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel#norisers) property in a series. This approach is useful for highlighting trends without the distraction of risers.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -157,7 +157,7 @@ Data points with `null` or `undefined` values are considered empty. Empty data p
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -172,7 +172,7 @@ Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPoi
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#fill) property to customize the fill color of empty points in the series.
+Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -187,7 +187,7 @@ Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPoi
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#border) property to customize the width and color of the border for empty points.
+Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings#border)  property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -204,7 +204,7 @@ Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyP
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -219,7 +219,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seri
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event allows you to customize each data point before it is rendered on the chart.
+The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -234,5 +234,5 @@ The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#point
 
 ## See also
 
-* [Data label](../data-labels/)
-* [Tooltip](../tool-tip/)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)

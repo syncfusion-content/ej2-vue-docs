@@ -12,13 +12,15 @@ domainurl: ##DomainURL##
 
 # Hide tool tip in Vue Chart component
 
-By using the [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#tooltiprender) event, you can cancel the tooltip for unselected series in the chart.
+The tooltip displayed for a chart series can be conditionally hidden by using the [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#tooltiprender) event. This is useful when tooltips should be shown only for selected series or specific data points.
 
-To hide the tooltip value in unselected series, follow the given steps:
+To hide the tooltip for unselected series, follow the steps below.
 
 **Step 1**:
 
-By using the [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#tooltiprender) event, you can get the series elements in the arguments. By using this argument we can compare whether seriesElementclasslist is deselected container or not. If it is true then we cancel the tooltip by setting the value for `args.cancel` as `true`.
+Use the [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#tooltiprender) event to access the tooltip rendering arguments. From the event arguments, the corresponding series element can be obtained and checked to determine whether it belongs to a deselected series.
+
+By comparing the `seriesElement` class list with the deselected container, the tooltip rendering can be conditionally canceled. If the series is identified as unselected, set `args.cancel` to `true` to prevent the tooltip from being displayed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

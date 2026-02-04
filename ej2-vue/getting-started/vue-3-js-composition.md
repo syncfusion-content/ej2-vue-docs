@@ -99,21 +99,21 @@ yarn add @syncfusion/ej2-vue-grids
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the `<style>` section of **src/App.vue** file. Vite app generates a default `styles.css` file which we do not need for this example. Before running the sample, delete the content of `src/style.css` or remove the file if it's unused.
+In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Grid component and its dependents were imported into the `<style>` section of **src/App.vue** file. Vite app generates a default `styles.css` file which we do not need for this example. Before running the sample, delete the content of `src/style.css` or remove the file if it's unused.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 </style>
 
 {% endhighlight %}
@@ -212,15 +212,15 @@ const data = [
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 </style>
 
 {% endhighlight %}
