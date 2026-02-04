@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Maps Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component
 
 You can explore some useful features in the Maps component using the following video.
 
@@ -38,7 +38,7 @@ Below is the list of minimum dependencies required to use the Maps.
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -163,6 +163,7 @@ you need to inject its feature module using `provide` option.  Find the modules 
 * NavigationLine - Inject this provider to use navigation lines feature.
 * Selection - Inject this provider to use selection feature.
 * Zoom - Inject this provider to use zooming and panning feature.
+* Polygon - Inject this provider to use polygon feature.
 
 In the current application, we are going to modify the above basic Maps to visualize 2016 USA president election results.
 
@@ -210,7 +211,7 @@ let usMap: Object =
 
 ```
 
-Elements in the Maps will get rendered in the layers. So add a layer collection to the Maps by using [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps/#layers) property. Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#shapedata) property.
+Elements in the Maps will get rendered in the layers. So add a layer collection to the Maps by using [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps#layers) property. Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapedata) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -230,9 +231,9 @@ The following properties in layers are used for binding data source to map.
 * [`shapeDataPath`]
 * [`shapePropertyPath`]
 
-The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#datasource) property takes collection value as input. For example, the list of objects can be provided as input. This data is further used in tooltip, data label, bubble, legend and in color mapping.
+The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#datasource) property takes collection value as input. For example, the list of objects can be provided as input. This data is further used in tooltip, data label, bubble, legend and in color mapping.
 
-The [`shapeDataPath`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#shapedatapath) property used to refer the data ID in dataSource. Where as, the [`shapePropertyPath`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#shapepropertypath) property is used to refer the column name in shapeData to identify the shape. Both the properties are related to each other. When the values of the shapeDataPath property in the dataSource property and the value of shapePropertyPath in the shapeData property match, then the associated object from the dataSource is bound to the corresponding shape.
+The [`shapeDataPath`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapedatapath) property used to refer the data ID in dataSource. Where as, the [`shapePropertyPath`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapepropertypath) property is used to refer the column name in shapeData to identify the shape. Both the properties are related to each other. When the values of the shapeDataPath property in the dataSource property and the value of shapePropertyPath in the shapeData property match, then the associated object from the dataSource is bound to the corresponding shape.
 
 The JSON object "permanent and non-permanent countries in the UN security council" is used as data source below.
 
@@ -250,7 +251,7 @@ The JSON object "permanent and non-permanent countries in the UN security counci
 
 The Color Mapping feature supports customization of shape colors based on the underlying value of shape received from bounded data. Specify the field name from which the values have to be compared for the shapes in [`colorValuePath`] property in [`shapeSettings`].
 
-Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property. Here '#D84444' is specified for 'Permanent' and '#316DB5' is specified for 'Non-Permanent'.
+Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel#colorvaluepath) property. Here '#D84444' is specified for 'Permanent' and '#316DB5' is specified for 'Non-Permanent'.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -262,7 +263,7 @@ Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/vue/doc
 
 ## Add Title for Maps
 
-You can add a title using [`titleSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/titleSettingsModel/) property to the map to provide quick
+You can add a title using [`titleSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/titleSettingsModel) property to the map to provide quick
 information to the user about the shapes rendered in the map.
 
 {% tabs %}
@@ -275,7 +276,7 @@ information to the user about the shapes rendered in the map.
 
 ## Enable Legend
 
-You can show legend for the Maps by setting true to the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/#visible) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/) object and by injecting the `Legend`
+You can show legend for the Maps by setting true to the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel#visible) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel) object and by injecting the `Legend`
 module using `provide` option.
 
 {% tabs %}
@@ -288,7 +289,7 @@ module using `provide` option.
 
 ## Add Data Label
 
-You can add data labels to show additional information of the shapes in map. This can be achieved by setting [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#visible) property to true in the [`dataLabelSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/) object and by injecting `DataLabel` module using `provide` option.
+You can add data labels to show additional information of the shapes in map. This can be achieved by setting [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#visible) property to true in the [`dataLabelSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel) object and by injecting `DataLabel` module using `provide` option.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -301,8 +302,8 @@ You can add data labels to show additional information of the shapes in map. Thi
 ## Enable Tooltip
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints.
-You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/tooltipSettingsModel/#visible) property as true
-in [`tooltipSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/tooltipSettingsModel/) object and by injecting `MapsTooltip` module using
+You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/tooltipSettingsModel#visible) property as true
+in [`tooltipSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/tooltipSettingsModel) object and by injecting `MapsTooltip` module using
 `provide` option.
 
 {% tabs %}

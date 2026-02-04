@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Data labels in Vue Maps component
 
-Data labels provide information to users about the shapes of the Maps component. It can be enabled by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#visible) property of the [dataLabelSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/) to **true**.
+Data labels display information about Maps shapes. Enable data labels by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#visible) property of the [dataLabelSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel) to **true**.
 
 >To use the data label feature, the **DataLabel** module must be injected.
 
 ## Adding data labels
 
-To display the data labels in the Maps, set the field name containing the text to be displayed from the data source or shape data in the [labelPath](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#labelpath) property of the `dataLabelSettings` property.
+To display data labels, specify the field name containing the label text in the [labelPath](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#labelpath) property of [dataLabelSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel). The field can come from either the shape data or the layer data source.
 
-In the following example, the value of `labelPath` property is set from the field name in the shape data of the Maps layer.
+The following example sets [labelPath](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#labelpath) from a field in the shape data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,7 +31,7 @@ In the following example, the value of `labelPath` property is set from the fiel
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs28" %}
 
-In the following example, the value of `labelPath` property is set from the field name in the data source of the layer settings.
+The following example sets [labelPath](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#labelpath) from a field in the layer data source.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -46,12 +46,12 @@ In the following example, the value of `labelPath` property is set from the fiel
 
 ## Customization
 
-The following properties are available in the `dataLabelSettings` to customize the data label of the Maps component.
+Customize data label appearance using the following properties in  [dataLabelSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel).
 
-* [border](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#border) - To customize the color, width and opacity for the border of the data labels in Maps.
-* [fill](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#fill) - To apply the color of the data labels in Maps.
-* [opacity](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#opacity) - To customize the transparency of the data labels in Maps.
-* [textStyle](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#textstyle) - To customize the text style of the data labels in Maps.
+* [border](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#border) - To customize the color, width and opacity for the border of the data labels in Maps.
+* [fill](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#fill) - To apply the color of the data labels in Maps.
+* [opacity](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#opacity) - To customize the transparency of the data labels in Maps.
+* [textStyle](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#textstyle) - To customize the text style of the data labels in Maps.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -66,7 +66,7 @@ The following properties are available in the `dataLabelSettings` to customize t
 
 ## Label animation
 
-The data labels can be animated during the initial rendering of the Maps. This can be enabled by setting the [animationDuration](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#animationduration) property in the `dataLabelSettings` of the Maps. The duration of the animation is specified in milliseconds.
+Animate data labels during initial rendering by setting the [animationDuration](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#animationduration) property in the `dataLabelSettings`. Specify the duration in milliseconds.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -81,7 +81,7 @@ The data labels can be animated during the initial rendering of the Maps. This c
 
 ## Smart labels
 
-The Maps component provides an option to handle the labels when they intersect with the corresponding shape borders using the [smartLabelMode](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#smartlabelmode) property. The following options are available in the `smartLabelMode` property.
+Control label behavior when labels exceed shape boundaries using the [smartLabelMode](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#smartlabelmode) property. The following modes are available:
 
 * **None** -  It specifies that no action is taken, when a label exceeds the shape's region.
 * **Hide** -  It specifies to hide the labels, when it exceeds the shape's region.
@@ -100,7 +100,7 @@ The Maps component provides an option to handle the labels when they intersect w
 
 ## Intersect action
 
-The Maps component provides an option to handle the labels when a label intersects with another label using the [intersectionAction](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#intersectionaction) property. The following options are available in the `intersectionAction` property.
+Control label behavior when labels overlap with other labels using the [intersectionAction](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#intersectionaction) property. The following options are available:
 
 * **None** -  It specifies that no action is taken, when the labels intersect.
 * **Hide** -  It specifies to hide the labels when they intersect.
@@ -119,9 +119,9 @@ The Maps component provides an option to handle the labels when a label intersec
 
 ## Adding data label as a template
 
-The custom elements can be added as a template in the data labels by using the [template](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#template) property of `dataLabelSettings` in the Maps component.
+Add custom HTML elements as data label templates using the [template](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel#template) property of [dataLabelSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel).
 
->The properties of data label such as, `smartLabelMode` , `intersectionAction`, `animationDuration`, `border`, `fill`, `opacity` and `textStyle` properties are not applicable to `template` property. The styles can be applied to the label template using the CSS styles of the HTML element.
+>The `smartLabelMode`, `intersectionAction`, `animationDuration`, `border`, `fill`, `opacity`, and `textStyle` properties do not apply to templates. Apply styles to label templates using standard CSS for HTML elements.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
