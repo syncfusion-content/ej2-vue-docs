@@ -10,6 +10,7 @@ export default {
     name: "App",
     components: {
         "ejs-diagram": DiagramComponent
+
     },
     data() {
         return {

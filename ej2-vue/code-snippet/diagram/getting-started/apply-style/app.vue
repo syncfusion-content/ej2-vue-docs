@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
     </div>
   </template>
   <script>
@@ -12,17 +12,16 @@
         width: 100,
         offsetX: 200,
         offsetY: 100,
-        shape: { type: 'Flow', shape: 'Terminator'},
-        style:{ fill:'red', strokeColor:'green', strokeWidth:5, strokeDashArray:'2,2' },
-        borderWidth: 10,
-        borderColor: 'orange',
-        annotations: [{content: 'Start '}]
+        style:{fill:'red',strokeColor:'green',strokeWidth:5,strokeDashArray:'2,2'},
+        borderWidth:10,
+        borderColor:'orange',
     }
   ];
   export default {
     name: "App",
     components: {
         "ejs-diagram": DiagramComponent
+  
     },
     data() {
         return {

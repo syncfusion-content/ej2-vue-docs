@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Diagram Component in Vue 3
 
-This guide shows how to set up a Vue 3 application using [Vite](https://vitejs.dev/) (JavaScript) and integrating the Syncfusion® Vue Diagram component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion® Vue Diagram component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -22,7 +22,7 @@ To create, edit, and view interactive diagrams using the Syncfusion® Vue Diagra
 
 ## Prerequisites
 
-[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Set up the Vite project
 
@@ -40,17 +40,13 @@ yarn create vite
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-### 1. Define the project name
-
-We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
 ? Project name: » my-project
 ```
 
-### 2. Select Vue as the framework
-
-It will create a Vue 3 project.
+2.Select `Vue` as the framework. It will create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -63,9 +59,7 @@ Vanilla
   Others
 ```
 
-### 3. Choose JavaScript as the variant
-
-Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -75,9 +69,7 @@ Choose `JavaScript` as the framework variant to build this Vite project using Ja
   Nuxt ↗
 ```
 
-### 4. Install dependencies
-
-Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
 cd my-project
@@ -111,33 +103,32 @@ yarn add @syncfusion/ej2-vue-diagrams
 
 ## Import Syncfusion® CSS styles
 
-You can import themes for the Syncfusion® Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion® Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, `Tailwind` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind` CSS styles for the Diagram component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Diagram component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
+> The order of importing CSS styles should be in line with its dependency graph.
+
 ## Add Syncfusion® Vue component
 
 Follow the below steps to add the Vue Diagram component using `Composition API` or `Options API`:
 
-### Import and register the component
-
-First, import and register the Diagram component and its child directives in the `script` section of the **src/App.vue** file.
-
-If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1.First, import and register the Diagram component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -170,10 +161,8 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
-
-### Define the Diagram in the template
-
-In the `template` section, define the Diagram component with the [height](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#height), [width](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#width), [dataSourceSettings](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#datasourcesettings) and [layout](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#layout) property.
+   
+2.In the `template` section, define the Diagram component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/diagram#datasourcesettings) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -195,9 +184,7 @@ In the `template` section, define the Diagram component with the [height](https:
 {% endhighlight %}
 {% endtabs %}
 
-### Provide the data source values
-
-Declare the values for the `dataSource` in the `script` section.
+3.Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -290,233 +277,247 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
-## Full example (src/App.vue)
-
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-  <ejs-diagram id="diagram" :width="width" :height="height" :layout="layout" :dataSourceSettings="dataSourceSettings"
-    :getNodeDefaults="getNodeDefaults" :getConnectorDefaults="getConnectorDefaults">
+  <ejs-diagram
+        id="diagram"
+        :width="width"
+        :height="height"
+        :layout="layout"
+        :dataSourceSettings="dataSourceSettings"
+        :getNodeDefaults="getNodeDefaults"
+        :getConnectorDefaults="getConnectorDefaults"
+        >
   </ejs-diagram>
 </template>
 
 <script setup>
-import { DiagramComponent as EjsDiagram, DataBinding, HierarchicalTree, } from "@syncfusion/ej2-vue-diagrams";
+import {DiagramComponent as EjsDiagram,DataBinding,HierarchicalTree,} from "@syncfusion/ej2-vue-diagrams";
 import { provide } from "vue";
 import { DataManager } from "@syncfusion/ej2-data";
-const width = "1300px";
+const width="1300px";
 const height = "800px";
 
 const localdata = [
-  {
-    Name: "Elizabeth",
-    Role: "Editor",
-  },
-  {
-    Name: "Christina",
-    ReportingPerson: "Elizabeth",
-    Role: "Managing Editor",
-  },
-  {
-    Name: "Yoshi",
-    ReportingPerson: "Christina",
-    Role: "Assistant Editor",
-  },
-  {
-    Name: "Philip",
-    ReportingPerson: "Christina",
-    Role: "Copy Editor",
-  },
-  {
-    Name: "Yang",
-    ReportingPerson: "Elizabeth",
-    Role: "Bussiness Editor",
-  },
-  {
-    Name: "Roland",
-    ReportingPerson: "Yang",
-    Role: "Assistant Editor",
-  },
-  {
-    Name: "Yvonne",
-    ReportingPerson: "Yang",
-    Role: "Editorial Assistant",
-  },
-];
-const getNodeDefaults = (node) => {
-  node.height = 60;
-  node.width = 150;
-  return node;
-};
-
-const getConnectorDefaults = (obj) => {
-  obj.type = "Orthogonal";
-  obj.style = {
-    strokeColor: "#6BA5D7",
-    fill: "#6BA5D7",
-    strokeWidth: 2,
-  };
-  obj.targetDecorator = {
-    style: {
-      fill: "#6BA5D7",
-      strokeColor: "#6BA5D7",
+    {
+      Name: "Elizabeth",
+      Role: "Editor",
     },
-  };
-  return obj;
+    {
+      Name: "Christina",
+      ReportingPerson: "Elizabeth",
+      Role: "Managing Editor",
+    },
+    {
+      Name: "Yoshi",
+      ReportingPerson: "Christina",
+      Role: "Assistant Editor",
+    },
+    {
+      Name: "Philip",
+      ReportingPerson: "Christina",
+      Role: "Copy Editor",
+    },
+    {
+      Name: "Yang",
+      ReportingPerson: "Elizabeth",
+      Role: "Bussiness Editor",
+    },
+    {
+      Name: "Roland",
+      ReportingPerson: "Yang",
+      Role: "Assistant Editor",
+    },
+    {
+      Name: "Yvonne",
+      ReportingPerson: "Yang",
+      Role: "Editorial Assistant",
+    },
+  ];
+ const getNodeDefaults= (node) => {
+          node.height = 60;
+          node.width = 150;
+          return node;
+        };
+
+const getConnectorDefaults= (obj) => {
+    obj.type = "Orthogonal";
+          obj.style = {
+            strokeColor: "#6BA5D7",
+            fill: "#6BA5D7",
+            strokeWidth: 2,
+          };
+          obj.targetDecorator = {
+            style: {
+              fill: "#6BA5D7",
+              strokeColor: "#6BA5D7",
+            },
+          };
+          return obj;
 };
-const layout = {
-  type: "OrganizationalChart",
-};
-const dataSourceSettings = {
-  id: "Name",
-  parentId: "ReportingPerson",
-  dataManager: new DataManager(localdata),
-  doBinding: (nodeModel, localdata) => {
-    nodeModel.annotations = [
-      {
-        content: localdata.Name,
-        offset: { x: 0.5, y: 0.2 },
-        style: { color: "white" },
-      },
-      {
-        content: localdata.Role,
-        offset: { x: 0.5, y: 0.7 },
-        style: { color: "white" },
-      },
-    ];
-    nodeModel.style = { fill: "#6BA5D7", strokeWidth: 0 };
-  },
-};
+const layout={
+          type: "OrganizationalChart",
+        };
+const dataSourceSettings= {
+          id: "Name",
+          parentId: "ReportingPerson",
+          dataManager: new DataManager(localdata),
+          doBinding: (nodeModel, localdata) => {
+            nodeModel.annotations = [
+              {
+                content: localdata.Name,
+                offset: { x: 0.5, y: 0.2 },
+                style: { color: "white" },
+              },
+              {
+                content: localdata.Role,
+                offset: { x: 0.5, y: 0.7 },
+                style: { color: "white" },
+              },
+            ];
+            nodeModel.style = { fill: "#6BA5D7", strokeWidth: 0 };
+          },
+        };
 const diagram = [DataBinding, HierarchicalTree];
 provide('diagram', diagram);
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
 <template>
-    <ejs-diagram id="diagram" :width="width" :height="height" :getNodeDefaults="getNodeDefaults"
-        :getConnectorDefaults="getConnectorDefaults" :layout="layout" :dataSourceSettings="dataSourceSettings">
+     <ejs-diagram
+      id="diagram"
+      :width="width"
+      :height="height"
+      :getNodeDefaults="getNodeDefaults"
+      :getConnectorDefaults="getConnectorDefaults"
+      :layout="layout"
+      :dataSourceSettings="dataSourceSettings"
+    >
     </ejs-diagram>
 </template>
 
 <script>
-import { DiagramComponent, DataBinding, HierarchicalTree, } from "@syncfusion/ej2-vue-diagrams";
-import { DataManager } from "@syncfusion/ej2-data";
-let localdata = [
+  import {DiagramComponent,DataBinding, HierarchicalTree,} from "@syncfusion/ej2-vue-diagrams";
+  import { DataManager } from "@syncfusion/ej2-data";
+  let localdata = [
     {
-        Name: "Elizabeth",
-        Role: "Editor",
+      Name: "Elizabeth",
+      Role: "Editor",
     },
     {
-        Name: "Christina",
-        ReportingPerson: "Elizabeth",
-        Role: "Managing Editor",
+      Name: "Christina",
+      ReportingPerson: "Elizabeth",
+      Role: "Managing Editor",
     },
     {
-        Name: "Yoshi",
-        ReportingPerson: "Christina",
-        Role: "Assistant Editor",
+      Name: "Yoshi",
+      ReportingPerson: "Christina",
+      Role: "Assistant Editor",
     },
     {
-        Name: "Philip",
-        ReportingPerson: "Christina",
-        Role: "Copy Editor",
+      Name: "Philip",
+      ReportingPerson: "Christina",
+      Role: "Copy Editor",
     },
     {
-        Name: "Yang",
-        ReportingPerson: "Elizabeth",
-        Role: "Bussiness Editor",
+      Name: "Yang",
+      ReportingPerson: "Elizabeth",
+      Role: "Bussiness Editor",
     },
     {
-        Name: "Roland",
-        ReportingPerson: "Yang",
-        Role: "Assistant Editor",
+      Name: "Roland",
+      ReportingPerson: "Yang",
+      Role: "Assistant Editor",
     },
     {
-        Name: "Yvonne",
-        ReportingPerson: "Yang",
-        Role: "Editorial Assistant",
+      Name: "Yvonne",
+      ReportingPerson: "Yang",
+      Role: "Editorial Assistant",
     },
-];
-// Component registration
-export default {
+  ];
+  // Component registration
+  export default {
     name: "App",
     // Declaring component and its directives
     components: {
-        'ejs-diagram': DiagramComponent,
+      'ejs-diagram': DiagramComponent,
     },
     // Bound properties declarations
     data() {
-        return {
-            width: "1300px",
-            height: "800px",
-            getNodeDefaults: (node) => {
-                node.height = 60;
-                node.width = 150;
-                return node;
+      return {
+        width: "1300px",
+        height: "800px",
+        getNodeDefaults: (node) => {
+          node.height = 60;
+          node.width = 150;
+          return node;
+        },
+        getConnectorDefaults: (obj) => {
+          obj.type = "Orthogonal";
+          obj.style = {
+            strokeColor: "#6BA5D7",
+            fill: "#6BA5D7",
+            strokeWidth: 2,
+          };
+          obj.targetDecorator = {
+            style: {
+              fill: "#6BA5D7",
+              strokeColor: "#6BA5D7",
             },
-            getConnectorDefaults: (obj) => {
-                obj.type = "Orthogonal";
-                obj.style = {
-                    strokeColor: "#6BA5D7",
-                    fill: "#6BA5D7",
-                    strokeWidth: 2,
-                };
-                obj.targetDecorator = {
-                    style: {
-                        fill: "#6BA5D7",
-                        strokeColor: "#6BA5D7",
-                    },
-                };
-                return obj;
-            },
-            layout: {
-                type: "OrganizationalChart",
-            },
-            dataSourceSettings: {
-                id: "Name",
-                parentId: "ReportingPerson",
-                dataManager: new DataManager(localdata),
-                doBinding: (nodeModel, localdata) => {
-                    nodeModel.annotations = [
-                        {
-                            content: localdata.Name,
-                            offset: { x: 0.5, y: 0.2 },
-                            style: { color: "white" },
-                        },
-                        {
-                            content: localdata.Role,
-                            offset: { x: 0.5, y: 0.7 },
-                            style: { color: "white" },
-                        },
-                    ];
-                    nodeModel.style = { fill: "#6BA5D7", strokeWidth: 0 };
-                },
-            },
-        };
+          };
+          return obj;
+        },
+        layout: {
+          type: "OrganizationalChart",
+        },
+        dataSourceSettings: {
+          id: "Name",
+          parentId: "ReportingPerson",
+          dataManager: new DataManager(localdata),
+          doBinding: (nodeModel, localdata) => {
+            nodeModel.annotations = [
+              {
+                content: localdata.Name,
+                offset: { x: 0.5, y: 0.2 },
+                style: { color: "white" },
+              },
+              {
+                content: localdata.Role,
+                offset: { x: 0.5, y: 0.7 },
+                style: { color: "white" },
+              },
+            ];
+            nodeModel.style = { fill: "#6BA5D7", strokeWidth: 0 };
+          },
+        },
+      };
     },
     provide: {
-        diagram: [DataBinding, HierarchicalTree],
+      diagram: [DataBinding, HierarchicalTree],
     },
-};
+  };
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 </style>
 
 {% endhighlight %}
@@ -540,11 +541,11 @@ The output will appear as follows:
 
 ![vue-3-js-diagram](./images/vue3-diagram-layout.png)
 
-> **Sample**: [vue-3-diagram-getting-started](https://github.com/SyncfusionExamples/vue3-diagram-getting-started).
+> **Sample**: [vue-3-diagram-getting-started](https://github.com/SyncfusionExamples/EJ2-Vue3-gettingstarted).
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)

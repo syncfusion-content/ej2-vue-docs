@@ -18,5 +18,5 @@ provide('richtexteditor', [Toolbar, Link, Image, MarkdownEditor]);
 </script>
 
 <style>
-@import 'https://ej2.syncfusion.com/vue/documentation./node_modules/@syncfusion/ej2/tailwind3.css';
+@import 'https://ej2.syncfusion.com/vue/documentation./node_modules/@syncfusion/ej2/material.css';
 </style>
