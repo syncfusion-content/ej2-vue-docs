@@ -40,12 +40,12 @@ const selectedDate = new Date(2020, 1, 15);
 provide('schedule', [Day, Week, Month, Agenda]);
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3';
+@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3';
+@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/tailwind3';
+@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/tailwind3';
+@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/tailwind3';
+@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/tailwind3';
+@import '../node_modules/@syncfusion/ej2-vue-popups/styles/tailwind3';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/tailwind3';
 </style>

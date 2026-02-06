@@ -9,7 +9,6 @@ import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 const nodes = [
     {
         id: "node1",
-        width: 100,
         height: 60,
         offsetX: 300,
         offsetY: 80,

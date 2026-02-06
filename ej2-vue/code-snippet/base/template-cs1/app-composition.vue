@@ -50,7 +50,7 @@ const cTemplate = function (e) {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
   #app {
     color: #008cff;
     height: 40px;

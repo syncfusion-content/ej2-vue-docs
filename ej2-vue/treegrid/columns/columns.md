@@ -119,23 +119,6 @@ TreeGrid column supports the following types:
 
 > If the [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#type) is not defined, it will be determined from the first record of the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#datasource).
 
-## Checkbox column
-
-To render checkboxes in existing column, you need to set [`columns.showCheckbox`] property as `true`.
-
-It is also possible to select the rows hierarchically using checkboxes in TreeGrid by enabling [`autoCheckHierarchy`] property. When we check on any parent record checkbox then the child record checkboxes will get checked.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/treegrid/columns/default-cs13/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/treegrid/columns/default-cs13/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/treegrid/columns/default-cs13" %}
-
 ## Controlling Tree Grid actions
 
 You can enable or disable treegrid action for a particular column by setting the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#allowfiltering), and [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#allowsorting) properties.

@@ -261,7 +261,6 @@ If the **Page** module is not injected, the pager will not be rendered in Grid. 
 
 The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](	https://ej2.syncfusion.com/vue/documentation/api/grid#allowsorting) property as true. Also, need to inject the **Sort** module in the **provide** section as follow. If the **Sort** module is not injected, the user are not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid#sortsettings) property.
 
-
 {% tabs %}
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs2/app-composition.vue %}

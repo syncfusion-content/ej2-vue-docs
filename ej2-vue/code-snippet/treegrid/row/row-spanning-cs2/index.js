@@ -1,6 +1,6 @@
 import Vue from "vue";
 import { TreeGridPlugin, Page, Freeze } from "@syncfusion/ej2-vue-treegrid";
-import { rowSpanData } from "./datasource.js";
+import { columnSpanData } from "./datasource.js";
 
 Vue.use(TreeGridPlugin, Page, Freeze);
 
@@ -26,7 +26,7 @@ new Vue({
 
   data() {
     return {
-      data: rowSpanData,
+      data: columnSpanData,
       pageSettings: { pageSizeMode: "All", pageSize: 18 },
       scheduleColumns: [
         {

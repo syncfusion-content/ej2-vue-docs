@@ -58,5 +58,5 @@ components: {
 }
 </script>
 <style>
-  @import "https://ej2.syncfusion.com/vue/documentation./../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/tailwind3.css";
+  @import "https://ej2.syncfusion.com/vue/documentation./../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>

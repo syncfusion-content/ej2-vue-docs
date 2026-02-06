@@ -19,5 +19,5 @@ provide('richtexteditor', [Toolbar, Link, Image, HtmlEditor, QuickToolbar]);
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2/material.css';
 </style>
