@@ -87,8 +87,8 @@ const content11 = 'TypeScript is a programming language developed and maintained
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material3.css";
 
 #app {
   color: #008cff;

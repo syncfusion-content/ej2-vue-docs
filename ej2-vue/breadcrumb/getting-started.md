@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Breadcrumb Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Breadcrumb component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Breadcrumb component
 
 ## Prerequisites
 

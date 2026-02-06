@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue TreeView Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -68,10 +68,10 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% highlight html tabtitle="~/src/app.vue" %}
 
   <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
   </style>
 
 {% endhighlight %}
@@ -109,7 +109,7 @@ Follow the below steps to add the Vue TreeView component using `Composition API`
 
 ### Binding data source
 
-TreeView can load data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview/#fields) property. The dataSource property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). Here, an array of JSON values is passed to the TreeView component.
+TreeView can load data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview#fields) property. The dataSource property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). Here, an array of JSON values is passed to the TreeView component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -229,4 +229,4 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/treeview/getting-started-cs1" %}
 
-> You can also explore our [Vue TreeView example](https://ej2.syncfusion.com/vue/demos/#/material/treeview/default.html) to knows how to present and manipulate data.
+> You can also explore our [Vue TreeView example](https://ej2.syncfusion.com/vue/demos/#/material3/treeview/default.html) to knows how to present and manipulate data.

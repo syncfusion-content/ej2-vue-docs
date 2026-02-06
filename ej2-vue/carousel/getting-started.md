@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Carousel Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue Carousel](https://www.syncfusion.com/vue-ui-components/vue-carousel) component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue Carousel](https://www.syncfusion.com/vue-ui-components/vue-carousel) component.
 
 To get start quickly with Vue Carousel, you can check on this video:
 
@@ -18,7 +18,7 @@ To get start quickly with Vue Carousel, you can check on this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -54,7 +54,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](../carousel/images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -144,4 +144,4 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/carousel/getting-started-cs1" %}
 
-N>You can also explore our [Vue Carousel example](https://ej2.syncfusion.com/vue/demos/#/material/carousel/default.html) that shows you how to render the Carousel in Vue.
+N>You can also explore our [Vue Carousel example](https://ej2.syncfusion.com/vue/demos/#/material3/carousel/default.html) that shows you how to render the Carousel in Vue.

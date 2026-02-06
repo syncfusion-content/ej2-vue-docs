@@ -47,9 +47,9 @@ const onBeforeItemRender = (args) => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
 
 body {
     margin-top: 100px;
