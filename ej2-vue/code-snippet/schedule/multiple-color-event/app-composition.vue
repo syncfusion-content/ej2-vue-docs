@@ -69,12 +69,12 @@ provide('schedule', [Week, Resize, DragAndDrop]);
 
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css';
-@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/bootstrap5.css';
-@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/bootstrap5.css';
-@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css';
-@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/bootstrap5.css';
-@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/bootstrap5.css';
-@import '../node_modules/@syncfusion/ej2-vue-popups/styles/bootstrap5.css';
-@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/bootstrap5.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material3.css';
 </style>

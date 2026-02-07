@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue File Manager Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ The following are the dependencies required to use the File Manager component in
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -83,30 +83,30 @@ yarn add @syncfusion/ej2-vue-filemanager
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material3.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
->Note: If you want to refer the combined component styles, please make use of our [CRG](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+>Note: If you want to refer the combined component styles, please make use of our [CRG](https://crg.syncfusion.com) (Custom Resource Generator) in your application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -416,16 +416,16 @@ The following code snippet demonstrates specifying the current path in File Mana
 
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material3.css";
 </style>
 {% endraw %}
 {% endhighlight %}
@@ -465,16 +465,16 @@ The following code snippet demonstrates specifying the current path in File Mana
     }
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material3.css";
 </style>
 
 {% endhighlight %}

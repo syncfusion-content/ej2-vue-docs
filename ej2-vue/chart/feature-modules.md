@@ -36,7 +36,7 @@ The available chart modules are
 | [`StepAreaSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the step area type series in the chart.|
 | [`SplineAreaSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the spline area type series in the chart.|
 | [`MultiColoredAreaSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the multi colored area type series in the chart.|
-| [`ColumnSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/column)| Inject this module to use the column type series in the chart.|
+| [`ColumnSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the column type series in the chart.|
 | [`RangeColumnSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the range column type series in the chart.|
 | [`StackingColumnSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the stacking column type series in the chart.|
 | [`BarSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the bar type series in the chart.|
@@ -51,31 +51,31 @@ The available chart modules are
 | [`BoxAndWhiskerSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the box and whisker type series in the chart.|
 | [`WaterfallSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the waterfall type series in the chart.|
 | [`HistogramSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the histogram type series in the chart.|
-| [`ParetoSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the pareto type series in the chart.|
-| [`ErrorBar`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#type)| Inject this module to use the error bar feature in series.|
+| [`ParetoSeries`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#paretooptions)| Inject this module to use the pareto type series in the chart.|
+| [`ErrorBar`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#errorbar)| Inject this module to use the error bar feature in series.|
 | **Indicator Type Feature Modules** |
-| [`AccumulationDistributionIndicator`](https://ej2.syncfusion.com/vue/documentation/chart/technical-indicators#accumulation-distribution)| Inject this module to use the accumulation distribution indicator.|
-| [`AtrIndicator`](https://ej2.syncfusion.com/vue/documentation/chart/technical-indicators#average-true-range-atr)| Inject this module to use the average true range (ATR) indicator.|
-| [`BollingerBands`](https://ej2.syncfusion.com/vue/documentation/chart/technical-indicators#bollinger-band)| Inject this module to use the bollinger band indicator.|
-| [`EMAIndicator`](https://ej2.syncfusion.com/vue/documentation/chart/technical-indicators#exponential-moving-average-ema)| Inject this module to use the exponential moving average (EMA) indicator.|
-| [`MomentumIndicator`](https://ej2.syncfusion.com/vue/documentation/chart/technical-indicators#momentum)| Inject this module to use the momentum indicator.|
-| [`MACDIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/macdType)| Inject this module to use the moving average convergence divergence (MACD) indicator.|
-| [`RsiIndicator`](https://ej2.syncfusion.com/vue/documentation/chart/technical-indicators#relative-strength-index-rsi)| Inject this module to use the relative Strength index (Rsi) indicator.|
-| [`SmaIndicator`](https://ej2.syncfusion.com/vue/documentation/chart/technical-indicators#simple-moving-average-sma)| Inject this module to use the simple moving average (SMA) indicator.|
-| [`StochasticIndicator`](https://ej2.syncfusion.com/vue/documentation/chart/technical-indicators#stochastic)| Inject this module to use the stochastic indicator.|
-| [`TmaIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/tmaIndicator)| Inject this module to use the trivue moving average indicator.|
+| [`AccumulationDistributionIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicator)| Inject this module to use the accumulation distribution indicator.|
+| [`AtrIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the average true range (ATR) indicator.|
+| [`BollingerBands`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the bollinger band indicator.|
+| [`EMAIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the exponential moving average (EMA) indicator.|
+| [`MomentumIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the momentum indicator.|
+| [`MACDIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the moving average convergence divergence (MACD) indicator.|
+| [`RsiIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the relative Strength index (Rsi) indicator.|
+| [`SmaIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the simple moving average (SMA) indicator.|
+| [`StochasticIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the stochastic indicator.|
+| [`TmaIndicator`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalindicator)| Inject this module to use the triangular moving average indicator.|
 | **Other Feature Modules** |
-| [`StripLine`](https://ej2.syncfusion.com/vue/documentation/api/chart/stripLineSettings)| Inject this module to use strip line feature.|
+| [`StripLine`](https://ej2.syncfusion.com/vue/documentation/api/chart/stripline)| Inject this module to use strip line feature.|
 | [`Trendlines`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendline)| Inject this module to use the trendline feature.|
-| [`DataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabel)| Inject this module to use the data label feature.|
-| [`ChartAnnotation`](https://helpej2.syncfusion.com/vue/documentation/api/chart/chartannotationsettings)| Inject this module to use the annotation feature.|
+| [`DataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart/datalabel)| Inject this module to use the data label feature.|
+| [`ChartAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartannotationsettings)| Inject this module to use the annotation feature.|
 | [`Legend`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendsettings)| Inject this module to use the legend feature.|
 | [`Tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipsettings)| Inject this module to use the tooltip feature.|
 | [`Zoom`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomsettings)| Inject this module to use the zooming and panning feature.|
-| [`DataEditing`](https://ej2.syncfusion.com/vue/documentation/chart/data-editing)| Inject this module to use the data editing feature.|
+| [`DataEditing`](https://ej2.syncfusion.com/vue/documentation/api/chart/dragsettings)| Inject this module to use the data editing feature.|
 | [`Crosshair`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshair)| Inject this module to use the crosshair feature.|
-| [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/chart/selectionMode)| Inject this module to use the selection feature.|
-| [`Highlight`](https://helpej2.syncfusion.com/vue/documentation/api/chart/highlightMode)| Inject this module to use the highlight feature.|
+| [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/chart/selection)| Inject this module to use the selection feature.|
+| [`Highlight`](https://ej2.syncfusion.com/vue/documentation/api/chart/highlight)| Inject this module to use the highlight feature.|
 | [`Export`](https://ej2.syncfusion.com/vue/documentation/api/chart/export)| Inject this module to use the export feature.|
 | [`MultiLevelLabel`](https://helpej2.syncfusion.com/vue/documentation/api/chart/multiLevelLabels)| Inject this module to use the multi level label feature.|
 

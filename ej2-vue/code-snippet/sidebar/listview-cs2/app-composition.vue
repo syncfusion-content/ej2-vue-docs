@@ -55,7 +55,7 @@
 </script>
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material3.css";
 
     .center-align {
         text-align: center;

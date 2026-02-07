@@ -29,10 +29,10 @@ import { ToolbarComponent as EjsToolbar, ItemsDirective as EItems, ItemDirective
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material3.css";
 
 .custom_bold .e-tbar-btn-text {
   font-weight: 900;
