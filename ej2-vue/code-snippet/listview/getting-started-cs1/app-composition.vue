@@ -22,7 +22,7 @@ const dataSource = [
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material3.css";
 
 #flat-list {
   border: 1px solid #dddddd;
