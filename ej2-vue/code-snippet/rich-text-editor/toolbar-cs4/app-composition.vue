@@ -45,5 +45,5 @@ const onCreate = function(){
 provide('richtexteditor', [Toolbar, HtmlEditor]);
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
+  @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/tailwind3.css";
 </style>

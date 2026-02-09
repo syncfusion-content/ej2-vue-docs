@@ -1,7 +1,5 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height'></ejs-diagram>
-    </div>
+  <ejs-diagram id="diagram" :width='width' :height='height'></ejs-diagram>
 </template>
 <script setup>
 import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';

@@ -5,6 +5,7 @@ Vue.use(DiagramPlugin);
 let nodes = [
     {
         id: "node1",
+        width: 100,
         height: 60,
         offsetX: 300,
         offsetY: 80,

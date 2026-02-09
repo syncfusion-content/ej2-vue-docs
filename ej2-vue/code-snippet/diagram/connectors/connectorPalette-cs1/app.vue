@@ -65,7 +65,7 @@ data() {
               id: "connector",
               expanded: true,
               symbols: connectorSymbols,
-              title: "connectorSymbols"
+              title: "Connector Symbols"
             },
             
           ],

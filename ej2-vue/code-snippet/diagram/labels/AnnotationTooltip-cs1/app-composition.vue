@@ -1,20 +1,12 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors' :annotationTemplate='annotationTemplate'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
 <script setup>
-import { createApp } from "vue";
-import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent as EjsDiagram, AnnotationConstraints } from '@syncfusion/ej2-vue-diagrams';
 
-const itemVue = createApp({}).component("nodeTemplate", {
-  template: `<div><input type="button" value="Submit"></div>`,
-  data() {
-    return {};
-  }
-});
-
-const nodes = [{
+let nodes = [{
     id: 'node1',
     // Position of the node
     offsetX: 100,
@@ -24,11 +16,17 @@ const nodes = [{
     height: 100,
     // Sets the annotation for the Node
     annotations: [{
-
+      content: 'Box',
+      constraints: AnnotationConstraints.Tooltip,
+      tooltip: {
+        content: 'Box Text',
+        position: 'TopRight',
+        relativeMode: 'Object',
+    },
     }]
 }];
 
-const connectors = [{
+let connectors = [{
     sourcePoint: {
         x: 300,
         y: 100
@@ -40,18 +38,24 @@ const connectors = [{
     type: 'Orthogonal',
     // Sets the Annotation for the Connector
     annotations: [{
-        height: 20
+        content: 'Line',
+        constraints: AnnotationConstraints.Tooltip,
+        tooltip: {
+            content: 'Line Text',
+            position: 'TopRight',
+            relativeMode: 'Object',
+        },
     }]
 }];
 
 const width = "750px";
 const height = "350px";
 
-const annotationTemplate = function () {
-    return { template: itemVue };
-};
-
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 </style>

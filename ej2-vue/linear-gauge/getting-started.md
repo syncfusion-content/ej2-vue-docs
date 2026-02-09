@@ -10,15 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Linear Gauge Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Linear Gauge component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Linear Gauge component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+Before you begin, ensure your development environment meets the following requirements:
+
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
-The list of dependencies required to use the Linear Gauge component in your application is given below:
+The following dependencies are required to use the Linear Gauge component in your application:
 
 ```javascript
 |-- @syncfusion/ej2-vue-lineargauge
@@ -50,7 +52,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project terminal showing default project setup](images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -58,7 +60,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Linear Gauge component](https://www.syncfusion.com/vue-components/vue-linear-gauge) as an example. Install the `@syncfusion/ej2-vue-lineargauge` package by running the following command:
+This article uses the [Vue Linear Gauge component](https://www.syncfusion.com/vue-components/vue-linear-gauge) as an example. Install the package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-lineargauge --save
@@ -71,7 +73,7 @@ yarn add @syncfusion/ej2-vue-lineargauge
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Linear Gauge component
 
-Follow the below steps to add the Vue Linear Gauge component:
+Follow the steps below to add the Vue Linear Gauge component:
 
 1\. First, import and register the Linear Gauge component in the `script` section of the **src/App.vue** file.
 
@@ -115,7 +117,7 @@ components: {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the complete code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -144,12 +146,14 @@ yarn run serve
 
 ## Module Injection
 
-LinearGauge component is segregated into the individual feature-wise modules. In order to use a particular feature, inject its feature module using the `provide: {}`. Please find the feature module name and description as follows.
+The LinearGauge component uses feature-based modules to reduce file size. Each feature is encapsulated in its own module and must be injected using the `provide: {}` option to enable it. This approach ensures that only the features you use are included in your bundle.
 
-* Annotation -  Inject this module to use the annotation features.
-* GaugeTooltip - Inject this module to use the tooltip features.
+The following modules are available:
 
-Now import the above mentioned modules from linear gauge package and inject it into the LinearGauge component using `provide: {}` .
+* **Annotation** – Enables annotation features for displaying custom text or markers on the gauge.
+* **GaugeTooltip** – Enables tooltip functionality for displaying information when interacting with the gauge.
+
+To use these features, import the required modules from the Linear Gauge package and inject them into the component using `provide: {}`:
 
 ```ts
 import { LinearGaugeComponent, Annotations, GaugeTooltip } from "@syncfusion/ej2-vue-lineargauge";
@@ -161,7 +165,7 @@ provide: {
 
 ## Adding the Linear Gauge Title
 
-The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGaugeModel/#title-string) property in the Linear Gauge.
+The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGaugeModel#title) property in the Linear Gauge.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -176,7 +180,7 @@ The title can be added to the Linear Gauge component using the [`title`](https:/
 
 ## Axis Range
 
-The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#minimum-number) and [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#maximum-number) properties in the Linear Gauge.
+The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis#minimum-number) and [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis#maximum-number) properties in the Linear Gauge.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -191,9 +195,9 @@ The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.co
 
 ### Customizing the axis labels
 
-To denote the axis labels with temperature units, add the °C as suffix to each label. This can be achieved by setting the **{value}°C** to the [`format`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel/#format-string) property in the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#labelstyle-labelmodel) object of the axis. Here, **{value}** acts as a placeholder for each axis label.
+To denote the axis labels with temperature units, add the °C as a suffix to each label. This can be achieved by setting **{value}°C** to the [`format`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel#format-string) property in the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis#labelstyle-labelmodel) object of the axis. Here, **{value}** acts as a placeholder for each axis label.
 
-To change the pointer value from the default value of the gauge, set the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/) object of the axis.
+To change the pointer value from its default setting, set the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer#value-number) property in the [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel) object of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -208,7 +212,7 @@ To change the pointer value from the default value of the gauge, set the [`value
 
 ## Set Pointer Value
 
-The pointer value is changed in the below sample using the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer) object of the axis.
+The pointer value can be customized using the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer#value-number) property in the [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer) object of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

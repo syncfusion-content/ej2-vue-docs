@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Chart component | Syncfusion
-description: Checkout and learn about Getting started with Vue Chart component of Syncfusion Essential JS 2 and more details.
+description: Quickstart: create a Vue 2 app and integrate Syncfusion Vue Chart (Essential JS 2). Includes setup, module registration, data binding, and a working example.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Chart Component in Vue 2
 
-This section provides a step-by-step guide to creating a Vue 2 application using [`Vue CLI`](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component. It helps new users quickly configure a project and render an interactive chart.
+This section provides a step-by-step guide to creating a Vue 2 application using [`Vue CLI`](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component. It helps users quickly configure a project and render an interactive chart.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?**  
 > Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with the Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. It simplifies integration, configuration, and feature discovery through intelligent, context-aware code suggestions and is available in popular AI-powered IDEs such as VS Code, Cursor, and Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio.  
@@ -22,8 +22,7 @@ To get started quickly with Vue Charts, refer to the following introductory vide
 
 ## Prerequisites
 
-Ensure that the development environment meets the required criteria listed in  
-[`System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+Ensure that the development environment meets the required criteria listed in [`System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Dependencies
 
@@ -43,7 +42,7 @@ The following are the minimum required dependencies to use the Vue Chart compone
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [`vue create`](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [`vue create`](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -86,9 +85,9 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Chart component:
+Follow the steps below to add the Vue Chart component:
 
-1\. First, import and register the Chart component in the `script` section of the **src/App.vue** file.
+1. Import and register the Chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -106,7 +105,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Chart component.
+2. In the `template` section, define the Chart component.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -144,22 +143,20 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
 
+you need to inject its feature service in the AppModule. In the current application, we are
 ## Module Injection
 
-Chart component are segregated into individual feature-wise modules. In order to use a particular feature,
-you need to inject its feature service in the AppModule. In the current application, we are
-going to modify the above basic chart to visualize sales data for a particular year.
-For this application we are going to use  line series, tooltip, data label, category axis and legend
-feature of the chart. Please find relevant
-feature service name and description as follows.
+The Chart component is split into feature-specific modules. To enable a specific feature in a Vue 2
+application, register the corresponding module(s) in the component's `provide` option. The following
+example shows the modules used in this guide and their purpose.
 
-* `LineSeries` - Inject this provider to use line series.
-* `Legend` - Inject this provider to use legend feature.
-* `Tooltip` - Inject this provider to use tooltip feature.
-* `DataLabel` - Inject this provider to use datalabel feature.
-* `Category`  - Inject this provider to use category feature.
+* `LineSeries` - Register to enable the line series type.
+* `Legend` - Register to enable the legend feature.
+* `Tooltip` - Register to enable tooltip support.
+* `DataLabel` - Register to enable data labels on points.
+* `Category` - Register to enable category axis support.
 
-These modules should be injected to the provide section as follows,
+Register these modules in the component `provide` option as shown below (Vue 2):
 
  ```javascript
 import { ChartComponent, LineSeries } from "@syncfusion/ej2-vue-charts";
@@ -177,7 +174,7 @@ export default {
 
 ## Populate Chart with Data
 
-This section explains how to plot below JSON data to the chart.
+This section explains how to plot the following JSON data to the chart.
 
 ```javascript
 export default {
@@ -196,10 +193,9 @@ export default {
 };
 ```
 
-* Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#xname) and
-[`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#datasource) property.
+* Add a series object to the chart using the [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart/series) property. Map the fields `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#yname) properties of the series, and set the JSON data to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
 
-Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/valueType/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
+Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/valueType#valuetype) for the horizontal axis to `Category`. By default, the axis `valueType` is `Numeric`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -209,11 +205,11 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
         
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs4" %}
 
-* The sales data are in thousands, so format the vertical axis label by adding <b>$</b> as a prefix and <b>K</b> as a suffix to each label. This can be achieved by setting the ${value}K to the [`labelFormat`](../api/chart/axis/#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
+* The sales data are in thousands, so format the vertical axis labels by adding <b>$</b> as a prefix and <b>K</b> as a suffix. This can be achieved by setting the axis `labelFormat` to '${value}K' using the [`labelFormat`](../api/chart/axis#labelformat) property. Here, `{value}` acts as a placeholder for each axis label.
 
 ## Add Chart Title
 
-You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#title) property to the chart to provide quick information to the user about the data plotted in the chart.
+Add a title to the chart using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#title) property to provide quick information about the displayed data.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -225,7 +221,7 @@ You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation
 
 ## Enable Legend
 
-You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/) object and by injecting the `Legend` into the `provide`.
+Enable the chart legend by setting the `visible` property to `true` in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings) object and by registering the `Legend` module in `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -237,7 +233,7 @@ You can use legend for the chart by setting the `visible` property to true in [`
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the chart. This can be achieved by setting the visible property to true in the `dataLabel` object and by injecting `DataLabel` into the `provide`.
+Add data labels to improve chart readability by setting the `visible` property to `true` in the `dataLabel` object and registering `DataLabel` in `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -249,7 +245,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 ## Enable Tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/) object and by injecting `Tooltip` into the `provide`.
+The tooltip is useful when data labels cannot display all information due to space constraints. Enable tooltip by setting `enable` to `true` in the [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel) object and registering `Tooltip` in `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

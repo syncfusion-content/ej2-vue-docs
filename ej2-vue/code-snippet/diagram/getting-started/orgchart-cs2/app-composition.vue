@@ -1,13 +1,13 @@
 <template>
     <div id="app">
         <ejs-diagram id="diagram" :width='width' :height='height' :getNodeDefaults='getNodeDefaults'
-            :getConnectorDefaults='getConnectorDefaults' :layout='layout'
+            :getConnectorDefaults='getConnectorDefaults' :setNodeTemplate="setNodeTemplate" :layout='layout'
             :dataSourceSettings='dataSourceSettings'></ejs-diagram>
     </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent as EjsDiagram, HierarchicalTree, DataBinding, StackPanel, TextElement, ImageElement } from '@syncfusion/ej2-vue-diagrams';
 import { DataManager } from "@syncfusion/ej2-data";
 
 let localdata = [
@@ -52,22 +52,46 @@ const height = "350px";
 const getNodeDefaults = (node) => {
     node.height = 60;
     node.width = 100;
+    node.style = { fill: "#659be5", strokeColor: "none" };
     return node;
 }
-
 const getConnectorDefaults = (obj) => {
     obj.type = 'Orthogonal';
     return obj;
 }
-
+const setNodeTemplate = (node) => {
+    let codes = {
+        Director: "rgb(0, 139,139)",
+        Manager: "rgb(30, 30,113)",
+        Lead: "rgb(0, 100,0)"
+    };
+    let content = new StackPanel();
+    content.id = node.id + "_outerstack";
+    content.orientation = "Horizontal";
+    content.style.strokeColor = "gray";
+    content.style.fill = codes[node.data.Role];
+    content.padding = { left: 5, right: 5, top: 5, bottom: 5 }
+    let innerContent = new ImageElement();
+    innerContent.style.strokeColor = "blue";
+    innerContent.id = node.id + "_innerstack";
+    innerContent.style.fill = "skyblue";
+    innerContent.width = 50;
+    innerContent.height = 50;
+    let text = new TextElement();
+    text.id = node.id + "_text";
+    text.content = node.data.Name;
+    text.margin = { left: 15, right: 5, top: 5, bottom: 5 }
+    text.style.color = "black";
+    content.children = [innerContent, text];
+    return content;
+}
 const layout = {
     type: "OrganizationalChart",
 }
-
 const dataSourceSettings = {
     id: 'Name', parentId: 'ReportingPerson',
     dataManager: new DataManager(localdata),
-    doBinding: (nodeModel, localdata, diagram) => {
+    doBinding: (nodeModel, localdata) => {
         nodeModel.shape = {
             type: "Text",
             content: (localdata).Role,
@@ -75,7 +99,7 @@ const dataSourceSettings = {
     }
 }
 
-provide('diagram', [HierarchicalTree, DataBinding]);
+provide('diagram', [DataBinding, HierarchicalTree]);
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

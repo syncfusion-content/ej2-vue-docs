@@ -4,7 +4,7 @@
     </div>
 </template>
 <script setup>
-import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent as EjsDiagram, AnnotationConstraints } from '@syncfusion/ej2-vue-diagrams';
 
 const nodes = [{
     // Position of the node
@@ -17,6 +17,8 @@ const nodes = [{
     annotations: [{
         // Sets the text to be displayed
         content: 'Annotation',
+        // Provide Select and Rotate Constraiants to Annotation
+        constraints: AnnotationConstraints.Select | AnnotationConstraints.Rotate,
         //To disable rotation of Annotation
         rotationReference: 'Page'
     }]

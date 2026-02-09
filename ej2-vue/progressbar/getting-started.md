@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Getting started with Vue Progressbar component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Progressbar component of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about Getting started with Vue Progressbar component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Progressbar Component in Vue 2
+# Getting Started with the Vue Progress Bar Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progressbar component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progressbar component
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -29,7 +29,7 @@ Below is the list of minimum dependencies required to use the progressbar compon
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -49,7 +49,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -68,11 +68,11 @@ or
 yarn add @syncfusion/ej2-vue-progressbar
 ```
 
-> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+> The **--save** option will instruct NPM to include the progressbar package inside of the `dependencies` section of the `package.json`.
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 The progressbar has different themes. They are:
 * Material
@@ -80,7 +80,7 @@ The progressbar has different themes. They are:
 * Bootstrap
 * High Contrast
 
-import chart component CSS as given below in `<style>` section of the `App.vue` file.
+Import the progressbar component CSS as shown below in the `<style>` section of the `App.vue` file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -103,7 +103,7 @@ Follow the below steps to add the Vue Progressbar component:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 <script setup>
-import { ProgressBarComponent as EjsProgressbar } from '@syncfuion/ej2-vue-charts';
+import { ProgressBarComponent as EjsProgressbar } from '@syncfusion/ej2-vue-progressbar';
 
 </script>
 {% endraw %}
@@ -111,7 +111,7 @@ import { ProgressBarComponent as EjsProgressbar } from '@syncfuion/ej2-vue-chart
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
-import { ProgressBarComponent } from '@syncfuion/ej2-vue-charts';
+import { ProgressBarComponent } from '@syncfusion/ej2-vue-progressbar';
 export default {
 name: "App",
 components: {
@@ -305,23 +305,23 @@ npm run serve
 or
 
 ```bash
-yarn  run serve
+yarn run serve
 ```
 
 ## Module Injection
 
-Progressbar component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. feature service name and description as follows.
+The Progressbar component features are organized into individual feature-wise modules. To use specific features such as annotations, you must inject the corresponding feature service. Below is the available feature service:
 
-* `ProgressAnnotation` - Inject this provider to use Annotation.
+* `ProgressAnnotation` - Inject this service to enable annotations on the progressbar.
 
-This module should be injected to the provide section as follows,
+To inject the required module, add it to the `provide` section of your component as shown below:
 
  ```javascript
-import { ProgressBarComponent, ProgressAnnotationService } from "@syncfusion/ej2-vue-charts";
+import { ProgressBarComponent, ProgressAnnotationService } from "@syncfusion/ej2-vue-progressbar";
 
 export default {
   components: {
-    'ejs-progressbar': ProgressbarComponent
+    'ejs-progressbar': ProgressBarComponent
   },
   provide: {
     progressbar: [ProgressAnnotationService]

@@ -10,11 +10,14 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Maps Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This guide provides a step-by-step walkthrough for setting up a [Vite](https://vitejs.dev/) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api). By the end, you'll have a working Maps component displaying geographic data with legends, tooltips, and data labels.
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+## Choosing Between Composition API and Options API
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+Vue 3 supports two patterns for organizing component logic:
+
+- **Composition API** (`<script setup>`) - Modern, function-based approach for better code reusable and organization of related logic. Ideal for complex components and advanced use cases.
+- **Options API** - Traditional, object-based approach with separate sections for data, methods, computed properties, and lifecycle hooks. Familiar for developers transitioning from Vue 2.
 
 ## Prerequisites
 
@@ -22,7 +25,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+[Vite](https://vitejs.dev/) provides a lightweight, fast development environment for Vue 3 projects. To create a new Vite project, run one of the following commands:
 
 ```bash
 npm create vite@latest
@@ -34,15 +37,15 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Follow the interactive prompts to complete the setup:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1. **Project name** - Enter `my-project` (or your preferred name):
 
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+2. **Framework selection** - Select `Vue`:
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -55,7 +58,7 @@ Vanilla
   Others
 ```
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3. **Variant selection** - Choose `JavaScript`:
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -65,7 +68,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4. **Install dependencies** - Navigate to the project directory and install dependencies:
 
 ```bash
 cd my-project
@@ -79,13 +82,13 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+After setup completes, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). Install the required npm package to use Syncfusion components.
 
-This article uses the [Vue Maps component](https://www.syncfusion.com/vue-components/vue-maps) as an example. To use the Vue Maps component in the project, the `@syncfusion/ej2-vue-maps` package needs to be installed using the following command:
+This guide uses the [Vue Maps component](https://www.syncfusion.com/vue-components/vue-maps) as an example. Install the `@syncfusion/ej2-vue-maps` package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-maps --save
@@ -99,9 +102,9 @@ yarn add @syncfusion/ej2-vue-maps
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Maps component using `Composition API` or `Options API`:
-
-1.First, import and register the Maps component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1. Import and register the Maps component and its child directives in the **src/App.vue** file. The import structure differs slightly between the two APIs:
+   - **Composition API**: Add the `setup` attribute to the `<script>` tag and use `Maps.Inject()` for module injection
+   - **Options API**: Use standard component registration with a `provide` option for module injection
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -131,7 +134,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the Maps component with the layer, title, legend and other settings definitions.
+2. Define the Maps component template with layer, title, legend, and other property bindings:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -147,7 +150,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3.In the `script` section, declare the values for the properties defined in the `template` section.
+3. Declare the property values referenced in the template:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -238,7 +241,7 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the complete code combining all steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -365,7 +368,7 @@ Maps.Inject(Legend, DataLabel, MapsTooltip);
 
 ## Run the project
 
-To run the project, use the following command:
+Execute the following command to start the development server:
 
 ```bash
 npm run dev
@@ -377,13 +380,11 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
+The application will display a Maps component showing UN Security Council countries with color-coded memberships:
 
 ![vue-3-js-maps](./images/vue3-maps-demo.png)
 
 > **Sample**: [vue3-maps-getting-started](https://github.com/SyncfusionExamples/vue3-maps-getting-started).
-
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 

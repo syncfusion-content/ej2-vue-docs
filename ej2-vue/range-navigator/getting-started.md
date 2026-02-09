@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Getting started with Vue Range navigator component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Range navigator component of Syncfusion Essential JS 2 and more details.
+description: Step-by-step guide to create a Vue 2 project, install Syncfusion Essential JS 2 Range Navigator, register modules via Vue provide, and run the sample.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Range navigator Component in Vue 2
+# Getting Started with the Vue Range Navigator Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range navigator component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range navigator component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -35,7 +35,7 @@ Below is the list of minimum dependencies required to use the range navigator co
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -78,9 +78,9 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Message component:
+Follow the steps below to add the Range navigator component:
 
-1\. First, import and register the Message component in the `script` section of the **src/App.vue** file.
+1\. First, import and register the Range navigator component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -138,13 +138,13 @@ yarn run serve
 
 ## Module Injection
 
-To create range navigator with additional features, inject the required modules. The following modules are used to extend rangenavigator’s basic functionality.
+To add features to the range navigator, inject the required modules. The following modules extend the range navigator's basic functionality.
 
-•`AreaSeries` - Inject this module to use area series.
-•`DateTime` - Inject this module to use date time axis.
-•`RangeTooltip` - Inject this module to show the tooltip.
+- `AreaSeries` — Inject to use the area series.
+- `DateTime` — Inject to use the date/time axis.
+- `RangeTooltip` — Inject to enable the tooltip.
 
-These modules should be injected to the provide section as follows,
+Inject these modules in the `provide` section as shown below.
 
  ```javascript
 import { RangeNavigatorComponent, AreaSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
@@ -162,7 +162,7 @@ export default {
 
 ## Populate Range Navigator with Data
 
-Now, we are going to provide data to the range navigator. Add a series object to the range navigator by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries/) property. Now map the field names x and y in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries/#yname) properties of the series, then set the JSON data to dataSource property. Since the JSON contains Datetime data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorModel/#valuetype) range Navigator to `Category`. By default, the axis valueType is `Numeric`.
+Now provide data to the range navigator. Add a `series` object using the [`series`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries) property. Map the JSON fields for x and y to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#yname) properties, and set the JSON array to the `dataSource` property. If the JSON contains date/time values, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorModel#valuetype) of the range navigator to `DateTime`. By default, the axis `valueType` is `Numeric`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

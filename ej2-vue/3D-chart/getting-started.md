@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Getting started with Vue 3D Chart component | Syncfusion
-description:  Checkout and learn about Getting started with Vue 3D Chart component of Syncfusion Essential JS 2 and more details.
+description: Quickstart: create a Vue 2 project and integrate the Syncfusion 3D Chart (Essential JS 2); covers setup, module registration, and examples.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the Vue 3D chart component in Vue 2
+# Getting started with the 3D Chart component (Vue 2)
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> 3D Chart component.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ Below is the list of minimum dependencies required to use the 3D Chart component
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -54,7 +54,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Terminal showing Vue CLI creating a Vue 2 project](../appearance/images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -73,13 +73,13 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+> The `--save` flag adds the package to the `dependencies` section of `package.json`.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue 3D Chart component:
+Follow the steps below to add the 3D Chart component:
 
-1\. First, import and register the 3D Chart component in the `script` section of the **src/App.vue** file.
+1. First, import and register the 3D Chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -135,17 +135,17 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs1" %}
 
-## Module injection
+## Module registration
 
-3D Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic 3D Chart to visualize sales data for a particular year. For this application we are going to use column series, tooltip, data label, category axis and legend feature of the 3D Chart. Please find relevant feature service name and description as follows.
+The 3D Chart component is organized into feature-specific modules. In Vue, enable a feature by registering its module(s) in the component's `provide` option. The following features are demonstrated in the examples:
 
-* `ColumnSeries3D` - Inject this provider to use column series.
-* `Legend3D` - Inject this provider to use legend feature.
-* `Tooltip3D` - Inject this provider to use tooltip feature.
-* `DataLabel3D` - Inject this provider to use datalabel feature.
-* `Category3D`  - Inject this provider to use category feature.
+* `ColumnSeries3D` — Module for column series.
+* `Legend3D` — Module for legend support.
+* `Tooltip3D` — Module for tooltip support.
+* `DataLabel3D` — Module for data labels.
+* `Category3D` — Module for category axis support.
 
-These modules should be injected to the provide section as follows,
+The sample code below shows one way to register modules in the component `provide` option. The example uses the `chart3d` key in `provide` to match the 3D chart component registration shown in the code examples.
 
  ```javascript
 import { Chart3DComponent, ColumnSeries3D } from "@syncfusion/ej2-vue-charts";
@@ -194,7 +194,21 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
         
 {% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs2" %}
 
-* The sales data are in thousands, so format the vertical axis label by adding <b>$</b> as a prefix and <b>K</b> as a suffix to each label. This can be achieved by setting the ${value}K to the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3daxismodel#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
+* The sales data are in thousands. Format the vertical axis labels by adding <b>$</b> as a prefix and <b>K</b> as a suffix by setting the axis `labelFormat` to '${value}K' using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3daxismodel#labelformat) property. Here, `{value}` is a placeholder for each axis label.
+
+## Verify the chart
+
+After starting the dev server, confirm the 3D chart renders correctly:
+
+- Start the dev server with `npm run serve` or `yarn run serve`.
+- Open the project URL shown in the terminal and verify the chart displays.
+- If the chart does not render, check the browser console for errors related to missing modules, incorrect imports, or incompatible Vue versions.
+
+## Troubleshooting (common issues)
+
+- Chart not rendering: ensure required 3D modules are registered in `provide` and that `seriesData` contains valid data.
+- Incorrect module key: some sample code uses the `chart3d` key in `provide`; keep the key consistent with the examples used in the project.
+- Version mismatch: confirm `@syncfusion/ej2-vue-charts` is compatible with the project's Vue version.
 
 ## Add 3D chart title
 

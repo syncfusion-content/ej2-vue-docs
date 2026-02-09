@@ -1,14 +1,14 @@
 <template>
     <div id="app">
         <ejs-diagram id="diagram" ref="diagramObj" :width="width" :height="height" :nodes="nodes"
-            :connectors="connectors" :click="animationComplete" :layout="layout"></ejs-diagram>
+            :connectors="connectors" :animationComplete="animationComplete" :layout="layout"></ejs-diagram>
     </div>
 </template>
 
 <script setup>
 
 import { provide, ref, onMounted } from "vue";
-import { DiagramComponent as EjsDiagram, HierarchicalTree } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent as EjsDiagram, HierarchicalTree, LayoutAnimation } from '@syncfusion/ej2-vue-diagrams';
 
 let diagramInstance;
 let diagramObj = ref(null);
@@ -103,7 +103,7 @@ const animationComplete = (args) => {
     diagramInstance.dataBind();
 };
 
-provide('diagram', [HierarchicalTree]);
+provide('diagram', [HierarchicalTree, LayoutAnimation]);
 
 </script>
 

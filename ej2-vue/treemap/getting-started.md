@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue TreeMap Component in Vue 2
 
-This section explains how to customize the TreeMap component and demonstrates its basic usage.
+This guide demonstrates how to set up the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component in a Vue 2 project and explore its core features such as data binding, color mapping, and legends.
 
 You can explore some useful features of the TreeMap component in the following video.
 
 {% youtube "https://www.youtube.com/watch?v=fFSUhC9SAoQ" %}
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -38,7 +38,7 @@ The following list of minimum dependencies are required to use the TreeMap:
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -79,7 +79,7 @@ yarn add @syncfusion/ej2-vue-treemap
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component
 
-Follow the below steps to add the Vue TreeMap component:
+Follow these steps to add the Vue TreeMap component:
 
 1\. First, import and register the TreeMap component in the `script` section of the **src/App.vue** file. 
 
@@ -195,7 +195,7 @@ yarn run serve
 
 ## Module Injection
 
-The tree map control is segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `provide` option on component creation. Find the modules available in tree map and their descriptions as follows.
+The TreeMap component is composed of individual feature-specific modules that are loaded on demand. To enable advanced features such as legends, tooltips, and interactive selection, inject the required modules using the `provide` option. This approach optimizes bundle size by including only the features needed for the application.
 
 * TreeMapHighlight - Inject this provider to use highlight feature.
 * TreeMapSelection - Inject this provider to use selection feature.
@@ -204,11 +204,11 @@ The tree map control is segregated into individual feature-wise modules. To use 
 
 In the current application, the above basic tree map is modified to visualize international airport count in South America.
 
-In this demo, the tree map is just rendered with labels. For this, you need not to import any modules.
+For basic rendering with labels (as shown in the following sections), no module injection is required. Module injection becomes necessary only when implementing the respective features.
 
 ## Render tree map
 
-This section explains how to render the tree map with data source.
+This section explains how to render the TreeMap with a data source and customize its appearance using leaf item settings.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -221,11 +221,11 @@ This section explains how to render the tree map with data source.
         
 {% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs15" %}
 
-Here, the tree map is created with data source and set with the [`weightValuePath`] as count. You can customize the leaf level tree map items using the [`leafItemSettings`]. The properties such as [`fill`], [`border`], and [`labelPosition`] can be changed using the [`leafItemSettings`].
+Here, the tree map is created with data source and set with the [`weightValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#weightvaluepath) as count. You can customize the leaf level tree map items using the [`leafItemSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#leafitemsettings). The properties such as [`fill`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafitemsettingsmodel#fill), [`border`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafitemsettingsmodel#border), and [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafitemsettingsmodel#labelposition) can be changed using the [`leafItemSettings`].
 
 ## Apply color mapping
 
-The color mapping feature supports customization of item colors based on the underlying value of item received from bound data source. Specify the field name from the values that have to be compared for the item in the [`equalColorValuePath`] or [`rangeColorValuePath`] property.
+The color mapping feature supports customization of item colors based on the underlying value of item received from bound data source. Specify the field name from the values that have to be compared for the item in the [`equalColorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#equalcolorvaluepath) or [`rangeColorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#rangecolorvaluepath) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -240,7 +240,7 @@ The color mapping feature supports customization of item colors based on the und
 
 ## Enable legend
 
-You can show legend for the tree map by setting the [`visible`] property to true in [`legendSettings`] object and injecting the `TreeMapLegend` module using the `provide` option.
+You can display a legend for the TreeMap by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendsettings#visible) property to `true` in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings) object and injecting the `TreeMapLegend` module using the `provide` option. The legend helps users understand the color mapping and value ranges used in the visualization.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
