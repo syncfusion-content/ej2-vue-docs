@@ -10,19 +10,21 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Linear Gauge Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Linear Gauge component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Linear Gauge component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+Before you begin, ensure your development environment meets the following requirements:
+
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+The recommended approach to begin with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands specific to either npm or Yarn.
 
 ```bash
 npm create vite@latest
@@ -34,15 +36,15 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+The above commands will prompt you to configure the project. Follow these steps:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1. Define the project name: Specify the name of the project as `my-project` for this article.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+2. Select `Vue` as the framework to create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -55,7 +57,7 @@ Vanilla
   Others
 ```
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3. Choose `JavaScript` as the framework variant to build the Vite project using JavaScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -65,7 +67,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4. After creating `my-project`, run the following command to install dependencies:
 
 ```bash
 cd my-project
@@ -79,13 +81,13 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Linear Gauge component](https://www.syncfusion.com/vue-components/vue-Linear-gauge) as an example. To use the Vue Linear Gauge component in the project, the `@syncfusion/ej2-vue-lineargauge` package needs to be installed using the following command:
+This article uses the [Vue Linear Gauge component](https://www.syncfusion.com/vue-components/vue-linear-gauge) as an example. To use the Vue Linear Gauge component in the project, install the package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-lineargauge --save
@@ -99,7 +101,7 @@ yarn add @syncfusion/ej2-vue-lineargauge
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Linear Gauge component using `Composition API` or `Options API`:
+Follow the steps below to add the Vue Linear Gauge component using `Composition API` or `Options API`:
 
 1.First, import and register the Linear Gauge component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
@@ -181,7 +183,7 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the complete code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -275,9 +277,7 @@ The output will appear as follows:
 
 ![vue-3-js-Linear-gauge](./images/vue3-lg-demo.png)
 
-> **Sample**: [vue3-lineargauge-getting-started](https://github.com/SyncfusionExamples/vue3-lineargauge-getting-started).
-
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+> **Sample**: [vue3-linear-gauge-getting-started](https://github.com/SyncfusionExamples/vue3-lineargauge-getting-started).
 
 ## See also
 

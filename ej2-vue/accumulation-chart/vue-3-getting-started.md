@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Vue 3 getting started with the Accumulation chart component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Accumulation chart component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 getting started: Accumulation Chart | Syncfusion
+description: Quickstart: scaffold a Vite Vue 3 project and integrate the Syncfusion Accumulation Chart (Essential JS 2); includes Composition/Options API examples and tips.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -10,15 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Accumulation Chart Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accumulation Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accumulation Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
-
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The Composition API organizes related logic into reusable composition functions and is recommended for larger or composition-oriented code bases. The Options API organizes component logic with `data`, `methods`, and life cycle hooks and may be preferable for smaller components or teams familiar with Vue 2 patterns.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -34,15 +32,14 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Use the interactive setup and follow these steps:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
-
+1. Define the project name. For this article, use `my-project`.
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+2. Select `Vue` as the framework to create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -55,7 +52,7 @@ Vanilla
   Others
 ```
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3. Choose `JavaScript` as the project variant.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -65,8 +62,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
-
+4. After creating the project, install dependencies by running:
 ```bash
 cd my-project
 npm install
@@ -131,7 +127,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the Accumulation Chart component with the [dataSource](https://helpej2.syncfusion.com/vue/documentation/api/accumulation-chart#datasource) property.
+2. In the `template` section, define the Accumulation Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -287,12 +283,28 @@ or
 yarn run dev
 ```
 
+
 The output will appear as follows:
 
-![vue3-accumulation-chart-demo](./images/vue3-accumulation-chart-demo.png)
+![Vue 3 Accumulation Chart sample showing a pie chart with legend and tooltip](./images/vue3-accumulation-chart-demo.png)
+
+## Verify the chart
+
+After starting the development server, confirm the chart renders correctly:
+
+- Start the development server with `npm run dev` or `yarn run dev`.
+- Open the project URL shown in the terminal (commonly `http://localhost:5173`) and verify the chart displays with legend and tooltip.
+- If the chart does not render, open the browser console and check for errors related to missing modules, incorrect imports, or incompatible Vue versions.
+
+## Troubleshooting (common issues)
+
+- Chart not rendering: ensure chart modules (for example, `PieSeries`, `AccumulationLegend`, `AccumulationTooltip`) are provided via `provide` (Composition API) or `provide`/`provide:` (Options API).
+- Wrong package version: confirm `@syncfusion/ej2-vue-charts` matches the project's Vue version.
+- Missing child directives: ensure `AccumulationSeriesCollectionDirective` and `AccumulationSeriesDirective` are registered when using directives.
+- Console errors: inspect import paths and verify dependencies are installed.
 
 > **Sample**: [vue-3-accumulation-chart-getting-started](https://github.com/SyncfusionExamples/vue3-accumulation-chart-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the `migration` documentation.
 
 ## See also
 

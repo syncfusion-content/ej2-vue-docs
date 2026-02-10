@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script setup>
@@ -8,26 +8,17 @@ import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 const nodes = [
     {
         id: "node1",
-        height: 100,
+        height: 60,
         width: 100,
         offsetX: 200,
         offsetY: 100,
-    },
-    {
-        id: "node2",
-        height: 100,
-        width: 100,
-        offsetX: 200,
-        offsetY: 300,
+        shape: { type: 'Flow', shape: 'Terminator'},
+        style:{ fill:'red', strokeColor:'green', strokeWidth:5, strokeDashArray:'2,2' },
+        borderWidth: 10,
+        borderColor: 'orange',
+        annotations: [{content: 'Start '}]
     }
 ];
-const connectors = [
-    {
-        id: "connector1",
-        sourceID: "node1",
-        targetID: "node2"
-    },
-]
 
 const width = "100%";
 const height = "350px";

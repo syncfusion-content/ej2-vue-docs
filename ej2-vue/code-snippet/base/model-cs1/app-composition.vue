@@ -11,7 +11,7 @@ import { CheckBoxComponent as EjsCheckbox } from '@syncfusion/ej2-vue-buttons';
 const checked = true;
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css";
   #app {
     color: #008cff;
     height: 40px;

@@ -11,12 +11,12 @@ provide('richtexteditor', [Toolbar, Link, Image, HtmlEditor, QuickToolbar]);
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-base/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-lists/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-splitbuttons/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/tailwind3.css";
 </style>

@@ -10,19 +10,24 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Progress Bar Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progress Bar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progress Bar component. The guide demonstrates both the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) and [Options API](https://vuejs.org/guide/introduction.html#options-api) approaches, allowing you to choose the pattern that best suits your project.
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+## Understanding Vue 3 Component APIs
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+Vue 3 offers two approaches for organizing component logic:
+
+- **Composition API**: A modern, function-based approach that enables flexible code organization and easier logic reuse through composite functions. Ideal for complex components and large-scale applications.
+- **Options API**: The traditional, object-based approach where component logic is organized into defined options such as data, methods, computed properties, and life cycle hooks. Familiar to developers from Vue 2 and suitable for simpler components.
+
+Both APIs are fully supported and can be mixed within a single project based on your preferences and use case.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands specific to NPM or Yarn:
 
 ```bash
 npm create vite@latest
@@ -34,15 +39,15 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+This command initiates an interactive setup process. Follow the prompts as shown below:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1. **Define the project name**: Specify the name of the project as `my-project` (or choose a name of your preference).
 
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+2. **Select the framework**: Choose `Vue` to create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -55,7 +60,7 @@ Vanilla
   Others
 ```
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3. **Choose the language variant**: Select `JavaScript` to build this Vite project using JavaScript (instead of TypeScript).
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -65,7 +70,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4. **Install dependencies**: After the project is created, navigate to the project directory and install the required dependencies.
 
 ```bash
 cd my-project
@@ -79,13 +84,13 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Your Vite project is now ready with default Vue 3 configuration. Next, you'll add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in your project, install the corresponding npm package.
 
-This article uses the [Vue Progress Bar component](https://www.syncfusion.com/vue-components/vue-progressbar) as an example. To use the Vue Progress Bar component in the project, the `@syncfusion/ej2-vue-progressbar` package needs to be installed using the following command:
+This guide uses the [Vue Progress Bar component](https://www.syncfusion.com/vue-components/vue-progressbar). Install the package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-progressbar --save
@@ -177,7 +182,7 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the complete code for the **src/App.vue** file with both API approaches:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -236,7 +241,7 @@ export default {
 
 ## Run the project
 
-To run the project, use the following command:
+To run the application in development mode, use the following command:
 
 ```bash
 npm run dev
@@ -248,12 +253,13 @@ or
 yarn run dev
 ```
 
+The development server will start, typically at `http://localhost:5173`. Open this URL in your browser to view the circular Progress Bar with animation.
+
 The output will appear as follows:
 
 ![vue3-progressbar-demo](./images/vue3-progressbar-demo.png)
 
 > **Sample**: [vue-3-progressbar-getting-started](https://github.com/SyncfusionExamples/vue3-progressbar-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 

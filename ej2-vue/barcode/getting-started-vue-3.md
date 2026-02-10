@@ -10,11 +10,15 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion® Barcode Component in Vue 3
 
-This section explains how to use Barcode component in Vue 3 application.
+This guide shows how to set up a Vue 3 application using [Vite](https://vitejs.dev/) (JavaScript) and integrating the Syncfusion® Vue Barcode component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
-[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Creating Vue application using Vue CLI
 
@@ -34,32 +38,38 @@ npm install -g @vue/cli-init
 Create a new project using the following command.
 
 ```bash
-vue create quickstart
-
+vue create my-barcode-app
 ```
 
 Initiating a new project prompts us to select the type of project to be used for the current application. Select the option `Default (Vue 3)` from the menu.
 
 ![Reference](./images/vue3_barcode.PNG)
 
-## Adding Syncfusion® Barcode package in the application
+## Navigate to the project directory
 
-Syncfusion® Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
-In this example, the Barcode component will be used. Use the following command to install it.
+After creating the project, navigate to the project directory using the following command.
 
 ```bash
-npm install @syncfusion/ej2-vue-barcode-generator
+cd my-barcode-app
+```
+
+## Adding Syncfusion® Barcode package in the application
+
+Syncfusion® Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. The Barcode component will be used in this example. To install the Barcode package, use the following command.
+
+```bash
+npm install @syncfusion/ej2-vue-barcode-generator --save
 ```
 
 ## Adding CSS reference for Syncfusion® Vue Barcode component
 
-Import the necessary css styles for the Barcode component along with dependency styles in the `<style>` section of the `src/App.vue` file as follows.
+Import the necessary CSS styles for the Barcode component along with dependency styles in the `<style>` section of the `src/App.vue` file as follows.
 
-```
+```vue
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/tailwind3.css";
 </style>
 ```
 
@@ -69,9 +79,9 @@ You have completed all of the necessary configurations required to render the Sy
 
 1. Import the Barcode component in the `<script>` section of the `src/App.vue` file.
 
-    ```
+    ```vue
       <script setup>
-        import { BarcodeGeneratorComponent as EjsBarcodegenerator, QRCodeGeneratorComponent as EjsQrcodegenerator, DataMatrixGeneratorComponent as EjsDatamatrixgenerator} from '@syncfusion/ej2-vue-barcode-generator';
+        import { BarcodeGeneratorComponent as EjsBarcodegenerator, QRCodeGeneratorComponent as EjsQrcodegenerator, DataMatrixGeneratorComponent as EjsDatamatrixgenerator } from '@syncfusion/ej2-vue-barcode-generator';
       </script>
     ```
 
@@ -83,10 +93,9 @@ You have completed all of the necessary configurations required to render the Sy
     | `QRCodeGeneratorComponent` | `ejs-qrcodegenerator` |
     | `DataMatrixGeneratorComponent` | `ejs-datamatrixgenerator` |
 
-3. By using the following code sample, you can add the component definition in template section.
+3. Add the component definition in the template section using the following code sample.
 
-    ```
-
+    ```vue
     <template>
       <div id="app" class="barcodeStyle">
         <ejs-barcodegenerator
@@ -104,7 +113,7 @@ You have completed all of the necessary configurations required to render the Sy
     </template>
     ```
 
-4. Declare the barcode generator properties in the `script` section. Here, declare the width, Height, type, value, and mode values for the `ejs-barcodegenerator` property.
+4. Declare the barcode generator properties in the `script` section. Here, declare the width, height, type, value, mode, and displayText values for the `ejs-barcodegenerator` component.
 
     ```js
     const width = "200px";
@@ -113,12 +122,11 @@ You have completed all of the necessary configurations required to render the Sy
     const mode = "SVG";
     const type = "Codabar";
     const value = "123456789";
-      ```
-
-5. Summarizing the above steps, update the `src/App.vue` file with following code.
-
     ```
 
+5. Summarizing the above steps, update the `src/App.vue` file with the following code.
+
+    ```vue
     <template>
       <div id="app" class="barcodeStyle">
         <ejs-barcodegenerator
@@ -149,9 +157,9 @@ You have completed all of the necessary configurations required to render the Sy
     </script>
 
     <style>
-      @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-      @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-      @import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/material.css";
+      @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+      @import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
+      @import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/tailwind3.css";
     </style>
     ```
 
@@ -163,7 +171,7 @@ Run the application using the following command.
 npm run serve
 ```
 
-Web server will be initiated, open the quick start app in the browser at port `localhost:8080`.
+The development server will start and the application will be available in the browser at `http://localhost:8080`.
 
 ![Output](./images/barcode1.PNG)
 
@@ -171,7 +179,7 @@ Web server will be initiated, open the quick start app in the browser at port `l
 
 You can add the QR code generator component by using the following code sample.
 
-```
+```vue
 <template>
   <div id="app" class="barcodeStyle">
     <ejs-qrcodegenerator
@@ -179,7 +187,6 @@ You can add the QR code generator component by using the following code sample.
       ref="qrcodeControl"
       :width="width"
       :height="height"
-      :type="type"
       :displayText="displaytext"
       :value="value"
       :mode="mode"
@@ -189,7 +196,6 @@ You can add the QR code generator component by using the following code sample.
 </template>
 
 <script setup>
-
 import {
   QRCodeGeneratorComponent as EjsQrcodegenerator
 } from "@syncfusion/ej2-vue-barcode-generator";
@@ -204,28 +210,26 @@ import {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/tailwind3.css";
 </style>
-
 ```
 
 ![Output](./images/barcode2.PNG)
 
 ## Adding Syncfusion® Vue Datamatrix Generator control in the application
 
-You can add the datamatrix code generator component by using the following code sample.
+You can add the DataMatrix code generator component by using the following code sample.
 
-```
+```vue
 <template>
   <div id="app" class="barcodeStyle">
     <ejs-datamatrixgenerator
-      id="qrcode"
-      ref="qrcodeControl"
+      id="datamatrix"
+      ref="datamatrixControl"
       :width="width"
       :height="height"
-      :type="type"
       :displayText="displaytext"
       :value="value"
       :mode="mode"
@@ -235,7 +239,6 @@ You can add the datamatrix code generator component by using the following code 
 </template>
 
 <script setup>
-
 import {
   DataMatrixGeneratorComponent as EjsDatamatrixgenerator
 } from "@syncfusion/ej2-vue-barcode-generator";
@@ -250,13 +253,14 @@ import {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/tailwind3.css";
 </style>
-
 ```
 
 ![Output](./images/barcode3.PNG)
 
-Refer the following sample, [vue3-barcode-generator-getting-started](https://github.com/SyncfusionExamples/vue3-barcode-getting-started).
+## See Also
+
+Refer to the following sample: [vue3-barcode-generator-getting-started](https://github.com/SyncfusionExamples/vue3-barcode-getting-started).

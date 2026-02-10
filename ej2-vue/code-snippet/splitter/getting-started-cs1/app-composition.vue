@@ -15,8 +15,8 @@ import { SplitterComponent as EjsSplitter, PanesDirective as EPanes, PaneDirecti
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css';
 
 #app {
   margin: 60px auto;

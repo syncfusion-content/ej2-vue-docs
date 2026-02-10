@@ -10,11 +10,9 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue HeatMap Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
-
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+Vue 3 supports two authoring styles: the **Composition API** (recommended for new projects) and the **Options API** (the traditional Vue 2 pattern). Both approaches are covered in this guide using practical code examples. Choose the style that best fits your project requirements.
 
 You can explore some useful features in the HeatMap component using the video below.
 
@@ -22,11 +20,18 @@ You can explore some useful features in the HeatMap component using the video be
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+Before beginning, ensure the following prerequisites are met:
+
+- **Node.js**: Version 14 or later installed on your system
+- **Package Manager**: NPM (v6+) or Yarn (v1.22+)
+- **Code Editor**: Any JavaScript-enabled editor (e.g., Visual Studio Code)
+- **Syncfusion License** (for production use): Review [licensing requirements](https://ej2.syncfusion.com/vue/documentation/licensing)
+
+For detailed system requirements, refer to [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -105,7 +110,7 @@ yarn add @syncfusion/ej2-vue-heatmap
 
 Follow the below steps to add the Vue HeatMap component using `Composition API` or `Options API`:
 
-1.First, import and register the HeatMap component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1. Import and register the HeatMap component and its child directives in the `script` section of the **src/App.vue** file. For the Composition API, add the `setup` attribute to the `script` tag to enable the Composition API syntax. The component will be automatically registered in the template.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -133,7 +138,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the HeatMap component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/heatmap#datasource), [xAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#xaxis), [yAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#yaxis) and other property definitions.
+2. In the `template` section, define the HeatMap component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/heatmap#datasource), [xAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#xaxis), [yAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#yaxis), and other property bindings.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -145,7 +150,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3.In the `script` section, declare the values for the properties defined in the `template` section.
+3. In the `script` section, declare the values for the HeatMap properties defined in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -367,7 +372,7 @@ HeatMap.Inject(Legend, Tooltip);
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the application
 
 To run the project, use the following command:
 
@@ -381,13 +386,13 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
+The Vite server will start on a local port (typically `http://localhost:5173`). Open this URL in your browser to view the HeatMap component in action. The output will display as follows:
 
 ![vue-3-js-HeatMap](./images/vue3-heatmap-demo.PNG)
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 
 * [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
 * [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)
+* [HeatMap API Reference](https://ej2.syncfusion.com/vue/documentation/api/heatmap)

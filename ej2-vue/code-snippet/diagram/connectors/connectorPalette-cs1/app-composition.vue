@@ -52,7 +52,7 @@ const palettes = [{
     id: "connector",
     expanded: true,
     symbols: connectorSymbols,
-    title: "connectorSymbols"
+    title: "Connector Symbols"
 }]
 const expandMode = "Multiple";
 const width = "100%";

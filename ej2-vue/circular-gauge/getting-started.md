@@ -18,7 +18,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Circular Gauge.
+The following are the minimum dependencies required to use the Circular Gauge component:
 
 ```javascript
 |-- @syncfusion/ej2-vue-circulargauge
@@ -53,7 +53,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -61,7 +61,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Circular gauge component](https://www.syncfusion.com/vue-components/vue-circular-gauge) as an example. Install the `@syncfusion/ej2-vue-circulargauge` package by running the following command:
+This guide uses the [Vue Circular Gauge component](https://www.syncfusion.com/vue-components/vue-circular-gauge) as an example. Install the package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-circulargauge --save
@@ -74,9 +74,9 @@ yarn add @syncfusion/ej2-vue-circulargauge
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Circular Gauge component
 
-Follow the below steps to add the Vue Circular Gauge component:
+After installing the package, register and configure the Circular Gauge component in your Vue 2 application. Follow the steps below:
 
-1\. First, import and register the Circular Gauge component in the `script` section of the **src/App.vue** file.
+1\. Import and register the Circular Gauge component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -136,7 +136,7 @@ yarn run serve
 
 ## Set Pointer Value
 
-You can change the pointer value in the above sample using [`value`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/tooltipSettings/).
+Customize the pointer value displayed on the Circular Gauge by using the [`value`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer#value-number) property in the [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer) array.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}

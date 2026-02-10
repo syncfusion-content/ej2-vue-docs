@@ -95,21 +95,15 @@ data() {
     nodes: nodes,
     connectors: connectors,
     click: function () {
-      console.log("clicked");
+      console.log("Clicked");
     },
     elementDraw: function (args) {
-      //Prevents connector drawn from connector port
-      if (
-        args.state === "Start" &&
-        args.source instanceof Connector
-      ) {
-        args.cancel = true;
-      }
+      console.log('Element draw event');
     },
-    positionChange: function () {
+    positionChange: function (args) {
       console.log("Position change");
     },
-    connectionChange: function () {
+    connectionChange: function (args) {
       console.log("Connection change");
     },
   };

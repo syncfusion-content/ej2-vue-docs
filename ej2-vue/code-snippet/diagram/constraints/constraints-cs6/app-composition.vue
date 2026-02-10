@@ -1,10 +1,11 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :snapSettings="snapSettings"></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :snapSettings="snapSettings"></ejs-diagram>
+  </div>
 </template>
 <script setup>
-import { DiagramComponent as EjsDiagram, SnapConstraints } from '@syncfusion/ej2-vue-diagrams';
+import { provide } from "vue";
+import { DiagramComponent as EjsDiagram, SnapConstraints, Snapping } from '@syncfusion/ej2-vue-diagrams';
 const nodes = [
   {
     id: 'Node1',
@@ -26,9 +27,10 @@ const nodes = [
 
 const width = "100%";
 const height = "700px";
-const snapSettings= {
-        constraints: SnapConstraints.ShowHorizontalLines,
-      }
+const snapSettings = {
+  constraints: SnapConstraints.ShowHorizontalLines | SnapConstraints.SnapToObject,
+}
+provide('diagram', [Snapping])
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

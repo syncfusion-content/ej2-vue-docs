@@ -17,7 +17,7 @@ const nodes = [{
     // Sets the annotation for the Node
     annotations: [{
         hyperlink: {
-            link: 'https://hr.syncfusion.com/home',
+            link: 'https://stackoverflow.com/',
             //Set the link to open in the current tab
             hyperlinkOpenState: 'NewWindow'
         }
