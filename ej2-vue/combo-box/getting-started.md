@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Combo box Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Combo box component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue ComboBox component.
 
-To get start quickly with ComboBox component using Vue CLI, you can check on this video:
+To get started quickly with Vue ComboBox, check this video:
 
 {% youtube "https://www.youtube.com/watch?v=JEglveb2-hA" %}
 
@@ -63,9 +63,9 @@ yarn add @syncfusion/ej2-vue-dropdowns
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Combo box component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the ComboBox component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -79,11 +79,13 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Combo box component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue ComboBox component:
 
-1\. First, import and register the Combo box component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the ComboBox component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -108,7 +110,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Combo box component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#datasource) and [placeholder](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#placeholder) property.
+2\. In the `template` section, define the Combo box component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/combo-box/index-default#datasource) and [placeholder](https://ej2.syncfusion.com/vue/documentation/api/combo-box/index-default#placeholder) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -203,7 +205,7 @@ yarn run serve
 
 ## Custom values
 
-The ComboBox allows the user to give input as custom value which is not required to present in predefined set of values. By default, this support is enabled by [allowCustom](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#allowcustom) property. In this case, both text field and value field considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
+The ComboBox allows the user to give input as custom value which is not required to present in predefined set of values. By default, this support is enabled by [allowCustom](https://ej2.syncfusion.com/vue/documentation/api/combo-box/index-default#allowcustom) property. In this case, both text field and value field considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -220,7 +222,7 @@ The ComboBox allows the user to give input as custom value which is not required
 
 By default, the width of the popup list automatically adjusts according to the ComboBox input element's width, and the height of the popup list has '300px'.
 
-The height and width of the popup list can also be customized using the [popupHeight](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#popupwidth) property respectively.
+The height and width of the popup list can also be customized using the [popupHeight](https://ej2.syncfusion.com/vue/documentation/api/combo-box/index-default#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/combo-box/index-default#popupwidth) property respectively.
 
 In the following sample, popup list's width and height have configured.
 

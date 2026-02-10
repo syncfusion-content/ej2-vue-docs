@@ -8,28 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Predefined dialogs Component in Vue 2
+# Getting Started with the Vue Predefined Dialogs Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Predefined dialogs component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Predefined Dialogs component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Dependencies
-
-The list of dependencies required to use the predefined dialogs in your application is given below:
-
-```javascript
-|-- @syncfusion/ej2-vue-popups
-    |-- @syncfusion/ej2-vue-base
-    |-- @syncfusion/ej2-vue-buttons
-    |-- @syncfusion/ej2-popups
-        |-- @syncfusion/ej2-base
-        |-- @syncfusion/ej2-buttons
-```
-
-## Setting up the Vue 2 project
+## Setup the Vue 2 project
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
@@ -51,7 +38,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -72,9 +59,9 @@ yarn add @syncfusion/ej2-vue-popups
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the predefined dialogs component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Predefined Dialogs component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -88,8 +75,7 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
-> The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online web tool, which can be used to generate the custom script and styles for a set of specific components.
-> This web tool is useful to combine the required component scripts and styles in a single file.
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -185,7 +171,7 @@ export default {
 
 ### Show alert dialog
 
-An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. This can be achieved by using the `DialogUtility.alert` method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alert dialog will get closed.
+An alert dialog box is used to display errors, warnings, and information alerts that require user awareness. This can be achieved by using the `DialogUtility.alert` method. The alert dialog is displayed along with the `OK` button. When the user clicks the `OK` button, the alert dialog closes.
 
 In the below code example, alert dialog displayed on button click action.
 
@@ -201,7 +187,7 @@ Now run the `npm run dev` command in the console, it will build your application
 
 ### Show confirm dialog
 
-A confirm dialog box used to displays a specified message along with the `OK` and `Cancel` buttons. This can be achieved by using the `DialogUtility.confirm` method. It is used to get approval from the user, and it appears before any critical action. After get approval from the user the dialog will disappear automatically.
+A confirm dialog box is used to display a specified message along with the `OK` and `Cancel` buttons. This can be achieved by using the `DialogUtility.confirm` method. It is used to get user approval and appears before critical actions. After the user approves, the dialog closes automatically.
 
 In the below code example, the confirm dialog displayed on `OK` and `Cancel` button click action.
 
@@ -215,7 +201,7 @@ In the below code example, the confirm dialog displayed on `OK` and `Cancel` but
 
 ### Show Prompt dialog
 
-A prompt dialog is used to get the input from the user. When the user clicks the `OK` button the input value from the dialog is returned. If the user clicks the `Cancel` button the null value is returned. After getting the input from the user the dialog will disappear automatically.
+A prompt dialog is used to get input from the user. When the user clicks the `OK` button, the input value from the dialog is returned. If the user clicks the `Cancel` button, a null value is returned. After getting the input from the user, the dialog closes automatically.
 
 In the below code example, the confirm dialog displayed on `OK` and `Cancel` button click action.
 

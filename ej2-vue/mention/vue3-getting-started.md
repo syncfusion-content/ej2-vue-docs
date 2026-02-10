@@ -65,7 +65,19 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
+
+```bash
+Use rolldown-vite (Experimental)? No
+```
+
+5.Install dependencies and start the dev server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
 ```bash
 cd my-project
@@ -99,9 +111,9 @@ yarn add @syncfusion/ej2-vue-dropdowns
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Mention component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Mention component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -117,7 +129,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -137,7 +149,7 @@ Follow the below steps to add the Vue Mention component using `Composition API` 
 
 <script>
 import { MentionComponent } from "@syncfusion/ej2-vue-dropdowns";
-//Component registeration
+//Component registration
 export default {
     name: "App",
     components: {
@@ -302,9 +314,9 @@ yarn run dev
 
 ## Display Mention character
 
-By using the [showMentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/#showMentionChar) property, the text content can be displayed along with the mention character. You can customize the mention character by using the [mentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/#mentionChar) property in the Mention component.
+By using the [showMentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/index-default#showMentionChar) property, the text content can be displayed along with the mention character. You can customize the mention character by using the [mentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/index-default#mentionChar) property in the Mention component.
 
-> By default, the [mentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/#mentionChar) is `@` and the [showMentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/#showMentionChar) property is disabled.
+> By default, the [mentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/index-default#mentionChar) is `@` and the [showMentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/index-default#showMentionChar) property is disabled.
 
 The following example code displays the text content along with the mention character configured as `#`.
 

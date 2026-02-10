@@ -10,28 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Calendar Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Calendar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api)
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Calendar component.
 
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
-
-## Dependencies
-
-The list of dependencies required to use the Calendar component in your application is given below:
-
-```javascript
-|-- @syncfusion/ej2-vue-calendars
-  |-- @syncfusion/ej2-base
-  |-- @syncfusion/ej2-data
-  |-- @syncfusion/ej2-vue-base
-  |-- @syncfusion/ej2-calendars
-    |-- @syncfusion/ej2-inputs
-       |-- @syncfusion/ej2-splitbuttons
-    |-- @syncfusion/ej2-lists
-    |-- @syncfusion/ej2-popups
-        |-- @syncfusion/ej2-buttons
-```
 
 ## Setting up the Vue 2 project
 
@@ -55,7 +38,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -76,9 +59,9 @@ yarn add @syncfusion/ej2-vue-calendars
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Calendar component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Calendar component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -92,11 +75,13 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Calendar component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Calendar component:
 
-1\. First, import and register the Calendar component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the Calendar component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -146,7 +131,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-## Running the Project
+## Run the project
 
 To run the project, use the following command:
 
@@ -164,13 +149,13 @@ yarn run serve
 
 ## Setting the value, min and max dates
 
-The following example demonstrates how to set the value, min and max dates on initializing the Calendar. Here the Calendar allows you to select a date within the range from 9th to 15th in the month of May 2017. To know more about range restriction in Calendar, please refer this [page](./date-range).
+The following example demonstrates how to set the value, min, and max dates when initializing the Calendar. The Calendar allows you to select a date within the range from 9th to 15th in May 2017. For more information about range restriction in the Calendar, refer to the [date-range](./date-range) page.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue" %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 {% include code-snippet/calendar/min-max-cs7/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% include code-snippet/calendar/min-max-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

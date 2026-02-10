@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Connector Events in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Connector Events in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Connector Events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Events
+# Connector Events in Vue Diagram
 
 Diagram provides some events support for connectors that triggers when interacting with the connector.
 
 ## Click event
 
-Triggers when the connector is clicked. The following code example explains how to get the [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iclickeventargs/) event in the diagram.
+Triggers when the connector is clicked. The following code example explains how to get the [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iclickeventargs) event in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ Triggers when the connector is clicked. The following code example explains how 
 ## Selection change event
 
 When selecting/unselecting the connector, the selection change event will be triggered.
-The following code example explains how to get the [`selection change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iSelectionChangeEventArgs/) event in the diagram.
+The following code example explains how to get the [`selection change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iselectionchangeeventargs) event in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ The following code example explains how to get the [`selection change`](https://
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/SelectionChange-cs1" %}
 
- You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iSelectionChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iselectionchangeeventargs) to true, as shown in the code snippet below.
 
 ```ts
     selectionChange: (args) => {
@@ -56,7 +56,7 @@ The following code example explains how to get the [`selection change`](https://
 ## Position change event
 
 Triggers when the connector's position is changed in diagram.
-The following code example explains how to get the [`position change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/idraggingeventargs/) event in the diagram.
+The following code example explains how to get the [`position change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/idraggingeventargs) event in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -82,7 +82,7 @@ The following code example explains how to get the [`position change`](https://e
 ## Connection change event
 
 Triggers when the connector’s source or target point is connected or disconnected from the source or target.
-The following code example explains how to get the [`connection change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iconnectionchangeeventargs/) event in the diagram.
+The following code example explains how to get the [`connection change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iconnectionchangeeventargs) event in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -98,7 +98,7 @@ The following code example explains how to get the [`connection change`](https:/
 ## Source Point change event
 
 Triggers when the connector's source point is changed.
-The following code example explains how to get the [`source Point change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iEndChangeEventArgs/) event in the diagram.
+The following code example explains how to get the [`source Point change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iendchangeeventargs) event in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -111,7 +111,7 @@ The following code example explains how to get the [`source Point change`](https
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/SourcePointChange-cs1" %}
 
- You can prevent source point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iEndChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent source point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iendchangeeventargs) to true, as shown in the code snippet below.
 
 ```javascript
  sourcePointChange : (args) => {
@@ -126,7 +126,7 @@ The following code example explains how to get the [`source Point change`](https
 ## Target Point change event
 
 Triggers when the connector's target point is changed.
-The following code example explains how to get the [`target Point change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iEndChangeEventArgs/) event in the diagram.
+The following code example explains how to get the [`target Point change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iendchangeeventargs) event in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -139,7 +139,7 @@ The following code example explains how to get the [`target Point change`](https
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/TargetPointChange-cs1" %}
 
- You can prevent target point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iEndChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent target point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iendchangeeventargs) to true, as shown in the code snippet below.
 
 ```javascript
 targetPointChange  : (args) => {
@@ -154,7 +154,7 @@ targetPointChange  : (args) => {
 ## Segment Collection Change event
 
 Triggers when the connector's segments added or removed at runtime.
-The following code example explains how to get the [`segment collection change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iSegmentCollectionChangeEventArgs/) event in the diagram. 
+The following code example explains how to get the [`segment collection change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/isegmentcollectionchangeeventargs) event in the diagram. 
 
 Use `CTRL+Shift+Click` on connector to add/remove segments.
 
@@ -172,7 +172,7 @@ Use `CTRL+Shift+Click` on connector to add/remove segments.
 ## Segment Change event
 
 Triggers when the connector's segments were adjusted or edited.
-The following code example explains how to get the [`segment change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iSegmentCollectionChangeEventArgs/) event in the diagram.
+The following code example explains how to get the [`segment change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/isegmentchangeeventargs) event in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -185,7 +185,7 @@ The following code example explains how to get the [`segment change`](https://ej
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/SegmentEditing-cs1" %}
 
- You can prevent segment editing by setting the `cancel` property of [`SegmentChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iSegmentChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent segment editing by setting the `cancel` property of [`SegmentChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/isegmentchangeeventargs) to true, as shown in the code snippet below.
 
 ``` javascript
  segmentChange  : (args) => {
@@ -199,7 +199,7 @@ The following code example explains how to get the [`segment change`](https://ej
 ## Collection change event
 
 Triggers when the connector is added or removed from diagram.
-The following code example explains how to get the [`collection change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/icollectionchangeeventargs/) event in the diagram.
+The following code example explains how to get the [`collection change`](https://ej2.syncfusion.com/vue/documentation/api/diagram/icollectionchangeeventargs) event in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -212,7 +212,7 @@ The following code example explains how to get the [`collection change`](https:/
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/CollectionChange-cs1" %}
 
-You can prevent changes to the diagram collection, such as adding or deleting connectors, by setting the `cancel` property of [`CollectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/icollectionchangeeventargs/) to true, as shown in the code snippet below.
+You can prevent changes to the diagram collection, such as adding or deleting connectors, by setting the `cancel` property of [`CollectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/icollectionchangeeventargs) to true, as shown in the code snippet below.
 
 ``` javascript
 collectionChange: (args) => {

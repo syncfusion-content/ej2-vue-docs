@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="container">
     <ejs-slider id='buttons' :value='value' :showButtons="showButtons" :type="type"></ejs-slider>
   </div>
 </template>
@@ -7,7 +7,7 @@
 import { SliderComponent } from "@syncfusion/ej2-vue-inputs";
 
 export default {
-  name: "App",
+  name: "container",
   components: {
     "ejs-slider": SliderComponent
   },

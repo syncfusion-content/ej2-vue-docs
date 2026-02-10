@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life-cycle hooks, and more.
 
 To get start quickly with Vue Uploader component, you can check on this video:
 
@@ -22,7 +22,7 @@ To get start quickly with Vue Uploader component, you can check on this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -69,7 +69,19 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
+
+```bash
+Use rolldown-vite (Experimental)? No
+```
+
+5.Install dependencies and start the dev server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
 ```bash
 cd my-project
@@ -103,9 +115,9 @@ yarn add @syncfusion/ej2-vue-inputs
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Uploader component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Uploader component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -119,7 +131,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -195,10 +207,8 @@ import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";
     #app {
         color: #008cff;
         height: 40px;
-        left: 45%;
-        position: absolute;
-        top: 45%;
         width: 20%;
+        text-align: left;
     }
     .control-section {
         height: 100%;
@@ -237,10 +247,8 @@ data: function() {
     #app {
         color: #008cff;
         height: 40px;
-        left: 45%;
-        position: absolute;
-        top: 45%;
         width: 20%;
+        text-align: left;
     }
     .control-section {
         height: 100%;
@@ -282,12 +290,12 @@ In the following sample, drop target is configured.
 <template>
   <div>
     <div id='droparea'>Drop files here to upload</div>
-    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles"  :dropArea = "dropElement"></ejs-uploader>
+    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :dropArea="dropElement"></ejs-uploader>
   </div>
 </template>
 <script setup>
 import { UploaderComponent  as EjsUploader } from "@syncfusion/ej2-vue-inputs";
-  const data = [{dropElement: '#dropArea'}]
+const dropElement = "#droparea";
 </script>
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -314,11 +322,8 @@ import { UploaderComponent  as EjsUploader } from "@syncfusion/ej2-vue-inputs";
     }
     #droparea {
         padding: 50px 25px;
-        margin: 30px auto;
         border: 1px solid #c3c3c3;
         text-align: center;
-        width: 20%;
-        display: inline-flex;
     }
     .e-file-select,
     .e-file-drop {
@@ -331,6 +336,12 @@ import { UploaderComponent  as EjsUploader } from "@syncfusion/ej2-vue-inputs";
         width: 60%;
         display: inline-flex;
         margin-left: 5%;
+    }
+    #app {
+        color: #008cff;
+        height: 40px;
+        width: 40%;
+        text-align: left;
     }
 </style>
 
@@ -384,11 +395,8 @@ data: function() {
     }
     #droparea {
         padding: 50px 25px;
-        margin: 30px auto;
         border: 1px solid #c3c3c3;
         text-align: center;
-        width: 20%;
-        display: inline-flex;
     }
     .e-file-select,
     .e-file-drop {
@@ -401,6 +409,12 @@ data: function() {
         width: 60%;
         display: inline-flex;
         margin-left: 5%;
+    }
+    #app {
+        color: #008cff;
+        height: 40px;
+        width: 40%;
+        text-align: left;
     }
 </style>
 
@@ -426,13 +440,20 @@ The uploader component process the files to upload in Asynchronous mode by defau
 </template>
 <script setup>
 import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";  
-  const data = [{ path: { saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-                  removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'}}]
+const path = { saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
+                  removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'}
 </script>
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+
+    #app {
+        color: #008cff;
+        height: 40px;
+        width: 40%;
+        text-align: left;
+    }
 </style>
 
 {% endraw %}
@@ -466,6 +487,13 @@ data: function() {
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+
+    #app {
+        color: #008cff;
+        height: 40px;
+        width: 40%;
+        text-align: left;
+    }
 </style>
 
 {% endhighlight %}
@@ -490,8 +518,8 @@ You can handle the success and failure actions using the [success](https://ej2.s
 </template>
 <script setup>
 import { UploaderComponent as EjsUploader} from "@syncfusion/ej2-vue-inputs";
-    const data = [{ path: { saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-                  removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'}}]
+    const path = { saveUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Save',
+            removeUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Remove'}
     const onUploadSuccess = () => {
       console.log('Uploaded successfully');
     };
@@ -503,6 +531,13 @@ import { UploaderComponent as EjsUploader} from "@syncfusion/ej2-vue-inputs";
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+
+    #app {
+        color: #008cff;
+        height: 40px;
+        width: 40%;
+        text-align: left;
+    }
 </style>
 
 {% endraw %}
@@ -525,8 +560,8 @@ components: {
 data: function() {
     return {
         path:  {
-            saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-            removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
+            saveUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Save',
+            removeUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Remove'
         }
     }
 },
@@ -544,6 +579,13 @@ methods: {
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+
+    #app {
+        color: #008cff;
+        height: 40px;
+        width: 40%;
+        text-align: left;
+    }
 </style>
 
 {% endhighlight %}

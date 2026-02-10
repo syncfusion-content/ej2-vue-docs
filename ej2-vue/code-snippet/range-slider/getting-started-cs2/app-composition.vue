@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="container">
     <label class="labeltext">Default</label>
     <ejs-slider id='default' :value='minvalue'></ejs-slider>
     <label class="labeltext">MinRange</label>
@@ -23,7 +23,7 @@ const minvalue = 30;
 @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 
-#app {
+#container {
   height: 40px;
   left: 30%;
   position: absolute;

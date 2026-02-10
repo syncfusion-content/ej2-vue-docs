@@ -14,11 +14,11 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life-cycle hooks, and more.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -64,8 +64,19 @@ Vanilla
   Customize with create-vue ↗
   Nuxt ↗
 ```
+4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+```bash
+Use rolldown-vite (Experimental)? No
+```
+
+5.Install dependencies and start the dev server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
 ```bash
 cd my-project
@@ -99,9 +110,9 @@ yarn add @syncfusion/ej2-vue-inputs
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the MaskedTextBox component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the MaskedTextBox component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -114,7 +125,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -148,7 +159,7 @@ components: {
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the MaskedTextBox component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/maskedtextbox/#datasource) property and column definitions.
+2.In the `template` section, define the MaskedTextBox component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/maskedtextbox#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -231,8 +242,8 @@ yarn run dev
 ## Set the mask
 
 You can set the mask to the MaskedTextBox to validate the user input by using the
-[mask](https://ej2.syncfusion.com/vue/documentation/api/maskedtextbox/#mask) property. To know more about
-the usage of mask and configuration, refer to this [link](./mask-configuration/).
+[mask](https://ej2.syncfusion.com/vue/documentation/api/maskedtextbox#mask) property. To know more about
+the usage of mask and configuration, refer to this [link](./mask-configuration).
 
 The following example demonstrates the usage of mask element 0 that allows any single digit from 0 to 9.
 
@@ -273,13 +284,9 @@ import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-name: "App",
-components: {
-"ejs-maskedtextbox":MaskedtextboxComponent
-}
-data () {
-    eturn {}
-}
+    name: "App",
+    components: { "ejs-maskedtextbox":MaskedTextBoxComponent },
+    data () { return {} }
 }
 </script>
 <style>
@@ -348,15 +355,15 @@ import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-name: "App",
-components: {
-"ejs-maskedtextbox":MaskedtextboxComponent
-},
-data () {
-    return {
-        value : ''
+    name: "App",
+    components: {
+    "ejs-maskedtextbox":MaskedTextBoxComponent
+    },
+    data () {
+        return {
+            value : ''
+        }
     }
-}
 }
 </script>
 <style>
@@ -378,7 +385,7 @@ The output will appear as follows:
 
 ## See Also
 
-* [How to perform custom validation using FormValidator](./how-to/perform-custom-validation-using-form-validator/)
-* [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control/)
-* [How to set cursor position while focus on the input textbox](./how-to/set-cursor-position-while-focus-on-the-input-textbox/)
-* [How to display numeric keypad when focus on mobile devices](./how-to/display-numeric-keypad-when-focus-on-mobile-devices/)
+* [How to perform custom validation using FormValidator](./how-to/perform-custom-validation-using-form-validator)
+* [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control)
+* [How to set cursor position while focus on the input textbox](./how-to/set-cursor-position-while-focus-on-the-input-textbox)
+* [How to display numeric keypad when focus on mobile devices](./how-to/display-numeric-keypad-when-focus-on-mobile-devices)

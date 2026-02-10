@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bezier connector in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Bezier Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Connectors 
 platform: ej2-vue
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors.
 
-To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments/) is set as `bezier` and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#type) for the connector. The following code example illustrates how to create a default bezier segment.
+To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments) is set as `bezier` and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#type) for the connector. The following code example illustrates how to create a default bezier segment.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -35,12 +35,12 @@ To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/vue/
 
 * Bezier control points can be positioned in two ways.
 
-* When setting control point positions using the The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#point1) and [`point2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#point2)  properties, the control point remains fixed in its set position while dragging connector end points.
-* When setting control point positions using the [`vector1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#vector1) and [`vector2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#vector2) properties, the control point dynamically adjusts to maintain the angle and distance originally set while moving the connector end points.
+* When setting control point positions using the The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersegment#point1) and [`point2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersegment#point2)  properties, the control point remains fixed in its set position while dragging connector end points.
+* When setting control point positions using the [`vector1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersegment#vector1) and [`vector2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersegment#vector2) properties, the control point dynamically adjusts to maintain the angle and distance originally set while moving the connector end points.
 
 #### Point
 
-The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#point1) and [`point2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#point2) enable you to set the control points. The following code example illustrates how to configure the bezier segments with control points.
+The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersegment#point1) and [`point2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersegment#point2) enable you to set the control points. The following code example illustrates how to configure the bezier segments with control points.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSe
 
 #### Vector
 
-The [`vector1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#vector1) and [`vector2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#vector2) properties of bezier segment enable you to define the vectors. The following code illustrates how to configure a bezier curve with vectors.
+The [`vector1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersegment#vector1) and [`vector2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersegment#vector2) properties of bezier segment enable you to define the vectors. The following code illustrates how to configure a bezier curve with vectors.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -114,9 +114,9 @@ This feature allows users to choose whether to reset the control points of bezie
 
 ### How to customize Bezier Segment Thumb Size
 
-Bezier segment thumbs default to size 10. This can be adjusted globally or for individual connectors using the [`segmentThumbSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#segmentthumbsize) property.
-To change the thumb size for all Bezier connectors, set the [`segmentThumbSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#segmentthumbsize) property in the diagram’s model.
-To customize the thumb size for a specific connector, disable the [`InheritSegmentThumbSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorConstraints/) constraint, then set the desired [`segmentThumbSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#segmentthumbsize).
+Bezier segment thumbs default to size 10. This can be adjusted globally or for individual connectors using the [`segmentThumbSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#segmentthumbsize) property.
+To change the thumb size for all Bezier connectors, set the [`segmentThumbSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#segmentthumbsize) property in the diagram’s model.
+To customize the thumb size for a specific connector, disable the [`InheritSegmentThumbSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorconstraints) constraint, then set the desired [`segmentThumbSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#segmentthumbsize).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

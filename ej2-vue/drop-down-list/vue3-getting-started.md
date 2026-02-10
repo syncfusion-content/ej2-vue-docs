@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue DropDownList Component in Vue 3
+# Getting Started with the Vue Dropdown list Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DropDownList component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Dropdown list component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life-cycle hooks, and more.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Set up the Vite project
+## Setup the Vite project
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
@@ -65,7 +65,19 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
+
+```bash
+Use rolldown-vite (Experimental)? No
+```
+
+5.Install dependencies and start the dev server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
 ```bash
 cd my-project
@@ -81,11 +93,12 @@ yarn install
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue DropDownList component](https://www.syncfusion.com/vue-components/vue-dropdown-list) as an example. To use the Vue DropDownList component in the project, the `@syncfusion/ej2-vue-dropdowns` package needs to be installed using the following command:
+This article uses the [Vue Dropdown list component](https://www.syncfusion.com/vue-components/vue-dropdown-list) as an example. To use the Vue Dropdown list component in the project, the `@syncfusion/ej2-vue-dropdowns` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-dropdowns --save
@@ -99,9 +112,9 @@ yarn add @syncfusion/ej2-vue-dropdowns
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the DropDownList component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Dropdown list  component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -115,13 +128,13 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue DropDownList component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Dropdown list component using `Composition API` or `Options API`:
 
-  1.First, import and register the DropDownList component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+  1.First, import and register the Dropdown list component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -135,7 +148,7 @@ Follow the below steps to add the Vue DropDownList component using `Composition 
 
 <script>
 import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
-//Component registeration
+//Component registration
 export default {
     name: "App",
     components: {
@@ -147,14 +160,14 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the DropDownList component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#datasource) property and column definitions.
+2.In the `template` section, define the Dropdown list component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
     <div class="control_wrapper">
-       <ejs-dropdownlist id='dropdownlist' :dataSource='sportsData'></ejs-dropdownlist>
+       <ejs-dropdownlist id='Dropdownlist' :dataSource='sportsData'></ejs-dropdownlist>
     </div>
 </template>
 
@@ -168,7 +181,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <template>
     <div class="control_wrapper">
-        <ejs-dropdownlist id='dropdownlist' :dataSource='data[0].sportsData'></ejs-dropdownlist>
+        <ejs-dropdownlist id='Dropdownlist' :dataSource='data[0].sportsData'></ejs-dropdownlist>
     </div>
 </template>
 <script setup>
@@ -187,12 +200,12 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <template>
     <div class="control_wrapper">
-        <ejs-dropdownlist id='dropdownlist' :dataSource='sportsData'></ejs-dropdownlist>
+        <ejs-dropdownlist id='Dropdownlist' :dataSource='sportsData'></ejs-dropdownlist>
     </div>
 </template>
 <script>
     import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
-    //Component registeration
+    //Component registration
     export default {
         name: 'App',
         components: {
@@ -230,9 +243,9 @@ yarn run dev
 
 ## Configure the Popup List
 
-By default, the width of the popup list automatically adjusts according to the DropDownList input element's width, and the height of the popup list has '300px'.
+By default, the width of the popup list automatically adjusts according to the Dropdown list input element's width, and the height of the popup list has '300px'.
 
-The height and width of the popup list can also be customized using the [popupHeight](	https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#popupwidth) properties respectively
+The height and width of the popup list can also be customized using the [popupHeight](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#popupwidth) properties respectively
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -241,7 +254,7 @@ The height and width of the popup list can also be customized using the [popupHe
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;">
         <br>
-        <ejs-dropdownlist id='dropdownlist' popupHeight="200px" popupWidth="250px" 
+        <ejs-dropdownlist id='Dropdownlist' popupHeight="200px" popupWidth="250px" 
         :dataSource='data[0].sportsData' placeholder='Select a game'></ejs-dropdownlist>
     </div>
   </div>
@@ -265,7 +278,7 @@ The height and width of the popup list can also be customized using the [popupHe
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;">
         <br>
-        <ejs-dropdownlist id='dropdownlist' popupHeight="200px" popupWidth="250px" :dataSource='sportsData' placeholder='Select a game'></ejs-dropdownlist>
+        <ejs-dropdownlist id='Dropdownlist' popupHeight="200px" popupWidth="250px" :dataSource='sportsData' placeholder='Select a game'></ejs-dropdownlist>
     </div>
   </div>
 </template>
@@ -295,8 +308,8 @@ The height and width of the popup list can also be customized using the [popupHe
 
 The output will appear as follows:
 
-![Dropdownlist suggestion list customized height and width](./images/popup.png)
+![Dropdown list suggestion list customized height and width](./images/popup.png)
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
+* [How to bind the data](./data-binding)
