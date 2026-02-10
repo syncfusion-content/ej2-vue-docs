@@ -313,7 +313,7 @@ onMounted(function() {
 })
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -347,7 +347,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}

@@ -10,26 +10,15 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Button group Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Button group component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue ButtonGroup component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Dependencies
+## Setup the Vue 2 project
 
-The list of dependencies required to use the Button component in your application is given below:
-
-```js
-|-- @syncfusion/ej2-vue-splitbuttons
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-buttons
-    |-- @syncfusion/ej2-vue-base
-```
-
-## Setting up the Vue 2 project
-
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -49,7 +38,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -57,7 +46,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Button group component](https://www.syncfusion.com/vue-components/vue-button-group) as an example. Install the `@syncfusion/ej2-splitbuttons` package by running the following command:
+This article uses the [Vue ButtonGroup component](https://www.syncfusion.com/vue-components/vue-button-group) as an example. Install the `SplitButton` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-splitbuttons --save
@@ -70,9 +59,9 @@ yarn add @syncfusion/ej2-vue-splitbuttons
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Button group component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the ButtonGroup component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -87,11 +76,13 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Button group component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue ButtonGroup component:
 
-1\. First, import and register the Button group component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the ButtonGroup component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -116,11 +107,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Creating Vue Sample
+## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Add a div element with class name as `e-btn-group` and add the button elements that needs to be group inside the `div` element in `App.vue` file.
+A Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component needs to be registered so that Vue knows where to locate its implementation when it is encountered in a template.
 
-To render button elements as EJ2 Vue Button, then add [`Button dependencies`](./../button/getting-started#dependencies) in `systemjs.config.js` file. Then import `ButtonPlugin` from `ej2-vue-buttons`.
+To render button elements as EJ2 Vue Button, then add [`Button dependencies`](./../button/getting-started#dependencies) in `system-js.config.js` file. Then import `ButtonPlugin` from `ej2-vue-buttons`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -187,7 +178,3 @@ The following example illustrates how to achieve vertical orientation in ButtonG
 {% previewsample "page.domainurl/code-snippet/button-group/getting-started-cs3" %}
 
 > ButtonGroup with SplitButton component nesting won't works in vertical orientation.
-
-## See Also
-
-* [Initialize ButtonGroup using util function](./how-to/initialize-buttongroup-using-util-function)

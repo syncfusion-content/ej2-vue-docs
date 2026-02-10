@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bpmn Events in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Bpmn Events shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bpmn Events 
 platform: ej2-vue
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Event
 
-An [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent) is notated with a circle and it represents an event in a business process. The type of events are as follows:
+An [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnevent) is notated with a circle and it represents an event in a business process. The type of events are as follows:
 
     * Start
     * Intermediate
@@ -21,7 +21,7 @@ An [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent)
     * ThrowingIntermediate
     * End
         
-The [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent#event-bpmnevents) property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example illustrates how to create a BPMN event.
+The [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnevent#event) property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example illustrates how to create a BPMN event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -36,7 +36,7 @@ The [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent
 
 ## BPMN event trigger
 
-Event triggers are notated as icons inside the circle and they represent the specific details of the process. The [`trigger`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent#trigger-bpmntriggers) property of the node allows you to set the type of trigger and by default, it is set as **none**. The following table illustrates the type of event triggers.
+Event triggers are notated as icons inside the circle and they represent the specific details of the process. The [`trigger`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnevent#trigger) property of the node allows you to set the type of trigger and by default, it is set as **none**. The following table illustrates the type of event triggers.
 
 | Triggers | Start | Non-Interrupting Start | Intermediate | Non-Interrupting Intermediate | Throwing Intermediate | End |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |

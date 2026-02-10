@@ -15,7 +15,7 @@ domainurl: ##DomainURL##
 <!-- markdownlint-disable MD010 -->
 In a graphical user interface (GUI), a context menu is a type of menu that appears when you perform a right-click operation. It offers users a set of actions relevant to the current context. In diagrams, context menus can be customized extensively. The Diagram control provides built-in context menu items while also allowing users to define custom menu items through the [`contextMenuSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/contextmenusettingsmodel) property. This flexibility enables tailoring menus to specific application needs, including creating nested levels of menu items for more intricate user interactions.To ensure the context menu is rendered correctly, make sure to include the necessary CSS references from the Syncfusion<sup style="font-size:70%">&reg;</sup> `ej2-navigations` package. This can be achieved by adding the following line in the `<style>` section of your `src/App.vue` file.
 
-`@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";`
+`@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";`
 
 N> If you want to use contextMenu in diagram, you need to inject `DiagramContextMenu` Module in the diagram.
 

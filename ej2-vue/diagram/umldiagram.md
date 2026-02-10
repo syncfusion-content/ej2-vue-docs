@@ -20,15 +20,15 @@ The UML class diagram shapes are explained as follows.
 
 ### Class
 
- A class defines a group of objects that share common specifications, features, constraints, and semantics. To create a class object, the classifier should be defined using the [`class`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassifierShapeModel#class) notation. This notation serves as a foundational element in object-oriented programming, encapsulating the Essential<sup style="font-size:70%">&reg;</sup> characteristics and behavior that objects belonging to the class will exhibit.
+ A class defines a group of objects that share common specifications, features, constraints, and semantics. To create a class object, the classifier should be defined using the [`class`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassifiershapemodel#class) notation. This notation serves as a foundational element in object-oriented programming, encapsulating the Essential<sup style="font-size:70%">&reg;</sup> characteristics and behavior that objects belonging to the class will exhibit.
 
- Also, define the [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassModel#name), [`attributes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassModel#attributes-umlClassAttributeModel), and [`methods`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassModel#methods-umlClassMethodModel) of the class using the class property of node.
+ Also, define the [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassmodel#name), [`attributes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassmodel#attributes-umlClassAttributeModel), and [`methods`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassmodel#methods-umlClassMethodModel) of the class using the class property of node.
 
-The attribute’s [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassAttributeModel#name), [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassAttributeModel#type), and [`scope`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassAttributeModel#scope-string) properties allow you to define the name, data type, and visibility of the attribute.
+The attribute’s [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassattributemodel#name), [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassattributemodel#type), and [`scope`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassattributemodel#scope) properties allow you to define the name, data type, and visibility of the attribute.
 
-The method’s [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassMethodModel#name), [`parameters`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassMethodModel#parameters), [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassMethodModel#type), and [`scope`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassMethodModel#scope) properties allow you to define the name, parameter, return type, and visibility of the methods.
+The method’s [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassmethodmodel#name), [`parameters`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassmethodmodel#parameters), [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassmethodmodel#type), and [`scope`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassmethodmodel#scope) properties allow you to define the name, parameter, return type, and visibility of the methods.
 
-* The method [`parameters`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassMethodModel#parameters) object properties allow you to define the name and type of the parameter.
+* The method [`parameters`](https://ej2.syncfusion.com/vue/documentation/api/diagram/methodargumentsmodel) object properties allow you to define the name and type of the parameter.
 
 * The following code example illustrates how to create a class.
 
@@ -45,9 +45,9 @@ The method’s [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram
 
 ### Interface
 
-* An [`interface`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassifierShapeModel#interface) is a specific type of classifier that signifies a declaration of a cohesive set of public features and obligations. When creating an interface, it involves defining the classifier property using the interface notation. This Essential<sup style="font-size:70%">&reg;</sup> concept in object-oriented programming outlines a contract for classes to adhere to, specifying the required methods and behaviors without delving into the implementation details.
+* An [`interface`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassifiershapemodel#interface) is a specific type of classifier that signifies a declaration of a cohesive set of public features and obligations. When creating an interface, it involves defining the classifier property using the interface notation. This Essential<sup style="font-size:70%">&reg;</sup> concept in object-oriented programming outlines a contract for classes to adhere to, specifying the required methods and behaviors without delving into the implementation details.
 
-Additionally, you can define the [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlInterfaceModel#name), [`attributes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlInterfaceModel#attributes), and [`methods`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlInterfaceModel#methods) of the interface using the interface property of the node.
+Additionally, you can define the [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlinterfacemodel#name), [`attributes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlinterfacemodel#attributes), and [`methods`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlinterfacemodel#methods) of the interface using the interface property of the node.
 
 The attributes' name, type, and scope properties allow you to specify the name, data type, and visibility of each attribute.
 
@@ -70,9 +70,9 @@ The following code example illustrates how to create an interface:
 
 ### Enumeration
 
-To establish an enumeration, designate the classifier property of the node as [enumeration](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlClassifierShapeModel#enumeration). Additionally, define the [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlEnumerationModel/#name) and enumerate the [`members`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlEnumerationMemberModel/) of the enumeration using the appropriate enumeration property of the node. This process encapsulates a set of distinct values within the enumeration, allowing for a clear representation of specific and named constants within a system.
+To establish an enumeration, designate the classifier property of the node as [enumeration](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlclassifiershapemodel#enumeration). Additionally, define the [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlenumerationmodel#name) and enumerate the [`members`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlenumerationmembermodel) of the enumeration using the appropriate enumeration property of the node. This process encapsulates a set of distinct values within the enumeration, allowing for a clear representation of specific and named constants within a system.
 
-You can set a name for the enumeration members collection using the [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlEnumerationMemberModel/#name) property of members collection.
+You can set a name for the enumeration members collection using the [`name`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlenumerationmembermodel#name) property of members collection.
 
 The following code example illustrates how to create an enumeration.
 
@@ -121,7 +121,7 @@ The association property allows you to define the type of association. The defau
 
 ### Aggregation
 
-`Aggregation` is a binary association between a property and one or more composite objects that group together a set of instances. Aggregation is decorated with a hollow diamond. To create an aggregation shape, define the [`relationship`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationShipModel/#relationship) of connector shape as “Aggregation”.
+`Aggregation` is a binary association between a property and one or more composite objects that group together a set of instances. Aggregation is decorated with a hollow diamond. To create an aggregation shape, define the [`relationship`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationshipmodel#relationship) of connector shape as “Aggregation”.
 
 The following code example illustrates how to create an aggregation.
 
@@ -138,7 +138,7 @@ The following code example illustrates how to create an aggregation.
 
 ### Composition
 
-Composition is a strong form of `aggregation`. The composition is decorated with a black diamond. To create a composition shape, define the [`relationship`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationShipModel/#relationship) property of the connector shape as "Composition".
+Composition is a strong form of `aggregation`. The composition is decorated with a black diamond. To create a composition shape, define the [`relationship`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationshipmodel#relationship) property of the connector shape as "Composition".
 
 The following code example illustrates how to create a composition.
 
@@ -157,7 +157,7 @@ The following code example illustrates how to create a composition.
 
 Inheritance is also called as “generalization”. Inheritance is a binary taxonomic directed relationship between a more general classifier (super class) and a more specific classifier (subclass). Inheritance is shown as a line with hollow triangle.
 
-To create an inheritance, define the [`relationship`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationShipModel/#relationship) as “inheritance”.
+To create an inheritance, define the [`relationship`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationshipmodel#relationship) as “inheritance”.
 
 The following code example illustrates how to create an inheritance.
 
@@ -174,7 +174,7 @@ The following code example illustrates how to create an inheritance.
 
 ### Dependency
 
-Dependency is a directed relationship, which is used to show that some UML elements needs or depends on other model elements for specifications. Dependency is shown as dashed line with opened arrow. To create a dependency, define the [`relationship`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationShipModel/#relationship) property of connector shape as “dependency”.
+Dependency is a directed relationship, which is used to show that some UML elements needs or depends on other model elements for specifications. Dependency is shown as dashed line with opened arrow. To create a dependency, define the [`relationship`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationshipmodel#relationship) property of connector shape as “dependency”.
 
 The following code example illustrates how to create an dependency.
 
@@ -202,11 +202,11 @@ By default the multiplicity will be considered as “OneToOne”.
 
 The multiplicity property in UML allows you to specify large number of elements or some collection of elements.
 
-The shape multiplicity’s [`source`](https://ej2.syncfusion.com/vue/documentation/api/diagram/classifierMultiplicityModel/#source) property is used to set the source label to connector and the [`target`](https://ej2.syncfusion.com/vue/documentation/api/diagram/classifierMultiplicityModel/#target) property is used to set the target label to connector.
+The shape multiplicity’s [`source`](https://ej2.syncfusion.com/vue/documentation/api/diagram/classifiermultiplicitymodel#source) property is used to set the source label to connector and the [`target`](https://ej2.syncfusion.com/vue/documentation/api/diagram/classifiermultiplicitymodel#target) property is used to set the target label to connector.
 
-To set an optionality or cardinality for the connector source label, use [`optional`](../api/diagram/multiplicityLabelModel/#optional) property.
+To set an optionality or cardinality for the connector source label, use [`optional`](https://ej2.syncfusion.com/vue/documentation/api/diagram/multiplicitylabelmodel#optional) property.
 
-The [`lowerBounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/multiplicityLabelModel#lowerBounds) and [`upperBounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/multiplicityLabelModel#upperBounds) could be natural constants or constant expressions evaluated to natural (non negative) number. Upper bound could be also specified as asterisk ‘\*’ which denotes unlimited number of elements. Upper bound should be greater than or equal to the lower bound.
+The [`lowerBounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/multiplicitylabelmodel#lowerBounds) and [`upperBounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/multiplicitylabelmodel#upperBounds) could be natural constants or constant expressions evaluated to natural (non negative) number. Upper bound could be also specified as asterisk ‘\*’ which denotes unlimited number of elements. Upper bound should be greater than or equal to the lower bound.
 
 * The following code example illustrates how to customize the multiplicity.
 
@@ -227,7 +227,7 @@ In UML nodes, child elements such as member, method and attribute can be added e
 
 ### Adding UML child through code
 
-The [addChildToUmlNode](https://ej2.syncfusion.com/vue/documentation/api/diagram#addchildtoumlnode) method is employed for dynamically adding a child to the UML node during runtime, providing flexibility in modifying the diagram structure programmatically.
+The [addChildToUmlNode](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#addchildtoumlnode) method is employed for dynamically adding a child to the UML node during runtime, providing flexibility in modifying the diagram structure programmatically.
 
 The following code example illustrates how to add members, methods and attributes to UML node at rumtime.
 
@@ -251,7 +251,7 @@ To include a child, select a node, move the mouse outside it, and position the p
 
 ## Adding UML Nodes in Symbol palette
 
-UML built-in shapes are easily rendered in a symbol palette. The [`symbols`](https://ej2.syncfusion.com/vue/documentation/api/diagram/paletteModel/#symbols) property of [`palettes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/paletteModel/) is used to define UML symbols with the necessary classes and methods. This feature allows you to add a collection of predefined UML symbols to the palette, making your UML diagramming application more versatile.
+UML built-in shapes are easily rendered in a symbol palette. The [`symbols`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palettemodel#symbols) property of [`palettes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palettemodel) is used to define UML symbols with the necessary classes and methods. This feature allows you to add a collection of predefined UML symbols to the palette, making your UML diagramming application more versatile.
 
 The following code example showcases the rendering of UML built-in shapes in a symbol palette.
 
@@ -288,7 +288,7 @@ The purpose of an activity diagram can be described as follows.
     
 ### UML Activity diagram Shapes
 
-To create a UmlActivity, define the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlActivityShapeModel/#type) as "UmlActivity" and set the list of built-in shapes in the [`shape`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlActivityShapeModel/#shape) property as demonstrated below.
+To create a UmlActivity, define the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlactivityshapemodel#type) as "UmlActivity" and set the list of built-in shapes in the [`shape`](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlactivityshapemodel#shape) property as demonstrated below.
 
 | Shape          | Image                                    |
 | -------------- | ---------------------------------------- |
@@ -321,7 +321,7 @@ The following code illustrates how to create a UMLActivity shapes.
 
 ### UMLActivity connector
 
-To establish a UMLActivity connector, specify the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationShipModel/#type) of connector shape as "UMLActivity" and define the flow as either "Exception," "Control," or "Object." This configuration delineates the nature of the connection, allowing for a precise representation of the interaction within the activity diagram.
+To establish a UMLActivity connector, specify the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationshipmodel#type) of connector shape as "UMLActivity" and define the flow as either "Exception," "Control," or "Object." This configuration delineates the nature of the connection, allowing for a precise representation of the interaction within the activity diagram.
 
 The following code illustrates how to create a UMLActivity connector.
 

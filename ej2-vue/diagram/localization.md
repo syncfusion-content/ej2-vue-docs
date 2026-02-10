@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about localization support in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Localization 
 platform: ej2-vue
 documentation: ug
@@ -14,7 +14,7 @@ The EJ2 Diagram component supports `localization`. In the Diagram component, the
 
 ## Localize Diagram context menu
 
-To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel/#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
+To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolpalettemodel#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
 
 ```javascript
 //Initialize the diagram
@@ -79,9 +79,9 @@ The following code example summarizes the locale settings for the context menu.
 
 ## Localize Symbol palette
 
-You can enable the search option in the symbol palette to search for symbols by using the [`enableSearch`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel/#enablesearch) option. This search box can also be localized.
+You can enable the search option in the symbol palette to search for symbols by using the [`enableSearch`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolpalettemodel#enablesearch) option. This search box can also be localized.
 
-To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel/#locale) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
+To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolpalettemodel#locale) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
 
 The following code shows how to localize symbol palette.
 

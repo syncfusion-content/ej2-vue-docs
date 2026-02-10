@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bpmn DataSource in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Bpmn DataSource shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bpmn DataSource
 platform: ej2-vue
 documentation: ug

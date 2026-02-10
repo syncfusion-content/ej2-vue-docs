@@ -14,11 +14,11 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life-cycle hooks, and more.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -65,7 +65,19 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
+
+```bash
+Use rolldown-vite (Experimental)? No
+```
+
+5.Install dependencies and start the dev server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
 ```bash
 cd my-project
@@ -99,9 +111,9 @@ yarn add @syncfusion/ej2-vue-inputs
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Range Slider component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Range Slider component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -115,6 +127,8 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 {% endhighlight %}
 {% endtabs %}
+
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -164,7 +178,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <div id="app">
+  <div id="app" style="margin:50px auto 0; width:250px;">
     <ejs-slider id='default' :value='value'></ejs-slider>
   </div>
 </template>
@@ -186,7 +200,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-  <div id="app">
+  <div id="app" style="margin:50px auto 0; width:250px;">
     <ejs-slider id='default' :value='value'></ejs-slider>
   </div>
 </template>
@@ -253,7 +267,7 @@ In the following example demonstrates all types in Range Slider component.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <div id="app">
+  <div id="app" style="margin:50px auto 0; width:250px;">
     <label class="labeltext">Default</label>
     <ejs-slider id='default' :value='minvalue'></ejs-slider>
     <label class="labeltext">MinRange</label>
@@ -283,7 +297,7 @@ In the following example demonstrates all types in Range Slider component.
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-  <div id="app">
+  <div id="app" style="margin:50px auto 0; width:250px;">
     <label class="labeltext">Default</label>
     <ejs-slider id='default' :value='minvalue'></ejs-slider>
     <label class="labeltext">MinRange</label>
@@ -356,8 +370,6 @@ In the following example, `orientation` property set as `Vertical` in Range Slid
   #app {
     color: #008cff;
     height: 340px;
-    left: 30%;
-    position: absolute;
     width: 50%;
   }
 </style>
@@ -396,8 +408,6 @@ export default {
   #app {
     color: #008cff;
     height: 340px;
-    left: 30%;
-    position: absolute;
     width: 50%;
   }
 </style>
@@ -438,9 +448,6 @@ In the following example, `tooltip` property is enabled in Range Slider componen
   #app {
     color: #008cff;
     height: 40px;
-    left: 30%;
-    position: absolute;
-    top: 40%;
     width: 50%;
   }
 </style>
@@ -480,9 +487,6 @@ export default {
   #app {
     color: #008cff;
     height: 40px;
-    left: 30%;
-    position: absolute;
-    top: 40%;
     width: 50%;
   }
 </style>
@@ -525,9 +529,6 @@ In the following example, `showButtons` property is enabled in Range Slider comp
   #app {
     color: #008cff;
     height: 40px;
-    left: 30%;
-    position: absolute;
-    top: 40%;
     width: 50%;
   }
 </style>
@@ -567,9 +568,6 @@ export default {
   #app {
     color: #008cff;
     height: 40px;
-    left: 30%;
-    position: absolute;
-    top: 40%;
     width: 50%;
   }
 </style>
@@ -579,9 +577,7 @@ export default {
 
 ![vue-3-js-slider](./images/slider-buttons.PNG)
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
-
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)

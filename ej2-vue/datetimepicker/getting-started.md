@@ -1,136 +1,70 @@
 ---
 layout: post
-title: Getting started with Vue Datetimepicker component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Datetimepicker component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue DateTimePicker component | Syncfusion
+description: Checkout and learn about getting started with Vue DateTimePicker component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue DateTimePicker Component in Vue 2
 
-This section explains how to create a simple DateTimePicker and how to configure the DateTimePicker component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DateTimePicker component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Dependencies
+## Setup the Vue 2 project
 
-The list of dependencies required to use the DateTimePicker component in your application is given below:
-
-```javascript
-|-- @syncfusion/ej2-vue-calendars
-  |-- @syncfusion/ej2-base
-  |-- @syncfusion/ej2-data
-  |-- @syncfusion/ej2-vue-base
-  |-- @syncfusion/ej2-calendars
-    |-- @syncfusion/ej2-inputs
-       |-- @syncfusion/ej2-splitbuttons
-    |-- @syncfusion/ej2-lists
-    |-- @syncfusion/ej2-popups
-        |-- @syncfusion/ej2-buttons
-```
-
-## Get Started with Vue CLI
-
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
-
+yarn run serve
 ```
+
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](./images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-You can choose the component that you want to install. For this application, we are going to use DateTimePicker component.
-
-To install DateTimePicker component, use the following command
+This article uses the [Vue DateTimePicker component](https://www.syncfusion.com/vue-components/vue-DateTimePicker) as an example. Install the `@syncfusion/ej2-vue-calendars` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-calendars --save
 ```
+or
 
-## Registering Vue Component
-
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
-
-### Using Vue.use()
-
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
-
-Refer the code snippet given below.
-
-```ts
-import { DateTimePickerPlugin } from '@syncfusion/ej2-vue-calendars';
-
-Vue.use(DateTimePickerPlugin);
+```bash
+yarn add @syncfusion/ej2-vue-calendars
 ```
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-### Using Vue.component()
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the DateTimePicker component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
-Import the Component and Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of Component from ComponentPlugin and the EJ2 Vue Component as its arguments.
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
-Refer the code snippet given below.
-
-```ts
-import { DateTimePickerComponent, DateTimPickerPlugin } from '@syncfusion/ej2-vue-calendars';
-
-Vue.component(DateTimPickerPlugin.name, DateTimePickerComponent);
-```
-
-> By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
-
-## Creating Vue Sample
-
-Add the EJ2 Vue DateTimePicker using `<ejs-datetimepicker>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the DateTimePicker component is provided as name in data option in the `<script>` section.
-
-```
-<template>
-    <div id="app">
-    <ejs-datetimepicker :placeholder="waterMark" ></ejs-datetimepicker>
-  </div>
-</template>
-<script>
-import Vue from 'vue';
-import { DateTimePickerPlugin } from '@syncfusion/ej2-vue-calendars';
-
-Vue.use(DateTimePickerPlugin);
-export default {
-  name: 'app',
-  data () {
-    return {
-      waterMark : 'Select a datetime'
-    }
-  }
-}
-</script>
-```
-
-## Adding CSS Reference
-
-To render the DateTimePicker component, need to import DateTimePicker and its dependent component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -139,9 +73,42 @@ To render the DateTimePicker component, need to import DateTimePicker and its de
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
 </style>
-```
 
-> If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+{% endhighlight %}
+{% endtabs %}
+
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+
+Follow the below steps to add the Vue DateTimePicker component:
+
+First, import and register the DateTimePicker component in the `script` section of the **src/App.vue** file.
+
+```
+<template>
+    <div id="app">
+      <div class='wrapper'>
+         <ejs-datetimepicker :placeholder="waterMark" ></ejs-datetimepicker>
+      </div>
+    </div>
+</template>
+<script>
+
+import { DateTimePickerComponent } from '@syncfusion/ej2-vue-calendars';
+
+export default {
+    name: "App",
+    components: {
+    "ejs-datetimepicker":DateTimePickerComponent
+    },
+    data () {
+    return {
+      waterMark : 'Select a datetime'
+    }
+  }
+}
+```
 
 ## Running the Application
 
@@ -157,7 +124,7 @@ Now run the `npm run dev` command in the console, it will build your application
 
 ## Setting the value,min and max
 
-The minimum and maximum date time can be defined with the help of `min` and `max` property. The following example demonstrates to set the `min` and `max` on initializing the DateTimePicker. To know more about range restriction in DateTimePicker, please refer this [page](./date-time-range).
+The minimum and maximum date and time can be defined using the `min` and `max` properties. The following example demonstrates how to set the `min` and `max` when initializing the DateTimePicker. For more information about range restriction in DateTimePicker, refer to the [date-time-range](./date-time-range) page.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

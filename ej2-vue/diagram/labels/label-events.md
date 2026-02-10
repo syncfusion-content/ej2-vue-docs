@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Label Events in Vue Diagram component | Syncfusion®
-description: Learn here all about Labels in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Label Events in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Label Events
 platform: ej2-vue
 documentation: ug
@@ -18,7 +18,7 @@ There are some events which will trigger while interacting with annotation.
 
 ## KeyDown event
 
-The [`keyDown`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iKeyEventArgs/) event is triggered whenever any key is pressed. The following example shows how to capture the keyDown event and modify the fill color of a node on each key press:
+The [`keyDown`](https://ej2.syncfusion.com/vue/documentation/api/diagram/ikeyeventargs) event is triggered whenever any key is pressed. The following example shows how to capture the keyDown event and modify the fill color of a node on each key press:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -33,7 +33,7 @@ The [`keyDown`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iKeyEve
 
 ## KeyUp event
 
-The [`keyUp`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iKeyEventArgs/) event is triggered whenever we press and release any key. The following example shows how to capture the keyUp event and modify the fill color of a node on each key press:
+The [`keyUp`](https://ej2.syncfusion.com/vue/documentation/api/diagram/ikeyeventargs) event is triggered whenever we press and release any key. The following example shows how to capture the keyUp event and modify the fill color of a node on each key press:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -48,7 +48,7 @@ The [`keyUp`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iKeyEvent
 
 ## Double click event
 
-The [`doubleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iDoubleClickEventArgs/) event is triggered when you double-click on a node, connector, or the diagram surface. Double-clicking on a diagram element activates the annotation editing mode. The following code example shows how to capture the [`doubleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iDoubleClickEventArgs/) event:
+The [`doubleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/idoubleclickeventargs) event is triggered when you double-click on a node, connector, or the diagram surface. Double-clicking on a diagram element activates the annotation editing mode. The following code example shows how to capture the [`doubleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/idoubleclickeventargs) event:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -63,7 +63,7 @@ The [`doubleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iDo
 
 ## TextEdit event
 
-The [`textEdit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iTextEditEventArgs/) event triggers when you finish editing the annotation text and the focus is removed from the annotation text.
+The [`textEdit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/itextediteventargs) event triggers when you finish editing the annotation text and the focus is removed from the annotation text.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,7 +76,7 @@ The [`textEdit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iTextE
         
 {% previewsample "page.domainurl/code-snippet/diagram/labels/TextEdit-cs1" %}
 
-You can prevent adding new text to the annotation by setting the `cancel` property of [`textEdit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iTextEditEventArgs/) to true.
+You can prevent adding new text to the annotation by setting the `cancel` property of [`textEdit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/itextediteventargs) to true.
 
 ``` javascript
 textEdit: function (args) {
@@ -88,9 +88,9 @@ textEdit: function (args) {
 
 ## Selection change event
 
-The [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectionchange) event is triggered when an annotation of a node or connector is selected in the diagram.
+The [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#selectionchange) event is triggered when an annotation of a node or connector is selected in the diagram.
 
-You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iselectionchangeeventargs/) to true, as shown in the code snippet below.
+You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iselectionchangeeventargs) to true, as shown in the code snippet below.
 
 ```ts
 selectionChange: function (args) {
