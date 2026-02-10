@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the Chart component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Chart component of Syncfusion Essential JS 2 and more details.
+description: Quickstart for Vue 3 and Vite: integrate the Syncfusion Vue Chart (Essential JS 2), with Composition and Options API examples.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -10,18 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Chart Component in Vue 3
 
-This article provides a step-by-step guide to setting up a [`Vite`](https://vitejs.dev/) project using a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component with either the [`Composition API`](https://vuejs.org/guide/introduction.html#composition-api) or the [`Options API`](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to setting up a [`Vite`](https://vitejs.dev) project using JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component with either the [`Composition API`](https://vuejs.org/guide/introduction.html#composition-api) or the [`Options API`](https://vuejs.org/guide/introduction.html#options-api).
 
-The **Composition API** is a modern approach introduced in Vue 3 that enables better organization and reuse of component logic by grouping related code into reusable functions.  
-The **Options API** is the conventional component structure used in earlier Vue versions, where component logic is organized using predefined options such as `data`, `methods`, and lifecycle hooks.
+The **Composition API** groups related logic into reusable functions and is recommended for larger, composition-friendly code bases. The **Options API** uses `data`, `methods`, and life cycle options and may be preferable for smaller components or teams familiar with Vue 2 patterns. Choose the API that matches the project's style and maintainability goals.
 
 ## Prerequisites
 
-[`System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[`System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
-The recommended way to start a Vue 3 application is by scaffolding a project using [`Vite`](https://vitejs.dev/). Create a new Vite project using one of the following commands:
+The recommended way to start a Vue 3 application is by scaffolding a project using [`Vite`](https://vitejs.dev). Create a new Vite project using one of the following commands:
 
 ```bash
 npm create vite@latest
@@ -33,15 +32,15 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+The setup prompts will request a few project options. Example responses used in this article:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1. Define the project name. For this article, use `my-project`.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+2. Select `Vue` as the framework.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -54,7 +53,7 @@ Vanilla
   Others
 ```
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3. Choose `JavaScript` as the project variant.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -64,7 +63,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4. After creating the project, install dependencies:
 
 ```bash
 cd my-project
@@ -78,7 +77,7 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
@@ -98,9 +97,9 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Chart component using `Composition API` or `Options API`:
+Follow the steps below to add the Vue Chart component using the `Composition API` or `Options API`:
 
-1.First, import and register the Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1. First, import and register the Chart component and its child directives in the `script` section of **src/App.vue**. If using the `Composition API`, add the `setup` attribute to the `script` tag.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -128,7 +127,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the Chart component with the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/chart/#datasource) property.
+2. In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -144,7 +143,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3.Declare the values for the `dataSource` property in the `script` section.
+3. Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -181,7 +180,7 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the summarized code for the above steps in the **src/App.vue** file. Note: examples use different import aliases (for example, the `EjChart` alias and `ChartComponent`) — aliases shown match the imports in each example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -258,6 +257,21 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+## Verify the chart
+
+- After starting the Dev server, confirm the chart renders correctly:
+
+- Start the development server with `npm run dev` or `yarn run dev`.
+- Open the project URL shown in the terminal (usually `http://localhost:5173`) and verify the chart displays.
+- If the chart does not render, open the browser console and check for errors related to missing modules, incorrect imports, or incompatible Vue versions.
+
+## Troubleshooting (common issues)
+
+- Chart not rendering: ensure the chart modules (for example, `LineSeries`, `Legend`, `Category`, `Tooltip`, `DataLabel`) are provided via `provide` (Options API) or `provide()` (Composition API).
+- Wrong package version: confirm `@syncfusion/ej2-vue-charts` is compatible with the project's Vue version.
+- Missing child directives: when using series directives, ensure `SeriesCollectionDirective` and `SeriesDirective` are registered as shown in the examples.
+- Console errors: inspect the browser console for import or runtime errors and verify file paths and dependency installation.
+
 ## Run the project
 
 To run the project, use the following command:
@@ -274,10 +288,10 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue3-chart-demo](./images/vue3-chart-demo.png)
+![Vue 3 Chart sample showing a line chart titled Sales Analysis](./images/vue3-chart-demo.png)
 
 > **Sample**: [`vue-3-chart-getting-started`](https://github.com/SyncfusionExamples/vue3-chart-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the `migration` documentation.
 
 ## See also
 

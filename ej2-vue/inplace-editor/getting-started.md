@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Inplace editor Component in Vue 2
+# Getting Started with the Vue In-Place Editor Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Inplace editor component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue In-Place Editor component.
 
-To get start quickly with Vue Inplace editor, you can check on this video:
+To get started quickly with the Vue In-Place Editor, check this video:
 
 {% youtube "https://www.youtube.com/watch?v=uEAtX_6zyJ0" %}
 
@@ -20,28 +20,7 @@ To get start quickly with Vue Inplace editor, you can check on this video:
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Dependencies
-
-The following list of dependencies are required to use the In-place Editor component in your application.
-
-```javascript
-|-- @syncfusion/ej2-vue-inplace-editor
-  |-- @syncfusion/ej2-base
-  |-- @syncfusion/ej2-buttons
-  |-- @syncfusion/ej2-calendars
-  |-- @syncfusion/ej2-data
-  |-- @syncfusion/ej2-dropdowns
-  |-- @syncfusion/ej2-inputs
-  |-- @syncfusion/ej2-lists
-  |-- @syncfusion/ej2-navigations
-  |-- @syncfusion/ej2-popups
-  |-- @syncfusion/ej2-richtexteditor
-  |-- @syncfusion/ej2-splitbuttons
-  |-- @syncfusion/ej2-vue-base
-
-```
-
-## Setting up the Vue 2 project
+## Setup the Vue 2 project
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
@@ -71,7 +50,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Inplace editor component](https://www.syncfusion.com/vue-components/vue-in-place-editor) as an example. Install the `@syncfusion/ej2-vue-inplace-editor` package by running the following command:
+This article uses the [Vue In-Place Editor component](https://www.syncfusion.com/vue-components/vue-in-place-editor) as an example. Install the `@syncfusion/ej2-vue-inplace-editor` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-inplace-editor --save
@@ -84,9 +63,9 @@ yarn add @syncfusion/ej2-vue-inplace-editor
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Inplace editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the In-Place Editor component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -108,9 +87,11 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Inplace editor component:
+Follow these steps to add the Vue In-Place Editor component:
 
 1\. First, import and register the Inplace editor component in the `script` section of the **src/App.vue** file.
 
@@ -163,9 +144,9 @@ data () {
 {% endhighlight %}
 {% endtabs %}
 
-## Add the In-place Editor with Textbox
+## Add the In-Place Editor with TextBox
 
-By default, the TextBox component is rendered in In-place Editor with the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) property sets as Text.
+By default, the TextBox component is rendered in the In-Place Editor with the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputtype) property set as Text.
 
 ```
 <template>
@@ -196,9 +177,9 @@ export default {
 
 ## Configure DropDownList
 
-You can render DropDownList by changing the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) property as [`DropDownList`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list) and configure its properties and methods using the `model` property.
+You can render a DropDownList by changing the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType) property to [`DropDownList`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list) and configure its properties and methods using the `model` property.
 
-In the following sample, [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) and model values are configured to render the [`DropDownList`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list) component.
+In the following sample, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType) property and model values are configured to render the [`DropDownList`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list) component. The `genderData` property specifies the data source for the dropdown list.
 
 ```
 <template>
@@ -231,9 +212,9 @@ export default {
 
 ## Integrate DatePicker
 
-You can render [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker) by changing the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) property as [`Date`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/)  and also configure its properties and methods using [`model`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#model) property.
+You can render a [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker/index-default) by changing the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType) property to [`Date`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType) and configuring its properties and methods using the [`model`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/index-default#model) property.
 
-In the below sample, [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) and [`model`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#model) values are configured to render the [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker) component.
+In the following sample, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType) property and [`model`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/index-default#model) values are configured to render the [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker/index-default) component.
 
 ```
 <template>
@@ -290,7 +271,7 @@ yarn run serve
 
 ## Two-way binding
 
-In In-place Editor, two-way binding support is achieved using the `v-model` directive in Vue. When you change a value in the first In-place Editor component, the changed value gets updated automatically to the second In-place Editor. The following example demonstrates, how to achieve two-way binding in In-place Editor.
+In the In-Place Editor, two-way binding support is achieved using the `v-model` directive in Vue. When you change a value in the first In-Place Editor component, the changed value updates automatically to the second In-Place Editor. The following example demonstrates how to achieve two-way binding in the In-Place Editor.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -302,7 +283,7 @@ In In-place Editor, two-way binding support is achieved using the `v-model` dire
 
 ## Submitting data to the server (save)
 
-You can submit editor value to server by configuring the [`url`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#url), [`adaptor`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/adaptorType/), and [`primaryKey`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#primarykey) property.
+You can submit editor value to server by configuring the [`url`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/index-default#url), [`adaptor`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/adaptortype), and [`primaryKey`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/index-default#primarykey) property.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|
@@ -310,7 +291,7 @@ You can submit editor value to server by configuring the [`url`](https://ej2.syn
 | **`adaptor`**    | Specifies the adaptor type that is used by DataManager to communicate with DataSource.                |
 | **`primaryKey`** | Defines the unique primary key of editable field which can be used for saving data in the data-base.|
 
-> The [`primaryKey`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#primarykey) property is mandatory. If it's not set, edited data are not sent to the server.
+> The [`primaryKey`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/index-default#primarykey) property is mandatory. If it's not set, edited data are not sent to the server.
 
 ## Refresh with modified value
 

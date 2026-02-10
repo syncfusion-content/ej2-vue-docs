@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Vue 3 getting started with the Range navigator component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Range navigator component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 getting started with the Range Navigator component | Syncfusion
+description: Quickstart to create a Vite-based Vue 3 project and integrate the Syncfusion Essential JS 2 Range Navigator using Composition or Options API with examples.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Range Navigator Component in Vue 3
+# Getting started with the Vue Range Navigator component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article shows how to set up a Vite JavaScript project and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component using either the Composition or Options API.
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+The Composition API in Vue 3 provides an alternative way to organize and reuse component logic via composition functions.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The Options API is the traditional component format, organizing logic into options such as `data`, `methods`, `computed`, `watch`, and life cycle hooks.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -34,15 +34,14 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Using one of the above commands will lead you through a short interactive setup:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
-
+1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+2. Select `Vue` as the framework. It will create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -55,7 +54,7 @@ Vanilla
   Others
 ```
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3. Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -65,7 +64,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
 cd my-project
@@ -99,9 +98,10 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Range Navigator component using `Composition API` or `Options API`:
 
-1.First, import and register the Range Navigator component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+Follow the steps below to add the Vue Range Navigator component using the Composition or Options API:
+
+1. First, import and register the Range Navigator component and its child directives in the `script` section of the **src/App.vue** file. If you are using the Composition API, add the `setup` attribute to the `script` tag.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -130,7 +130,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the Range Navigator component with the [dataSource](https://helpej2.syncfusion.com/vue/documentation/api/range-navigator#datasource) property.
+2. In the `template` section, define the Range Navigator component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -147,7 +147,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3.Declare the values for the `dataSource` property in the `script` section.
+3. Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -290,10 +290,10 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue3-range-navigator-demo](./images/vue3-RN-demo.png)
+![Vue 3 Range Navigator demo](./images/vue3-RN-demo.png)
 
 > **Sample**: [vue-3-range-navigator-getting-started](https://github.com/SyncfusionExamples/vue3-range-navigator-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the [`migration` documentation.
 
 ## See also
 

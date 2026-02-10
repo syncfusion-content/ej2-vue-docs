@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the 3D Chart component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue 3D Chart component of Syncfusion Essential JS 2 and more details.
+description: Quickstart: scaffold a Vite Vue 3 project and integrate the Syncfusion 3D Chart (Essential JS 2); includes Composition/Options API examples and setup tips.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -10,19 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting started with the Vue 3D chart component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
-
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The Composition API, introduced in Vue 3, organizes related logic into reusable composition functions and is recommended for larger or composition-oriented code bases. The Options API organizes component logic with `data`, `methods`, and life cycle hooks and may be preferable for smaller components or teams familiar with Vue 2 patterns.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -34,15 +32,16 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+Using one of the above commands starts an interactive setup. Follow these steps:
+
+1. Define the project name. For this article use `my-project`.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+2. Select `Vue` as the framework to create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -55,7 +54,7 @@ Vanilla
   Others
 ```
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3. Choose `JavaScript` as the project variant.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -65,7 +64,8 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+
+4. After creating the project, install dependencies by running:
 
 ```bash
 cd my-project
@@ -79,13 +79,13 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-project` is ready with default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the `Vue 3D Chart component` as an example. To use the Vue 3D Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+This article uses the Vue 3D Chart component as an example. Install the `@syncfusion/ej2-vue-charts` package with the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -99,9 +99,9 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue 3D Chart component using `Composition API` or `Options API`:
+Follow the steps below to add the Vue 3D Chart component using the Composition API or Options API.
 
-1.First, import and register the 3D Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1. Import and register the 3D Chart component and its child directives in the `script` section of **src/App.vue**. When using the Composition API, add the `setup` attribute to the `script` tag.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -129,7 +129,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the 3D Chart component with the `dataSource` property.
+2. In the `template` section, define the 3D Chart component with the `dataSource` property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -146,7 +146,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3.Declare the values for the `dataSource` property in the `script` section.
+3. Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -183,6 +183,7 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
+
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
@@ -210,8 +211,8 @@ const seriesData = [
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
 ];
 const title = 'Sales Analysis';
-const primaryXAxis = {valueType: 'Category'};
-const chart3d = [ColumnSeries3D, Category3D, Legend3D];
+const primaryXAxis = { valueType: 'Category' };
+const chart3d = [ ColumnSeries3D, Category3D, Legend3D ];
 provide('chart3d', chart3d);
 </script>
 
@@ -278,10 +279,25 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue3-3d-chart-demo](./images/vue3-3d-chart-demo.png)
+![Vue 3 3D Chart sample showing a column chart titled Sales Analysis](./images/vue3-3d-chart-demo.png)
+
+## Verify the chart
+
+After starting the development server, confirm the chart renders correctly:
+
+- Start the development server with `npm run dev` or `yarn run dev`.
+- Open the project URL shown in the terminal (commonly `http://localhost:5173`) and verify the chart displays.
+- If the chart does not render, open the browser console and check for errors related to missing modules, incorrect imports, or incompatible Vue versions.
+
+## Troubleshooting (common issues)
+
+- Chart not rendering: ensure chart modules (for example, `ColumnSeries3D`, `Category3D`, `Legend3D`, `Tooltip`) are provided via `provide` (Composition API) or `provide`/`provide:` (Options API).
+- Wrong package version: confirm `@syncfusion/ej2-vue-charts` matches the project's Vue version.
+- Missing child directives: ensure `Chart3DSeriesCollectionDirective` and `Chart3DSeriesDirective` are registered when using directives.
+- Console errors: inspect import paths and verify dependencies are installed.
 
 > **Sample**: `vue-3-3d-chart-getting-started`.
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the `migration` documentation.
 
 ## See also
 

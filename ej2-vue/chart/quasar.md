@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue Chart Component | Syncfusion
-description:  Check out and learn about getting started with the Quasar Framework and Vue Chart Component of Syncfusion Essential JS 2 and more details.
+title: Quasar + Vue Chart: Getting Started | Syncfusion
+description: Quickstart for Quasar and Vue 3: integrate the Syncfusion Vue Chart (Essential JS 2) using the Composition API.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Chart Component in the Quasar Framework
 
-This section provides a step-by-step guide to creating a [`Quasar`](https://quasar.dev/) application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component using the [`Composition API`](https://vuejs.org/guide/introduction.html#composition-api). It helps developers quickly set up a responsive and high-performance charting solution within the Quasar ecosystem.
+This section provides a step-by-step guide to creating a [`Quasar`](https://quasar.dev) application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component using the [`Composition API`](https://vuejs.org/guide/introduction.html#composition-api). It helps developers set up a responsive, high-performance charting solution within the Quasar ecosystem.
 
-The Quasar Framework is a Vue.js-based open-source framework that enables developers to build modern, performant applications for web, mobile, and desktop platforms from a single codebase.
+The Quasar Framework is a Vue.js–based open-source framework that enables developers to build modern, high-performance applications for web, mobile, and desktop from a single code base.
 
 ## Prerequisites
 
@@ -21,33 +21,33 @@ Ensure that the development environment meets the requirements listed in
 
 ## Set up the Quasar project
 
-To create a new https://quasar.dev/start/quick-start/ project, run the following command:
+To create a new Quasar project, run the following command:
 
 ```bash
 npm init quasar
 ```
 
-This command prompts additional configurations. Follow the steps outlined in the images below:
+The command prompts for project options; example prompts appear below:
 
-![quasar-setup1](./images/quasar-setup1.png)
+![Quasar CLI project setup prompt](./images/quasar-setup1.png)
 
-This generates the necessary files and prompts for project dependency installation. Respond with 'yes' to proceed with npm install, as shown in the image below:
+The generator installs dependencies when prompted. Confirm installation to proceed, as shown below:
 
-![quasar-setup2](./images/quasar-setup2.png)
+![Confirm dependency installation prompt](./images/quasar-setup2.png)
 
-Navigate to your project directory:
+Navigate to the project directory:
 
 ```bash
 cd quasar-project
 ```
 
-Now that `quasar-project` is ready to run with default settings, let's add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component to the project.
+Now that `quasar-project` is ready, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component packages are available at [`npmjs.com`](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, install the `@syncfusion/ej2-vue-charts` package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -55,9 +55,9 @@ npm install @syncfusion/ej2-vue-charts --save
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Chart component:
+Follow the steps below to add the Vue Chart component:
 
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Chart component in the `script` section of the **src/app.vue** file.
+1. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`, and import the Chart component in the `script` section of **src/app.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -69,7 +69,7 @@ import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollect
 {% endhighlight %}
 {% endtabs %}
    
-2\. In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart#datasource) property.
+2. In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -85,7 +85,7 @@ import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollect
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the values for the `dataSource` property in the `script` section.
+3. Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -148,4 +148,4 @@ npm run dev
 
 The output will appear as follows:
 
-![Quasar output](./images/quasar-output.png)
+![Quasar CLI chart output showing a line chart titled Sales Analysis](./images/quasar-output.png)

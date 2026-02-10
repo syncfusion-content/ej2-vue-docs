@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue HeatMap Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component into your application.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
-For using heat map, the following minimum requirements are needed.
+The HeatMap component requires the following packages:
 
 ```javascript
 |-- @syncfusion/ej2-vue-heatmap
@@ -31,7 +31,7 @@ For using heat map, the following minimum requirements are needed.
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To create a new Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and initialize your project:
 
 ```bash
 npm install -g @vue/cli
@@ -49,32 +49,33 @@ cd quickstart
 yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When prompted, select the `Default ([Vue 2] babel, eslint)` option from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+After the `quickstart` project is created with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use the Vue HeatMap component, install the required npm package.
 
 This article uses the [Vue HeatMap component](https://www.syncfusion.com/vue-components/vue-heatmap-chart) as an example. Install the `@syncfusion/ej2-vue-heatmap` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-heatmap --save
 ```
+
 or
 
 ```bash
-yarn  add @syncfusion/ej2-vue-heatmap
+yarn add @syncfusion/ej2-vue-heatmap
 ```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component
 
-Follow the below steps to add the Vue HeatMap component:
+To add the Vue HeatMap component to your project, follow these steps:
 
-1\. First, import and register the HeatMap component in the `script` section of the **src/App.vue** file.
+1\. Import and register the HeatMap component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -110,7 +111,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the HeatMap component.
+2\. In the `template` section, define the HeatMap component element.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -124,7 +125,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the complete code for the **src/App.vue** file after implementing the above steps:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -177,9 +178,14 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Populate heat map with data
+**Available feature modules:**
 
-This section explains how to populate the following two-dimensional array data to the heat map.
+* **Legend** - Enables the legend display to indicate the color gradient and value ranges.
+* **Tooltip** - Enables interactive tooltips that display information when hovering over HeatMap cells.
+
+## Populate the HeatMap with data
+
+Add data to the HeatMap by binding a two-dimensional array to the `dataSource` property:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -191,7 +197,7 @@ This section explains how to populate the following two-dimensional array data t
 
 ## Enable axis labels
 
-You can add axis labels to the heat map and format those labels using the [xAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#xaxis) and [yAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#yaxis) properties. Axis labels provide additional information about the data points populated in the heat map.
+Display axis labels on the HeatMap using the [xAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#xaxis) and [yAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#yaxis) properties. Axis labels provide context for the data values displayed in each cell.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -201,9 +207,9 @@ You can add axis labels to the heat map and format those labels using the [xAxis
         
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs2" %}
 
-## Add heat map title
+## Add a HeatMap title
 
-Add a title using the [titleSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#titlesettings) property to the heat map to provide quick information to the user about the data populated in the heat map.
+Include a title on the HeatMap using the [titleSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#titlesettings) property. A title provides context and improves the clarity of the visualization.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -213,9 +219,9 @@ Add a title using the [titleSettings](https://ej2.syncfusion.com/vue/documentati
         
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs3" %}
 
-## Enable legend
+## Enable the legend
 
-Use a legend for the heat map in the [legendSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#legendsettings) object by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#visible) property to **true** and injecting the `Legend` module into the `provide`.
+Display a legend on the HeatMap by enabling the [legendSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#legendsettings) property. Set the [visible](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#visible) property to **true** and ensure the `Legend` module is injected into the `provide` option.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -225,9 +231,9 @@ Use a legend for the heat map in the [legendSettings](https://ej2.syncfusion.com
         
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs4" %}
 
-## Add data label
+## Add data labels
 
-Add data labels to improve the readability of the heat map. This can be achieved by setting the [showLabel](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#showlabel) property to **true** in the [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellsettings) object.
+Enhance HeatMap readability by displaying data labels in each cell. Set the [showLabel](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings#showlabel) property to **true** in the [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellsettings) object.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -237,9 +243,9 @@ Add data labels to improve the readability of the heat map. This can be achieved
         
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs5" %}
 
-## Add custom cell palette
+## Apply a custom cell palette
 
-The default palette settings of the heat map cells can be customized by using the [paletteSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#palettesettings) property. Using the [palette](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings/#palette) property in `paletteSettings` object, you can change the color set for the cells. You can change the color mode of the cells to fixed or gradient mode using the [type](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings/#type) property.
+Customize the color scheme of HeatMap cells using the [paletteSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#palettesettings) property. The [palette](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings#palette) property allows you to define custom colors, while the [type](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings#type) property controls whether colors are applied as fixed or gradient modes.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -249,9 +255,9 @@ The default palette settings of the heat map cells can be customized by using th
         
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs6" %}
 
-## Enable tooltip
+## Enable tooltips
 
-The tooltip is used when you cannot display information by using the data labels due to space constraints. You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#showtooltip) property to **true** and injecting the `Tooltip` module into the `provide`.
+Tooltips provide additional information when space constraints prevent displaying data labels. Enable tooltips by setting the [showTooltip](https://ej2.syncfusion.com/vue/documentation/api/heatmap#showtooltip) property to **true** and injecting the `Tooltip` module into the `provide` option.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

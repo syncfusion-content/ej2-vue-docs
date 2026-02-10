@@ -48,9 +48,9 @@
 </script>
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
 
     /* Dashboard Layout component styles  */
     #defaultLayout .e-panel .e-panel-container {

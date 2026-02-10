@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Accumulation chart component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Accumulation chart component of Syncfusion Essential JS 2 and more details.
+description: Quickstart: create a Vue 2 project and add the Syncfusion Vue Accumulation Chart (Essential JS 2); includes setup, module registration, and examples.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Accumulation chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accumulation chart component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accumulation chart component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
-The list of minimum dependencies required to use an accumulation chart are follows:
+The following minimum dependencies are required to use the Accumulation Chart:
 
 ```javascript
 |-- @syncfusion/ej2-vue-charts
@@ -34,7 +34,7 @@ The list of minimum dependencies required to use an accumulation chart are follo
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -54,7 +54,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Terminal showing Vue CLI creating a Vue 2 project](../appearance/images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -77,9 +77,9 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Accumulation chart component using `Composition API` or `Options API`:
+Follow the steps below to add the Vue Accumulation chart component (Options API for Vue 2):
 
-1\. First, import and register the Accumulation chart component in the `script` section of the **src/App.vue** file.
+1. First, import and register the Accumulation chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -98,7 +98,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Accumulation chart component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart#datasource) property.
+2. In the `template` section, define the Accumulation chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~src/App.vue" %}
@@ -116,7 +116,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the value for the `dataSource` property in the `script` section.
+3. Declare the value for the `dataSource` property in the `script` section.
+
+Ensure that `seriesData` is defined as an array of objects. Replace the placeholder `data` reference in the example with the actual data array (see the example include below for a complete `seriesData` definition).
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -132,15 +134,13 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Chart Component
+## Adding the accumulation chart
 
-* Add the Vue Chart by using `<ejs-chart>` selector in `<template>` section of the `App.vue` file.
+- Use the `<ejs-accumulationchart>` selector in the template section of `App.vue` to add an accumulation chart.
 
-The below example shows a basic Charts,
+The example below shows a basic pie series.
 
-* Pie Series
-
-By default pie series will be rendered on assigning JSON data to the series by using [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#datasource) property. Map the field names in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#yname) properties of the series.
+By default, a pie series is rendered when JSON data is assigned to the series using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries#datasource) property. Map the field names in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries#yname) properties of the series.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -149,6 +149,20 @@ By default pie series will be rendered on assigning JSON data to the series by u
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs9" %}
+
+## Verify the chart
+
+After starting the dev server, confirm the accumulation chart renders correctly:
+
+- Start the dev server with `npm run serve` or `yarn run serve`.
+- Open the project URL shown in the terminal (typically `http://localhost:8080`) and verify the chart displays as expected.
+- If the chart does not render, inspect the browser console for errors related to missing modules, incorrect imports, or undefined data values.
+
+## Troubleshooting (common issues)
+
+- Chart not rendering: ensure the accumulation series and related modules are registered and that `seriesData` contains a valid array of data objects.
+- Undefined `data` reference: replace placeholder values with an explicit array (for example, an array of `{ x: 'Category', y: 10 }` objects).
+- Version mismatch: confirm `@syncfusion/ej2-vue-charts` is compatible with the project's Vue version.
 
 ## Run the project
 

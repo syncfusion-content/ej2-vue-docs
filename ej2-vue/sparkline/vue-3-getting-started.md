@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the Sparkline component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Sparkline component of Syncfusion Essential JS 2 and more details.
+description: Quick guide to set up and use the Vue Sparkline component with Vue 3 (Vite), including data binding and tooltip configuration.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -10,19 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Sparkline Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sparkline component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for creating a [Vite](https://vitejs.dev) project (JavaScript) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sparkline component using either the Composition API or the Options API.
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
-
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The Composition API is function-based and groups related logic into reusable composition functions. The Options API organizes component logic into options such as `data`, `methods`, `computed`, and life cycle hooks. Both approaches are supported; choose the one that best fits the project.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -34,38 +32,38 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Follow the prompts to configure the project as shown below:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1. Define the project name. For this article, use `my-project`.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+2. Select `Vue` as the framework to create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
 Vanilla
 > Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
+    React
+    Preact
+    Lit
+    Svelte
+    Others
 ```
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+3. Choose `JavaScript` as the project variant.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
 > JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
+    TypeScript
+    Customize with create-vue ↗
+    Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4. After project creation, install dependencies:
 
 ```bash
 cd my-project
@@ -79,13 +77,13 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+With the project created, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available on npm. The Vue Sparkline component is included in the `@syncfusion/ej2-vue-charts` package. For advanced or custom integrations, the lower-level packages `@syncfusion/ej2-sparkline` and `@syncfusion/ej2-vue-base` can be installed instead.
 
-This article uses the [Vue Sparkline component](https://www.syncfusion.com/vue-components/vue-sparkline) as an example. To use the Vue Sparkline component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+This article uses the Vue Sparkline component as an example. Install the `@syncfusion/ej2-vue-charts` package using one of the commands below:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -304,7 +302,7 @@ The output will appear as follows:
 ![vue3-sparkline-charts-demo](./images/vue3-sparkline-charts-demo.png)
 
 > **Sample**: [vue-3-sparkline-charts-getting-started](https://github.com/SyncfusionExamples/vue3-sparkline-charts-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the `migration` documentation.
 
 ## See also
 

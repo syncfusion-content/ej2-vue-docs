@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Getting started with Vue 3D Circular Chart | Syncfusion
-description:  Checkout and learn about Getting started with Vue 3D Circular Chart component of Syncfusion Essential JS 2 and more details.
+description: Quickstart for Vue 2: integrate the Syncfusion 3D Circular Chart (Essential JS 2). Covers setup, registration, and example usage.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the Vue 3D Circular Chart component in Vue 2
+# Getting started with 3D Circular Chart (Vue 2)
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Circular Chart component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> 3D Circular Chart component.
 
-To get start quickly with Vue 3D Circular Charts, you can check on this video:
+To get started quickly with 3D Circular Charts, watch the following introduction video:
 
 {% youtube "https://www.youtube.com/watch?v=hGpINPEOi1E" %}
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -38,7 +38,7 @@ Below is the list of minimum dependencies required to use the 3D Circular Chart 
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -58,7 +58,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](images/vue2-terminal.png)
+![Terminal showing Vue CLI creating a Vue 2 project](images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -77,13 +77,13 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+> The `--save` flag adds the package to the `dependencies` section of `package.json`.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue 3D Circular Chart component:
+Follow the steps below to add the 3D Circular Chart component:
 
-1\. First, import and register the 3D Circular Chart component in the `script` section of the **src/App.vue** file.
+1. First, import and register the 3D Circular Chart component in the `script` section of **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -103,7 +103,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the 3D Circular Chart component with the `dataSource` property.
+2. In the `template` section, define the 3D Circular Chart component with the `dataSource` property.
 
 {% tabs %}
 {% highlight html tabtitle="~src/App.vue" %}
@@ -121,7 +121,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the value for the `dataSource` property in the `script` section.
+3. Declare the value for the `dataSource` property in the `script` section.
+
+Ensure `seriesData` is defined as an explicit array of data objects. Replace the placeholder `data` reference in the example with a concrete array (see the included example snippet for a full `seriesData` definition).
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -137,15 +139,13 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding 3D Circular Chart Component
+## Adding the 3D Circular Chart
 
-* Add the Vue 3D Circular Chart by using `<ejs-circularchart3d>` selector in `<template>` section of the `App.vue` file.
+- Use the `<ejs-circularchart3d>` selector in the template section of `App.vue` to add a 3D Circular Chart.
 
-The below example shows a basic 3D Circular Chart,
+The example below shows a basic pie series.
 
-* Pie Series
-
-By default pie series will be rendered on assigning JSON data to the series by using `dataSource` property. Map the field names in the JSON data to the `xName` and `yName` properties of the series.
+By default, a pie series is rendered when JSON data is assigned to the series using the `dataSource` property. Map the field names in the JSON data to the `xName` and `yName` properties of the series.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -153,7 +153,22 @@ By default pie series will be rendered on assigning JSON data to the series by u
 {% endhighlight %}
 {% endtabs %}
         
+
 {% previewsample "page.domainurl/code-snippet/circular-chart/getting-started" %}
+
+## Verify the chart
+
+After starting the dev server, confirm the 3D Circular Chart renders correctly:
+
+- Start the dev server with `npm run serve` or `yarn run serve`.
+- Open the project URL shown in the terminal and verify the chart displays.
+- If the chart does not render, inspect the browser console for errors related to missing modules, incorrect imports, or undefined data values.
+
+## Troubleshooting (common issues)
+
+- Chart not rendering: ensure the 3D series modules and directives are registered and that `seriesData` contains a valid array of objects.
+- Undefined `data` reference: replace the `data` placeholder with an explicit array of `{ x: 'Category', y: 10 }` objects.
+- Version mismatch: confirm `@syncfusion/ej2-vue-charts` is compatible with Vue 2 used in the project.
 
 ## Run the project
 
