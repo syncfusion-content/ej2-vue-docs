@@ -10,15 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Smithchart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smithchart component
+This article provides a step-by-step guide for setting up a Vue 2 project using Vue CLI and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smithchart component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+
+Recommended: Node.js LTS (v12 or later) and Vue CLI 4.x when creating Vue 2 projects. See the system requirements link above for the latest supported versions.
 
 ## Dependencies
 
-The following list of minimum dependencies are required to use the Smith chart:
+The following minimum dependencies are required to use the Smithchart component:
 
 ```javascript
 |-- @syncfusion/ej2-vue-charts
@@ -34,7 +36,7 @@ The following list of minimum dependencies are required to use the Smith chart:
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue CLI, run the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -52,15 +54,15 @@ cd quickstart
 yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu. To avoid a global install, consider using `npx @vue/cli`.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). Install the package required for the Smithchart component.
 
 This article uses the [Vue Smithchart component](https://www.syncfusion.com/vue-components/vue-smith-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
@@ -75,7 +77,7 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Smithchart component:
+Follow these steps to add the Vue Smithchart component:
 
 1\. First, import and register the Smithchart component in the `script` section of the **src/App.vue** file.
 
@@ -122,7 +124,7 @@ or
 yarn run serve
 ```
 
-The following example shows a basic Smith chart.
+The following example shows a basic Smithchart component instance.
 
 ```
 <template>
@@ -143,14 +145,14 @@ export default {
 
 ## Module Injection
 
-The smith chart component is segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `provide` option on component creation. The module available in smith chart and its descriptions is as follows.
+The Smithchart component is modular: optional features are provided as separate modules that must be imported and injected. To enable a feature, import its module and inject it using the `provide` option in the component definition (Vue 2).
 
-* SmithchartLegend - Inject this provider to use legend feature.
-* TooltipRender - Inject this provider to use tooltip feature.
+Available feature modules include:
 
-In the current application, the above basic Smith chart is modified to visualize transmission lines. For this application, the tooltip and legend features of the Smith chart are used. The feature modules available in the Smith chart and their descriptions are as follows.
+- `SmithchartLegend` — Provides the legend feature.
+- `TooltipRender` — Provides the tooltip feature.
 
-Now, import the above mentioned modules from the Smithchart package, and inject it into the Smith chart control using the `provide` option.
+The example below shows how to import these modules and inject them into the Smithchart via `provide`.
 
 ```
 <template>
@@ -178,15 +180,15 @@ provide:{
 
 ## Add series to Smith chart
 
-The Smith chart has the following two type of specification for adding series:
+The Smithchart supports two ways to specify series:
 
-* dataSource - Data object can be bound directly by specifying the resistance and reactance values.
-* points - Collection of resistance and reactance values can be bound directly to render the series.
+- `dataSource` — Bind a data object that specifies resistance and reactance values.
+- `points` — Provide a collection of resistance and reactance points for the series.
 
-The following two ways demonstrate adding two series to the Smith chart.
+The following examples demonstrate two approaches to add series to the Smithchart:
 
-* First series Transmission1 shows dataSource bound series.
-* Second series Transmission2 shows points bound series.
+- The first series, `Transmission1`, is bound using `dataSource`.
+- The second series, `Transmission2`, is defined using `points`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -198,11 +200,11 @@ The following two ways demonstrate adding two series to the Smith chart.
 
 ## Add title to Smith chart
 
-The following APIs are used in the Smith chart:
+The following Smithchart APIs control the chart title:
 
-* `title` - Adds title to the Smith chart.
-* `text` - Sets text to the title.
-* `visible` - Toggles the title.
+- `title` — Configures the chart title.
+- `text` — Sets the title text.
+- `visible` — Shows or hides the title.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -214,7 +216,7 @@ The following APIs are used in the Smith chart:
 
 ## Enable marker to the Smith chart
 
-To use marker in series and its customization in Smith chart, use series `marker` API. To display marker for a particular series, specify the `marker visible` to true. The following sample marker is enabled for the first series only.
+To enable and customize markers for a series, use the series `marker` API. Set the marker's `visible` property to `true` for the series that should display markers. The following sample enables the marker for the first series only.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -226,7 +228,7 @@ To use marker in series and its customization in Smith chart, use series `marker
 
 ## Enable data label to marker
 
-To use marker data label and its customization in Smith chart, use marker `dataLabel`. To display data label for a particular series marker, specify the `dataLabel visible` to true in that series `marker`. The following sample data label is enabled for the first series.
+To display and customize data labels on markers, use the marker `dataLabel` settings. Set the data label's `visible` property to `true` within the series `marker` configuration. The following sample enables data labels for the first series marker.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -238,7 +240,7 @@ To use marker data label and its customization in Smith chart, use marker `dataL
 
 ## Enable legend for Smith chart
 
-The legend feature is used to denote the corresponding series. To enable the legend, inject the `SmithchartLegend` module using the `provide` option and set `visible` to true in `legendSettings`. The following sample shows enabling legend for Smith chart. The series name can be customized using the series `name`.
+The legend displays series identifiers. Inject the `SmithchartLegend` module using the `provide` option and enable the legend by setting `legendSettings.visible` to `true`. Series names can be customized using the series `name` property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -250,7 +252,7 @@ The legend feature is used to denote the corresponding series. To enable the leg
 
 ## Enable tooltip for the Smith chart series
 
-The tooltip feature is used to show the values of the current point. To enable the tooltip, inject the `TooltipRender` module using the `provide` option and set `visible` to true. The following sample shows enabling tooltip for Smith chart series collection.
+Tooltips show point values on hover. Inject the `TooltipRender` module using the `provide` option and enable tooltips by setting `tooltipSettings.visible` to `true`. The following sample shows tooltip configuration for the Smithchart series collection.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

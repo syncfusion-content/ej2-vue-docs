@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue Grid Component | Syncfusion
+title: Getting Started with Quasar and Vue Grid Component | Syncfusion
 description: Check out and learn about getting started with the Quasar Framework and Vue Grid Component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Grid Component in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+A step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
@@ -18,7 +18,7 @@ The `Quasar` Framework is a Vue.js-based open-source framework that empowers dev
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid components](../system-requirements)
 
-## Set up the Quasar project
+## Setup the Quasar project
 
 To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start/) project, use the following commands:
 
@@ -26,27 +26,27 @@ To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start/
 npm init quasar
 ```
 
-This command prompts additional configurations. Follow the steps outlined in the images below:
+This command prompts additional configurations. The following steps are outlined in the images below:
 
 ![quasar-setup1](./images/quasar-setup1.png)
 
-This generates the necessary files and prompts for project dependency installation. Respond with 'yes' to proceed with npm install, as shown in the image below:
+This generates the necessary files and prompts for project dependency installation. Responding with "yes" proceeds with npm install, as shown in the image below:
 
 ![quasar-setup2](./images/quasar-setup2.png)
 
-Navigate to your project directory:
+Navigate to the project directory:
 
 ```bash
 cd quasar-project
 ```
 
-Now that `quasar-project` is ready to run with default settings, let's add  Vue Grid component to the project.
+The `quasar-project` is now ready to run with default settings. Next, the Vue Grid component is added to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, the corresponding npm package must be installed.
 
-This article uses the [Vue Grid component](https://www.syncfusion.com/vue-components/vue-grid) as an example. To use the Vue Grid component in the project, the `@syncfusion/ej2-vue-grids` package needs to be installed using the following command:
+This article uses the [Vue Grid component](https://www.syncfusion.com/vue-components/vue-grid) as an example. To use the Vue Grid component in the project, the `@syncfusion/ej2-vue-grids` package is installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -54,9 +54,9 @@ npm install @syncfusion/ej2-vue-grids --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+Themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component can be imported in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). The [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) provides detailed information on built-in themes and the different ways to reference themes in a Vue project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component and its dependents are imported into the `<style>` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -80,9 +80,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Grid component:
+The following steps add the Vue Grid component:
 
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Grid component in the `script` section of the **src/app.vue** file.
+1\. First, the `setup` attribute is added to the `script` tag to indicate that Vue is using the `Composition API`. And import the Grid component in the `script` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -94,7 +94,7 @@ Follow the below steps to add the Vue Grid component:
 {% endhighlight %}
 {% endtabs %}
    
-2\. In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
+2\. In the `template` section, the Grid component is defined with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -114,7 +114,7 @@ Follow the below steps to add the Vue Grid component:
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the values for the `dataSource` property in the `script` section.
+3\. The values for the `dataSource` property are declared in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
