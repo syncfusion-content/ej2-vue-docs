@@ -8,13 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Gantt Chart component in Vue 2
+# Getting Started with the Vue Gantt Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/vue/documentation/ai-coding-assistant/overview)
-
-To get start quickly with Vue Gantt Chart, you can check on this video:
+To get started quickly with Vue Gantt Chart, check this video:
 {% youtube "https://www.youtube.com/watch?v=S1GbWmVcre0" %}
 
 ## Prerequisites
@@ -42,7 +40,7 @@ Following is the list of dependencies to use the Gantt with all features:
     |-- @syncfusion/ej2-treegrid
 ```
 
-## Setting up the Vue 2 project
+## Setup the Vue 2 project
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
@@ -85,12 +83,12 @@ yarn add @syncfusion/ej2-vue-gantt
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Gantt Chart component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Gantt Chart component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';  
@@ -113,13 +111,13 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
-`Note:` Use above CSS styles in `<style> </style>` tag for rendering all code snippets.
+>**Important** The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Follow the below steps to add the Vue Gantt Chart component:
 
-1\. First, import and register the Gantt Chart component in the `script` section of the **src/App.vue** file. 
+1\. First, import and register the Gantt Chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -153,7 +151,7 @@ components: {
 2\. In the `template` section, define the Gantt Chart component.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
     <div id="app">
@@ -164,49 +162,43 @@ components: {
 {% endhighlight %}
 {% endtabs %}
 
-## Module injection
+## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-The Gantt Chart components was segregated into individual feature-wise modules. To use its feature, you need to inject its feature service in the AppModule.
-Find the relevant feature modules and descriptions as follows:
+A Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component needs to be registered so that Vue knows where to locate its implementation when it is encountered in a template.
 
-* [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) : Inject this module to use the editing feature.
-* [Filter](https://ej2.syncfusion.com/vue/documentation/api/gantt#filtermodule) : Inject this module to use the filtering feature.
-* [Sort](https://ej2.syncfusion.com/vue/documentation/api/gantt#sortmodule) : Inject this module to use the sorting feature.
-* [Selection](https://ej2.syncfusion.com/vue/documentation/api/gantt#selectionmodule) : Inject this module to use the selection feature.
-* [Toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) : Inject this module to use the toolbar items.
-* [DayMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt#daymarkersmodule) : Inject this module to highlight the days.
-
-Now, import the above-mentioned modules from the Gantt package and inject them using `provide`like following code:
+To use directives like `e-columns` and `e-column` for defining Gantt columns, import the Gantt Chart component along with the required child directives from the installed packages into the `<script>` section of the `src/App.vue` file. Register the Gantt Chart component along with the required child directives using the following code:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
+
 <script setup>
-import { provide } from "vue";
-import { GanttComponent as EjsGantt , Edit, Filter, Sort } from "@syncfusion/ej2-vue-gantt";
-export default {
-  provide('gantt',  [ Edit, Filter, Sort ]);
-};
+   import { GanttComponent as EjsGantt, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-gantt';
 </script>
-{% endraw %}
+
 {% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { GanttComponent , Edit, Filter, Sort } from "@syncfusion/ej2-vue-gantt";
+    import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-gantt';
+//Component registration
 export default {
-  provide: {
-    gantt: [ Edit, Filter, Sort ]
+  name: "App",
+  components: {
+    'ejs-gantt': GanttComponent,
+    'e-columns': ColumnsDirective,
+    'e-column': ColumnDirective
   }
-};
+}
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
+The Gantt Chart and column directives are now registered and ready to use in this application.
+
 ## Binding Gantt with data
 
-Bind data with the Gantt Chart component by using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource) property. It accepts an array of JavaScript object or the DataManager instance.
+Data for the Gantt Chart component is bound using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource) property. The value is defined in the Vue component and accepts either an array of JavaScript objects or a **DataManager** instance.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -310,9 +302,50 @@ The data source fields that are required to render the tasks are mapped to the G
 
 Note : While creating a Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using [Direct Scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts), `camelCased` property (dataSource) names need to specify in the `kebab-cased` (data-source) equivalents.
 
+## Module injection
+
+To create Vue Gantt Chart with additional features, inject the required modules. The following modules are used to extend Gantt Chart's basic functionality.
+
+* [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) : Inject this module to use the editing feature.
+* [Filter](https://ej2.syncfusion.com/vue/documentation/api/gantt#filtermodule) : Inject this module to use the filtering feature.
+* [Sort](https://ej2.syncfusion.com/vue/documentation/api/gantt#sortmodule) : Inject this module to use the sorting feature.
+* [Selection](https://ej2.syncfusion.com/vue/documentation/api/gantt#selectionmodule) : Inject this module to use the selection feature.
+* [Toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) : Inject this module to use the toolbar items.
+* [DayMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt#daymarkersmodule) : Inject this module to highlight the days.
+
+> Additional feature modules are available [here](./module)
+
+Register required modules using the `provide` function in the `<script>` section and pass them as an array under the key **'gantt'**:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { provide } from "vue";
+import { GanttComponent as EjsGantt , Edit, Filter, Sort } from "@syncfusion/ej2-vue-gantt";
+export default {
+  provide('gantt',  [ Edit, Filter, Sort ]);
+};
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { GanttComponent , Edit, Filter, Sort } from "@syncfusion/ej2-vue-gantt";
+export default {
+  provide: {
+    gantt: [ Edit, Filter, Sort ]
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Defining timeline
 
-The Gantt has an option to define timeline using [timelineSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings) property with various options. Using this property we can customize the Gantt timeline.
+The Gantt chart provides an option to define the timeline using the [timelineSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelinesettings) property with various configuration options. This property allows customization of the Gantt timeline.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -344,11 +377,11 @@ To use toolbar, inject the `Toolbar` module in the `provide` section.
 
 ## Enabling editing
 
-The editing feature enables you to edit the tasks in Gantt Chart component. It can be enabled by using the [editSettings.allowEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowediting) and [editSettings.allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) properties.
+The editing feature enables task modifications in the Gantt Chart component. It can be enabled by using the [editSettings.allowEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowediting) and [editSettings.allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) properties.
 
-To use Editing, inject the [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module in the `provide` section.
+To use editing, inject the [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module in the `provide` section.
 
-The following editing options are available to update the tasks in Gantt:
+The following editing options are available to update tasks in the Gantt:
 
 * Cell
 * Dialog
@@ -357,7 +390,7 @@ The following editing options are available to update the tasks in Gantt:
 
 ### Cell editing
 
-Modify the task details through cell editing by setting the edit [mode](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#mode) property as `Auto`. To enable edit support [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module should be injected in Gantt. If [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module is not injected, you cannot do any editing action in Gantt.
+Modify task details through cell editing by setting the edit [mode](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#mode) property to **Auto**. To enable edit support, the [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module must be injected into the Gantt. If the `Edit` module is not injected, no editing actions can be performed in the Gantt.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -370,11 +403,11 @@ Modify the task details through cell editing by setting the edit [mode](https://
         
 {% previewsample "page.domainurl/code-snippet/gantt/getting-started-cs4" %}
 
-`Note:` When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the TreeGrid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
+> When the edit mode is set to `Auto`, cells can be switched to editable mode by double‑clicking anywhere in the TreeGrid, and task details can be edited in the edit dialog by double‑clicking anywhere in the chart.
 
 ### Dialog editing
 
-Modify the task details through dialog by setting edit [mode](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#mode) property as `Dialog`.
+Modify task details through a dialog by setting the edit [mode](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#mode) property as `Dialog`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -387,11 +420,11 @@ Modify the task details through dialog by setting edit [mode](https://ej2.syncfu
         
 {% previewsample "page.domainurl/code-snippet/gantt/getting-started-cs5" %}
 
-`Note:` In dialog editing mode, the edit dialog will appear while performing double click action in both TreeGrid and chart sides.
+> In dialog editing mode, the edit dialog appears when performing a double‑click action on both the TreeGrid and chart sides.
 
 ### Taskbar editing
 
-Modify the task details through user interaction such as resizing and dragging the taskbar by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) property.
+Modify task details through user interactions such as resizing and dragging the taskbar by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -406,7 +439,7 @@ Modify the task details through user interaction such as resizing and dragging t
 
 ### Dependency editing
 
-Modify the task dependencies using mouse interactions by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) property along with mapping the task dependency data source field to the [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#dependency) property.
+Modify task dependencies using mouse interactions by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) property along with mapping the task dependency data source field to the [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields#dependency) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -421,14 +454,14 @@ Modify the task dependencies using mouse interactions by enabling the [allowTask
 
 ## Enabling predecessors or task relationships
 
-Predecessor or task dependency in the Gantt Chart component is used to depict the relationship between the tasks.
+Predecessors or task dependencies in the Gantt Chart component are used to depict relationships between tasks.
 
-Start to Start (SS) : You cannot start a task until the dependent task starts.
-Start to Finish (SF) : You cannot finish a task until the dependent task finishes.
-Finish to Start (FS) : You cannot start a task until the dependent task completes.
-Finish to Finish (FF) : You cannot finish a task until the dependent task completes.
+* **Start to Start (SS)**: A task cannot start until its dependent task starts.
+* **Start to Finish (SF)**: A task cannot finish until its dependent task starts.
+* **Finish to Start (FS)**: A task cannot start until its dependent task completes.
+* **Finish to Finish (FF)**: A task cannot finish until its dependent task completes.
 
-You can show the relationship in tasks, by using the [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#dependency) property as shown in the following code example:
+Task relationships can be shown by using the[dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields#dependency) property, as demonstrated in the following code example:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -443,7 +476,9 @@ You can show the relationship in tasks, by using the [dependency](https://ej2.sy
 
 ## Assigning resources
 
-You can display and assign the resource for each task in the Gantt control.Create a collection of JSON object, which contains id, name, unit and group of the resources and assign it to the [resources](https://ej2.syncfusion.com/vue/documentation/api/gantt#resources) property. Map these fields to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/vue/documentation/api/gantt#resourceFields) property.
+Resources can be displayed and assigned to each task in the Gantt Chart component. Create a collection of JSON objects that contain the id, name, unit, and group of the resources, and assign it to the [resources](https://ej2.syncfusion.com/vue/documentation/api/gantt#resources) property.
+
+Map these fields to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/vue/documentation/api/gantt#resourceFields) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -458,9 +493,9 @@ You can display and assign the resource for each task in the Gantt control.Creat
 
 ## Enable filtering
 
-The filtering feature enables you to view reduced amount of records based on filter criteria. Gantt provides support for menu filtering support for each columns. It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowfiltering) property to `true` along with injecting the `Filter` module module as shown in the following code example. Filtering feature can also be customized using the [filterSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/filterSettings) property.
+The filtering feature enables viewing a reduced set of records based on filter criteria. The Gantt component provides menu filtering support for each column. It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowfiltering) property to **true** along with injecting the `Filter` module, as shown in the following code example. The filtering feature can also be customized using the [filterSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/filterSettings) property.
 
-To use Filtering, inject the [Filter](https://ej2.syncfusion.com/vue/documentation/api/gantt#filtermodule) module in the `provide` section.
+To use filtering, inject the [Filter](https://ej2.syncfusion.com/vue/documentation/api/gantt#filtermodule) module in the `provide` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -475,9 +510,7 @@ To use Filtering, inject the [Filter](https://ej2.syncfusion.com/vue/documentati
 
 ## Enable sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the [allowSorting](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowsorting) property to `true`. Provide the [Sort](https://ej2.syncfusion.com/vue/documentation/api/gantt#sortmodule) module as follows. If [Sort](https://ej2.syncfusion.com/vue/documentation/api/gantt#sortmodule) module is not provided, you cannot sort when a header is clicked. The sorting feature can be customized using the `sortSettings`(../api/gantt/sortSettings) property.
-
-To use Sorting, inject the [Sort](https://ej2.syncfusion.com/vue/documentation/api/gantt#sortmodule) module in the `provide` section.
+The sorting feature enables ordering of records. It can be enabled by setting the [allowSorting](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowsorting) property to true. The Sort module must also be injected in the `provide` section. If the `Sort` module is not injected, sorting will not work when clicking the column headers. The sorting feature can be customized using the [sortSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/sortSettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -492,9 +525,9 @@ To use Sorting, inject the [Sort](https://ej2.syncfusion.com/vue/documentation/a
 
 ## Defining event markers
 
-The [eventMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt#eventmarkers) property in Gantt Chart component is used to highlight the important event in Gantt chart part. By using this feature, you can add the lines and label to highlight important days in your project.
+The [eventMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt#eventmarkers) property in the Gantt Chart component is used to highlight important events in the chart area. This feature allows adding lines and labels to emphasize significant days in a project.
 
-To highlight the days, inject the `DayMarkers` module in the `provide` section.
+To highlight these days, inject the `DayMarkers` module in the `provide` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -511,7 +544,7 @@ To highlight the days, inject the `DayMarkers` module in the `provide` section.
 
 Now run the `npm run serve` command in the console, it will build your application and open in the web browser.
 
-The following example shows a basic Gantt:
+The following example shows a basic Gantt Chart:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -533,7 +566,7 @@ Error handling is used to identify errors, display them and develop recovery str
 * Failure to map task fields : The data source fields necessary for rendering tasks should be mapped to the Gantt control using the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields) property. Failure to map `taskFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
 * Failure to map resource fields : To assign resources to a task, resource fields should be mapped to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/resourceFields). Failure to map `resourceFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
 * Failure to map `isPrimaryKey` : [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#isprimarykey) field is crucial for CRUD operations. Failure to map [id](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#id) column in gantt column collection or [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#isprimarykey) field in one of the columns will trigger `actionFailure` event and display issue information in the event argument.
-* Invalid date format : [format](https://ej2.syncfusion.com/vue/documentation/api/gantt/iTimelineFormatter) property under `topTier` and `bottomTier` determines how the timelines are displayed in the top tier and bottom tier of the Gantt chart timeline. If the `format` does not contain a valid standard [date format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), it triggers the `actionFailure` event, displaying issue information in the event argument.
+* Invalid date format : [format](https://ej2.syncfusion.com/vue/documentation/api/gantt/itimelineformatter) property under `topTier` and `bottomTier` determines how the timelines are displayed in the top tier and bottom tier of the Gantt chart timeline. If the `format` does not contain a valid standard [date format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), it triggers the `actionFailure` event, displaying issue information in the event argument.
 * Failure to map `hasChildMapping` : [hasChildMapping](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#haschildmapping) property should configured for [load-on-demand](https://ej2.syncfusion.com/vue/documentation/gantt/data-binding#load-child-on-demand). Ensure it properly configured in the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields). Failure to map `hasChildMapping` in the `load-on-demand` sample triggers `actionFailure` event and displays issue information in the event argument.
 * Invalid day in event markers : [day](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker#day) should configured in [eventMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker) to render striplines in a particular day. Failure to configure the `day` in `eventMarkers` triggers `actionFailure` event and displays issue information in the event argument.
 
@@ -554,4 +587,4 @@ The following code example shows how to use the [actionFailure](https://ej2.sync
 
 The following screenshot represents the Gantt Exception handling in `actionFailure` event.
 
-![Error Handling](images/error-handling.png)
+![Error Handling](./images/error-handling.png)
