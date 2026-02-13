@@ -28,6 +28,7 @@ To set-up a Vue application , run the following command.
 ```bash
 npm create vite@7 my-vue-app -- --template vue-ts
 cd my-app
+npm install
 npm run dev
 ```
 
