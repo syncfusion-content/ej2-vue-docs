@@ -69,15 +69,15 @@ import { employeeData } from "./datasource.js";
 const data = employeeData;
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 
 .rowphoto img {
   width: 100px;
@@ -191,15 +191,15 @@ components: {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 .rowphoto img {
   width: 100px;
   height: 100px;
@@ -334,15 +334,15 @@ const format = function (value) {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 
 .rowphoto img {
   width: 100px;
@@ -475,15 +475,15 @@ components: {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 .rowphoto img {
   width: 100px;
   height: 100px;
@@ -600,15 +600,15 @@ const data = employeeData;
 const dropData = ['Order Placed', 'Processing', 'Delivered'];
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 
 .rows {
   border-color: #e0e0e0;
@@ -684,15 +684,15 @@ components: {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 .rows {
    border-color: #e0e0e0;
    border-style: solid;
@@ -768,15 +768,15 @@ Here is an example that demonstrates rendering Syncfusion<sup style="font-size:7
   provide('chart', [ColumnSeries, Category]);
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
   .cutom,
   .details {
     border-color: #e0e0e0;
@@ -867,15 +867,15 @@ export default {
 };
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
   .custom,
   .details {
    border-color: #e0e0e0;

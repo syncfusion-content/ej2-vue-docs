@@ -8,131 +8,128 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Dialog Component
 
-This section explains how to create a simple Dialog and how to configure the Dialog component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Dialog component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Dependencies
+## Setup the Vue 2 project
 
-The list of dependencies required to use the Dialog component in your application is given below:
-
-```javascript
-|-- @syncfusion/ej2-vue-popups
-    |-- @syncfusion/ej2-vue-base
-    |-- @syncfusion/ej2-vue-buttons
-    |-- @syncfusion/ej2-popups
-        |-- @syncfusion/ej2-base
-        |-- @syncfusion/ej2-buttons
-```
-
-## Get Started with Vue CLI
-
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
-
+vue create quickstart
 cd quickstart
-npm install
-
+npm run serve
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use Dialog component.
-
-To install Dialog component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-popups –save
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Registering Vue Component
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+![Vue 2 project](./images/vue2-terminal.png)
 
-### Using Vue.use()
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Refer the code snippet given below.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-```ts
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
+This article uses the [Vue Dialog component](https://www.syncfusion.com/vue-components/vue-modal-dialog) as an example. Install the `@syncfusion/ej2-vue-popups` package by running the following command:
 
-Vue.use(DialogPlugin);
+```bash
+npm install @syncfusion/ej2-vue-popups --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-popups
 ```
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-### Using Vue.component()
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-Import the Component and Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of Component from Component Plugin and the EJ2 Vue Component as its arguments.
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Dialog component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
-```ts
-import { DialogComponent, DialogPlugin } from '@syncfusion/ej2-vue-popups';
-
-Vue.component(DialogPlugin.name, DialogComponent);
-```
-
-> By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
-
-## Creating Vue sample
-
-Add the EJ2 Vue Dialog using `<ejs-dialog>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the Dialog component is provided as name in data option in the `<script>` section.
-
-```
-<template>
-    <div id="app">
-    <ejs-dialog :header="Dialog" :content="content" ></ejs-dialog>
-  </div>
-</template>
-<script>
-import Vue from 'vue';
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-
-Vue.use(DialogPlugin);
-export default {
-  name: 'app',
-   data () {
-    return {
-      content: 'The dialog component is used to display information and get input from the user.'
-    }
-  }
-}
-</script>
-```
-
-## Adding CSS reference
-
-Add Dialog component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 </style>
-```
 
-> The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online web tool, which can be used to generate the custom script and styles for a set of specific components.
-> This web tool is useful to combine the required component scripts and styles in a single file.
+{% endhighlight %}
+{% endtabs %}
+
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+
+Follow the below steps to add the Vue Dialog component:
+
+1\. First, import and register the Dialog component in the `script` section of the **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+
+<script>
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+
+export default {
+    components: {
+      'ejs-dialog': DialogComponent,
+    }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Dialog component.
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+
+<template>
+  <div>
+    <div class="col-lg-12 control-section">
+        <ejs-dialog :buttons='dlgButtons' ref="dialogObj" :content='content' showCloseIcon=true >
+        </ejs-dialog>
+    </div> 
+  </div>
+</template>
+
+<script>
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+
+export default {
+    components: {
+      'ejs-dialog': DialogComponent,
+    },
+    data: function() {
+        return {
+            content: '<p>In the Succinctly series, Syncfusion created a robust, free library of more than 130 technical e-books formatted for PDF, Kindle, and EPUB.</p>',
+        }
+    },
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Running the application
 
@@ -159,9 +156,9 @@ html, body {
 
 ## Modal dialog
 
-A modal shows an overlay behind the Dialog. So, the user should interact the Dialog compulsory before interacting with the remaining content in an application.
+A modal shows an overlay behind the Dialog. The user must interact with the Dialog before interacting with the remaining content in an application.
 
-While the user clicks the overlay, the action can be handled through the [overlayClick](https://ej2.syncfusion.com/vue/documentation/api/dialog/#overlayclick) event. In the below sample, the Dialog close action is performed while clicking on the overlay.
+While the user clicks the overlay, the action can be handled through the [overlayClick](https://ej2.syncfusion.com/vue/documentation/api/dialog/index-default#overlayclick) event. In the below sample, the Dialog close action is performed while clicking on the overlay.
 
 > When the modal dialog is opened, the Dialog's target scrolling will be disabled. The scrolling will be enabled again once close the Dialog.
 
@@ -175,7 +172,7 @@ While the user clicks the overlay, the action can be handled through the [overla
 
 ## Enable header
 
-The Dialog header can be enabled by adding the header content as text or HTML content through the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog/#header) property.
+The Dialog header can be enabled by adding the header content as text or HTML content through the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog/index-default#header) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -219,7 +216,7 @@ The Dialog supports to drag within its target container by grabbing the Dialog h
 
 ## Positioning
 
-The Dialog can be positioned using the [position](https://ej2.syncfusion.com/vue/documentation/api/dialog/#position) property by providing the X and Y co-ordinates. It can be positioned inside the target of the container or `<body>` of the element based on the given X and Y values.
+The Dialog can be positioned using the [position](https://ej2.syncfusion.com/vue/documentation/api/dialog/index-default#position) property by providing the X and Y co-ordinates. It can be positioned inside the target of the container or `<body>` of the element based on the given X and Y values.
 
 for X is: left, center, right (or) any offset value
 for Y is: top, center, bottom (or) any offset value
@@ -239,4 +236,4 @@ The below example demonstrates the different Dialog positions.
 * [How to position the dialog on center of the page on scrolling](./how-to/position-the-dialog-on-center-of-the-page-on-scrolling)
 * [Prevent closing of modal dialog](./how-to/prevent-closing-of-modal-dialog)
 * [Close dialog while click on outside of dialog](./how-to/close-dialog-while-click-on-outside-of-dialog)
-* [How to make a reusable alert and confirm dialog](./dialog-utlility/)
+* [How to make a reusable alert and confirm dialog](./dialog-utlility)

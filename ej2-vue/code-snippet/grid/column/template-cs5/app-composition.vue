@@ -77,7 +77,7 @@ let instance = new Internationalization();
       }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 
   .rowphoto img {
         width: 100px;

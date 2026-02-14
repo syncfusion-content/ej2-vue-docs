@@ -22,18 +22,4 @@ export default {
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-
-#app {
-    color: #008cff;
-    height: 40px;
-    left: 45%;
-    position: absolute;
-    top: 45%;
-    width: 30%;
-}
-
-.control-section {
-    height: 100%;
-    min-height: 200px;
-}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="container">
     <ejs-slider id='default' :value='value'></ejs-slider>
   </div>
 </template>
@@ -15,7 +15,7 @@ const value = 30;
 @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 
-#app {
+#container {
   color: #008cff;
   height: 40px;
   left: 30%;

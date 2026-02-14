@@ -83,16 +83,16 @@ You can import themes for the Syncfusion Vue component in various ways, such as 
 In this article, **Tailwind** theme is applied using CSS styles, which are available in installed packages. The necessary tailwind CSS styles for the `Grid` and `GridChart` and its dependents were imported into the <style> section of **src/App.vue** file. Vite app generates a default **styles.css** file which we do not need for this example. Before running the sample, delete the content of **src/style.css** or remove the file if it’s unused.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
-@import '../node_modules/@syncfusion/ej2-grid-chart/styles/tailwind.css';
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+@import '../node_modules/@syncfusion/ej2-grid-chart/styles/material3.css';
 ```
 
 >The order of importing CSS styles should be in line with its dependency graph.

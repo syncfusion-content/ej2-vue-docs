@@ -14,11 +14,11 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life-cycle hooks, and more.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -64,8 +64,19 @@ Vanilla
   Customize with create-vue ↗
   Nuxt ↗
 ```
+4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+```bash
+Use rolldown-vite (Experimental)? No
+```
+
+5.Install dependencies and start the dev server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
 ```bash
 cd my-project
@@ -99,9 +110,9 @@ yarn add @syncfusion/ej2-vue-inputs
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the NumericTextBox component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the NumericTextBox component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -114,7 +125,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -148,7 +159,7 @@ components: {
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the NumericTextBox component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#datasource) property and column definitions.
+2.In the `template` section, define the NumericTextBox component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -236,9 +247,9 @@ The output will appear as follows:
 
 ## Range validation
 
-You can set the minimum and maximum range of values in the NumericTextBox using the [`min`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#min) and [`max`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#max) properties, so the numeric value should be in the min and max range.
+You can set the minimum and maximum range of values in the NumericTextBox using the [`min`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#min) and [`max`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#max) properties, so the numeric value should be in the min and max range.
 
-The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#strictmode) property.
+The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#strictmode) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -246,7 +257,7 @@ The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com
 <template>
     <div id="app">
         <div class='wrap'>
-            <ejs-numerictextbox id="numeric" ref="numeric_instance" :value="value" :step="step" :min="min" :max="max"></ejs-numerictextbox>
+            <ejs-numerictextbox id="numeric" ref="numeric_instance" :value="data[0].value" :step="data[0].step" :min="data[0].min" :max="data[0].max"></ejs-numerictextbox>
         </div>
     </div>
 </template>
@@ -313,8 +324,8 @@ The output will appear as follows:
 
 ## Formatting the value
 
-User can set the format of the NumericTextBox component using [`format`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#format)
-property. The value will be displayed in the specified format, when the component is in focused out state. For more information about formatting the value, refer to this [link](./formats/).
+User can set the format of the NumericTextBox component using [`format`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#format)
+property. The value will be displayed in the specified format, when the component is in focused out state. For more information about formatting the value, refer to this [link](./formats).
 
 The below example demonstrates format the value by using currency format value `c2`.
 
@@ -325,7 +336,7 @@ The below example demonstrates format the value by using currency format value `
 <template>
     <div id="app">
         <div class='wrap'>
-            <ejs-numerictextbox id="numeric" ref="numeric_instance" :format="format" :value="value"></ejs-numerictextbox>
+            <ejs-numerictextbox id="numeric" ref="numeric_instance" :format="data[0].format" :value="data[0].value"></ejs-numerictextbox>
         </div>
     </div>
 </template>
@@ -390,7 +401,7 @@ The output will appear as follows:
 
 ## Precision of numbers
 
-You can restrict the number of decimals to be entered in the NumericTextBox by using the [`decimals`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#decimals) and [`validateDecimalOnType`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#validatedecimalontype) properties.
+You can restrict the number of decimals to be entered in the NumericTextBox by using the [`decimals`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#decimals) and [`validateDecimalOnType`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#validatedecimalontype) properties.
 So, you can't enter the number whose precision is greater than the mentioned decimals.
 
 *If `validateDecimalOnType` is false, number of decimals will not be restricted. Else, number of decimals will be restricted while typing in the NumericTextBox.
@@ -553,9 +564,9 @@ The output will appear as follows:
 
 ## See Also
 
-* [How to perform custom validation using FormValidator](./how-to/perform-custom-validation-using-form-validator/)
-* [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control/)
-* [How to customize the spin button’s up and down arrow](./how-to/customize-the-spin-buttons-up-and-down-arrow/)
-* [How to customize the step value and hide spin buttons](./how-to/customize-the-step-value-and-hide-spin-buttons/)
-* [How to prevent nullable input in NumericTextBox](./how-to/prevent-nullable-input-in-numerictextbox/)
-* [How to maintain trailing zeros in NumericTextBox](./how-to/maintain-trailing-zeros-in-numerictextbox/)
+* [How to perform custom validation using FormValidator](./how-to/perform-custom-validation-using-form-validator)
+* [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control)
+* [How to customize the spin button’s up and down arrow](./how-to/customize-the-spin-buttons-up-and-down-arrow)
+* [How to customize the step value and hide spin buttons](./how-to/customize-the-step-value-and-hide-spin-buttons)
+* [How to prevent nullable input in NumericTextBox](./how-to/prevent-nullable-input-in-numerictextbox)
+* [How to maintain trailing zeros in NumericTextBox](./how-to/maintain-trailing-zeros-in-numerictextbox)

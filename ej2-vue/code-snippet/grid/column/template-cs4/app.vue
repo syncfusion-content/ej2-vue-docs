@@ -104,7 +104,7 @@ components: {
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
  .detailtable td {
         font-size: 13px;
         padding: 4px;
