@@ -8,13 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
+## **Important – Legacy Content (Vue 2 only)**  
+> Vue 2 reached end-of-life on December 31, 2023. This guide is maintained for existing Vue 2 projects only.  
+> For **new projects** or modern development, use **Vue 3** with Vite.  
+> → See the official [Vue 3 Getting Started with Chart component](https://ej2.syncfusion.com/vue/documentation/chart/vue-3-getting-started)  
+> (Supports both Composition API and Options API, uses Vite instead of Vue CLI.)
+
 # Getting Started with the Vue Chart Component in Vue 2
 
-This section provides a step-by-step guide to creating a Vue 2 application using [`Vue CLI`](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component. It helps users quickly configure a project and render an interactive chart.
+This section provides a step-by-step guide to creating a Vue 2 application using [`Vue CLI`](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component. It helps users quickly configure a project and render an interactive chart.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?**  
-> Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with the Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. It simplifies integration, configuration, and feature discovery through intelligent, context-aware code suggestions and is available in popular AI-powered IDEs such as VS Code, Cursor, and Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio.  
-> [`Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant`](https://ej2.syncfusion.com/vue/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Syncfusion Vue development?**  
+> Discover the full potential of Syncfusion Vue components with the Syncfusion AI Coding Assistant. It simplifies integration, configuration, and feature discovery through intelligent, context-aware code suggestions and is available in popular AI-powered IDEs such as VS Code, Cursor, and Syncfusion CodeStudio.  
+> [`Explore Syncfusion AI Coding Assistant`](https://ej2.syncfusion.com/vue/documentation/ai-coding-assistant/overview)
 
 To get started quickly with Vue Charts, refer to the following introductory video:
 
@@ -22,22 +28,22 @@ To get started quickly with Vue Charts, refer to the following introductory vide
 
 ## Prerequisites
 
-Ensure that the development environment meets the required criteria listed in [`System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+Ensure that the development environment meets the required criteria listed in [`System requirements for Syncfusion Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Dependencies
 
 The following are the minimum required dependencies to use the Vue Chart component:
 
-```javascript
+```
 |-- @syncfusion/ej2-vue-charts
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-pdf-export
-    |-- @syncfusion/ej2-file-utils
-    |-- @syncfusion/ej2-compression
-    |-- @syncfusion/ej2-charts
-    |-- @syncfusion/ej2-vue-base
-    |-- @syncfusion/ej2-svg-base
+  |-- @syncfusion/ej2-base
+  |-- @syncfusion/ej2-data
+  |-- @syncfusion/ej2-pdf-export
+  |-- @syncfusion/ej2-file-utils
+  |-- @syncfusion/ej2-compression
+  |-- @syncfusion/ej2-charts
+  |-- @syncfusion/ej2-vue-base
+  |-- @syncfusion/ej2-svg-base
 ```
 
 ## Setting up the Vue 2 project
@@ -64,16 +70,16 @@ When creating a new project, choose the option `Default ([Vue 2] babel, eslint)`
 
 ![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add Syncfusion Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [`npmjs.com`](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion packages are available at [`npmjs.com`](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [`Vue Charts component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+This article uses the `Vue Chart component` (the `@syncfusion/ej2-vue-charts` package) as an example. Install it by running:
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 or
 
@@ -81,9 +87,9 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add Syncfusion Vue component
 
 Follow the steps below to add the Vue Chart component:
 
@@ -143,7 +149,7 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
 
-you need to inject its feature service in the AppModule. In the current application, we are
+In Vue, register the chart's feature modules using the component's `provide` option.
 ## Module Injection
 
 The Chart component is split into feature-specific modules. To enable a specific feature in a Vue 2
@@ -158,25 +164,35 @@ example shows the modules used in this guide and their purpose.
 
 Register these modules in the component `provide` option as shown below (Vue 2):
 
- ```javascript
-import { ChartComponent, LineSeries } from "@syncfusion/ej2-vue-charts";
+```html
+<script>
+import { 
+  ChartComponent, 
+  LineSeries, 
+  Category, 
+  Legend, 
+  Tooltip, 
+  DataLabel 
+} from "@syncfusion/ej2-vue-charts";
 
 export default {
   components: {
     'ejs-chart': ChartComponent
   },
   provide: {
-    chart: [LineSeries]
+    chart: [LineSeries, Category, Legend, Tooltip, DataLabel]
   }
 };
 </script>
- ```
+```
+
+*Tip: Only inject modules you actually use to keep bundle size smaller.*
 
 ## Populate Chart with Data
 
 This section explains how to plot the following JSON data to the chart.
 
-```javascript
+```
 export default {
   data() {
     return {
@@ -199,13 +215,67 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/chart/getting-started/datasource-cs4/app.vue %}
+
+<template>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryYAxis='primaryyAxis'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'></e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
+</template>
+
+<script>
+import { ChartComponent, LineSeries, Category, Legend, Tooltip, DataLabel } from "@syncfusion/ej2-vue-charts";
+
+export default {
+  components: {
+    'ejs-chart': ChartComponent
+  },
+  provide: {
+    chart: [LineSeries, Category, Legend, Tooltip, DataLabel]
+  },
+  data() {
+    return {
+      seriesData: [ /* your data */ ],
+      title: "Monthly Sales Report",
+      primaryyAxis: {
+        labelFormat: '${value}K'
+      }
+    };
+  }
+};
+</script>
+
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs4" %}
 
 * The sales data are in thousands, so format the vertical axis labels by adding <b>$</b> as a prefix and <b>K</b> as a suffix. This can be achieved by setting the axis `labelFormat` to '${value}K' using the [`labelFormat`](../api/chart/axis#labelformat) property. Here, `{value}` acts as a placeholder for each axis label.
+
+## Modern Alternative: Vue 3 + Vite
+
+For new applications, Syncfusion recommends Vue 3:
+
+- Use **Vite** instead of Vue CLI (faster, modern tooling).
+- Choose **Composition API** (`<script setup>`) or **Options API**.
+- Same package (`@syncfusion/ej2-vue-charts`), but registration uses Vue 3 syntax (no global `provide` in the same way — child directives are registered directly).
+
+Full guide: [Vue 3 Chart Getting Started](https://ej2.syncfusion.com/vue/documentation/chart/vue-3-getting-started)
+
+Example quickstart (Vite + Composition API):
+
+```bash
+npm create vite@latest quickstart -- --template vue
+cd quickstart
+npm install
+npm install @syncfusion/ej2-vue-charts
+npm run dev
+```
+
+See the linked doc for full code examples.
 
 ## Add Chart Title
 

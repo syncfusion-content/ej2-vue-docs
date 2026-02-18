@@ -20,7 +20,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 Below is the list of minimum dependencies required to use the 3D Chart component.
 
-```javascript
+```
 |-- @syncfusion/ej2-vue-charts
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
@@ -62,10 +62,10 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the `Vue 3D Charts component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+This article uses the `Vue 3D Chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running:
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 or
 
@@ -73,7 +73,7 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The `--save` flag adds the package to the `dependencies` section of `package.json`.
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -84,12 +84,28 @@ Follow the steps below to add the 3D Chart component:
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
+<template>
+  <div id="app">
+    <ejs-chart3d id="container">
+      <e-chart3d-series-collection>
+        <e-chart3d-series type="Column"></e-chart3d-series>
+      </e-chart3d-series-collection>
+    </ejs-chart3d>
+  </div>
+</template>
+
 <script>
-import { Chart3DComponent } from '@syncfusion/ej2-vue-charts';
+import { 
+  Chart3DComponent, 
+  Chart3DSeriesCollectionDirective, 
+  Chart3DSeriesDirective 
+} from '@syncfusion/ej2-vue-charts';
 
 export default {
   components: {
-    'ejs-chart3d': Chart3DComponent
+    'ejs-chart3d': Chart3DComponent,
+    'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
+    'e-chart3d-series': Chart3DSeriesDirective
   }
 }
 </script>
@@ -145,21 +161,25 @@ The 3D Chart component is organized into feature-specific modules. In Vue, enabl
 * `DataLabel3D` — Module for data labels.
 * `Category3D` — Module for category axis support.
 
-The sample code below shows one way to register modules in the component `provide` option. The example uses the `chart3d` key in `provide` to match the 3D chart component registration shown in the code examples.
+The sample code below shows how to register the required modules in the component `provide` option:
 
- ```javascript
-import { Chart3DComponent, ColumnSeries3D } from "@syncfusion/ej2-vue-charts";
+```javascript
+import { 
+  Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective,
+  Chart3D, ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D 
+} from "@syncfusion/ej2-vue-charts";
 
 export default {
   components: {
-    'ejs-chart3d': Chart3DComponent
+    'ejs-chart3d': Chart3DComponent,
+    'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
+    'e-chart3d-series': Chart3DSeriesDirective
   },
   provide: {
-    chart3d: [ColumnSeries3D]
+    chart3d: [Chart3D, ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D]
   }
 };
-</script>
- ```
+```
 
 ## Populate 3D chart with data
 

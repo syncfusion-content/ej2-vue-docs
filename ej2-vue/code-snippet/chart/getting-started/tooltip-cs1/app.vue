@@ -8,7 +8,7 @@
     </div>
 </template>
 <script>
-import { ChartComponent, SeriesDirective, SeriesCollectionDirective, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, LineSeries, Category, Tooltip } from "@syncfusion/ej2-vue-charts";
 
 export default {
 name: "App",
@@ -37,7 +37,7 @@ components: {
     };
   },
   provide: {
-    chart: [LineSeries, Category]
+    chart: [LineSeries, Category, Tooltip]
   }
 };
 </script>

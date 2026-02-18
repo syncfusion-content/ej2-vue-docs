@@ -1,58 +1,71 @@
 ---
 layout: post
-title: Vue 3 getting started with the Smithchart component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Smithchart component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 getting started with the Smith Chart component | Syncfusion
+description: Check out and learn about Vue 3 getting started with the Vue Smith Chart component of Syncfusion Essential JS 2 and more details.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the Vue Smithchart component in Vue 3
+# Getting started with the Vue Smith Chart component in Vue 3
 
-This article provides a step-by-step guide for creating a Vite-based Vue 3 project (JavaScript) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue `Smithchart` component. Examples demonstrate both the Composition API and the Options API; see the linked Vue documentation for details and comparisons.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smith Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-Vue 3 supports both the Composition API and the Options API. The Composition API offers a composition-friendly, function-based approach, while the Options API organizes component logic using options such as `data`, `methods`, and life cycle hooks. See the Vue guide for more information.
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-Recommended: Node.js LTS (v14 or later) and Vite 2.x or later. See the system requirements link above for current supported versions.
+## Setup the Vite project
 
-## Set up the Vite project
-
-Scaffold a Vue 3 project using Vite. Run one of the commands below and follow the interactive prompts. Alternatively, use `npx` to avoid a global install.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
-# or
-npx create-vite@latest
-# or
+```
+
+or
+
+```bash
 yarn create vite
 ```
 
-Run the selected command and follow the prompts. Example prompt selections:
+Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1. Project name: `my-project`
+1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
-```text
+```bash
 ? Project name: » my-project
 ```
 
-2. Select framework: `Vue` (creates a Vue 3 project)
+2. Select `Vue` as the framework. It will create a Vue 3 project.
 
-```text
-? Select a framework: » Vue
+```bash
+? Select a framework: » - Use arrow-keys. Return to submit.
+Vanilla
+> Vue
+  React
+  Preact
+  Lit
+  Svelte
+  Others
 ```
 
-3. Select variant: `JavaScript`
+3. Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
 
-```text
-? Select a variant: » JavaScript
+```bash
+? Select a variant: » - Use arrow-keys. Return to submit.
+> JavaScript
+  TypeScript
+  Customize with create-vue ↗
+  Nuxt ↗
 ```
 
-After the project is created, install dependencies and start the project:
+4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
 cd my-project
@@ -66,13 +79,13 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready with default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). Install the package required for the Smithchart component.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the Vue `Smithchart` component as an example. Install the `@syncfusion/ej2-vue-charts` package:
+This article uses the [Vue Smith Chart component](https://www.syncfusion.com/vue-components/vue-bullet-chart) as an example. To use the Vue Smith Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -84,13 +97,15 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-Note: Syncfusion components require a valid license for production use. See the Syncfusion documentation and system requirements for licensing details.
+> The **--save** option will instruct NPM to include the Progress Bar package inside of the `dependencies` section of the `package.json`.
+
+> Note: Syncfusion components require a valid license for production use. See the Syncfusion documentation and system requirements for licensing details.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow these steps to add the Vue `Smithchart` component using the Composition API or the Options API:
+Follow the below steps to add the Vue Smith Chart component using `Composition API` or `Options API`:
 
-1. First, import and register the `Smithchart` component and its child directives in the `script` section of the **src/App.vue** file. When using the Composition API, add the `setup` attribute to the `script` tag.
+1. First, import and register the Smith Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -118,7 +133,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the `Smithchart` component with the `dataSource` property.
+2. In the `template` section, define the Smith Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -126,7 +141,7 @@ export default {
 <template>
     <ejs-smithchart id="smithchart" :title='title' :legendSettings='legendSettings'>
         <e-seriesCollection>
-            <e-series :points='dataSource' :marker='marker' :tooltip='tooltip' :name='name' :reactance='reactance' :resistance='resistance'></e-series>
+            <e-series :dataSource='dataSource' :marker='marker' :tooltip='tooltip' :name='name' :reactance='reactance' :resistance='resistance'></e-series>
             <e-series :points='points' :tooltip='tooltip' :name='name1'></e-series>
         </e-seriesCollection>
     </ejs-smithchart>
@@ -141,6 +156,9 @@ export default {
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
+import { provide } from 'vue';
+import { SmithchartLegend, TooltipRender } from "@syncfusion/ej2-vue-charts";
+
 const dataSource = [
         { resistance: 0, reactance: 0.05 }, { resistance: 0, reactance: 0.05 },
         { resistance: 0, reactance: 0.05 }, { resistance: 0, reactance: 0.05 },
@@ -178,6 +196,8 @@ const name = 'Transmission1';
 const name1 = 'Transmission2';
 const reactance = 'reactance';
 const resistance = 'resistance';
+const smithchart = [SmithchartLegend, TooltipRender];
+provide('smithchart', smithchart);
 </script>
 
 {% endhighlight %}
@@ -242,7 +262,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 <template>
     <ejs-smithchart id="smithchart" :title='title' :legendSettings='legendSettings'>
         <e-seriesCollection>
-            <e-series :points='dataSource' :marker='marker' :tooltip='tooltip' :name='name' :reactance='reactance' :resistance='resistance'></e-series>
+            <e-series :dataSource='dataSource' :marker='marker' :tooltip='tooltip' :name='name' :reactance='reactance' :resistance='resistance'></e-series>
             <e-series :points='points' :tooltip='tooltip' :name='name1'></e-series>
         </e-seriesCollection>
     </ejs-smithchart>
@@ -299,7 +319,7 @@ provide('smithchart', smithchart);
 <template>
     <ejs-smithchart id="smithchart" :title='title' :legendSettings='legendSettings'>
         <e-seriesCollection>
-            <e-series :points='dataSource' :marker='marker' :tooltip='tooltip' :name='name' :reactance='reactance' :resistance='resistance'></e-series>
+            <e-series :dataSource='dataSource' :marker='marker' :tooltip='tooltip' :name='name' :reactance='reactance' :resistance='resistance'></e-series>
             <e-series :points='points' :tooltip='tooltip' :name='name1'></e-series>
         </e-seriesCollection>
     </ejs-smithchart>
@@ -361,8 +381,8 @@ export default {
     };
  },
     provide: {
-        smithchart:[SmithchartLegend, TooltipRender]
-    },
+        smithchart: [SmithchartLegend, TooltipRender]
+    }
 };
 </script>
 
@@ -388,9 +408,8 @@ The output will appear as follows:
 ![vue3-smith-chart-demo](./images/vue3-smith-chart-demo.png)
 
 > **Sample**: [vue-3-smith-chart-getting-started](https://github.com/SyncfusionExamples/vue3-smith-chart-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the `migration` documentation.
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

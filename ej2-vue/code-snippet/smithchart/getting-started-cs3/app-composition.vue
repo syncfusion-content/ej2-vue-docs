@@ -1,8 +1,8 @@
 <template>
   <div class="control_wrapper">
-    <ejs-smithchart id="smithchart">
+    <ejs-smithchart id="smithchart" :title='title'>
       <e-seriesCollection>
-        <e-series :title='title' :dataSource='dataSource' :name='name' :reactance='reactance' :resistance='resistance'
+        <e-series :dataSource='dataSource' :name='name' :reactance='reactance' :resistance='resistance'
           :marker='marker'></e-series>
         <e-series :points='points' :name='name2'></e-series>
       </e-seriesCollection>
