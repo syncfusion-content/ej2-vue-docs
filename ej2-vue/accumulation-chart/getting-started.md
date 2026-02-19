@@ -5,7 +5,7 @@ description: Quickstart: create a Vue 2 project and add the Syncfusion Vue Accum
 control: Getting started 
 platform: ej2-vue
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: https://ej2.syncfusion.com
 ---
 
 # Getting Started with the Vue Accumulation chart Component in Vue 2
@@ -20,16 +20,12 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 The following minimum dependencies are required to use the Accumulation Chart:
 
-```javascript
-|-- @syncfusion/ej2-vue-charts
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-pdf-export
-    |-- @syncfusion/ej2-file-utils
-    |-- @syncfusion/ej2-compression
-    |-- @syncfusion/ej2-charts
-    |-- @syncfusion/ej2-vue-base
-    |-- @syncfusion/ej2-svg-base
+```
+|- @syncfusion/ej2-vue-charts
+- @syncfusion/ej2-charts
+- @syncfusion/ej2-base
+- @syncfusion/ej2-data
+- @syncfusion/ej2-svg-base
 ```
 
 ## Setting up the Vue 2 project
@@ -62,10 +58,10 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the `Vue Accumulation chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+This article uses the `Vue Accumulation chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running:
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 or
 
@@ -73,7 +69,7 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -91,8 +87,13 @@ export default {
     'ejs-accumulationchart': AccumulationChartComponent,
     'e-accumulation-series-collection': AccumulationSeriesCollectionDirective,
     'e-accumulation-series': AccumulationSeriesDirective
+  },
+
+  provide: {
+    accumulationchart: [PieSeries]
   }
 }
+
 </script>
 
 {% endhighlight %}
@@ -104,10 +105,10 @@ export default {
 {% highlight html tabtitle="~src/App.vue" %}
 
 <template>
-    <div id="app">
+    <div id="app" style="height: 400px;">
          <ejs-accumulationchart id="container">
             <e-accumulation-series-collection>
-                <e-accumulation-series :dataSource='seriesData' xName='x' yName='y'> </e-accumulation-series>
+                <e-accumulation-series :dataSource='seriesData' xName='x' yName='y' type='Pie'> </e-accumulation-series>
             </e-accumulation-series-collection>
         </ejs-accumulationchart>
     </div>
@@ -126,7 +127,12 @@ Ensure that `seriesData` is defined as an array of objects. Replace the placehol
 <script>
 data() {
   return {
-    seriesData: data
+    seriesData: [
+      { x: 'Chrome', y: 62 },
+      { x: 'Edge',   y: 18 },
+      { x: 'Safari', y: 12 },
+      { x: 'Firefox',y: 8  }
+    ]
   };
 }
 </script>

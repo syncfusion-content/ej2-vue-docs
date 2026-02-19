@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Vue Stock chart component | Syncfusion
+title: Getting started with Vue Stock Chart component | Syncfusion
 description: Quickstart: scaffold a Vite Vue project and add the Syncfusion Vue Stock Chart component (Composition and Options API) with sample code and tips.
 control: Getting started 
 platform: ej2-vue
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Getting Started with the Vue Stock Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock chart component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart component.
 
 ## Prerequisites
 
@@ -17,8 +17,8 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Dependencies
 
-The list of minimum dependencies required to use the stock chart is as follows:
-```javascript
+The list of minimum dependencies required to use the Stock Chart is as follows:
+```
 |-- @syncfusion/ej2-charts
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
@@ -35,7 +35,7 @@ The list of minimum dependencies required to use the stock chart is as follows:
     |-- @syncfusion/ej2-splitbuttons
 ```
 
-## Setting up the Vue 2 project
+## Setup the Vue 2 project
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
@@ -65,7 +65,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Stock chart component](https://www.syncfusion.com/vue-components/vue-stock-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+This article uses the [Vue Stock Chart component](https://www.syncfusion.com/vue-components/vue-stock-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -80,15 +80,15 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the steps below to add the Vue Stock chart component:
+Follow the steps below to add the Vue Stock Chart component:
 
-1\. First, import and register the Stock chart component in the `script` section of the **src/App.vue** file.
+1\. First, import and register the Stock Chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
-import { StockChartPlugin } from '@syncfusion/ej2-vue-charts';
+import { StockChartComponent } from '@syncfusion/ej2-vue-charts';
 export default {
   components: {
     'ejs-stockchart': StockChartComponent
@@ -99,7 +99,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Stock chart component.
+2\. In the `template` section, define the Stock Chart component.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -129,11 +129,11 @@ yarn run serve
 
 ## Module Injection
 
-To add features to the stock chart, inject the required modules. The following modules extend the stock chart's basic functionality.
+To create a Stock Chart with additional features, inject the required modules. The following modules extend the Stock Chart's basic functionality.
 
-- `CandleSeries` — Inject to use the candle series.
-- `DateTime` — Inject to use the date/time axis.
-- `RangeTooltip` — Inject to enable the tooltip.
+- `CandleSeries` — Inject this module to use candle series.
+- `DateTime` — Inject this module to use date time axis.
+- `RangeTooltip` — Inject this module to show the tooltip.
 
 Inject these modules in the `provide` section as shown below.
  ```javascript
@@ -153,7 +153,7 @@ export default {
 
 ## Populate Stock Chart with Data
 
-This section explains how to plot the JSON data into the stock chart. The sample data includes date/time values for the x field.
+This section explains how to plot the JSON data into the Stock Chart. The sample data includes date/time values for the x field.
 
 ```javascript
 export default {
@@ -204,9 +204,9 @@ export default {
 };
 ```
 
-Add a `series` object to the stock chart using the [`series`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart#series) property and set the JSON array to the `dataSource` property.
+Add a `series` object to the Stock Chart using the [`series`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart#series) property and set the JSON array to the `dataSource` property.
 
-Because the sample JSON uses date/time values for the x field, set the horizontal axis `valueType` to `DateTime`. By default, the axis `valueType` is `Numeric`.
+Since the JSON contains DateTime data, set the horizontal axis [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxis#valuetype) to `DateTime`. By default, the axis [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxis#valuetype) is `Numeric`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -246,7 +246,7 @@ Enable crosshair lines using the [`enable`](https://ej2.syncfusion.com/vue/docu
 
 Trackball highlights the data point closest to the mouse or touch position. The trackball marker indicates the closest point and the trackball tooltip displays its details. To use the trackball feature, inject `Crosshair` and `Tooltip` into the `provide`.
 
-Enable the trackball by setting the crosshair `enable` property to `true` and the chart `tooltip.shared` property to `true`.
+Enable the trackball by setting the crosshair [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip#enable) property to `true` and the [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipsettings#shared-boolean) property in `tooltip` to `true`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -257,3 +257,9 @@ Enable the trackball by setting the crosshair `enable` property to `true` and th
 {% previewsample "page.domainurl/code-snippet/stockchart/getting-started-cs4" %}
 
 > You can refer to our [Vue Stock Chart](https://www.syncfusion.com/vue-ui-components/vue-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Stock Chart example](https://ej2.syncfusion.com/vue/demos/#material3/stock-chart/default.html) that shows you how to present and manipulate data.
+
+## See also
+
+* [Getting Started with Vue 3 Stock Chart](vue-3-getting-started)
+* [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+* [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

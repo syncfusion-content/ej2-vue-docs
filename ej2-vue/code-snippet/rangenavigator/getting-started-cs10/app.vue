@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat'>
+    <ejs-rangenavigator :valueType="valueType" :value="value" :labelFormat="labelFormat">
       <e-rangenavigator-series-collection>
-        <e-rangenavigator-series :dataSource='data' type='Area' xName='x' yName='y' width=2>
+        <e-rangenavigator-series :dataSource="data" type="Area" xName="x" yName="y" :width="2">
         </e-rangenavigator-series>
       </e-rangenavigator-series-collection>
     </ejs-rangenavigator>
   </div>
 </template>
 <script>
-import { RangeNavigatorComponent, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionDirective, AreaSeries, DateTime } from "@syncfusion/ej2-vue-charts";
-import { bitCoinData } from "./default_data.js";
+import { RangeNavigatorComponent, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionDirective, AreaSeries, DateTime } from '@syncfusion/ej2-vue-charts';
+import { bitCoinData } from './default_data.js';
 
 export default {
   name: "App",

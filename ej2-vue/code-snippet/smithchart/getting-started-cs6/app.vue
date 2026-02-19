@@ -1,9 +1,9 @@
 <template>
     <div class="control_wrapper">
-        <ejs-smithchart id="smithchart" :legendSettings='legendSettings'>
+        <ejs-smithchart id="smithchart" :title='title' :legendSettings='legendSettings'>
             <e-seriesCollection>
-                <e-series :title='title' :dataSource='dataSource' :tooltip='tooltip' :name='name' :reactance='reactance'
-                    :resistance='resistance' marker='marker'></e-series>
+                <e-series :dataSource='dataSource' :tooltip='tooltip' :name='name' :reactance='reactance'
+                    :resistance='resistance' :marker='marker'></e-series>
                 <e-series :points='points' :name='name2' :tooltip='tooltip2'></e-series>
             </e-seriesCollection>
         </ejs-smithchart>

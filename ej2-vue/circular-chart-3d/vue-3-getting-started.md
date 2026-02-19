@@ -86,10 +86,10 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the `Vue 3D Circular Chart component` as an example. To use the Vue 3D Circular Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+This article uses the `Vue 3D Circular Chart component` as an example. To use the Vue 3D Circular Chart component in the project, install the `@syncfusion/ej2-vue-charts` package with:
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
 or
@@ -97,6 +97,8 @@ or
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
+
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -109,7 +111,8 @@ Follow the steps below to add the Vue 3D Circular Chart component using the Comp
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { CircularChart3DComponent as EjsCircularchart3d, CircularChart3DSeriesCollectionDirective as ECircularchart3dSeriesCollection, CircularChart3DSeriesDirective as ECircularchart3dSeries, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D } from "@syncfusion/ej2-vue-charts";
+import { provide } from 'vue';
+import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D } from "@syncfusion/ej2-vue-charts";
 </script>
 
 {% endhighlight %}
@@ -154,7 +157,7 @@ export default {
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-const seriesData = [
+let seriesData = [
     { x: 'Chrome', y: 62.92 },
     { x: 'Internet Explorer', y: 6.12 },
     { x: 'Opera', y: 3.15 },
@@ -191,91 +194,118 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <ejs-circularchart3d id="container" :title='title' :tilt='tilt' :legendSettings='legendSettings'>
-        <e-circularchart3d-series-collection>
-            <e-circularchart3d-series :dataSource='seriesData' xName='x' yName='y' :dataLabel='dataLabel'> 
-            </e-circularchart3d-series>
-        </e-circularchart3d-series-collection>
-    </ejs-circularchart3d>
+  <ejs-circularchart3d 
+    id="container" 
+    :title="title" 
+    :tilt="tilt" 
+    :legendSettings="legendSettings"
+  >
+    <e-circularchart3d-series-collection>
+      <e-circularchart3d-series 
+        :dataSource="seriesData" 
+        xName="x" 
+        yName="y" 
+        :dataLabel="dataLabel"
+      ></e-circularchart3d-series>
+    </e-circularchart3d-series-collection>
+  </ejs-circularchart3d>
 </template>
 
 <script setup>
 import { provide } from 'vue';
-import { CircularChart3DComponent as EjsCircularchart3d, CircularChart3DSeriesCollectionDirective as ECircularchart3dSeriesCollection, CircularChart3DSeriesDirective as ECircularchart3dSeries, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D } from "@syncfusion/ej2-vue-charts";
+import { 
+  CircularChart3DComponent, 
+  CircularChart3DSeriesCollectionDirective, 
+  CircularChart3DSeriesDirective, 
+  PieSeries3D, 
+  CircularChartDataLabel3D, 
+  CircularChartLegend3D 
+} from "@syncfusion/ej2-vue-charts";
 
-const seriesData = [
-    { x: 'Chrome', y: 62.92 },
-    { x: 'Internet Explorer', y: 6.12 },
-    { x: 'Opera', y: 3.15 },
-    { x: 'Edge', y: 5.5 },
-    { x: 'Safari', y: 19.97 },
-    { x: 'Others', y: 2.34 }
+let seriesData = [
+  { x: 'Chrome', y: 64.2 },
+  { x: 'Safari', y: 18.8 },
+  { x: 'Edge', y: 4.9 },
+  { x: 'Firefox', y: 3.1 },
+  { x: 'Opera', y: 2.4 },
+  { x: 'Others', y: 6.6 }
 ];
-const title = 'Browser Market Shares in November 2023';
-const tilt = -45;
-const legendSettings = { visible: true, position: 'Right' };
-const dataLabel = {
-      visible: true,
-      name: 'x',
-      position: 'Outside',
-      font: {
-        fontWeight: '600'
-      },
-      connectorStyle: { length: '40px' }
+
+let title = 'Browser Market Shares in January 2026';
+let tilt = 30; // Milder 3D tilt for better visibility
+let legendSettings = { visible: true, position: 'Right' };
+let dataLabel = {
+  visible: true,
+  position: 'Outside',
+  font: { fontWeight: '600' },
+  connectorStyle: { length: '40px' }
 };
-const circularchart3d = [PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D];
-provide('circularchart3d', circularchart3d);
+
+provide('circularchart3d', [PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D]);
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <ejs-circularchart3d id="container" :title='title' :tilt='tilt' :legendSettings='legendSettings'>
-        <e-circularchart3d-series-collection>
-            <e-circularchart3d-series :dataSource='seriesData' xName='x' yName='y' :dataLabel='dataLabel'> 
-            </e-circularchart3d-series>
-        </e-circularchart3d-series-collection>
-    </ejs-circularchart3d>
+  <ejs-circularchart3d 
+    id="container" 
+    :title="title" 
+    :tilt="tilt" 
+    :legendSettings="legendSettings"
+  >
+    <e-circularchart3d-series-collection>
+      <e-circularchart3d-series 
+        :dataSource="seriesData" 
+        xName="x" 
+        yName="y" 
+        :dataLabel="dataLabel"
+      ></e-circularchart3d-series>
+    </e-circularchart3d-series-collection>
+  </ejs-circularchart3d>
 </template>
 
 <script>
-import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D } from "@syncfusion/ej2-vue-charts";
+import { 
+  CircularChart3DComponent, 
+  CircularChart3DSeriesCollectionDirective, 
+  CircularChart3DSeriesDirective, 
+  PieSeries3D, 
+  CircularChartDataLabel3D, 
+  CircularChartLegend3D 
+} from "@syncfusion/ej2-vue-charts";
 
 export default {
-    name: 'App',
-    components: {
-        'ejs-circularchart3d' : CircularChart3DComponent,
-        'e-circularchart3d-series-collection' : CircularChart3DSeriesCollectionDirective,
-        'e-circularchart3d-series' : CircularChart3DSeriesDirective
-    },
-    data() {
-        return {
-          seriesData: [
-              { x: 'Chrome', y: 62.92 },
-              { x: 'Internet Explorer', y: 6.12 },
-              { x: 'Opera', y: 3.15 },
-              { x: 'Edge', y: 5.5 },
-              { x: 'Safari', y: 19.97 },
-              { x: 'Others', y: 2.34 }
-          ],
-          title: 'Browser Market Shares in November 2023',
-          tilt: -45,
-          legendSettings: { visible: true, position: 'Right' },
-          dataLabel: {
-            visible: true,
-            name: 'x',
-            position: 'Outside',
-            font: {
-              fontWeight: '600'
-            },
-            connectorStyle: { length: '40px' }
-          }
-        };
-    },
-    provide: {
-        circularchart3d: [ PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D ]
-    },
+  name: 'App',
+  components: {
+    'ejs-circularchart3d': CircularChart3DComponent,
+    'e-circularchart3d-series-collection': CircularChart3DSeriesCollectionDirective,
+    'e-circularchart3d-series': CircularChart3DSeriesDirective
+  },
+  provide: {
+    circularchart3d: [PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D]
+  },
+  data() {
+    return {
+      seriesData: [
+        { x: 'Chrome', y: 64.2 },
+        { x: 'Safari', y: 18.8 },
+        { x: 'Edge', y: 4.9 },
+        { x: 'Firefox', y: 3.1 },
+        { x: 'Opera', y: 2.4 },
+        { x: 'Others', y: 6.6 }
+      ],
+      title: 'Browser Market Shares in January 2026',
+      tilt: 30,
+      legendSettings: { visible: true, position: 'Right' },
+      dataLabel: {
+        visible: true,
+        position: 'Outside',
+        font: { fontWeight: '600' },
+        connectorStyle: { length: '40px' }
+      }
+    };
+  }
 };
 </script>
 

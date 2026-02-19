@@ -1,8 +1,8 @@
 <template>
     <div class="control_wrapper">
-        <ejs-smithchart id="smithchart">
+        <ejs-smithchart id="smithchart" :title='title'>
                 <e-seriesCollection>
-                    <e-series :title='title' :dataSource='dataSource' :name='name' :reactance='reactance' :resistance='resistance' :marker='marker'></e-series>
+                    <e-series :dataSource='dataSource' :name='name' :reactance='reactance' :resistance='resistance' :marker='marker'></e-series>
                     <e-series :points='points' :name='name2'></e-series>
                 </e-seriesCollection>
         </ejs-smithchart>
@@ -43,6 +43,6 @@ const points = [{ resistance: 0, reactance: 0.15 }, { resistance: 0, reactance: 
             { resistance: 3.5, reactance: 1.6 }, { resistance: 3.5, reactance: 1.6 },
             { resistance: 4.5, reactance: 2.0 }, { resistance: 6.0, reactance: 4.5 },
             { resistance: 8, reactance: 6 }, { resistance: 10, reactance: 25 }];
-const name2 = 'Transmission2'
+const name2 = 'Transmission2';
 
 </script>

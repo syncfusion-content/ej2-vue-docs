@@ -17,7 +17,7 @@
   
   
   
-  let series1 = [
+  const candlestickSeriesData = [
     { x: new Date('2012-10-15'), open: 90.3357, high: 93.2557, low: 87.0885, close: 87.12, volume: 646996264 },
     { x: new Date('2012-10-22'), open: 87.4885, high: 90.7685, low: 84.4285, close: 86.2857, volume: 866040680 },
     { x: new Date('2012-10-29'), open: 84.9828, high: 86.1428, low: 82.1071, close: 82.4, volume: 367371310 },
@@ -86,7 +86,7 @@
     },  
     data() {
       return {
-        seriesData1: series1,
+        seriesData1: candlestickSeriesData,
         primaryXAxis: {
           valueType: 'DateTime',
           majorGridLines: { width: 0 },

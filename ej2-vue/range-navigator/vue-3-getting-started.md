@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Getting started with the Vue Range Navigator component in Vue 3
 
-This article shows how to set up a Vite JavaScript project and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component using either the Composition or Options API.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The Composition API in Vue 3 provides an alternative way to organize and reuse component logic via composition functions.
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The Options API is the traditional component format, organizing logic into options such as `data`, `methods`, `computed`, `watch`, and life cycle hooks.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Set up the Vite project
+## Setup the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -96,6 +96,8 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
+> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 
@@ -107,7 +109,7 @@ Follow the steps below to add the Vue Range Navigator component using the Compos
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { RangeNavigatorComponent as EjsRangenavigator, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective as ERangenavigatorSeriesCollection, RangenavigatorSeriesDirective as ERangenavigatorSeries} from "@syncfusion/ej2-vue-charts";
+import { RangeNavigatorComponent as EjsRangenavigator, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective as ERangenavigatorSeriesCollection, RangenavigatorSeriesDirective as ERangenavigatorSeries} from '@syncfusion/ej2-vue-charts';
 </script>
 
 {% endhighlight %}
@@ -115,7 +117,7 @@ import { RangeNavigatorComponent as EjsRangenavigator, StepLineSeries, DateTime,
 
 <script>
 import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
-RangenavigatorSeriesDirective } from "@syncfusion/ej2-vue-charts";
+RangenavigatorSeriesDirective } from '@syncfusion/ej2-vue-charts';
 //Component registration
 export default {
   name: "App",
@@ -136,9 +138,9 @@ export default {
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat'>
+    <ejs-rangenavigator :valueType="valueType" :value="value" :labelFormat="labelFormat">
         <e-rangenavigator-series-collection>
-            <e-rangenavigator-series :dataSource='data' type='StepLine' xName='Date' yName='Close' width=2>
+            <e-rangenavigator-series :dataSource="data" type="StepLine" xName="x" yName="y" :width="2">
             </e-rangenavigator-series>
         </e-rangenavigator-series-collection>
     </ejs-rangenavigator>
@@ -154,16 +156,16 @@ export default {
 
 <script setup>
 const data = [
-    { Date: new Date("2005-01-01"), Close: 21 },
-    { Date: new Date("2006-01-01"), Close: 24 },
-    { Date: new Date("2007-01-01"), Close: 36 },
-    { Date: new Date("2008-01-01"), Close: 38 },
-    { Date: new Date("2009-01-01"), Close: 54 },
-    { Date: new Date("2010-01-01"), Close: 57 },
-    { Date: new Date("2011-01-01"), Close: 62 }
+    { x: new Date('2005-01-01'), y: 21 },
+    { x: new Date('2006-01-01'), y: 24 },
+    { x: new Date('2007-01-01'), y: 36 },
+    { x: new Date('2008-01-01'), y: 38 },
+    { x: new Date('2009-01-01'), y: 54 },
+    { x: new Date('2010-01-01'), y: 57 },
+    { x: new Date('2011-01-01'), y: 62 }
 ];
 const valueType = 'DateTime';
-const value = [new Date("2008-01-01"), new Date("2010-01-01")];
+const value = [new Date('2008-01-01'), new Date('2010-01-01')];
 const labelFormat = 'MMM-yy';
 </script>
 
@@ -174,16 +176,16 @@ const labelFormat = 'MMM-yy';
 data() {
     return {
         data: [
-            { Date: new Date("2005-01-01"), Close: 21 },
-            { Date: new Date("2006-01-01"), Close: 24 },
-            { Date: new Date("2007-01-01"), Close: 36 },
-            { Date: new Date("2008-01-01"), Close: 38 },
-            { Date: new Date("2009-01-01"), Close: 54 },
-            { Date: new Date("2010-01-01"), Close: 57 },
-            { Date: new Date("2011-01-01"), Close: 62 }
+            { x: new Date('2005-01-01'), y: 21 },
+            { x: new Date('2006-01-01'), y: 24 },
+            { x: new Date('2007-01-01'), y: 36 },
+            { x: new Date('2008-01-01'), y: 38 },
+            { x: new Date('2009-01-01'), y: 54 },
+            { x: new Date('2010-01-01'), y: 57 },
+            { x: new Date('2011-01-01'), y: 62 }
         ],
         valueType: 'DateTime',
-        value: [new Date("2008-01-01"), new Date("2010-01-01")],
+        value: [new Date('2008-01-01'), new Date('2010-01-01')],
         labelFormat: 'MMM-yy'
     };
 }
@@ -198,9 +200,9 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat'>
+    <ejs-rangenavigator :valueType="valueType" :value="value" :labelFormat="labelFormat">
         <e-rangenavigator-series-collection>
-            <e-rangenavigator-series :dataSource='data' type='StepLine' xName='Date' yName='Close' width=2>
+            <e-rangenavigator-series :dataSource="data" type="StepLine" xName="x" yName="y" :width="2">
             </e-rangenavigator-series>
         </e-rangenavigator-series-collection>
     </ejs-rangenavigator>
@@ -208,19 +210,19 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <script setup>
 import { provide } from 'vue';
-import { RangeNavigatorComponent as EjsRangenavigator, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective as ERangenavigatorSeriesCollection, RangenavigatorSeriesDirective as ERangenavigatorSeries} from "@syncfusion/ej2-vue-charts";
+import { RangeNavigatorComponent as EjsRangenavigator, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective as ERangenavigatorSeriesCollection, RangenavigatorSeriesDirective as ERangenavigatorSeries} from '@syncfusion/ej2-vue-charts';
 
 const data = [
-    { Date: new Date("2005-01-01"), Close: 21 },
-    { Date: new Date("2006-01-01"), Close: 24 },
-    { Date: new Date("2007-01-01"), Close: 36 },
-    { Date: new Date("2008-01-01"), Close: 38 },
-    { Date: new Date("2009-01-01"), Close: 54 },
-    { Date: new Date("2010-01-01"), Close: 57 },
-    { Date: new Date("2011-01-01"), Close: 62 }
+    { x: new Date('2005-01-01'), y: 21 },
+    { x: new Date('2006-01-01'), y: 24 },
+    { x: new Date('2007-01-01'), y: 36 },
+    { x: new Date('2008-01-01'), y: 38 },
+    { x: new Date('2009-01-01'), y: 54 },
+    { x: new Date('2010-01-01'), y: 57 },
+    { x: new Date('2011-01-01'), y: 62 }
 ];
 const valueType = 'DateTime';
-const value = [new Date("2008-01-01"), new Date("2010-01-01")];
+const value = [new Date('2008-01-01'), new Date('2010-01-01')];
 const labelFormat = 'MMM-yy';
 const rangeNavigator = [ DateTime, StepLineSeries ];
 provide('rangeNavigator', rangeNavigator);
@@ -230,9 +232,9 @@ provide('rangeNavigator', rangeNavigator);
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat'>
+    <ejs-rangenavigator :valueType="valueType" :value="value" :labelFormat="labelFormat">
         <e-rangenavigator-series-collection>
-            <e-rangenavigator-series :dataSource='data' type='StepLine' xName='Date' yName='Close' width=2>
+            <e-rangenavigator-series :dataSource="data" type="StepLine" xName="x" yName="y" :width="2">
             </e-rangenavigator-series>
         </e-rangenavigator-series-collection>
     </ejs-rangenavigator>
@@ -240,7 +242,7 @@ provide('rangeNavigator', rangeNavigator);
 
 <script>
 import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
-RangenavigatorSeriesDirective } from "@syncfusion/ej2-vue-charts";
+RangenavigatorSeriesDirective } from '@syncfusion/ej2-vue-charts';
 //Component registration
 export default {
   name: "App",
@@ -252,16 +254,16 @@ export default {
     data() {
     return {
         data: [
-            { Date: new Date("2005-01-01"), Close: 21 },
-            { Date: new Date("2006-01-01"), Close: 24 },
-            { Date: new Date("2007-01-01"), Close: 36 },
-            { Date: new Date("2008-01-01"), Close: 38 },
-            { Date: new Date("2009-01-01"), Close: 54 },
-            { Date: new Date("2010-01-01"), Close: 57 },
-            { Date: new Date("2011-01-01"), Close: 62 }
+            { x: new Date('2005-01-01'), y: 21 },
+            { x: new Date('2006-01-01'), y: 24 },
+            { x: new Date('2007-01-01'), y: 36 },
+            { x: new Date('2008-01-01'), y: 38 },
+            { x: new Date('2009-01-01'), y: 54 },
+            { x: new Date('2010-01-01'), y: 57 },
+            { x: new Date('2011-01-01'), y: 62 }
         ],
         valueType: 'DateTime',
-        value: [new Date("2008-01-01"), new Date("2010-01-01")],
+        value: [new Date('2008-01-01'), new Date('2010-01-01')],
         labelFormat: 'MMM-yy'
     };
  },
@@ -293,9 +295,8 @@ The output will appear as follows:
 ![Vue 3 Range Navigator demo](./images/vue3-RN-demo.png)
 
 > **Sample**: [vue-3-range-navigator-getting-started](https://github.com/SyncfusionExamples/vue3-range-navigator-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the [`migration` documentation.
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

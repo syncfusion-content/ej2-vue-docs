@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Progress Bar Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progressbar component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progress Bar component.
 
 ## Prerequisites
 
@@ -18,16 +18,16 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the progressbar component.
+Below is the list of minimum dependencies required to use the Progress Bar component.
 
-```javascript
-    |-- @syncfusion/ej2-vue-progressbar
+```
+  |-- @syncfusion/ej2-vue-progressbar
     |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-data: "*"
+    |-- @syncfusion/ej2-data
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Setting up the Vue 2 project
+## Setup the Vue 2 project
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
@@ -57,7 +57,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Progressbar component](https://www.syncfusion.com/vue-components/vue-progressbar) as an example. Install the `@syncfusion/ej2-vue-progressbar` package by running the following command:
+This article uses the [Vue Progress Bar component](https://www.syncfusion.com/vue-components/vue-progressbar) as an example. Install the `@syncfusion/ej2-vue-progressbar` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-progressbar --save
@@ -68,53 +68,30 @@ or
 yarn add @syncfusion/ej2-vue-progressbar
 ```
 
-> The **--save** option will instruct NPM to include the progressbar package inside of the `dependencies` section of the `package.json`.
-
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-The progressbar has different themes. They are:
-* Material
-* Fabric
-* Bootstrap
-* High Contrast
-
-Import the progressbar component CSS as shown below in the `<style>` section of the `App.vue` file.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<style>
-<!-- Material theme used for this sample -->
-@import "../node_modules/@syncfusion/ej2-vue-progressbar/styles/material.css";
-</style>
-
-{% endhighlight %}
-{% endtabs %}
+> The **--save** option will instruct NPM to include the Progress Bar package inside of the `dependencies` section of the `package.json`.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Progressbar component:
+Follow the below steps to add the Vue Progress Bar component:
 
-1\. First, import and register the Progressbar component in the `script` section of the **src/App.vue** file.
+1\. First, import and register the Progress Bar component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<script setup>
-import { ProgressBarComponent as EjsProgressbar } from '@syncfusion/ej2-vue-progressbar';
 
+<script setup>
+import { ProgressBarComponent } from '@syncfusion/ej2-vue-progressbar';
 </script>
-{% endraw %}
+
 {% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { ProgressBarComponent } from '@syncfusion/ej2-vue-progressbar';
+
 export default {
-name: "App",
-components: {
+  name: "App",
+  components: {
     'ejs-progressbar': ProgressBarComponent
   }
 }
@@ -123,27 +100,20 @@ components: {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Progressbar component with the [animation](https://ej2.syncfusion.com/vue/documentation/api/progressbar#animation) and [value](https://ej2.syncfusion.com/vue/documentation/api/progressbar#value) property.
+2\. In the `template` section, define the Progress Bar component with the [animation](https://ej2.syncfusion.com/vue/documentation/api/progressbar#animation) and [value](https://ej2.syncfusion.com/vue/documentation/api/progressbar#value) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-  <div>
-    <div id='loader'>LOADING....</div>
-    <div id="container">
-      <div class="row linear-parent">
-        <div id="percentage" class="linear-progress">
-          <ejs-progressbar
-            id="percentage"
-            type='Circular'
-            :value='value'
-            :animation="animation"
-          >
-          </ejs-progressbar>
-        </div>
-      </div>
-    </div>
+  <div id="container">
+    <ejs-progressbar
+      id="percentage"
+      type='Circular'
+      :value='value'
+      :animation="animation"
+    >
+    </ejs-progressbar>
   </div>
 </template>
 
@@ -154,30 +124,32 @@ components: {
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
+
 <script setup>
 const value = 100;
-const animation= {
+const animation = {
   enable: true,
   duration: 2000,
   delay: 0
 };
 </script>
-{% endraw %}
+
 {% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-data: function() {
+export default {
+  data() {
     return {
-      value : 100,
+      value: 100,
       animation: {
         enable: true,
         duration: 2000,
         delay: 0
-      },
+      }
     };
   }
+}
 </script>
 
 {% endhighlight %}
@@ -187,71 +159,51 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
+
 <template>
-  <div>
-    <div id='loader'>LOADING....</div>
-    <div id="container">
-      <div class="row linear-parent">
-        <div id="percentage" class="linear-progress">
-          <ejs-progressbar
-            id="percentage"
-            type='Circular'
-            :value='value'
-            :animation="animation"
-          >
-          </ejs-progressbar>
-        </div>
-      </div>
-    </div>
+  <div id="container">
+    <ejs-progressbar
+      id="percentage"
+      type='Circular'
+      :value='value'
+      :animation="animation"
+    >
+    </ejs-progressbar>
   </div>
 </template>
 
 <script setup>
-
-import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
+import { ProgressBarComponent } from "@syncfusion/ej2-vue-progressbar";
 
 const value = 100;
-const animation= {
+const animation = {
   enable: true,
   duration: 2000,
   delay: 0
 };
-
 </script>
+
 <style>
-  #loader {
-    color: #008cff;
-    height: 40px;
-    left: 45%;
-    position: absolute;
-    top: 45%;
-    width: 30%;
-}
-  #container {
-    display: -webkit-box;
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 </style>
-{% endraw %}
+
 {% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-  <div>
-    <div id='loader'>LOADING....</div>
-    <div id="container">
-      <div class="row linear-parent">
-        <div id="percentage" class="linear-progress">
-          <ejs-progressbar
-            id="percentage"
-            type='Circular'
-            :value='value'
-            :animation="animation"
-          >
-          </ejs-progressbar>
-        </div>
-      </div>
-    </div>
+  <div id="container">
+    <ejs-progressbar
+      id="percentage"
+      type='Circular'
+      :value='value'
+      :animation="animation"
+    >
+    </ejs-progressbar>
   </div>
 </template>
 
@@ -259,35 +211,26 @@ const animation= {
 import { ProgressBarComponent } from "@syncfusion/ej2-vue-progressbar";
 
 export default {
-name: "App",
-components: {
+  name: "App",
+  components: {
     'ejs-progressbar': ProgressBarComponent
   },
-  data: function() {
+  data() {
     return {
-      value : 100,
+      value: 100,
       animation: {
         enable: true,
         duration: 2000,
         delay: 0
-      },
+      }
     };
-  },
-  provide: {},
-  methods: {}
+  }
 }
 </script>
+
 <style>
-  #loader {
-    color: #008cff;
-    height: 40px;
-    left: 45%;
-    position: absolute;
-    top: 45%;
-    width: 30%;
-}
-  #container {
-    display: -webkit-box;
+#container {
+  display: -webkit-box;
 }
 </style>
 
@@ -310,13 +253,13 @@ yarn run serve
 
 ## Module Injection
 
-The Progressbar component features are organized into individual feature-wise modules. To use specific features such as annotations, you must inject the corresponding feature service. Below is the available feature service:
+The Progress Bar component features are organized into individual feature-wise modules. To use specific features such as annotations, you must inject the corresponding feature service. Below is the available feature service:
 
-* `ProgressAnnotation` - Inject this service to enable annotations on the progressbar.
+* `ProgressAnnotation` - Inject this service to enable annotations on the Progress Bar.
 
 To inject the required module, add it to the `provide` section of your component as shown below:
 
- ```javascript
+```javascript
 import { ProgressBarComponent, ProgressAnnotationService } from "@syncfusion/ej2-vue-progressbar";
 
 export default {
@@ -328,3 +271,9 @@ export default {
   }
 };
  ```
+
+## See also
+
+* [Getting Started with Vue 3 Progress Bar](vue-3-getting-started)
+* [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+* [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
