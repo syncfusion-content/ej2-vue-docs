@@ -62,22 +62,30 @@ components: {
   },
    methods: {
         print: function () {
-      var svg = document.querySelector("#chartcontainer_svg");
-        var svgData = new XMLSerializer().serializeToString(svg);
-        var canvas = document.createElement("canvas");
-        document.body.appendChild(canvas);
-        var svgSize = svg.getBoundingClientRect();
-        canvas.width = svgSize.width;
-        canvas.height = svgSize.height;
-        var ctx = canvas.getContext("2d");
-        var img = document.createElement("img");
-        img.setAttribute("src", "data:image/svg+xml;base64," + btoa(svgData));
-        img.onload = function() {
-          ctx.drawImage(img, 0, 0);
-          var imagedata = canvas.toDataURL("image/png");
-          console.log(imagedata); // printed base64 in console
-          canvas.remove();
-        };
+      const svg = document.querySelector("#chartcontainer_svg");
+      if (!svg) {
+        console.error("Chart SVG element not found");
+        return;
+      }
+      const svgData = new XMLSerializer().serializeToString(svg);
+      const canvas = document.createElement("canvas");
+      document.body.appendChild(canvas);
+      const svgSize = svg.getBoundingClientRect();
+      canvas.width = svgSize.width;
+      canvas.height = svgSize.height;
+      const ctx = canvas.getContext("2d");
+      const img = document.createElement("img");
+      img.setAttribute("src", "data:image/svg+xml;base64," + btoa(svgData));
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+        const imagedata = canvas.toDataURL("image/png");
+        console.log(imagedata); // printed base64 in console
+        canvas.remove();
+      };
+      img.onerror = function() {
+        console.error("Failed to load image for export");
+        canvas.remove();
+      };
     },
   }
 };

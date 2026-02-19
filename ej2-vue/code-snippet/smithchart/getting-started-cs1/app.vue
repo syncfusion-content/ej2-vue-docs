@@ -16,8 +16,7 @@ export default {
   components: {
     "ejs-smithchart": SmithchartComponent,
     "e-seriesCollection": SeriesCollectionDirective,
-    "e-series": SeriesDirective,
-    "ejs-smithchart':": SmithchartComponent
+    "e-series": SeriesDirective
   },
   data: function () {
     return {

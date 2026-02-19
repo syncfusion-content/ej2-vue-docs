@@ -36,7 +36,7 @@ const points = [{ resistance: 0, reactance: 0.15 }, { resistance: 0, reactance: 
 { resistance: 2.5, reactance: 1.3 }, { resistance: 3.5, reactance: 1.6 },
 { resistance: 3.5, reactance: 1.6 }, { resistance: 3.5, reactance: 1.6 },
 { resistance: 4.5, reactance: 2.0 }, { resistance: 6.0, reactance: 4.5 },
-{ resistance: 8, reactance: 6 }, { resistance: 10, reactance: 25 }]
-const name2 = 'Transmission2'
+{ resistance: 8, reactance: 6 }, { resistance: 10, reactance: 25 }];
+const name2 = 'Transmission2';
 
 </script>

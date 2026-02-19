@@ -47,10 +47,24 @@ Now that `quasar-project` is ready, add the Syncfusion<sup style="font-size:70%"
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component packages are available at [`npmjs.com`](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, install the `@syncfusion/ej2-vue-charts` package using the following command:
+This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, install the `@syncfusion/ej2-vue-charts` package using:
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
+```
+
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
+
+Optional but recommended: To ensure proper styling, add one of the Syncfusion themes (for example, Material) to your Quasar config (for example, in `quasar.config.js` under the `css` array) or include the styles in a boot file:
+
+```javascript
+// quasar.config.js
+css: [
+    '@syncfusion/ej2-base/styles/material.css',
+    '@syncfusion/ej2-buttons/styles/material.css',
+    '@syncfusion/ej2-charts/styles/material.css',
+    // add other needed EJ2 component styles
+]
 ```
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
@@ -63,6 +77,7 @@ Follow the steps below to add the Vue Chart component:
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <script setup>
+import { provide } from 'vue';
 import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, LineSeries, Legend, Category } from "@syncfusion/ej2-vue-charts";
 </script>
 
@@ -91,7 +106,7 @@ import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollect
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <script setup>
-const seriesData = [
+let seriesData = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
     { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
@@ -121,7 +136,7 @@ Here is the summarized code for the above steps in the **src/app.vue** file:
 import { provide } from 'vue';
 import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, LineSeries, Legend, Category } from "@syncfusion/ej2-vue-charts";
 
-const seriesData = [
+let seriesData = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
     { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
@@ -129,10 +144,11 @@ const seriesData = [
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
 ];
-const title = 'Sales Analysis';
-const primaryXAxis = {valueType: 'Category'};
-const chart = [LineSeries, Legend, Category];
-provide('chart', chart);
+let title = 'Sales Analysis';
+let primaryXAxis = {valueType: 'Category'};
+
+// Register required modules (idiomatic one-liner)
+provide('chart', [LineSeries, Legend, Category]);
 </script>
 
 {% endhighlight %}

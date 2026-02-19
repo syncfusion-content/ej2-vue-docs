@@ -83,7 +83,7 @@ Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, install the `@syncfusion/ej2-vue-charts` package using:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -112,7 +112,7 @@ import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollect
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, LineSeries, Legend, Category } from '@syncfusion/ej2-vue-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, LineSeries, Legend, Category, Tooltip } from '@syncfusion/ej2-vue-charts';
 //Component registration
 export default {
   name: "App",
@@ -130,16 +130,15 @@ export default {
 2. In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
 
 {% tabs %}
+
 {% highlight html tabtitle="~/src/App.vue" %}
-
 <template>
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
-        <e-series-collection>
-            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
-        </e-series-collection>
-    </ejs-chart>
+<ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+    <e-series-collection>
+        <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
+    </e-series-collection>
+</ejs-chart>
 </template>
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -149,7 +148,7 @@ export default {
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-const seriesData = [
+let seriesData = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
     { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
@@ -184,26 +183,24 @@ Here is the summarized code for the above steps in the **src/App.vue** file. Not
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
 <template>
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
-        <e-series-collection>
-            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
-        </e-series-collection>
-    </ejs-chart>
+  <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+      <e-series-collection>
+          <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
+      </e-series-collection>
+  </ejs-chart>
 </template>
-
 <script setup>
 import { provide } from 'vue';
 import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, LineSeries, Legend, Category } from "@syncfusion/ej2-vue-charts";
 
-const seriesData = [
-    { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-    { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-    { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-    { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-    { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-    { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
+let seriesData = [
+  { month: "Jan", sales: 35 }, { month: "Feb", sales: 28 },
+  { month: "Mar", sales: 34 }, { month: "Apr", sales: 32 },
+  { month: "May", sales: 40 }, { month: "Jun", sales: 32 },
+  { month: "Jul", sales: 35 }, { month: "Aug", sales: 55 },
+  { month: "Sep", sales: 38 }, { month: "Oct", sales: 30 },
+  { month: "Nov", sales: 25 }, { month: "Dec", sales: 32 }
 ];
 const title = 'Sales Analysis';
 const primaryXAxis = {valueType: 'Category'};
@@ -215,15 +212,15 @@ provide('chart', chart);
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
-        <e-series-collection>
-            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
-        </e-series-collection>
-    </ejs-chart>
+  <ejs-chart id="container" :title="title" :primaryXAxis="primaryXAxis" :tooltip="tooltip">
+    <e-series-collection>
+      <e-series :dataSource="seriesData" type="Line" xName="month" yName="sales" name="Sales"></e-series>
+    </e-series-collection>
+  </ejs-chart>
 </template>
 
 <script>
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, LineSeries, Legend, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, LineSeries, Legend, Category, Tooltip } from "@syncfusion/ej2-vue-charts";
 
 export default {
     name: "App",
@@ -235,21 +232,22 @@ export default {
     data() {
         return {
           primaryXAxis: {
-            valueType: 'Category'
+            valueType: "Category"
           },
-          title: 'Sales Analysis',
+          title: "Sales Analysis",
+          tooltip: { enable: true },
           seriesData: [
-            { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-            { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-            { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-            { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-            { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-            { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
+            { month: "Jan", sales: 35 }, { month: "Feb", sales: 28 },
+            { month: "Mar", sales: 34 }, { month: "Apr", sales: 32 },
+            { month: "May", sales: 40 }, { month: "Jun", sales: 32 },
+            { month: "Jul", sales: 35 }, { month: "Aug", sales: 55 },
+            { month: "Sep", sales: 38 }, { month: "Oct", sales: 30 },
+            { month: "Nov", sales: 25 }, { month: "Dec", sales: 32 }
           ]
         };
     },
     provide: {
-        chart: [ LineSeries, Legend, Category ]
+      chart: [ LineSeries, Legend, Category, Tooltip ]
     },
 };
 </script>

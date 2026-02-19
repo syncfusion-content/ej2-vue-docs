@@ -77,9 +77,10 @@ components: {
         args.text = args.point.x + ' ' + args.point.y + ' %';
     },
     onChartMouseClick: function (args) {
-        let index = indexFinder(args.target);
+        const index = indexFinder(args.target);
         this.isExplode = false;
-        if (document.getElementById('container_Series_' + index.series + '_Point_' + index.point) && !this.innerChart) {
+        const pointElement = document.getElementById('container_Series_' + index.series + '_Point_' + index.point);
+        if (pointElement && !this.innerChart) {
             this.innerRadius = '30%';
             switch (index.point) {
                 case 0:
@@ -103,27 +104,17 @@ components: {
                     document.getElementById('text').innerHTML = 'Minivan';
                     break;
             }
-            let dataLabel = extend({}, this.dataLabel);
+            const dataLabel = extend({}, this.dataLabel);
             dataLabel.position = 'Outside';
             dataLabel.font.color = 'black';
             this.dataLabel = dataLabel;
-            let legendSettings = this.legendSettings;
-            legendSettings.visible = false;
-            this.legendSettings = legendSettings;
-            this.enableSmartLabels = true;
-            document.getElementById('category').style.visibility = 'visible';
-            document.getElementById('symbol').style.visibility = 'visible';
-            document.getElementById('text').style.visibility = 'visible';
-            this.innerChart = true;
-        }
-        if (args.target.indexOf('back') > -1) {
-            this.data = [{ x: 'SUV', y: 25 }, { x: 'Car', y: 37 }, { x: 'Pickup', y: 15 }, { x: 'Minivan', y: 23 }]
-            this.isExplode = false;
-            let dataLabel = extend({}, this.dataLabel);
+            const innerLegendSettings = this.legendSettings;
+            innerLegendSettings.visible = false;
+            this.legendSettings = innerLegendSettings;
             dataLabel.position = 'Inside';
             dataLabel.font.color = 'white';
             this.dataLabel = dataLabel;
-            let legendSettings = this.legendSettings;
+            const legendSettings = this.legendSettings;
             legendSettings.visible = false;
             this.legendSettings = legendSettings;
             this.enableSmartLabels = false;
@@ -137,11 +128,11 @@ components: {
     onClick: function (e) {
         this.isExplode = false;
         this.data = [{ x: 'SUV', y: 25 }, { x: 'Car', y: 37 }, { x: 'Pickup', y: 15 }, { x: 'Minivan', y: 23 }]
-        let dataLabel = extend({}, this.dataLabel);
+        const dataLabel = extend({}, this.dataLabel);
         dataLabel.position = 'Inside';
         dataLabel.font.color = 'white';
         this.dataLabel = dataLabel;
-        let legendSettings = this.legendSettings;
+        const legendSettings = this.legendSettings;
         legendSettings.visible = false;
         this.legendSettings = legendSettings;
         this.enableSmartLabels = false;

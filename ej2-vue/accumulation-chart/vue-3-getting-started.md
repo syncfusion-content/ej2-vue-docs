@@ -5,7 +5,7 @@ description: Quickstart: scaffold a Vite Vue 3 project and integrate the Syncfus
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: https://ej2.syncfusion.com
 ---
 
 # Getting Started with the Vue Accumulation Chart Component in Vue 3
@@ -81,10 +81,10 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Accumulation Chart component](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Accumulation Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+This article uses the [Vue Accumulation Chart component](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Accumulation Chart component in the project, install the `@syncfusion/ej2-vue-charts` package with:
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
 or
@@ -92,6 +92,8 @@ or
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
+
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -103,8 +105,12 @@ Follow the below steps to add the Vue Accumulation Chart component using `Compos
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { AccumulationChartComponent as EjsAccumulationchart, AccumulationSeriesCollectionDirective as EAccumulationSeriesCollection, AccumulationSeriesDirective as EAccumulationSeries, AccumulationLegend,
+import { provide } from 'vue';
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective as EAccumulationSeriesCollection, AccumulationSeriesDirective as EAccumulationSeries, AccumulationLegend,
 PieSeries, AccumulationTooltip } from "@syncfusion/ej2-vue-charts";
+
+let accumulationchart = [PieSeries, AccumulationLegend, AccumulationTooltip];
+provide('accumulationchart', accumulationchart);
 </script>
 
 {% endhighlight %}
@@ -149,7 +155,7 @@ export default {
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-const data = [
+let data = [
     { x: 'Argentina', y: 505370 },
     { x: 'Belgium', y: 551500 },
     { x: 'Cuba', y: 312685 },
@@ -158,8 +164,8 @@ const data = [
     { x: 'Kazakhstan', y: 300000 },
     { x: 'Somalia', y: 357022 }
 ];
-const legendSettings = { visible: true };
-const tooltip = { enable: true };
+let legendSettings = { visible: true };
+let tooltip = { enable: true };
 </script>
 
 {% endhighlight %}
@@ -203,10 +209,10 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <script setup>
 import { provide } from 'vue';
-import { AccumulationChartComponent as EjsAccumulationchart, AccumulationSeriesCollectionDirective as EAccumulationSeriesCollection, AccumulationSeriesDirective as EAccumulationSeries, AccumulationLegend,
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective as EAccumulationSeriesCollection, AccumulationSeriesDirective as EAccumulationSeries, AccumulationLegend,
 PieSeries, AccumulationTooltip } from "@syncfusion/ej2-vue-charts";
 
-const data = [
+let data = [
     { x: 'Argentina', y: 505370 },
     { x: 'Belgium', y: 551500 },
     { x: 'Cuba', y: 312685 },
@@ -215,9 +221,9 @@ const data = [
     { x: 'Kazakhstan', y: 300000 },
     { x: 'Somalia', y: 357022 }
 ];
-const legendSettings = { visible: true };
-const tooltip = { enable: true };
-const accumulationchart = [PieSeries, AccumulationLegend, AccumulationTooltip];
+let legendSettings = { visible: true };
+let tooltip = { enable: true };
+let accumulationchart = [PieSeries, AccumulationLegend, AccumulationTooltip];
 provide('accumulationchart', accumulationchart);
 </script>
 
@@ -258,11 +264,14 @@ export default {
         tooltip: {
             enable: true
         },
-    };
- },
+        tooltip: {
+            enable: true
+        },
+    },
     provide: {
         accumulationchart: [ PieSeries, AccumulationLegend, AccumulationTooltip ]
     },
+};
 };
 </script>
 

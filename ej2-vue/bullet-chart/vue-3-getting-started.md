@@ -10,15 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Bullet Chart Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The Composition API organizes related logic into reusable composition functions and is recommended for larger or composition-oriented code bases. The Options API organizes component logic with `data`, `methods`, and life cycle hooks and may be preferable for smaller components or teams familiar with Vue 2 patterns.
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Set up the Vite project
+## Setup the Vite project
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
@@ -32,14 +34,15 @@ or
 yarn create vite
 ```
 
-Use the interactive setup and follow these steps:
+Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1. Define the project name. For this article, use `my-project`.
+1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+
 ```bash
 ? Project name: » my-project
 ```
 
-2. Select `Vue` as the framework to create a Vue 3 project.
+2. Select `Vue` as the framework. It will create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -52,7 +55,7 @@ Vanilla
   Others
 ```
 
-3. Choose `JavaScript` as the project variant.
+3. Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -62,7 +65,8 @@ Vanilla
   Nuxt ↗
 ```
 
-4. After creating the project, install dependencies by running:
+4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+
 ```bash
 cd my-project
 npm install
@@ -75,7 +79,7 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready with default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
@@ -93,11 +97,13 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
+> The **--save** will instruct NPM to include the range navigator package inside of the `dependencies` section of the `package.json`.
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Follow the below steps to add the Vue Bullet Chart component using `Composition API` or `Options API`:
 
-1.First, import and register the Bullet Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1. First, import and register the Bullet Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -144,7 +150,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3.Declare the values for the `dataSource` property in the `script` section.
+3. Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -321,9 +327,8 @@ After starting the development server, confirm the chart renders correctly:
 - Console errors: inspect import paths and verify dependencies are installed.
 
 > **Sample**: [vue-3-bullet-chart-getting-started](https://github.com/SyncfusionExamples/vue3-bullet-chart-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the `migration` documentation.
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
