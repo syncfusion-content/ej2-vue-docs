@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Quasar + Vue Chart: Getting Started | Syncfusion
-description: Quickstart for Quasar and Vue 3: integrate the Syncfusion Vue Chart (Essential JS 2) using the Composition API.
+title: Quasar + Vue Chart Getting Started | Syncfusion
+description: Quickstart for Quasar and Vue 3 integrate the Syncfusion Vue Chart (Essential JS 2) using the Composition API.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
