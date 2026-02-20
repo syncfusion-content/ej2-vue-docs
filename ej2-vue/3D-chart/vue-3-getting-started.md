@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the 3D Chart component | Syncfusion
-description: Quickstart: scaffold a Vite Vue 3 project and integrate the Syncfusion 3D Chart (Essential JS 2); includes Composition/Options API examples and setup tips.
+description: Checkout and learn about Getting started with Vue 3D Chart component of Syncfusion Essential JS 2 and more details.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug

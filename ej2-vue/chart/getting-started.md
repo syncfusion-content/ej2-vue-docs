@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Chart component | Syncfusion
-description: Quickstart: create a Vue 2 app and integrate Syncfusion Vue Chart (Essential JS 2). Includes setup, module registration, data binding, and a working example.
+description: Checkout and learn about Getting started with Vue Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug

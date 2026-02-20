@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Accumulation chart component | Syncfusion
-description: Quickstart: create a Vue 2 project and add the Syncfusion Vue Accumulation Chart (Essential JS 2); includes setup, module registration, and examples.
+description: Checkout and learn about Getting started with Vue Accumulation Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug

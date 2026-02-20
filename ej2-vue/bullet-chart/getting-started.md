@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Bullet Chart component | Syncfusion
-description: Quickstart: integrate the Syncfusion Vue 2 Bullet Chart - setup with Vue CLI, module registration, and example usage.
+description: Checkout and learn about Getting started with Vue Bullet Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug

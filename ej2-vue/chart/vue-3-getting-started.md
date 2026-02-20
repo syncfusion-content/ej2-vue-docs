@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the Chart component | Syncfusion
-description: Quickstart for Vue 3 and Vite: integrate the Syncfusion Vue Chart (Essential JS 2), with Composition and Options API examples.
+description: Checkout and learn about Getting started with Vue Stock Chart component of Syncfusion Essential JS 2 and more details.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
