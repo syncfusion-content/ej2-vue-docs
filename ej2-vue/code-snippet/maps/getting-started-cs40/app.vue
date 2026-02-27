@@ -14,49 +14,53 @@
 import { MapsComponent, LayerDirective, LayersDirective, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps';
 import { usMap } from './usa.js';
 import { electionData } from './election-data.js';
+
 export default {
-name: "App",
-components: {
-"ejs-maps":MapsComponent,
-"e-layers":LayersDirective,
-"e-layer":LayerDirective
-},
-data () {
-    return{
-        titleSettings: {
-            text: 'USA Election Results - 2016'
-        },
-        shapeData: usMap,
-        dataSource: electionData,
-        shapePropertyPath: 'name',
-        shapeDataPath: 'State',
-        shapeSettings: {
-            colorValuePath: 'Candidate',
-            colorMapping: [
-            {
-                value: 'Trump', color: '#D84444'
-            },
-            {
-                value: 'Clinton', color: '#316DB5'
-            }]
-        },
-        dataLabelSettings: {
-            visible: true,
-            labelPath: 'State',
-            smartLabelMode: 'Trim'
-        },
-        tooltipSettings: {
-            visible: true,
-            valuePath: 'State'
-        },
-        legendSettings: {
-            visible: true
-        }
+  name: "App",
+  components: {
+    "ejs-maps": MapsComponent,
+    "e-layers": LayersDirective,
+    "e-layer": LayerDirective
+  },
+  data() {
+    return {
+      titleSettings: {
+        text: 'USA Election Results - 2016'
+      },
+      shapeData: usMap,
+      dataSource: electionData,
+      shapePropertyPath: 'name',
+      shapeDataPath: 'State',
+      shapeSettings: {
+        colorValuePath: 'Candidate',
+        colorMapping: [
+          {
+            value: 'Trump',
+            color: '#D84444'
+          },
+          {
+            value: 'Clinton',
+            color: '#316DB5'
+          }
+        ]
+      },
+      dataLabelSettings: {
+        visible: true,
+        labelPath: 'State',
+        smartLabelMode: 'Trim'
+      },
+      tooltipSettings: {
+        visible: true,
+        valuePath: 'State'
+      },
+      legendSettings: {
+        visible: true
+      }
     }
-},
-provide: {
+  },
+  provide: {
     maps: [Legend, DataLabel, MapsTooltip]
-}
+  }
 }
 </script>
 <style>

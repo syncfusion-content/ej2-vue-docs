@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Circular Gauge component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The **Composition API** is a modern feature in Vue 3 that organizes component logic into reusable composition functions, allowing developers to write more scalable and maintainable components with better code reusable.
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The **Options API** is the traditional approach for writing Vue components, where logic is organized into predefined options (data, methods, computed properties, watchers, life cycle hooks, and more).
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
@@ -96,6 +96,8 @@ or
 ```bash
 yarn add @syncfusion/ej2-vue-circulargauge
 ```
+
+> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 

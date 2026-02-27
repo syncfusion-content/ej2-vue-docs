@@ -12,26 +12,29 @@
 <script>
 import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
+
 export default {
-name: "App",
-components: {
-"ejs-maps":MapsComponent,
-"e-layers":LayersDirective,
-"e-layer":LayerDirective
-},
-data (){
-    return{
-        shapeData: world_map,
-        dataSource: [{  "Country": "China", "Membership": "Permanent"},
-            {"Country": "France","Membership": "Permanent" },
-            { "Country": "Russia","Membership": "Permanent"},
-            {"Country": "Kazakhstan","Membership": "Non-Permanent"},
-            { "Country": "Poland","Membership": "Non-Permanent"},
-            {"Country": "Sweden","Membership": "Non-Permanent"}],
-        shapePropertyPath: 'name',
-        shapeDataPath: 'Country'
+  name: "App",
+  components: {
+    "ejs-maps": MapsComponent,
+    "e-layers": LayersDirective,
+    "e-layer": LayerDirective
+  },
+  data() {
+    return {
+      shapeData: world_map,
+      dataSource: [
+        { "Country": "China", "Membership": "Permanent" },
+        { "Country": "France", "Membership": "Permanent" },
+        { "Country": "Russia", "Membership": "Permanent" },
+        { "Country": "Kazakhstan", "Membership": "Non-Permanent" },
+        { "Country": "Poland", "Membership": "Non-Permanent" },
+        { "Country": "Sweden", "Membership": "Non-Permanent" }
+      ],
+      shapePropertyPath: 'name',
+      shapeDataPath: 'Country'
     }
-}
+  }
 }
 </script>
 <style>

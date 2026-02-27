@@ -10,22 +10,19 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Maps Component in Vue 3
 
-This guide provides a step-by-step walkthrough for setting up a [Vite](https://vitejs.dev/) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api). By the end, you'll have a working Maps component displaying geographic data with legends, tooltips, and data labels.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-## Choosing Between Composition API and Options API
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-Vue 3 supports two patterns for organizing component logic:
-
-- **Composition API** (`<script setup>`) - Modern, function-based approach for better code reusable and organization of related logic. Ideal for complex components and advanced use cases.
-- **Options API** - Traditional, object-based approach with separate sections for data, methods, computed properties, and lifecycle hooks. Familiar for developers transitioning from Vue 2.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Set up the Vite project
+## Setup the Vite project
 
-[Vite](https://vitejs.dev/) provides a lightweight, fast development environment for Vue 3 projects. To create a new Vite project, run one of the following commands:
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -37,15 +34,15 @@ or
 yarn create vite
 ```
 
-Follow the interactive prompts to complete the setup:
+Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1. **Project name** - Enter `my-project` (or your preferred name):
+1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2. **Framework selection** - Select `Vue`:
+2. Select `Vue` as the framework. It will create a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -58,7 +55,7 @@ Vanilla
   Others
 ```
 
-3. **Variant selection** - Choose `JavaScript`:
+3. Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -68,7 +65,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4. **Install dependencies** - Navigate to the project directory and install dependencies:
+4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
 cd my-project
@@ -82,11 +79,11 @@ cd my-project
 yarn install
 ```
 
-After setup completes, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). Install the required npm package to use Syncfusion components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
 This guide uses the [Vue Maps component](https://www.syncfusion.com/vue-components/vue-maps) as an example. Install the `@syncfusion/ej2-vue-maps` package using the following command:
 
@@ -100,6 +97,8 @@ or
 yarn add @syncfusion/ej2-vue-maps
 ```
 
+> The **--save** will instruct NPM to include the range navigator package inside of the `dependencies` section of the `package.json`.
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 1. Import and register the Maps component and its child directives in the **src/App.vue** file. The import structure differs slightly between the two APIs:
@@ -110,7 +109,7 @@ yarn add @syncfusion/ej2-vue-maps
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-  import { MapsComponent as EjsMaps, LayersDirective as ELayers, LayerDirective as ELayer, MapAjax , Legend , DataLabel , MapsTooltip } from '@syncfusion/ej2-vue-maps';
+  import { MapsComponent as EjsMaps, LayersDirective as ELayers, LayerDirective as ELayer, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps';
   import { Maps } from '@syncfusion/ej2-maps';
   Maps.Inject(Legend, DataLabel, MapsTooltip);
 </script>
@@ -119,7 +118,7 @@ yarn add @syncfusion/ej2-vue-maps
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { MapsComponent, LayersDirective, LayerDirective, MapAjax, Legend, MapAjax, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps'
+import { MapsComponent, LayersDirective, LayerDirective, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps'
 //Component registration
 export default {
   name: "App",
@@ -127,6 +126,9 @@ export default {
     'ejs-maps' : MapsComponent,
     'e-layers' : LayersDirective,
     'e-layer' : LayerDirective
+  },
+  provide: {
+    maps: [Legend, DataLabel, MapsTooltip]
   }
 }
 </script>
@@ -255,7 +257,7 @@ Here is the complete code combining all steps in the **src/App.vue** file:
 </template>
 
 <script setup>
-import { MapsComponent as EjsMaps, LayersDirective as ELayers, LayerDirective as ELayer, MapAjax , Legend , DataLabel , MapsTooltip } from '@syncfusion/ej2-vue-maps';
+import { MapsComponent as EjsMaps, LayersDirective as ELayers, LayerDirective as ELayer, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps';
 import { Maps } from '@syncfusion/ej2-maps';
 Maps.Inject(Legend, DataLabel, MapsTooltip);
     const titleSettings =  {
@@ -358,7 +360,7 @@ Maps.Inject(Legend, DataLabel, MapsTooltip);
       };
     },
     provide: {
-      maps:[Legend, DataLabel, MapsTooltip]
+      maps: [Legend, DataLabel, MapsTooltip]
     }
   };
 </script>

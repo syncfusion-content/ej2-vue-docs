@@ -26,7 +26,7 @@ You can explore the Maps component's capabilities using the following video:
 
 Below is the list of minimum dependencies required to use the Maps.
 
-```javascript
+```
 |-- @syncfusion/ej2-vue-maps
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
@@ -38,7 +38,7 @@ Below is the list of minimum dependencies required to use the Maps.
     |-- @syncfusion/ej2-maps
 ```
 
-## Setting up the Vue 2 project
+## Setup the Vue 2 project
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
@@ -78,6 +78,7 @@ or
 ```bash
 yarn add @syncfusion/ej2-vue-maps
 ```
+> The **--save** will instruct NPM to include the range navigator package inside of the `dependencies` section of the `package.json`.
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component
 
@@ -91,16 +92,16 @@ import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-
 import { world_map } from './world-map.js';
 
 export default {
-components: {
-    'ejs-maps' : MapsComponent,
-    'e-layers' : LayersDirective,
-    'e-layer' : LayerDirective
-},
-data () {
-        return {
-            shapeData: world_map
-        }
-   }
+  components: {
+    'ejs-maps': MapsComponent,
+    'e-layers': LayersDirective,
+    'e-layer': LayerDirective
+  },
+  data() {
+    return {
+      shapeData: world_map
+    }
+  }
 }
 </script>
 
@@ -160,7 +161,7 @@ The following modules are available:
 * Highlight - Inject this provider to use highlight feature.
 * Legend - Inject this provider to use legend feature.
 * Marker - Inject this provider to use marker feature.
-* MapsTooltip - Inject this provider to use tooltip series.
+* MapsTooltip - Inject this provider to use tooltip feature.
 * NavigationLine - Inject this provider to use navigation lines feature.
 * Selection - Inject this provider to use selection feature.
 * Zoom - Inject this provider to use zooming and panning feature.
@@ -168,9 +169,9 @@ The following modules are available:
 
 In the current application, we are going to modify the above basic Maps to visualize 2016 USA president election results.
 
-For this application we are going to use tooltip, data label and legend features of the Maps. Now import the MapsTooltip, DataLabel and Legend modules from Maps package and inject it into the Maps component using `provide` option.
+For this application, we are going to use tooltip, data label, and legend features of the Maps. Now import the MapsTooltip, DataLabel, and Legend modules from the Maps package and inject them into the Maps component using the `provide` option.
 
-```
+```javascript
 <template>
    <div class="wrapper">
         <ejs-maps id='maps'></ejs-maps>
@@ -180,39 +181,24 @@ For this application we are going to use tooltip, data label and legend features
 import { MapsComponent, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps';
 
 export default {
-components: {
+  components: {
     'ejs-maps': MapsComponent
-}
-data:function(){
-    return{ };
-},
-provide: {
+  },
+  data: function() {
+    return { };
+  },
+  provide: {
     maps: [Legend, DataLabel, MapsTooltip]
-}
+  }
 }
 </script>
 ```
 
 ## Render shapes from GeoJSON data
 
-This section explains how to bind GeoJSON data to the map.
+This section explains how to bind GeoJSON data to the map. The Maps component accepts GeoJSON data in the [GeoJSON specification format](https://geojson.org/). You can use GeoJSON data for world maps, country maps, or custom regional maps.
 
-```javascript
-
-let usMap: Object =
-{
-    "type": "FeatureCollection",
-    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-    "features": [
-        { "type": "Feature", "properties": { "iso_3166_2": "MA", "name": "Massachusetts", "admin": "United States of America" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -70.801756294617277, 41.248076234530558 ]] ] ] }
-        }
-    ]
-    //https://ej2.syncfusion.com/vue/documentation
-};
-
-```
-
-Elements in the Maps will get rendered in the layers. So add a layer collection to the Maps by using [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps#layers) property. Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapedata) property.
+Elements in the Maps will get rendered in the layers. Add a layer collection to the Maps using the [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps#layers) property and bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapedata) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -222,7 +208,7 @@ Elements in the Maps will get rendered in the layers. So add a layer collection 
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs34" %}
 
->Note: Refer the data values for [`world_map`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-1580932177) here.
+> Note: Refer the data values for [`world_map`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-1580932177) here.
 
 ## Bind data source to map
 
@@ -244,13 +230,13 @@ The following example demonstrates binding UN Security Council membership data t
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs35" %}
 
-> Note: Refer the data values for [`world_map`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-710289613) here.
+> Note: Refer the data values for [`world_map`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-1580932177) here.
 
 ## Apply Color Mapping
 
 The Color Mapping feature customizes shape colors based on the data values associated with each shape. Use the [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel#colorvaluepath) property in [`shapeSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel) to specify which data field determines the color assignment.
 
-Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel#colorvaluepath) property. Here '#D84444' is specified for 'Permanent' and '#316DB5' is specified for 'Non-Permanent'.
+Specify color and value mapping in the [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel#colormapping) property. Here '#D84444' is specified for 'Permanent' and '#316DB5' is specified for 'Non-Permanent'.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -307,3 +293,8 @@ Tooltips provide an alternative way to display information on hover, which is pa
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs40" %}
+
+## See also
+
+* [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+* [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

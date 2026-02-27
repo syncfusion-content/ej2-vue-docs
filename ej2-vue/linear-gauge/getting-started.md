@@ -71,6 +71,8 @@ or
 yarn add @syncfusion/ej2-vue-lineargauge
 ```
 
+
+
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Linear Gauge component
 
 Follow the steps below to add the Vue Linear Gauge component:
@@ -92,11 +94,10 @@ import { LinearGaugeComponent as EjsLineargauge } from '@syncfusion/ej2-vue-line
 import { LinearGaugeComponent } from '@syncfusion/ej2-vue-lineargauge';
 
 export default {
-name: "App",
-components: {
-"ejs-lineargauge":LineargaugeComponent
-},
-
+  name: "App",
+  components: {
+    'ejs-lineargauge': LinearGaugeComponent
+  }
 }
 </script>
 
@@ -106,18 +107,42 @@ components: {
 2\. In the `template` section, define the Linear Gauge component.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
-    <div id="app">
-    <ejs-lineargauge></ejs-lineargauge>
+  <div id="app">
+      <ejs-lineargauge> </ejs-lineargauge>
   </div>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-Here is the complete code for the above steps in the **src/App.vue** file:
+## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+
+A Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component needs to be registered so that Vue knows where to locate its implementation when it is encountered in a template.
+
+To use directives like `e-axes` and `e-axis` for defining gauge axes, import the Linear Gauge component along with the required child directives from the installed packages into the `<script>` section of the **src/App.vue** file. Register the Linear Gauge component along with the required child directives using the following code:
+
+```javascript
+import { LinearGaugeComponent, AxesDirective, AxisDirective } from '@syncfusion/ej2-vue-lineargauge';
+
+// Component registration
+export default {
+  name: "App",
+  components: {
+    'ejs-lineargauge' : LinearGaugeComponent,
+    'e-axes' : AxesDirective,
+    'e-axis' : AxisDirective
+  }
+}
+```
+
+The Linear Gauge and axes directives are now registered and ready to use in this application.
+
+## Defining axis
+
+The Linear Gauge requires at least one axis to be defined. You can define the axis using the `e-axis` directive. Here is the complete code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -144,49 +169,42 @@ yarn run serve
 
 {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs34" %}
 
-## Module Injection
+## Module injection
 
-The LinearGauge component uses feature-based modules to reduce file size. Each feature is encapsulated in its own module and must be injected using the `provide: {}` option to enable it. This approach ensures that only the features you use are included in your bundle.
+To create Vue Linear Gauge with additional features, inject the required modules. The following modules are used to extend Linear Gauge's basic functionality.
 
-The following modules are available:
+* **Annotations** - Inject this module to use annotation features for displaying custom text or markers on the gauge.
+* **GaugeTooltip** - Inject this module to enable tooltip functionality for displaying information when interacting with the gauge.
 
-* **Annotation** – Enables annotation features for displaying custom text or markers on the gauge.
-* **GaugeTooltip** – Enables tooltip functionality for displaying information when interacting with the gauge.
+```javascript
+import { LinearGaugeComponent, Annotations, GaugeTooltip } from '@syncfusion/ej2-vue-lineargauge';
 
-To use these features, import the required modules from the Linear Gauge package and inject them into the component using `provide: {}`:
-
-```ts
-import { LinearGaugeComponent, Annotations, GaugeTooltip } from "@syncfusion/ej2-vue-lineargauge";
-provide: {
+export default {
+  components: { 'ejs-lineargauge': LinearGaugeComponent },
+  provide: {
     lineargauge: [Annotations, GaugeTooltip]
-},
-
+  }
+}
 ```
 
-## Adding the Linear Gauge Title
+## Adding the Linear Gauge title
 
 The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGaugeModel#title) property in the Linear Gauge.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/linear-gauge/getting-started-cs35/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs35" %}
 
-## Axis Range
+## Axis range
 
 The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis#minimum-number) and [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis#maximum-number) properties in the Linear Gauge.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/linear-gauge/getting-started-cs36/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs36/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -200,27 +218,27 @@ To denote the axis labels with temperature units, add the °C as a suffix to eac
 To change the pointer value from its default setting, set the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer#value-number) property in the [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel) object of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/linear-gauge/getting-started-cs37/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs37" %}
 
-## Set Pointer Value
+## Set pointer value
 
 The pointer value can be customized using the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer#value-number) property in the [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer) object of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/linear-gauge/getting-started-cs38/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs38" %}
+
+> You can refer to our [Vue Linear Gauge](https://www.syncfusion.com/vue-components/vue-linear-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Linear Gauge example](https://ej2.syncfusion.com/vue/demos/#/material/linear-gauge/default.html) that shows how to render the Linear Gauge in Vue.
+
+## See also
+
+* [Getting Started with the Vue Linear Gauge Component in Vue 3](https://ej2.syncfusion.com/vue/documentation/linear-gauge/getting-started-vue-3)
