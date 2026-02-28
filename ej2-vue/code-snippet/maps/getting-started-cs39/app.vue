@@ -13,32 +13,33 @@
 <script>
 import { MapsComponent, LayerDirective, LayersDirective, Legend, DataLabel } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
+
 export default {
-name: "App",
-components: {
-"ejs-maps":MapsComponent,
-"e-layers":LayersDirective,
-"e-layer":LayerDirective
-},
-data () {
-    return{
-        shapeData: world_map,
-        shapeSettings:{
-            autofill: true
-        },
-        dataLabelSettings: {
-            visible: true,
-                labelPath: 'name',
-                smartLabelMode: 'Trim'
-        },
-        legendSettings: {
-            visible: true
-        }
+  name: "App",
+  components: {
+    "ejs-maps": MapsComponent,
+    "e-layers": LayersDirective,
+    "e-layer": LayerDirective
+  },
+  data() {
+    return {
+      shapeData: world_map,
+      shapeSettings: {
+        autofill: true
+      },
+      dataLabelSettings: {
+        visible: true,
+        labelPath: 'name',
+        smartLabelMode: 'Trim'
+      },
+      legendSettings: {
+        visible: true
+      }
     }
-},
-provide: {
+  },
+  provide: {
     maps: [Legend, DataLabel]
-}
+  }
 }
 </script>
 <style>

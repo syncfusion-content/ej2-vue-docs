@@ -15,15 +15,15 @@ import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-
 import { world_map } from './world-map.js';
 
 export default {
-name: "App",
-components: {
-"ejs-maps":MapsComponent,
-"e-layers":LayersDirective,
-"e-layer":LayerDirective
+  name: "App",
+  components: {
+    "ejs-maps": MapsComponent,
+    "e-layers": LayersDirective,
+    "e-layer": LayerDirective
   },
-  data () {
+  data() {
     return {
-        shapeData: world_map
+      shapeData: world_map
     }
   }
 }

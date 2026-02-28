@@ -12,39 +12,45 @@
 <script>
 import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
+
 export default {
-name: "App",
-components: {
-"ejs-maps":MapsComponent,
-"e-layers":LayersDirective,
-"e-layer":LayerDirective
-},
-data (){
-    return{
-        titleSettings: {
-            text: 'UN security council countries'
-        },
-        shapeData: world_map,
-        dataSource: [{  "Country": "China", "Membership": "Permanent"},
-            {"Country": "France","Membership": "Permanent" },
-            { "Country": "Russia","Membership": "Permanent"},
-            {"Country": "Kazakhstan","Membership": "Non-Permanent"},
-            { "Country": "Poland","Membership": "Non-Permanent"},
-            {"Country": "Sweden","Membership": "Non-Permanent"}],
-        shapePropertyPath: 'name',
-        shapeDataPath: 'Country',
-        shapeSettings: {
-            colorValuePath: 'Membership',
-                colorMapping: [
-                {
-                    value: 'Permanent', color: '#D84444'
-                },
-                {
-                    value: 'Non-Permanent', color: '#316DB5'
-                }]
-        }
+  name: "App",
+  components: {
+    "ejs-maps": MapsComponent,
+    "e-layers": LayersDirective,
+    "e-layer": LayerDirective
+  },
+  data() {
+    return {
+      titleSettings: {
+        text: 'UN security council countries'
+      },
+      shapeData: world_map,
+      dataSource: [
+        { "Country": "China", "Membership": "Permanent" },
+        { "Country": "France", "Membership": "Permanent" },
+        { "Country": "Russia", "Membership": "Permanent" },
+        { "Country": "Kazakhstan", "Membership": "Non-Permanent" },
+        { "Country": "Poland", "Membership": "Non-Permanent" },
+        { "Country": "Sweden", "Membership": "Non-Permanent" }
+      ],
+      shapePropertyPath: 'name',
+      shapeDataPath: 'Country',
+      shapeSettings: {
+        colorValuePath: 'Membership',
+        colorMapping: [
+          {
+            value: 'Permanent',
+            color: '#D84444'
+          },
+          {
+            value: 'Non-Permanent',
+            color: '#316DB5'
+          }
+        ]
+      }
     }
-}
+  }
 }
 </script>
 <style>
