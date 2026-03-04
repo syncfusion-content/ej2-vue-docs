@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue Dashboard Layout component
 
-The Dashboard Layout component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Dashboard Layout component follows widely adopted accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Dashboard Layout component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [Section 508](https://www.section508.gov) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
@@ -40,7 +40,7 @@ The accessibility compliance for the Dashboard Layout component is outlined belo
 
 ## WAI-ARIA attributes
 
-The Dashboard Layout component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) patterns to meet the accessibility. The following ARIA attributes are used in the Dashboard Layout component:
+The Dashboard Layout implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg) patterns to meet the accessibility. The following ARIA attributes are used and indicate where they are applied:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
@@ -55,9 +55,9 @@ Keyboard support is not applicable for the Dashboard Layout.
 
 ## Ensuring accessibility
 
-The Dashboard Layout component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+Accessibility verification for the Dashboard Layout is performed using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) as part of automated testing to help maintain compliance.
 
-The accessibility compliance of the Dashboard Layout component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/dashboard-layout.html) in a new window to evaluate the accessibility of the Dashboard Layout component with accessibility tools.
+The accessibility compliance of the Dashboard Layout component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/dashboard-layout.html) in a new window to evaluate the Dashboard Layout component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/dashboard-layout.html" %}
 

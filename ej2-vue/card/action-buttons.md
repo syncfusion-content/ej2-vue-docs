@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Action buttons in Vue Card component
 
-You can include Action buttons within the Card and customize them. Action button is a `div` element with `e-card-actions` class followed by button tag or anchor tag within the card root element.
+Action buttons can be added inside a Card and styled as needed. The action container is a  `div` with the `e-card-actions` class followed by button tag or anchor tag within the card root element.
 
 * For adding action buttons you can create button or anchor tag with `e-card-btn` class within the card action element.
 
@@ -25,7 +25,7 @@ You can include Action buttons within the Card and customize them. Action button
 
 ## Vertical
 
-By default, action buttons positioned in horizontal alignment , and also it can be aligned to show in vertical alignment by adding `e-card-vertical` class.
+By default, action buttons are displayed horizontally. To stack them vertically, add the `e-card-vertical` class to the action container:
 
 ```
     <div class = "e-card">
@@ -49,4 +49,4 @@ By default, action buttons positioned in horizontal alignment , and also it can 
 
 ## See Also
 
-* [How to integrate other component inside the card](./how-to/integrate-other-component-inside-the-card/)
+* [How to integrate other component inside the card](./how-to/integrate-other-component-inside-the-card)

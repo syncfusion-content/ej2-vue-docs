@@ -15,7 +15,7 @@ domainurl: ##DomainURL##
 The Card supports to include images within the elements, you can add image as direct element anywhere inside card root by adding the
 `e-card-image` class to `div` element. Using the class defined, you can write CSS styles to load images to that element.
 
-> By default, card images occupies full width of its parent element.
+> By default, card images occupy the full width of their parent element.
 
 ```
     <div class = "e-card">
@@ -26,8 +26,7 @@ The Card supports to include images within the elements, you can add image as di
 
 ### Title
 
-Card image is supported to include a title or caption for the image. By default, Title is placed over the image on left-bottom position with
-overlay.
+Card images can include a title or caption. By default, the title is placed over the image at the bottom-left position with an overlay.
 
 ```
     <div class = "e-card">
@@ -50,9 +49,9 @@ overlay.
 
 ## Divider
 
-Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it.
+Use a divider to separate elements inside the card.
 
-* Place the `div` element with `e-card-separator` class inside the card element for adding a divider.
+* Add a `div` with the `e-card-separator` class inside the card element to insert a divider.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -67,4 +66,4 @@ Divider used to separate the elements inside the card. You can add divider insid
 
 ## See Also
 
-* [How to customize the card image title position](./how-to/customize-the-card-image-title-position/)
+* [How to customize the card image title position](./how-to/customize-the-card-image-title-position)

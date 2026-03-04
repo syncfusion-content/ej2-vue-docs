@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrate other component inside the card in Vue Card component | Syncfusion
+title: Integrate other component inside Card in Vue | Syncfusion
 description: Learn here all about Integrate other component inside the card in Syncfusion Vue Card component of Syncfusion Essential JS 2 and more.
 control: Integrate other component inside the card 
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integrate other component inside the card in Vue Card component
 
-You can integrate any component inside the card element. Here ListView component is placed inside the card for showcasing the To-Do list.
+Any component can be placed inside a Card. This example places the ListView component inside a Card to demonstrate a To‑Do list.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

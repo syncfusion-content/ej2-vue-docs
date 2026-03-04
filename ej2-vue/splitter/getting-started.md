@@ -34,7 +34,7 @@ The following list of dependencies required to use the Splitter component in you
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -137,7 +137,7 @@ export default {
 
 You can load the pane contents in either HTML element or string types using [content](https://ej2.syncfusion.com/vue/documentation/api/splitter#content) property.
 
-For detailed information, refer to the [Pane Content](./pane-content/) section
+For detailed information, refer to the [Pane Content](./pane-content) section
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

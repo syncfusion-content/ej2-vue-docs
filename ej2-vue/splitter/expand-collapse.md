@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Collapsible panes
 
-The Vue Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the [collapsible](https://ej2.syncfusion.com/vue/documentation/api/splitter/#collapsible) behavior in the paneSettings property to show or hide the expand or collapse icons in the panes. You can dynamically expand and collapse the panes by using the corresponding icons.
+The Vue Splitter panes can be configured with built-in expand and collapse functionalities. By default, collapsible behavior is disabled. Enable the [collapsible](https://ej2.syncfusion.com/vue/documentation/api/splitter#collapsible) behavior in the paneSettings property to show or hide the expand or collapse icons in the panes. You can dynamically expand or collapse panes by using these icons.
 
 The following code shows how to enable collapsible behavior.
 
@@ -29,7 +29,7 @@ The following code shows how to enable collapsible behavior.
 
 ## Programmatically control the expand and collapse action
 
-The Vue Splitter provides public method to control the expand and collapse behavior programmatically using the [expand](https://ej2.syncfusion.com/vue/documentation/api/splitter/#expand) and [collapse](https://ej2.syncfusion.com/vue/documentation/api/splitter/#collapse) methods. Refer to the following code example.
+The Vue Splitter provides public methods to control expand and collapse behavior programmatically using the [expand](https://ej2.syncfusion.com/vue/documentation/api/splitter#expand) and [collapse](https://ej2.syncfusion.com/vue/documentation/api/splitter#collapse) methods. Refer to the following code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -44,7 +44,7 @@ The Vue Splitter provides public method to control the expand and collapse behav
 
 ## Specify initial state to panes
 
-You can render specific panes with collapsed state on page load. Specify a Boolean value to the [collapsed](https://ej2.syncfusion.com/vue/documentation/api/splitter/#collapsed) property to control this behavior. The following code explains how to collapse panes on rendering (the second panes renders with collapsed state).
+You can render specific panes in a collapsed state on page load. Set a Boolean value to the [collapsed](https://ej2.syncfusion.com/vue/documentation/api/splitter#collapsed) property to control this behavior. The following code demonstrates how to collapse panes on rendering (the second panes renders with collapsed state).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -59,4 +59,4 @@ You can render specific panes with collapsed state on page load. Specify a Boole
 
 ## See Also
 
-* [Resizable split panes](./resizing/)
+* [Resizable split panes](./resizing)

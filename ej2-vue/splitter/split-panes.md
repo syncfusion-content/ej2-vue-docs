@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Split panes in Vue Splitter component
 
-This section explain about split panes behaviours.
+This section explains split-pane behavior.
 
 ## Horizontal layout
 
-By default, splitter will render in horizontal orientation. Splitter container will be splitted as panes in horizontal flow direction with vertical separator.
+By default, Splitter renders in horizontal orientation. The Splitter container is split into panes that flow horizontally and are separated by vertical separators.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ By default, splitter will render in horizontal orientation. Splitter container w
 
 ## Vertical layout
 
-By setting [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/splitter/#orientation) API as `Vertical`, splitter will render in vertical orientation. Splitter container will be splitted as panes in vertical flow direction with horizontal separator.
+Set the [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/splitter#orientation) API to `Vertical` to render the Splitter in vertical orientation. The Splitter container is split into panes that flow vertically and are separated by horizontal separators.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,11 +42,11 @@ By setting [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/spli
         
 {% previewsample "page.domainurl/code-snippet/splitter/panes-orientation-cs1" %}
 
-> You can also render multiple panes in splitter with both `Horizontal/Vertical` orientations.
+> You can also render multiple panes in Splitter using either `Horizontal` or `Vertical` orientation.
 
 ## Separator
 
-By default, pane separator will be render with `1px` width/height. You can customize the separator size by using [`separatorSize`](https://ej2.syncfusion.com/vue/documentation/api/splitter/#separatorsize) API.
+By default, the pane separator renders with a `1px` width/height. Customize the separator size using the [`separatorSize`](https://ej2.syncfusion.com/vue/documentation/api/splitter#separatorsize) API.
 
 > For horizontal orientation, it will be considered as separator width.
 > For vertical orientation, it will be considered as separator height.
@@ -64,9 +64,9 @@ By default, pane separator will be render with `1px` width/height. You can custo
 
 ## Nested Splitter
 
-Splitter provides support to render the nested pane to achieve the complex layouts. You can use the same `<div>` element for splitter pane and nested splitter.
+Splitter supports nested panes to achieve complex layouts. The same `<div>` element for splitter pane and nested splitter.
 
-> Also you can render the nested splitter using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
+> A nested Splitter can also be rendered as a direct child of a Splitter pane. In that case, set the nested Splitter to `100%` width and height so it matches the parent pane dimensions.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -81,11 +81,11 @@ Splitter provides support to render the nested pane to achieve the complex layou
 
 ## Add or remove pane
 
-You can add or remove panes programmatically to the splitter, by using [addPane](https://ej2.syncfusion.com/vue/documentation/api/splitter/#addpane) and [removePane](https://ej2.syncfusion.com/vue/documentation/api/splitter/#removepane) methods.
+Add or remove panes programmatically using the [addPane](https://ej2.syncfusion.com/vue/documentation/api/splitter#addpane) and [removePane](https://ej2.syncfusion.com/vue/documentation/api/splitter#removepane) methods.
 
 ### Add pane
 
-You can add the panes dynamically in the splitter by passing [`paneProperties`](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel/) along with index to the [addPane](https://ej2.syncfusion.com/vue/documentation/api/splitter/#addpane) method
+Add panes dynamically by passing [`paneProperties`](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel) along with index to the [addPane](https://ej2.syncfusion.com/vue/documentation/api/splitter#addpane) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -100,7 +100,7 @@ You can add the panes dynamically in the splitter by passing [`paneProperties`](
 
 ### Remove pane
 
-You can remove the split panes dynamically by passing the pane index to [removePane](https://ej2.syncfusion.com/vue/documentation/api/splitter/#removepane) method.
+Remove panes dynamically by passing the pane index to the [removePane](https://ej2.syncfusion.com/vue/documentation/api/splitter#removepane) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

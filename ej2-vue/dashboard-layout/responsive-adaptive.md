@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The control is provided with built-in responsive support, where panels within the layout get adjusted based on their parent element's dimensions to accommodate any resolution which relieves the burden of building responsive dashboards.
 
-The dashboard layout is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one, so that, the panels will be displayed in a vertical column. By default, whenever the screen resolution meets 600 px or lower resolutions this layout transformation occurs. This transformation can be modified for any user defined resolution by defining the for the [`mediaQuery`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#mediaquery) property of the component.
+The dashboard layout is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one, so that, the panels will be displayed in a vertical column. By default, whenever the screen resolution meets 600 px or lower resolutions this layout transformation occurs. This transformation can be modified for any user defined resolution by defining the for the [`mediaQuery`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#mediaquery) property of the component.
 
-The following sample demonstrates the usage of the [`mediaQuery`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#mediaquery) property to turn out the layout into a stacked one in user defined resolution. Here, whenever, the window size reaches 700 px or lesser, the layout becomes a stacked layout.
+The following sample demonstrates the usage of the [`mediaQuery`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#mediaquery) property to turn out the layout into a stacked one in user defined resolution.  In the sample below, the layout becomes a stacked layout when the window width is 700px or less.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,4 +27,4 @@ The following sample demonstrates the usage of the [`mediaQuery`](https://ej2.sy
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/responsive-adaptive-cs1" %}
 
-> You can refer to our [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material/dashboard-layout/default.html) to knows how to present and manipulate data.
+> Refer to the [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations.Also explore the [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material3/dashboard-layout/default.html) to learn how to present and manipulate data.

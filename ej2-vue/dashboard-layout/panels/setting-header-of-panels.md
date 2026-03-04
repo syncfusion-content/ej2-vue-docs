@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Setting header of panels in Vue Dashboard Layout component
 
-The Dashboard Layout component is mostly used to represent the data used for monitoring or managing a process. These data or any HTML template can be placed as the content of a panel using the [`content`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#content) property. Also, word or phrase that summarize the panel’s content can be added as the header on the top of each panel using the [`header`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#header) property of the panel.
+The Dashboard Layout component is commonly used to present monitoring or management data. HTML templates and other content can be placed inside a panel using the [`content`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel#content) property. A concise label or phrase summarizing the panel’s content can be added at the top of each panel using the [`header`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel#header) property of the panel.
 
-The following sample demonstrates how to add content for each panel using the header and content properties of the panels.
+The following sample demonstrates how to provide header and content for each panel.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -44,14 +44,13 @@ In the example below, the v-slot directive is employed with a named slot 'panel0
 
 ## Placing components as content of panels
 
-In a dashboard, components like the chart, grids, maps, gauge, and more etc. can be used to present a complex data. Such components can be placed as the panel content by assigning the corresponding component element as the [`content`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#content) of the panel.
+Dashboard panels can host other UI components such as charts, grids, maps, and gauges by assigning the corresponding component element to the panel's [`content`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel#content) of the panel.
 
-To design a Vue Dashboard Layout with UI components, you can check on this video:
+To see a demonstration of composing a Dashboard Layout with UI components, view this video:
 
 {% youtube "https://www.youtube.com/watch?v=X7NMBiIGkyA" %}
 
-
-The following sample demonstrates how to add EJ2 Chart components as the `content` for each panel in the Dashboard Layout component.
+The following sample shows adding EJ2 Chart components as panel `content`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -64,4 +63,4 @@ The following sample demonstrates how to add EJ2 Chart components as the `conten
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/content-cs1" %}
 
-> You can refer to our [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material/dashboard-layout/default.html) to knows how to present and manipulate data.
+> Refer to the [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. Also explore the [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material3/dashboard-layout/default.html) to knows how to present and manipulate data.

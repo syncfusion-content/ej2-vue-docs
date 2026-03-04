@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in Vue Timeline component
 
-This section describes the Timeline events that will be triggered when appropriate actions are performed. The following events are available in the Timeline component.
+This section describes Timeline events that are triggered during component interactions. The following events are available in the Timeline component.
 
 ## created
 
-The Timeline component triggers the [created](https://ej2.syncfusion.com/vue/documentation/api/timeline#created) event when the component rendering completes.
+The Timeline component triggers the [created](https://ej2.syncfusion.com/vue/documentation/api/timeline#created) event after the component finishes rendering.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
