@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in Vue Timeline component
 
-The Timeline component allows you to customize the appearance of each item by using the [template](https://ej2.syncfusion.com/vue/documentation/api/timeline#template) property to modify the dot items, templated contents, progress bar styling and more.
+The Timeline component allows customization of each item's appearance using the [template](https://ej2.syncfusion.com/vue/documentation/api/timeline#template) property. Templates can modify dot items, item content, progress visuals, and other presentation details.
 
 The `template` context receives the following information:
 

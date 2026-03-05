@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize the card image title position in Vue Card component | Syncfusion
+title: Customize card image title position in Vue Card | Syncfusion
 description: Learn here all about Customize the card image title position in Syncfusion Vue Card component of Syncfusion Essential JS 2 and more.
 control: Customize the card image title position 
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the card image title position in Vue Card component
 
-Card Image titles are placed as always Bottom-Left Corner only, You can manually customize to placing titles anywhere over the image by adding styles.
+By default, card image titles are positioned at the bottom-left corner. Add custom CSS to reposition the title anywhere over the image.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

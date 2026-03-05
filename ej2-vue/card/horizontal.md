@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Horizontal in Vue Card component
 
-By default, all the card elements are aligned vertically one after the other as in the DOM. You can achieve the element to align horizontally as well by adding the class `e-card-horizontal` in the root card element.
+By default, card elements are stacked vertically in DOM order. To lay out elements side-by-side, add the `e-card-horizontal` class to the root card element.
 
 ## Stacked cards
 

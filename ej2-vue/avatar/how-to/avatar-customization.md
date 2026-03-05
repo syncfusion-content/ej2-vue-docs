@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Color customization
 
-The avatar comes with default background color (grey). This can be easily customized to desired color by adding custom class or directly selecting the avatar class from the CSS.
+The avatar defaults to a Grey background. This can be easily customized to desired color by adding custom class or directly selecting the avatar class from the CSS.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The avatar comes with default background color (grey). This can be easily custom
 
 ## Customize avatar sizes
 
-Even though the avatar comes with five predefined sizes, sometimes it's not enough. So, the avatar is designed in such a way that the width and height will be relative to font-size. By changing the `font-size` of the avatar element, you can change the width and height automatically.
+If the five predefined sizes are insufficient, change the `font-size` of the avatar element — width and height scale relative to the element's `font-size`, so increasing font-size enlarges the avatar proportionally.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ Even though the avatar comes with five predefined sizes, sometimes it's not enou
 
 ### Use various media in avatar
 
-Avatars can be used with a wide variety of media formats like SVG, font-icons, images, letters, words, etc. Some of them are given below.
+Avatars support a wide variety of media formats such as SVGs, font-icons, images, letters, and words, etc. Some of them are given below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

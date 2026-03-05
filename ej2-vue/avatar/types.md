@@ -14,7 +14,7 @@ This section explains different types of avatar.
 
 ## Avatar size
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar has the following predefined sizes that can be used with the `.e-avatar` class to change the appearance of the avatar.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar provides the following predefined sizes. Apply the modifier classes below alongside the `.e-avatar` class to change the avatar size.
 
 | Class Name         | Description
 | :-------------:    |:-------------:
@@ -44,7 +44,7 @@ The types of Essential<sup style="font-size:70%">&reg;</sup> JS 2 avatar are:
 
 ### Default
 
-The default style of the avatar is rectangular shape with rounded corners, which can be applied from adding the modifier class `.e-avatar` to the target element.
+The default avatar is a rectangular shape with rounded corners. Apply it by adding the modifier class `.e-avatar` to the target element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -59,7 +59,7 @@ The default style of the avatar is rectangular shape with rounded corners, which
 
 ### Circle
 
-The circle avatar style can be applied by adding the modifier class `.e-avatar-circle` to the target element.
+Apply the circle avatar style by adding the modifier class `.e-avatar-circle` to the target element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

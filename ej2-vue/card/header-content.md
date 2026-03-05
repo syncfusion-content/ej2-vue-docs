@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Header
 
-The Card can be created with header title, sub title and images. For adding header you need to create `div` element with the class `e-card-header` added.
+A Card can include a header with a title, subtitle, and image. Add a header by creating a `div` element with the `e-card-header` class.
 
-Card provides below elements and corresponding class definitions to include header.
+Card provides the following header elements and corresponding class definitions.
 
 Elements   | Description
 ------------ | -------------
@@ -31,17 +31,17 @@ Class   | Description
 
 ### Title and Subtitle
 
-For adding header to the Card , you need to create wrapper `div` element with `e-card-header-caption` class.
+To add a header caption, create a wrapper `div` with the `e-card-header-caption` class.
 
-* Place the `div` element with `e-card-header-title` class inside the header caption for adding main title.
+* Place a `div` with the `e-card-header-title` class inside the header caption to add the main title.
 
-* Place the div element with `e-card-sub-title` class inside the header caption element for adding sub-title.
+* Place a `div` with the `e-card-sub-title` class inside the header caption to add the subtitle.
 
 ### Image
 
-Card header has an option for adding images in the header. It is aligned with either before or after the header based on the HTML element positioned in the header structure.
+The Card header supports adding images. The header image can be positioned before or after the header caption depending on its placement in the header markup.
 
-* The header image can be added by creating a `div` element with `e-card-header-image` class which can be placed before or after the header caption wrapper element.
+* Add a `div` with the `e-card-header-image` class to include a header image; place it before or after the caption wrapper as needed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -56,7 +56,7 @@ Card header has an option for adding images in the header. It is aligned with ei
 
 ## Content
 
-Content in Card holds texts, images, links and all possible HTML elements. Its adaptable within the Card root element.
+Card content can contain text, images, links, and other HTML elements. Its adaptable within the Card root element.
 
 * Create a `div` element with the class `e-card-content`.
 * Place content `div` element in the Card root element or within any Card inner elements.

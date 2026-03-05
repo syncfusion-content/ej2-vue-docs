@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Different layouts in Vue Splitter component
 
-By using splitter component, you can create the different layouts with multiple and nested panes.
+Using the Splitter component, create multiple and nested pane layouts for common application scenarios.
 
 ## Code editor style layout
 
 **Step 1**:
 
-Create the element with two child to render the outer splitter and render the first pane of vertical splitter as a horizontal splitter.
+Create the element with two child to render the outer Splitter and render the first pane of the vertical Splitter as a horizontal splitter.
 
 ```
 
@@ -120,7 +120,7 @@ export default Vue.extend({
 
 ```
 
-Once the above configurations has been completed, you will get the output like [this](https://ej2.syncfusion.com/vue/demos/#/material/splitter/code-editor-layout.html)
+After completing the above configuration, the output appears as shown in the [demo](https://ej2.syncfusion.com/vue/demos/#/material3/splitter/code-editor-layout.html)
 
 ## Outlook style layout
 
@@ -205,9 +205,9 @@ export default Vue.extend({
 
 **Step 2** :
 
-Create the separate template files to render the inner components.
+Create separate template files to render the inner components.
 
-Below template defined for treeview
+The following template defines the TreeView component.
 
 ```
 
@@ -273,7 +273,7 @@ export default Vue.extend ({
 
 ```
 
-Below template defined for listview
+The following template defines the ListView component.
 
 ```
 
@@ -313,7 +313,7 @@ export default Vue.extend({
 
 ```
 
-Below template defined for RTE
+The following template defines the Rich Text Editor component.
 
 ```
 
@@ -375,8 +375,8 @@ export default Vue.extend({
 
 ```
 
-Once the above configurations has been completed, you will get the output like [this](https://ej2.syncfusion.com/vue/demos/#/material/splitter/outlook-style-layout.html).
+Once the above configurations have been completed, the output will appear as shown in the [this](https://ej2.syncfusion.com/vue/demos/#/material3/splitter/outlook-style-layout.html).
 
 ## See Also
 
-* [Multiple panes in Splitter](./split-panes/)
+* [Multiple panes in Splitter](./split-panes)

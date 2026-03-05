@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue Splitter component
 
-The Splitter component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Splitter component follows widely adopted accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Splitter component is outlined below.
 
@@ -40,7 +40,7 @@ The accessibility compliance for the Splitter component is outlined below.
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the splitter without interruptions:
+The Splitter provides keyboard access to ensure users can operate splitter bars without a mouse. The supported shortcuts are:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
@@ -54,9 +54,9 @@ You can use the following key shortcuts to access the splitter without interrupt
 
 ## Ensuring accessibility
 
-The Splitter component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+Accessibility verification for the Splitter component is performed using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during automated testing to help maintain compliance.
 
-The accessibility compliance of the Splitter component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/splitter.html) in a new window to evaluate the accessibility of the Splitter component with accessibility tools.
+The accessibility compliance of the Splitter component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/splitter.html) in a new window to evaluate the Splitter component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/splitter.html" %}
 

@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Resizing of panels in Vue Dashboard Layout component
 
-The Dashboard Layout component is also provided with the panel resizing functionality which can be enabled or disabled using the [`allowResizing`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#allowresizing) property. This functionality allows you to resize the panels dynamically through UI interactions using the resizing handlers which controls the panel resizing in various directions.
+The Dashboard Layout component provides panel resizing functionality, which can be enabled or disabled using the [`allowResizing`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#allowresizing) property. This functionality allows panels to be resized through UI interactions using resizing handlers that control resizing in various directions.
 
-Initially, the panels can be resized only in south-east direction. However, panels can also be resized in east, west, north, south and south-west directions by defining the required directions with the [`resizableHandles`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#resizablehandles) property.
+By default, panels can be resized only in the south-east direction. Panels can also be resized in east, west, north, south, and south-west directions by specifying the required directions with the[`resizableHandles`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#resizablehandles) property.
 
-On resizing a panel in Dashboard Layout the following events will be triggered,
-* [resizeStart](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#resizestart) - Triggers when panel resize starts
-* [resize](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#resize) - Triggers when panel is being resized
-* [resizeStop](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#resizestop) - Triggers when panel resize stops
+On resizing a panel in Dashboard Layout the following events are triggered,
+* [resizeStart](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#resizestart) - Triggers when panel resize starts
+* [resize](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#resize) - Triggers when panel is being resized
+* [resizeStop](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#resizestop) - Triggers when panel resize stops
 
-The following sample demonstrates how to enable and disable the resizing of panels in the Dashboard Layout component in different directions.
+The following sample demonstrates enabling and disabling panel resizing in different directions.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -34,7 +34,7 @@ The following sample demonstrates how to enable and disable the resizing of pane
 
 ## Resizing panels programmatically
 
-The Dashboard Layout panels can also be resized programmatically by using [resizePanel](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#resizepanel) method. The method is invoked as follows,
+Dashboard Layout panels can also be resized programmatically using the [resizePanel](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#resizepanel) method. The method is invoked as follows,
 
 ```js
 resizePanel(id, sizeX, sizeY)
@@ -42,11 +42,11 @@ resizePanel(id, sizeX, sizeY)
 ```
 
 Where,
-* [`id`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#id) - ID of the panel which needs to be resized.
-* [`sizeX`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizex) - New panel width in cells count for resizing the panel.
-* [`sizeY`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizey) - New panel height in cells count for resizing the panel.
+* [`id`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel#id) - ID of the panel which needs to be resized.
+* [`sizeX`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel#sizex) - New panel width in cells count for resizing the panel.
+* [`sizeY`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel#sizey) - New panel height in cells count for resizing the panel.
 
-The following sample demonstrates resizing panels programmatically in the Dashboard Layout's [created](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#created) event.
+The following sample demonstrates resizing panels programmatically in the Dashboard Layout's [created](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#created) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -59,4 +59,4 @@ The following sample demonstrates resizing panels programmatically in the Dashbo
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/resize-panel-cs1" %}
 
-> You can refer to our [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material/dashboard-layout/default.html) to knows how to present and manipulate data.
+> Refer to the [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore the [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material3/dashboard-layout/default.html) to learn how to present and manipulate data.

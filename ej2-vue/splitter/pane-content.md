@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Pane content in Vue Splitter component
 
-This section explains how to provide plain text content or HTML markup or integrate other JavaScript UI components as content of splitter.
+This section explains how to provide plain text, HTML markup, or other JavaScript UI components as pane content in the Splitter.
 
 ## HTML Markup
 
-Splitter is a layout based container component. You can render the pane contents from existing HTML markups. Converting HTML markup as splitter pane is easy way to add the panes content dynamically.
+The Splitter is a layout container component. Render pane content from existing HTML markup. Converting HTML markup into Splitter panes makes it easy to add pane content dynamically.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,13 +29,13 @@ Splitter is a layout based container component. You can render the pane contents
 
 ## JavaScript UI components
 
-You can render any JavaScript UI components along with their native and control events within splitter as pane content.
+Any JavaScript UI component, along with its native and control events, can be rendered inside a Splitter pane.
 
-You can refer [Accordion within splitter](https://ej2.syncfusion.com/vue/demos/#/material/splitter/accordion-navigation-menu.html) and [Listview within splitter](https://ej2.syncfusion.com/vue/demos/#/material/splitter/details-view.html) examples.
+Refer [Accordion within splitter](https://ej2.syncfusion.com/vue/demos/#/material3/splitter/accordion-navigation-menu.html) and [Listview within splitter](https://ej2.syncfusion.com/vue/demos/#/material3/splitter/details-view.html) examples.
 
 ## Plain content
 
-You can add the plain text as a pane contents using either inner HTML or [content](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel/#content) API
+Add plain text as pane content using inner HTML or the [content](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel#content) API
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -50,7 +50,7 @@ You can add the plain text as a pane contents using either inner HTML or [conten
 
 ## Pane content using selector
 
-You can set HTML element as pane [content](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel/#content) using the query selectors such as ID or CSS class selectors.
+Set an HTML element as pane [content](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel#content) using query selectors such as an ID or CSS class selectors.
 
 The following code demonstrates how to fetch an element from the document and load it to pane using its ID.
 
