@@ -14,7 +14,7 @@ Avatar can be integrated into various components to make a wide variety of appli
 
 ## ListView
 
-Avatar is integrated into the listview to create contacts applications. The `xsmall` size avatar is used to match the size of the list item. Letters and images are also used as avatar content.
+Avatar is integrated into the ListView to create contacts-style interfaces. Use the `small` size avatar to match the list-item layout. Letters and images are both supported as avatar content.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

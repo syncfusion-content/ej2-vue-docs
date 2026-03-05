@@ -1,19 +1,19 @@
 
 import Vue from "vue";
-import { GanttPlugin, DayMarkers} from "@syncfusion/ej2-vue-gantt";
+import { GanttPlugin, DayMarkers } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
 Vue.use(GanttPlugin);
-;
+
 new Vue({
-	el: '#app',
-	template: `
+    el: '#app',
+    template: `
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :eventMarkers="eventMarkers"></ejs-gantt>
     </div>
 `,
 
-  data: function() {
-      return{
+    data: function () {
+        return {
             data: projectNewData,
             height: '450px',
             taskFields: {
@@ -24,9 +24,9 @@ new Vue({
                 duration: 'Duration',
                 progress: 'Progress',
                 dependency: 'Predecessor',
-                child: 'subtasks'
+                parentID: 'ParentID'
             },
-             eventMarkers: [
+            eventMarkers: [
                 {
                     day: new Date('04/09/2019'),
                     label: 'Research phase'
@@ -41,10 +41,10 @@ new Vue({
                     label: 'Sales and marketing phase'
                 }
             ]
-      };
-  },
-  provide: {
-      gantt: [DayMarkers]
-  }
+        };
+    },
+    provide: {
+        gantt: [DayMarkers]
+    }
 
 });

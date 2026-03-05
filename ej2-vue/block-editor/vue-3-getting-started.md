@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> BlockEditor component in Vue 3
+# Getting Started with the BlockEditor component in Vue 3
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue BlockEditor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
@@ -134,7 +134,7 @@ Follow the below steps to add the Vue BlockEditor component using `Composition A
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-    import { BlockEditorComponent as EjsBlockEditor  } from "@syncfusion/ej2-vue-blockeditor";
+    import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
 </script>
 
 {% endhighlight %}
@@ -175,7 +175,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 </template>
 
 <script setup>
-    import { BlockEditorComponent as EjsBlockEditor  } from "@syncfusion/ej2-vue-blockeditor";
+    import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
 </script>
 
 <style>
@@ -202,7 +202,7 @@ import { BlockEditorComponent  } from "@syncfusion/ej2-vue-blockeditor";
 export default {
     name: "App",
     components: {
-    'ejs-BlockEditor': BlockEditorComponent
+    'ejs-blockeditor': BlockEditorComponent
     }
 }
 </script>
@@ -238,7 +238,7 @@ The output will appear as follows:
 
 ![Output](./images/block-editor-component.png)
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the [migration](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 

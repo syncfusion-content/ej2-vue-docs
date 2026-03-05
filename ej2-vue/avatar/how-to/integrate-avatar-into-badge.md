@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integrate avatar into badge in Vue Avatar component
 
-The badge is dependent and supportive component, and it can be used with avatar to create a notification avatar.
+The Badge component can be used with Avatar to create notification avatars.
 The default avatar (.`e-avatar`) and circle avatar (.`e-avatar-circle`) have been used with notification badges (.`e-badge-notification`) in the following sample.
 
 {% tabs %}

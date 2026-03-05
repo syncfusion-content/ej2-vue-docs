@@ -15,7 +15,7 @@ const taskFields = {
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks',
+    parentID: 'ParentID'
 };
 const height = '450px';
 const splitterSettings = {
@@ -27,11 +27,11 @@ const columns = [
     { field: 'Duration', headerText: 'Duration', width: '150' },
     { field: 'Progress', headerText: 'Progress', width: '150' },
 ];
-const actionFailure = function(args) {
-       let span = document.createElement('span');
-       let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0];
-       gantt.element.parentNode.insertBefore(span, gantt.element);
-       span.style.color = '#FF0000';
-       span.innerHTML = args.error[0];
+const actionFailure = function (args) {
+    let span = document.createElement('span');
+    let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0];
+    gantt.element.parentNode.insertBefore(span, gantt.element);
+    span.style.color = '#FF0000';
+    span.innerHTML = args.error[0];
 };
 </script>

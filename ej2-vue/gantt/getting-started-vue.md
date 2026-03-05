@@ -121,7 +121,7 @@ Import the needed css styles for the Gantt Chart component along with dependency
 
 ```css
 <style>
-<!-- Tailwind3 theme used for this sample -->
+
  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
@@ -155,7 +155,7 @@ Refer to the Gantt's CDN links as follows.
 > Styles: [https://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css](https://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css)
 
 ```js
-<!-- Tailwind3 theme used for this sample -->
+
 <link href="http://cdn.syncfusion.com/ej2/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
 <link href="http://cdn.syncfusion.com/ej2/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
 <link href="http://cdn.syncfusion.com/ej2/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
@@ -231,92 +231,72 @@ export default {
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-    const data = [{
-         TaskID: 1,
-         TaskName: 'Planning',
-         StartDate: new Date('02/03/2017'),
-         EndDate: new Date('02/07/2017'),
-         Progress: 100,
-         Duration: 5,
-         subtasks: [
-             { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
-             { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
-         ]
-     },
-     {
-         TaskID: 6,
-         TaskName: 'Design',
-         StartDate: new Date('02/10/2017'),
-         EndDate: new Date('02/14/2017'),
-         Duration: 3,
-         Progress: 86,
-         subtasks: [
-             { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
-             { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
-             { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
-             { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
-             { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
-         ]
-     }],
-     taskFields: {
-             id: 'TaskID',
-             name: 'TaskName',
-             startDate: 'StartDate',
-             endDate: 'EndDate',
-             duration: 'Duration',
-             progress: 'Progress',
-             child: 'subtasks',
-         }
+const data = [
+    { TaskID: 1, TaskName: 'Planning', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Progress: 100, Duration: 5, ParentID: null },
+
+    { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+    { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+    { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+    { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, ParentID: 1 },
+
+    { TaskID: 6, TaskName: 'Design', StartDate: new Date('02/10/2017'), EndDate: new Date('02/14/2017'), Duration: 3, Progress: 86, ParentID: null },
+
+    { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, ParentID: 6 },
+    { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 100, ParentID: 6 },
+
+    { TaskID: 9, TaskName: 'Get approval from customer', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
+    { TaskID: 10, TaskName: 'Design Documentation', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
+
+    { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0, ParentID: 6 }
+];
+
+const taskFields: {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'ParentID'
+}
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <script>
-data() {
-  return {
-    data:  [{
-         TaskID: 1,
-         TaskName: 'Planning',
-         StartDate: new Date('02/03/2017'),
-         EndDate: new Date('02/07/2017'),
-         Progress: 100,
-         Duration: 5,
-         subtasks: [
-             { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
-             { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
-         ]
-     },
-     {
-         TaskID: 6,
-         TaskName: 'Design',
-         StartDate: new Date('02/10/2017'),
-         EndDate: new Date('02/14/2017'),
-         Duration: 3,
-         Progress: 86,
-         subtasks: [
-             { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
-             { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
-             { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
-             { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
-             { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
-         ]
-     }],
-     taskFields: {
-             id: 'TaskID',
-             name: 'TaskName',
-             startDate: 'StartDate',
-             endDate: 'EndDate',
-             duration: 'Duration',
-             progress: 'Progress',
-             child: 'subtasks',
-         }
-  };
-}
+export default {
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Planning', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Progress: 100, Duration: 5, ParentID: null },
+
+        { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+        { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, ParentID: 1 },
+
+        { TaskID: 6, TaskName: 'Design', StartDate: new Date('02/10/2017'), EndDate: new Date('02/14/2017'), Duration: 3, Progress: 86, ParentID: null },
+
+        { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, ParentID: 6 },
+        { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 100, ParentID: 6 },
+        { TaskID: 9, TaskName: 'Get approval from customer', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
+        { TaskID: 10, TaskName: 'Design Documentation', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
+
+        { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0, ParentID: 6 }
+      ],
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      }
+    };
+  }
+};
 </script>
 
 {% endhighlight %}
@@ -328,59 +308,53 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <ejs-gantt :dataSource='data' :treeColumnIndex='1' child='subtasks' :taskFields= 'taskFields'>
-        <e-columns>
-            <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-            <e-column field='TaskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-            <e-column field='StartDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-            <e-column field='Duration' headerText='Duration' textAlign='Right' width=80></e-column>
-       </e-columns>
-    </ejs-gantt>
+  <ejs-gantt 
+    :dataSource="data"
+    :treeColumnIndex="1"
+    :taskFields="taskFields"
+  >
+    <e-columns>
+      <e-column field="TaskID" headerText="Task ID" textAlign="Right" width="70"></e-column>
+      <e-column field="TaskName" headerText="Task Name" textAlign="Left" width="200"></e-column>
+      <e-column field="StartDate" headerText="Start Date" textAlign="Right" format="yMd" width="90"></e-column>
+      <e-column field="Duration" headerText="Duration" textAlign="Right" width="80"></e-column>
+    </e-columns>
+  </ejs-gantt>
 </template>
 
 <script setup>
-    const data = [{
-         TaskID: 1,
-         TaskName: 'Planning',
-         StartDate: new Date('02/03/2017'),
-         EndDate: new Date('02/07/2017'),
-         Progress: 100,
-         Duration: 5,
-         subtasks: [
-             { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
-             { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
-         ]
-     },
-     {
-         TaskID: 6,
-         TaskName: 'Design',
-         StartDate: new Date('02/10/2017'),
-         EndDate: new Date('02/14/2017'),
-         Duration: 3,
-         Progress: 86,
-         subtasks: [
-             { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
-             { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
-             { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
-             { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
-             { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
-         ]
-     }],
-     taskFields: {
-             id: 'TaskID',
-             name: 'TaskName',
-             startDate: 'StartDate',
-             endDate: 'EndDate',
-             duration: 'Duration',
-             progress: 'Progress',
-             child: 'subtasks',
-         }
+const data = [
+  { TaskID: 1, TaskName: 'Planning', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Progress: 100, Duration: 5, ParentID: null },
+
+  { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, ParentID: 1 },
+
+  { TaskID: 6, TaskName: 'Design', StartDate: new Date('02/10/2017'), EndDate: new Date('02/14/2017'), Duration: 3, Progress: 86, ParentID: null },
+
+  { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, ParentID: 6 },
+  { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 100, ParentID: 6 },
+
+  { TaskID: 9, TaskName: 'Get approval from customer', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
+  { TaskID: 10, TaskName: 'Design Documentation', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
+
+  { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0, ParentID: 6 }
+];
+
+const taskFields = {
+  id: 'TaskID',
+  name: 'TaskName',
+  startDate: 'StartDate',
+  endDate: 'EndDate',
+  duration: 'Duration',
+  progress: 'Progress',
+  parentID: 'ParentID'
+};
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
+
  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
@@ -395,108 +369,105 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
  @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
 
-
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :toolbar="toolbar" :allowFiltering= "true" :timelineSettings="timelineSettings" :splitterSettings= "splitterSettings" :labelSettings= "labelSettings" :projectStartDate="projectStartDate" :projectEndDate= "projectEndDate"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :columns="columns"
+      :toolbar="toolbar"
+      :allowFiltering="true"
+      :timelineSettings="timelineSettings"
+      :splitterSettings="splitterSettings"
+      :labelSettings="labelSettings"
+      :projectStartDate="projectStartDate"
+      :projectEndDate="projectEndDate"
+    ></ejs-gantt>
+  </div>
 </template>
 
 <script>
-import { GanttComponent, Filter, Toolbar } from '@syncfusion/ej2-vue-gantt';
+import { GanttComponent, Filter, Toolbar } from "@syncfusion/ej2-vue-gantt";
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    "ejs-gantt": GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                dependency: 'Predecessor',
-                child: 'subtasks',
-            },
-            columns: [
-                { field: 'TaskName', headerText: 'Task Name', width: '250' , clipMode: 'EllipsisWithTooltip' },
-                { field: 'StartDate', headerText: 'Start Date' },
-                { field: 'Duration', headerText: 'Duration' },
-                { field: 'EndDate', headerText: 'End Date' },
-                { field: 'Predecessor', headerText: 'Predecessor' }
-            ],
-            toolbar: ['Search'],
-            timelineSettings: {
-                timelineUnitSize: 60,
-                topTier: {
-                format: 'MMM dd, yyyy',
-                unit: 'Week',
-                },
-                bottomTier: {
-                unit: 'Day',
-                },
-            },
-            splitterSettings: {
-                columnIndex: 3
-                },
-            labelSettings: {
-                rightLabel: 'TaskName',
-            },
-            projectStartDate: new Date('04/01/2019 01:00:00 AM'),
-            projectEndDate: new Date('05/10/2019')  
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      },
+
+      columns: [
+        { field: 'TaskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
+        { field: 'StartDate', headerText: 'Start Date' },
+        { field: 'Duration', headerText: 'Duration' },
+        { field: 'EndDate', headerText: 'End Date' },
+        { field: 'Predecessor', headerText: 'Predecessor' }
+      ],
+
+      toolbar: ['Search'],
+
+      timelineSettings: {
+        timelineUnitSize: 60,
+        topTier: { format: 'MMM dd, yyyy', unit: 'Week' },
+        bottomTier: { unit: 'Day' }
+      },
+
+      splitterSettings: { columnIndex: 3 },
+
+      labelSettings: { rightLabel: 'TaskName' },
+
+      projectStartDate: new Date('04/01/2019 01:00:00 AM'),
+      projectEndDate: new Date('05/10/2019')
+    };
   },
   provide: {
-      gantt: [ Filter, Toolbar ]
+    gantt: [Filter, Toolbar]
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -508,85 +479,73 @@ The Gantt chart provides an option to define the timeline using the [timelineSet
 
 ```html
 <template>
-     <div>
-        <ejs-gantt id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :timelineSettings="timelineSettings"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :timelineSettings="timelineSettings"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                dependency: 'Predecessor',
-                child: 'subtasks'
-            },
-             timelineSettings: {
-                topTier: {
-                    format: 'MMM dd, yyyy',
-                    unit: 'Week',
-                },
-                bottomTier: {
-                    unit: 'Day',
-                },
-            },
-      };
-  },  
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      },
+
+      timelineSettings: {
+        topTier: { format: 'MMM dd, yyyy', unit: 'Week' },
+        bottomTier: { unit: 'Day' }
+      }
+    };
+  }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
-
 ```
 
 ## Enable Toolbar
@@ -597,89 +556,86 @@ To use the toolbar, inject the `Toolbar` module in the `provide` section.
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :toolbar="toolbar"
+      :editSettings="editSettings"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent, Edit, Selection, Toolbar } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
-  },  
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                dependency: 'Predecessor',
-                child: 'subtasks'
-            },
-            toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
-             editSettings: {
-                allowAdding: true,
-                allowEditing: true,
-                allowDeleting: true,
-                allowTaskbarEditing: true,
-                showDeleteConfirmDialog: true
-            },
-      };
+    'ejs-gantt': GanttComponent
   },
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      },
+
+      toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
+
+      editSettings: {
+        allowAdding: true,
+        allowEditing: true,
+        allowDeleting: true,
+        allowTaskbarEditing: true,
+        showDeleteConfirmDialog: true
+      }
+    };
+  },
+
   provide: {
-      gantt: [ Edit, Selection, Toolbar ]
+    gantt: [Edit, Selection, Toolbar]
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
-
 ```
-
 ## Enabling editing
 
 The editing feature enables task modifications in the Gantt Chart component. It can be enabled by using the [editSettings.allowEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowediting) and [editSettings.allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) properties.
@@ -699,92 +655,92 @@ Modify task details through cell editing by setting the edit [mode](https://ej2.
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :columns = "columns" :editSettings= "editSettings"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :toolbar="toolbar"
+      :columns="columns"
+      :editSettings="editSettings"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent, Edit } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                child: 'subtasks'
-            },
-            columns: [
-                { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-                { field: 'TaskName', headerText: 'Task Name', width: '250' },
-                { field: 'StartDate', headerText: 'Start Date', width: '150' },
-                { field: 'Duration', headerText: 'Duration', width: '150' },
-                { field: 'Progress', headerText: 'Progress', width: '150' },
-            ],
-            toolbar: ['Edit'],
-            editSettings: {
-                allowEditing: true,
-                mode:"Auto"
-            },
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      },
+
+      columns: [
+        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
+        { field: 'TaskName', headerText: 'Task Name', width: '250' },
+        { field: 'StartDate', headerText: 'Start Date', width: '150' },
+        { field: 'Duration', headerText: 'Duration', width: '150' },
+        { field: 'Progress', headerText: 'Progress', width: '150' }
+      ],
+
+      toolbar: ['Edit'],
+
+      editSettings: {
+        allowEditing: true,
+        mode: 'Auto'
+      }
+    };
   },
+
   provide: {
-      gantt: [ Edit ]
+    gantt: [Edit]
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
-
 ```
-
 > When the edit mode is set to `Auto`, cells can be switched to editable mode by double‑clicking anywhere in the TreeGrid, and task details can be edited in the edit dialog by double‑clicking anywhere in the chart.
 
 ### Dialog editing
@@ -793,74 +749,90 @@ Modify task details through a dialog by setting the edit [mode](https://ej2.sync
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :columns = "columns" :editSettings= "editSettings"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :toolbar="toolbar"
+      :columns="columns"
+      :editSettings="editSettings"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
-import { GanttComponent, Edit} from '@syncfusion/ej2-vue-gantt';
+import { GanttComponent, Edit } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                child: 'subtasks'
-            },
-            columns: [
-                { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-                { field: 'TaskName', headerText: 'Task Name', width: '250' },
-                { field: 'StartDate', headerText: 'Start Date', width: '150' },
-                { field: 'Duration', headerText: 'Duration', width: '150' },
-                { field: 'Progress', headerText: 'Progress', width: '150' },
-            ],
-            toolbar: ['Edit'],
-             editSettings: {
-                 allowEditing: true,
-                 mode:"Dialog"
-            },
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      },
+
+      columns: [
+        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
+        { field: 'TaskName', headerText: 'Task Name', width: '250' },
+        { field: 'StartDate', headerText: 'Start Date', width: '150' },
+        { field: 'Duration', headerText: 'Duration', width: '150' },
+        { field: 'Progress', headerText: 'Progress', width: '150' }
+      ],
+
+      toolbar: ['Edit'],
+
+      editSettings: {
+        allowEditing: true,
+        mode: "Dialog"
+      }
+    };
   },
   provide: {
-      gantt: [ Edit ]
+    gantt: [Edit]
   }
 };
 </script>
 
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+</style>
 ```
 
 > In dialog editing mode, the edit dialog appears when performing a double‑click action on both the TreeGrid and chart sides.
@@ -871,87 +843,89 @@ Modify task details through user interactions such as resizing and dragging the 
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :columns = "columns" :editSettings= "editSettings"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :toolbar="toolbar"
+      :columns="columns"
+      :editSettings="editSettings"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent, Edit } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                child: 'subtasks'
-            },
-            columns: [
-                { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-                { field: 'TaskName', headerText: 'Task Name', width: '250' },
-                { field: 'StartDate', headerText: 'Start Date', width: '150' },
-                { field: 'Duration', headerText: 'Duration', width: '150' },
-                { field: 'Progress', headerText: 'Progress', width: '150' },
-            ],
-            toolbar: ['Edit'],
-             editSettings: {
-                allowTaskbarEditing:true
-            },
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      },
+
+      columns: [
+        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
+        { field: 'TaskName', headerText: 'Task Name', width: '250' },
+        { field: 'StartDate', headerText: 'Start Date', width: '150' },
+        { field: 'Duration', headerText: 'Duration', width: '150' },
+        { field: 'Progress', headerText: 'Progress', width: '150' }
+      ],
+
+      toolbar: ['Edit'],
+
+      editSettings: {
+        allowTaskbarEditing: true
+      }
+    };
   },
+
   provide: {
-      gantt: [ Edit ]
+    gantt: [Edit]
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
 ```
 
@@ -961,90 +935,88 @@ Modify task dependencies using mouse interactions by enabling the [allowTaskbarE
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :columns = "columns" :editSettings= "editSettings"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :toolbar="toolbar"
+      :columns="columns"
+      :editSettings="editSettings"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
-import { GanttComponent, Edit} from '@syncfusion/ej2-vue-gantt';
+import { GanttComponent, Edit } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-        {
-            TaskID: 1,
-            TaskName: 'Project Initiation',
-            StartDate: new Date('04/02/2019'),
-            EndDate: new Date('04/21/2019'),
-            subtasks: [
-                { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50 },
-                { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4,Predecessor:"2FS", Progress: 50 },
-            ]
-        },
-        {
-            TaskID: 5,
-            TaskName: 'Project Estimation',
-            StartDate: new Date('04/02/2019'),
-            EndDate: new Date('04/21/2019'),
-            subtasks: [
-                { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0,Predecessor:"6SS", Progress: 50 }
-            ]
-        },
-    ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                dependency: 'Predecessor',
-                child: 'subtasks'
-            },
-            columns: [
-                { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-                { field: 'TaskName', headerText: 'Task Name', width: '250' },
-                { field: 'StartDate', headerText: 'Start Date', width: '150' },
-                { field: 'Duration', headerText: 'Duration', width: '150' },
-                { field: 'Progress', headerText: 'Progress', width: '150' },
-            ],
-            toolbar: ['Edit'],
-             editSettings: {
-                allowTaskbarEditing:true
-            },
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: "2FS", Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: "6SS", Progress: 50, ParentID: 5 }
+      ],
+      height: '450px',
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        parentID: 'ParentID'
+      },
+
+      columns: [
+        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
+        { field: 'TaskName', headerText: 'Task Name', width: '250' },
+        { field: 'StartDate', headerText: 'Start Date', width: '150' },
+        { field: 'Duration', headerText: 'Duration', width: '150' },
+        { field: 'Progress', headerText: 'Progress', width: '150' }
+      ],
+
+      toolbar: ['Edit'],
+
+      editSettings: {
+        allowTaskbarEditing: true
+      }
+    };
   },
   provide: {
-      gantt: [ Edit ]
+    gantt: [Edit]
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
-
 ```
 
 ## Enabling predecessors or task relationships
@@ -1060,78 +1032,72 @@ Task relationships can be shown by using the[dependency](https://ej2.syncfusion.
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" highlightWeekends='true'></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      highlightWeekends="true"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-        {
-            TaskID: 1,
-            TaskName: 'Project Initiation',
-            StartDate: new Date('04/02/2019'),
-            EndDate: new Date('04/21/2019'),
-            subtasks: [
-                { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50 },
-                { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4,Predecessor:"2FS", Progress: 50 },
-            ]
-        },
-        {
-            TaskID: 5,
-            TaskName: 'Project Estimation',
-            StartDate: new Date('04/02/2019'),
-            EndDate: new Date('04/21/2019'),
-            subtasks: [
-                { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0,Predecessor:"6SS", Progress: 50 }
-            ]
-        },
-    ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                dependency: 'Predecessor',
-                child: 'subtasks'
-            },
-      };
-  },  
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: "2FS", Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: "6SS", Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        parentID: 'ParentID'
+      }
+    };
+  }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
-
 ```
-
 ## Assigning resources
 
 Resources can be displayed and assigned to each task in the Gantt Chart component. Create a collection of JSON objects that contain the id, name, unit, and group of the resources, and assign it to the [resources](https://ej2.syncfusion.com/vue/documentation/api/gantt#resources) property.
@@ -1140,101 +1106,101 @@ Map these fields to the Gantt control using the [resourceFields](https://ej2.syn
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields= "taskFields" :height= "height" :treeColumnIndex= "1" :resourceFields= "resourceFields" :resources= "resources" :highlightWeekends= "true" :labelSettings= "labelSettings"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :treeColumnIndex="1"
+      :resourceFields="resourceFields"
+      :resources="resources"
+      :highlightWeekends="true"
+      :labelSettings="labelSettings"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-                {
-                    TaskID: 1,
-                    TaskName: 'Project initiation',
-                    StartDate: new Date('04/02/2019'),
-                    EndDate: new Date('04/21/2019'),
-                    subtasks: [
-                        {TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('04/02/2019'), Duration: 0,Progress: 50, resources: [1]},
-                        {TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: '2',Progress: 50, resources: [2, 3, 5]},
-                        {TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 50 },
-                    ]
-                },
-                {
-                    TaskID: 5,
-                    TaskName: 'Project estimation',
-                    StartDate: new Date('04/02/2019'),
-                    EndDate: new Date('04/21/2019'),
-                    subtasks: [
-                        {TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'),Duration: 3, Predecessor: '4', Progress: 50, resources: [4]},
-                        {TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'),Duration: 3, Predecessor: '6', resources: [4, 8],Progress: 50},
-                        {TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'),Duration: 0, Predecessor: '7', resources: [12, 5]}
-                    ]
-                }
-            ],
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                dependency: 'Predecessor',
-                child: 'subtasks',
-                resourceInfo: 'resources'
-            },
-            height: '450px',
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, resources: [1], ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: '2', Progress: 50, resources: [2, 3, 5], ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 50, ParentID: 1 },
 
-            resourceFields: {
-                id: 'resourceId',
-                name: 'resourceName',
-            },
+        { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '4', Progress: 50, resources: [4], ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '6', Progress: 50, resources: [4, 8], ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: '7', Progress: 50, resources: [12, 5], ParentID: 5 }
+      ],
 
-            resources: [
-                { resourceId: 1, resourceName: 'Martin Tamer' },
-                { resourceId: 2, resourceName: 'Rose Fuller' },
-                { resourceId: 3, resourceName: 'Margaret Buchanan' },
-                { resourceId: 4, resourceName: 'Fuller King' },
-                { resourceId: 5, resourceName: 'Davolio Fuller' },
-                { resourceId: 6, resourceName: 'Van Jack' },
-                { resourceId: 7, resourceName: 'Fuller Buchanan' },
-                { resourceId: 8, resourceName: 'Jack Davolio' },
-                { resourceId: 9, resourceName: 'Tamer Vinet' },
-                { resourceId: 10, resourceName: 'Vinet Fuller' },
-                { resourceId: 11, resourceName: 'Bergs Anton' },
-                { resourceId: 12, resourceName: 'Construction Supervisor' }
-            ],
-            labelSettings: {
-                leftLabel: 'TaskName',
-                rightLabel: 'resources'
-            },
-      };
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        parentID: 'ParentID',
+        resourceInfo: 'resources'
+      },
+
+      height: '450px',
+
+      resourceFields: {
+        id: 'resourceId',
+        name: 'resourceName'
+      },
+
+      resources: [
+        { resourceId: 1, resourceName: 'Martin Tamer' },
+        { resourceId: 2, resourceName: 'Rose Fuller' },
+        { resourceId: 3, resourceName: 'Margaret Buchanan' },
+        { resourceId: 4, resourceName: 'Fuller King' },
+        { resourceId: 5, resourceName: 'Davolio Fuller' },
+        { resourceId: 6, resourceName: 'Van Jack' },
+        { resourceId: 7, resourceName: 'Fuller Buchanan' },
+        { resourceId: 8, resourceName: 'Jack Davolio' },
+        { resourceId: 9, resourceName: 'Tamer Vinet' },
+        { resourceId: 10, resourceName: 'Vinet Fuller' },
+        { resourceId: 11, resourceName: 'Bergs Anton' },
+        { resourceId: 12, resourceName: 'Construction Supervisor' }
+      ],
+
+      labelSettings: {
+        leftLabel: 'TaskName',
+        rightLabel: 'resources'
+      }
+    };
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
-
 ```
 
 ## Enable filtering
@@ -1245,102 +1211,104 @@ To use filtering, inject the [Filter](https://ej2.syncfusion.com/vue/documentati
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :toolbar="toolbar" :allowFiltering= "true" :timelineSettings="timelineSettings" :splitterSettings= "splitterSettings" :labelSettings= "labelSettings" :projectStartDate="projectStartDate" :projectEndDate= "projectEndDate"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :columns="columns"
+      :toolbar="toolbar"
+      :allowFiltering="true"
+      :timelineSettings="timelineSettings"
+      :splitterSettings="splitterSettings"
+      :labelSettings="labelSettings"
+      :projectStartDate="projectStartDate"
+      :projectEndDate="projectEndDate"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent, Filter, Toolbar } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                dependency: 'Predecessor',
-                child: 'subtasks',
-            },
-            columns: [
-                { field: 'TaskName', headerText: 'Task Name', width: '250' , clipMode: 'EllipsisWithTooltip' },
-                { field: 'StartDate', headerText: 'Start Date' },
-                { field: 'Duration', headerText: 'Duration' },
-                { field: 'EndDate', headerText: 'End Date' },
-                { field: 'Predecessor', headerText: 'Predecessor' }
-            ],
-            toolbar: ['Search'],
-            timelineSettings: {
-                timelineUnitSize: 60,
-                topTier: {
-                format: 'MMM dd, yyyy',
-                unit: 'Week',
-                },
-                bottomTier: {
-                unit: 'Day',
-                },
-            },
-            splitterSettings: {
-                columnIndex: 3
-                },
-            labelSettings: {
-                rightLabel: 'TaskName',
-            },
-            projectStartDate: new Date('04/01/2019 01:00:00 AM'),
-            projectEndDate: new Date('05/10/2019')  
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        parentID: 'ParentID'
+      },
+
+      columns: [
+        { field: 'TaskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
+        { field: 'StartDate', headerText: 'Start Date' },
+        { field: 'Duration', headerText: 'Duration' },
+        { field: 'EndDate', headerText: 'End Date' },
+      ],
+
+      toolbar: ['Search'],
+
+      timelineSettings: {
+        timelineUnitSize: 60,
+        topTier: { format: 'MMM dd, yyyy', unit: 'Week' },
+        bottomTier: { unit: 'Day' }
+      },
+
+      splitterSettings: {
+        columnIndex: 3
+      },
+
+      labelSettings: {
+        rightLabel: 'TaskName'
+      },
+
+      projectStartDate: new Date('04/01/2019 01:00:00 AM'),
+      projectEndDate: new Date('05/10/2019')
+    };
   },
+
   provide: {
-      gantt: [ Filter, Toolbar ]
+    gantt: [Filter, Toolbar]
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
 ```
 
@@ -1350,86 +1318,87 @@ The sorting feature enables ordering of records. It can be enabled by setting th
 
 ```html
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings= "splitterSettings" :allowSorting= 'true'></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :columns="columns"
+      :splitterSettings="splitterSettings"
+      :allowSorting="true"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent, Sort } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                child: 'subtasks'
-            },
-            allowSorting: true,
-            splitterSettings: {
-                columnIndex: 3
-                },
-           columns: [
-                { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-                { field: 'TaskName', headerText: 'Task Name', width: '250' },
-                { field: 'StartDate', headerText: 'Start Date', width: '150' },
-                { field: 'Duration', headerText: 'Duration', width: '150' },
-                { field: 'Progress', headerText: 'Progress', width: '150' },
-            ],
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      },
+
+      allowSorting: true,
+
+      splitterSettings: {
+        columnIndex: 3
+      },
+
+      columns: [
+        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
+        { field: 'TaskName', headerText: 'Task Name', width: '250' },
+        { field: 'StartDate', headerText: 'Start Date', width: '150' },
+        { field: 'Duration', headerText: 'Duration', width: '150' },
+        { field: 'Progress', headerText: 'Progress', width: '150' }
+      ]
+    };
   },
   provide: {
-      gantt: [ Sort ]
+    gantt: [Sort]
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
 ```
 
@@ -1442,69 +1411,82 @@ To highlight these days, inject the `DayMarkers` module in the `provide` section
 ```html
 
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :eventMarkers="eventMarkers"></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :eventMarkers="eventMarkers"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent, DayMarkers } from '@syncfusion/ej2-vue-gantt';
+import { projectNewData } from './project-data';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: projectNewData,
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                dependency: 'Predecessor',
-                child: 'subtasks'
-            },
-             eventMarkers: [
-                {
-                    day: new Date('04/09/2019'),
-                    label: 'Research phase'
-                }, {
-                    day: new Date('04/30/2019'),
-                    label: 'Design phase'
-                }, {
-                    day: new Date('05/23/2019'),
-                    label: 'Production phase'
-                }, {
-                    day: new Date('06/20/2019'),
-                    label: 'Sales and marketing phase'
-                }
-            ]
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, resources: [1], ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: '2', Progress: 50, resources: [2, 3, 5], ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '4', Progress: 50, resources: [4], ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '6', Progress: 50, resources: [4, 8], ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: '7', Progress: 50, resources: [12, 5], ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        parentID: 'ParentID'
+      },
+
+      eventMarkers: [
+        { day: new Date('04/09/2019'), label: 'Research phase' },
+        { day: new Date('04/30/2019'), label: 'Design phase' },
+        { day: new Date('05/23/2019'), label: 'Production phase' },
+        { day: new Date('06/20/2019'), label: 'Sales and marketing phase' }
+      ]
+    };
   },
+
   provide: {
-      gantt: [DayMarkers]
+    gantt: [DayMarkers]
   }
 };
 </script>
 
 <style>
-<!-- Tailwind3 theme used for this sample -->
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
 </style>
 
 ```
@@ -1539,74 +1521,77 @@ Error handling is used to identify errors, display them and develop recovery str
 The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionfailure) event in the Gantt control to display an exception when `isPrimaryKey` is not configured properly in the Gantt Chart column.
 
 ```html
+
 <template>
-     <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings= "splitterSettings" :actionFailure='actionFailure'></ejs-gantt>
-    </div>
+  <div>
+    <ejs-gantt
+      ref="gantt"
+      id="GanttContainer"
+      :dataSource="data"
+      :taskFields="taskFields"
+      :height="height"
+      :columns="columns"
+      :splitterSettings="splitterSettings"
+      :actionFailure="actionFailure"
+    ></ejs-gantt>
+  </div>
 </template>
+
 <script>
 import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
 
 export default {
   name: "App",
   components: {
-    'ejs-gantt' : GanttComponent
+    'ejs-gantt': GanttComponent
   },
-  data: function() {
-      return{
-            data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                child: 'subtasks'
-            },
-            splitterSettings: {
-                columnIndex: 3
-                },
-           columns: [
-                { field: 'TaskName', headerText: 'Task Name', width: '250' },
-                { field: 'StartDate', headerText: 'Start Date', width: '150' },
-                { field: 'Duration', headerText: 'Duration', width: '150' },
-                { field: 'Progress', headerText: 'Progress', width: '150' },
-            ],
-      };
+  data() {
+    return {
+      data: [
+        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+
+        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+      ],
+
+      height: '450px',
+
+      taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+      },
+
+      splitterSettings: {
+        columnIndex: 3
+      },
+
+      columns: [
+        { field: 'TaskName', headerText: 'Task Name', width: '250' },
+        { field: 'StartDate', headerText: 'Start Date', width: '150' },
+        { field: 'Duration', headerText: 'Duration', width: '150' },
+        { field: 'Progress', headerText: 'Progress', width: '150' }
+      ]
+    };
   },
-   methods: {
-        actionFailure: function (args) {
-            let span = document.createElement('span');
-            let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0];
-            gantt.element.parentNode.insertBefore(span, gantt.element);
-            span.style.color = '#FF0000';
-            span.innerHTML = args.error[0];
-        }
+
+  methods: {
+    actionFailure(args) {
+      let span = document.createElement('span');
+      let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0];
+      gantt.element.parentNode.insertBefore(span, gantt.element);
+      span.style.color = '#FF0000';
+      span.innerHTML = args.error[0];
     }
+  }
 };
 </script>
 

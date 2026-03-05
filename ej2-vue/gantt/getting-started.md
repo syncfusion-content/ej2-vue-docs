@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Vue Gantt Chart component | Syncfusion
+title: Getting Started with Vue Gantt Chart Component | Syncfusion
 description:  Checkout and learn about Getting started with Vue Gantt Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
