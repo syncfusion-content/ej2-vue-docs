@@ -162,7 +162,7 @@ yarn run serve
 
 ## Customizing button content
 
-The content of the SpeechToText button can be customized for its active and inactive states. Use the [`content`](../api/speech-to-text/buttonSettingsModel/#content) property to define the text for the start listening state and the [`stopContent`](../api/speech-to-text/buttonSettingsModel/#stopContent) property for the stop listening state. These properties are configured within the [`buttonSettings`](../api/speech-to-text/#buttonSettings) property.
+The content of the SpeechToText button can be customized for its active and inactive states. Use the [`content`](../api/speech-to-text/buttonSettingsModel/#content) property to define the text for the start listening state and the [`stopContent`](../api/speech-to-text/buttonSettingsModel/#stopcontent) property for the stop listening state. These properties are configured within the [`buttonSettings`](../api/speech-to-text/#buttonSettings) property.
 
 The following example shows how to configure `buttonSettings` in the SpeechToText component.
 
