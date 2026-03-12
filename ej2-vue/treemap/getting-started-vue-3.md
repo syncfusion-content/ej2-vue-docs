@@ -372,3 +372,4 @@ The output will appear as follows:
 
 * [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
 * [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)
+ 

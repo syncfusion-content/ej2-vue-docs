@@ -283,3 +283,4 @@ Explore additional features and functionality:
 * For TypeScript setup, refer to [Getting Started with Composition API and TypeScript](../getting-started/vue-3-ts-composition) and [Getting Started with Options API and TypeScript](../getting-started/vue-3-ts-options)
 * For migration from Vue 2 to Vue 3, see the [Migration Guide](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial#migration-from-vue-2-to-vue-3)
 * Explore [Circular Gauge features](./gauge-axes.md) and [user interactions](./gauge-user-interaction.md) for more advanced use cases
+ 
