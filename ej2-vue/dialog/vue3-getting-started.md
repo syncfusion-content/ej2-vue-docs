@@ -119,9 +119,9 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
 </style>
 
 {% endhighlight %}
@@ -196,7 +196,7 @@ import { DialogComponent as EjsDialog } from "@syncfusion/ej2-vue-popups";
                   content: "This is a Dialog with content.",}]
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
   .control-section {
     height: 100%;
     min-height: 200px;
@@ -232,7 +232,7 @@ components: {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
   .control-section {
     height: 100%;
     min-height: 200px;

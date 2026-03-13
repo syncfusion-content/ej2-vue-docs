@@ -42,7 +42,7 @@ const buttons = [{ click: dlgButtonClick, buttonModel: { content: 'OK', isPrimar
 { click: dlgButtonClick, buttonModel: { content: 'Cancel' } }];
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
 
 #app {
     color: #008cff;

@@ -67,28 +67,28 @@ yarn add @syncfusion/ej2-vue-treegrid
 Themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component can be imported in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 The TreeGrid component supports the following built-in themes:
-* Material
+* material3
 * Fabric
 * Bootstrap
 * High Contrast
 
-The following CSS imports are required for the TreeGrid component and its dependencies to render correctly. Import these styles into the `<style>` section of the `App.vue` file. The Material theme is used in this example.
+The following CSS imports are required for the TreeGrid component and its dependencies to render correctly. Import these styles into the `<style>` section of the `App.vue` file. The material3 theme is used in this example.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
 
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+@import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/material3.css";
 </style>
 
 {% endhighlight %}
@@ -195,7 +195,7 @@ components: {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material3.css";
 </style>
 
 {% endhighlight %}

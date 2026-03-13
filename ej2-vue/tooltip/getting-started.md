@@ -69,8 +69,8 @@ In this article, the `Material3` theme is applied using CSS styles, which are av
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
 </style>
 
 {% endhighlight %}

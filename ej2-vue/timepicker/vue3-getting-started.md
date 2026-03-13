@@ -119,11 +119,11 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
+  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
 </style>
 
 {% endhighlight %}
@@ -189,11 +189,11 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
   import { TimePickerComponent as EjsTimepicker } from "@syncfusion/ej2-vue-calendars";
 </script>
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
+  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
   .control_wrapper {
     max-width: 250px;
     margin: 0 auto;
@@ -219,11 +219,11 @@ export default {
 }
 </script>
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
+  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
   .control_wrapper {
     max-width: 250px;
     margin: 0 auto;
@@ -272,11 +272,11 @@ The following example demonstrates how to set the value, min, and max time on in
                   timeVal : new Date("05/27/2017 1:00 PM") }]
 </script>
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-    @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+    @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
+    @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
    .wrapper {
         max-width: 250px;
         margin: 0 auto;
@@ -311,11 +311,11 @@ export default {
 }
 </script>
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-    @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+    @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
+    @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
    .wrapper {
         max-width: 250px;
         margin: 0 auto;
@@ -352,11 +352,11 @@ The following example demonstrates the TimePicker component in 24 hours format w
                   timeVal : new Date() }]
 </script>
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-    @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+    @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
+    @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
    .wrapper {
         max-width: 250px;
         margin: 0 auto;
@@ -391,11 +391,11 @@ export default {
 }
 </script>
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-    @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+    @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+    @import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
+    @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
    .wrapper {
         max-width: 250px;
         margin: 0 auto;

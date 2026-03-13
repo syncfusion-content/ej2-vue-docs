@@ -165,3 +165,76 @@ The [`showNearestTooltip`](https://ej2.syncfusion.com/vue/documentation/api/char
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs9" %}
+
+## Split tooltip
+
+The split tooltip displays a separate tooltip for each series at the same data point, making it easier to compare values across multiple series.
+
+Enable this feature by setting the [`split`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#split) property to **true**:
+
+```html
+<ejs-chart :tooltip="{ enable: true, split: true }">
+  <!-- series here -->
+</ejs-chart>
+
+```
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/split-tooltip-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/split-tooltip-cs/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/split-tooltip-cs" %}
+
+## Follow pointer
+
+The follow pointer feature enables the tooltip to follow the mouse cursor or touch pointer as users interact with the chart. This provides a more dynamic and intuitive experience by keeping the tooltip close to the user's point of interaction.
+
+Enable this feature by setting the [`followPointer`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#followpointer) property to **true**:
+
+```html
+<ejs-chart :tooltip="{ enable: true, followPointer: true }">
+  <!-- series here -->
+</ejs-chart>
+
+```
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/follow-pointer-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/follow-pointer-cs/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/follow-pointer-cs" %}
+
+## Tooltip distance
+
+The tooltip distance property controls the spacing between the tooltip and the mouse pointer or target data point. This prevents the tooltip from overlapping with the cursor or nearby chart elements, improving readability.
+
+Set the [`distance`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#distance) property to specify the gap in pixels:
+
+```html
+<ejs-chart :tooltip="{ enable: true, distance: 25 }">
+  <!-- series here -->
+</ejs-chart>
+
+```
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-distance-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-distance-cs/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-distance-cs" %}
+
