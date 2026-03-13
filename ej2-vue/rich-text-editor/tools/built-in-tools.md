@@ -108,13 +108,15 @@ The image quicktoolbar offers a set of tools to edit images inserted in the Rich
 | Name | Icons | Summary | Initialization |
 |----------------|---------|---------|------------------------------------------|
 | Replace Image  | ![Replace icon](../images/image-replace.png) | Replace the selected image with another image. | quickToolbarSettings: { image: ['Replace']} |
-| Align Image | ![Alignment icon](../images/alignments.png) | The image can be aligned to the right, left, or center. | quickToolbarSettings: { image: ['Align']} |
+| Align Image | ![Alignment icon](../images/alignments.png) | Provides block‑level alignment options for positioning the image to the left, right, or center. | quickToolbarSettings: { image: ['Align']} |
 | Remove Image | ![Remove icon](../images/table-remove.png) | Allows to remove the selected image from the editor. | quickToolbarSettings: { image: ['Remove']} |
 | OpenImageLink | ![OpenImageLink icon](../images/open-link.png) | Opens the link that is attached to the selected image. | quickToolbarSettings: { image: ['OpenImageLink']} |
 | EditImageLink | ![EditImageLink icon](../images/edit-link.png) | Allows to edit the link that is attached to the selected image. | quickToolbarSettings: { image: ['EditImageLink']} |
 | RemoveImageLink | ![RemoveImageLink icon](../images/remove-link.png) | Removes the link that is attached to the selected image. | quickToolbarSettings: { image: ['RemoveImageLink']} |
 | Display | ![Display icon](../images/display.png) | Allows you to choose whether an image should be shown inline or as a block. | quickToolbarSettings: { image: ['Display']} |
 | AltText | ![AltText icon](../images/alt-text.png) | To display image description when an image on a Web page cannot be displayed. | quickToolbarSettings: { image: ['AltText']} |
+| Caption | ![Caption icon](../images/caption.png) | Adds a caption container around the selected image, allowing caption text to be entered or updated directly in the editor. | quickToolbarSettings: { image: ['Caption']} |
+| WrapText | ![WrapText icon](../images/wrap-text.png) | Provides inline‑level text‑wrapping options for wrapping text to the left or right side of the image. | quickToolbarSettings: { image: ['WrapText']} |
 | Dimension | ![Dimension icon](../images/dimension.png) | Allows you to customize the image’s height and width. | quickToolbarSettings: { image: ['Dimension']} |
 
 ### Tables
@@ -173,7 +175,7 @@ This section contains miscellaneous tools such as full-screen mode, print, previ
 
 ## Removing built-in tool from toolbar
 
-Remove the build-in tools from the toolbar by using the [toolbarSettings.items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+Remove the build-in tools from the toolbar by using the [toolbarSettings.items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings#items) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

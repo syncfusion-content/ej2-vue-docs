@@ -26,7 +26,7 @@ export default {
             },
             quickToolbarSettings: {
                 image: [
-                    'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '|',
+                    'Replace', 'Align', 'WrapText', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '|',
                     'EditImageLink', 'RemoveImageLink', 'Display', 'AltText', 'Dimension'
                 ]
             }

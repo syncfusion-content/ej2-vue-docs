@@ -18,7 +18,7 @@ const rteValue=`<p>The Syncfusion Rich Text Editor, a WYSIWYG (what you see is w
 const height = 400;
 const quickToolbarSettings = {
     image: [
-        'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '-',
+        'Replace', 'Align', 'WrapText', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '-',
         'EditImageLink', 'RemoveImageLink', 'Display', 'AltText', 'Dimension',
     ]
 };
