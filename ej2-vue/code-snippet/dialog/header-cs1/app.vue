@@ -27,7 +27,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
 
 #app {
     color: #008cff;

@@ -24,7 +24,7 @@ export default {
             height: 400,
             quickToolbarSettings: {
                 image: [
-                    'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '-',
+                    'Replace', 'Align', 'WrapText', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '-',
                     'EditImageLink', 'RemoveImageLink', 'Display', 'AltText', 'Dimension',
                 ],
                 link: ['Open', 'Edit', 'UnLink']

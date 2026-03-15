@@ -119,10 +119,10 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
 </style>
 
 {% endhighlight %}
@@ -199,8 +199,8 @@ export default {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
 </style>
 
 {% endhighlight %}

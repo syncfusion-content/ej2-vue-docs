@@ -67,9 +67,9 @@ In this article, the `Material3` theme is applied using CSS styles, which are av
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
 </style>
 
 {% endhighlight %}
@@ -132,9 +132,9 @@ Add the following code to the `App.vue` file in src directory.
 </template>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
 #statusText {
   font-size: 16px;
   margin-top: 20px;

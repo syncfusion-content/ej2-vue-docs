@@ -28,5 +28,5 @@ onMounted(() => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
 </style>
