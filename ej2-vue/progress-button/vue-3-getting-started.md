@@ -119,10 +119,10 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
 </style>
 
 {% endhighlight %}
@@ -210,10 +210,10 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
 </style>
 
 {% endhighlight %}
@@ -240,10 +240,10 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
  }
  </script>
  <style>
- @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
- @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
- @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
- @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+ @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+ @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+ @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
  </style>
 
 {% endhighlight %}

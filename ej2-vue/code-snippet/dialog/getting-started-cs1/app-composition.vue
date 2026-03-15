@@ -14,7 +14,7 @@ const width = '335px';
 const content = 'This is a Dialog with content.';
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
 
 .control-section {
     height: 100%;

@@ -59,6 +59,31 @@ The color and width of the crosshair lines can be customized by using the [`line
 
 > Note: To use the crosshair feature, inject `Crosshair` into the `provide`.
 
+## Crosshair label customization
+
+The [`crosshairLabelRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#crosshairlabelrender) event fires before each crosshair axis label is rendered, allowing you to customize the label's appearance or content, or to prevent it from being displayed.
+
+Event arguments:
+
+* `text` – The label text that can be modified.
+* `value` – The data value at the crosshair position.
+* `axisName` – The axis identifier (e.g., `primaryXAxis`).
+* `axisOrientation` – Either `Horizontal` or `Vertical`.
+* `textStyle` – Font properties for customization.
+* `fill` – Background color of the label.
+* `cancel` – Set to **true** to skip rendering the label.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/crosshair-label-render-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/crosshair-label-render-cs/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-label-render-cs" %}
+
 ## Snap to data
 
 By enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#snaptodata) property, the crosshair snaps to the nearest data point instead of following the exact mouse position. This improves accuracy when inspecting values.

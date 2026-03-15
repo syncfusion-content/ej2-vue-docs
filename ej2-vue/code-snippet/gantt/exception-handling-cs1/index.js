@@ -3,7 +3,7 @@ import Vue from "vue";
 import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
 import { editingData } from './data-source.js';
 Vue.use(GanttPlugin);
-;
+
 new Vue({
     el: '#app',
     template: `
@@ -21,7 +21,7 @@ new Vue({
                 startDate: 'StartDate',
                 duration: 'Duration',
                 progress: 'Progress',
-                child: 'subtasks',
+                parentID: 'ParentID'
             },
             height: '450px',
             splitterSettings: {
@@ -35,14 +35,14 @@ new Vue({
             ]
         };
     },
-    methods:{
-        actionFailure: function(args) {
-        let span = document.createElement('span');
-        let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0];
-        gantt.element.parentNode.insertBefore(span, gantt.element);
-        span.style.color = '#FF0000';
-        span.innerHTML = args.error[0];
-      }
+    methods: {
+        actionFailure: function (args) {
+            let span = document.createElement('span');
+            let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0];
+            gantt.element.parentNode.insertBefore(span, gantt.element);
+            span.style.color = '#FF0000';
+            span.innerHTML = args.error[0];
+        }
     }
 
 });

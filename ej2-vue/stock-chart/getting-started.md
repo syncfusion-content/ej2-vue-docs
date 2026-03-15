@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Stock Chart component | Syncfusion
-description: Checkout and learn about Getting started with Vue Stock Chart component of Syncfusion Essential JS 2 and more details.
+description: Quickstart: scaffold a Vite Vue project and add the Syncfusion Vue Stock Chart component (Composition and Options API) with sample code and tips.
 control: Getting started 
 platform: ej2-vue
 documentation: ug

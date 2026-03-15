@@ -51,6 +51,6 @@ components: {
 }
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/tailwind.css';
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material3.css';
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 </style>

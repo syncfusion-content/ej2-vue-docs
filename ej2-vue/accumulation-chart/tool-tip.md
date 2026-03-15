@@ -144,3 +144,25 @@ By setting the [`enableHighlight`](https://ej2.syncfusion.com/vue/documentation/
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs42" %}
+## Follow pointer
+
+The follow pointer feature enables the tooltip to follow the mouse cursor or touch pointer as users interact with the accumulation chart. This provides a more dynamic and intuitive experience by keeping the tooltip close to the user's point of interaction.
+Enable this feature by setting the [`followPointer`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/tooltipSettingsModel/#followpointer) property to **true**:
+
+```html
+<ejs-accumulationchart :tooltip="{ enable: true, followPointer: true }">
+  <!-- series here -->
+</ejs-accumulationchart>
+
+```
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/follow-pointer-accumulation-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/follow-pointer-accumulation-cs/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/follow-pointer-accumulation-cs" %}

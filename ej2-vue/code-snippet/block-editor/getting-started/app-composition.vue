@@ -5,9 +5,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { BlockEditorComponent } from '@syncfusion/ej2-vue-blockeditor';
-
+import { BlockEditorComponent as EjsBlockeditor } from '@syncfusion/ej2-vue-blockeditor';
 </script>
 
 <style>

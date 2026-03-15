@@ -42,5 +42,5 @@ components: {
     height: 200px;
     width: 230px;
 }
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 </style>

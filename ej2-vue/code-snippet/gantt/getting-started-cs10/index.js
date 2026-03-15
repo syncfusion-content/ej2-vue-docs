@@ -2,41 +2,30 @@
 import Vue from "vue";
 import { GanttPlugin, Filter, Toolbar } from "@syncfusion/ej2-vue-gantt";
 Vue.use(GanttPlugin);
-;
+
 new Vue({
-	el: '#app',
-	template: `
+    el: '#app',
+    template: `
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :toolbar="toolbar" :allowFiltering= "true" :timelineSettings="timelineSettings" :splitterSettings= "splitterSettings" :labelSettings= "labelSettings" :projectStartDate="projectStartDate" :projectEndDate= "projectEndDate"></ejs-gantt>
     </div>
 `,
 
-  data: function() {
-      return{
+    data: function () {
+        return {
             data: [
-            {
-                TaskID: 1,
-                TaskName: 'Project Initiation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
-                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-                ]
-            },
-            {
-                TaskID: 5,
-                TaskName: 'Project Estimation',
-                StartDate: new Date('04/02/2019'),
-                EndDate: new Date('04/21/2019'),
-                subtasks: [
-                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
-                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
-                ]
-            },
-        ],
+                { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+
+                { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, resources: [1], ParentID: 1 },
+                { TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: '2', Progress: 50, resources: [2, 3, 5], ParentID: 1 },
+                { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 50, ParentID: 1 },
+
+                { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
+
+                { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '4', Progress: 50, resources: [4], ParentID: 5 },
+                { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '6', Progress: 50, resources: [4, 8], ParentID: 5 },
+                { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: '7', resources: [12, 5], ParentID: 5 }
+            ],
             height: '450px',
             taskFields: {
                 id: 'TaskID',
@@ -45,10 +34,10 @@ new Vue({
                 endDate: 'EndDate',
                 duration: 'Duration',
                 dependency: 'Predecessor',
-                child: 'subtasks',
+                parentID: 'ParentID'
             },
             columns: [
-                { field: 'TaskName', headerText: 'Task Name', width: '250' , clipMode: 'EllipsisWithTooltip' },
+                { field: 'TaskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
                 { field: 'StartDate', headerText: 'Start Date' },
                 { field: 'Duration', headerText: 'Duration' },
                 { field: 'EndDate', headerText: 'End Date' },
@@ -68,16 +57,17 @@ new Vue({
             },
             splitterSettings: {
                 columnIndex: 3
-                },
+            },
             labelSettings: {
                 rightLabel: 'TaskName',
             },
-            projectStartDate: new Date('07/16/1969 01:00:00 AM'),
-            projectEndDate: new Date('07/25/1969')  
-      };
-  },
-  provide: {
-      gantt: [ Filter, Toolbar ]
-  }
+            projectStartDate: new Date('04/02/2019'),
+            projectEndDate: new Date('04/21/2019')
+
+        };
+    },
+    provide: {
+        gantt: [Filter, Toolbar]
+    }
 
 });

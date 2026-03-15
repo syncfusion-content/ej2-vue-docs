@@ -124,5 +124,5 @@ import { data  } from './datasource.js';
     }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 </style>

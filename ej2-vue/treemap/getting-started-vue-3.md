@@ -367,7 +367,9 @@ The output will appear as follows:
 
 > **Sample**: [vue3-treemap-getting-started](https://github.com/SyncfusionExamples/vue3-treemap-getting-started).
 
+
 ## See also
 
 * [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
 * [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)
+ 

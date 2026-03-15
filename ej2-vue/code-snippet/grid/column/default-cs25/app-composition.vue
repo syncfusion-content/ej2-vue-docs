@@ -21,4 +21,4 @@ import { data } from './datasource.js';
 const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
 provide('grid', [Sort, Group, Filter, Reorder, Edit]);
 </script>
-<style>@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";</style>
+<style>@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";</style>
