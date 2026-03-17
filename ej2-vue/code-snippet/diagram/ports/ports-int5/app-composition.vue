@@ -87,17 +87,21 @@ const connectors = [
 const width = "100%";
 const height = "600px";
 
-const click = () => { console.log("Clicked"); }
-const elementDraw = (args) => { console.log('Element draw event'); }
-const positionChange = (args) => { console.log("Position changed"); }
-const connectionChange = (args) => { console.log("Connection changed"); }
+const click = () => { console.log("Clicked on:"); }
+const elementDraw= (args) => { 
+  //Prevents connector drawn from connector port
+      if (
+        args.state === "Start" &&
+        args.source instanceof Connector
+      ) {
+        args.cancel = true;
+      }
+ }
+const positionChange = () => { console.log("Position changed:", args); }
+const connectionChange = () => { console.log("Connection changed:", args); }
 
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>

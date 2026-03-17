@@ -307,4 +307,3 @@ Tooltips provide an alternative way to display information on hover, which is pa
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs40" %}
- 

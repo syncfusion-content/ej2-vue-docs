@@ -1,12 +1,20 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors' :annotationTemplate='annotationTemplate'></ejs-diagram>
     </div>
 </template>
 <script setup>
-import { DiagramComponent as EjsDiagram, AnnotationConstraints } from '@syncfusion/ej2-vue-diagrams';
+import { createApp } from "vue";
+import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 
-let nodes = [{
+const itemVue = createApp({}).component("nodeTemplate", {
+  template: `<div><input type="button" value="Submit"></div>`,
+  data() {
+    return {};
+  }
+});
+
+const nodes = [{
     id: 'node1',
     // Position of the node
     offsetX: 100,
@@ -16,17 +24,11 @@ let nodes = [{
     height: 100,
     // Sets the annotation for the Node
     annotations: [{
-        content: 'Box',
-        constraints: AnnotationConstraints.Tooltip,
-        tooltip: {
-            content: 'Box Text',
-            position: 'TopRight',
-            relativeMode: 'Object',
-        },
+
     }]
 }];
 
-let connectors = [{
+const connectors = [{
     sourcePoint: {
         x: 300,
         y: 100
@@ -38,24 +40,18 @@ let connectors = [{
     type: 'Orthogonal',
     // Sets the Annotation for the Connector
     annotations: [{
-        content: 'Line',
-        constraints: AnnotationConstraints.Tooltip,
-        tooltip: {
-            content: 'Line Text',
-            position: 'TopRight',
-            relativeMode: 'Object',
-        },
+        height: 20
     }]
 }];
 
 const width = "750px";
 const height = "350px";
 
+const annotationTemplate = function () {
+    return { template: itemVue };
+};
+
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>

@@ -4,111 +4,133 @@ import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
 Vue.use(DiagramPlugin);
 let nodes = [
     {
-        id: 'Start',
-        offsetX: 300,
+        id: "node1",
         offsetY: 50,
-        annotations: [{ content: 'Start' }],
-        shape: { type: 'Flow', shape: 'Terminator' },
-        style: { fill: '#d0f0f1', strokeColor: '#797979' },
+        shape: { type: "Flow", shape: "Terminator" },
+        annotations: [
+        {
+            content: "Start"
+        }
+        ]
     },
     {
-        id: 'Init',
-        offsetX: 300,
+        id: "node2",
         offsetY: 140,
-        annotations: [{ content: 'var i = 0;' }],
-        shape: { type: 'Flow', shape: 'Process' },
-        style: { fill: '#fbfdc5', strokeColor: '#797979' },
+        shape: { type: "Flow", shape: "Process" },
+        annotations: [
+        {
+            content: "var i = 0;"
+        }
+        ]
     },
     {
-        id: 'Condition',
-        offsetX: 300,
+        id: "node3",
         offsetY: 230,
-        annotations: [{ content: 'i < 10?' }],
-        shape: { type: 'Flow', shape: 'Decision' },
-        style: { fill: '#c5efaf', strokeColor: '#797979' },
+        shape: { type: "Flow", shape: "Decision" },
+        annotations: [
+        {
+            content: "i < 10?"
+        }
+        ]
     },
     {
-        id: 'Print',
-        offsetX: 300,
+        id: "node4",
         offsetY: 320,
-        annotations: [{ content: "print('Hello!!');" }],
-        shape: { type: 'Flow', shape: 'PreDefinedProcess' },
-        style: { fill: '#f8eee5', strokeColor: '#797979' },
+        shape: { type: "Flow", shape: "PreDefinedProcess" },
+        annotations: [
+        {
+            content: 'print("Hello!!");',
+            style: { fill: "white" }
+        }
+        ]
     },
     {
-        id: 'Increment',
-        offsetX: 300,
+        id: "node5",
         offsetY: 410,
-        annotations: [{ content: 'i++;' }],
-        shape: { type: 'Flow', shape: 'Process' },
-        style: { fill: '#fbfdc5', strokeColor: '#797979' },
+        shape: { type: "Flow", shape: "Process" },
+        annotations: [
+        {
+            content: "i++;"
+        }
+        ]
     },
     {
-        id: 'End',
-        offsetX: 300,
+        id: "node6",
         offsetY: 500,
-        annotations: [{ content: 'End' }],
-        shape: { type: 'Flow', shape: 'Terminator' },
-        style: { fill: '#d0f0f1', strokeColor: '#797979' },
-    },
+        shape: { type: "Flow", shape: "Terminator" },
+        annotations: [
+        {
+            content: "End"
+        }
+        ]
+    }
 ];
 let connectors = [
-    { id: 'connector1', sourceID: 'Start', targetID: 'Init' },
-    { id: 'connector2', sourceID: 'Init', targetID: 'Condition' },
     {
-        id: 'connector3',
-        sourceID: 'Condition',
-        targetID: 'Print',
-        annotations: [{ content: 'Yes' }],
+        id: "connector1",
+        sourceID: "node1",
+        targetID: "node2"
     },
     {
-        id: 'connector4',
-        sourceID: 'Condition',
-        targetID: 'End',
-        annotations: [{ content: 'No' }],
-        type: 'Orthogonal',
+        id: "connector2",
+        sourceID: "node2",
+        targetID: "node3"
+    },
+    {
+        id: "connector3",
+        sourceID: "node3",
+        targetID: "node4",
+        annotations: [{ text: "Yes" }]
+    },
+    {
+        id: "connector4",
+        sourceID: "node3",
+        targetID: "node6",
+        labels: [{ text: "No" }],
         segments: [
-            { type: 'Orthogonal', length: 30, direction: 'Right' },
-            { type: 'Orthogonal', length: 300, direction: 'Bottom' },
-        ],
+        { length: 30, direction: "Right" },
+        { length: 300, direction: "Bottom" }
+        ]
     },
-    { id: 'connector5', sourceID: 'Print', targetID: 'Increment' },
     {
-        id: 'connector6',
-        sourceID: 'Increment',
-        targetID: 'Condition',
-        type: 'Orthogonal',
-        segments: [
-            { type: 'Orthogonal', length: 30, direction: 'Left' },
-            { type: 'Orthogonal', length: 200, direction: 'Top' },
-        ],
+        id: "connector5",
+        sourceID: "node4",
+        targetID: "node5"
     },
+    {
+        id: "connector6",
+        sourceID: "node5",
+        targetID: "node3",
+        segments: [
+        { length: 30, direction: "Left" },
+        { length: 200, direction: "Top" }
+        ]
+    }
 ];
 
 new Vue({
-    el: '#app',
-    template: `
+el: '#app',
+template: `
 <div id="app">
     <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :getNodeDefaults='getNodeDefaults' :getConnectorDefaults='getConnectorDefaults' ></ejs-diagram>
 </div>
 `,
 
     name: 'app',
-    data() {
+    data () {
         return {
             width: "100%",
             height: "600px",
             nodes: nodes,
             connectors: connectors,
             getNodeDefaults: (node) => {
-                node.height = 50;
-                node.width = 140;
+                node.height = 60;
+                node.width = 100;
                 node.offsetX = 300;
                 return node;
             },
             getConnectorDefaults: (obj) => {
                 obj.type = 'Orthogonal';
-                obj.targetDecorator = { shape: 'Arrow', width: 10, height: 10 };
                 return obj;
             },
         }

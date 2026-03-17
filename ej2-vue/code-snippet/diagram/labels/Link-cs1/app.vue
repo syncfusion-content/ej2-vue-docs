@@ -17,7 +17,7 @@ let nodes = [{
     // Sets the annotation for the Node
     annotations: [{
         hyperlink: {
-            link: 'https://stackoverflow.com/',
+            link: 'https://hr.syncfusion.com/home',
             //Set the link to open in the current tab
             hyperlinkOpenState: 'NewWindow'
         }
@@ -58,9 +58,5 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>

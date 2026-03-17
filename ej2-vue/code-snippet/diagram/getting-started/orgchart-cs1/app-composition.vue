@@ -7,7 +7,7 @@
 </template>
 <script setup>
 import { provide } from "vue";
-import { DiagramComponent as EjsDiagram, DataBinding, HierarchicalTree } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 import { DataManager } from "@syncfusion/ej2-data";
 
 let localdata = [
@@ -50,38 +50,33 @@ let localdata = [
 const width = "100%";
 const height = "350px";
 const getNodeDefaults = (node) => {
-    let codes = {
-        Director: "rgb(0, 139,139)",
-        Manager: "rgb(30, 30,113)",
-        Lead: "rgb(0, 100,0)"
-    };
-    node.width = 70;
-    node.height = 30;
-    node.annotations = [
-        { content: node.data.Name, style: { color: "white" } }
-    ];
-    node.style.fill = codes[node.data.Role];
+    node.height = 60;
+    node.width = 100;
     return node;
 }
-const getConnectorDefaults = (connector) => {
-    connector.type = "Orthogonal";
-    connector.cornerRadius = 7;
-    return connector;
+
+const getConnectorDefaults = (obj) => {
+    obj.type = 'Orthogonal';
+    return obj;
 }
+
 const layout = {
     type: "OrganizationalChart",
 }
+
 const dataSourceSettings = {
     id: 'Name', parentId: 'ReportingPerson',
     dataManager: new DataManager(localdata),
+    doBinding: (nodeModel, localdata, diagram) => {
+        nodeModel.shape = {
+            type: "Text",
+            content: (localdata).Role,
+        }
+    }
 }
 
-provide('diagram', [DataBinding, HierarchicalTree]);
+provide('diagram', [HierarchicalTree, DataBinding]);
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>

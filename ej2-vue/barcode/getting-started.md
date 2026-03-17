@@ -10,13 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Barcode Component in Vue 2
 
-This guide walks you through creating a Vue 2 application using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion® Vue Barcode component
-
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/vue/documentation/ai-coding-assistant/overview)
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion® Vue Barcode component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
-[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Dependencies
 
@@ -36,44 +34,40 @@ The following list of dependencies are required to use the `Barcode Generator` c
     |-- @syncfusion/ej2-vue-base
 ```
 
-## Setup Vue Environment
-Use [Vue CLI](https://cli.vuejs.org/) to set up your Vue project. Install Vue CLI globally with the following command:
+## Setting up the Vue 2 project
+
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-``` 
+vue create quickstart
+cd quickstart
+npm run serve
+```
+
 or
 
 ```bash
 yarn global add @vue/cli
-```
-
-## Create a Vue 2 Application
-
-Create a new project using the [vue create](https://cli.vuejs.org/#getting-started) command.
-
-```bash
-vue create my-barcode-app
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](images/vue3_barcode.PNG) 
+![Vue 2 project](images/vue3_barcode.PNG)
 
-once the `my-barcode-app` project is created, navigate to the project folder:
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion® components to the project.
 
-```bash
-cd my-barcode-app
-```
+## Adding Syncfusion® Vue packages
 
-## Add Syncfusion® Vue Barcode packages
+Syncfusion® packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-All Syncfusion® packages are published to the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry.
-
-Install the `@syncfusion/ej2-vue-barcode-generator` package by running the following command:
+This article uses the [Vue Barcode component](https://www.syncfusion.com/vue-components/vue-barcode) as an example. Install the `@syncfusion/ej2-vue-barcode-generator` package by running the following command:
 
 ```bash
-npm install @syncfusion/ej2-vue-barcode-generator --save
+npm install @syncfusion/ej2-vue-barcode-generator –save
 ```
 or
 
@@ -109,7 +103,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Barcode component with [width](https://ej2.syncfusion.com/vue/documentation/api/barcode/barcodegenerator#width), [height](https://ej2.syncfusion.com/vue/documentation/api/barcode/barcodegenerator#height), [value](https://ej2.syncfusion.com/vue/documentation/api/barcode/barcodegenerator#value), [mode](https://ej2.syncfusion.com/vue/documentation/api/barcode/barcodegenerator#mode) property.
+2\. In the `template` section, define the Barcode component with [width](https://ej2.syncfusion.com/vue/documentation/api/barcode/barcodeModel/#width), [height](https://ej2.syncfusion.com/vue/documentation/api/barcode/barcodeModel/#height), [value](https://ej2.syncfusion.com/vue/documentation/api/barcode/barcodeModel/#value), [mode](https://ej2.syncfusion.com/vue/documentation/api/barcode/barcodeModel/#mode) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -149,43 +143,19 @@ const mode = "SVG";
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { QRCodeGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator';
-export default {
-  name: "App",
-  components: {
-      "ejs-qrcodegenerator": QRCodeGeneratorComponent
-  },
-  data() {
-      return {
-          width: "200px",
-          height: "150px",
-          type: "Codabar",
-          value: "123456789",
-          mode: "SVG",
-      }
-  }
-}
+data () {
+        return {
+            width: "200px",
+            height: "150px",
+            type: "Codabar",
+            value: "123456789",
+            mode: "SVG",
+        }
+    }
 </script>
 
 {% endhighlight %}
 {% endtabs %}
-
-
-4\. Run the project
-
-Use either npm or yarn:
-
-```bash
-npm run serve
-```
-
-or
-
-```bash
-yarn run serve
-```
-
-N> Vue CLI projects automatically rebuild when you save changes—no need to rerun the command each time.
 
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
@@ -202,7 +172,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 ## Adding QR Generator control
 
-You can add QR codes using the barcode generator component.
+You can add the QR code in our barcode generator component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -215,9 +185,9 @@ You can add QR codes using the barcode generator component.
         
 {% previewsample "page.domainurl/code-snippet/barcode/getting-started/qrcode-cs1" %}
 
-## Adding Data Matrix Generator control
+## Adding Datamatrix Generator control
 
-You can add Data Matrix codes using the barcode generator component.
+You can add the datamatrix code in our barcode generator component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue" %}

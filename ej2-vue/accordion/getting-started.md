@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Accordion Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accordion component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accordion component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-To quickly get started with the Vue Accordion, watch this video:
+To get start quickly with Vue Accordion, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=roVbwFuuPrM" %}
 
 ## Prerequisites
 
-Refer to the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
-The following dependencies are required to use the Accordion component in your application:
+The following list of dependencies are required to use the Accordion component in your application.
 
 ```javascript
 |-- @syncfusion/ej2-vue-navigations
@@ -31,11 +31,12 @@ The following dependencies are required to use the Accordion component in your a
   |-- @syncfusion/ej2-navigations
     |-- @syncfusion/ej2-inputs
     |-- @syncfusion/ej2-buttons
+
 ```
 
-## Set Up the Vue 2 Project
+## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -59,11 +60,11 @@ When creating a new project, choose the option `Default ([Vue 2] babel, eslint)`
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
+## Adding syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use the Accordion component.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use Accordion component.
 
-To install the Accordion component, use the following command:
+To install Accordion component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
@@ -76,16 +77,16 @@ yarn add @syncfusion/ej2-vue-navigations
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Add the Accordion component's styles in the `<style>` section of the `App.vue` file.
+Add Accordion component's styles as given below in `<style>` section of the `App.vue` file.
 
-In this article, the `Material3` theme is applied using CSS styles, which are available in the installed packages. The necessary `Material3` CSS styles for the Accordion component and its dependents should be imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Accordion component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
 
 {% endhighlight %}
@@ -93,9 +94,9 @@ In this article, the `Material3` theme is applied using CSS styles, which are av
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the steps below to add the Vue Accordion component using the `Composition API` or `Options API`:
+Follow the below steps to add the Vue Accordion component using `Composition API` or `Options API`:
 
-1. Import and register the Accordion component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the Accordion component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -107,7 +108,7 @@ import {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtile="Options API (~/src/App.vue)" %}
 
 <script>
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-vue-navigations';
@@ -123,14 +124,14 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2. Add the EJ2 Vue Accordion using `<ejs-accordion>` to the `<template>` section of the `App.vue` file in the `src` directory.
+2\. Add the EJ2 Vue Accordion using `<ejs-accordion>` to the `<template>` section of the `App.vue` file in src directory.
 
 {% tabs %}
 {% highlight html tabtitle="(~src/App.vue)" %}
 
 <template>
     <div id="app">
-    <ejs-accordion>
+    <ejs-accordion >
             <e-accordionitems>
         <e-accordionitem expanded='true' header='ASP.NET' content='Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.'></e-accordionitem>
         <e-accordionitem header='ASP.NET MVC' content='The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.'></e-accordionitem>
@@ -145,11 +146,7 @@ export default {
 
 ## Running the Application
 
-Run the following command in the console to build your application and open it in the browser:
-
-```bash
-npm run dev
-```
+Now run the `npm run dev` command in the console, it will build your application and open in the browser.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -164,7 +161,7 @@ npm run dev
 
 ## Initialize the Accordion using HTML elements
 
-The Accordion component can be rendered based on the given HTML element using `<ejs-accordion>`. Follow the structure below to render the Accordion inside the `<ejs-accordion>` tag:
+The Accordion component can be rendered based on the given HTML element using `<ejs-accordion>`. You need to follow the below structure of HTML elements to render the Accordion inside the `<ejs-accordion>` tag.
 
 ```
   <ejs-accordion>   --> Root Accordion Element

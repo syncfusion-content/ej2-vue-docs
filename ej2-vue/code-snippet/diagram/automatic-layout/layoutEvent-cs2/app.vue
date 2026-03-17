@@ -1,11 +1,11 @@
 <template>
     <div id="app">
         <ejs-diagram id="diagram" ref="diagramObj" :width="width" :height="height" :nodes="nodes"
-            :connectors="connectors" :layout="layout" :animationComplete="animationComplete"></ejs-diagram>
+            :connectors="connectors" :layout="layout" :click="animationComplete"></ejs-diagram>
     </div>
 </template>
 <script>
-import { DiagramComponent, HierarchicalTree, LayoutAnimation } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent, HierarchicalTree } from '@syncfusion/ej2-vue-diagrams';
 
 //Initialize nodes
 let nodes = [
@@ -107,15 +107,11 @@ export default {
         };
     },
     provide: {
-        diagram: [HierarchicalTree, LayoutAnimation],
+        diagram: [HierarchicalTree],
     },
 };
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>

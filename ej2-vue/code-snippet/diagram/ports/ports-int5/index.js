@@ -87,15 +87,21 @@ new Vue({
             nodes: nodes,
             connectors:connectors,
             click: function () {
-              console.log("Clicked");
+              console.log("clicked");
             },
             elementDraw: function (args) {
-              console.log('Element draw event');
+              //Prevents connector drawn from connector port
+              if (
+                args.state === "Start" &&
+                args.source instanceof Connector
+              ) {
+                args.cancel = true;
+              }
             },
-            positionChange: function (args) {
+            positionChange: function () {
               console.log("Position change");
             },
-            connectionChange: function (args) {
+            connectionChange: function () {
               console.log("Connection change");
             },
 

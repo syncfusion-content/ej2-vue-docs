@@ -145,5 +145,5 @@ The following sample demonstrates how to prevent number formatting changes for t
 ## See Also
 
 * [Customize number, date, and time values](./how-to/customize-number-date-and-time-values)
-* [NumberFormatOptions](https://ej2.syncfusion.com/vue/documentation/common/globalization/internationalization#number-formatting)
+* [NumberFormatOptions](https://ej2.syncfusion.com/vue/documentation/common/internationalization#number-formatting)
 * [Toolbar](./tool-bar)

@@ -63,7 +63,7 @@ new Vue({
                 {
                     id: "connector",
                     symbols: connectorSymbols,
-                    title: "Connector Symbols"
+                    title: "connectorSymbols"
                 },
             ],
             symbolHeight: 60,

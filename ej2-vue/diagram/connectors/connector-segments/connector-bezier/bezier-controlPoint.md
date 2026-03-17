@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bezier control points in Vue Diagram component | Syncfusion®
-description: Learn here all about Bezier control points in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bezier control points interaction 
 platform: ej2-vue
 documentation: ug
@@ -34,7 +34,7 @@ While interacting with multiple bezier segments, maintain their control points a
 
 ## How to show or hide the bezier segment’s control points
 
-By using the [`controlPointsVisibility`](https://ej2.syncfusion.com/vue/documentation/api/diagram/controlpointsvisibility) property of [`bezierSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/beziersettingsmodel), you can enable or disable the visibility of the bezier segment’s control points.
+By using the [`controlPointsVisibility`](https://ej2.syncfusion.com/vue/documentation/api/diagram/controlPointsVisibility/) property of [`bezierSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSettingsModel/), you can enable or disable the visibility of the bezier segment’s control points.
 
 | ControlPointsVisibility value | Description | Output |
 |-------- | -------- | -------- |
