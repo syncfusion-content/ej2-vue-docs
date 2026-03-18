@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with 3D Circular Chart (Vue 2) | Syncfusion
-description: Quickstart for Vue 2: integrate the Syncfusion 3D Circular Chart (Essential JS 2). Covers setup, registration, and example usage.
+description: Set up a Vue 2 app and integrate Syncfusion EJ2 3D Circular Chart, including setup steps, module registration, and practical example usage.
 control: Getting started 
 platform: ej2-vue
 documentation: ug

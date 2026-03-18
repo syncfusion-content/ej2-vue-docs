@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the Bullet chart component | Syncfusion
-description: Quickstart: integrate the Syncfusion Vue 3 Bullet Chart - using Vite, module registration, and a working example.
+description: Scaffold a Vue 3 project using Vite and integrate Syncfusion EJ2 Bullet Chart with module registration, setup steps, and a complete working example.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug

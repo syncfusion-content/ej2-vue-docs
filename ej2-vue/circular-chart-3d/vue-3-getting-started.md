@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the 3D Circular Chart | Syncfusion
-description: Quickstart: scaffold a Vite Vue 3 project and integrate the Syncfusion 3D Circular Chart; includes setup, module registration, and a working example.
+description: Create a Vue 3 project with Vite and integrate Syncfusion EJ2 3D Circular Chart, including setup steps, module registration, and a full working example.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug

@@ -31,7 +31,7 @@ The default orientation displays nodes horizontally across the chart, with flows
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/orientation-rtl/horizontal-cs1/app-composition.vue %}
+{% include code-snippet/sankey/orientation-rtl/horizontal-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/orientation-rtl/horizontal-cs1/app.vue %}
@@ -46,7 +46,7 @@ Display nodes vertically with flows moving from top to bottom. This layout is us
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/orientation-rtl/vertical-cs1/app-composition.vue %}
+{% include code-snippet/sankey/orientation-rtl/vertical-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/orientation-rtl/vertical-cs1/app.vue %}
@@ -61,7 +61,7 @@ Enable RTL rendering for languages that read from right to left (such as Arabic,
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/orientation-rtl/rtl-cs1/app-composition.vue %}
+{% include code-snippet/sankey/orientation-rtl/rtl-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/orientation-rtl/rtl-cs1/app.vue %}
@@ -76,7 +76,7 @@ Combining RTL mode with horizontal orientation creates a right-to-left flow layo
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/orientation-rtl/rtl-horizontal-cs1/app-composition.vue %}
+{% include code-snippet/sankey/orientation-rtl/rtl-horizontal-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/orientation-rtl/rtl-horizontal-cs1/app.vue %}

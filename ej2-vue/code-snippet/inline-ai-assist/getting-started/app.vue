@@ -1,41 +1,75 @@
 <template>
-  <div id='container' style="height: 350px; width: 650px; margin: 0 auto;">
-    <br>
-    <ejs-inlineaiassist id='inlineAiAssist' popup-width="500px" :prompt-request="onPromptRequest" ref="inlineAiAssist"></ejs-inlineaiassist>
-  </div>
+    <div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
+        <br />
+        <div style="display:flex; gap:12px; align-items:center; margin-bottom:8px;">
+            <button id="summarizeBtn" @click="showPopup">Summarize</button>
+            <div id="editableText" contenteditable="true" style="flex:1; border:1px solid #ddd; padding:8px; min-height:40px;">Select text and click Summarize</div>
+        </div>
+
+        <ejs-inlineaiassist id="defaultInlineAssist"
+            popup-width="500px"
+            :relate-to="'#summarizeBtn'"
+            :prompt-request="onPromptRequest"
+            :response-settings="responseSettings"
+            ref="defaultInlineAssist">
+        </ejs-inlineaiassist>
+    </div>
 </template>
+
 <script>
-import { InlineAIAssistComponent } from "@syncfusion/ej2-vue-interactive-chat";
+import { InlineAIAssistComponent } from '@syncfusion/ej2-vue-interactive-chat';
+import { enableRipple } from '@syncfusion/ej2-base';
+
+enableRipple(true);
 
 export default {
-  components: {
-    'ejs-inlineaiassist': InlineAIAssistComponent
-  },
-  data () {
-    return {
-    }
-  },
-  methods: {
-    onPromptRequest: function (args) {
-      var prompt = args.prompt;
-      var self = this;
-      setTimeout(function () {
-        var sampleResponse = "**You asked:** " + prompt + "\n" +
-          "This is a demonstration response from Syncfusion InlineAIAssist.\n" +
-          "In your real application, send the prompt to an AI service here.";
-        if (self.$refs.inlineAiAssist && self.$refs.inlineAiAssist.addResponse) {
-          self.$refs.inlineAiAssist.addResponse(sampleResponse, true);
+    components: { 'ejs-inlineaiassist': InlineAIAssistComponent },
+    data() {
+        return {
+            responseSettings: {
+                itemSelect: this.onResponseItemSelect
+            }
+        };
+    },
+    methods: {
+        onPromptRequest() {
+            setTimeout(() => {
+                const defaultResponse = 'For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
+                if (this.$refs.defaultInlineAssist && this.$refs.defaultInlineAssist.addResponse) {
+                    this.$refs.defaultInlineAssist.addResponse(defaultResponse);
+                }
+            }, 1000);
+        },
+        onResponseItemSelect(args) {
+            const label = args && args.command && args.command.label ? args.command.label : '';
+            if (label === 'Accept') {
+                const editable = document.getElementById('editableText');
+                if (editable && this.$refs.defaultInlineAssist && this.$refs.defaultInlineAssist.prompts) {
+                    const prompts = this.$refs.defaultInlineAssist.prompts;
+                    const last = prompts && prompts.length ? prompts[prompts.length - 1] : null;
+                    if (last && last.response) {
+                        editable.innerHTML = '<p>' + last.response + '</p>';
+                    }
+                }
+                this.$refs.defaultInlineAssist.hidePopup();
+            } else if (label === 'Discard') {
+                this.$refs.defaultInlineAssist.hidePopup();
+            }
+        },
+        showPopup() {
+            if (this.$refs.defaultInlineAssist && this.$refs.defaultInlineAssist.showPopup) {
+                this.$refs.defaultInlineAssist.showPopup();
+            }
         }
-      }, 1000);
+    },
+    mounted() {
+        if (this.$refs.defaultInlineAssist && this.$refs.defaultInlineAssist.showPopup) {
+            this.$refs.defaultInlineAssist.showPopup();
+        }
     }
-  },
-  mounted() {
-    if (this.$refs.inlineAiAssist && this.$refs.inlineAiAssist.showPopup) {
-      this.$refs.inlineAiAssist.showPopup();
-    }
-  }
-}
+};
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
