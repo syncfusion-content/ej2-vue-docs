@@ -1,11 +1,20 @@
 <template>
   <div id="app">
-    <ejs-diagram id="diagram" ref="diagram" :width="width" :height="height" :nodes="nodes"
-      :snapSettings="snapSettings"></ejs-diagram>
+    <ejs-diagram
+      id="diagram"
+      ref="diagram"
+      :width="width"
+      :height="height"
+      :nodes="nodes"
+      :snapSettings="snapSettings"
+    ></ejs-diagram>
   </div>
 </template>
 <script>
-import { DiagramComponent, SnapConstraints, Snapping } from '@syncfusion/ej2-vue-diagrams';
+import {
+  DiagramComponent,
+  SnapConstraints,
+} from '@syncfusion/ej2-vue-diagrams';
 let nodes = [
   {
     id: 'Node1',
@@ -36,19 +45,12 @@ export default {
       height: '700px',
       nodes: nodes,
       snapSettings: {
-        constraints: SnapConstraints.ShowHorizontalLines | SnapConstraints.SnapToObject,
+        constraints: SnapConstraints.ShowHorizontalLines,
       },
     };
   },
-  provide: {
-    diagram: [Snapping]
-  }
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>

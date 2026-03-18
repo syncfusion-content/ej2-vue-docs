@@ -145,4 +145,3 @@ Customize the pointer value displayed on the Circular Gauge by using the [`value
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/circular-gauge/getting-started-cs65" %}
- 

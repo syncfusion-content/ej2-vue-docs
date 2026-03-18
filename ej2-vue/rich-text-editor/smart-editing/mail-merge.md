@@ -59,7 +59,6 @@ export default {
 The **DropDownButton** component displays a list of merge fields such as First Name, Last Name, and Company Name. When a user selects an item, the corresponding placeholder (e.g., {{FirstName}}) is inserted at the current cursor position using the `insertHTML` command.
 
 {% tabs %}
-{% raw %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
@@ -109,7 +108,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% endraw %}
 {% endtabs %}
 
 ## Populating merge fields using Mention
@@ -117,7 +115,6 @@ export default {
 The **Mention** component provides an alternative way to insert placeholders by typing the <code>&#123;&#123;</code> character inside the editor. A popup list of merge fields appears, allowing quick selection without using the toolbar.
 
 {% tabs %}
-{% raw %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <ejs-mention ref="mentionObj" id="mentionObj" target="#mailMergeEditor_rte-edit-view" :mentionChar="mentionChar" :allowSpaces="true" :dataSource="mergeData" :fields="fieldsData" popupWidth="250px" popupHeight="200px" :displayTemplate="'displayTemplate'">
@@ -156,7 +153,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% endraw %}
 {% endtabs %}
 
 ## Replacing placeholders with actual data dynamically

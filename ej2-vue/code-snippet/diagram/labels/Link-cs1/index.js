@@ -13,7 +13,7 @@
         // Sets the annotation for the Node
         annotations: [{
             hyperlink: {
-                link: 'https://stackoverflow.com',
+                link: 'https://hr.syncfusion.com/home',
                 //Set the link to open in the current tab
                 hyperlinkOpenState: 'NewWindow'
             }

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bpmn DataObject in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn DataObject shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Bpmn shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bpmn DataObject
 platform: ej2-vue
 documentation: ug

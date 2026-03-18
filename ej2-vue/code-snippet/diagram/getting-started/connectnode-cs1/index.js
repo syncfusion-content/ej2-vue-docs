@@ -5,51 +5,42 @@ Vue.use(DiagramPlugin);
 let nodes = [
     {
         id: "node1",
-        offsetY: 50,
-        shape: { type: "Flow", shape: "Terminator" },
-        annotations: [{
-            content: "Start"
-        }]
+        height: 100,
+        width: 100,
+        offsetX: 200,
+        offsetY: 100,
     },
     {
         id: "node2",
-        offsetY: 140,
-        shape: { type: "Flow", shape: "Process" },
-        annotations: [{
-            content: "var i = 0;"
-        }]
-    },
-    {
-        id: "node3",
-        offsetY: 230,
-        shape: { type: "Flow", shape: "Decision" },
-        annotations: [{
-            content: "i < 10?"
-        }]
-    },
+        height: 100,
+        width: 100,
+        offsetX: 200,
+        offsetY: 300,
+    }
 ];
-function getNodeDefaults(node) {
-    node.height = 50;
-    node.width = 140;
-    node.style = { fill: "skyblue", strokeColor: "skyblue" };
-    node.offsetX = 300;
-    return node;
-}
+let connectors = [
+    {
+        id: "connector1",
+        sourceID: "node1",
+        targetID: "node2"
+    },
+]
+
 new Vue({
-    el: '#app',
-    template: `
+el: '#app',
+template: `
 <div id="app">
-    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :getNodeDefaults='getNodeDefaults'></ejs-diagram>
+    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' ></ejs-diagram>
 </div>
 `,
 
-    name: 'app',
-    data() {
+name: 'app',
+    data () {
         return {
             width: "100%",
             height: "350px",
             nodes: nodes,
-            getNodeDefaults: getNodeDefaults
+            connectors: connectors
         }
     }
 

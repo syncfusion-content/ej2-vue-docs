@@ -1,14 +1,14 @@
 <template>
     <div id="app">
         <ejs-diagram id="diagram" ref="diagramObj" :width="width" :height="height" :nodes="nodes"
-            :connectors="connectors" :animationComplete="animationComplete" :layout="layout"></ejs-diagram>
+            :connectors="connectors" :click="animationComplete" :layout="layout"></ejs-diagram>
     </div>
 </template>
 
 <script setup>
 
 import { provide, ref, onMounted } from "vue";
-import { DiagramComponent as EjsDiagram, HierarchicalTree, LayoutAnimation } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent as EjsDiagram, HierarchicalTree } from '@syncfusion/ej2-vue-diagrams';
 
 let diagramInstance;
 let diagramObj = ref(null);
@@ -103,14 +103,10 @@ const animationComplete = (args) => {
     diagramInstance.dataBind();
 };
 
-provide('diagram', [HierarchicalTree, LayoutAnimation]);
+provide('diagram', [HierarchicalTree]);
 
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>

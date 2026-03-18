@@ -95,15 +95,21 @@ data() {
     nodes: nodes,
     connectors: connectors,
     click: function () {
-      console.log("Clicked");
+      console.log("clicked");
     },
     elementDraw: function (args) {
-      console.log('Element draw event');
+      //Prevents connector drawn from connector port
+      if (
+        args.state === "Start" &&
+        args.source instanceof Connector
+      ) {
+        args.cancel = true;
+      }
     },
-    positionChange: function (args) {
+    positionChange: function () {
       console.log("Position change");
     },
-    connectionChange: function (args) {
+    connectionChange: function () {
       console.log("Connection change");
     },
   };
@@ -114,9 +120,5 @@ data() {
 
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>

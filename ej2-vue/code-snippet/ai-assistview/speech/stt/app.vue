@@ -1,220 +1,92 @@
 <template>
-  <div class="integration-speechtotext-section">
+  <div id="container" style="height: 500px; width: 700px; margin: 0 auto;">
+    <br />
     <ejs-aiassistview
       id="aiAssistView"
-      ref="aiAssist"
-      bannerTemplate="bannerTemplate"
-      @promptRequest="onPromptRequest"
-      footerTemplate="footerTemplate"
-      :toolbarSettings="toolbarSettings"
-      :promptToolbarSettings="promptToolbarSettings"
-      :stop-responding-click="stopRespondingClick"
-    >
-      <template v-slot:bannerTemplate="">
+      ref="aiassist"
+      :prompt-request="onPromptRequest"
+      :toolbar-settings="toolbarSettings"
+      :speech-to-text-settings="speechToTextSettings"
+      banner-template="bannerTemplate"
+    />
+    <template v-slot:bannerTemplate="{ data }">
         <div class="banner-content">
           <div class="e-icons e-listen-icon"></div>
-          <i>Click the below mic-button to convert your voice to text.</i>
+          <h3>Speech to Text Demo</h3>
+          <i>Click the microphone icon to start voice input → speak clearly</i>
         </div>
       </template>
-      <template v-slot:footerTemplate="">
-        <div class="e-footer-wrapper">
-          <div
-            id="assistview-footer"
-            ref="assistviewFooter"
-            class="content-editor"
-            @input="toggleButtons"
-            @keydown="handleEvent"
-            contenteditable="true"
-            placeholder="Click to speak or start typing..."
-          ></div>
-          <div class="option-container">
-            <ejs-speechtotext
-              id="speechToText"
-              cssClass="e-flat"
-              ref="speechToTextObj"
-              @transcriptChanged="onTranscriptChange"
-              @onStop="onListeningStop"
-              @created="created"
-              @onError="onErrorHandler"
-            ></ejs-speechtotext>
-            <ejs-button
-              id="assistview-sendButton"
-              ref="assistviewSendButton"
-              @click="sendIconClicked"
-              class="e-assist-send e-icons"
-              role="button"
-            ></ejs-button>
-          </div>
-        </div>
-      </template>
-    </ejs-aiassistview>
+    />
   </div>
 </template>
 
 <script>
-import { AIAssistViewComponent } from '@syncfusion/ej2-vue-interactive-chat';
-import { SpeechToTextComponent } from '@syncfusion/ej2-vue-inputs';
-import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
-import { marked } from 'marked';
+import { AIAssistViewComponent } from "@syncfusion/ej2-vue-interactive-chat";
 
 export default {
   components: {
-    'ejs-aiassistview': AIAssistViewComponent,
-    'ejs-speechtotext': SpeechToTextComponent,
-    'ejs-button': ButtonComponent,
+    "ejs-aiassistview": AIAssistViewComponent,
   },
+
   data() {
     return {
-      azureOpenAIApiKey: '', // YOUR_AZURE_OPENAI_API_KEY
-      azureOpenAIEndpoint: '', // YOUR_AZURE_OPENAI_API_ENDPOINT
-      azureOpenAIApiVersion: '', // YOUR_AZURE_OPENAI_API_VERSION
-      azureDeploymentName: '', // YOUR_DEPLOYMENT_NAME
-      stopStreaming: false,
       toolbarSettings: {
-        items: [
-          {
-            iconCss: 'e-icons e-refresh',
-            align: 'Right',
-            tooltip: 'Clear Prompts',
-          },
-        ],
-        itemClicked: () => {
-          this.$refs.aiAssist.ej2Instances.prompts = [];
-          this.stopStreaming = true;
-        },
+        items: [{ iconCss: "e-icons e-refresh", align: "Right" }],
+        itemClicked: this.toolbarItemClicked,
       },
-      promptToolbarSettings: {
-        itemClicked: (args) => {
-          if (args.item.iconCss === 'e-icons e-assist-edit') {
-            this.$refs.assistviewFooter.innerHTML = this.$refs.aiAssist.ej2Instances.prompts[args.dataIndex].prompt;
-            this.toggleButtons();
-          }
-        },
+
+      speechToTextSettings: {
+        enable: true
       },
     };
   },
-  mounted() {
-    // Defer initial toggleButtons call until after mount
-    this.$nextTick(() => {
-      this.toggleButtons();
-    });
-  },
+
   methods: {
-    // Streams the AI response character by character to create a typing effect
-    async streamResponse(response) {
-      let lastResponse = '';
-      const responseUpdateRate = 10;
-      let i = 0;
-      const responseLength = response.length;
-      while (i < responseLength && !this.stopStreaming) {
-        lastResponse += response[i];
-        i++;
-        if (i % responseUpdateRate === 0 || i === responseLength) {
-          const htmlResponse = marked.parse(lastResponse);
-          this.$refs.aiAssist.ej2Instances.addPromptResponse(
-            htmlResponse,
-            i === responseLength
-          );
-          this.$refs.aiAssist.ej2Instances.scrollToBottom();
-        }
-        await new Promise((resolve) => setTimeout(resolve, 15)); // Delay for streaming effect
-      }
-      this.toggleButtons();
-    },
-    // Handles prompt requests by sending them to the Azure OpenAI API and streaming the response
     onPromptRequest(args) {
-      if (!args?.prompt?.trim() || !this.$refs.aiAssist.ej2Instances) return;
-      this.stopStreaming = false;
-      const url =
-        this.azureOpenAIEndpoint.replace(/\/$/, '') +
-        `/openai/deployments/${encodeURIComponent(
-          this.azureDeploymentName
-        )}/chat/completions` +
-        `?api-version=${encodeURIComponent(this.azureOpenAIApiVersion)}`;
-      fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'api-key': this.azureOpenAIApiKey,
-        },
-        body: JSON.stringify({
-          model: 'gpt-4o-mini',
-          messages: [{ role: 'user', content: args.prompt }],
-          max_tokens: 150,
-          stream: false,
-        }),
-      })
-        .then((response) => response.json())
-        .then((reply) => {
-          const responseText =
-            reply.choices[0].message.content.trim() || 'No response received.';
-          this.stopStreaming = false;
-          this.streamResponse(responseText);
-        })
-        .catch((error) => {
-          this.$refs.aiAssist.ej2Instances.addPromptResponse(
-            '⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.',
-            true
-          );
-          this.stopStreaming = true;
-          toggleButtons();
-        });
+      setTimeout(() => {
+        const instance = this.$refs.aiassist.ej2Instances;
+
+        if (!args.prompt.trim()) return;
+
+        const defaultResponse =
+          "For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+
+        instance.addPromptResponse(defaultResponse, true);
+      }, 1200);
     },
-    // Stops the ongoing streaming response and toggles button visibility
-    stopRespondingClick() {
-      this.stopStreaming = true;
-      this.toggleButtons();
-    },
-    // Updates the footer input with the latest speech transcript
-    onTranscriptChange(args) {
-      this.$refs.assistviewFooter.innerText = args.transcript;
-    },
-    // Toggles button visibility when speech-to-text listening stops
-    onListeningStop() {
-      this.toggleButtons();
-    },
-    // Initializes button visibility when the speech-to-text component is created
-    created() {
-      this.toggleButtons();
-    },
-    // Handles Enter key press in the input to send the prompt without Shift
-    handleEvent(e) {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        this.sendIconClicked();
-        e.preventDefault();
+
+    toolbarItemClicked(args) {
+      if (args.item.iconCss === "e-icons e-refresh") {
+        const instance = this.$refs.aiassist.ej2Instances;
+        instance.prompts = [];
       }
-    },
-    // Toggles visibility of send and speech buttons based on whether the input has text
-    toggleButtons() {
-      const assistviewFooter = this.$refs.assistviewFooter;
-      const sendButton = this.$refs.assistviewSendButton?.$el;
-      const speechButton = this.$refs.speechToTextObj?.$el;
-      if (!assistviewFooter || !sendButton || !speechButton) {
-        return;
-      }
-      const hasText = assistviewFooter.innerText.trim() !== '';
-      sendButton.classList.toggle('visible', hasText);
-      speechButton.classList.toggle('visible', !hasText);
-      if (!hasText &&(assistviewFooter.innerHTML === '<br>' || assistviewFooter.innerHTML.trim() === '')) {
-        assistviewFooter.innerHTML = '';
-      }
-    },
-    // Executes the current prompt from the footer input and clears it
-    sendIconClicked(args) {
-      this.$refs.aiAssist.ej2Instances.executePrompt(this.$refs.assistviewFooter.innerText);
-      this.$refs.assistviewFooter.innerText = '';
     },
   },
 };
 </script>
-<style>
 
+<style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
+.banner-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 300px;
+text-align: center;
+padding: 0 20px;
+}
 
+.banner-content .e-listen-icon:before {
+font-size: 48px;
+margin-bottom: 16px;
+color: #006ce6;
+}
+#container {
+  max-width: 90vw;
+}
 </style>

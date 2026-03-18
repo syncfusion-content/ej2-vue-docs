@@ -34,7 +34,7 @@ onMounted(() => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
 @font-face {
   font-family: 'e-context-menu';
