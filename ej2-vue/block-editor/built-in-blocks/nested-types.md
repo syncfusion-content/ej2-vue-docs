@@ -34,7 +34,7 @@ You can configure the CollapsibleHeading using the property `level` inside the `
 
 You can control whether a block is expanded or collapsed using the [isExpanded](../../api/blockeditor/blockModel#isExpanded) property. By default, this property is set to `false`, meaning the block will be collapsed initially. This setting is only applicable to `Collapsible` blocks.
 
-### BlockType & Properties
+### Block type & properties
 
 ```typescript
 // Configuring CollapsibleHeading block
@@ -65,6 +65,17 @@ You can control whether a block is expanded or collapsed using the [isExpanded](
 
 This example shows how to configure `CollapsibleHeading` and `CollapsibleParagraph` blocks.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/children/toggle-block/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/children/toggle-block/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/children/toggle-block" %}
+
 ### Configure placeholder
 
 You can configure placeholder text for block using the [placeholder](../../api/blockeditor/blockModel#placeholder) property. This text appears when the block is empty. The default placeholder for collapsible heading and collapsible paragraph is `Collapsible Heading{level}` and `Collapsible Paragraph` respectively.
@@ -89,7 +100,7 @@ You can configure placeholder text for block using the [placeholder](../../api/b
 
 Quote blocks are styled for displaying quotations or excerpts. Render a Quote block by setting the [blockType](../../api/blockeditor/blockModel#blockType) to `Quote`. Editing is now more natural with multi‑line support—pressing Enter creates a new line inside the block, and pressing Enter again on an empty line exits the quote.
 
-### BlockType & Properties
+### Block type & properties
 
 ```typescript
 // Adding quote block
@@ -108,23 +119,22 @@ Quote blocks are styled for displaying quotations or excerpts. Render a Quote bl
 ```
 The following sample demonstrates how to configure quote block.
 
-### Configure placeholder
-
-You can configure placeholder text for block using the [placeholder](../../api/blockeditor/blockModel#placeholder) property. This text appears when the block is empty. The default placeholder for quote block is `Write a quote`.
-
-```typescript
-// Adding placeholder value to blocktype
-{
-    blockType: 'Quote',
-    properties: { placeholder: 'Quote'}
-}
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/children/quote/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/children/quote/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/children/quote" %}
 
 ## Configure callout block
 
 Callout blocks highlight important information such as notes, warnings, or tips. Render one by setting the [blockType](../../api/blockeditor/blockModel#blockType) to `Callout`.
 
-### BlockType & Properties
+### Block type & properties
 
 ```typescript
 // Adding callout block
@@ -143,3 +153,14 @@ Callout blocks highlight important information such as notes, warnings, or tips.
 ```
 
 The following sample demonstrates how to configure callout block.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/children/callout/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/children/callout/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/children/callout" %}

@@ -89,12 +89,17 @@ export default {
         },
         {
             blockType: 'Quote',
-            content: [
-                {
-                    contentType: ContentType.Text,
-                    content: 'Right-click anywhere in this editor to open the custom context menu. Try different areas and blocks.'
-                }
-            ]
+            properties:{
+                children:[{
+                    blockType: 'Paragraph',
+                    content: [
+                        {
+                            contentType: ContentType.Text,
+                            content: 'Right-click anywhere in this editor to open the custom context menu. Try different areas and blocks.'
+                        }
+                    ]
+                }]
+            }
         }
       ],
       contextMenuSettings: {

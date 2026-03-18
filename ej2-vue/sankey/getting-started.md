@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Getting started with Vue Sankey Chart component | Syncfusion
-description:  Quickstart: create a Vue 2 project and add the Syncfusion Vue Sankey Chart (Essential JS 2); includes setup, module registration, and examples.
+description:  Quickstart create a Vue 2 project and add the Syncfusion Vue Sankey Chart (Essential JS 2); includes setup, module registration, and examples.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
-domainurl: https://ej2.syncfusion.com
+domainurl: ##DomainURL##
 ---
 
 
@@ -88,13 +88,6 @@ Follow the steps below to add the Sankey Chart component:
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
-
-<template>
-  <div id="app">
-    <ejs-sankey id="container"></ejs-sankey>
-  </div>
-</template>
-
 <script>
 import {
   SankeyComponent
@@ -127,7 +120,7 @@ export default {
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/sankey/getting-started/initialize-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

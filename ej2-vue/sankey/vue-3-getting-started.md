@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the Sankey chart component | Syncfusion
-description: Quickstart: integrate the Syncfusion Vue 3 Sankey Chart - using Vite, module registration, and a working example.
+description: Quickstart integrate the Syncfusion Vue 3 Sankey Chart - using Vite, module registration, and a working example.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -181,9 +181,6 @@ tooltip: { enable: true }
 {% endhighlight %}
 {% endtabs %}
 
-{% endhighlight %}
-{% endtabs %}
-
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
@@ -258,7 +255,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![Vue 3 Sankey Chart sample showing with tooltip](./images/vue3-sankey-chart-demo.png)
+![Vue 3 Sankey Chart sample showing with tooltip](./images/vue3-sankey-tooltip.png)
 
 ## Verify the chart
 

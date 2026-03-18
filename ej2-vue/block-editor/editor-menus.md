@@ -164,7 +164,7 @@ The inline toolbar now includes `transform` options to quickly convert blocks be
 
 #### Built-in default transform block options
 
-Below are the built-in tranform block options available:
+Below are the built-in transform block options available:
 
 | Built-in transform Block Types          |
 |-----------------------------------------|
@@ -194,11 +194,33 @@ Added inline link formatting in the toolbar, by link item click, link dialog ope
 
 The following example demonstrates how to customize the transform, inline code, link items.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/transform-item/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/transform-item/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/inline-toolbar/transform-item" %}
+
 #### Font and background color support
 
 Enhanced font and background color options in the inline toolbar with integrated ColorPicker. You can use the [fontColorSettings](../api/blockeditor#fontColorSettings), [backgroundColorSettings](../api/blockeditor#backgroundColorSettings) properties to handle for text customization, highlighting, predefined palettes, custom inputs, and quick previews.
 
 The following example demonstrates how to customize the font and background color toolbar items.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/color-item/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/color-item/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/inline-toolbar/color-item" %}
 
 ### Customize Inline Toolbar
 

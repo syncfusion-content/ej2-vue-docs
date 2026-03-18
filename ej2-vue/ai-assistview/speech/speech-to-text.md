@@ -19,7 +19,7 @@ Before integrating `Speech-to-Text`, ensure the following:
 1. The Syncfusion AI AssistView component is properly set up in your Vue application.
     - [Vue Getting Started Guide](../getting-started)
 
-2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
+2. The AI AssistView component is integrated with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/).
     - [Integration of Azure OpenAI With Vue AI AssistView component](../ai-integrations/openai-integration)
 
 ## Enable built-in speech-to-text
@@ -51,13 +51,46 @@ The [allowInterimResults](../api/ai-assistview#speechtotextsettings) property en
 
 This example demonstrates how to set up the AI AssistView with all these speech recognition features enabled:
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/speech/speech-configuration/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/speech/speech-configuration/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/ai-assistview/speech/speech-configuration" %}
+
 ## Configure tooltip settings
 
 You can customize the tooltips to the microphone button using the [tooltipSettings](../api/ai-assistview#speechtotextsettings) property.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/speech/tooltip-settings/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/speech/tooltip-settings/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/ai-assistview/speech/tooltip-settings" %}
+
 ## Speech to text events
 
 The speech-to-text functionality provides events like `onStart` (when recognition starts), `onStop` (when it stops), `transcriptChanged` (when transcript updates), and `onError` (when errors occur).
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/speech/speech-events/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/speech/speech-events/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/ai-assistview/speech/speech-events" %}
 
 ## Browser Compatibility
 

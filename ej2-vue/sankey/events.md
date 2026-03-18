@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Events in Vue Sankey Chart component
 
-The Sankey Chart provides comprehensive events that allow you to customize behavior, respond to user interactions, and hook into the chart lifecycle. These events enable advanced customization scenarios including data transformation, analytics tracking, and dynamic UI updates.
+The Sankey Chart provides comprehensive events that allow you to customize behavior, respond to user interactions, and hook into the chart life cycle. These events enable advanced customization scenarios including data transformation, analytics tracking, and dynamic UI updates.
 
-This guide covers lifecycle events, rendering events, interaction events, and export/print events.
+This guide covers life cycle events, rendering events, interaction events, and export/print events.
 
 ## Event List
 
@@ -84,7 +84,7 @@ Handle node click and hover events to respond to user actions and provide intera
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/sankey/events/node-interaction-cs1" %}
+{% previewsample "page.domainurl/code-snippet/events/node-interaction-cs1" %}
 
 ## Link Interaction Events
 
@@ -111,14 +111,14 @@ The `nodeRendering` event triggers before each node is rendered, allowing dynami
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/events/node-rendering-cs1/app-composition.vue %}
+{% include code-snippet/sankey/customization/node-rendering-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/customization/node-rendering-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/sankey/events/node-rendering-cs1" %}
+{% previewsample "page.domainurl/code-snippet/sankey/customization/node-rendering-cs1" %}
 
 ### Link Rendering Event
 
@@ -126,7 +126,7 @@ The `linkRendering` event triggers before each link is rendered, allowing dynami
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/events/link-rendering-cs1/app-composition.vue %}
+{% include code-snippet/sankey/customization/link-rendering-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/customization/link-rendering-cs1/app.vue %}
@@ -163,7 +163,7 @@ The `legendItemRendering` event triggers before a legend item is rendered, allow
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/customization/events/legend-rendering-cs1" %}
+{% previewsample "page.domainurl/code-snippet/customization/legend-rendering-cs1" %}
 
 ## Size Changed Event
 

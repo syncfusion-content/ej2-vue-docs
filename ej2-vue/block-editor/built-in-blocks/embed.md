@@ -77,7 +77,7 @@ The `Image` block [properties](../../api/blockeditor/blockModel) property suppor
 | height | Specifies the display height of the image. | `''` |
 | altText | Specifies the alternative text to display when the image cannot be loaded. | `''` |
 
-### BlockType & Properties
+### Block type & properties
 
 The following example demonstrates how to pre-configure an `Image` block in the editor.
 
@@ -116,6 +116,15 @@ To insert an image from your local machine, render the `Image` block. It opens a
 Upload the selected image to a specified destination using the controller action specified in [imageBlockSettings.saveUrl](../../api/blockeditor/imageBlockSettings#saveUrl). Ensure to map this method name appropriately and provide the required destination path through the [imageBlockSettings.path](../../api/blockeditor/imageBlockSettings#path) properties.
 
 Set the [imageBlockSettings.saveFormat](../../api/blockeditor/imageBlockSettings#saveformat) property to determine whether the image should be saved as Blob or Base64, aligning with your application's requirements.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/block-types/image-block/image-upload-server/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/block-types/image-block/image-upload-server/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
 ```csharp
 
@@ -181,6 +190,15 @@ public class HomeController : Controller
 ### Secure image upload with authentication
 
 You can add additional data with the image uploaded from the Block Editor on the client side, which can even be received on the server side. By using the [fileUploading](../../api/blockeditor#fileUploading) event and it's arguments you can access the current request and set the request header within these event. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/block-types/image-block/image-upload-authentication/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/block-editor/blocks/block-types/image-block/image-upload-authentication/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
 ```csharp
 

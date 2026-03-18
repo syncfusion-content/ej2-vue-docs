@@ -63,6 +63,17 @@ The AI AssistView supports rendering responses as **Markdown** content, which is
 
 You can use markdown syntax like **bold**, *italic*, headings, lists, code blocks, and links to format your responses.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/assist-view/markdown-prompt/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/assist-view/markdown-prompt/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/markdown-prompt" %}
+
 ## Configuring prompt suggestions
 
 The [promptSuggestions](../api/ai-assistview#promptsuggestions) property provides users with helpful suggestions that can appear initially or on-demand. These suggestions help users formulate better prompts and discover available functionality, enhancing the overall user experience.
@@ -141,3 +152,14 @@ The [showClearButton](../api/ai-assistview#showclearbutton) property controls th
 ## Enable scroll to bottom icon
 
 You can use the [enableScrollToBottom](../api/ai-assistview#enablescrolltobottom) property to show or hide the scroll-to-bottom indicator. By default, this property is `true`. When enabled, a floating icon/button appears when the user scrolls away from the bottom of the conversation. Clicking this icon smoothly scrolls the view to the bottom to display the latest response.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/assist-view/scroll-to-bottom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/assist-view/scroll-to-bottom/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/scroll-to-bottom" %}
