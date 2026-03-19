@@ -84,7 +84,7 @@ Handle node click and hover events to respond to user actions and provide intera
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/events/node-interaction-cs1" %}
+{% previewsample "page.domainurl/code-snippet/sankey/events/node-interaction-cs1" %}
 
 ## Link Interaction Events
 

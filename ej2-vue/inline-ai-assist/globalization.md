@@ -23,6 +23,24 @@ The Inline AI Assist can be localized to any culture by defining the text of the
 
 The below example shows adding the German culture locale(`de-DE`)
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/globalization/localization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/globalization/localization/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
 ## RTL
 
 RTL provides an option to switch the text direction and layout of the Inline AI Assist control from right to left by setting the [enableRtl](../api/inline-ai-assist#enablertl) property to `true`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/globalization/enable-rtl/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/globalization/enable-rtl/app.vue %}
+{% endhighlight %}
+{% endtabs %}

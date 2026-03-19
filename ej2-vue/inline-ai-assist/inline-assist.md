@@ -14,15 +14,33 @@ domainurl: ##DomainURL##
 
 You can use the [prompt](../api/inline-ai-assist#prompt) property to define the prompt text for the Inline AI Assist control.
 
-## Setting prompt placeholder
-
-You can use the [placeholder](../api/inline-ai-assist#placeholder) property to set the placeholder text for the prompt textarea. The default value is `Ask or generate AI content..`.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-assist/prompt/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-assist/prompt/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Prompt-response collection
 
 You can use the [prompts](../api/inline-ai-assist#prompts) property to retrieve the responses for the associated prompts.
 
 > The `prompts` collection stores all the prompts and responses generated.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-assist/prompts/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-assist/prompts/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+## Setting prompt placeholder
+
+You can use the [placeholder](../api/inline-ai-assist#placeholder) property to set the placeholder text for the prompt textarea. The default value is `Ask or generate AI content..`.
 
 ## Setting z-index
 
@@ -39,3 +57,12 @@ You can use the [popupHeight](../api/inline-ai-assist#height) property to set th
 ## cssClass
 
 You can customize the appearance of the Inline AI Assist control by using the [cssClass](../api/inline-ai-assist#cssclass) property.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-assist/customization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-assist/customization/app.vue %}
+{% endhighlight %}
+{% endtabs %}

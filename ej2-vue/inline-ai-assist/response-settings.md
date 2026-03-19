@@ -49,3 +49,12 @@ You can use the `tooltip` property to specify the tooltip text to be displayed o
 ## Configure item select
 
 The [itemSelect](../api/inline-ai-assist/responseSettingsModel#itemselect) event is triggered when an item is selected from the response popup in the Inline AI Assist control.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/response-settings/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/response-settings/app.vue %}
+{% endhighlight %}
+{% endtabs %}
