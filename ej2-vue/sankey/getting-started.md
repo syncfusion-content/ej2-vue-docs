@@ -147,7 +147,6 @@ The Sankey Chart component is organized into feature-specific modules. In Vue, e
 
 * `SankeyLegend` — Module for legend support.
 * `SankeyTooltip` — Module for tooltip support.
-* `SankeyDataLabel` — Module for data labels.
 
 The sample code below shows how to register the required modules in the component `provide` option:
 
@@ -155,7 +154,7 @@ The sample code below shows how to register the required modules in the componen
 import {
   SankeyComponent,
   SankeyLegend,
-  SankeyTooltip, SankeyDataLabel
+  SankeyTooltip
 } from '@syncfusion/ej2-vue-charts';
 
 export default {
@@ -163,8 +162,7 @@ export default {
   provide: {
     sankey: [
       SankeyLegend,
-      SankeyTooltip,
-      SankeyDataLabel
+      SankeyTooltip
     ]
   }
 };
