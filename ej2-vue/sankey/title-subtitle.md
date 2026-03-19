@@ -43,7 +43,7 @@ Add a main title and descriptive subtitle to your Sankey Chart to provide contex
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/title-subtitle/basic-cs1/app-composition.vue %}
+{% include code-snippet/sankey/title-subtitle/basic-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/title-subtitle/basic-cs1/app.vue %}
@@ -58,7 +58,7 @@ Apply custom styling to both the title and subtitle including font properties, c
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/title-subtitle/customization-cs1/app-composition.vue %}
+{% include code-snippet/sankey/title-subtitle/customization-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/title-subtitle/customization-cs1/app.vue %}
@@ -73,7 +73,7 @@ Add only a title to the Sankey Chart when a subtitle is not needed. This provide
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/title-subtitle/title-only-cs1/app-composition.vue %}
+{% include code-snippet/sankey/title-subtitle/title-only-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/title-subtitle/title-only-cs1/app.vue %}
@@ -88,7 +88,7 @@ Control the alignment of title and subtitle text:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/title-subtitle/alignment-cs1/app-composition.vue %}
+{% include code-snippet/sankey/title-subtitle/alignment-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/title-subtitle/alignment-cs1/app.vue %}

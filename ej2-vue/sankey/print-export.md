@@ -20,7 +20,7 @@ Print the Sankey Chart directly to paper or PDF using the `print()` method. This
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/print-export/print-cs1/app-composition.vue %}
+{% include code-snippet/sankey/print-export/print-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/print-export/print-cs1/app.vue %}
@@ -48,7 +48,7 @@ Export the chart using default settings with a default filename:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/print-export/export-formats-cs1/app-composition.vue %}
+{% include code-snippet/sankey/print-export/export-formats-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/print-export/export-formats-cs1/app.vue %}
@@ -63,7 +63,7 @@ Export the chart with a custom filename and format selection to control output f
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/print-export/export-custom-cs1/app-composition.vue %}
+{% include code-snippet/sankey/print-export/export-custom-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/print-export/export-custom-cs1/app.vue %}
@@ -80,7 +80,7 @@ Use the `beforeExport` event to customize the export process before the file is 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/print-export/before-export-cs1/app-composition.vue %}
+{% include code-snippet/sankey/print-export/before-export-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/print-export/before-export-cs1/app.vue %}
@@ -95,7 +95,7 @@ Handle the completion of export using the `exportCompleted` event:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/print-export/export-completed-cs1/app-composition.vue %}
+{% include code-snippet/sankey/print-export/export-completed-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/print-export/export-completed-cs1/app.vue %}

@@ -18,12 +18,6 @@ By default, the inline toolbar renders the `send` item which allows users to sen
 
 In the following example, Inline AI Assist component rendered with footer toolbar items such as `send` icon.
 
-## Adding custom items
-
-You can use the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property to add custom items for the inline toolbar in the Inline AI Assist. The custom items will be added with the existing built-in items in the inline toolbar.
-
-> To know more about the items, please refer to the [items](#items) section.
-
 ## Items
 
 The Inline AI Assist toolbar can be rendered by defining an array of items. Items can be constructed with the following built-in command types or item template.
@@ -37,10 +31,6 @@ You can customize the toolbar icons by using the `iconCss` property.
 You can change the toolbar item type by using the `type` property. The `type` supports three types of items such as `Button`, `Separator` and `Input`. By default, the type is `Button`.
 
 In the following example, toolbar item type is set as `Button`.
-
-### Setting text
-
-You can use the `text` property to set the text for toolbar item.
 
 ### Show or hide toolbar item
 
@@ -63,6 +53,16 @@ You can use the `cssClass` property to customize the toolbar item.
 You can change the alignment of toolbar item by using the `align` property. It supports three types of alignments such as `Left`, `Center` and `Right`. By default, the value is `Left`.
 
 In the following example, toolbar item type is set with `Right`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/props/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/props/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
 
 ### Enabling tab key navigation in toolbar
 
@@ -116,6 +116,15 @@ In this case, the user can switch between the two Toolbar items using the Tab an
 
 You can use the `template` property to add custom toolbar item in the Inline AI Assist.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/template/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Toolbar positioning
 
 You can use the [toolbarPosition](../api/inline-ai-assist/inlineToolbarSettingsModel#toolbarPosition) property to customize footer toolbar position. It has two modes such as `Inline`, and `Bottom`. By default, the toolbarPosition is `Inline`.
@@ -125,3 +134,23 @@ By settings toolbarPosition as `Bottom`, footer items will be rendered at the bo
 ## Item click
 
 The [itemClick](../api/inline-ai-assist/inlineToolbarSettingsModel#itemclick) event is triggered when the inline toolbar item is clicked.
+
+### Setting text
+
+You can use the `text` property to set the text for toolbar item.
+
+## Adding custom items
+
+You can use the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property to add custom items for the inline toolbar in the Inline AI Assist. The custom items will be added with the existing built-in items in the inline toolbar.
+
+> To know more about the items, please refer to the [items](#items) section.
+
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/toolbar-settings/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/toolbar-settings/app.vue %}
+{% endhighlight %}
+{% endtabs %}

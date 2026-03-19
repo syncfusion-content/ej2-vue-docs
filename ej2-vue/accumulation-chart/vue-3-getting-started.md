@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started: Accumulation Chart | Syncfusion
-description: Quickstart: scaffold a Vite Vue 3 project and integrate the Syncfusion Accumulation Chart (Essential JS 2); includes Composition/Options API examples and tips.
+description: Scaffold a Vite Vue 3 project and add Syncfusion EJ2 Accumulation Charts with setup steps, module registration, and examples using Composition and Options APIs.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug

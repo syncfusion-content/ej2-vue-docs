@@ -37,7 +37,7 @@ Customize the global node appearance by configuring the `nodeStyle` property wit
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/nodes/customization-cs1/app-composition.vue %}
+{% include code-snippet/sankey/nodes/customization-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/nodes/customization-cs1/app.vue %}
@@ -52,7 +52,7 @@ Beyond global styling, you can customize the appearance of specific nodes by set
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/nodes/individual-color-cs1/app-composition.vue %}
+{% include code-snippet/sankey/nodes/individual-color-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/nodes/individual-color-cs1/app.vue %}
@@ -73,7 +73,7 @@ Configure these properties to provide visual feedback and improve the interactiv
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/nodes/opacity-cs1/app-composition.vue %}
+{% include code-snippet/sankey/nodes/opacity-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/nodes/opacity-cs1/app.vue %}
@@ -93,7 +93,7 @@ This property is useful for manually arranging nodes to avoid overlaps or create
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/nodes/offset-cs1/app-composition.vue %}
+{% include code-snippet/sankey/nodes/offset-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/nodes/offset-cs1/app.vue %}
@@ -110,7 +110,7 @@ Use the `nodeRendering` event to customize node appearance dynamically before re
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/nodes/rendering-event-cs1/app-composition.vue %}
+{% include code-snippet/sankey/nodes/rendering-event-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/nodes/rendering-event-cs1/app.vue %}

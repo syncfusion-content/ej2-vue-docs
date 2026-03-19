@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ToolTip in Vue Sankey Chart component \ Syncfusion
+title: ToolTip in Vue Sankey Chart component | Syncfusion
 description: Learn here all about ToolTip in Syncfusion Vue Sankey Chart component of Syncfusion Essential JS 2 and more.
 control: ToolTip
 platform: ej2-vue
@@ -37,7 +37,7 @@ Enable tooltips with default formatting:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/tooltip/basic-cs1/app-composition.vue %}
+{% include code-snippet/sankey/tooltip/basic-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/tooltip/basic-cs1/app.vue %}
@@ -62,7 +62,7 @@ Example customization:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/tooltip/customization-cs1/app-composition.vue %}
+{% include code-snippet/sankey/tooltip/customization-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/tooltip/customization-cs1/app.vue %}
@@ -96,7 +96,7 @@ Format string placeholders for link tooltips:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/tooltip/format-cs1/app-composition.vue %}
+{% include code-snippet/sankey/tooltip/format-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/tooltip/format-cs1/app.vue %}
@@ -113,7 +113,7 @@ Use the `tooltipRendering` event to customize tooltip content dynamically and en
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/tooltip/rendering-event-cs1/app-composition.vue %}
+{% include code-snippet/sankey/tooltip/rendering-event-cs1/app.composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sankey/tooltip/rendering-event-cs1/app.vue %}
