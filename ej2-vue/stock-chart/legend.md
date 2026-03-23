@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Legend in Vue Stock chart component
 
-Legend provides information about the series rendered in the Stock Chart which can be customized using legend properties. Legend can be added to a Stock Chart by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#visible) option in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/).
+Legend provides information about the series rendered in the Stock Chart which can be customized using legend properties. Legend can be added to a Stock Chart by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#visible) option in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings).
 
 ## Position and Alignment
 
-By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#position) property, legend can be placed at `Left`, `Right`, `Top`, `Bottom` or `Custom` of the Stock Chart. The legend is positioned at the bottom of the Stock Chart, by default.
+By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#position) property, legend can be placed at `Left`, `Right`, `Top`, `Bottom` or `Custom` of the Stock Chart. The legend is positioned at the bottom of the Stock Chart, by default.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/stock
         
 {% previewsample "page.domainurl/code-snippet/stockchart/legend-cs1" %}
 
-* [`Custom`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#position) position is used to position the legend anywhere in the Stock Chart using x, y coordinates.
+* [`Custom`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#position) position is used to position the legend anywhere in the Stock Chart using x, y coordinates.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -46,7 +46,7 @@ By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/stock
 
 <!-- markdownlint-disable MD036 -->
 
-The legend can be align as `Center`, `Far` or `Near` to the chart using [`alignment`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#alignment) property.
+The legend can be align as `Center`, `Far` or `Near` to the chart using [`alignment`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#alignment) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ The legend can be align as `Center`, `Far` or `Near` to the chart using [`alignm
 
 ## Customization
 
-To change the legend icon shape, [`legendShape`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockSeries/#legendshape) property in the [`series`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockSeries/) can be used. By default legend icon shape is `seriesType`.
+To change the legend icon shape, [`legendShape`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockSeries#legendshape) property in the [`series`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockSeries) can be used. By default legend icon shape is `seriesType`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,7 +76,7 @@ To change the legend icon shape, [`legendShape`](https://ej2.syncfusion.com/vue/
 
 **Legend Size**
 
-By default, legend takes 20% - 25% of the Stock Chart's height horizontally, when it is placed on top or bottom position and 20% - 25% of the Stock Chart's width vertically, when placed on left or right position of the Stock Chart. The default legend size can be changed by using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#height) property of the `legendSettings`.
+By default, legend takes 20% - 25% of the Stock Chart's height horizontally, when it is placed on top or bottom position and 20% - 25% of the Stock Chart's width vertically, when placed on left or right position of the Stock Chart. The default legend size can be changed by using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#height) property of the `legendSettings`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,7 +91,7 @@ By default, legend takes 20% - 25% of the Stock Chart's height horizontally, whe
 
 **Legend Item Size**
 
-The size of the legend items can customized by using the [`shapeHeight`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#shapeheight) and [`shapeWidth`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#shapewidth) property.
+The size of the legend items can customized by using the [`shapeHeight`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#shapeheight) and [`shapeWidth`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#shapewidth) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -121,7 +121,7 @@ By default, series name will be displayed as legend. To skip the legend for a pa
 
 ## Legend Title
 
-The title for legend can be set using [`title`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#title) property in `legendSettings`. Customize the [`fontStyle`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont/#fontstyle), [`size`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont/#size), [`fontWeight`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont/#fontweight), [`color`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont/#color), [`textAlignment`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont/#textalignment), [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont/#fontfamily), [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont/#opacity) and [`textOverflow`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont/#textoverflow) of legend title. [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#titleposition) is used to set the legend position in Top, Left and Right position. [`maximumTitleWidth`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings/#maximumtitlewidth) is used to set the width of the legend title. By default, it will be `100px`.
+The title for legend can be set using [`title`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#title) property in `legendSettings`. Customize the [`fontStyle`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont#fontstyle), [`size`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont#size), [`fontWeight`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont#fontweight), [`color`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont#color), [`textAlignment`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont#textalignment), [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont#fontfamily), [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont#opacity) and [`textOverflow`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartFont#textoverflow) of legend title. [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#titleposition) is used to set the legend position in Top, Left and Right position. [`maximumTitleWidth`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettings#maximumtitlewidth) is used to set the width of the legend title. By default, it will be `100px`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -138,7 +138,7 @@ The title for legend can be set using [`title`](https://ej2.syncfusion.com/vue/d
 
 Legend templates allow you to replace default legend icons and text with custom HTML.This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.The rendered content becomes the legend item and can be styled with CSS.
 
-You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`ToggleVisibility`] (https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`ToggleVisibility`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
