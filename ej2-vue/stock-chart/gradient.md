@@ -46,14 +46,14 @@ Apply a linear gradient to a series by adding `linearGradient` inside the target
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/stock-chart/chart-gradient-cs1/app-composition.vue %}
+{% include code-snippet/stockchart/chart-gradient-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/stock-chart/chart-gradient-cs1/app.vue %}
+{% include code-snippet/stockchart/chart-gradient-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/stock-chart/chart-gradient-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stockchart/chart-gradient-cs1" %}
 
 ### Technical Indicators
 
@@ -61,14 +61,14 @@ Apply a linear gradient to a technical indicator by adding `linearGradient` insi
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/stock-chart/chart-gradient-cs2/app-composition.vue %}
+{% include code-snippet/stockchart/chart-gradient-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/stock-chart/chart-gradient-cs2/app.vue %}
+{% include code-snippet/stockchart/chart-gradient-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/stock-chart/chart-gradient-cs2" %}
+{% previewsample "page.domainurl/code-snippet/stockchart/chart-gradient-cs2" %}
 
 ## Radial gradient
 
@@ -96,14 +96,14 @@ Apply a radial gradient to a series by adding `radialGradient` inside the target
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/stock-chart/chart-gradient-cs3/app-composition.vue %}
+{% include code-snippet/stockchart/chart-gradient-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/stock-chart/chart-gradient-cs3/app.vue %}
+{% include code-snippet/stockchart/chart-gradient-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/stock-chart/chart-gradient-cs3" %}
+{% previewsample "page.domainurl/code-snippet/stockchart/chart-gradient-cs3" %}
 
 ### Technical Indicators
 
@@ -111,11 +111,11 @@ Apply a linear gradient to a technical indicator by adding `linearGradient` insi
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/stock-chart/chart-gradient-cs4/app-composition.vue %}
+{% include code-snippet/stockchart/chart-gradient-cs4/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/stock-chart/chart-gradient-cs4/app.vue %}
+{% include code-snippet/stockchart/chart-gradient-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/stock-chart/chart-gradient-cs4" %}
+{% previewsample "page.domainurl/code-snippet/stockchart/chart-gradient-cs4" %}
