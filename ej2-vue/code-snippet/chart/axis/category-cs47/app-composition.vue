@@ -105,8 +105,7 @@ const tooltip = {
 const title = 'Top 3 Countries by Coal Production (2022–2024)';
 
 const legendRender = (args) => {
-  const container = document.getElementById("container");
-  const chartInstance = container && container.ej2_instances ? container.ej2_instances[0] : null;
+  const chartInstance = document.getElementById('container')?.ej2_instances?.[0];
   if (chartInstance) {
     const matchedSeries = chartInstance.series.filter((s) => s.name === args.text)[0];
     const opacity = (matchedSeries && matchedSeries.visible === false) ? '0.5' : '1';

@@ -46,7 +46,7 @@ new Vue({
           :legendSettings="legendSettings"
           :loaded="onLoaded"
         >
-          <e-sankey-nodes-collection>
+          <e-sankey-nodes>
             <e-sankey-node id="Electricity Generation" :offset="-120" />
             <e-sankey-node id="Residential" :offset="38" />
             <e-sankey-node id="Commercial" :offset="36" />
@@ -62,9 +62,9 @@ new Vue({
             <e-sankey-node id="Coal" />
             <e-sankey-node id="Biomass" />
             <e-sankey-node id="Petroleum" :offset="-10" />
-          </e-sankey-nodes-collection>
+          </e-sankey-nodes>
 
-          <e-sankey-links-collection>
+          <e-sankey-links>
             <e-sankey-link sourceId="Solar" targetId="Electricity Generation" :value="454" />
             <e-sankey-link sourceId="Nuclear" targetId="Electricity Generation" :value="185" />
             <e-sankey-link sourceId="Wind" targetId="Electricity Generation" :value="47.8" />
@@ -99,7 +99,7 @@ new Vue({
             <e-sankey-link sourceId="Commercial" targetId="Energy Services" :value="300" />
             <e-sankey-link sourceId="Industrial" targetId="Energy Services" :value="755" />
             <e-sankey-link sourceId="Transportation" targetId="Energy Services" :value="637" />
-          </e-sankey-links-collection>
+          </e-sankey-links>
 
         </ejs-sankey>
       </div>

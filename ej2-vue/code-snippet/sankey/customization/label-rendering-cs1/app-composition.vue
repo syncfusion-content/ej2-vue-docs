@@ -50,3 +50,9 @@ function onLabelRendering(args) {
 
 provide("sankey", [SankeyTooltip, SankeyLegend, SankeyExport]);
 </script>
+
+<style>
+#sankey-container {
+  height: 450px;
+}
+</style>

@@ -47,3 +47,9 @@ const linkStyle = ref({
 
 provide("sankey", [SankeyTooltip, SankeyLegend]);
 </script>
+
+<style>
+#sankey-container {
+  height: 450px;
+}
+</style>

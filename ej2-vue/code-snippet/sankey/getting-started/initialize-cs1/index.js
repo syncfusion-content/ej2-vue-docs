@@ -25,16 +25,16 @@ new Vue({
           height="420px"
           :title="title"
         >
-          <e-sankey-nodes-collection>
+          <e-sankey-nodes>
             <e-sankey-node id="A" />
             <e-sankey-node id="B" />
             <e-sankey-node id="C" />
-          </e-sankey-nodes-collection>
+          </e-sankey-nodes>
 
-          <e-sankey-links-collection>
+          <e-sankey-links>
             <e-sankey-link sourceId="A" targetId="B" :value="100" />
             <e-sankey-link sourceId="B" targetId="C" :value="80" />
-          </e-sankey-links-collection>
+          </e-sankey-links>
 
         </ejs-sankey>
       </div>

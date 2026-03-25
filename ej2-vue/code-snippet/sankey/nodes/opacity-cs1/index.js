@@ -31,16 +31,16 @@ new Vue({
           :nodeStyle="nodeStyle"
         >
           
-          <e-sankey-nodes-collection>
+          <e-sankey-nodes>
             <e-sankey-node id="Agricultural Waste"></e-sankey-node>
             <e-sankey-node id="Biomass Residues"></e-sankey-node>
             <e-sankey-node id="Bio-conversion"></e-sankey-node>
             <e-sankey-node id="Liquid Biofuel"></e-sankey-node>
             <e-sankey-node id="Electricity"></e-sankey-node>
             <e-sankey-node id="Heat"></e-sankey-node>
-          </e-sankey-nodes-collection>
+          </e-sankey-nodes>
 
-          <e-sankey-links-collection>
+          <e-sankey-links>
             <e-sankey-link 
               sourceId="Agricultural Waste" targetId="Bio-conversion" 
               :value="84.152"
@@ -65,7 +65,7 @@ new Vue({
               sourceId="Bio-conversion" targetId="Heat"
               :value="60.845"
             ></e-sankey-link>
-          </e-sankey-links-collection>
+          </e-sankey-links>
 
         </ejs-sankey>
 
