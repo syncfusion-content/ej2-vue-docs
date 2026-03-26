@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components (Essential<sup style="font-size:70%">&reg;</sup> JS 2)
+# Syncfusion® Vue UI Components (Essential® JS 2)
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue is a modern UI Components library that has been built from the ground up to be lightweight, responsive, modular and touch friendly. It also includes complete support for Angular, React, ASP.NET MVC and ASP.NET Core frameworks.
 
@@ -108,6 +108,7 @@ letter-spacing: 0.7px;
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treemap/getting-started/">TreeMap</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/bullet-chart/getting-started/">Bullet Chart</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/kanban/getting-started/">Kanban</a></div>
+        <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/sankey/getting-started/">Sankey</a></div>
         <div><p class="control-category">BUTTONS</p></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/button/getting-started/">Button</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/button-group/getting-started/">ButtonGroup</a></div>
@@ -199,6 +200,6 @@ If you cannot find the information you need in the self-help resources mentioned
 
 * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-2-vue-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli)

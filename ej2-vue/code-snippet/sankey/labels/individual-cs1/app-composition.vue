@@ -8,12 +8,12 @@
         :labelSettings="labelSettings"
       >
         <ESankeyNodesCollection>
-          <ESankeyNode id="Agricultural Waste"  />
-          <ESankeyNode id="Biomass Residues" />
-          <ESankeyNode id="Bio-conversion" />
-          <ESankeyNode id="Liquid Biofuel" />
-          <ESankeyNode id="Electricity" />
-          <ESankeyNode id="Heat" />
+          <ESankeyNode id="Agricultural Waste" :label="{ text: 'Agri Waste', padding: 0 }" />
+          <ESankeyNode id="Biomass Residues" :label="{ text: 'Biomass', padding: 10 }" />
+          <ESankeyNode id="Bio-conversion" :label="{ text: 'Bio', padding: 0 }" />
+          <ESankeyNode id="Liquid Biofuel" :label="{ text: 'Liquid', padding: 10 }" />
+          <ESankeyNode id="Electricity" :label="{ text: 'Electricity', padding: 0 }" />
+          <ESankeyNode id="Heat" :label="{ text: 'Heat', padding: 10 }" />
         </ESankeyNodesCollection>
 
         <ESankeyLinksCollection>

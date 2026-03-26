@@ -44,9 +44,9 @@ export default {
   data() {
     return {
       tooltip: {
-        enable: true,
-        nodeFormat:
-          '<b>${sourceNodeName} to ${targetNodeName}</b><br/>Value: <b>${value}</b>'
+        enable: true,      
+        nodeTemplate: '${name}: ${value} TBtu',
+        linkTemplate: '${start.name}: ${start.value} TBtu → ${target.name}: ${target.value} TBtu'
       }
     };
   },

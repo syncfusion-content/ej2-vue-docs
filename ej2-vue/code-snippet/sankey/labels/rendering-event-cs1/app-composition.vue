@@ -46,7 +46,7 @@ const labelSettings = { visible: true };
 
 // Event handler: customize label for "Agricultural Waste"
 function onLabelRendering(args) {
-  if (args.text === "Agricultural Waste") {
+  if (args.text === "Agricultural Waste 84.152") {
     args.labelStyle = {
       fontWeight: "bold",
       color: "#FF6B6B",
