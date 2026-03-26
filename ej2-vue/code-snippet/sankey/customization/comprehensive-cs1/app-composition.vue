@@ -60,3 +60,9 @@ const legendSettings = ref({ visible: true, position: "Bottom" });
 
 provide("sankey", [SankeyTooltip, SankeyLegend, SankeyExport]);
 </script>
+
+<style>
+#sankey-container {
+  height: 450px;
+}
+</style>

@@ -44,3 +44,9 @@ const margin = ref({ left: 50, right: 50, top: 50, bottom: 50 });
 
 provide("sankey", [SankeyTooltip, SankeyLegend, SankeyExport]);
 </script>
+
+<style>
+#sankey-container {
+  height: 450px;
+}
+</style>

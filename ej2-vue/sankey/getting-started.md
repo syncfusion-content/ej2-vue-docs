@@ -162,7 +162,7 @@ export default {
   provide: {
     sankey: [
       SankeyLegend,
-      SankeyTooltip
+      SankeyTooltip,
     ]
   }
 };

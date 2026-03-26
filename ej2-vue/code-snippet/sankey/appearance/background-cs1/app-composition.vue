@@ -44,3 +44,9 @@ const background = ref("#f0f0f0");
 
 provide("sankey", [SankeyTooltip, SankeyLegend, SankeyExport]);
 </script>
+
+<style>
+#sankey-container {
+  height: 450px;
+}
+</style>

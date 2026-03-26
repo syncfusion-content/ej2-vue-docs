@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { ChartPlugin } from '@syncfusion/ej2-vue-charts';
+import { ChartPlugin, LineSeries, Category, DataLabel, SeriesLabel, Legend } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
