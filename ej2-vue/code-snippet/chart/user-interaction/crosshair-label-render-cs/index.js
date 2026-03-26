@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, LineSeries, Crosshair, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, LineSeries, Crosshair, Category, Legend } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -26,7 +26,11 @@ new Vue({
         { x: 'June', y: 300 }
       ],
       primaryXAxis: {
-        valueType: 'Category'
+        valueType: 'Category',
+        crosshairTooltip: { enable: true } 
+      },
+      primaryYAxis: {
+        crosshairTooltip: { enable: true }
       },
       crosshair: {
         enable: true
@@ -54,7 +58,7 @@ new Vue({
     }
   },
   provide: {
-    chart: [LineSeries, Crosshair, Category]
+    chart: [LineSeries, Crosshair, Category, Legend]
   }
 
 });

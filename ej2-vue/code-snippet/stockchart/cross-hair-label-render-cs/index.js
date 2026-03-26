@@ -50,7 +50,11 @@ new Vue({
     return {
       seriesData: stockData1,
       primaryXAxis: {
-        valueType: "DateTime"
+        valueType: "DateTime",
+        crosshairTooltip: { enable: true }
+      },
+      primaryYAxis: {
+        crosshairTooltip: { enable: true }
       },
       crosshair: {
         enable: true

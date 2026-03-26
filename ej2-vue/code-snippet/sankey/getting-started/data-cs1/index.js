@@ -25,18 +25,18 @@ new Vue({
           height="420px"
           :title="title"
         >
-          <e-sankey-nodes-collection>
+          <e-sankey-nodes>
             <e-sankey-node id="Energy Input" :label="{ text: 'Energy Input' }" />
             <e-sankey-node id="Generation" :label="{ text: 'Generation' }" />
             <e-sankey-node id="Distribution" :label="{ text: 'Distribution' }" />
             <e-sankey-node id="Consumption" :label="{ text: 'Consumption' }" />
-          </e-sankey-nodes-collection>
+          </e-sankey-nodes>
 
-          <e-sankey-links-collection>
+          <e-sankey-links>
             <e-sankey-link sourceId="Energy Input" targetId="Generation" :value="500" />
             <e-sankey-link sourceId="Generation" targetId="Distribution" :value="450" />
             <e-sankey-link sourceId="Distribution" targetId="Consumption" :value="400" />
-          </e-sankey-links-collection>
+          </e-sankey-links>
 
         </ejs-sankey>
       </div>

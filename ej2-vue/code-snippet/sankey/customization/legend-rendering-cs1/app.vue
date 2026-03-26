@@ -68,3 +68,9 @@ export default {
   }
 };
 </script>
+
+<style>
+#sankey-container {
+  height: 450px;
+}
+</style>
