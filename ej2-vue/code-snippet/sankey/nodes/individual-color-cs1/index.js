@@ -21,12 +21,12 @@ new Vue({
         >
 
           <e-sankey-nodes>
-            <e-sankey-node id="Agricultural Waste" fill="#FF6B6B"></e-sankey-node>
-            <e-sankey-node id="Biomass Residues"></e-sankey-node>
-            <e-sankey-node id="Bio-conversion" fill="#4ECDC4"></e-sankey-node>
-            <e-sankey-node id="Liquid Biofuel" fill="#45B7D1"></e-sankey-node>
-            <e-sankey-node id="Electricity" fill="#FFA07A"></e-sankey-node>
-            <e-sankey-node id="Heat" fill="#98D8C8"></e-sankey-node>
+            <e-sankey-node id="Agricultural Waste" color="#f41212"/>
+          <e-sankey-node id="Biomass Residues" color="#aed62c"/>
+          <e-sankey-node id="Bio-conversion" color="#259bc3"/>
+          <e-sankey-node id="Liquid Biofuel" color="#0e11af"/>
+          <e-sankey-node id="Electricity" color="#7a0e92"/>
+          <e-sankey-node id="Heat" color="#c5b9bb" />
           </e-sankey-nodes>
 
           <e-sankey-links>

@@ -42,8 +42,8 @@ import {
 
 const tooltip = {
   enable: true,
-  nodeFormat:
-    '<b>${sourceNodeName} to ${targetNodeName}</b><br/>Value: <b>${value}</b>'
+  nodeTemplate: '${name}: ${value} TBtu',
+  linkTemplate: '${start.name}: ${start.value} TBtu → ${target.name}: ${target.value} TBtu'
 };
 
 provide("sankey", [SankeyTooltip, SankeyLegend, SankeyExport]);

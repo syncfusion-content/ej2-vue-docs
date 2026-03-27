@@ -7,12 +7,12 @@
         height="450px"
       >
         <e-sankey-nodes-collection>
-          <e-sankey-node id="Agricultural Waste" :offset="-50" />
-          <e-sankey-node id="Biomass Residues" />
-          <e-sankey-node id="Bio-conversion" />
-          <e-sankey-node id="Liquid Biofuel" :offset="50" />
-          <e-sankey-node id="Electricity" :offset="-30" />
-          <e-sankey-node id="Heat" :offset="30" />
+          <e-sankey-node id="Agricultural Waste" :offset="-11" />
+          <e-sankey-node id="Biomass Residues" :offset="-20"/>
+          <e-sankey-node id="Bio-conversion" :offset="-20"/>
+          <e-sankey-node id="Liquid Biofuel" :offset="50" :offset="17" />
+          <e-sankey-node id="Electricity" :offset="-30" :offset="8"/>
+          <e-sankey-node id="Heat" />
         </e-sankey-nodes-collection>
 
         <e-sankey-links-collection>

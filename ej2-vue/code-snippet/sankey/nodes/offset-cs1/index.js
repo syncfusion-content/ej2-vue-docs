@@ -18,12 +18,12 @@ new Vue({
           height="450px"
         >
           <e-sankey-nodes>
-            <e-sankey-node id="Agricultural Waste" :offset="-50"></e-sankey-node>
-            <e-sankey-node id="Biomass Residues"></e-sankey-node>
-            <e-sankey-node id="Bio-conversion"></e-sankey-node>
-            <e-sankey-node id="Liquid Biofuel" :offset="50"></e-sankey-node>
-            <e-sankey-node id="Electricity" :offset="-30"></e-sankey-node>
-            <e-sankey-node id="Heat" :offset="30"></e-sankey-node>
+            <e-sankey-node id="Agricultural Waste" :offset="-11"></e-sankey-node>
+            <e-sankey-node id="Biomass Residues" :offset="-20"></e-sankey-node>
+            <e-sankey-node id="Bio-conversion" :offset="-20"></e-sankey-node>
+            <e-sankey-node id="Liquid Biofuel" :offset="17"></e-sankey-node>
+            <e-sankey-node id="Electricity" :offset="8"></e-sankey-node>
+            <e-sankey-node id="Heat"></e-sankey-node>
           </e-sankey-nodes>
 
           <e-sankey-links>

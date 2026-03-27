@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-grid :dataSource="data" :allowPaging="true">
+        <ejs-grid :dataSource="data" :allowPaging="true" height='290px'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
             <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
@@ -29,5 +29,5 @@ const data = new DataManager({
 provide('grid',  [Page]);
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 </style>

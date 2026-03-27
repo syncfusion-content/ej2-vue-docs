@@ -8,14 +8,14 @@
         :labelSettings="labelSettings"
       >
         <e-sankey-nodes-collection>
-          <e-sankey-node id="Agricultural Waste" />
-          <e-sankey-node id="Biomass Residues" />
-          <e-sankey-node id="Bio-conversion" />
-          <e-sankey-node id="Liquid Biofuel" />
-          <e-sankey-node id="Electricity" />
-          <e-sankey-node id="Heat" />
+           <e-sankey-node id="Agricultural Waste" :label="{ text: 'Agri Waste', padding: 0 }"></e-sankey-node>
+            <e-sankey-node id="Biomass Residues" :label="{ text: 'Biomass', padding: 10 }"></e-sankey-node>
+            <e-sankey-node id="Bio-conversion" :label="{ text: 'Bio', padding: 0 }"></e-sankey-node>
+            <e-sankey-node id="Liquid Biofuel" :label="{ text: 'Liquid', padding: 10 }"></e-sankey-node>
+            <e-sankey-node id="Electricity" :label="{ text: 'Electricity', padding: 0 }"></e-sankey-node>
+            <e-sankey-node id="Heat"  :label="{ text: 'Heat', padding: 10 }"></e-sankey-node>
         </e-sankey-nodes-collection>
-
+ 
         <e-sankey-links-collection>
           <e-sankey-link sourceId="Agricultural Waste" targetId="Bio-conversion" :value="84.152" />
           <e-sankey-link sourceId="Biomass Residues" targetId="Bio-conversion" :value="24.152" />

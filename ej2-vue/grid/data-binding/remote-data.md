@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Remote data in Vue Grid component | Syncfusion
-description: Learn here all about Remote data in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid - Remote Data | Syncfusion
+description: Vue Grid provides remote data binding options, adaptor configuration, server operations, and guidance for reliable server-side data handling.
 control: Remote data 
 platform: ej2-vue
 documentation: ug
@@ -10,39 +10,42 @@ domainurl: ##DomainURL##
 
 # Remote data in Vue Grid component
 
-In Vue Grid component, binding remote data is a fundamental aspect that enhances the efficiency of data interaction. This process involves assigning the service data, represented as an instance of `DataManager`, to the `dataSource` property of the Vue Grid component. By doing so, you enable seamless interaction with a remote data source, and this is achieved by specifying the endpoint URL where the data is hosted.
+In Vue Grid component, binding remote data is a fundamental aspect that enhances the efficiency of data interaction. This process involves assigning the service data, represented as an instance of [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started), to the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource) property of the Vue Grid component.  By doing so, seamless interaction with a remote data source is enabled, achieved by specifying the endpoint URL where the data is hosted.
 
 Additionally, leverage the power for data retrieval and operations, enhancing event handling, asynchronous programming, and concurrent value management in Vue applications.
 
 ## Custom binding
 
-The custom binding feature in the Vue Grid enables you to manage your own custom API for handling data processing externally and then binding the resulting data to the Grid. This allows you to implement your own custom data logic to your application's requirements. When using custom binding, the Grid expects the result of the custom logic to be an object with properties `result` and `count`. The `result` property should contain the data to be displayed in the Grid, while the `count` property indicates the total number of records in the dataset for your application. To utilize custom binding, you can handle the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started). The DataManager integrates seamlessly with the vue Grid to manage custom data processing and binding. 
+The custom binding feature in the Vue Grid enables managing a custom API for handling data processing externally and then binding the resulting data to the Grid.This allows implementing custom data logic tailored to the application's requirements. When using custom binding, the Grid expects the result of the custom logic to be an object with properties `result` and `count`.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/vue/documentation/api/grid/#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasourcechanged) event. This event provides you with the opportunity to manage and manipulate data according to the individual's interactions. 
+- `result` -  This property should contain the array of records that will be displayed in the Grid. 
+- `count` - This property should indicate the total number of records available in the entire dataset.
 
-**Using the dataStateChange event**
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/vue/documentation/api/grid#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/vue/documentation/api/grid#datasourcechanged) event. This event provides the opportunity to manage and manipulate data according to the individual's interactions.
 
-The `dataStateChange` event is triggered whenever you perform actions that modify the state of the grid's data, such as changing pages, applying sorting, or grouping. This event provides detailed information about the action performed and the current state of the grid, including parameters like page number, sorting details, and filtering criteria.
+**Using the `dataStateChange` event**
+
+The `dataStateChange` event is triggered whenever actions that modify the Grid's data state are performed, such as paging, sorting, or grouping. This event provides detailed information about the action executed and the current state of the Grid, including parameters such as page number, sorting details, and filtering criteria.
 
 To implement the `dataStateChange` event, follow these steps:
 
-1. **Subscribe to the event:** In your component code, subscribe to the `dataStateChange` event using the appropriate event handler function. This function will be executed whenever you interact with the grid.
+1. **Subscribe to the event:** In the component code, subscribe to the `dataStateChange` event using the appropriate event handler function. This function is executed whenever the grid is interacted with.
 
-2. **Handle data state:** Inside the event handler function, you can access the event arguments to determine the individual actions and intentions. The action property of the event arguments indicates the type of action performed (e.g., paging, sorting, grouping).
+2. **Handle data state:** Inside the event handler function, the event arguments can be accessed to determine the specific actions and intentions. The action property of the event arguments indicates the type of action performed (e.g., paging, sorting, grouping).
 
 > The `dataStateChange` event will not be triggered during the initial rendering.
 
 ## Creating an API service
 
-To configure a server with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, you need to follow the below steps:
+To configure a server with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, follow the steps outlined below:
 
-**Step 1:** Open your terminal and create a new Vite project using the following command:
+**Step 1:** Open a terminal and create a new Vite project using the following command:
 
 ```bash
 npm create vite@latest
 ```
 
-**Step 2:** Navigate to your project directory and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using npm:
+**Step 2:** Navigate to the project directory and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using npm:
 
 ```bash
 cd my-project
@@ -56,7 +59,7 @@ npm install @syncfusion/ej2-data --save
 npm install express body-parser cors
 ```
 
-**Step 4:** Install axios for making HTTP requests in your Vue.js project:
+**Step 4:** Install `axios` for making HTTP requests in a **Vue.js** project:
 
 ```bash
 npm install axios
@@ -68,7 +71,7 @@ npm install axios
 npm install concurrently --save-dev
 ```
 
-**Step 6:** Update the scripts section in your package.json to include commands for starting the server and client concurrently:
+**Step 6:** Update the scripts section in the **package.json** file to include commands for starting the server and client concurrently:
 
 ```bash
 "scripts": 
@@ -79,7 +82,7 @@ npm install concurrently --save-dev
 }
 ```
 
-**Step 7:**  Create a **data-source.js** file to represent the data in the **src** folder, like `src/data-source.js`.
+**Step 7:**  Create a **data-source.js** file to represent the data in the **src** folder, like **src/data-source.js**.
 
 ```js
 const data = createLazyLoadData();
@@ -173,7 +176,7 @@ app.listen(port, () => {
 });
 ```
 
-**Step 9:** Create an **orderService.ts** file inside the **src** folder (e.g., `src/orderService.ts`) to handle CRUD operations and grid actions using Syncfusion's DataManager:
+**Step 9:** Create an **orderService.ts** file inside the **src** folder (e.g., **src/orderService.ts**) to handle CRUD operations and grid actions using Syncfusion's DataManager:
 
 ```ts
 import { DataManager, Query } from "@syncfusion/ej2-data";
@@ -207,7 +210,7 @@ export function getOrders(state) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {      
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       gridData = new DataManager(data.result);
 
       // Execute local data operations using the provided query
@@ -222,7 +225,7 @@ export function getOrders(state) {
 }
 ```
 
-**Step 10:** In your Vue component (e.g., `App.vue`), import and use the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component. Use the **orderService** to fetch and manipulate data.
+**Step 10:** In the Vue component (e.g., `App.vue`), import and use the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component. Use the **orderService** to fetch and manipulate data.
 
 ```ts
 <script setup>
@@ -272,13 +275,13 @@ provide('grid', [Page]);
 </style>
 ```
 
-**Step 11:** Finally, you can start both the server and client concurrently using the start script.
+**Step 11:** Finally, both the server and client can be started concurrently using the start script.
 
 ```bash
 npm start
 ```
 
-> Replace https://localhost:xxxx/orders with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+> Replace **https://localhost:xxxx/orders** with the actual API endpoint URL that provides the data in a consumable format (for example, JSON).
 
 ## Handling filtering operation
 
@@ -286,7 +289,7 @@ When filtering operation is performed in the grid, the `dataStateChange` event i
 
 ![FilterBar](../images/custom-binding-filterbar.png)
 
-You can change the new grid data state of filter action as follows:
+The filter action's updated data state can be applied as shown below:
 
 ```typescript
 // Apply filtering
@@ -324,7 +327,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       const dataManager = new DataManager(data.result);
       // Execute local data operations using the provided query
       const result = dataManager.executeLocal(query);
@@ -339,7 +342,7 @@ export function getOrders(state, action) {
 
 ![Filtering Multiple Values](../images/custom-binding-multiple-filtering.png)
 
-When filtering multiple values, you can get the predicates as arguments in the `dataStateChange` event. You can create your predicate execution based on the predicates values.
+When filtering multiple values, the predicates are provided as arguments in the `dataStateChange` event. Custom predicate execution can then be implemented based on the predicate values.
 
 ## Handling searching operation
 
@@ -347,7 +350,7 @@ When performing a search operation in the grid, the `dataStateChange` event is t
 
 ![Searching](../images/custom-binding-searching.png)
 
-You can change the new grid data state of search action as follows:
+The grid's data state during a search action can be updated using the following approach:
 
 ```typescript
 // Apply searching 
@@ -372,7 +375,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       const dataManager = new DataManager(data.result);
       // Execute local data operations using the provided query
       const result = dataManager.executeLocal(query);
@@ -387,15 +390,15 @@ export function getOrders(state, action) {
 
 ## Handling sorting operation
 
-When sorting operation is performed in the grid, the dataStateChange event is triggered, and within this event, you can access the following referenced arguments.
+When a sorting operation is performed in the grid, the `dataStateChange` event is triggered. Within this event, the following referenced arguments can be accessed.
 
 ![Sorting](../images/custom-binding-sorting.png)
 
-When performing multi-column sorting, you can get the below referred arguments in the `dataStateChange` event.
+When performing multi-column sorting, the following referenced arguments are available in the `dataStateChange` event
 
 ![Multi Sorting](../images/custom-binding-multi-sorting.png)
 
-You can change the new grid data state of sort action as follows:
+The grid's data state during a sort action can be updated using the following approach:
 
 ```typescript
 // Apply sorting
@@ -425,7 +428,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       const dataManager = new DataManager(data.result);
       // Execute local data operations using the provided query
       const result = dataManager.executeLocal(query);
@@ -440,11 +443,11 @@ export function getOrders(state, action) {
 
 ## Handling paging operation
 
-When paging operation is performed in the grid, the `dataStateChange` event is triggered, and within this event, you can access the following referenced arguments.
+When a paging operation is performed in the grid, the `dataStateChange` event is triggered, and the following referenced arguments become available within this event.
 
 ![Paging](../images/custom-binding-paging.png)
 
-You can change the new grid data state of page action as follows:
+The grid's data state for a paging action can then be updated using the following approach:
 
 ```typescript
 // Apply paging
@@ -471,7 +474,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       const dataManager = new DataManager(data.result);
       // Execute local data operations using the provided query
       const result = dataManager.executeLocal(query);
@@ -490,7 +493,7 @@ When grouping operation is performed in the grid, the `dataStateChange` event is
 
 ![Grouping](../images/custom-binding-grouping.png)
 
-You can change the new grid data state of group action as follows:
+The grid's data state during a group action can be updated using the following approach:
 
 ```typescript
 // Apply grouping
@@ -519,7 +522,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       const dataManager = new DataManager(data.result);
 
       // Execute local data operations using the provided query
@@ -534,24 +537,24 @@ export function getOrders(state, action) {
 }
 ```
 
-> * In order to utilize group actions, it is necessary to manage the sorting query within your service.
+> To utilize group actions, it is necessary to manage the sorting query within the service.
 
 **Lazy load grouping**
 
-In Vue, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy load grouping allows you to load and display grouped data efficiently by fetching only the required data on demand. 
+In Vue, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy load grouping enables efficient loading and display of grouped data by fetching only the required data on demand. 
 
-To enable this feature, you need to set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/vue/documentation/api/grid/groupSettings/#enableLazyLoading) property to **true**. Also, you need to manage the state based on the initial grid action as follows.
+To enable this feature, the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/vue/documentation/api/grid/groupsettings#enableLazyLoading) property must be set to `true`. In addition, the state must be managed based on the initial grid action as follows.
 
 ```typescript
 const groupSettings = { enableLazyLoading: true, columns: ['ProductName'], showGroupedColumn: true, };
 const state = { skip:0, take: 12, group: groupSettings};
 ```
 
-Based on the initial state, you can get the arguments as shown below
+Based on the initial state, the arguments can be obtained as shown below.
 
 ![Lazy load group](../images/custom-binding-lazy-load-grouping.png)
 
-You can change the grid state as follows:
+The Grid state can be changed as follows:
 
 ```typescript
 // Apply grouping
@@ -602,7 +605,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       const dataManager = new DataManager(data.result);
       // Execute local data operations using the provided query
       const result = dataManager.executeLocal(query);
@@ -619,19 +622,19 @@ export function getOrders(state, action) {
 
 ## Handling CRUD operations
 
-The Grid component provides powerful options for dynamically inserting, deleting, and updating records, enabling you to modify data directly within the grid. This feature is useful when you want to perform CRUD (Create, Read, Update, Delete) operations seamlessly.
+The Grid component provides powerful options for dynamically inserting, deleting, and updating records, enabling data to be modified directly within the grid. This feature is useful for performing CRUD (**Create**, **Read**, **Update**, **Delete**) operations seamlessly.
 
-Integrating CRUD Operations
+**Integrating CRUD Operations**
 
-To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, follow these steps:
+To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, follow these steps:
 
-1. **Configure grid settings:** Set up the necessary grid settings, such as editing, adding, and deleting records. Define the toolbar options to facilitate your interactions.
+1. **Configure grid settings:** Set up the grid to allow editing, adding, and deleting operations, and specify the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#toolbar) options that will provide access to these features.
 
-2. **Handle data state changes:** Utilize the [dataStateChange](https://ej2.syncfusion.com/vue/documentation/api/grid/#datastatechange) event to respond to changes in the grid’s data state. This event is triggered whenever you interact with the grid, such as paging or sorting.
+2. **Handle data state changes:** Utilize the [dataStateChange](https://ej2.syncfusion.com/vue/documentation/api/grid/#datastatechange) event to respond to changes in the grid's data state. This event is triggered whenever the grid is interacted with, such as during paging or sorting.
 
 3. **Execute CRUD operations:** Within the event handler for [dataSourceChanged](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasourcechanged), implement logic to handle various CRUD actions based on the action or requestType property of the event arguments.
 
-4. **Call endEdit method:** After performing CRUD operations (adding, editing, or deleting), call the endEdit method to signal the completion of the operation and update the grid accordingly.
+4. **Call endEdit method:** After performing CRUD operations (adding, editing, or deleting), call the [endEdit](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#endedit) method to signal the completion of the operation and update the grid accordingly.
 
 **Insert operation**
 
@@ -1060,7 +1063,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {      
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       gridData = new DataManager(data.result);
 
       // Execute local data operations using the provided query
@@ -1181,16 +1184,16 @@ export default data;
 The following screenshot represents the grid action with custom binding
 ![Grid with Custom Binding](../images/custom-binding-grid-action.gif)
 
-You can find the complete sample for the custom binding in [GitHub](https://github.com/SyncfusionExamples/vue-data-grid-integration-with-custom-binding) link. 
+The complete sample for custom binding is available on [GitHub](https://github.com/SyncfusionExamples/vue-data-grid-integration-with-custom-binding) link. 
 
 > * While working with grid edit operation, defining the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) property of column is a mandatory step. In case the primary key column is not defined, the edit or delete action will take place on the first row of the grid.
 > * Need to maintain the same instance for all grid actions.
 
 ## Sending additional parameters to the server
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to include custom parameters in data requests. This feature is particularly useful when you need to provide additional information to the server enhanced processing.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component allows custom parameters to be included in data requests. This feature is particularly useful when additional information must be provided to the server for enhanced processing.
 
-By utilizing the [query](https://ej2.syncfusion.com/vue/documentation/api/grid/#query) property of the grid along with the `addParams` method of the Query class, you can easily incorporate custom parameters into data requests for every grid action.
+By using the [query](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#query) property of the Grid together with the `addParams` method of the Query class, custom parameters can be seamlessly incorporated into data requests for every grid action.
 
 To enable custom parameters in data requests for the grid component, follow these steps:
 
@@ -1198,11 +1201,11 @@ To enable custom parameters in data requests for the grid component, follow thes
 
 **2. Initialize the Query Object:** Create a new instance of the Query class and use the addParams method to add the custom parameters.
 
-**3. Handle Data State Changes:** If you need to dynamically update the data based on interactions, implement the dataStateChange event handler to execute the query with the updated state.
+**3. Handle Data State Changes:** To dynamically update data based on interactions, implement the `dataStateChange` event handler to execute the query with the updated state.
 
 **4. Execute Data Request:** In the service, execute the data request by combining the custom parameters with other query parameters such as paging and sorting.
 
-The following example demonstrates how to send additional parameters to the server.
+The following example demonstrates the process of sending additional parameters to the server.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1383,7 +1386,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {      
-      // Create a DataManager instance with your fetched data
+      // Create a DataManager instance using the fetched data
       gridData = new DataManager(data.result);
       // Execute local data operations using the provided query
       const result = gridData.executeLocal(query);
@@ -1464,9 +1467,9 @@ export default data;
 
 Export all records is especially beneficial when dealing with large datasets that need to be exported for offline analysis or sharing.
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component exports only the records on the current page. However, the Syncfusion<sup style="font-size:70%">&reg;</sup> ##Platform_Name## Grid component allows you to export all records, including those from multiple pages, by configuring the [pdfExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties).
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component exports only the records on the current page. However, the Grid component also supports exporting all records—including those spanning multiple pages by configuring the [pdfExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties).
 
-To export all records, including those from multiple pages, configure the [pdfExportProperties.dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties/#datasource) for PDF exporting and [excelExportProperties.dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties#datasource) for Excel exporting within the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event handler. Inside this event, set the `dataSource` property of `pdfExportProperties` and `excelExportProperties` for PDF and Excel exporting to include all records.
+To export all records, including those from multiple pages, configure the [pdfExportProperties.dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfexportproperties#datasource) for PDF exporting and [excelExportProperties.dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/excelexportproperties#datasource) for Excel exporting within the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid#toolbarclick) event handler. Inside this event, set the `dataSource` property of `pdfExportProperties` and `excelExportProperties` for PDF and Excel exporting to include all records.
 
 **Excel Exporting**
 
@@ -1524,7 +1527,7 @@ To export the complete Grid data to PDF document, utilize the `pdfExportProperti
 
 > For further customization on Grid export, refer to the respective documentation for [PDF exporting](https://ej2.syncfusion.com/vue/documentation/grid/pdf-export/pdf-export-options) and [Excel exporting](https://ej2.syncfusion.com/vue/documentation/grid/excel-export/excel-export-options)
 
-The following code example shows how to export all records in client side:
+The following code example shows the process of exporting all records on the client side:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1753,7 +1756,7 @@ export function getOrders(state, action) {
   return fetch(baseUrl)
     .then(res => res.json())
     .then(data => {      
-      // Create a DataManager instance with your fetched data.
+      // Create a DataManager instance using the fetched data
       gridData = new DataManager(data.result);
       // Execute local data operations using the provided query.
       const result = gridData.executeLocal(query);
@@ -1830,7 +1833,7 @@ export default data;
 
 ## Offline mode
 
-On remote data binding, all grid actions such as paging, sorting, editing, grouping, filtering, etc, will be processed on server-side. To avoid post back for every action, set the grid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `offline` property of `DataManager`.
+On remote data binding, all grid actions such as paging, sorting, editing, grouping, filtering, etc, will be processed on server-side. To avoid post back for every action, set the grid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `offline` property of [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1845,11 +1848,11 @@ On remote data binding, all grid actions such as paging, sorting, editing, group
 
 ## Fetch result from the DataManager query using external button 
 
-By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). However, in some scenarios, you may need to fetch data dynamically from the server using a query triggered by an external button. This approach allows greater control over when and how data is loaded into the Grid.
+By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started). However, in certain scenarios, data may need to be fetched dynamically from the server using a query triggered by an external button. This approach provides greater control over when data is loaded into the Grid.
 
-To achieve this, you can use the `executeQuery` method of `DataManager` with a **Query** object. This method allows you to run a custom query and retrieve results dynamically.
+To achieve this, the `executeQuery` method of `DataManager` can be used along with a query object. This method enables running a custom query and retrieving results dynamically.
 
-The following example demonstrates how to fetch data from the server when an external button is clicked and display a status message indicating the data fetch status:
+The following example demonstrates the process of fetching data from the server when an external button is clicked and displaying a status message indicating the data fetch status.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1879,7 +1882,7 @@ import { GridComponent as EjsGrid,ColumnsDirective as EColumns,ColumnDirective a
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { DataManager, WebApiAdaptor, Query } from "@syncfusion/ej2-data";
 
-const SERVICE_URI = "https://ej2services.syncfusion.com/production/web-services/api/Orders";
+const SERVICE_URI = 'https://services.syncfusion.com/vue/production/api/Orders';
 const statusMessage = ref("");
 const result = ref([]);
 const dataManager = new DataManager({
@@ -1942,7 +1945,7 @@ import { GridComponent, ColumnsDirective, ColumnDirective,Page } from "@syncfusi
 import { DataManager, WebApiAdaptor, Query } from "@syncfusion/ej2-data";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
-const SERVICE_URI = "https://ej2services.syncfusion.com/production/web-services/api/Orders";
+const SERVICE_URI = 'https://services.syncfusion.com/vue/production/api/Orders';
 
 export default {
   name: "App",

@@ -7,12 +7,12 @@
         height="450px"
       >
         <ESankeyNodesCollection>
-          <ESankeyNode id="Agricultural Waste" :offset="-50" />
-          <ESankeyNode id="Biomass Residues" />
-          <ESankeyNode id="Bio-conversion" />
-          <ESankeyNode id="Liquid Biofuel" :offset="50" />
-          <ESankeyNode id="Electricity" :offset="-30" />
-          <ESankeyNode id="Heat" :offset="30" />
+          <ESankeyNode id="Agricultural Waste" :offset="-11" />
+          <ESankeyNode id="Biomass Residues" :offset="-20"/>
+          <ESankeyNode id="Bio-conversion" :offset="-20"/>
+          <ESankeyNode id="Liquid Biofuel" :offset="17" />
+          <ESankeyNode id="Electricity" :offset="8" />
+          <ESankeyNode id="Heat" />
         </ESankeyNodesCollection>
 
         <ESankeyLinksCollection>
