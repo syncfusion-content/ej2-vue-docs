@@ -8,12 +8,12 @@
         height="450px"
       >
         <ESankeyNodesCollection>
-          <ESankeyNode id="Agricultural Waste" />
-          <ESankeyNode id="Biomass Residues" />
-          <ESankeyNode id="Bio-conversion" />
-          <ESankeyNode id="Liquid Biofuel" />
-          <ESankeyNode id="Electricity" />
-          <ESankeyNode id="Heat" />
+          <ESankeyNode id="Agricultural Waste" color="#f41212"/>
+          <ESankeyNode id="Biomass Residues" color="#aed62c"/>
+          <ESankeyNode id="Bio-conversion" color="#259bc3"/>
+          <ESankeyNode id="Liquid Biofuel" color="#0e11af"/>
+          <ESankeyNode id="Electricity" color="#7a0e92"/>
+          <ESankeyNode id="Heat" color="#c5b9bb"/>
         </ESankeyNodesCollection>
 
         <ESankeyLinksCollection>

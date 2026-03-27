@@ -17,7 +17,7 @@ new Vue({
   methods: {
     onLabelRendering(args) {
       // Match React logic: customize the "Agricultural Waste" label
-      if (args.text === "Agricultural Waste") {
+      if (args.text === "Agricultural Waste 84.152") {
         args.labelStyle = {
           fontWeight: "bold",
           color: "#FF6B6B",
