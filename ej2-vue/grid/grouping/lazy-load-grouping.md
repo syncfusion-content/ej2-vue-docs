@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Lazy load grouping in Vue Grid component | Syncfusion
-description: Learn here all about Lazy load grouping in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid - Lazy Load Grouping | Syncfusion
+description: Vue Grid lazy load grouping optimizes large datasets by loading grouped records on demand, improving performance with infinite or virtual scrolling.
 control: Lazy load grouping 
 platform: ej2-vue
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Lazy load grouping in Vue Grid component
 
-In Vue, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy loading can significantly improve the performance of your application by reducing the initial load time.
+Lazy loading in Vue refers to dynamically loading data as needed, rather than all at once, to enhance application performance by minimizing initial load time.
 
-Lazy load grouping in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to load and display grouped data efficiently by fetching only the required data on demand. This feature is useful when dealing with large datasets where loading all the data at once might affect performance. The Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched in on demand and render in the Grid when you expand the caption row.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid supports lazy load grouping, which optimizes the rendering of large datasets by loading only the required grouped data on demand. Initially, only the top-level group caption rows are rendered in a collapsed state. Child rows are fetched and displayed dynamically when a group is expanded.
 
-To enable this feature, need to set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/vue/documentation/api/grid/groupSettings/#enablelazyloading) property to **true**.
+To enable this feature, set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/vue/documentation/api/grid/groupsettings#enablelazyloading) property to `true`. 
 
-The following example demonstrates how to enable the lazy load grouping feature by setting `groupSettings.enableLazyLoading` property.
+The following example demonstrates configuring lazy load grouping using the `groupSettings.enableLazyLoading` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,12 +31,14 @@ The following example demonstrates how to enable the lazy load grouping feature 
 
 ## Handling the lazy load grouping at server-side
 
-You can use the `UrlAdaptor` of `DataManager` when binding the remote data. Along with the default server request, this feature will additionally send the below details to handle the lazy load grouping. In the server end, these details are bound with the `IsLazyLoad` and `OnDemandGroupInfo` parameters in the `DataManagerRequest` model. Please refer to the below table and screenshots.
+When using the lazy load grouping feature of the Grid, the [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor) of `DataManager` is used to handle server-side operations, including lazy load grouping. Along with the default server request, this feature will additionally send the following details to handle the lazy load grouping:
 
-Property Name |Description
+**Property Name** | **Description**
 -----|-----
-`isLazyLoad` |To differentiate the default grouping and lazy load grouping
-`onDemandGroupInfo` |Have the details of expanded caption row grouping `level`, `skip`, `take` and `filter` query of the child records
+`isLazyLoad` | Differentiates between default grouping and lazy load grouping. This property is enabled when performing lazy load.
+`onDemandGroupInfo` | Contains the details of expanded caption row grouping `level`, `skip`, `take` and `filter` query of the child records.
+
+On the server side, these parameters can be accessed through the `DataManagerRequest` model to handle data retrieval based on the expanded group context.  Refer to the screenshots below for illustration.
 
 ![IsLazyLoad](../images/islazyload.jpg)
 
@@ -95,19 +97,19 @@ return dm.RequiresCounts ? Json(new { result = groupedData == null ? DataSource 
 
 ## Lazy load grouping with infinite scrolling
 
-Lazy loading grouping with infinite scrolling is a valuable feature in scenarios where there is a need to present grouped data, efficiently handle large datasets, and ensure a seamless experience. This feature enables loading data on demand as the interface is interacted with, ensuring optimal performance and responsiveness while effectively managing and presenting large grouped datasets
+Lazy load grouping with infinite scrolling is especially useful when presenting grouped data from large datasets. It allows data to be loaded on demand as users interact with the interface, ensuring efficient handling of records. This approach improves performance, maintains responsiveness, and provides a seamless experience while managing and displaying extensive grouped data.
 
-**How lazy load grouping with infinite scrolling works**
+**Lazy Load Grouping Workflow in Infinite Scrolling**
 
-1. When you enable lazy load grouping with infinite scrolling, the Grid initially renders only the top-level caption rows in a collapsed state.
+1. Initially, only top-level group caption rows are rendered in a collapsed state.
 
-2. The child rows associated with each group caption are loaded and rendered in the Grid only when you expand the corresponding caption row.
+2. Child rows are fetched and displayed dynamically when a group caption is expanded.
 
-3. Infinite scrolling enables the Grid to load additional data as the user scrolls to the end of the scrollbar.
+3. Infinite scrolling loads additional data as the scrollbar reaches the end, maintaining seamless navigation.
 
-To enable this feature, you need to set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/vue/documentation/api/grid/groupSettings/#enablelazyloading) and [enableInfiniteScrolling](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableinfinitescrolling) properties to **true**.
+To enable this feature, set both [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/vue/documentation/api/grid/groupsettings#enablelazyloading) and [enableInfiniteScrolling](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#enableinfinitescrolling) properties to `true`. 
 
-The following example demonstrates how to enable the lazy load grouping with infinite scrolling feature using the `groupSettings.enableLazyLoading` and `enableInfiniteScrolling` properties.
+The following example demonstrates configuring lazy load grouping with infinite scrolling using these properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -120,24 +122,24 @@ The following example demonstrates how to enable the lazy load grouping with inf
         
 {% previewsample "page.domainurl/code-snippet/grid/group/lazy-load-group-cs2" %}
 
-> * The [enableInfiniteScrolling](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableinfinitescrolling) property is optional and can be set to **true** or **false** based on the requirement.
-> * When enabling the `enableInfiniteScrolling` feature, it is necessary to define the [height](https://ej2.syncfusion.com/vue/documentation/api/grid/#height) property.
+> * The [enableInfiniteScrolling](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableinfinitescrolling) property is optional and can be set to `true` or `false` based on the requirement.
+> * When enabling the `enableInfiniteScrolling` feature, it is necessary to define the [height](https://ej2.syncfusion.com/vue/documentation/api/grid#height) property.
 
 ## Lazy load grouping with virtual scrolling
 
-The lazy load grouping with virtual scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to efficiently present and analyze large grouped datasets. This feature optimizes performance, reduces initial load time, and provides smooth scrolling through the dataset. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid supports lazy load grouping with virtual scrolling to efficiently manage and display large grouped datasets. This feature improves performance, reduces initial load time, and ensures a responsive data presentation experience.
 
-**How lazy load grouping with virtual scrolling works**
+**Lazy Load Grouping Workflow in virtual scrolling**
 
-1. When you enable lazy load grouping with virtual scrolling, the Grid renders only the initial level caption rows in a collapsed state.
+1. Initially, only top-level group caption rows are rendered in a collapsed state.
 
-2. The child rows associated with each group caption are loaded and rendered in the Grid only when you expand the respective caption row.
+2. Child rows are loaded and displayed dynamically when a group is expanded.
 
-3. Virtual scrolling allows the Grid to load and display a buffered set of records while scrolling vertically.
+3. Virtual scrolling loads a buffered subset of records as needed, optimizing data rendering and memory usage.
 
-To enable this feature, you need to set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/vue/documentation/api/grid/groupSettings/#enablelazyloading) and [enableVirtualization](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablevirtualization) properties to **true**.
+To enable this feature, set both [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/vue/documentation/api/grid/groupsettings#enablelazyloading) and [enableVirtualization](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#enablevirtualization) properties to `true`. 
 
-The following example demonstrates how to enable the lazy load grouping with virtual scrolling feature using the `groupSettings.enableLazyLoading` and `enableVirtualization` properties.
+The following example demonstrates configuring lazy load grouping with virtual scrolling using these properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -150,7 +152,7 @@ The following example demonstrates how to enable the lazy load grouping with vir
         
 {% previewsample "page.domainurl/code-snippet/grid/group/lazy-load-group-cs3" %}
 
-> When using the `enableVirtualization` feature, it is necessary to define the [height](https://ej2.syncfusion.com/vue/documentation/api/grid/#height) property.
+> When using the `enableVirtualization` feature, it is necessary to define the [height](https://ej2.syncfusion.com/vue/documentation/api/grid#height) property.
 
 ## Limitations for lazy load grouping
 
