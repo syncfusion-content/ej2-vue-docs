@@ -5,7 +5,7 @@ import { DataManager, WebApiAdaptor, Query } from "@syncfusion/ej2-data";
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(GridPlugin);
 Vue.use(ButtonPlugin);
-const SERVICE_URI = "https://ej2services.syncfusion.com/production/web-services/api/Orders";
+const SERVICE_URI = 'https://services.syncfusion.com/vue/production/api/Orders';
 
 new Vue({
 	el: '#app',
@@ -14,8 +14,8 @@ new Vue({
     <div style="padding-bottom:20px">
       <ejs-button ref='button' v-on:click.native="executeQuery">Execute Query</ejs-button>
     </div>
-    <p v-if="statusMessage" style="text-align:center;color:red">{{ statusMessage }}</p>
-    <ejs-grid ref="grid" id="grid" :dataSource="result" height="315px">
+    <p v-if="statusMessage" style="text-align:center;color:red;margin:3px;">{{ statusMessage }}</p>
+    <ejs-grid ref="grid" id="grid" :dataSource="result" height="275px">
       <e-columns>
         <e-column field="OrderID" headerText="Order ID" width="120" textAlign="Right"></e-column>
         <e-column field="CustomerID" headerText="Customer ID" width="160"></e-column>

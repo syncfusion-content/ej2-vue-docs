@@ -11,27 +11,16 @@ Vue.use(SankeyPlugin);
 new Vue({
   el: "#app",
 
-  methods: {
-    handlePrint() {
-      if (this.$refs.sankeyRef) {
-        this.$refs.sankeyRef.print();
-      }
-    }
-  },
-
   template: `
     <div class="control-pane">
       <div class="control-section">
 
-        <button @click="handlePrint" style="margin-bottom: 10px;">
-          Print
-        </button>
-
         <ejs-sankey
-          ref="sankeyRef"
           id="sankey-container"
           width="90%"
           height="450px"
+          title="Energy Flow Diagram"
+          subTitle="Agricultural Energy Conversion"
         >
 
           <e-sankey-nodes>

@@ -13,8 +13,15 @@ new Vue({
 
   methods: {
     handleCustomExport() {
-      if (this.$refs.sankeyRef) {
-        this.$refs.sankeyRef.export("PNG", "CustomSankey");
+   
+      const c = this.$refs.sankeyRef;
+      if (!c) return;
+      if (typeof c.export === "function") {
+        c.export("PNG", "CustomSankey");
+      } else if (c.ej2Instances && typeof c.ej2Instances.export === "function") {
+        c.ej2Instances.export("PNG", "CustomSankey");
+      } else {
+        console.error("export() not found on wrapper or ej2Instances");
       }
     }
   },
@@ -31,7 +38,9 @@ new Vue({
           ref="sankeyRef"
           id="sankey-container"
           width="90%"
-          height="450px"
+          height="450px" 
+          @beforeExport="onBeforeExport"
+          @exportComplete="onExportComplete"
         >
           <e-sankey-nodes>
             <e-sankey-node id="Agricultural Waste"></e-sankey-node>

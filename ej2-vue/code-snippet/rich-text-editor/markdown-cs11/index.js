@@ -75,6 +75,7 @@ new Vue({
           rteContainer.classList.remove('e-rte-code-mirror-enabled');
           rteInstance.focusIn();
         } else {
+          const sourceContentContainer = rteContainer.querySelector('.e-source-content');
           rteContainer.classList.add('e-rte-code-mirror-enabled');
           rteContainer.classList.remove('e-source-code-enabled');
           if (!mirrorView) {
@@ -83,7 +84,7 @@ new Vue({
               id: id,
               styles: 'display: none;',
             });
-            rteContainer.appendChild(mirrorView);
+            sourceContentContainer.appendChild(mirrorView);
             this.renderCodeMirror(
               mirrorView,
               rteInstance.value === null ? '' : rteInstance.value

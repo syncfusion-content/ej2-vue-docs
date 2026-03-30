@@ -28,7 +28,7 @@ new Vue({
         <ejs-sankey
           width="90%"
           height="450px"
-          :linkRendering="onLinkRendering"
+          @linkRendering="onLinkRendering"
         >
           <e-sankey-nodes>
             <e-sankey-node id="Agricultural Waste" />

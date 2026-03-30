@@ -5,7 +5,7 @@
         <ejs-dropdownlist ref="dropdown"  index="0" width="120" :dataSource="drobDownData" :fields='fields' :change="valueChange">
         </ejs-dropdownlist>
     </div>
-    <ejs-grid ref="grid"  style="padding: 10px 10px" :dataSource='dataGrid' :allowPaging='true'
+    <ejs-grid ref="grid" height="210" style="padding: 10px 10px" :dataSource='dataGrid' :allowPaging='true'
     :allowSorting='true' :allowFiltering='true' :pageSettings='pageSettings' :loadingIndicator='loadingIndicator'>
         <e-columns>
             <e-column field='EmployeeID' headerText='Employee ID' width='130' textAlign='Right'></e-column>

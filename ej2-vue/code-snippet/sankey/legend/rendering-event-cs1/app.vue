@@ -64,7 +64,7 @@ export default {
     onLegendItemRendering(args) {
       args.fill = "#333"
   }
-  }
+  },
   provide: {
     sankey: [SankeyTooltip, SankeyLegend, SankeyExport]
   }

@@ -7,7 +7,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-      <ejs-chart id="container" :primaryXAxis='primaryXAxis' :crosshair='crosshair' :crosshairLabelRender='crosshairLabelRender'>
+      <ejs-chart id="container" :primaryXAxis='primaryXAxis' :primaryYAxis="primaryYAxis" :crosshair='crosshair' @crosshairLabelRender='crosshairLabelRender'>
         <e-series-collection>
           <e-series :dataSource='seriesData' xName='x' yName='y' type='Line' name='Series'></e-series>
         </e-series-collection>

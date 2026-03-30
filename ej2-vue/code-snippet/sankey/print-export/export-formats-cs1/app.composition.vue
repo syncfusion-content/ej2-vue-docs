@@ -51,15 +51,20 @@ import {
 
 const sankeyRef = ref(null);
 
-function exportPNG() {
-  sankeyRef.value.export("PNG", "Sankey");
+
+function doExport(format, fileName) {
+  const c = sankeyRef.value;
+  if (!c) return;
+
+  const proxied = typeof c.export === 'function' ? c.export.bind(c) : null;
+  const instance = c.ej2Instances?.export ? c.ej2Instances.export.bind(c.ej2Instances) : null;
+
+  (proxied || instance)?.(format, fileName);
 }
-function exportPDF() {
-  sankeyRef.value.export("PDF", "Sankey");
-}
-function exportSVG() {
-  sankeyRef.value.export("SVG", "Sankey");
-}
+
+function exportPNG() { doExport('PNG', 'Sankey'); }
+function exportPDF() { doExport('PDF', 'Sankey'); }
+function exportSVG() { doExport('SVG', 'Sankey'); }
 
 provide("sankey", [SankeyTooltip, SankeyLegend, SankeyExport]);
 </script>

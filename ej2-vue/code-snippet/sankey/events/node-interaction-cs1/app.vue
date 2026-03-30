@@ -64,7 +64,7 @@ export default {
   },
 
   provide: {
-    sankey: [SankeyTooltip, SankeyLegend, SankeyExport]
+    sankey: [SankeyTooltip, SankeyLegend]
   }
 };
 </script>
