@@ -4,8 +4,8 @@
     <ejs-button style="margin-left: 20px" class="e-control e-btn e-lib e-info" @click="deleteEvent">Delete rows</ejs-button>
     <ejs-button style="margin-left: 20px" class="e-control e-btn e-lib e-info" @click="updateEvent">Update Freight Data</ejs-button>
     <div id="message">{{ message }}</div>
-    <div style="padding-top: 20px">
-      <ejs-grid ref="immutablegrid" :dataSource="rowData" :enableHover="false" height="350" :enableImmutableMode="true" allowPaging="true" :selectionSettings="selectionOptions"  :rowDataBound="rowDataBound" :queryCellInfo="queryCellInfo">
+    <div style="padding-top: 10px">
+      <ejs-grid ref="immutablegrid" :dataSource="rowData" :enableHover="false" height="235" :enableImmutableMode="true" allowPaging="true" :selectionSettings="selectionOptions"  :rowDataBound="rowDataBound" :queryCellInfo="queryCellInfo">
         <e-columns>
           <e-column field="OrderID" headerText="Order ID" isPrimaryKey="true" width="120" textAlign="Right"></e-column>
           <e-column field="CustomerID" headerText="Customer ID" width="120"></e-column>
@@ -67,7 +67,7 @@ const deleteEvent = () => {
 const updateEvent = () => {
   let count = 0;
   let newRowData = rowData.value.map((row) => {
-    if (row.ShipName === 'Bueno Foods') {
+    if (row.ShipName === 'Hanari Carnes') {
       count++;
       return { ...row, 'ShipName': "Gems Chevalier" };
     } else {
@@ -102,7 +102,7 @@ const generateFreight = () => {
 };
 
 const generateShipName = () => {
-  const names = ['Que Delícia', 'Bueno Foods', 'Island Trading', 'Laughing Bacchus Winecellars'];
+  const names = ['Que Delícia','Hanari Carnes','Tortuga Restaurante','Ricardo Adocicados'];
   return names[Math.floor(Math.random() * names.length)];
 };
 
@@ -123,6 +123,6 @@ provide('grid', [Page]);
 #message{
         color:red;
         text-align: center;
-        padding-top: 20px;
+        padding-top: 10px;
 }
 </style>

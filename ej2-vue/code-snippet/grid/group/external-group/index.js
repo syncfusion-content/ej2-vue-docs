@@ -23,7 +23,7 @@ new Vue({
     <ejs-button ref='button' style="margin-right: 5px " cssClass='e-outline'
       v-on:click.native="unGroupColumn"> UnGroup column</ejs-button>
     <ejs-grid ref='grid' style="margin-top: 10px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions'
-    height='267px'>
+    height='290px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
         <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>

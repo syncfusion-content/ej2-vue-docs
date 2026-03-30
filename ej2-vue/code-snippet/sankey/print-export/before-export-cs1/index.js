@@ -40,7 +40,7 @@ new Vue({
           id="sankey-container"
           width="90%"
           height="450px"
-          :beforeExport="beforeExport"
+          @beforeExport="beforeExport"
         >
 
           <e-sankey-nodes>

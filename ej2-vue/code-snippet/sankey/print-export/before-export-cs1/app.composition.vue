@@ -11,7 +11,7 @@
         id="sankey-container"
         width="90%"
         height="450px"
-        :beforeExport="beforeExport"
+        @beforeExport="beforeExport"
       >
         <ESankeyNodesCollection>
           <ESankeyNode id="Agricultural Waste" />

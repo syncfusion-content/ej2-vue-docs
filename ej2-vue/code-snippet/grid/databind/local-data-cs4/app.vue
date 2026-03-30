@@ -29,8 +29,8 @@ components: {
 data() {
   return {
     path :{
-      saveUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Save',
-      removeUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Remove'
+      saveUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Save',
+      removeUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Remove'
     }
   };
 },

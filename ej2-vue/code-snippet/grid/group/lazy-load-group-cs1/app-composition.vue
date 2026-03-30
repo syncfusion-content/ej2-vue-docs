@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref='grid' :dataSource="data" :allowPaging='true' :allowGrouping='true' :groupSettings='groupSettings' height='315px'>
+    <ejs-grid ref='grid' :dataSource="data" :allowPaging='true' :allowGrouping='true' :groupSettings='groupSettings' height='255px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign= 'Right' width='80'></e-column>
         <e-column field='ProductName' headerText='Product Name' width='100'></e-column>

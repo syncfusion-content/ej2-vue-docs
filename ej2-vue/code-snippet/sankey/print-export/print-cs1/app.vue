@@ -52,7 +52,15 @@ export default {
 
   methods: {
     handlePrint() {
-      this.$refs.sankeyRef.print();
+      
+      const c = this.$refs.sankeyRef;
+      if (c && typeof c.print === 'function') {
+        c.print();
+      } else if (c && c.ej2Instances && typeof c.ej2Instances.print === 'function') {
+        c.ej2Instances.print();
+      } else {
+        console.error('print() not found on the Sankey wrapper or ej2Instances');
+      }
     }
   },
 

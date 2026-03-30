@@ -36,8 +36,9 @@ new Vue({
       <ejs-stockchart
         id="stockchartcontainer"
         :primaryXAxis="primaryXAxis"
+        :primaryYAxis="primaryYAxis"
         :crosshair="crosshair"
-        :crosshairLabelRender="crosshairLabelRender">
+        @crosshairLabelRender="crosshairLabelRender">
         <e-stockchart-series-collection>
           <e-stockchart-series :dataSource="seriesData" type="SplineArea" xName='x' yName='high' :opacity='0.5'></e-stockchart-series>
         </e-stockchart-series-collection>

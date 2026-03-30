@@ -11,6 +11,8 @@
         id="sankey-container"
         width="90%"
         height="450px"
+        @beforeExport="onBeforeExport"
+        @exportComplete="onExportComplete"
       >
         <ESankeyNodesCollection>
           <ESankeyNode id="Agricultural Waste" />
@@ -51,9 +53,24 @@ import {
 
 const sankeyRef = ref(null);
 
+function onBeforeExport(args) {
+  args.width = 1600;
+  args.height = 900;
+}
+
+function onExportComplete(args) {
+  console.log("Export completed successfully");
+}
+
 function handleCustomExport() {
-  if (sankeyRef.value) {
-    sankeyRef.value.export("PNG", "CustomSankey");
+const c = sankeyRef.value;
+  if (!c) return;
+  if (typeof c.export === "function") {
+    c.export("PNG", "CustomSankey");
+  } else if (c.ej2Instances?.export) {
+    c.ej2Instances.export("PNG", "CustomSankey");
+  } else {
+    console.error("export() not found on wrapper or ej2Instances");
   }
 }
 

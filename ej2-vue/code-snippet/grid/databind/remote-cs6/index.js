@@ -1,11 +1,10 @@
 
 import Vue from "vue";
-import { GridPlugin. Page } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
 import { DataManager, ODataAdaptor } from "@syncfusion/ej2-data";
 
 Vue.use(GridPlugin);
 
-);
 new Vue({
 	el: '#app',
 	template: `

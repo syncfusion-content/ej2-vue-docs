@@ -24,7 +24,6 @@ components: {
 "e-columns":ColumnsDirective,
 "e-column":ColumnDirective,
 "ejs-button": ButtonComponent
-
 },
 
 data() {

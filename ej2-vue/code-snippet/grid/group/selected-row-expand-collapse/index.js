@@ -19,7 +19,7 @@ new Vue({
       <ejs-button ref='button' cssClass='e-outline' v-on:click.native="onExpandCollapseButtonClick" style='margin-top:25px; margin-left:5px'>Collapse or Expand Row</ejs-button> 
     </div>
     <div style="padding-top:5px"><p style="color:red;" id="message">{{ message }}</p></div>
-    <ejs-grid ref='grid' style="margin-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
+    <ejs-grid ref='grid' style="margin-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='220px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' :allowGrouping='false' width=90></e-column>
         <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>

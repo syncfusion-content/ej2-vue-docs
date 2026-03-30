@@ -11,7 +11,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div id="app">
-    <ejs-grid ref='grid' :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' :dataBound='dataBound' height='267px'>
+    <ejs-grid ref='grid' :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' :dataBound='dataBound' height='300px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
         <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>

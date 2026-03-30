@@ -33,7 +33,7 @@ new Vue(
           :change="onCheckboxChange"
         ></ejs-checkbox>
       </div>
-      <ejs-grid ref="grid" :dataSource="data" :height="315" :load="load">
+      <ejs-grid ref="grid" :dataSource="data" :height="275" :load="load">
         <e-columns>
           <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120"></e-column>
           <e-column field="CustomerID" headerText="Customer ID" width="140"></e-column>

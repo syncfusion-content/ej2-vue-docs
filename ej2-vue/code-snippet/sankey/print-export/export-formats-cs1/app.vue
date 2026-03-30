@@ -51,15 +51,20 @@ export default {
   name: "App",
 
   methods: {
-    handleExportPNG() {
-      this.$refs.sankeyRef.export("PNG", "Sankey");
+   
+doExport(format, fileName) {
+      const c = this.$refs.sankeyRef;
+      if (!c) return;
+
+      const proxied = typeof c.export === 'function' ? c.export.bind(c) : null;
+      const instance = c.ej2Instances?.export ? c.ej2Instances.export.bind(c.ej2Instances) : null;
+
+      (proxied || instance)?.(format, fileName);
     },
-    handleExportPDF() {
-      this.$refs.sankeyRef.export("PDF", "Sankey");
-    },
-    handleExportSVG() {
-      this.$refs.sankeyRef.export("SVG", "Sankey");
-    }
+
+    handleExportPNG() { this.doExport('PNG', 'Sankey'); },
+    handleExportPDF() { this.doExport('PDF', 'Sankey'); },
+    handleExportSVG() { this.doExport('SVG', 'Sankey'); },
   },
 
   components: {

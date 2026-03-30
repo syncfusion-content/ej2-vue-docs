@@ -6,7 +6,7 @@
         <ejs-button style='margin-left:5px' cssClass="e-outline"  v-on:click="showhideSpinner">Show Spinner</ejs-button>
         <ejs-button style='margin-left:5px' cssClass="e-outline"  v-on:click="showhideSpinner">Hide Spinner</ejs-button>
       </div>
-      <ejs-grid ref="grid" allowPaging='true' height='272px' style='margin-top:10px'>
+      <ejs-grid ref="grid" allowPaging='true' height='255px' style='margin-top:10px'>
         <e-columns>
           <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
           <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>

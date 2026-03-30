@@ -13,9 +13,16 @@ new Vue({
 
   methods: {
     handlePrint() {
-      if (this.$refs.sankeyRef) {
-        this.$refs.sankeyRef.print();
+      const c = this.$refs.sankeyRef;
+      if (!c) return;
+      if (typeof c.print === "function") {
+        c.print();
+      } else if (c.ej2Instances && typeof c.ej2Instances.print === "function") {
+        c.ej2Instances.print();
+      } else {
+        console.error("print() not found on wrapper or ej2Instances. Check your @syncfusion/ej2-vue-charts version.");
       }
+
     }
   },
 
