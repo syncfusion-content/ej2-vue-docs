@@ -17,7 +17,7 @@ The **Composition API** groups related logic into reusable functions and is reco
 
 ## Prerequisites
 
-[`System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -110,25 +110,43 @@ Follow the steps below to add the Vue Sankey Chart component using the `Composit
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { provide } from 'vue';
-import { SankeyComponent, SankeyTooltip } from "@syncfusion/ej2-vue-charts";
+import { provide } from "vue";
+import {
+  SankeyComponent as EjsSankey,
+  SankeyNodesCollectionDirective as ESankeyNodesCollection,
+  SankeyNodeDirective as ESankeyNode,
+  SankeyLinksCollectionDirective as ESankeyLinksCollection,
+  SankeyLinkDirective as ESankeyLink,
+  SankeyTooltip
+} from "@syncfusion/ej2-vue-charts";
 
-provide('sankey', [SankeyTooltip]);
+provide("sankey", [SankeyTooltip]);
 </script>
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { SankeyComponent, SankeyTooltip } from '@syncfusion/ej2-vue-charts';
+import {
+  SankeyComponent as EjsSankey,
+  SankeyNodesCollectionDirective as ESankeyNodesCollection,
+  SankeyNodeDirective as ESankeyNode,
+  SankeyLinksCollectionDirective as ESankeyLinksCollection,
+  SankeyLinkDirective as ESankeyLink,
+  SankeyTooltip
+} from "@syncfusion/ej2-vue-charts";
 
 export default {
-name: "App",
-components: {
-'ejs-sankey': SankeyComponent
-},
-provide: {
-sankey: [SankeyTooltip]
-}
+  name: "App",
+  components: {
+    EjsSankey,
+    ESankeyNodesCollection,
+    ESankeyNode,
+    ESankeyLinksCollection,
+    ESankeyLink
+  },
+  provide: {
+    sankey: [SankeyTooltip]
+  }
 };
 </script>
 {% endhighlight %}
@@ -140,42 +158,52 @@ sankey: [SankeyTooltip]
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-<ejs-sankey id="container" :links="sankeyLinks" :tooltip="tooltip"></ejs-sankey>
+      <EjsSankey
+        width="90%"
+        height="450px"
+        :tooltip="tooltip"
+      >
+        <ESankeyNodesCollection>
+          <ESankeyNode id="Agricultural Waste" />
+          <ESankeyNode id="Biomass Residues" />
+          <ESankeyNode id="Bio-conversion" />
+          <ESankeyNode id="Liquid Biofuel" />
+          <ESankeyNode id="Electricity" />
+          <ESankeyNode id="Heat" />
+        </ESankeyNodesCollection>
+        <ESankeyLinksCollection>
+          <ESankeyLink sourceId="Agricultural Waste" targetId="Bio-conversion" :value="84.152" />
+          <ESankeyLink sourceId="Biomass Residues"   targetId="Bio-conversion" :value="24.152" />
+          <ESankeyLink sourceId="Bio-conversion"     targetId="Liquid Biofuel" :value="10.597" />
+          <ESankeyLink sourceId="Bio-conversion"     targetId="Electricity"    :value="36.862" />
+          <ESankeyLink sourceId="Bio-conversion"     targetId="Heat"           :value="60.845" />
+        </ESankeyLinksCollection>
+      </EjsSankey>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-3. Declare the values for the `links` and `tooltip` properties in the `script` section.
+3. Declare the values for the `tooltip` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-let sankeyLinks = [
-{ source: 'A', target: 'B', weight: 5 },
-{ source: 'A', target: 'C', weight: 3 },
-{ source: 'B', target: 'D', weight: 2 },
-{ source: 'C', target: 'D', weight: 4 }
-];
-let tooltip = { enable: true };
+const tooltip = { enable: true };
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-data() {
-return {
-sankeyLinks: [
-{ source: 'A', target: 'B', weight: 5 },
-{ source: 'A', target: 'C', weight: 3 },
-{ source: 'B', target: 'D', weight: 2 },
-{ source: 'C', target: 'D', weight: 4 }
-],
-tooltip: { enable: true }
+export default {
+  data() {
+    return {
+      tooltip: { enable: true }
+    };
+  }
 };
-}
 </script>
 
 {% endhighlight %}
@@ -187,53 +215,101 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-<ejs-sankey id="container" :links="sankeyLinks" :tooltip="tooltip"></ejs-sankey>
+      <EjsSankey
+        width="90%"
+        height="450px"
+        :tooltip="tooltip"
+      >
+        <ESankeyNodesCollection>
+          <ESankeyNode id="Agricultural Waste" />
+          <ESankeyNode id="Biomass Residues" />
+          <ESankeyNode id="Bio-conversion" />
+          <ESankeyNode id="Liquid Biofuel" />
+          <ESankeyNode id="Electricity" />
+          <ESankeyNode id="Heat" />
+        </ESankeyNodesCollection>
+        <ESankeyLinksCollection>
+          <ESankeyLink sourceId="Agricultural Waste" targetId="Bio-conversion" :value="84.152" />
+          <ESankeyLink sourceId="Biomass Residues" targetId="Bio-conversion" :value="24.152" />
+          <ESankeyLink sourceId="Bio-conversion" targetId="Liquid Biofuel" :value="10.597" />
+          <ESankeyLink sourceId="Bio-conversion" targetId="Electricity" :value="36.862" />
+          <ESankeyLink sourceId="Bio-conversion" targetId="Heat" :value="60.845" />
+        </ESankeyLinksCollection>
+      </EjsSankey>
 </template>
 
-<script>
-import { provide } from 'vue';
-import { SankeyComponent, SankeyTooltip } from "@syncfusion/ej2-vue-charts";
+<script setup>
+import { provide } from "vue";
+import {
+  SankeyComponent as EjsSankey,
+  SankeyNodesCollectionDirective as ESankeyNodesCollection,
+  SankeyNodeDirective as ESankeyNode,
+  SankeyLinksCollectionDirective as ESankeyLinksCollection,
+  SankeyLinkDirective as ESankeyLink,
+  SankeyTooltip,
+  SankeyLegend
+} from "@syncfusion/ej2-vue-charts";
 
-let sankeyLinks = [
-{ source: 'A', target: 'B', weight: 5 },
-{ source: 'A', target: 'C', weight: 3 },
-{ source: 'B', target: 'D', weight: 2 },
-{ source: 'C', target: 'D', weight: 4 }
-];
-let tooltip = { enable: true };
+const tooltip = { enable: true };
 
-provide('sankey', [SankeyTooltip]);
+provide("sankey", [SankeyTooltip, SankeyLegend]);
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-<ejs-sankey id="container" :links="sankeyLinks" :tooltip="tooltip"></ejs-sankey>
+      <ejs-sankey
+        width="90%"
+        height="450px"
+        :tooltip="tooltip"
+      >
+        <e-sankey-nodes-collection>
+          <e-sankey-node id="Agricultural Waste" />
+          <e-sankey-node id="Biomass Residues" />
+          <e-sankey-node id="Bio-conversion" />
+          <e-sankey-node id="Liquid Biofuel" />
+          <e-sankey-node id="Electricity" />
+          <e-sankey-node id="Heat" />
+        </e-sankey-nodes-collection>
+        <e-sankey-links-collection>
+          <e-sankey-link sourceId="Agricultural Waste" targetId="Bio-conversion" :value="84.152" />
+          <e-sankey-link sourceId="Biomass Residues" targetId="Bio-conversion" :value="24.152" />
+          <e-sankey-link sourceId="Bio-conversion" targetId="Liquid Biofuel" :value="10.597" />
+          <e-sankey-link sourceId="Bio-conversion" targetId="Electricity" :value="36.862" />
+          <e-sankey-link sourceId="Bio-conversion" targetId="Heat" :value="60.845" />
+        </e-sankey-links-collection>
+      </ejs-sankey>
 </template>
 
 <script>
-import { SankeyComponent, SankeyTooltip } from "@syncfusion/ej2-vue-charts";
+import {
+  SankeyComponent,
+  SankeyNodesCollectionDirective,
+  SankeyNodeDirective,
+  SankeyLinksCollectionDirective,
+  SankeyLinkDirective,
+  SankeyTooltip,
+  SankeyLegend
+} from "@syncfusion/ej2-vue-charts";
 
 export default {
-name: "App",
-components: {
-'ejs-sankey': SankeyComponent
-},
-data() {
-return {
-sankeyLinks: [
-{ source: 'A', target: 'B', weight: 5 },
-{ source: 'A', target: 'C', weight: 3 },
-{ source: 'B', target: 'D', weight: 2 },
-{ source: 'C', target: 'D', weight: 4 }
-],
-tooltip: { enable: true }
-};
-},
-provide: {
-sankey: [SankeyTooltip]
-}
+  name: "App",
+  data() {
+    return {
+      tooltip: { enable: true }
+    };
+  },
+  components: {
+    "ejs-sankey": SankeyComponent,
+    "e-sankey-nodes-collection": SankeyNodesCollectionDirective,
+    "e-sankey-node": SankeyNodeDirective,
+    "e-sankey-links-collection": SankeyLinksCollectionDirective,
+    "e-sankey-link": SankeyLinkDirective
+  },
+  provide: {
+    sankey: [SankeyTooltip, SankeyLegend]
+  }
 };
 </script>
 
