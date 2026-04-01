@@ -25,6 +25,8 @@ The Inline AI Assist control triggers the [created](../api/inline-ai-assist#crea
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/inline-assist/events/created" %}
+
 ## promptRequest
 
 The [promptRequest](../api/inline-ai-assist#promptrequest) event is triggered when the prompt request is made in the Inline AI Assist control.
@@ -37,6 +39,8 @@ The [promptRequest](../api/inline-ai-assist#promptrequest) event is triggered wh
 {% include code-snippet/inline-ai-assist/events/prompt-request/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-assist/events/prompt-request" %}
 
 ## open
 
@@ -51,6 +55,8 @@ The [open](../api/inline-ai-assist#open) event is triggered when the Inline AI A
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/inline-assist/events/open" %}
+
 ### close
 
 The [close](../api/inline-ai-assist#close) event is triggered when the Inline AI Assist popup is closed.
@@ -63,3 +69,5 @@ The [close](../api/inline-ai-assist#close) event is triggered when the Inline AI
 {% include code-snippet/inline-ai-assist/events/close/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-assist/events/close" %}
