@@ -55,7 +55,7 @@ Below sample demonstrates the usage of command settings in the Inline AI Assist 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/inline-assist/command-settings" %}
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/command-settings" %}
 
 ## See Also
 

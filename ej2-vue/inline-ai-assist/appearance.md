@@ -39,4 +39,4 @@ Below sample demonstrates the usage of above root level properties in Inline Ass
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/inline-assist/root-config" %}
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/inline-assist/root-config" %}
