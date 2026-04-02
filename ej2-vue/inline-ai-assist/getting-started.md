@@ -96,7 +96,7 @@ Follow the steps below to add the Inline AI Assist component using `Composition 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { InlineAIAssistComponent as EjsInlineAIAssist } from "@syncfusion/ej2-vue-interactive-chat";
+import { InlineAIAssistComponent as EjsInlineaiassist } from "@syncfusion/ej2-vue-interactive-chat";
 </script>
 
 {% endhighlight %}
@@ -148,35 +148,20 @@ yarn run serve
 
 {% previewsample "page.domainurl/code-snippet/inline-ai-assist/getting-started" %}
 
-## Configure relateTo property
+## RelateTo and target configuration
 
-You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/inline-ai-assist/relateTo/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/inline-ai-assist/relateTo/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-  
-{% previewsample "page.domainurl/code-snippet/inline-ai-assist/relateTo" %}
-
-## Configure target property
-
-The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement.
+You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement. The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/inline-ai-assist/target/app-composition.vue %}
+{% include code-snippet/inline-ai-assist/relateTo-target/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/inline-ai-assist/target/app.vue %}
+{% include code-snippet/inline-ai-assist/relateTo-target/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/inline-ai-assist/target" %}
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/relateTo-target" %}
 
 ## Response display modes
 

@@ -47,4 +47,5 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
 </style>

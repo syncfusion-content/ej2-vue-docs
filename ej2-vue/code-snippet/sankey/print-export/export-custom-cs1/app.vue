@@ -11,6 +11,8 @@
         id="sankey-container"
         width="90%"
         height="450px"
+        @beforeExport="onBeforeExport"
+        @exportComplete="onExportComplete"
       >
         <e-sankey-nodes-collection>
           <e-sankey-node id="Agricultural Waste" />
@@ -51,9 +53,26 @@ export default {
   name: "App",
 
   methods: {
+    onBeforeExport(args) {
+      args.width = 1600;  // customize as needed
+      args.height = 900;  // customize as needed
+    },
+    onExportComplete(args) {
+      console.log("Export completed successfully");
+    },
+
     handleCustomExport() {
-      this.$refs.sankeyRef.export("PNG", "CustomSankey");
-    }
+      
+ const c = this.$refs.sankeyRef;
+      if (!c) return;
+      if (typeof c.export === "function") {
+        c.export("PNG", "CustomSankey");
+      } else if (c.ej2Instances && typeof c.ej2Instances.export === "function") {
+        c.ej2Instances.export("PNG", "CustomSankey");
+      } else {
+        console.error("export() not found on wrapper or ej2Instances");
+      }
+    },
   },
 
   components: {

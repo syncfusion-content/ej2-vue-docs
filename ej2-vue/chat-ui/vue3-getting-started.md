@@ -132,6 +132,10 @@ Follow the below steps to add the Vue Chat UI component using `Composition API` 
 
 <script setup>
   import { ChatUIComponent as EjsChatui } from "@syncfusion/ej2-vue-interactive-chat";
+  const currentUser = {
+  id: "user",
+  user: "Albert"
+};
 </script>
 
 {% endhighlight %}
@@ -181,6 +185,10 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <script setup>
   import { ChatUIComponent as EjsChatui } from "@syncfusion/ej2-vue-interactive-chat";
+  const currentUser = {
+  id: "user",
+  user: "Albert"
+};
 </script>
 
 <style>
@@ -198,7 +206,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <template>
   <div class="control_wrapper">
-    <ejs-chatui></ejs-chatui>
+    <ejs-chatui :user="currentUser"></ejs-chatui>
   </div>
 </template>
 <script>

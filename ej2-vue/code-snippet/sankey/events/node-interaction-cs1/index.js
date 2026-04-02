@@ -12,10 +12,10 @@ new Vue({
 
   methods: {
     onNodeClick(args) {
-      console.log("Node clicked:", args.link);
+      console.log("Node clicked:", args.node);
     },
     onNodeEnter(args) {
-      console.log("Node hovered:", args.link);
+      console.log("Node hovered:", args.node);
     }
   },
 
@@ -27,8 +27,8 @@ new Vue({
           id="sankey-container"
           width="90%"
           height="450px"
-          :nodeMouseClick="onNodeMouseClick"
-          :nodeMouseEnter="onNodeMouseEnter"
+          @nodeMouseClick="onNodeClick"
+          @nodeMouseEnter="onNodeEnter"
         >
           <e-sankey-nodes>
             <e-sankey-node id="Agricultural Waste" />

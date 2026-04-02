@@ -107,7 +107,7 @@ Follow the below steps to add the Vue Block Editor component using `Composition 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { BlockEditorComponent as EjsBlockEditor  } from "@syncfusion/ej2-vue-blockeditor";
+import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
 </script>
 
 {% endhighlight %}
@@ -131,7 +131,7 @@ export default {
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <div id='container'>
+    <div id='container' style="margin: 50px auto;">
         <ejs-blockeditor></ejs-blockeditor>
     </div>
 </template>

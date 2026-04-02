@@ -34,7 +34,7 @@ new Vue({
           width="90%"
           height="450px"
           :legendSettings="legendSettings"
-          :legendItemRendering="onLegendItemRendering"
+          @legendItemRendering="onLegendItemRendering"
         >
           <e-sankey-nodes>
             <e-sankey-node id="Agricultural Waste"></e-sankey-node>

@@ -51,8 +51,17 @@ import {
 
 const sankeyRef = ref(null);
 
+
 function printChart() {
-  sankeyRef.value.print();
+  const c = sankeyRef.value;
+  if (!c) return;
+  if (typeof c.print === 'function') {
+    c.print();
+  } else if (c.ej2Instances && typeof c.ej2Instances.print === 'function') {
+    c.ej2Instances.print();
+  } else {
+    console.error('print() not found on wrapper or ej2Instances');
+  }
 }
 
 provide("sankey", [SankeyTooltip, SankeyLegend, SankeyExport]);
