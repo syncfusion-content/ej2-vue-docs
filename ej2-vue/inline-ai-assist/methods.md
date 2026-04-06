@@ -23,6 +23,8 @@ You can use the [addResponse](../api/inline-ai-assist#addresponse) public method
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/methods/add-response" %}
+
 ## Executing prompt
 
 You can use the [executePrompt](../api/inline-ai-assist#executeprompt) method to execute the prompts dynamically in the Inline AI Assist. It accepts prompts as string values, which triggers the [promptRequest](../api/inline-ai-assist#promptrequest) event and performs the callback actions.
@@ -35,6 +37,8 @@ You can use the [executePrompt](../api/inline-ai-assist#executeprompt) method to
 {% include code-snippet/inline-ai-assist/methods/execute-prompt/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/methods/execute-prompt" %}
 
 ## Showing popup
 
@@ -53,6 +57,8 @@ You can use [hidePopup](../api/inline-ai-assist#hidePopup) method to close the I
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/methods/show-hide-popup" %}
+
 ## Showing command popup
 
 Use [showCommandPopup](../api/inline-ai-assist#showCommandPopup) to open the command action popup; it only opens when the Inline AI Assist popup is already opened.
@@ -69,3 +75,5 @@ You can use [hideCommandPopup](../api/inline-ai-assist#hideCommandPopup) to clos
 {% include code-snippet/inline-ai-assist/methods/show-hide-command-popup/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/methods/show-hide-command-popup" %}

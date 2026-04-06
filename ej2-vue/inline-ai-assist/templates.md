@@ -25,6 +25,8 @@ You can use the [editorTemplate](../api/inline-ai-assist#editortemplate) propert
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/templates/editor-template" %}
+
 ## Response template
 
 You can use the [responseTemplate](../api/inline-ai-assist#responsetemplate) property to customize response items within the Inline AI Assist. The template context includes the `response` and `toolbarItems` values.
@@ -37,3 +39,5 @@ You can use the [responseTemplate](../api/inline-ai-assist#responsetemplate) pro
 {% include code-snippet/inline-ai-assist/templates/response-template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/templates/response-template" %}

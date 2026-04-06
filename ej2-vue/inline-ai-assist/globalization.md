@@ -32,6 +32,8 @@ The below example shows adding the German culture locale(`de-DE`)
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/globalization/localization" %}
+
 ## RTL
 
 RTL provides an option to switch the text direction and layout of the Inline AI Assist control from right to left by setting the [enableRtl](../api/inline-ai-assist#enablertl) property to `true`.
@@ -44,3 +46,5 @@ RTL provides an option to switch the text direction and layout of the Inline AI 
 {% include code-snippet/inline-ai-assist/globalization/enable-rtl/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/globalization/enable-rtl" %}
