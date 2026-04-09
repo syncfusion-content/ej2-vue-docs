@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { PdfExportProperties } from '@syncfusion/ej2-grids';
 import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
@@ -39,10 +39,14 @@ new Vue({
     btnClick: function(args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       let pdfExportProperties: PdfExportProperties = {
-        filename:'sample.pdf'
+        fileName:'sample.pdf'
       };
       pivotGridObj.pdfExport(pdfExportProperties);
     }
-  }
-
+  },
+  provide: {
+    pivotview: [
+      PDFExport
+    ]
+  },
 });

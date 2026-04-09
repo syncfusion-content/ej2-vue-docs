@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
     <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
-      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :onPdfCellRender="onPdfCellRender">
+      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :gridSettings="gridSettings">
     </ejs-pivotview>
   </div>
 </template>
@@ -14,28 +14,30 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
 const dataSourceSettings = {
-  dataSource: pivotData,
-  expandAll: false,
-  drilledMembers: [{ name: 'Country', items: ['France'] }],
-  columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-  values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],
-  rows: [{ name: 'Country' }, { name: 'Products' }],
-  formatSettings: [{ name: 'Amount', format: 'C0' }],
-  filters: []
+    dataSource: pivotData,
+    expandAll: false,
+    drilledMembers: [{ name: 'Country', items: ['France'] }],
+    columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+    values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],
+    rows: [{ name: 'Country' }, { name: 'Products' }],
+    formatSettings: [{ name: 'Amount', format: 'C0' }],
+    filters: []
 };
 const height = 320;
 const allowPdfExport = true;
 const isPrimary = true;
 const enableVirtualization = true;
-
-const onPdfCellRender = (args) => {
-  if (args.pivotCell && args.pivotCell.valueSort && args.pivotCell.valueSort.levelName === 'France.Mountain Bikes') {
-    args.cell.height = 30
-  }
+const gridSettings = {
+    columnWidth: 140,
+    pdfQueryCellInfo: function (args) {
+        if (args.data && args.data.rowHeaders === 'France.Mountain Bikes' && args.cell && args.cell.gridRow) {
+            args.cell.gridRow.height = 100;
+        }
+    }
 };
 const btnClick = () => {
   let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-  pivotGridObj.pdfExport({}, false, null, false, true);
+  pivotGridObj.pdfExport();
 };
 
 provide('pivotview', [

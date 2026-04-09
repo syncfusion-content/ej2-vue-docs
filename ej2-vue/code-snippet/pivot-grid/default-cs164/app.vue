@@ -5,7 +5,7 @@
     </div>
 </template>
 <script>
-import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent} from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -36,12 +36,16 @@ components: {
     btnClick: function() {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       let pdfExportProperties = {
-        filename:'sample.pdf'
+        fileName:'sample.pdf'
       };
       pivotGridObj.pdfExport(pdfExportProperties);
     }
+  },
+  provide: {
+    pivotview: [
+      PDFExport
+    ]
   }
-}
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
