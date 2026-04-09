@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { PdfExportProperties } from '@syncfusion/ej2-grids';
 import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
@@ -34,6 +34,11 @@ new Vue({
       allowPdfExport: true,
       isPrimary: true
     }
+  },
+  provide: {
+    pivotview: [
+      PDFExport
+    ]
   },
   methods: {
     btnClick: function(args) {

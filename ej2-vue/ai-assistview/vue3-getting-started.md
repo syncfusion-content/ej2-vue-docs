@@ -112,6 +112,7 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
 </style>
 
 {% endhighlight %}
