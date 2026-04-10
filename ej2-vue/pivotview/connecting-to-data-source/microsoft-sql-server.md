@@ -107,7 +107,7 @@ namespace PivotController.Controllers
 1. Access the Web API endpoint at `https://localhost:7139/pivot` to view the JSON data retrieved from the SQL Server database.
 2. The browser will display the JSON data, as shown below, ready to be used by the Pivot Table.
 
-![Hosted Web API URL](../images/code-web-app.jpeg)
+![Hosted Web API URL](../images/code-web-app.webp)
 
 ## Connecting the Pivot Table to the Hosted Web API URL
 
@@ -217,7 +217,7 @@ import { provide } from "vue";
 2. The Pivot Table will display the data fetched from the SQL Server database via the Web API, structured according to the defined report.
 3. The resulting Pivot Table will look like this:
 
-![Pivot Table bound with SQL database](../images/sql-data-binding.png)
+![Pivot Table bound with SQL database](../images/sql-data-binding.webp)
 
 ### Additional Resources
 Explore a complete example of the Vue Pivot Table integrated with an ASP.NET Core Web Application to fetch data from a SQL Server database in the [GitHub](https://github.com/SyncfusionExamples/how-to-bind-SQL-database-to-pivot-table) repository.

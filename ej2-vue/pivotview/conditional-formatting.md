@@ -83,7 +83,7 @@ To format all value fields together, use the [conditionalFormatSettings](https:/
 
 ## Conditional formatting for specific value field
 
-To apply conditional formatting exclusively to a particular value field, set the [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting~Measure.html) property with the specific value field name in [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting_properties.html).
+To apply conditional formatting exclusively to a particular value field, set the [Measure](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iconditionalformatsettings#measure) property with the specific value field name in [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting_properties.html).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -100,7 +100,7 @@ To apply conditional formatting exclusively to a particular value field, set the
 
 Editing and removing existing conditional format can be done through the UI at runtime. To do so, open the conditional formatting dialog and edit the "Value", "Condition" and "Format" options based on user requirement and click "OK". To remove a conditional format, click the "Delete" icon besides the respective condition.
 
-![output](images/cformatting_remove.png)
+![output](images/cformatting_remove.webp)
 
 ## Event
 
