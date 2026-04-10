@@ -68,14 +68,14 @@ For each value field, the aggregation type can be set using the property [`type`
 You can dynamically modify the aggregation type for value fields in the Pivot Table component through the UI at runtime. Value fields, displayed in the grouping bar and field list, include a dropdown icon that allows you to select from various aggregation types (e.g., **Sum**, **Average**, **Count**). Once you select a new aggregation type, the pivot table updates instantly to reflect the change, providing a seamless experience for data analysis.
 
 <!-- markdownlint-disable MD012 -->
-![List of pre-defined aggregation types to be changed via Field List](images/aggregation_fl_menu.png)
+![List of pre-defined aggregation types to be changed via Field List](images/aggregation_fl_menu.webp)
 <br/>
 
-![List of pre-defined aggregation types to be changed via Grouping Bar](images/aggregation_gb_menu.png)
+![List of pre-defined aggregation types to be changed via Grouping Bar](images/aggregation_gb_menu.webp)
 
 ## Show desired aggregation types in its dropdown menu
 
-By default, the dropdown menu for value fields includes all available aggregation types. However, you can customize this menu to display only specific aggregation types relevant to your application using the [`aggregateTypes`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default/#aggregatetypes) property. This allows you to tailor the user experience by limiting the options to those that best fit your use case.
+By default, the dropdown menu for value fields includes all available aggregation types. However, you can customize this menu to display only specific aggregation types relevant to your application using the [`aggregateTypes`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#aggregatetypes) property. This allows you to tailor the user experience by limiting the options to those that best fit your use case.
 
 The following code demonstrates how to configure the pivot table component to display only the **DistinctCount**, **Average**, and **Product** aggregation types in the dropdown menu.
 
@@ -109,7 +109,7 @@ This customization enhances the clarity of the pivot table’s interface by simp
 
 ## Hiding aggregation type icon from UI
 
-By default, the dropdown icon to change the aggregation type is visible in the grouping bar. To hide this icon, set the [`showValueTypeIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupingBarSettingsModel#showvaluetypeicon) property within [`groupingBarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default/#groupingbarsettings) to **false**.
+By default, the dropdown icon to change the aggregation type is visible in the grouping bar. To hide this icon, set the [`showValueTypeIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupingbarsettingsmodel#showvaluetypeicon) property within [`groupingBarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#groupingbarsettings) to **false**.
 
 > The aggregation type icon can only be hidden in the Grouping Bar, not in the Field List.
 
@@ -128,7 +128,7 @@ By default, the dropdown icon to change the aggregation type is visible in the g
 
 ### AggregateCellInfo
 
-The [`aggregateCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default/#aggregatecellinfo) event triggers each time a value cell is rendered. This allows users to override the cell's value or skip formatting. The event provides the following parameters:
+The [`aggregateCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#aggregatecellinfo) event triggers each time a value cell is rendered. This allows users to override the cell's value or skip formatting. The event provides the following parameters:
 
 * `fieldName` - It holds current cell's field name.
 * `row` - It holds current cell's row value.
@@ -153,7 +153,7 @@ The [`aggregateCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 
 ### ActionBegin
 
-The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default/#actionbegin) triggers when clicking and selecting the aggregate type via the dropdown icon in the value field button, which is present in both grouping bar and field list UI. This allows the user to identify the current action being performed at runtime. It has the following parameters:
+The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#actionbegin) triggers when clicking and selecting the aggregate type via the dropdown icon in the value field button, which is present in both grouping bar and field list UI. This allows the user to identify the current action being performed at runtime. It has the following parameters:
 
 * [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionBeginEventArgs#datasourcesettings): Contains the current data source settings such as input data source, rows, columns, values, filters, format settings and more.
 
@@ -165,7 +165,7 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 
 * [`cancel`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionBeginEventArgs#cancel): Allows restricting the current action.
 
-In the following example, an action taken during aggregation type selection via the dropdown icon can be prevented by setting the **args.cancel** option to **true** in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default/#actionbegin) event.
+In the following example, an action taken during aggregation type selection via the dropdown icon can be prevented by setting the **args.cancel** option to **true** in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -180,7 +180,7 @@ In the following example, an action taken during aggregation type selection via 
 
 ### ActionComplete
 
-The [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default/#actioncomplete) event is triggered when a UI action is completed, such as changing the aggregation type using the dropdown icon in the value field button, available within both the grouping bar and field list user interfaces. This event enables users to identify which UI action has been completed at runtime. The event provides the following parameters:
+The [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#actioncomplete) event is triggered when a UI action is completed, such as changing the aggregation type using the dropdown icon in the value field button, available within both the grouping bar and field list user interfaces. This event enables users to identify which UI action has been completed at runtime. The event provides the following parameters:
 
 * [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionCompleteEventArgs#datasourcesettings): The current data source settings, including input data source, rows, columns, values, filters, format settings, and related properties.
 * [`actionName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionCompleteEventArgs#actionname): Specifies the name of the completed action. For example, after changing the aggregation type, the action name will be **Field aggregated**.
@@ -202,7 +202,7 @@ The [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pivotvie
 
 ### ActionFailure
 
-The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default/#actionfailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
+The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#actionfailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
 
 * [`actionName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionFailureEventArgs#actionname): Specifies the name of the failed action. For example, if the failure occurs during aggregation, the action name will be **Aggregate field**.
 * [`errorInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionFailureEventArgs#errorinfo): Contains detailed error information related to the failed UI action.
