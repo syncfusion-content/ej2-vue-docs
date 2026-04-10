@@ -28,23 +28,23 @@ This filtering option displays the Pivot Table with selective records based on t
 
 Users can apply member filters at runtime by clicking the filter icon next to any field in the row, column, and filter axes, available in both the field list and grouping bar interfaces.
 
-![Member filter icon in field list](images/fieldlist_filtericon.png)
+![Member filter icon in field list](images/fieldlist_filtericon.webp)
 <br/>
 
-![Member filter icon in grouping bar](images/filter_icon_gb.png)
+![Member filter icon in grouping bar](images/filter_icon_gb.webp)
 <br/>
 
-![Member filter dialog with checked and unchecked members](images/filter_dialog_gb.png)
+![Member filter dialog with checked and unchecked members](images/filter_dialog_gb.webp)
 <br/>
 
-![Resultant pivot table on member filter](images/filter_grid_gb.png)
+![Resultant pivot table on member filter](images/filter_grid_gb.webp)
 
-You can also configure filtering programmatically using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings) property during the initial rendering of the component. The essential settings required to add filter criteria are:
+You can also configure filtering programmatically using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/idataoptions#filtersettings) property during the initial rendering of the component. The essential settings required to add filter criteria are:
 
 * [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter#name): Sets the appropriate field name for filtering.
 * [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter#type): Specifies the filter type as **Include** or **Exclude** to include or exclude field members respectively.
 * [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter#items): Defines the members that need to be either included or excluded from the display.
-* [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount): Sets the level count of the field to fetch data from the cube. **Note: This property is applicable only for OLAP data sources.**
+* [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/ifilter#levelcount): Sets the level count of the field to fetch data from the cube. **Note: This property is applicable only for OLAP data sources.**
 
 > When you specify unavailable or inappropriate members in the include or exclude filter items collection, they will be ignored.
 
@@ -65,11 +65,11 @@ This option lets you quickly manage all members at once, saving time when workin
 
 When you check the **All** option, it selects all members in the list. When you uncheck it, all members become deselected. If you manually select some members while others remain unselected, the **All** option displays an intermediate state (partially checked) to show that the list contains both selected and unselected members.
 
-![Intermediate state of All option](images/editor_inter.png)
+![Intermediate state of All option](images/editor_inter.webp)
 
 > **Note:** When all members are deselected, the **OK** button becomes disabled. You must select at least one member to apply the filter and display data in the Pivot Table.
 
-![All members unchecked state](images/editor_alluncheck.png)
+![All members unchecked state](images/editor_alluncheck.webp)
 
 ### Provision to search specific member(s)
 
@@ -77,7 +77,7 @@ This option helps you quickly locate specific members without scrolling through 
 
 Simply enter the starting characters of the member name you want to find, and the list will automatically filter to show only matching members. This makes it easy to locate and select specific members, especially when dealing with large datasets.
 
-![Search functionality in member filter](images/search.png)
+![Search functionality in member filter](images/search.webp)
 
 ### Option to sort members
 
@@ -85,7 +85,7 @@ This option allows you to organize members in a logical order for easier selecti
 
 You can click the ascending sort icon to arrange members from A to Z (or lowest to highest for numerical values), or click the descending sort icon to arrange them from Z to A (or highest to lowest). When neither sorting option is selected, members appear in their original order as retrieved from the data source.
 
-![Member sorting options](images/member-sort.png)
+![Member sorting options](images/member-sort.webp)
 
 ### Performance tips
 
@@ -130,7 +130,7 @@ This approach prevents performance issues when working with hierarchies that con
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/common-cs8" %}
 
-![Loading members on-demand](images/ondemand_member.png)
+![Loading members on-demand](images/ondemand_member.webp)
 
 In the example above, the "Customer Geography" dimension loads with only the first level (Country) initially. Search operations will apply only to the "Country" level members. You can then load the next level members (State-Province) on-demand in two ways:
 
@@ -141,15 +141,15 @@ Once loaded, these members are stored internally and remain available until you 
 
 When the [`loadOnDemandInMemberEditor`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#loadondemandinmembereditor) property is set to **false**, all members from all levels are loaded during the initial setup. This approach executes a single query to retrieve all members at once. While this may cause slower performance when opening the member editor due to the large number of members being fetched, expand and search operations will be faster since all members are already available.
 
-![Loading all members initially](images/initial_member.png)
+![Loading all members initially](images/initial_member.webp)
 
 ### Loading members based on level number
 
 > This property is applicable only for OLAP data sources.
 
-This option enables you to control the depth of member loading by specifying how many levels should be loaded initially. By setting the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) property in the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings), you can improve performance and focus filtering operations on specific hierarchy levels.
+This option enables you to control the depth of member loading by specifying how many levels should be loaded initially. By setting the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/ifilter#levelcount) property in the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/idataoptions#filtersettings), you can improve performance and focus filtering operations on specific hierarchy levels.
 
-The [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) property is set to **1** by default, which means only the first level members are loaded initially. When you apply filters or search operations, they will only affect the members within the loaded levels.
+The [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/ifilter#levelcount) property is set to **1** by default, which means only the first level members are loaded initially. When you apply filters or search operations, they will only affect the members within the loaded levels.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -162,9 +162,9 @@ The [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iF
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/common-cs9" %}
 
-![Loading members based on level number](images/level-count.png)
+![Loading members based on level number](images/level-count.webp)
 
-In the above example, the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) is set to **2** for the "Customer Geography" dimension in [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings). This loads both the "Country" and "State-Province" levels during the initial loading process. Any search or filter operations will be applied only to the members within these two levels. To access members from deeper levels like "City", you can either expand the respective "State-Province" node or select the "City" level from the dropdown list.
+In the above example, the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/ifilter#levelcount) is set to **2** for the "Customer Geography" dimension in [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/idataoptions#filtersettings). This loads both the "Country" and "State-Province" levels during the initial loading process. Any search or filter operations will be applied only to the members within these two levels. To access members from deeper levels like "City", you can either expand the respective "State-Province" node or select the "City" level from the dropdown list.
 
 ## Label filtering
 
@@ -187,16 +187,16 @@ To enable label filtering, set the [`allowLabelFilter`](https://ej2.syncfusion.c
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs285" %}
 
-![Filter icon in field list](images/labelfiltering_fl_icon.png)
+![Filter icon in field list](images/labelfiltering_fl_icon.webp)
 <br/>
 
-![Filter icon in grouping bar](images/labelfiltering_gb_icon.png)
+![Filter icon in grouping bar](images/labelfiltering_gb_icon.webp)
 <br/>
 
-![Label filter tab in member editor dialog](images/labelfiltering_dialog.png)
+![Label filter tab in member editor dialog](images/labelfiltering_dialog.webp)
 <br/>
 
-![Resultant pivot table on label filter](images/labelfiltering_grid.png)
+![Resultant pivot table on label filter](images/labelfiltering_grid.webp)
 
 > In label filtering UI, based on the field chosen, it’s member data type is automatically recognized and filtering operation will be carried out. Where as in code behind, user need to define the data type through a property and it has been explained in the immediate section below.
 
@@ -204,7 +204,7 @@ To enable label filtering, set the [`allowLabelFilter`](https://ej2.syncfusion.c
 
 String-based label filtering enables you to programmatically show only data that matches specific text values in your row and column fields, making it easier to focus on the exact information you need.
 
-This filtering approach is specifically designed for fields containing string data type members. You can configure the filtering through the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/) property in your code. The following properties are required for label filtering:
+This filtering approach is specifically designed for fields containing string data type members. You can configure the filtering through the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/ifilter) property in your code. The following properties are required for label filtering:
 
 * [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter#name): Specifies the field name to apply the filter.
 * [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter#type): Sets the filter type as **Label** for the specified field.
@@ -297,7 +297,7 @@ To apply date filtering, specify your filtering criteria using the [`value1`](ht
 
 Users can clear the applied label filter by clicking the **Clear** option at the bottom of the filter dialog. This option is located under the **Label** tab for string and number type filtering, and under the **Date** tab for date type filtering.
 
-![output](images/clearfilter.png)
+![output](images/clearfilter.webp)
 
 ## Value filtering
 
@@ -316,18 +316,18 @@ You can enable value filtering by setting the [`allowValueFilter`](https://ej2.s
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs286" %}
 
-![Filter icon in field list](images/labelfiltering_fl_icon.png)
+![Filter icon in field list](images/labelfiltering_fl_icon.webp)
 <br/>
 
-![Filter icon in grouping bar](images/labelfiltering_gb_icon.png)
+![Filter icon in grouping bar](images/labelfiltering_gb_icon.webp)
 <br/>
 
-![Value filter tab in member editor dialog](images/valuefiltering_dialog.png)
+![Value filter tab in member editor dialog](images/valuefiltering_dialog.webp)
 <br/>
 
-![Resultant pivot table on value filter](images/valuefiltering_grid.png)
+![Resultant pivot table on value filter](images/valuefiltering_grid.webp)
 
-You can also configure value filtering programmatically using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings) property. The following properties are required for value filtering:
+You can also configure value filtering programmatically using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/idataoptions#filtersettings) property. The following properties are required for value filtering:
 
 * [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter#name): Specifies the field name to which the filter applies.
 * [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter#type): Sets the filter type as **Value**.
@@ -367,7 +367,7 @@ The following table shows the available operators for value filtering:
 
 You can clear the applied value filter by clicking the "Clear" option at the bottom of the filter dialog under the "Value" tab.
 
-![Clearing the existing value filter](images/clearvaluefilter.png)
+![Clearing the existing value filter](images/clearvaluefilter.webp)
 
 ## Event
 

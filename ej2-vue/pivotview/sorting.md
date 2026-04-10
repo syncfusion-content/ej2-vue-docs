@@ -27,13 +27,13 @@ To enable member sorting, set the [`enableSorting`](https://ej2.syncfusion.com/v
 #### Visual Reference
 
 - **Field List Sort Icon**:  
-  ![Member sorting icon in field list](images/sorting_fl.png)
+  ![Member sorting icon in field list](images/sorting_fl.webp)
 
 - **Grouping Bar Sort Icon**:  
-  ![Member sorting icon in grouping bar](images/sorting_gb.png)
+  ![Member sorting icon in grouping bar](images/sorting_gb.webp)
 
 - **Sorted Pivot Table**:  
-  ![Resultant pivot table after member sorting](images/sorting_grid.png)
+  ![Resultant pivot table after member sorting](images/sorting_grid.webp)
 
 ### Configuring Member Sorting Code Behind
 
