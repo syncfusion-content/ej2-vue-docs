@@ -118,7 +118,7 @@ app.listen(5000, () => console.log('Backend running on http://localhost:5000'));
 
 ## Configure message send 
 
-Use the Chat UI [messageSend](../api/chat-ui/#messagesend) event to exchanges  message. Each time a user sends a message, this event will be invoked with details of the sent message.
+Use the Chat UI [messageSend](../api/chat-ui#messagesend) event to exchanges  message. Each time a user sends a message, this event will be invoked with details of the sent message.
 
 ### Forward Message to backend:
 
@@ -182,13 +182,13 @@ const messageSend = async (args) => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
 
 .e-header-icon {
   background-image: url('https://ej2.syncfusion.com/demos/src/chat-ui/images/bot.png');

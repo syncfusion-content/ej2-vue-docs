@@ -68,7 +68,7 @@ yarn add @syncfusion/ej2-vue-interactive-chat
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Import the theme CSS for the components. In this example the `Material`-based Tailwind styles are used and imported into the `<style>` section of `src/App.vue`:
+Import the theme CSS for the components. In this example the `tailwind3`-based Tailwind styles are used and imported into the `<style>` section of `src/App.vue`:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

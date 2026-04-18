@@ -101,18 +101,18 @@ yarn add @syncfusion/ej2-vue-interactive-chat
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the AI AssistView component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `tailwind3` CSS styles for the AI AssistView component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -183,11 +183,11 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 </script>
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-notifications/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -213,11 +213,11 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     }
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-notifications/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
