@@ -109,7 +109,7 @@ This customization enhances the clarity of the pivot table’s interface by simp
 
 ## Hiding aggregation type icon from UI
 
-By default, the dropdown icon to change the aggregation type is visible in the grouping bar. To hide this icon, set the [`showValueTypeIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupingBarSettingsModel#showvaluetypeicon) property within [`groupingBarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#groupingbarsettings) to **false**.
+By default, the dropdown icon to change the aggregation type is visible in the grouping bar. To hide this icon, set the [`showValueTypeIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupingbarsettingsmodel#showvaluetypeicon) property within [`groupingBarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#groupingbarsettings) to **false**.
 
 > The aggregation type icon can only be hidden in the Grouping Bar, not in the Field List.
 

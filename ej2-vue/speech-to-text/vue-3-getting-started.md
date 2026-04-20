@@ -130,7 +130,7 @@ Follow the below steps to add the Vue SpeechToText component using `Composition 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-    import { SpeechToTextComponent as EjsSpeechToText  } from "@syncfusion/ej2-vue-inputs";
+    import { SpeechToTextComponent as EjsSpeechtotext  } from "@syncfusion/ej2-vue-inputs";
 </script>
 
 {% endhighlight %}
@@ -155,7 +155,9 @@ Follow the below steps to add the Vue SpeechToText component using `Composition 
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-     <ejs-speechtotext id="speechtotext"></ejs-speechtotext>
+    <div style="margin: 50px auto;">
+        <ejs-speechtotext id="speechtotext"></ejs-speechtotext>
+    </div>
 </template>
 
 {% endhighlight %}
@@ -167,11 +169,13 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-     <ejs-speechtotext id="speechtotext"></ejs-speechtotext>
+    <div style="margin: 50px auto;">
+        <ejs-speechtotext id="speechtotext"></ejs-speechtotext>
+    </div>
 </template>
 
 <script setup>
-    import { SpeechToTextComponent as EjsSpeechToText  } from "@syncfusion/ej2-vue-inputs";
+    import { SpeechToTextComponent as EjsSpeechtotext  } from "@syncfusion/ej2-vue-inputs";
 </script>
 
 <style>
@@ -185,7 +189,9 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-     <ejs-speechtotext id="speechtotext"></ejs-speechtotext>
+    <div style="margin: 50px auto;">
+        <ejs-speechtotext id="speechtotext"></ejs-speechtotext>
+    </div>
 </template>
 
 <script>

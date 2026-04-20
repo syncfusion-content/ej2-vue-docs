@@ -108,7 +108,7 @@ export default {
   },
   data () {
     return {
-        currentUser: {
+       currentUser: {
         id: "user1",
         user: "Current User",
       }

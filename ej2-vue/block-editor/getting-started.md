@@ -131,7 +131,7 @@ export default {
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <div style="margin: 50px auto;">
+    <div id='container' style="margin: 50px auto;">
         <ejs-blockeditor></ejs-blockeditor>
     </div>
 </template>

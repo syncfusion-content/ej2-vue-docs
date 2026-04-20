@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrating Syncfusion Vue Chart with Quasar | Syncfusion
+title:  Integrating Syncfusion Vue Chart with Quasar | Syncfusion
 description: Set up a Quasar‑powered Vue 3 application and integrate the Syncfusion Essential JS 2 Vue Chart component using the Composition API.
 control: Quasar 
 platform: ej2-vue
