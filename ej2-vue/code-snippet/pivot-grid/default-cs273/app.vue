@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
     <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
-      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :gridSettings="gridSettings">
+      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :onPdfCellRender="onPdfCellRender">
     </ejs-pivotview>
   </div>
 </template>
@@ -33,20 +33,17 @@ export default {
       allowPdfExport: true,
       isPrimary: true,
       enableVirtualization: true,
-      gridSettings: {
-        columnWidth: 140,
-        pdfQueryCellInfo: function (args) {
-            if (args.data && args.data.rowHeaders === 'France.Mountain Bikes' && args.cell && args.cell.gridRow) {
-                args.cell.gridRow.height = 100;
-            }
-        }
-      }
     }
   },
   methods: {
+    onPdfCellRender: function (args) {
+      if (args.pivotCell && args.pivotCell.valueSort && args.pivotCell.valueSort.levelName === 'France.Mountain Bikes') {
+        args.cell.height = 30
+      }
+    },
     btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotGridObj.pdfExport();
+      pivotGridObj.pdfExport({}, false, null, false, true);
     }
   },
   provide: {

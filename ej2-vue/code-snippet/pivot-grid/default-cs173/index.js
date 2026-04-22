@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { PivotViewPlugin, VirtualScroll, PDFExport } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, VirtualScroll} from "@syncfusion/ej2-vue-pivotview";
 import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -13,7 +13,7 @@ new Vue({
 	template: `
     <div id="app">
         <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">PDF Export</ejs-button>
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :exportAllPages="exportAllPages"> </ejs-pivotview>
+        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" exportAllPages="exportAllPages"> </ejs-pivotview>
     </div>
 `,
 
@@ -32,17 +32,18 @@ new Vue({
       height: 320,
       allowPdfExport: true,
       enableVirtualization: true,
-      exportAllPages: false,
+      exportAllPages: true,
       isPrimary: true
     }
   },
   provide: {
-    pivotview: [VirtualScroll, PDFExport]
-  },
+    pivotview: [VirtualScroll]
+  }
   methods: {
     btnClick: function(args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.pdfExport();
     }
   }
+
 });

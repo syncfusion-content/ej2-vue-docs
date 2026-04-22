@@ -13,7 +13,7 @@ new Vue({
 	template: `
     <div id="app">
         <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">PDF Export</ejs-button>
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport" :beforeExport="beforeExport"> </ejs-pivotview>
+        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport"> </ejs-pivotview>
     </div>
 `,
 
@@ -37,11 +37,8 @@ new Vue({
   methods: {
     btnClick: function(args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotGridObj.pdfExport();
-    },
-    beforeExport: function (args) {
-      args.allowRepeatHeader = false;
-    },
+      pivotGridObj.pdfExportModule.exportToPDF();
+    }
   },
   provide: {
     pivotview: [

@@ -9,7 +9,7 @@
 
 <script setup>
 import { provide } from "vue";
-import { PivotViewComponent as EjsPivotview, VirtualScroll, PDFExport } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent as EjsPivotview, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -26,10 +26,10 @@ const dataSourceSettings = {
 const height = 320;
 const allowPdfExport = true;
 const enableVirtualization = true;
-const exportAllPages = false;
+const exportAllPages = true;
 const isPrimary = true;
 
-provide('pivotview', [VirtualScroll, PDFExport]);
+provide('pivotview', [VirtualScroll]);
 
 const btnClick = () => {
   let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];

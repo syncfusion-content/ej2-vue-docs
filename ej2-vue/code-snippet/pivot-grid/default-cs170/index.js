@@ -37,11 +37,6 @@ new Vue({
       isPrimary: true
     }
   },
-  provide: {
-    pivotview: [
-      PDFExport
-    ]
-  },
   methods: {
     btnClick: function(args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];

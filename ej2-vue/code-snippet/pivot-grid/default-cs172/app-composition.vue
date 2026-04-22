@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
     <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
-      :allowPdfExport="allowPdfExport" :beforeExport="beforeExport"> </ejs-pivotview>
+      :allowPdfExport="allowPdfExport"> </ejs-pivotview>
   </div>
 </template>
 <script setup>
@@ -27,11 +27,7 @@ const isPrimary = true;
 
 const btnClick = () => {
   let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-  pivotGridObj.pdfExport();
-};
-
-const beforeExport = (args) => {
-  args.allowRepeatHeader = false;
+  pivotGridObj.pdfExportModule.exportToPDF();
 };
 
 provide('pivotview', [

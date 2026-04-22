@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
     <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
-      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :gridSettings="gridSettings">
+      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :onPdfCellRender="onPdfCellRender">
     </ejs-pivotview>
   </div>
 </template>
@@ -33,22 +33,17 @@ export default {
       allowPdfExport: true,
       isPrimary: true,
       enableVirtualization: true,
-      gridSettings: {
-        columnWidth: 140,
-        pdfHeaderQueryCellInfo: function (args) {
-          if (args.gridCell && args.gridCell.valueSort && args.gridCell.valueSort.levelName === 'FY 2015.Units Sold'
-              && args.cell && args.cell.row && args.cell.row.pdfGrid && args.cell.row.pdfGrid.gridColumns
-              && args.cell.row.pdfGrid.gridColumns.columns[args.gridCell.colIndex]) {
-              args.cell.row.pdfGrid.gridColumns.columns[args.gridCell.colIndex].width = 250;
-          }
-        }
-      }
     }
   },
   methods: {
+    onPdfCellRender: function (args) {
+      if (args.pivotCell && args.pivotCell.valueSort && args.pivotCell.valueSort.levelName === 'FY 2015.Units Sold') {
+        args.column.width = 60
+      }
+    },
     btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotGridObj.pdfExport();
+      pivotGridObj.pdfExport({}, false, null, false, true);
     }
   },
   provide: {

@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
-    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :gridSettings="gridSettings"
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :gridSettings="gridSettings"
       :allowPdfExport="allowPdfExport"> </ejs-pivotview>
   </div>
 </template>
 <script setup>
-import { PivotViewComponent as EjsPivotview, PDFExport } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent as EjsPivotview } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 
 const dataSourceSettings = {
   dataSource: pivotData,
@@ -27,16 +25,6 @@ const gridSettings = {
   pdfQueryCellInfo: function () {
     //triggers for every value cell while pdf export
   }
-};
-const isPrimary = true;
-
-provide('pivotview', [
-  PDFExport
-]);
-
-const btnClick = () => {
-  let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-  pivotGridObj.pdfExport();
 };
 
 </script>

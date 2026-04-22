@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { PivotViewPlugin, PDFExport, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, PDFExport, PdfCellRenderArgs, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonPlugin, ChangeEventArgs } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -14,7 +14,7 @@ new Vue({
     <div id="app">
         <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">PDF Export</ejs-button>
         <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization"
-        :gridSettings="gridSettings"> </ejs-pivotview>
+        :onPdfCellRender="onPdfCellRender"> </ejs-pivotview>
     </div>
 `,
 
@@ -34,20 +34,17 @@ new Vue({
       allowPdfExport: true,
       isPrimary: true,
       enableVirtualization: true,
-      gridSettings: {
-        columnWidth: 140,
-        pdfQueryCellInfo: function (args) {
-            if (args.data && args.data.rowHeaders === 'France.Mountain Bikes' && args.cell && args.cell.gridRow) {
-                args.cell.gridRow.height = 100;
-            }
-        }
-      }
     }
   },
   methods: {
+    onPdfCellRender: function (args: PdfCellRenderArgs) {
+      if (args.pivotCell && args.pivotCell.valueSort && args.pivotCell.valueSort.levelName === 'France.Mountain Bikes') {
+        args.cell.height = 30
+      }
+    },
     btnClick: function (args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotGridObj.pdfExport();
+      pivotGridObj.pdfExport({}, false, null, false, true);
     }
   },
   provide: {
