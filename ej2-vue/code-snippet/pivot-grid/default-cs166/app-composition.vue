@@ -6,7 +6,7 @@
   </div>
 </template>
 <script setup>
-import { PivotViewComponent as EjsPivotview } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent as EjsPivotview, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -31,6 +31,11 @@ const btnClick = () => {
   };
   pivotGridObj.pdfExport(pdfExportProperties);
 };
+
+provide('pivotview', [
+  PDFExport
+]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";

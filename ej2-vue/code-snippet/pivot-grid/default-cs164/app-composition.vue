@@ -6,7 +6,7 @@
   </div>
 </template>
 <script setup>
-import { PivotViewComponent as EjsPivotview } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent as EjsPivotview, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -24,10 +24,14 @@ const height = 320;
 const allowPdfExport = true;
 const isPrimary = true;
 
+provide('pivotview', [
+  PDFExport
+]);
+
 const btnClick = () => {
   let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
   let pdfExportProperties = {
-    filename: 'sample.pdf'
+    fileName:'sample.pdf'
   };
   pivotGridObj.pdfExport(pdfExportProperties);
 };

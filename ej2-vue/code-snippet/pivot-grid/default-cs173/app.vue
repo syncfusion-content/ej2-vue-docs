@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import { PivotViewComponent, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, VirtualScroll, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -32,12 +32,12 @@ export default {
       height: 320,
       allowPdfExport: true,
       enableVirtualization: true,
-      exportAllPages: true,
+      exportAllPages: false,
       isPrimary: true
     }
   },
   provide: {
-    pivotview: [VirtualScroll]
+    pivotview: [VirtualScroll, PDFExport]
   },
   methods: {
     btnClick: function () {
