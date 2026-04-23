@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData, base64AlgeriaFont } from './pivotData.js';
 import { PdfTrueTypeFont } from '@syncfusion/ej2-pdf-export';
@@ -33,6 +33,11 @@ export default {
       allowPdfExport: true,
       isPrimary: true
     }
+  },
+  provide: {
+    pivotview: [
+      PDFExport
+    ]
   },
   methods: {
     btnClick: function () {
