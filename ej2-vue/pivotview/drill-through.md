@@ -123,7 +123,7 @@ export default {
 </style>
 ```
 
-![output](images/maxrows.webp)
+![output](images/maxrows.jpeg)
 
 ## Events
 
