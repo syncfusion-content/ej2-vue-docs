@@ -27,7 +27,7 @@ This section explains how to use the Syncfusion<sup style="font-size:70%">&reg;<
 
 3. Open the **PivotController** application in Visual Studio. The Syncfusion [Syncfusion.Pivot.Engine](https://www.nuget.org/packages/Syncfusion.Pivot.Engine) library will automatically download from nuget.org, enabling server-side calculations such as aggregation, filtering, and sorting for the Pivot Table.
 
-![Solution Explorer](./images/solution-explorer.webp)
+![Solution Explorer](./images/solution-explorer.png)
 
 ### Connecting Pivot Table to Server-side Pivot Engine
 
@@ -108,7 +108,7 @@ export default {
 4. **Run the Vue application**  
 Launch your Vue application to view the Pivot Table. The Pivot Table will connect to the server-side Pivot Engine, retrieve the processed data, and display the results based on the configured report.
 
-![Pivot Table demo using server-side pivot engine](./images/server-side-demo.webp)
+![Pivot Table demo using server-side pivot engine](./images/server-side-demo.png)
 
 ## Available configurations in Server-side application
 
@@ -227,7 +227,7 @@ export default {
 
 ```
 
-![Server-Side Pivot Engine using collection](./images/server-side-with-collection-data.webp)
+![Server-Side Pivot Engine using collection](./images/server-side-with-collection-data.png)
 
 #### JSON
 
@@ -323,7 +323,7 @@ export default {
 
 ```
 
-![Server-Side Pivot Engine with JSON data](./images/server-side-with-json-data.webp)
+![Server-Side Pivot Engine with JSON data](./images/server-side-with-json-data.png)
 
 You can also use JSON data from a remote server in the same way as a local JSON file. Both directly downloadable *.json files and web service URLs are supported. To do this, specify the URL of the remote *.json file in the **GetData** method. The remaining configurations stay the same.
 
@@ -458,7 +458,7 @@ export default {
 
 ```
 
-![Server-Side Pivot Engine using CSV data](./images/server-side-with-csv-data.webp)
+![Server-Side Pivot Engine using CSV data](./images/server-side-with-csv-data.png)
 
 You can also use CSV data from a remote server, such as a downloadable file or a web service URL. To do this, provide the CSV file URL in the **GetData** method. The process for setting up the Pivot Table remains the same as described above.
 
@@ -572,7 +572,7 @@ export default {
 
 ```
 
-![Server-Side Pivot Engine using DataTable](./images/server-side-with-data-table.webp)
+![Server-Side Pivot Engine using DataTable](./images/server-side-with-data-table.png)
 
 #### Dynamic
 
@@ -664,7 +664,7 @@ export default {
 
 ```
 
-![Server-Side Pivot Engine using ExpandoObject](./images/server-side-with-expandoobject.webp)
+![Server-Side Pivot Engine using ExpandoObject](./images/server-side-with-expandoobject.png)
 
 ##### Dynamic Objects
 
@@ -772,7 +772,7 @@ export default {
 
 ```
 
-![Server-Side Pivot Engine using Dynamic Objects](./images/server-side-with-dynamic-object.webp)
+![Server-Side Pivot Engine using Dynamic Objects](./images/server-side-with-dynamic-object.png)
 
 ### Controller Configuration
 
@@ -947,7 +947,7 @@ Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), 
         }
 ```
 
-![Server-side engine excel exporting](./images/excel-export-with-server-side-pivot-engine.webp)
+![Server-side engine excel exporting](./images/excel-export-with-server-side-pivot-engine.png)
 
 ### Add header and footer while exporting
 
@@ -1054,7 +1054,7 @@ export default {
 
 ```
 
-![Add header and footer while exporting](./images/add-header-and-footer-while-exporting.webp)
+![Add header and footer while exporting](./images/add-header-and-footer-while-exporting.png)
 
 ## CSV Export
 
@@ -1191,7 +1191,7 @@ Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), 
             }
         }
 ```
-![CSV Export](./images/csv-export-with-server-side-pivot-engine.webp)
+![CSV Export](./images/csv-export-with-server-side-pivot-engine.png)
 
 ## Export as Pivot
 
@@ -1333,7 +1333,7 @@ Then, based on the **Action** parameter (**onPivotExcelExport** or **onPivotCsvE
         }
 ```
 
-![Export as Pivot](./images/export-as-pivot.webp)
+![Export as Pivot](./images/export-as-pivot.png)
 
 ## Secure server requests with beforeServiceInvoke
 
