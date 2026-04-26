@@ -117,7 +117,7 @@ The following example shows how to create a recurring event with a specific recu
 
 Specific instances of a recurrence series can be excluded by adding dates to the [`recurrenceException`](https://ej2.syncfusion.com/vue/documentation/api/schedule/field#recurrenceexception)  field. Dates must be in ISO date‑time format without hyphens in the date portion.
 
-For example, 22nd February 2026 can be represented as 20260222. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "07:30:00 UTC" is therefore represented as "073000Z".
+For example, 22nd February 2018 can be represented as 20180222. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "07:30:00 UTC" is therefore represented as "073000Z".
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -353,7 +353,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue-3-js-pivot-table](./images/vue-3-js-pivot-table.webp)
+![vue-3-js-pivot-table](./images/vue-3-js-pivot-table.png)
 
 > **Sample**: [vue-3-pivot-table-getting-started](https://github.com/SyncfusionExamples/vue3-pivottable-getting-started).
 
@@ -854,7 +854,7 @@ The following sample uses the HTML elements to showcase each cell with custom fo
 
 The output will appear as follows:
 
-![Vue3-pivottable-celltemplate](./images/Vue3-pivottable-celltemplate.webp)
+![Vue3-pivottable-celltemplate](./images/Vue3-pivottable-celltemplate.png)
 
 Refer the following sample, [vue3-pivot-table-cell-template](https://github.com/SyncfusionExamples/vue3-pivottable-celltemplate).
 

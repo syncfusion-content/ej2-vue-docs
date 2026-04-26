@@ -40,7 +40,7 @@ By using the position property, you can position the legend at the `left`, `
 
 ## Legend Reverse
 
-You can reverse the order of the legend items by using the [`reverse`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettings#reverse) property. By default, legend for the first series in the collection will be placed first.
+You can reverse the order of the legend items by using the [`reverse`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettings/#reverse) property. By default, legend for the first series in the collection will be placed first.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -176,7 +176,7 @@ By default, the page number will be enabled while legend paging. Now, you can di
 
 ## Legend Item Padding
 
-The [`itemPadding`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettings#itempadding) property can be used to adjust the space between the legend items.
+The [`itemPadding`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettings/#itempadding) property can be used to adjust the space between the legend items.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -191,7 +191,7 @@ The [`itemPadding`](https://ej2.syncfusion.com/vue/documentation/api/accumulatio
 
 ## Legend layout
 
-The [`layout`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel#layout) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart#legendsettings) allows you to display the legend either horizontally or vertically. By default, the [`layout`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel#layout) is set to **Auto**. The [`maximumColumns`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel#maximumcolumns) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart#legendsettings) defines the maximum number of columns that can be displayed within the available space when using the auto layout. Additionally, enabling the [`fixedWidth`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel#fixedwidth) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart#legendsettings) ensures that all legend items are displayed with equal widths. The width of each item is determined by the maximum width among the legend items.
+The [`layout`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel/#layout) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/#legendsettings) allows you to display the legend either horizontally or vertically. By default, the [`layout`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel/#layout) is set to **Auto**. The [`maximumColumns`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel/#maximumcolumns) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/#legendsettings) defines the maximum number of columns that can be displayed within the available space when using the auto layout. Additionally, enabling the [`fixedWidth`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel/#fixedwidth) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/#legendsettings) ensures that all legend items are displayed with equal widths. The width of each item is determined by the maximum width among the legend items.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -208,7 +208,7 @@ The [`layout`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-cha
 
 Legend templates allow you to replace default legend icons and text with custom HTML for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
 
-You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`ToggleVisibility`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`ToggleVisibility`] (https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

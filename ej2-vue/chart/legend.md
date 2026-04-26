@@ -14,7 +14,7 @@ The legend provides information about the series rendered in the chart and helps
 
 ## Position and Alignment
 
-By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings#position) property, the legend can be positioned at the left, right, top, or bottom of the chart. By default, the legend is positioned at the bottom of the chart.
+By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#position) property, the legend can be positioned at the left, right, top, or bottom of the chart. By default, the legend is positioned at the bottom of the chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/char
 
 ## Legend Reverse
 
-Use the [`reverse`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings#reverse) property to reverse the order of legend items. By default, the legend item for the first series is placed first.
+Use the [`reverse`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#reverse) property to reverse the order of legend items. By default, the legend item for the first series is placed first.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ Use the [`reverse`](https://ej2.syncfusion.com/vue/documentation/api/chart/legen
 
 <!-- markdownlint-disable MD036 -->
 
-Align the legend to `center`, `far`, or `near` using the [`alignment`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings#alignment) property.
+Align the legend to `center`, `far`, or `near` using the [`alignment`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#alignment) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,7 +91,7 @@ To change the legend icon shape, use the [`legendShape`](api-series.html#legends
 
 ### Legend Size
 
-By default, the legend occupies approximately 20%–25% of the chart height when positioned at the top or bottom, and 20%–25% of the chart width when positioned at the left or right. Change the default size using the  [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings#height) properties of `legendSettings`.
+By default, the legend occupies approximately 20%–25% of the chart height when positioned at the top or bottom, and 20%–25% of the chart width when positioned at the left or right. Change the default size using the  [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#height) properties of `legendSettings`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -136,7 +136,7 @@ Paging is enabled automatically when legend items exceed the legend bounds. Navi
 
 ### Legend Text Wrap
 
-When legend text exceeds the container, enable wrapping using the [`textWrap`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings#textwrap) property. Wrapping can also be controlled using the [`maximumLabelWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings#maximumlabelwidth) property.
+When legend text exceeds the container, enable wrapping using the [`textWrap`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#textwrap) property. Wrapping can also be controlled using the [`maximumLabelWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#maximumlabelwidth) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -151,7 +151,7 @@ When legend text exceeds the container, enable wrapping using the [`textWrap`](h
 
 ## Set the label color based on series color
 
-Set the legend label color based on the series color by using the chart’s [`loaded`](https://ej2.syncfusion.com/vue/documentation/api/chart#loaded) event.
+Set the legend label color based on the series color by using the chart’s [`loaded`](https://ej2.syncfusion.com/vue/documentation/api/chart/#loaded) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -226,7 +226,7 @@ When legend paging is enabled, page numbers are shown by default. To display onl
 
 ## Legend Item Padding
 
-Use the [`itemPadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings#itempadding) property to adjust the spacing between legend items.
+Use the [`itemPadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#itempadding) property to adjust the spacing between legend items.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -243,7 +243,7 @@ Use the [`itemPadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/l
 
 ## Legend layout
 
-The [`layout`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel#layout) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart#legendsettings) displays the legend horizontally or vertically. By default, [`layout`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel#layout) is set to **Auto**. The [`maximumColumns`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel#maximumcolumns) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart#legendsettings) property defines the maximum number of columns that can be displayed within the available space when using auto layout. Enabling the [`fixedWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel#fixedwidth) property ensures that all legend items have equal widths, determined by the maximum item width.
+The [`layout`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel/#layout) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart#legendsettings) displays the legend horizontally or vertically. By default, [`layout`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel/#layout) is set to **Auto**. The [`maximumColumns`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel/#maximumcolumns) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart#legendsettings) property defines the maximum number of columns that can be displayed within the available space when using auto layout. Enabling the [`fixedWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel/#fixedwidth) property ensures that all legend items have equal widths, determined by the maximum item width.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -261,8 +261,7 @@ The [`layout`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSett
 
 Legend templates allow you to replace default legend icons and text with custom HTML for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
 
-You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless 
-[`ToggleVisibility`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`ToggleVisibility`] (https://ej2.syncfusion.com/vue/documentation/api/chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
