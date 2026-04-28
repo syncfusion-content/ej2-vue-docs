@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue DataManager - URL Adaptor | Syncfusion
-description: Vue DataManager UrlAdaptor provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description: Vue DataManager UrlAdaptor enables remote data binding with REST APIs, explaining backend configuration and endpoints for efficient data operations.
 control: Url Adaptor
 platform: ej2-vue
 documentation: ug
@@ -63,7 +63,7 @@ The `UrlAdaptor` is **completely backend-agnostic**. It connects to any database
 | Requirement           | Details                                                      | Download / Command                 |
 |----------------------|--------------------------------------------------------------|------------------------------------|
 | **Visual Studio**  | Community, Professional, or Enterprise edition               | [Visual Studio](https://visualstudio.microsoft.com/) |
-| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/)                |
+| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/en/)                |
 | **Verify Node.js**    | Check installed version                                        | `node --version`                   |
 
 ## Backend setup (ASP.NET Core API)
