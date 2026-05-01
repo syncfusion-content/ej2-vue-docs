@@ -90,7 +90,6 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 </style>
 
@@ -362,7 +361,7 @@ export default {
 
 ### Connect flow chart nodes
 
-Connect these nodes by adding a connector using the [`connectors`](../api/diagram/connectorModel/) property of diagram and refer the source and target end by using the [`sourceID`](../api/diagram/connectorModel/#sourceid) and [`targetID`](../api/diagram/connectorModel/#targetid) properties.
+Connect these nodes by adding a connector using the [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectormodel) property of diagram and refer the source and target end by using the [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectormodel#sourceid) and [`targetID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectormodel#targetid) properties.
 The required nodes and connectors can be added to form a complete flow diagram.
 
 
@@ -378,7 +377,7 @@ The required nodes and connectors can be added to form a complete flow diagram.
 {% previewsample "page.domainurl/code-snippet/diagram/getting-started/flowdiagram-cs1" %}
 
 
-Default values for all [`nodes`](../api/diagram/nodemodel/) and [`connectors`](../api/diagram/connectorModel/) can be set using the [`getNodeDefaults`](../api/diagram/#getnodedefaults) and [`getConnectorDefaults`](../api/diagram/#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
+Default values for all [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodemodel) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectormodel) can be set using the [`getNodeDefaults`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#getnodedefaults) and [`getConnectorDefaults`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
 
 ## Automatic Organization Chart
 
@@ -508,7 +507,7 @@ You can configure the above "Employee Information" with diagram, so that the nod
 
 ### Rendering layout with Datasource
 
-To create an organizational chart, the [`type`](../api/diagram/layout/#type) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
+To create an organizational chart, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout#type) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
 
 
 {% tabs %}
@@ -524,7 +523,7 @@ To create an organizational chart, the [`type`](../api/diagram/layout/#type) of 
 
 ### Customize employee appearance
 
-The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](../api/diagram/#setnodetemplate) is used to update each node based on employee data.
+The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#setnodetemplate) is used to update each node based on employee data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
