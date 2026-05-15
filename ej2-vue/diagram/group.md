@@ -16,7 +16,7 @@ Group is used to cluster multiple nodes and connectors into a single element. It
 
 ## Add group when initializing diagram
 
-A group can be added to the diagram model through [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node) collection. To define an object as group, add the child objects to the [`children`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#children) collection of the group. The following code illustrates how to create a group node.
+A group can be added to the diagram model through [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node) collection. To define an object as group, add the child objects to the [`children`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#children) collection of the group. The following code illustrates how to create a group node.
 
 * While creating group, its child node need to be declared before the group declaration.
 
@@ -46,7 +46,7 @@ Connectors can be added to a group. The following code illustrates how to add co
 
 ## Group nodes at runtime
 
-Groups can be dynamically created during runtime in the diagram by invoking the [`diagram.group`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#group) method. To initiate this process, first, select the nodes that you intend to include within the group. Subsequently, by utilizing the [`diagram.group`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#group) method, the selected nodes will be encapsulated within a newly formed group node.
+Groups can be dynamically created during runtime in the diagram by invoking the [`diagram.group`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#group) method. To initiate this process, first, select the nodes that you intend to include within the group. Subsequently, by utilizing the [`diagram.group`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#group) method, the selected nodes will be encapsulated within a newly formed group node.
 
 The following code illustrates how to group at runtime.
 
@@ -63,7 +63,7 @@ The following code illustrates how to group at runtime.
 
 ## UnGroup nodes at runtime
 
-Group node can be ungrouped dynamically, by using the [`diagram.unGroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#ungroup) method. The following code example shows how to ungroup a group node at runtime.
+Group node can be ungrouped dynamically, by using the [`diagram.unGroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#ungroup) method. The following code example shows how to ungroup a group node at runtime.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,7 +78,7 @@ Group node can be ungrouped dynamically, by using the [`diagram.unGroup`](https:
 
 ## Add group node at runtime
 
-A group node can be added at runtime by using the diagram method [`diagram.add`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#add).
+A group node can be added at runtime by using the diagram method [`diagram.add`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#add).
 
 The following code illustrates how a group node is added at runtime.
 
@@ -95,7 +95,7 @@ The following code illustrates how a group node is added at runtime.
 
 ## Add collection of group nodes at runtime
 
-* The collection of group nodes can be dynamically added using [`addElements`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#addelements) method.Each time an element is added to the diagram canvas, the [`collectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iCollectionChangeEventArgs/) event will be triggered.
+* The collection of group nodes can be dynamically added using [`addElements`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#addelements) method.Each time an element is added to the diagram canvas, the [`collectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/icollectionchangeeventargs) event will be triggered.
 
 The following code illustrates how to add group nodes collection at runtime.
 
@@ -114,7 +114,7 @@ The following code illustrates how to add group nodes collection at runtime.
 
 ### Add children To group at runtime
 
-A childNode can be added to the specified Group at runtime by utilizing the diagram method [`diagram.addChildToGroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#addchildtogroup). 
+A childNode can be added to the specified Group at runtime by utilizing the diagram method [`diagram.addChildToGroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#addchildtogroup). 
 
 This functionality is achieved by passing the group and existing children as arguments to the method.
 
@@ -127,7 +127,7 @@ diagramInstance.addChildToGroup(groupNode, childNode);
 ```
 ### Remove children from group at runtime
 
-A specific child from a group node can be removed at runtime by utilizing the diagram method [`diagram.removeChildFromGroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#removechildfromgroup). 
+A specific child from a group node can be removed at runtime by utilizing the diagram method [`diagram.removeChildFromGroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#removechildfromgroup). 
 
 This functionality is achieved by passing the group and its children as arguments to the method.
 
@@ -151,7 +151,7 @@ diagramInstance.removeChildFromGroup (groupNode, childNode);
 
 ## Group padding
 
-The [`Padding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeModel/#padding) property of a group node defines the spacing between the group node’s edges and its children.
+The [`Padding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodemodel#padding) property of a group node defines the spacing between the group node’s edges and its children.
 
 The following code illustrates how to add Padding to the node group.
 
@@ -191,7 +191,7 @@ The following example shows how to apply flip for group node.
 
 ### Group flip mode
 
-The [`flipMode`](../api/diagram/flipMode/) of a group node also behave similarly to those of normal nodes. However,When you apply a flip mode to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
+The [`flipMode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipmode) of a group node also behave similarly to those of normal nodes. However,When you apply a flip mode to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
 
 For example, in the below code,
 the flipMode for the child node `Node1` is set to `LabelText`.
@@ -275,7 +275,7 @@ Containers are used to automatically measure and arrange the size and position o
 
 * It allows elements to be either vertically or horizontally aligned.
 
-* Child can be defined with the collection [`canvas.children`](https://ej2.syncfusion.com/vue/documentation/api/diagram/canvas/#children) property.
+* Child can be defined with the collection [`canvas.children`](https://ej2.syncfusion.com/vue/documentation/api/diagram/canvas#children) property.
 
 * Basic element can be defined with the collection of `basicElements`.
 
@@ -283,7 +283,7 @@ Containers are used to automatically measure and arrange the size and position o
 
 * Stack panel is used to arrange its children in a single line or stack order, either vertically or horizontally.
 
-* It controls spacing by setting margin properties of child and padding properties of group. By default, a stack panel’s [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/stackPanel/#orientation) is vertical.
+* It controls spacing by setting margin properties of child and padding properties of group. By default, a stack panel’s [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/stackpanel#orientation) is vertical.
 
 The following code illustrates how to add a stack panel.
 
@@ -308,7 +308,7 @@ The following code illustrates how to add a stack panel.
 
 ## Interaction
 
-Group node interactions can be performed similarly to normal nodes. Fundamental diagram interactions like selecting, dragging, resizing, and rotating apply equally to group nodes. For more informatation refer to the [`nodes interactions`](./nodes-interaction)
+Group node interactions can be performed similarly to normal nodes. Fundamental diagram interactions like selecting, dragging, resizing, and rotating apply equally to group nodes. For more informatation refer to the [`nodes interactions`](https://ej2.syncfusion.com/vue/documentation/diagram/nodes/nodes-interaction)
 
 ### Selecting a Node Group
 
@@ -318,7 +318,7 @@ When a child element within a node group is clicked, the entire contained node g
 
 ## Events
 
-The events triggered when interacting with group nodes are similar to those for individual nodes. For more information, refer to the [`nodes events`](./nodes-events)
+The events triggered when interacting with group nodes are similar to those for individual nodes. For more information, refer to the [`nodes events`](https://ej2.syncfusion.com/vue/documentation/diagram/nodes/nodes-events)
 
 ## See Also
 

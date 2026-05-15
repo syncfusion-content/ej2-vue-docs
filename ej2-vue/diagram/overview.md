@@ -20,9 +20,9 @@ The Overview control addresses these issues by providing a preview, or overall v
 
 ## Create overview
 
-To create an overview, the [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/overview/overviewModel/#sourceid) property of the overview should be set with the corresponding diagram Id for the overall view.
+To create an overview, the [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/overview/overviewmodel#sourceid) property of the overview should be set with the corresponding diagram Id for the overall view.
 
-The [`width`](https://ej2.syncfusion.com/vue/documentation/api/overview/overviewModel/#width) and [`height`](https://ej2.syncfusion.com/angular/documentation/api/overview/overviewModel/#height) properties of the overview allow you to define its size.
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/overview/overviewmodel#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/overview/overviewmodel#height) properties of the overview allow you to define its size.
 
 The following code illustrates how to create an overview:
 

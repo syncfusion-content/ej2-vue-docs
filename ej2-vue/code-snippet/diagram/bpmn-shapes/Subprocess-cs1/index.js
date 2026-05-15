@@ -1,9 +1,11 @@
 
-    import Vue from 'vue';
-    import { DiagramPlugin,BpmnDiagrams,Diagram,BpmnGatewayModel,BpmnSubProcessModel } from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(BpmnDiagrams);
-    Vue.use(DiagramPlugin);
-    let nodes = [{
+import Vue from 'vue';
+import { DiagramPlugin, BpmnDiagrams, Diagram } from '@syncfusion/ej2-vue-diagrams';
+Diagram.Inject(BpmnDiagrams);
+Vue.use(DiagramPlugin);
+
+let nodes = [
+    {
         // Position of the node
         offsetX: 250,
         offsetY: 250,
@@ -20,20 +22,20 @@
                 subProcess: {
                     collapsed: true
                 }
-                as BpmnSubProcessModel
             }
         },
-}]
+    }
+]
 
 new Vue({
-	el: '#app',
-	template: `
+    el: '#app',
+    template: `
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",

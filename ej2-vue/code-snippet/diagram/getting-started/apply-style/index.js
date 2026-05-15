@@ -5,32 +5,23 @@ Vue.use(DiagramPlugin);
 let nodes = [
     {
         id: "node1",
-        height: 100,
+        height: 60,
         width: 100,
         offsetX: 200,
         offsetY: 100,
-    },
-    {
-        id: "node2",
-        height: 100,
-        width: 100,
-        offsetX: 200,
-        offsetY: 300,
+        shape: { type: 'Flow', shape: 'Terminator'},
+        style:{ fill:'red', strokeColor:'green', strokeWidth:5, strokeDashArray:'2,2' },
+        borderWidth: 10,
+        borderColor: 'orange',
+        annotations: [{content: 'Start '}]
     }
 ];
-let connectors = [
-    {
-        id: "connector1",
-        sourceID: "node1",
-        targetID: "node2"
-    },
-]
 
 new Vue({
 el: '#app',
 template: `
 <div id="app">
-    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' ></ejs-diagram>
+    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes'></ejs-diagram>
 </div>
 `,
 
@@ -40,7 +31,6 @@ name: 'app',
             width: "100%",
             height: "350px",
             nodes: nodes,
-            connectors: connectors
         }
     }
 

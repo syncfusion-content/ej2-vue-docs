@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bpmn Activity in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Bpmn Activity shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bpmn Activity
 platform: ej2-vue
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Activity
 
-The [`activity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnActivities) is the task that is performed in a business process. It is represented by a rounded rectangle.
+The [`activity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnactivities) is the task that is performed in a business process. It is represented by a rounded rectangle.
 
 There are two types of activities. They are listed as follows:
 
@@ -36,8 +36,8 @@ The different activities of BPMN process are listed as follows.
 
 ### Tasks
 
-The [`task`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnTask#BpmnTask) property of the [`bpmn activity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnactivitymodel/) allows you to define the type of task such as sending, receiving, user based task, etc. By default, the type property of task is set as **none**. The following code illustrates how to create different types of
-BPMN tasks.
+The [`task`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmntask#BpmnTask) property of the [`bpmn activity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnactivitymodel) allows you to define the type of task such as sending, receiving, user based task, etc. By default, the type property of task is set as **none**.
+The following code illustrates how to create different types of BPMN tasks.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -65,7 +65,7 @@ The various types of BPMN tasks are tabulated as follows.
 
 ### Collapsed Subprocess
 
-A [`Collapsed Sub-Process`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess) is a group of tasks, which is used to hide or reveal details of additional levels . The following code explains how to create a Collapsed Sub-Process.
+A [`Collapsed Sub-Process`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnsubprocess#collapsed) is a group of tasks, which is used to hide or reveal details of additional levels . The following code explains how to create a Collapsed Sub-Process.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -80,7 +80,7 @@ A [`Collapsed Sub-Process`](https://ej2.syncfusion.com/vue/documentation/api/dia
 
 #### Loop
 
-[`Loop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnTask#loop) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `loop` is **none**.
+[`Loop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmntask#loop) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `loop` is **none**.
 You can define the loop property in subprocess BPMN shape as shown in the following code.
 
 {% tabs %}
@@ -104,7 +104,7 @@ The following table contains various types of BPMN loops.
 
 #### Compensation
 
-[`Compensation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnTask#compensation-boolean) is triggered, when operation is partially failed and enabled it with the compensation property of the `bpmn activity`.
+[`Compensation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmntask#compensation) is triggered, when operation is partially failed and enabled it with the compensation property of the `bpmn activity`.
 By default, the `compensation` is set to false.
 
 {% tabs %}
@@ -120,7 +120,7 @@ By default, the `compensation` is set to false.
 
 #### Call
 
-A [`call`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnTask#call-boolean) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.By default, the call property is false.
+A [`call`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmntask#call) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.By default, the call property is false.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -137,7 +137,7 @@ N> This Property is only applicable for task Type activity.
 
 #### Ad-Hoc
 
-An adhoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`adhoc`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess#adhoc-boolean) property of subprocess. By default, the adhoc property is false.
+An adhoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`adhoc`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnsubprocess#adhoc) property of subprocess. By default, the adhoc property is false.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -152,7 +152,7 @@ An adhoc subprocess is a group of tasks that are executed in any order or skippe
 
 #### Boundary
 
-Boundary represents the type of task that is being processed. The [`boundary`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess#boundary-bpmnboundary) property of subprocess allows you to define the type of boundary. By default, it is set as **default**.
+Boundary represents the type of task that is being processed. The [`boundary`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnsubprocess#boundary) property of subprocess allows you to define the type of boundary. By default, it is set as **default**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -182,7 +182,7 @@ The different types of subprocess are as follows:
 
 ##### Event subprocess
 
-A subprocess is defined as an event subprocess, when it is triggered by an event. An event subprocess is placed within another subprocess which is not part of the normal flow of its parent process. You can set event to a subprocess with the [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent#event-bpmnevents) and [`trigger`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent#trigger-bpmntriggers) property of the subprocess. The [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess/#type) property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
+A subprocess is defined as an event subprocess, when it is triggered by an event. An event subprocess is placed within another subprocess which is not part of the normal flow of its parent process. You can set event to a subprocess with the [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnevent#event) and [`trigger`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnevent#trigger) property of the subprocess. The [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnsubprocess#type) property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -197,7 +197,7 @@ A subprocess is defined as an event subprocess, when it is triggered by an event
 
 ## Transaction Subprocess
 
-* [`transaction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess/#transaction) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The [`events`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess/#events) property of subprocess allows to represent these results as an event attached to the subprocess.
+* [`transaction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnsubprocess#transaction) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The [`events`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnsubprocess#events) property of subprocess allows to represent these results as an event attached to the subprocess.
 
 * The event object allows you to define the type of event by which the subprocess will be triggered. The name of the event can be defined to identify the event at runtime.
 

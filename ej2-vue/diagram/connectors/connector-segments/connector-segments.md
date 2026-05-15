@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segments in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Connector segments in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Segments 
 platform: ej2-vue
 documentation: ug
