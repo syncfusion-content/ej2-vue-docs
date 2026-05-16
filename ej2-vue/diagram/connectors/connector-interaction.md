@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Connector Interaction in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Connectors Interaction in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Connector Interaction 
 platform: ej2-vue
 documentation: ug
@@ -54,7 +54,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 ![End Point drag GIF](../images/EndPointDragGif.gif)
 
-You can also update the endPoints of diagram by using [`dragSourceEnd`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#dragsourceend) and [`dragTargetEnd`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#dragtargetend) methods of diagram. 
+You can also update the endPoints of diagram by using [`dragSourceEnd`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#dragsourceend) and [`dragTargetEnd`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#dragtargetend) methods of diagram. 
 
 The following code example shows the ways to drag connector end point at runtime.
 
@@ -71,7 +71,7 @@ The following code example shows the ways to drag connector end point at runtime
 
 ## Segment editing
 
-Diagram allows you to edit connector segments at runtime. To enable this feature, you need to activate the [`DragSegmentThumb`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorConstraints/) constraint for the connector.
+Diagram allows you to edit connector segments at runtime. To enable this feature, you need to activate the [`DragSegmentThumb`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorconstraints) constraint for the connector.
 
 ```ts
 {
@@ -87,18 +87,18 @@ N> To edit a connector segment, you need to inject the `ConnectorEditing` module
 
 ## Flip
 
-The diagram Provides support to flip the connector. The [`flip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#flip) is performed to give the mirrored image of the original element.
+The diagram Provides support to flip the connector. The [`flip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#flip) is performed to give the mirrored image of the original element.
 
 The flip types are as follows:
 
 * HorizontalFlip
- [`Horizontal`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection/) is used to interchange the connector source and target x points.
+ [`Horizontal`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipdirection) is used to interchange the connector source and target x points.
 
 * VerticalFlip
-[`Vertical`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection/) is used to interchange the connector source and target y points.
+[`Vertical`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipdirection) is used to interchange the connector source and target y points.
 
 * Both
-[`Both`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection/) is used to interchange the source point as target point and target point as source point
+[`Both`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipdirection) is used to interchange the source point as target point and target point as source point
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

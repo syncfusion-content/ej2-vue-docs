@@ -47,7 +47,7 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-        <ejs-diagram id="diagram" width="100%" height="600px" :snapSettings='snapSettings'></ejs-diagram>
+        <ejs-diagram ref="diagramRef" id="diagram" width="100%" height="600px" :snapSettings='snapSettings'></ejs-diagram>
     </div>
     `,
       data() {

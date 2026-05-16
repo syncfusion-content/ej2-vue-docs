@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bpmn Text annotation in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Bpmn Text annotation in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bpmn Text annotation
 platform: ej2-vue
 documentation: ug
@@ -41,7 +41,7 @@ domainurl: ##DomainURL##
 
 ### Text annotation in palette.
 
-Text annotation node can be rendered in symbol palette like other bpmn shapes. The following example shows how to render Bpmn text annotation node in symbol palette.
+Text annotation node can be rendered in symbol palette like other bpmn shapes. The following example shows how to render BPMN text annotation node in symbol palette.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -77,7 +77,7 @@ There are several types of Text annotation directions as follows:
 
 ### Add text annotation at runtime
 
-Text annotations can be added dynamically using either the [`addTextAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#addtextannotation) method or the [`add`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#add) method of the diagram. The following example shows how to use these methods to add a text annotation node.
+Text annotations can be added dynamically using either the [`addTextAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#addtextannotation) method or the [`add`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#add) method of the diagram. The following example shows how to use these methods to add a text annotation node.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

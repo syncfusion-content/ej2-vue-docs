@@ -87,7 +87,7 @@ template: `
     data() {
         return {
             width: '100%',
-            height: '700px',
+            height: '500px',
             palettes: [
                 {
                     id: 'uml',
@@ -97,7 +97,7 @@ template: `
                 },
             ],
             palettewidth: '100%',
-            paletteheight: '200px',
+            paletteheight: '500px',
             symbolHeight: 100,
             symbolWidth: 100,
             symbolMargin: {
