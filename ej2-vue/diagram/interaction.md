@@ -18,7 +18,7 @@ Selector provides a visual representation of selected elements. It behaves like 
 
 An element can be selected by clicking that element. During single click, all previously selected items are cleared.
 
-When selecting/unselecting the diagram elements, the [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectionchange) event and [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#click) gets triggered. 
+When selecting/unselecting the diagram elements, the [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#selectionchange) event and [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#click) gets triggered. 
 These events enable you to customize the selected elements as needed.
 
 ## Selecting a group
@@ -42,11 +42,11 @@ In rubber band selection, you can set the selection of items by region using the
 - CompleteIntersect: Selects items that are fully covered within the rectangular selection region.
 - PartialIntersect: Selects items that are partially covered within the rectangular selection region.
 
-This can be configured with the [`rubberBandSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/rubberBandSelectionMode/).
+This can be configured with the [`rubberBandSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/rubberbandselectionmode).
 
 ## Select/Unselect elements using program
 
-The [`select`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#select) and [`clearSelection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#clearselection) methods are used to dynamically select or clear the selection of elements at runtime. The following code example demonstrates how these methods can be utilized to select or clear the selection of elements.
+The [`select`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#select) and [`clearSelection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#clearselection) methods are used to dynamically select or clear the selection of elements at runtime. The following code example demonstrates how these methods can be utilized to select or clear the selection of elements.
 
 ``` JavaScript
 let nodes = [
@@ -83,7 +83,7 @@ export default {
 
 ### Get selected items
 
-You can get the current selected items from the [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property of the diagram model.
+You can get the current selected items from the [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel#nodes) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel#connectors) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#selecteditems) property of the diagram model.
 
 ``` JavaScript
 let nodes = [
@@ -117,7 +117,7 @@ export default {
 ```
 ### Toggle selection
 
-The [`canToggleSelection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#cantoggleselection) property determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false. In the following example, the node can be selected with the first click and unselected with the second click.
+The [`canToggleSelection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel#cantoggleselection) property determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false. In the following example, the node can be selected with the first click and unselected with the second click.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -132,24 +132,24 @@ The [`canToggleSelection`](https://ej2.syncfusion.com/vue/documentation/api/diag
 
 ## Select entire elements in diagram programmatically
 
-The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectall) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectall) method on the diagram.
+The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#selectall) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#selectall) method on the diagram.
 
 ## Drag
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move every selected element.
-* When you drag the elements in the diagram, the [`positionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#positionchange) event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the [`positionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#positionchange) event gets triggered and to do customization in this event.
 
 ## Resize
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, selected items can be resized.
 * When one corner of the selector is dragged, opposite corner is in a static position.
-* When a node is resized, the [`sizeChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#sizechange) event gets triggered.
+* When a node is resized, the [`sizeChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#sizechange) event gets triggered.
 
 N>  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments.
 
 ### Aspect ratio
 
-Maintaining aspect ratio in diagram means that when you resize a node, by dragging its corner, both its width and height adjust proportionally. This ensures that the node retains its original shape and proportions. Aspect ratio constraints can be applied by configuring the [`NodeConstraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeconstraints/) property.
+Maintaining aspect ratio in diagram means that when you resize a node, by dragging its corner, both its width and height adjust proportionally. This ensures that the node retains its original shape and proportions. Aspect ratio constraints can be applied by configuring the [`NodeConstraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeconstraints) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -187,7 +187,7 @@ The appearance such as fill, stroke, and stroke width of the node resize thumb a
 
 ### Customize rotate handle position
 
-The position of the rotate handle can be adjusted by modifying the pivot point of the node using the [`pivot`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeModel/#pivot) property. By default, the pivot point is set to (0.5, 0.5). The following example shows how to render the rotate handle at the left top corner of the node.
+The position of the rotate handle can be adjusted by modifying the pivot point of the node using the [`pivot`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodemodel#pivot) property. By default, the pivot point is set to (0.5, 0.5). The following example shows how to render the rotate handle at the left top corner of the node.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -200,22 +200,20 @@ The position of the rotate handle can be adjusted by modifying the pivot point o
         
 {% previewsample "page.domainurl/code-snippet/diagram/interaction/interaction-cs4" %}
 
-![Node interaction](./images/node-interactions.gif)
-
 ## Connection editing
 
 Each segment of a selected connector is editable with some specific handles/thumbs.
 
-N> For connector editing, you have to inject the [`ConnectorEditing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorEditing) module.
+N> For connector editing, you have to inject the [`ConnectorEditing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorediting) module.
 
 ### Drag connector end points
 
 Source and target points of the selected connectors are represented with two handles. Clicking and dragging those handles help you to adjust the source and target points.
 
 * If you drag the connector end points, then the following events can be used to do your customization.
-* When the connector source point is changed, the [`sourcePointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#sourcepointchange) event gets triggered.
-* When the connector target point is changed, the [`targetPointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#targetpointchange) event gets triggered.
-* When you connect connector with ports/node or disconnect from it, the [`connectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#connectionchange) event gets triggered.
+* When the connector source point is changed, the [`sourcePointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#sourcepointchange) event gets triggered.
+* When the connector target point is changed, the [`targetPointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#targetpointchange) event gets triggered.
+* When you connect connector with ports/node or disconnect from it, the [`connectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#connectionchange) event gets triggered.
 
 ## Straight segment editing
 
@@ -266,36 +264,36 @@ N> A symbol dragged from the palette will only be added to the diagram if it’s
 
 ## User handles
 
-* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userhandles) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property. The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
+* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel#userhandles) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#selecteditems) property. The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
 
 The following events are triggered when interacting with a user handle:
 
-[`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#click) - Triggered when the user handle is clicked.
-[`onUserHandleMouseEnter`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#onuserhandlemouseenter) - Triggered when the mouse enters the user handle region.
-[`onUserHandleMouseDown`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#onuserhandlemousedown) - Triggered when the mouse is pressed down on the user handle.
-[`onUserHandleMouseUp`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#onuserhandlemouseup) - Triggered when the mouse is released on the user handle.
-[`onUserHandleMouseLeave`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#onuserhandlemouseleave) - Triggered when the mouse leaves the user handle region.
+* [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#click) - Triggered when the user handle is clicked.
+* [`onUserHandleMouseEnter`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#onuserhandlemouseenter) - Triggered when the mouse enters the user handle region.
+* [`onUserHandleMouseDown`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#onuserhandlemousedown) - Triggered when the mouse is pressed down on the user handle.
+* [`onUserHandleMouseUp`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#onuserhandlemouseup) - Triggered when the mouse is released on the user handle.
+* [`onUserHandleMouseLeave`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#onuserhandlemouseleave) - Triggered when the mouse leaves the user handle region.
 
-For more information, refer to the [`user handle events`](./user-handle).
+For more information, refer to the [`user handle events`](https://ej2.syncfusion.com/vue/documentation/diagram/user-handle#user-handle-events).
 
 ## Fixed user handle
 
-Fixed user handles are used to perform specific actions when interacted with. Unlike regular user handles, [`fixedUserHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/fixedUserHandleClickEventArgs/#fixeduserhandle) are defined within the node/connector object, allowing different fixed user handles to be added to different nodes.
+Fixed user handles are used to perform specific actions when interacted with. Unlike regular user handles, [`fixedUserHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodefixeduserhandlemodel) are defined within the node/connector object, allowing different fixed user handles to be added to different nodes.
 
 The following events are triggered when interacting with a fixed user handle:
 
-* [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#click) - Triggered when the fixed user handle is clicked.
-* [`onFixedUserHandleMouseEnter`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#onfixeduserhandlemouseenter) - Triggered when the mouse enters the fixed user handle region.
-* [`onFixedUserHandleMouseDown`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#onfixeduserhandlemousedown) - Triggered when the mouse is pressed down on the fixed user handle.
-* [`onFixedUserHandleMouseUp`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#onfixeduserhandlemouseup) - Triggered when the mouse is released on the fixed user handle.
-* [`onFixedUserHandleMouseLeave`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#onfixeduserhandlemouseleave) - Triggered when the mouse leaves the fixed user handle region.
-* [`fixedUserHandleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#fixeduserhandleclick) - Triggered when the fixed user handle is clicked.
+* [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#click) - Triggered when the fixed user handle is clicked.
+* [`onFixedUserHandleMouseEnter`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#onfixeduserhandlemouseenter) - Triggered when the mouse enters the fixed user handle region.
+* [`onFixedUserHandleMouseDown`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#onfixeduserhandlemousedown) - Triggered when the mouse is pressed down on the fixed user handle.
+* [`onFixedUserHandleMouseUp`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#onfixeduserhandlemouseup) - Triggered when the mouse is released on the fixed user handle.
+* [`onFixedUserHandleMouseLeave`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#onfixeduserhandlemouseleave) - Triggered when the mouse leaves the fixed user handle region.
+* [`fixedUserHandleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#fixeduserhandleclick) - Triggered when the fixed user handle is clicked.
 
-For more information, refer to the [`fixed user handle events`](./user-handle).
+For more information, refer to the [`fixed user handle events`](https://ej2.syncfusion.com/vue/documentation/diagram/user-handle#fixed-user-handle-events).
 
 ## Determining Mouse Button Clicks
 
-The diagram component can determine which mouse button was clicked. For example, when the right mouse button is clicked, the click event will specify that the right button was clicked. This is handled through the mouse [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#click) event, which provides details about whether the left or right button was clicked.
+The diagram component can determine which mouse button was clicked. For example, when the right mouse button is clicked, the click event will specify that the right button was clicked. This is handled through the mouse [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#click) event, which provides details about whether the left or right button was clicked.
 
 | Notification | Description |
 |----------------|--------------|
@@ -386,11 +384,11 @@ export default {
 
 ## Allow drop
 
-The diagram supports dropping a node or connector onto another node or connector. To determine the target where the node or connector is dropped, you need to enable the [`allowDrop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeConstraints/) constraint in the node's or connector's constraints property. This setting enables a highlighter to indicate potential drop targets when dragging any node or connector over another one. Upon dropping the node or connector, the [`drop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iDropEventArgs/) event is triggered to indicate which element was dropped over which other element.
+The diagram supports dropping a node or connector onto another node or connector. To determine the target where the node or connector is dropped, you need to enable the [`allowDrop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeconstraints) constraint in the node's or connector's constraints property. This setting enables a highlighter to indicate potential drop targets when dragging any node or connector over another one. Upon dropping the node or connector, the [`drop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/idropeventargs) event is triggered to indicate which element was dropped over which other element.
 
 ## Zoom pan
 
-When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram. You can zoom in or out on the diagram by using Ctrl + mouse wheel. When the diagram is zoomed or panned, the [`scrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#scrollchange) event gets triggered.
+When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram. You can zoom in or out on the diagram by using Ctrl + mouse wheel. When the diagram is zoomed or panned, the [`scrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#scrollchange) event gets triggered.
 
 |  Pan Status  | Description|
 |--------------|---------|
@@ -460,8 +458,8 @@ The following table illustrates those commands with the associated key values.
 
 ## See Also
 
-* [How to create diagram nodes using drawing tools](./tools#shapes)
-* [How to create diagram connectors using drawing tools](./tools#connectors)
+* [How to create diagram nodes using drawing tools](./tools#draw-nodes)
+* [How to create diagram connectors using drawing tools](./tools#draw-connectors)
 * [How to disable the diagram interaction](./tools)
 * [How to control the diagram history](./undo-redo)
 * [How to create overview control to the diagram](./overview)

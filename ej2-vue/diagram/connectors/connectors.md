@@ -15,7 +15,7 @@ Connectors are objects used to create link between two points, nodes or ports to
 ## Create Connector
 
 Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments. To explore the properties of a [`connector`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector), refer to [`Connector Properties`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector).
- The [`id`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#id) property of a connector is used to define its unique identifier and can later be used to find the connector at runtime for customization. 
+ The [`id`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#id) property of a connector is used to define its unique identifier and can later be used to find the connector at runtime for customization. 
 
 ```ts
 var connector = { 
@@ -33,7 +33,7 @@ To create and customize the connectors easily in the EJ2 Vue Diagram component, 
 
 ## Add connectors through connectors collection
 
-* The [`sourcePoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourcepoint) and [`targetPoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetpoint) properties of connector allow you to define the end points of a connector.
+* The [`sourcePoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourcepoint) and [`targetPoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetpoint) properties of connector allow you to define the end points of a connector.
 
 The following code example illustrates how to add a connector through connector collection.
 
@@ -50,7 +50,7 @@ The following code example illustrates how to add a connector through connector 
 
 ## Add/Remove connector at runtime
 
-Connectors can be added at runtime by using public method,[`add`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#add) and can be removed at runtime by using public method, [`remove`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#remove).
+Connectors can be added at runtime by using public method,[`add`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#add) and can be removed at runtime by using public method, [`remove`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#remove).
 
 The following code example illustrates how to add and remove connector at runtime.
 
@@ -67,7 +67,7 @@ The following code example illustrates how to add and remove connector at runtim
 
 ## Add collection of connectors at runtime
 
-The collection of connectors can be dynamically added using [`addElements`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#addelements) method. Each time an element is added to the diagram canvas, the 'collectionChange' event will be triggered.
+The collection of connectors can be dynamically added using [`addElements`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#addelements) method. Each time an element is added to the diagram canvas, the 'collectionChange' event will be triggered.
 
 The following code illustrates how to add a connectors collection at runtime.
 
@@ -103,7 +103,7 @@ The following code example illustrates how to add connectors in palette.
 
 Connectors can be interactively drawn by clicking and dragging the diagram surface.
 
-To draw a shape, you have to activate the drawing tool by setting `DrawOnce` or `ContinuousDraw` to the [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tool) property and you need to set the `connector` object by using the [`drawingObject`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#drawingobject) property. 
+To draw a shape, you have to activate the drawing tool by setting `DrawOnce` or `ContinuousDraw` to the [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#tool) property and you need to set the `connector` object by using the [`drawingObject`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#drawingobject) property. 
 
 The following code example illustrates how to draw a connector at runtime.
 
@@ -118,7 +118,7 @@ The following code example illustrates how to draw a connector at runtime.
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/drawconnector-cs1" %}
 
-For more information about drawing connectors, refer to [`Draw Connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#drawingobject).
+For more information about drawing connectors, refer to [`Draw Connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#drawingobject).
 
 ## Update connector at runtime
 
@@ -158,7 +158,7 @@ The following code example illustrates how to clone a connector
 
 Get Connector defaults helps to define default properties of the connector. It is triggered when the diagram is initialized. In this event, you can customize the connector properties.
 
-The following code example explains how to customize the connector using [`getConnectorDefaults`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#getconnectordefaults).
+The following code example explains how to customize the connector using [`getConnectorDefaults`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#getconnectordefaults).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -175,7 +175,7 @@ The following code example explains how to customize the connector using [`getCo
 
 ### Connection with nodes
 
-* The [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourceid) and [`targetID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetid) properties allow to define the nodes to be connected.
+* The [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourceid) and [`targetID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetid) properties allow to define the nodes to be connected.
 
 * The following code example illustrates how to connect two nodes.
 
@@ -190,7 +190,7 @@ The following code example explains how to customize the connector using [`getCo
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectNode-cs1" %}
 
-* When you remove NodeConstraints [`InConnect`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeConstraints/) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove NodeConstraints [`OutConnect`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeConstraints/) from Default, the node accepts only an incoming connection to dock in it.
+* When you remove NodeConstraints [`InConnect`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeconstraints) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove NodeConstraints [`OutConnect`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeconstraints) from Default, the node accepts only an incoming connection to dock in it.
 
 * When you remove both InConnect and OutConnect NodeConstraints from Default, the node restricts connector to establish connection in it.
 
@@ -213,7 +213,7 @@ The following code example explains how to customize the connector using [`getCo
 
 ## Connections with ports
 
-The [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourceid) and [`targetPortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetid) properties allow to create connections between some specific points of source/target nodes.
+The [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourceportid) and [`targetPortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetportid) properties allow to create connections between some specific points of source/target nodes.
 
 The following code example illustrates how to create port to port connections.
 
@@ -228,7 +228,7 @@ The following code example illustrates how to create port to port connections.
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/Connectorsportupdate-cs1" %}
 
-Similarly, the `sourcePortID` or `targetPortID` can be changed at the runtime by changing the port [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourceid) or [`targetPortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetid).
+Similarly, the `sourcePortID` or `targetPortID` can be changed at the runtime by changing the port [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourceportid) or [`targetPortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetportid).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -241,7 +241,7 @@ Similarly, the `sourcePortID` or `targetPortID` can be changed at the runtime by
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/updateConnectorPort-cs1" %}
 
-* When you set PortConstraints to [`InConnect`](https://ej2.syncfusion.com/vue/documentation/api/diagram/portConstraints/), the port accepts only an incoming connection to dock in it. Similarly, when you set PortConstraints to [`OutConnect`](https://ej2.syncfusion.com/vue/documentation/api/diagram/portConstraints/), the port accepts only an outgoing connection to dock in it.
+* When you set PortConstraints to [`InConnect`](https://ej2.syncfusion.com/vue/documentation/api/diagram/portconstraints), the port accepts only an incoming connection to dock in it. Similarly, when you set PortConstraints to [`OutConnect`](https://ej2.syncfusion.com/vue/documentation/api/diagram/portconstraints), the port accepts only an outgoing connection to dock in it.
 
 * When you set PortConstraints to None, the port restricts connector to establish connection in it.
 
@@ -308,7 +308,7 @@ The following image illustrates how the connector automatically re-routes the se
 
 ![LineRouting GIF](../images/lineRouting.GIF.gif)
 
-* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#constraints) property of the connector like the following code snippet.
+* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#constraints) property of the connector like the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

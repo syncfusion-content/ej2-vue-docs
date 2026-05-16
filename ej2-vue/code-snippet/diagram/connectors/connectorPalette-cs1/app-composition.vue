@@ -52,7 +52,7 @@ const palettes = [{
     id: "connector",
     expanded: true,
     symbols: connectorSymbols,
-    title: "connectorSymbols"
+    title: "Connector Symbols"
 }]
 const expandMode = "Multiple";
 const width = "100%";
@@ -63,5 +63,9 @@ const symbolHeight = 60;
 const symbolWidth = 60;
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 </style>

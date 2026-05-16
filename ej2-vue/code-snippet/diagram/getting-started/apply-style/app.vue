@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
   </template>
   <script>
@@ -12,16 +12,17 @@
         width: 100,
         offsetX: 200,
         offsetY: 100,
-        style:{fill:'red',strokeColor:'green',strokeWidth:5,strokeDashArray:'2,2'},
-        borderWidth:10,
-        borderColor:'orange',
+        shape: { type: 'Flow', shape: 'Terminator'},
+        style:{ fill:'red', strokeColor:'green', strokeWidth:5, strokeDashArray:'2,2' },
+        borderWidth: 10,
+        borderColor: 'orange',
+        annotations: [{content: 'Start '}]
     }
   ];
   export default {
     name: "App",
     components: {
         "ejs-diagram": DiagramComponent
-  
     },
     data() {
         return {
@@ -33,6 +34,10 @@
   }
   </script>
   <style>
-  @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-  </style>
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+</style>
   

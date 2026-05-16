@@ -1,7 +1,7 @@
 
 import Vue from 'vue';
-import { DiagramPlugin, Diagram, HierarchicalTree, DataBinding } from '@syncfusion/ej2-vue-diagrams';
-Diagram.Inject(DataBinding, HierarchicalTree);
+import { DiagramPlugin, Diagram, HierarchicalTree, DataBinding, LayoutAnimation } from '@syncfusion/ej2-vue-diagrams';
+Diagram.Inject(DataBinding, HierarchicalTree, LayoutAnimation);
 Vue.use(DiagramPlugin);
 
 //Initialize nodes for diagram
@@ -82,7 +82,7 @@ new Vue({
 <div id="app">
 
     <ejs-diagram id="diagram" ref="diagramObj" :width='width' :height='height' :nodes='nodes'
-    :connectors='connectors' :click="animationComplete" :layout='layout'>
+    :connectors='connectors' :animationComplete="animationComplete" :layout='layout'>
     </ejs-diagram>
     
 </div>
