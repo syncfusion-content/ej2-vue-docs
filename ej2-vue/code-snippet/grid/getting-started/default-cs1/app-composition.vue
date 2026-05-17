@@ -1,30 +1,31 @@
 <template>
   <div id="app">
-    <ejs-grid :dataSource="data" :allowPaging="true" :pageSettings='pageSettings'>
+    <ejs-grid :dataSource='data' :allowPaging='true' :allowSorting='true' :allowFiltering='true' :pageSettings='pageSettings' 
+      :filterSettings='filterSettings' :editSettings='editSettings' :toolbar='toolbar'>
       <e-columns>
-        <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
-        <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-        <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+        <e-column field='OrderID' headerText='Order ID' :isPrimaryKey='true' :validationRules='orderIDRules' textAlign='Right' width=90></e-column>
+        <e-column field='CustomerName' headerText='CustomerName' :validationRules=' customerNameRules' width=120></e-column>
+        <e-column field='OrderDate' headerText='OrderDate' width='100' format='yMd' editType='datepickeredit' textAlign='Right'></e-column>
+        <e-column field='Freight' headerText='Freight' format='C2' editType='numericedit' textAlign='Right' width=90></e-column>
+        <e-column field='ShipCountry' headerText='ShipCountry' editType='dropdownedit' width=120></e-column>
       </e-columns>
     </ejs-grid>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids";
-const data = [
-  { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
-  { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
-  { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
-  { OrderID: 10251, CustomerID: 'VICTE', Freight: 41.34 },
-  { OrderID: 10252, CustomerID: 'SUPRD', Freight: 51.3 },
-  { OrderID: 10253, CustomerID: 'HANAR', Freight: 58.17 },
-  { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
-  { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
-  { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
-];
-const pageSettings = { pageSize: 5 };
-provide('grid', [Page]);
+// Import the required grid modules from the grid package
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Sort, Filter, Edit, Toolbar } from "@syncfusion/ej2-vue-grids";
+// Import Grid data from external file
+import { data } from "./datasource";
+const pageSettings = { pageSize: 6 };
+const filterSettings = { type: "CheckBox" };
+const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
+const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+const orderIDRules= {required: true, number: true};
+const customerNameRules= { required: true };
+// Inject required Grid features
+provide('grid', [Page, Sort, Filter, Edit, Toolbar]);
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
