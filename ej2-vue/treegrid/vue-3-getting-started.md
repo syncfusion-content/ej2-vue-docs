@@ -83,9 +83,7 @@ With `my-project` ready to run with default settings, the next step is to add Sy
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue Tree Grid component](https://www.syncfusion.com/vue-components/vue-tree-grid) as an example. To use the Vue Tree Grid component in the project, the `@syncfusion/ej2-vue-treegrid` package must be installed using one of the following commands:
+To install the TreeGrid component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-treegrid --save
@@ -99,9 +97,7 @@ yarn add @syncfusion/ej2-vue-treegrid
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component can be imported in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, the `material3` theme is applied using CSS styles, which are available in installed packages. The necessary `material3` CSS styles for the Tree Grid component and its dependents must be imported into the `<style>` section of **src/App.vue** file.
+The following CSS files are available in the ../node_modules/@syncfusion package folder. Add these as references in **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -126,253 +122,20 @@ In this article, the `material3` theme is applied using CSS styles, which are av
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the steps below to add the Vue Tree Grid component using `Composition API` or `Options API`:
-
-  1. Import and register the Tree Grid component and its child directives in the `script` section of the **src/App.vue** file. For Composition API usage, add the `setup` attribute to the `script` tag to indicate that Vue will use the `Composition API`.
+The treegrid code should be placed in the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { TreeGridComponent as EjsTreegrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-treegrid';
-</script>
-
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
+{% include code-snippet/treegrid/getting-started/default-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-  import { TreeGridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-treegrid';
-//Component registration
-export default {
-  name: "App",
-  components: {
-    'ejs-treegrid' : TreeGridComponent,
-    "e-columns": ColumnsDirective,
-    "e-column": ColumnDirective
-  }
-}
-</script>
-
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% include code-snippet/treegrid/getting-started/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
-2. In the `template` section, define the Tree Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/treegrid#datasource) property and column definitions.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-treegrid :dataSource='data' :treeColumnIndex='1' childMapping='subtasks'>
-      <e-columns>
-          <e-column field='taskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-          <e-column field='taskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-          <e-column field='startDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-          <e-column field='duration' headerText='Duration' textAlign='Right' width=80></e-column>
-      </e-columns>
-  </ejs-treegrid>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3. Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-const data = [
-  {
-            taskID: 1,
-            taskName: 'Planning', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'),      progress: 100, duration: 5, priority: 'Normal', approved: false,
-            subtasks: [
-                { taskID: 2, taskName: 'Plan timeline', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Normal', approved: false },
-                { taskID: 3, taskName: 'Plan budget', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, approved: true },
-                { taskID: 4, taskName: 'Allocate resources', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Critical', approved: false },
-                { taskID: 5, taskName: 'Planning complete', startDate: new Date('02/07/2017'), endDate: new Date('02/07/2017'), duration: 0, progress: 0, priority: 'Low', approved: true }
-            ]
-        },
-        {
-            taskID: 6, taskName: 'Design', startDate: new Date('02/10/2017'), endDate: new Date('02/14/2017'), duration: 3, progress: 86, priority: 'High', approved: false,
-            subtasks: [
-                { taskID: 7, taskName: 'Software Specification', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 60, priority: 'Normal', approved: false },
-                { taskID: 8, taskName: 'Develop prototype', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 100, priority: 'Critical', approved: false },
-                { taskID: 9, taskName: 'Get approval from customer', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-                { taskID: 10, taskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-                { taskID: 11, taskName: 'Design complete', startDate: new Date('02/14/2017'), endDate: new Date('02/14/2017'), duration: 0, progress: 0, priority: 'Normal', approved: true }
-            ]
-        }
-];
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-  return {
-    data:[
-      {
-            taskID: 1,
-            taskName: 'Planning', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'),      progress: 100, duration: 5, priority: 'Normal', approved: false,
-            subtasks: [
-                { taskID: 2, taskName: 'Plan timeline', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Normal', approved: false },
-                { taskID: 3, taskName: 'Plan budget', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, approved: true },
-                { taskID: 4, taskName: 'Allocate resources', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Critical', approved: false },
-                { taskID: 5, taskName: 'Planning complete', startDate: new Date('02/07/2017'), endDate: new Date('02/07/2017'), duration: 0, progress: 0, priority: 'Low', approved: true }
-            ]
-        },
-        {
-            taskID: 6, taskName: 'Design', startDate: new Date('02/10/2017'), endDate: new Date('02/14/2017'), duration: 3, progress: 86, priority: 'High', approved: false,
-            subtasks: [
-                { taskID: 7, taskName: 'Software Specification', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 60, priority: 'Normal', approved: false },
-                { taskID: 8, taskName: 'Develop prototype', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 100, priority: 'Critical', approved: false },
-                { taskID: 9, taskName: 'Get approval from customer', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-                { taskID: 10, taskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-                { taskID: 11, taskName: 'Design complete', startDate: new Date('02/14/2017'), endDate: new Date('02/14/2017'), duration: 0, progress: 0, priority: 'Normal', approved: true }
-            ]
-        }
-    ],
-  };
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-treegrid :dataSource='data' :treeColumnIndex='1' childMapping='subtasks'>
-      <e-columns>
-          <e-column field='taskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-          <e-column field='taskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-          <e-column field='startDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-          <e-column field='duration' headerText='Duration' textAlign='Right' width=80></e-column>
-      </e-columns>
-  </ejs-treegrid>
-</template>
-
-<script setup>
-import { TreeGridComponent as EjsTreegrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-treegrid';
-const data = [
-{
-          taskID: 1,
-          taskName: 'Planning', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'),      progress: 100, duration: 5, priority: 'Normal', approved: false,
-          subtasks: [
-              { taskID: 2, taskName: 'Plan timeline', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Normal', approved: false },
-              { taskID: 3, taskName: 'Plan budget', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, approved: true },
-              { taskID: 4, taskName: 'Allocate resources', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Critical', approved: false },
-              { taskID: 5, taskName: 'Planning complete', startDate: new Date('02/07/2017'), endDate: new Date('02/07/2017'), duration: 0, progress: 0, priority: 'Low', approved: true }
-          ]
-      },
-      {
-          taskID: 6, taskName: 'Design', startDate: new Date('02/10/2017'), endDate: new Date('02/14/2017'), duration: 3, progress: 86, priority: 'High', approved: false,
-          subtasks: [
-              { taskID: 7, taskName: 'Software Specification', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 60, priority: 'Normal', approved: false },
-              { taskID: 8, taskName: 'Develop prototype', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 100, priority: 'Critical', approved: false },
-              { taskID: 9, taskName: 'Get approval from customer', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-              { taskID: 10, taskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-              { taskID: 11, taskName: 'Design complete', startDate: new Date('02/14/2017'), endDate: new Date('02/14/2017'), duration: 0, progress: 0, priority: 'Normal', approved: true }
-          ]
-      },
-];
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material3.css";
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-treegrid :dataSource='data' :treeColumnIndex='1' childMapping='subtasks'>
-    <e-columns>
-      <e-column field='taskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-      <e-column field='taskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-      <e-column field='startDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-      <e-column field='duration' headerText='Duration' textAlign='Right' width=80></e-column>
-    </e-columns>
-  </ejs-treegrid>
-</template>
-
-<script>
-import { TreeGridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-treegrid';
-
-let dataSource = [{
-  taskID: 1,
-  taskName: 'Planning', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), progress: 100, duration: 5, priority: 'Normal', approved: false,
-  subtasks: [
-    { taskID: 2, taskName: 'Plan timeline', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Normal', approved: false },
-    { taskID: 3, taskName: 'Plan budget', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, approved: true },
-    { taskID: 4, taskName: 'Allocate resources', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Critical', approved: false },
-    { taskID: 5, taskName: 'Planning complete', startDate: new Date('02/07/2017'), endDate: new Date('02/07/2017'), duration: 0, progress: 0, priority: 'Low', approved: true }
-  ]
-},
-{
-  taskID: 6, taskName: 'Design', startDate: new Date('02/10/2017'), endDate: new Date('02/14/2017'), duration: 3, progress: 86, priority: 'High', approved: false,
-  subtasks: [
-    { taskID: 7, taskName: 'Software Specification', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 60, priority: 'Normal', approved: false },
-    { taskID: 8, taskName: 'Develop prototype', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 100, priority: 'Critical', approved: false },
-    { taskID: 9, taskName: 'Get approval from customer', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-    { taskID: 10, taskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-    { taskID: 11, taskName: 'Design complete', startDate: new Date('02/14/2017'), endDate: new Date('02/14/2017'), duration: 0, progress: 0, priority: 'Normal', approved: true }
-  ]
-},
-];
-
-export default {
-  // Component registration
-  name: "App",
-  // Declaring component and its directives
-  components: {
-    'ejs-treegrid': TreeGridComponent,
-    "e-columns": ColumnsDirective,
-    "e-column": ColumnDirective,
-  },
-  // Bound properties declaration
-  data() {
-    return {
-      data: dataSource
-    };
-  },
-  provide: {
-    treegrid: []
-  }
-};
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material3.css";
-</style>
-
-{% endhighlight %}
-{% endtabs %}
+   
+{% previewsample "page.domainurl/code-snippet/treegrid/getting-started/default-cs4" %}
 
 ## Run the project
-
-Execute the following command to run the project:
 
 ```bash
 npm run dev
@@ -390,5 +153,6 @@ The output will appear as follows:
 
 ## See also
 
+* [Grid Feature Modules](./module)
 * [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
 * [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)

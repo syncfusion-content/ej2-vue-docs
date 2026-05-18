@@ -10,14 +10,9 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts in a quickstart application
+# Getting Started with Syncfusion Vue UI Components using direct scripts
 
-
-
-Vue provides native script support, allowing users to directly include the Vue.js library in an HTML file without the need for a build process or module bundler. This feature is useful for simpler projects or prototypes, enabling quick and easy implementation of Vue.js without setting up a complex build workflow.
-
-
-Similarly, Syncfusion<sup style="font-size:70%">&reg;</sup> offers direct script support for its Vue components. Developers can seamlessly include Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in their HTML files and leverage them within their Vue.js applications. This allows for straightforward integration of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components without the need for additional build processes. Now, let's delve into the process of utilizing Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components through direct script inclusion.
+Vue provides native script support, allowing developers to directly include Vue.js and Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in HTML files without the need for a build process or module bundler. This approach is useful for simpler projects or prototypes, enabling quick and easy implementation of Vue.js and Syncfusion components without setting up a complex build workflow.
 
 ## Prerequisites
 
@@ -25,46 +20,13 @@ Similarly, Syncfusion<sup style="font-size:70%">&reg;</sup> offers direct script
 
 ## Set up the Vue project
 
-To demonstrate the usage of the `Grid` component through direct scripting, follow these steps:
+To demonstrate the usage of the `Grid` component through direct scripting:
 
-1\. Begin by creating a folder named `quickstart` for the project.
+1\. Create a folder named `quickstart` and inside it, create an HTML file named `index.html`.
 
-2\. Inside the `quickstart` folder, create an HTML file named `index.html`.
+2\. Include the appropriate version of the Vue.js library in the **index.html** file based on whether to use [Vue 2](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) or [Vue 3](https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js) in the project. Then, create a new Vue instance with the required configuration options.
 
-Include the appropriate version of the Vue.js library in the **index.html** file based on whether to use [Vue 2](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) or [Vue 3](https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js) in the project. Then, create a new Vue instance with the required configuration options.
-
-> The [Vue class component](https://class-component.vuejs.org) package is required before the 2023 Volume 1 (v21.1.35) release. So, add the [Vue class component](<https://cdn.jsdelivr.net/npm/vue-class-component@8.0.0-rc.1/dist/vue-class-component.global.min.js>) script to the head section of the **index.html** file for Vue 3 direct script.
-
-{% tabs %}
-{% highlight html tabtitle="Vue 2 (~/index.html)" %}
-
-<div id="app">
-    <!-- Vue components goes here -->
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"></script>
-<script>
-    new Vue({
-        el: '#app',
-    });
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Vue 3 (~/index.html)" %}
-
-<div id="app">
-    <!-- Vue components goes here -->
-</div>
-
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script>
-    Vue.createApp({
-        el: '#app',
-    }).mount('#app');
-</script>
-
-{% endhighlight %}
-{% endtabs %}
+> The [Vue class component](https://class-component.vuejs.org) package is required before the 2023 Volume 1 (v21.1.35) release. Add the [Vue class component](<https://cdn.jsdelivr.net/npm/vue-class-component@8.0.0-rc.1/dist/vue-class-component.global.min.js>) script to the head section of the **index.html** file.
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
@@ -75,7 +37,9 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
 
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/material3.css" rel="stylesheet" type="text/css" />
+<head>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/33.2.3/material3.css" rel="stylesheet" type="text/css" />
+</head>
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,55 +51,100 @@ To integrate Syncfusion<sup style="font-size:70%">&reg;</sup> components into yo
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
 
-<script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-vue-es5/dist/ej2-vue.min.js"></script>
+<head>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-vue-es5/dist/ej2-vue.min.js"></script>
+</head>
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-1\. First, register the Grid component and its child directives in Vue.
+1\. Register the Grid component and its child directives, then add the component to the `<body>` section of the **index.html** file. Bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource) property and inject the `Page` module. Follow the [Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation for further details.
+
+> **Note:** While using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in direct script mode, camel-cased property names (e.g., `isPrimaryKey`) need to be specified in kebab-cased equivalents (e.g., `is-primary-key`).
 
 {% tabs %}
-{% highlight html tabtitle="Vue 2 (~/index.html)" %}
-
-<script>
-    Vue.use(ejs.grids.GridPlugin);
-</script>
-
-{% endhighlight %}
 {% highlight html tabtitle="Vue 3 (~/index.html)" %}
 
 <script>
-    Vue.createApp({
-        el: '#app',
+    const app = Vue.createApp({
         components: {
             'ejs-grid' : ejs.grids.GridComponent,
             'e-columns' : ejs.grids.ColumnsDirective,
             'e-column' : ejs.grids.ColumnDirective
+        },
+        data() {
+            return {
+                data: [
+                    { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
+                    { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
+                    { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 }
+                ]
+            }
         }
-    }).mount('#app');
+    });
+    app.mount('#app');
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Vue 2 (~/index.html)" %}
+
+<script>
+    Vue.use(ejs.grids.GridPlugin);
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                data: [
+                    { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
+                    { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
+                    { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 }
+                    ]
+                }
+            }
+        });
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-2\. Add the component to the `<body>` section of the **index.html** file. Bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and inject the `Page` module. Follow the [Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation for further details.
-
-> While using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in a direct script way, camel-cased property (isPrimaryKey) names need to be specified in the kebab-cased (is-primary-key) equivalents.
+2\. Add the Grid component to a `<div>` element in the `<body>` section of the **index.html** file. Configure the Grid with columns and data source.
 
 {% tabs %}
-{% highlight html tabtitle="Vue 2 (~/index.html)" %}
-
-{% include code-snippet/common/getting-started-es5-cs1/index.html%}
-
-{% endhighlight %}
 {% highlight html tabtitle="Vue 3 (~/index.html)" %}
 
-{% include code-snippet/common/getting-started-es5-vue3-cs1/index.html %}
+<body>
+<div id="app">
+    <ejs-grid :data-source="data" :allow-paging="true" :page-settings='pageSettings'>
+        <e-columns>
+            <e-column field="OrderID" header-text="Order ID" text-align="Right" :is-primary-key="true" width="100"></e-column>
+            <e-column field="CustomerID" header-text="Customer ID" width="80"></e-column>
+            <e-column field="Freight" header-text="Freight" width="90"></e-column>
+        </e-columns>
+    </ejs-grid>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Vue 2 (~/index.html)" %}
+
+<div id="app">
+    <ejs-grid :data-source="data" :allow-paging="true" :page-settings='pageSettings'>
+        <e-columns>
+            <e-column field="OrderID" header-text="Order ID" text-align="Right" :is-primary-key="true" width="100"></e-column>
+            <e-column field="CustomerID" header-text="Customer ID" width="80"></e-column>
+            <e-column field="Freight" header-text="Freight" width="90"></e-column>
+        </e-columns>
+    </ejs-grid>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
+
 
 ## Run the project
 

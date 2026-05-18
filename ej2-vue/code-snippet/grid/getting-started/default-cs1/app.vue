@@ -1,16 +1,22 @@
 <template>
     <div id="app">
-        <ejs-grid :dataSource="data" :allowPaging="true" :pageSettings='pageSettings'>
-          <e-columns>
-            <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
-            <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-            <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
-          </e-columns>
-        </ejs-grid>
+      <ejs-grid :dataSource='data' :allowPaging='true' :allowSorting='true' :allowFiltering='true' :pageSettings='pageSettings' 
+        :filterSettings='filterSettings' :editSettings='editSettings' :toolbar='toolbar'>
+        <e-columns>
+          <e-column field='OrderID' headerText='Order ID' :isPrimaryKey='true' :validationRules='orderIDRules' textAlign='Right' width=90></e-column>
+          <e-column field='CustomerName' headerText='CustomerName' :validationRules=' customerNameRules' width=120></e-column>
+          <e-column field='OrderDate' headerText='OrderDate' width='100' format='yMd' editType='datepickeredit' textAlign='Right'></e-column>
+          <e-column field='Freight' headerText='Freight' format='C2' editType='numericedit' textAlign='Right' width=90></e-column>
+          <e-column field='ShipCountry' headerText='ShipCountry' editType='dropdownedit' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
     </div>
 </template>
 <script>
-import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
+// Import the required grid modules from the grid package
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Sort, Filter, Edit, Toolbar } from "@syncfusion/ej2-vue-grids";
+// Import Grid data from external file
+import { data } from "./data";
 export default {
   name: "App",
   components: {
@@ -20,22 +26,18 @@ export default {
   },
   data() {
     return {
-      data: [
-          { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
-          { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
-          { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
-          { OrderID: 10251, CustomerID: 'VICTE', Freight: 41.34 },
-          { OrderID: 10252, CustomerID: 'SUPRD', Freight: 51.3 },
-          { OrderID: 10253, CustomerID: 'HANAR', Freight: 58.17 },
-          { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
-          { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
-          { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
-      ],
-      pageSettings: { pageSize: 5 }
+      data: data,
+      pageSettings: { pageSize: 6 },
+      filterSettings: { type: "CheckBox" },
+      editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
+      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+      orderIDRules: {required: true, number: true},
+      customerNameRules: { required: true },
     };
   },
+  // Inject required Grid features
   provide: {
-    grid: [Page]
+    grid: [Page, Sort, Filter, Edit, Toolbar]
   }
 }
 </script>

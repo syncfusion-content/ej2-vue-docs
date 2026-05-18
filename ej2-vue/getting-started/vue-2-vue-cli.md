@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components and Vue CLI
+# Getting Started with Syncfusion® Vue UI Components and Vue CLI
 
-This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 2 application. To get started with Vue 3 application, refer to the [getting started with Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial) topic.
+This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 2 application. To get started with Vue 3 application, refer to the [getting started with Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli) topic.
 
 ## Prerequisites
 
@@ -111,7 +111,7 @@ Vue.component(ColumnPlugin.name, ColumnDirective);
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
-Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
+Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -167,17 +167,20 @@ npm run serve
 The output will appear as follows:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+
+{% highlight html tabtitle="Composition" %}
 {% include code-snippet/common/default-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
+
+{% highlight html tabtitle="Options" %}
 {% include code-snippet/common/default-cs1/app.vue %}
 {% endhighlight %}
+
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs1" %}
 
 ## See also
 
-* [Getting started with Vue 3 application](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial)
+* [Getting started with Vue 3 application](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-js-composition)
 * [Getting started with Vue component using direct script](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

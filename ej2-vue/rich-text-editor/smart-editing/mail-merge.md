@@ -60,6 +60,7 @@ The **DropDownButton** component displays a list of merge fields such as First N
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
 
 <template>
     <ejs-dropdownbutton id="insertField" :items="itemsName" :content="dropdownContent" @select="onItemSelect($event)"></ejs-dropdownbutton>
@@ -107,6 +108,7 @@ export default {
 }
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,6 +118,7 @@ The **Mention** component provides an alternative way to insert placeholders by 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
 
 <ejs-mention ref="mentionObj" id="mentionObj" target="#mailMergeEditor_rte-edit-view" :mentionChar="mentionChar" :allowSpaces="true" :dataSource="mergeData" :fields="fieldsData" popupWidth="250px" popupHeight="200px" :displayTemplate="'displayTemplate'">
         <template v-slot:displayTemplate="{ data }">
@@ -152,6 +155,7 @@ export default {
 }
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -161,6 +165,7 @@ When the **Merge Data** button is clicked, the editor content is processed to re
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
 
 <template>
     <button class="e-control e-lib e-btn e-formats-tbar-btn e-rte-elements e-tbar-btn e-tbar-btn" tabindex="-1" id="merge_data" style="width: 100%" @click="onClickHandler">
@@ -218,6 +223,7 @@ export default {
 }
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

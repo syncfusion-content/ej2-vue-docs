@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/) project with a TypeScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
@@ -22,60 +22,45 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vite.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm create vite@latest
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn create vite
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Using one of the above commands will lead you to set up additional configurations for the project:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1. **Project name** - Type: `my-project` (or any name you want)
 
-```bash
-? Project name: » my-project
-```
+2. **Select framework** - Choose: **Vue**
 
-2.Select `Vue` as the framework. It will creates a Vue 3 project.
+3. **Select variant** - Choose: **TypeScript**
 
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-  Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
+4. **Install with npm and start now?** - Choose: No
 
-3.Choose `TypeScript` as framework variant to build this Vite project using TypeScript and Vue.
+5. **Go to your project and install packages:**
 
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-  JavaScript
-> TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
-
-```bash
 cd my-project
 npm install
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 cd my-project
 yarn install
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -85,15 +70,19 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are avai
 
 This article uses the [Vue Schedule component](https://www.syncfusion.com/vue-components/vue-scheduler) as an example. To use the Vue Schedule component in the project, the `@syncfusion/ej2-vue-schedule` package needs to be installed using the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-vue-schedule --save
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn add @syncfusion/ej2-vue-schedule
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
@@ -160,83 +149,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3.In the `template` section, define the Schedule component with appointments. To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettingsModel/#datasource) property available within the [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventsettings/) option. Additionally, it is necessary to include the start and end time fields to define any appointments.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <div id='app'>
-    <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
-      <e-views>
-        <e-view option='Day'></e-view>
-        <e-view option='Week' startHour='07:00' endHour='15:00'></e-view>
-        <e-view option='WorkWeek' startHour='10:00' endHour='18:00'></e-view>
-        <e-view option='Month' showWeekend=false></e-view>
-        <e-view option='Agenda'></e-view>
-      </e-views>
-      <e-resources>
-        <e-resource field="OwnerId" title="Owner" name="Owners" :dataSource="ownerDataSource" textField="OwnerText"
-          idField="Id" colorField="OwnerColor">
-        </e-resource>
-      </e-resources>
-    </ejs-schedule>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-4.Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<script lang="ts">
-export default {
-  name: "App",
-  ...
-  data() {
-    return {
-      ...
-      eventSettings: {
-        dataSource: [
-          {
-            Id: 1,
-            Subject: 'Surgery - Andrew',
-            EventType: 'Confirmed',
-            StartTime: new Date(2021, 7, 10, 9, 0),
-            EndTime: new Date(2021, 7, 10, 10, 0),
-            OwnerId: 2
-          },
-          {
-            Id: 2,
-            Subject: 'Consulting - John',
-            EventType: 'Confirmed',
-            StartTime: new Date(2021, 7, 11, 10, 0),
-            EndTime: new Date(2021, 7, 11, 11, 30),
-            OwnerId: 3
-          },
-          {
-            Id: 3,
-            Subject: 'Therapy - Robert',
-            EventType: 'Requested',
-            StartTime: new Date(2021, 7, 12, 11, 30),
-            EndTime: new Date(2021, 7, 12, 12, 30),
-            OwnerId: 1
-          }
-        ]
-      } as EventSettingsModel,
-    };
-  }
-  ...
-};
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-5.To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
+3.To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -254,7 +167,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+4.Define the Schedule component with the dataSource property and column definitions. Declare the values for the dataSource property. 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -336,17 +249,6 @@ export default {
 };
 </script>
 
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material3.css';
-</style>
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -354,15 +256,18 @@ export default {
 
 To run the project, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm run dev
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn run dev
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The output will appear as follows:
 

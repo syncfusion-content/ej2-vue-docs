@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Working with data in Vue Chart component
 
-The Vue Chart component supports multiple data binding approaches to suit different application scenarios. Data can be bound from local JSON arrays, dynamically loaded on demand with lazy loading, or fetched from remote services using various adaptor patterns. This guide covers all available data binding methods, helping you choose the right approach for your use case based on data size, performance requirements, and backend architecture.
+The Vue Chart component supports multiple data binding approaches to suit different application scenarios. Data can be bound from local JSON arrays, dynamically loaded on demand with lazy loading, or fetched from remote services using various adaptor patterns. This guide covers all available data binding methods, helping you choose the right approach for your use case based on data size, performance requirements, and back-end architecture.
 ## Choosing a data binding approach
 | Method | Best For | Advantages | Considerations |
 |--------|----------|------------|-----------------|
@@ -22,7 +22,7 @@ The Vue Chart component supports multiple data binding approaches to suit differ
 
 ## Local data
 
-Bind simple JSON data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#datasource) property in the series configuration. Map the JSON fields to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#yname) properties to specify which data fields represent the x and y axis values.
+Bind simple JSON data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property in the series configuration. Map the JSON fields to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#yname) properties to specify which data fields represent the x and y axis values.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -37,7 +37,7 @@ Bind simple JSON data to the chart using the [`dataSource`](https://ej2.syncfusi
 
 ## Common datasource
 
-Bind the same JSON data to all series by setting the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#datasource) property at the chart level instead of the series level. This approach is useful when multiple series share the same dataset and you want to update data from a single source. Each series independently maps its own properties to the common data fields.
+Bind the same JSON data to all series by setting the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property at the chart level instead of the series level. This approach is useful when multiple series share the same dataset and you want to update data from a single source. Each series independently maps its own properties to the common data fields.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -52,7 +52,7 @@ Bind the same JSON data to all series by setting the [`dataSource`](https://ej2.
 
 ## Remote data
 
-Bind remote data from a web service by using the `DataManager` class. The DataManager simplifies communication with REST APIs, OData services, and custom web endpoints. It requires minimal configuration—typically just the service URL and an appropriate adaptor—then handles all request/response processing. Assign the DataManager instance to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#datasource) property in the series, and map the response fields to [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#yname) properties. You can also use the [`query`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#query) property to filter, sort, or paginate data on the server.
+Bind remote data from a web service by using the `DataManager` class. The DataManager simplifies communication with REST APIs, OData services, and custom web endpoints. It requires minimal configuration—typically just the service URL and an appropriate adaptor—then handles all request/response processing. Assign the DataManager instance to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property in the series, and map the response fields to [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#yname) properties. You can also use the [`query`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#query) property to filter, sort, or paginate data on the server.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -67,7 +67,7 @@ Bind remote data from a web service by using the `DataManager` class. The DataMa
 
 ## Binding data using ODataAdaptor
 
-[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data via REST APIs. Use the ODataAdaptor with DataManager to retrieve data from OData services. The adaptor automatically constructs the correct query syntax and handles standard OData conventions.
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data via REST APIs. Use the ODataAdaptor with DataManager to retrieve data from OData services. The adaptor automatically constructs the correct query syntax and handles standard OData conventions.
 **Example use case:** Querying a product sales service that implements OData v3.0 filtering, sorting, and pagination.
 
 {% tabs %}
@@ -83,7 +83,7 @@ Bind remote data from a web service by using the `DataManager` class. The DataMa
 
 ## Binding data using ODataV4Adaptor
 
-ODataV4 is an improved and more standardized version of the OData protocol, with enhanced query capabilities and better JSON support. Use the ODataV4Adaptor to consume ODataV4 services. For more information on ODataV4 specifications, refer to the [`odata documentation`](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197).
+ODataV4 is an improved and more standardized version of the OData protocol, with enhanced query capabilities and better JSON support. Use the ODataV4Adaptor to consume ODataV4 services. For more information on ODataV4 specifications, refer to the [`odata documentation`](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197).
 
 **When to use ODataV4Adaptor:** If your backend service implements OData v4.0, prefer this adaptor over the older ODataAdaptor for better compliance and features.
 
@@ -185,7 +185,7 @@ Data points with `null` or `undefined` values are treated as empty points. Empty
 
 **Customizing empty point**
 
-Assign a specific color to empty points by setting the `fill` property in the `emptyPointSettings` object. This allows you to visually distinguish empty data points from regular data in your chart. Border for a empty point can be set by `border` property.
+Assign a specific color to empty points by setting the `fill` property in the `emptyPointSettings` object. This allows you to visually distinguish empty data points from regular data in your chart. The border for an empty point can be customized using the `border` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
