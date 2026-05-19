@@ -119,3 +119,18 @@ The example below demonstrates adding the German culture locale (`de-DE`).
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/file-manager/locale-cs1" %}
+
+## Rendering component in right-to-left direction
+
+It is possible to render the File Manager in right-to-left direction by setting the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/file-manager#enablertl) API to true.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/rtl-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/rtl-cs1" %}

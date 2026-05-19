@@ -1034,3 +1034,108 @@ The following table provides the default context menu item and the corresponding
         </td>
     </tr>
 </table>
+
+## Ajax Settings Configuration
+
+The File Manager's [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#ajaxsettings) property allows you to configure the URLs for various file operations including file operations, upload, download, and image preview.
+
+### File Download support
+
+To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager component.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+    import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
+
+    const ajaxSettings =
+    {
+        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+        downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+    };
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+
+<script>
+    import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
+
+    export default {
+    name: "App",
+        components: {
+            'ejs-filemanager': FileManagerComponent
+        },
+        data () {
+            return {
+            ajaxSettings:
+                {
+                    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+                    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                }
+            }
+        }
+    }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### File Upload support
+
+To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager Component.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+    import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
+
+    const ajaxSettings =
+    {
+        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+        uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+    };
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+
+<script>
+    import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
+
+    export default {
+    name: "App",
+    components: {
+            'ejs-filemanager': FileManagerComponent
+        },
+        data () {
+            return {
+            ajaxSettings:
+                {
+                    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+                    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                }
+            }
+        }
+    }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Image Preview support
+
+To perform the image preview support in the File Manager component, need to initialize the `getImageUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager component.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/getting-started-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/getting-started-cs2" %}
