@@ -16,7 +16,7 @@
 // Import the required grid modules from the grid package
 import { GridComponent, ColumnsDirective, ColumnDirective, Page, Sort, Filter, Edit, Toolbar } from "@syncfusion/ej2-vue-grids";
 // Import Grid data from external file
-import { data } from "./datasource";
+import { data } from "./data";
 export default {
   name: "App",
   components: {

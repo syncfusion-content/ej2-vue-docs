@@ -17,7 +17,7 @@ import { provide } from "vue";
 // Import the required grid modules from the grid package
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Sort, Filter, Edit, Toolbar } from "@syncfusion/ej2-vue-grids";
 // Import Grid data from external file
-import { data } from "./datasource";
+import { data } from "./data";
 const pageSettings = { pageSize: 6 };
 const filterSettings = { type: "CheckBox" };
 const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };

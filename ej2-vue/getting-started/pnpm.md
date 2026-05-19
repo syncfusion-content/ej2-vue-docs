@@ -83,10 +83,7 @@ pnpm install @syncfusion/ej2-vue-grids --save
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Grid component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
-
-
-The dependency packages for Syncfusion<sup style="font-size:70%">&reg;</sup> in a PNPM vite project are situated within the `.pnpm/node_modules` directory.
+In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The dependency packages for Syncfusion<sup style="font-size:70%">&reg;</sup> in a PNPM Vite project are situated within the `.pnpm/node_modules` directory. Import the necessary `Material3` CSS styles for the Grid component and its dependents into the `<style>` section of the **src/App.vue** file:
 
 {% tabs %}
 {% highlight js tabtitle="~/src/App.vue" %}
@@ -110,21 +107,27 @@ The dependency packages for Syncfusion<sup style="font-size:70%">&reg;</sup> in 
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Grid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api):
+Add the Vue Grid component to the **src/App.vue** file using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) with the following steps:
 
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Grid component in the `script` section of the **src/App.vue** file.
+1\. Add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`, import the Grid component, and declare the data values in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/App.vue" %}
 
 <script setup>
   import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
+  
+  const data = [
+    { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 },
+    { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 },
+    { OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, ShipCountry: 'Brazil', Freight: 65.83 }
+  ];
 </script>
 
 {% endhighlight %}
 {% endtabs %}
-   
-2\. In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and column definitions.
+
+2\. In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/App.vue" %}
@@ -140,64 +143,6 @@ Follow the below steps to add the Vue Grid component using the [Composition API]
     </e-columns>
   </ejs-grid>
 </template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3\. Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight js tabtitle="~/src/App.vue" %}
-
-<script setup>
-  const data = [
-    { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 },
-    { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 },
-    { OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, ShipCountry: 'Brazil', Freight: 65.83 }
-  ];
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight js tabtitle="~/src/App.vue" %}
-
-<template>
-  <ejs-grid :dataSource='data'>
-    <e-columns>
-      <e-column field='OrderID' width='100' textAlign="Right"></e-column>
-      <e-column field='CustomerID' width='100'></e-column>
-      <e-column field='EmployeeID' width='100' textAlign="Right"></e-column>
-      <e-column field='Freight' width='100' format="C2" textAlign="Right"></e-column>
-      <e-column field='ShipCountry' width='100'></e-column>
-    </e-columns>
-  </ejs-grid>
-</template>
-
-<script setup>
-  // Import component and its directives
-  import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
-  const data = [
-    { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 },
-    { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 },
-    { OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, ShipCountry: 'Brazil', Freight: 65.83 }
-  ];
-</script>
-
-<style>
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-grids/styles/material3.css";
-</style>
 
 {% endhighlight %}
 {% endtabs %}

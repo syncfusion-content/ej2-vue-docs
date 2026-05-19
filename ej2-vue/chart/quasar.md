@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Integrating Syncfusion Vue Chart with Quasar | Syncfusion
+title: Integrating Syncfusion Vue Chart with Quasar | Syncfusion
 description: Set up a Quasar‑powered Vue 3 application and integrate the Syncfusion Essential JS 2 Vue Chart component using the Composition API.
 control: Quasar 
 platform: ej2-vue
@@ -16,10 +16,9 @@ The Quasar Framework is a Vue.js–based open-source framework that enables deve
 
 ## Prerequisites
 
-Ensure that the development environment meets the requirements listed in  
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart components](../system-requirements).
+Ensure that the development environment meets the requirements listed in [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart components](../system-requirements).
 
-## Set up the Quasar project
+## Set Up the Quasar Project
 
 To create a new Quasar project, run the following command:
 
@@ -43,7 +42,7 @@ cd quasar-project
 
 Now that `quasar-project` is ready, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component packages are available at [`npmjs.com`](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
@@ -55,52 +54,24 @@ npm install @syncfusion/ej2-vue-charts
 
 > Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
-Optional but recommended: To ensure proper styling, add one of the Syncfusion themes (for example, Material) to your Quasar config (for example, in `quasar.config.js` under the `css` array) or include the styles in a boot file:
-
-```javascript
-// quasar.config.js
-css: [
-    '@syncfusion/ej2-base/styles/material.css',
-    '@syncfusion/ej2-buttons/styles/material.css',
-    '@syncfusion/ej2-charts/styles/material.css',
-    // add other needed EJ2 component styles
-]
-```
-
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Component
 
 Follow the steps below to add the Vue Chart component:
 
-1. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`, and import the Chart component in the `script` section of **src/app.vue**.
+**Step 1:** First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`, and import the Chart component in the `script` section of **src/app.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <script setup>
 import { provide } from 'vue';
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, LineSeries, Legend, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 </script>
 
 {% endhighlight %}
 {% endtabs %}
-   
-2. In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
 
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-
-<template>
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
-        <e-series-collection>
-            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
-        </e-series-collection>
-    </ejs-chart>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3. Declare the values for the `dataSource` property in the `script` section.
+**Step 2:** Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -114,10 +85,29 @@ let seriesData = [
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
 ];
+const primaryXAxis = { valueType: 'Category' };
 </script>
 
 {% endhighlight %}
 {% endtabs %}
+   
+**Step 3:** In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/app.vue" %}
+
+<template>
+    <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
+        <e-series-collection>
+            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
+        </e-series-collection>
+    </ejs-chart>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+
 
 Here is the summarized code for the above steps in the **src/app.vue** file:
 
@@ -125,7 +115,7 @@ Here is the summarized code for the above steps in the **src/app.vue** file:
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <template>
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+    <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
         <e-series-collection>
             <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
         </e-series-collection>
@@ -134,7 +124,7 @@ Here is the summarized code for the above steps in the **src/app.vue** file:
 
 <script setup>
 import { provide } from 'vue';
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, LineSeries, Legend, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 let seriesData = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
@@ -144,17 +134,16 @@ let seriesData = [
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
 ];
-let title = 'Sales Analysis';
 let primaryXAxis = {valueType: 'Category'};
 
 // Register required modules (idiomatic one-liner)
-provide('chart', [LineSeries, Legend, Category]);
+provide('chart', [LineSeries, Category]);
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
 To run the project, use the following command:
 
@@ -164,4 +153,4 @@ npm run dev
 
 The output will appear as follows:
 
-![Quasar CLI chart output showing a line chart titled Sales Analysis](./images/quasar-output.png)
+![Quasar CLI chart output showing a line chart](./images/quasar-output.png)

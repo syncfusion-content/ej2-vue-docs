@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Getting started with testing Vue UI components in the Vitest project
 
-This article provides a step-by-step guide for setting up a [Vitest](https://vitest.dev/) project, integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components, and perform comprehensive testing of the components.
+This article provides a step-by-step guide for setting up a [Vitest](https://vitest.dev) project, integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components, and perform comprehensive testing of the components.
 
-`Vitest` is a blazing fast unit test framework powered by [Vite](https://vitejs.dev/) that makes it easy to write and run tests for your Vue.js components. It is designed to be fast, easy to use, and compatible with Jest.
+`Vitest` is a blazing fast unit test framework powered by [Vite](https://vite.dev) that makes it easy to write and run tests for your Vue.js components. It is designed to be fast, easy to use, and compatible with Jest.
 
 ## Prerequisites
 
@@ -28,25 +28,10 @@ npm create vue@latest
 
 Using the above commands will lead you to set up additional configurations for the project:
 
-1\. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1\. Define the project name (you can choose any name, for example my-project) and enable unit testing by selecting Yes for Vitest to automatically configure the project.
 
-```bash
-Vue.js - The Progressive JavaScript Framework
+![alt](../images/vitest.png)
 
-√ Project name: ... my-project
-```
-
-2\. To enable unit testing (`Vitest`) and configure the project, set the Vitest configuration to `Yes`.
-
-```bash
-√ Add TypeScript? ... No
-√ Add JSX Support? ... No
-√ Add Vue Router for Single Page Application development? ... No
-√ Add Pinia for state management? ... No
-√ Add Vitest for Unit Testing? ... Yes
-√ Add an End-to-End Testing Solution? » No
-√ Add ESLint for code quality? ... No
-```
 These are the additional options while creating a vue application 
 
 ![alt](../images/experimental.png)
@@ -96,7 +81,7 @@ npm install @syncfusion/ej2-vue-grids --save
 
 Follow the below steps to add the Vue Grid component:
 
-1\. First, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and column definitions in the **src/components/HelloWorld.vue** file.
+1\. First, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource) property and column definitions in the **src/components/HelloWorld.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="HelloWorld.vue" %}
@@ -148,40 +133,39 @@ export default {
 {% tabs %}
 {% highlight js tabtitle="HelloWorld.spec.js" %}
 
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import HelloWorld from '../HelloWorld.vue'
 
 describe('EJSGrid', () => {
+
+  beforeEach(() => {
+    Object.defineProperty(window, 'crypto', {
+      value: {
+        getRandomValues: vi.fn((arr) => arr),
+      },
+      configurable: true,
+    });
+  });
+
   it('Rows render correctly', async () => {
-
-    window.crypto = vi.fn();
-    window.crypto.getRandomValues = vi.fn();
-
     const wrapper = mount(HelloWorld);
 
     // Wait untill the component mount completely
-    await new Promise((res) => setTimeout(res, 50))
-    
+    await new Promise((res) => setTimeout(res, 50));
     const rows = wrapper.findAll('.e-row');
     expect(rows.length).toBe(wrapper.vm.data.length);
-    
     wrapper.unmount();
   });
 
   it('Columns render correctly', async () => {
-
-    window.crypto = vi.fn();
-    window.crypto.getRandomValues = vi.fn();
-
     const wrapper = mount(HelloWorld);
 
     // Wait untill the component mount completely
-    await new Promise((res) => setTimeout(res, 50))
-    
+    await new Promise((res) => setTimeout(res, 50));
     const colHeader = wrapper.findAll('.e-headertext');
 
-    for (let i = 0; i < Object.keys(wrapper.vm.data[0]).length; i++ ) {
+    for (let i = 0; i < Object.keys(wrapper.vm.data[0]).length; i++) {
       expect(colHeader[i].element.innerText).toBe(Object.keys(wrapper.vm.data[0])[i]);
     }
 
@@ -203,15 +187,17 @@ npm run test:unit
 The output will appear as follows:
 
 ```bash
- DEV  v0.31.4 D:/Testing/vitest
+ DEV  v4.1.6 D:/Testing/vitest
 
- ✓ src/components/__tests__/HelloWorld.spec.js (2)
+ ✓ src/components/__tests__/HelloWorld.spec.js (2 tests) 231ms
+   ✓ EJSGrid (2)
+     ✓ Rows render correctly 141ms
+     ✓ Columns render correctly 88ms
 
  Test Files  1 passed (1)
       Tests  2 passed (2)
-   Start at  13:06:12
-   Duration  3.05s (transform 126ms, setup 0ms, collect 1.80s, tests 221ms, environment 602ms, prepare 130ms)
-
+   Start at  12:00:34
+   Duration  1.80s (transform 133ms, setup 0ms, import 598ms, tests 231ms, environment 489ms)
 
  PASS  Waiting for file changes...
  press h to show help, press q to quit

@@ -47,6 +47,9 @@ The following example demonstrates how to enable basic features such as Paging, 
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs1/app.vue %}
 {% endhighlight %}
+{% highlight html tabtitle="data.js" %}
+{% include code-snippet/grid/getting-started/default-cs1/data.js %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/getting-started/default-cs1" %}

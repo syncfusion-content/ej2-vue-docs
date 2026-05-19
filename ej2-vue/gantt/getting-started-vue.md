@@ -14,8 +14,6 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
-
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
@@ -65,13 +63,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Rolldown is Vite's new experimental faster bundler (rust-based, replacing rollup). Choose `No` uses the stable, proven rollup-based Vite (recommended for most users)
-
-```bash
-Use rolldown-vite (Experimental)? No
-```
-
-5.Install dependencies and start the development server.
+4.Install dependencies and start the development server.
 
 ```bash
 Install with npm and start now?: Yes
@@ -100,7 +92,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are avai
 This article uses the [Vue Gantt Chart component](https://www.syncfusion.com/vue-components/vue-Gantt) as an example. To use the Vue Gantt Chart component in the project, the `@syncfusion/ej2-vue-gantt` package needs to be installed using the following command:
 
 ```bash
-npm install @syncfusion/ej2-vue-gantt --save
+npm install @syncfusion/ej2-vue-gantt
 ```
 
 or
@@ -111,8 +103,6 @@ yarn add @syncfusion/ej2-vue-gantt
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator), and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
 In this article, `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Gantt Chart component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 ### Using local style
@@ -121,62 +111,71 @@ Import the needed css styles for the Gantt Chart component along with dependency
 
 ```css
 <style>
-
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
 </style>
 
 ```
+> **Note:** When using features like editing, toolbar, filtering, or dialogs, you need to import additional component styles:
+> ```css
+> /* For editing, toolbar, and dialog features */
+> @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+> 
+> /* For rich text editor in dialog notes tab */
+> @import "../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css";
+> ```
 
-> Gantt Chart component use other Syncfusion<sup style="font-size:70%">&reg;</sup> components too, the dependent component's CSS references need to be added for using all the Gantt functionalities.
-
-### Using CDN link for style
-
-Using CDN link, you can directly refer to the Gantt control's style in the `index.html`.
-
-Refer to the Gantt's CDN links as follows.
-
-**Syntax:**
-
-> Styles: `https://cdn.syncfusion.com/ej2/{PACKAGE_NAME}/styles/tailwind3.css`
-
-**Example:**
-
-> Styles: [https://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css](https://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css)
+## Create sample data
+Define a simple task list with hierarchical relationships. Each task must have a `StartDate` and either a `Duration` or `EndDate` to render properly.
 
 ```js
-
-<link href="http://cdn.syncfusion.com/ej2/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-calendars/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-layouts/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-richtexteditor/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-grids/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<link href="http://cdn.syncfusion.com/ej2/ej2-treegrid/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
-<!-- Essential JS 2 tailwind3 theme -->
-<link href="http://cdn.syncfusion.com/ej2/ej2-gantt/styles/tailwind3.css" rel="stylesheet" type="text/css"/>
+const data = [
+  { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15') },
+  { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-08'), EndDate: new Date('2024-04-18') },
+  { TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 30, ParentID: 5 },
+  { TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 20, ParentID: 5 }
+]
 ```
+## Configure task fields
 
->**Important** The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+```js
+const taskFields = {
+  id: 'TaskID',
+  name: 'TaskName',
+  startDate: 'StartDate',
+  duration: 'Duration',
+  progress: 'Progress',
+  parentID: 'ParentID'
+};
+```
+### Field mapping reference
+
+| Property | Description | Required |
+|----------|-------------|----------|
+| `id` | Unique task identifier | Yes |
+| `name` | Task display name | Yes |
+| `startDate` | Task start date | Yes |
+| `duration` | Task duration in days | Yes |
+| `progress` | Task completion percentage (0-100) | No |
+| `parentID` | Parent task ID for hierarchy | No |
+
+*Either `duration` or `endDate` is required for a task to render properly.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Gantt Chart component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Gantt Chart component using `Composition API`:
 
 First, import and register the Gantt Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
@@ -184,125 +183,12 @@ First, import and register the Gantt Chart component and its child directives in
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-   import { GanttComponent as EjsGantt, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-gantt';
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-    import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-gantt';
-//Component registration
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent,
-    'e-columns': ColumnsDirective,
-    'e-column': ColumnDirective
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-   
-2.In the `template` section, define the Gantt Chart component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource) property and column definitions.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <ejs-gantt :dataSource='data' :treeColumnIndex='1' child='subtasks' :taskFields= 'taskFields'>
-        <e-columns>
-            <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-            <e-column field='TaskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-            <e-column field='StartDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-            <e-column field='Duration' headerText='Duration' textAlign='Right' width=80></e-column>
-       </e-columns>
-    </ejs-gantt>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3.Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-const data = [
-    { TaskID: 1, TaskName: 'Planning', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Progress: 100, Duration: 5, ParentID: null },
-
-    { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-    { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-    { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-    { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, ParentID: 1 },
-
-    { TaskID: 6, TaskName: 'Design', StartDate: new Date('02/10/2017'), EndDate: new Date('02/14/2017'), Duration: 3, Progress: 86, ParentID: null },
-
-    { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, ParentID: 6 },
-    { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 100, ParentID: 6 },
-
-    { TaskID: 9, TaskName: 'Get approval from customer', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
-    { TaskID: 10, TaskName: 'Design Documentation', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
-
-    { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0, ParentID: 6 }
-];
-
-const taskFields: {
-    id: 'TaskID',
-    name: 'TaskName',
-    startDate: 'StartDate',
-    endDate: 'EndDate',
-    duration: 'Duration',
-    progress: 'Progress',
-    parentID: 'ParentID'
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-<script>
-export default {
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Planning', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Progress: 100, Duration: 5, ParentID: null },
-
-        { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-        { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, ParentID: 1 },
-
-        { TaskID: 6, TaskName: 'Design', StartDate: new Date('02/10/2017'), EndDate: new Date('02/14/2017'), Duration: 3, Progress: 86, ParentID: null },
-
-        { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, ParentID: 6 },
-        { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 100, ParentID: 6 },
-        { TaskID: 9, TaskName: 'Get approval from customer', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
-        { TaskID: 10, TaskName: 'Design Documentation', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
-
-        { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0, ParentID: 6 }
-      ],
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      }
-    };
-  }
-};
+   import { GanttComponent as EjsGantt} from '@syncfusion/ej2-vue-gantt';
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -310,1293 +196,69 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 <template>
   <ejs-gantt 
     :dataSource="data"
-    :treeColumnIndex="1"
     :taskFields="taskFields"
   >
-    <e-columns>
-      <e-column field="TaskID" headerText="Task ID" textAlign="Right" width="70"></e-column>
-      <e-column field="TaskName" headerText="Task Name" textAlign="Left" width="200"></e-column>
-      <e-column field="StartDate" headerText="Start Date" textAlign="Right" format="yMd" width="90"></e-column>
-      <e-column field="Duration" headerText="Duration" textAlign="Right" width="80"></e-column>
-    </e-columns>
   </ejs-gantt>
 </template>
 
 <script setup>
-const data = [
-  { TaskID: 1, TaskName: 'Planning', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Progress: 100, Duration: 5, ParentID: null },
-
-  { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-  { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-  { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, ParentID: 1 },
-  { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, ParentID: 1 },
-
-  { TaskID: 6, TaskName: 'Design', StartDate: new Date('02/10/2017'), EndDate: new Date('02/14/2017'), Duration: 3, Progress: 86, ParentID: null },
-
-  { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, ParentID: 6 },
-  { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 100, ParentID: 6 },
-
-  { TaskID: 9, TaskName: 'Get approval from customer', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
-  { TaskID: 10, TaskName: 'Design Documentation', StartDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, ParentID: 6 },
-
-  { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0, ParentID: 6 }
-];
-
-const taskFields = {
-  id: 'TaskID',
-  name: 'TaskName',
-  startDate: 'StartDate',
-  endDate: 'EndDate',
-  duration: 'Duration',
-  progress: 'Progress',
-  parentID: 'ParentID'
-};
-</script>
-
-<style>
-
- @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
- @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :columns="columns"
-      :toolbar="toolbar"
-      :allowFiltering="true"
-      :timelineSettings="timelineSettings"
-      :splitterSettings="splitterSettings"
-      :labelSettings="labelSettings"
-      :projectStartDate="projectStartDate"
-      :projectEndDate="projectEndDate"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, Filter, Toolbar } from "@syncfusion/ej2-vue-gantt";
-
-export default {
-  name: "App",
-  components: {
-    "ejs-gantt": GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      },
-
-      columns: [
-        { field: 'TaskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
-        { field: 'StartDate', headerText: 'Start Date' },
-        { field: 'Duration', headerText: 'Duration' },
-        { field: 'EndDate', headerText: 'End Date' },
-        { field: 'Predecessor', headerText: 'Predecessor' }
-      ],
-
-      toolbar: ['Search'],
-
-      timelineSettings: {
-        timelineUnitSize: 60,
-        topTier: { format: 'MMM dd, yyyy', unit: 'Week' },
-        bottomTier: { unit: 'Day' }
-      },
-
-      splitterSettings: { columnIndex: 3 },
-
-      labelSettings: { rightLabel: 'TaskName' },
-
-      projectStartDate: new Date('04/01/2019 01:00:00 AM'),
-      projectEndDate: new Date('05/10/2019')
-    };
-  },
-  provide: {
-    gantt: [Filter, Toolbar]
-  }
-};
+  import { GanttComponent as EjsGantt} from '@syncfusion/ej2-vue-gantt';
+  const data = [
+    {TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15')},
+    {TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1},
+    {TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1},
+    {TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1},
+    {TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-08'), EndDate: new Date('2024-04-18')},
+    {TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 30, ParentID: 5},
+    {TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 20, ParentID: 5}
+  ];
+  const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'ParentID'
+  };
 </script>
 
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-gantt/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
-
-## Defining timeline
-
-The Gantt chart provides an option to define the timeline using the [timelineSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelinesettings) property with various configuration options. This property allows customization of the Gantt timeline.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :timelineSettings="timelineSettings"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      },
-
-      timelineSettings: {
-        topTier: { format: 'MMM dd, yyyy', unit: 'Week' },
-        bottomTier: { unit: 'Day' }
-      }
-    };
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-
-## Enable Toolbar
-
-The [toolbar](https://ej2.syncfusion.com/vue/documentation/api/gantt#toolbar) property is used to add toolbar items such as Add, Remove, Edit, Update, Delete, Expand All, and Collapse All in the Gantt chart.
-
-To use the toolbar, inject the `Toolbar` module in the `provide` section.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :toolbar="toolbar"
-      :editSettings="editSettings"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, Edit, Selection, Toolbar } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      },
-
-      toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
-
-      editSettings: {
-        allowAdding: true,
-        allowEditing: true,
-        allowDeleting: true,
-        allowTaskbarEditing: true,
-        showDeleteConfirmDialog: true
-      }
-    };
-  },
-
-  provide: {
-    gantt: [Edit, Selection, Toolbar]
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-## Enabling editing
-
-The editing feature enables task modifications in the Gantt Chart component. It can be enabled by using the [editSettings.allowEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowediting) and [editSettings.allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) properties.
-
-To use editing, inject the [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module in the `provide` section.
-
-The following editing options are available to update tasks in the Gantt:
-
-* Cell
-* Dialog
-* Taskbar
-* Connector line
-
-### Cell editing
-
-Modify task details through cell editing by setting the edit [mode](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#mode) property to **Auto**. To enable edit support, the [Edit](https://ej2.syncfusion.com/vue/documentation/api/gantt#editmodule) module must be injected into the Gantt. If the `Edit` module is not injected, no editing actions can be performed in the Gantt.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :toolbar="toolbar"
-      :columns="columns"
-      :editSettings="editSettings"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, Edit } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      },
-
-      columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-        { field: 'TaskName', headerText: 'Task Name', width: '250' },
-        { field: 'StartDate', headerText: 'Start Date', width: '150' },
-        { field: 'Duration', headerText: 'Duration', width: '150' },
-        { field: 'Progress', headerText: 'Progress', width: '150' }
-      ],
-
-      toolbar: ['Edit'],
-
-      editSettings: {
-        allowEditing: true,
-        mode: 'Auto'
-      }
-    };
-  },
-
-  provide: {
-    gantt: [Edit]
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-> When the edit mode is set to `Auto`, cells can be switched to editable mode by double‑clicking anywhere in the TreeGrid, and task details can be edited in the edit dialog by double‑clicking anywhere in the chart.
-
-### Dialog editing
-
-Modify task details through a dialog by setting the edit [mode](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#mode) property as `Dialog`.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :toolbar="toolbar"
-      :columns="columns"
-      :editSettings="editSettings"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, Edit } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      },
-
-      columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-        { field: 'TaskName', headerText: 'Task Name', width: '250' },
-        { field: 'StartDate', headerText: 'Start Date', width: '150' },
-        { field: 'Duration', headerText: 'Duration', width: '150' },
-        { field: 'Progress', headerText: 'Progress', width: '150' }
-      ],
-
-      toolbar: ['Edit'],
-
-      editSettings: {
-        allowEditing: true,
-        mode: "Dialog"
-      }
-    };
-  },
-  provide: {
-    gantt: [Edit]
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-
-> In dialog editing mode, the edit dialog appears when performing a double‑click action on both the TreeGrid and chart sides.
-
-### Taskbar editing
-
-Modify task details through user interactions such as resizing and dragging the taskbar by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) property.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :toolbar="toolbar"
-      :columns="columns"
-      :editSettings="editSettings"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, Edit } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      },
-
-      columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-        { field: 'TaskName', headerText: 'Task Name', width: '250' },
-        { field: 'StartDate', headerText: 'Start Date', width: '150' },
-        { field: 'Duration', headerText: 'Duration', width: '150' },
-        { field: 'Progress', headerText: 'Progress', width: '150' }
-      ],
-
-      toolbar: ['Edit'],
-
-      editSettings: {
-        allowTaskbarEditing: true
-      }
-    };
-  },
-
-  provide: {
-    gantt: [Edit]
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-
-### Dependency editing
-
-Modify task dependencies using mouse interactions by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbarediting) property along with mapping the task dependency data source field to the [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields#dependency) property.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :toolbar="toolbar"
-      :columns="columns"
-      :editSettings="editSettings"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, Edit } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: "2FS", Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: "6SS", Progress: 50, ParentID: 5 }
-      ],
-      height: '450px',
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        parentID: 'ParentID'
-      },
-
-      columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-        { field: 'TaskName', headerText: 'Task Name', width: '250' },
-        { field: 'StartDate', headerText: 'Start Date', width: '150' },
-        { field: 'Duration', headerText: 'Duration', width: '150' },
-        { field: 'Progress', headerText: 'Progress', width: '150' }
-      ],
-
-      toolbar: ['Edit'],
-
-      editSettings: {
-        allowTaskbarEditing: true
-      }
-    };
-  },
-  provide: {
-    gantt: [Edit]
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-
-## Enabling predecessors or task relationships
-
-Predecessors or task dependencies in the Gantt Chart component are used to depict relationships between tasks.
-
-* **Start to Start (SS)**: A task cannot start until its dependent task starts.
-* **Start to Finish (SF)**: A task cannot finish until its dependent task starts.
-* **Finish to Start (FS)**: A task cannot start until its dependent task completes.
-* **Finish to Finish (FF)**: A task cannot finish until its dependent task completes.
-
-Task relationships can be shown by using the[dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields#dependency) property, as demonstrated in the following code example:
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      highlightWeekends="true"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: "2FS", Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: "6SS", Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        parentID: 'ParentID'
-      }
-    };
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-## Assigning resources
-
-Resources can be displayed and assigned to each task in the Gantt Chart component. Create a collection of JSON objects that contain the id, name, unit, and group of the resources, and assign it to the [resources](https://ej2.syncfusion.com/vue/documentation/api/gantt#resources) property.
-
-Map these fields to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/vue/documentation/api/gantt#resourceFields) property.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :treeColumnIndex="1"
-      :resourceFields="resourceFields"
-      :resources="resources"
-      :highlightWeekends="true"
-      :labelSettings="labelSettings"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, resources: [1], ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: '2', Progress: 50, resources: [2, 3, 5], ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '4', Progress: 50, resources: [4], ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '6', Progress: 50, resources: [4, 8], ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: '7', Progress: 50, resources: [12, 5], ParentID: 5 }
-      ],
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        parentID: 'ParentID',
-        resourceInfo: 'resources'
-      },
-
-      height: '450px',
-
-      resourceFields: {
-        id: 'resourceId',
-        name: 'resourceName'
-      },
-
-      resources: [
-        { resourceId: 1, resourceName: 'Martin Tamer' },
-        { resourceId: 2, resourceName: 'Rose Fuller' },
-        { resourceId: 3, resourceName: 'Margaret Buchanan' },
-        { resourceId: 4, resourceName: 'Fuller King' },
-        { resourceId: 5, resourceName: 'Davolio Fuller' },
-        { resourceId: 6, resourceName: 'Van Jack' },
-        { resourceId: 7, resourceName: 'Fuller Buchanan' },
-        { resourceId: 8, resourceName: 'Jack Davolio' },
-        { resourceId: 9, resourceName: 'Tamer Vinet' },
-        { resourceId: 10, resourceName: 'Vinet Fuller' },
-        { resourceId: 11, resourceName: 'Bergs Anton' },
-        { resourceId: 12, resourceName: 'Construction Supervisor' }
-      ],
-
-      labelSettings: {
-        leftLabel: 'TaskName',
-        rightLabel: 'resources'
-      }
-    };
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-
-## Enable filtering
-
-The filtering feature enables viewing a reduced set of records based on filter criteria. The Gantt component provides menu filtering support for each column. It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowfiltering) property to **true** along with injecting the `Filter` module, as shown in the following code example. The filtering feature can also be customized using the [filterSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/filterSettings) property.
-
-To use filtering, inject the [Filter](https://ej2.syncfusion.com/vue/documentation/api/gantt#filtermodule) module in the `provide` section.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :columns="columns"
-      :toolbar="toolbar"
-      :allowFiltering="true"
-      :timelineSettings="timelineSettings"
-      :splitterSettings="splitterSettings"
-      :labelSettings="labelSettings"
-      :projectStartDate="projectStartDate"
-      :projectEndDate="projectEndDate"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, Filter, Toolbar } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        parentID: 'ParentID'
-      },
-
-      columns: [
-        { field: 'TaskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
-        { field: 'StartDate', headerText: 'Start Date' },
-        { field: 'Duration', headerText: 'Duration' },
-        { field: 'EndDate', headerText: 'End Date' },
-      ],
-
-      toolbar: ['Search'],
-
-      timelineSettings: {
-        timelineUnitSize: 60,
-        topTier: { format: 'MMM dd, yyyy', unit: 'Week' },
-        bottomTier: { unit: 'Day' }
-      },
-
-      splitterSettings: {
-        columnIndex: 3
-      },
-
-      labelSettings: {
-        rightLabel: 'TaskName'
-      },
-
-      projectStartDate: new Date('04/01/2019 01:00:00 AM'),
-      projectEndDate: new Date('05/10/2019')
-    };
-  },
-
-  provide: {
-    gantt: [Filter, Toolbar]
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-
-## Enable Sorting
-
-The sorting feature enables ordering of records. It can be enabled by setting the [allowSorting](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowsorting) property to true. The Sort module must also be injected in the `provide` section. If the `Sort` module is not injected, sorting will not work when clicking the column headers. The sorting feature can be customized using the [sortSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt/sortSettings) property.
-
-```html
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :columns="columns"
-      :splitterSettings="splitterSettings"
-      :allowSorting="true"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, Sort } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      },
-
-      allowSorting: true,
-
-      splitterSettings: {
-        columnIndex: 3
-      },
-
-      columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
-        { field: 'TaskName', headerText: 'Task Name', width: '250' },
-        { field: 'StartDate', headerText: 'Start Date', width: '150' },
-        { field: 'Duration', headerText: 'Duration', width: '150' },
-        { field: 'Progress', headerText: 'Progress', width: '150' }
-      ]
-    };
-  },
-  provide: {
-    gantt: [Sort]
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-```
-
-## Defining event markers
-
-The [eventMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt#eventmarkers) property in the Gantt Chart component is used to highlight important events in the chart area. This feature allows adding lines and labels to emphasize significant days in a project.
-
-To highlight these days, inject the `DayMarkers` module in the `provide` section.
-
-```html
-
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :eventMarkers="eventMarkers"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent, DayMarkers } from '@syncfusion/ej2-vue-gantt';
-import { projectNewData } from './project-data';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('04/02/2019'), Duration: 0, Progress: 50, resources: [1], ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: '2', Progress: 50, resources: [2, 3, 5], ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '4', Progress: 50, resources: [4], ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '6', Progress: 50, resources: [4, 8], ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: '7', Progress: 50, resources: [12, 5], ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        parentID: 'ParentID'
-      },
-
-      eventMarkers: [
-        { day: new Date('04/09/2019'), label: 'Research phase' },
-        { day: new Date('04/30/2019'), label: 'Design phase' },
-        { day: new Date('05/23/2019'), label: 'Production phase' },
-        { day: new Date('06/20/2019'), label: 'Sales and marketing phase' }
-      ]
-    };
-  },
-
-  provide: {
-    gantt: [DayMarkers]
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
-</style>
-
-```
 
 ## Running the application
 
 Run the application using the following command.
 
 ```bash
-npm run serve
+npm run dev
 ```
+
+## Output
+
+You will see a Gantt Chart with:
+
+- Task hierarchy with parent-child relationships
+- Timeline view showing task bars
+- Progress indicators on each task
+- Automatically calculated dates based on duration
+
+The chart displays two parent tasks ("Project initiation" and "Project estimation") with their subtasks shown in a tree structure. Task bars are rendered on the timeline, sized according to their duration and start dates.
+
+## Next Steps
+
+- **[Key Elements](./key-elements)** - Learn about UI components and interactions
+- **[Feature Modules](./module)** - Enable advanced features with module injection
+- **[Overview](./overview)** - Explore all available features
 
 ![Getting started](./images/getting-started.png)
 
 Web server will be initiated, Open the quick start app in the browser at port `localhost:8080`.
-
-## Error handling
-
-Error handling is used to identify errors, display them and develop recovery strategies to handle errors from gantt. In Gantt, error handling is done by using the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionfailure) event. Some of the scenarios that this event handles are:
-* Invalid duration : The [duration](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields#duration) field accepts only numerical values with an optional decimal point. Entering non-numerical values triggers the `actionFailure` event and displays issue information in the event argument.
-* Invalid dependency: The [dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields#dependency) field accepts only a number followed by a predecessor type (FS, FF, SS, SF).  Entering invalid values, such as special characters or incorrect predecessor types, triggers the `actionFailure` event and displays issue information in the event argument.
-* Invalid offset : The [offset](https://ej2.syncfusion.com/vue/documentation/api/gantt/iPredecessor#offset) accepts only numerical values or their word equivalents followed by a unit. Entering invalid values, such as special characters triggers `actionFailure` event and displays issue information in the event argument.
-* Failure to map task fields : The data source fields necessary for rendering tasks should be mapped to the Gantt control using the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields) property. Failure to map `taskFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
-* Failure to map resource fields : To assign resources to a task, resource fields should be mapped to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/resourceFields). Failure to map `resourceFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
-* Failure to map `isPrimaryKey` : [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#isprimarykey) field is crucial for CRUD operations. Failure to map [id](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields#id) column in gantt column collection or [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/gantt/column#isprimarykey) field in one of the columns will trigger `actionFailure` event and display issue information in the event argument.
-* Invalid date format : [format](https://ej2.syncfusion.com/vue/documentation/api/gantt/itimelineformatter) property under `topTier` and `bottomTier` determines how the timelines are displayed in the top tier and bottom tier of the Gantt chart timeline. If the `format` does not contain a valid standard [date format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), it triggers the `actionFailure` event, displaying issue information in the event argument.
-* Failure to map `hasChildMapping` : [hasChildMapping](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields#haschildmapping) property should configured for [load-on-demand](https://ej2.syncfusion.com/vue/documentation/gantt/data-binding#load-child-on-demand). Ensure it properly configured in the [taskFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskfields). Failure to map `hasChildMapping` in the `load-on-demand` sample triggers `actionFailure` event and displays issue information in the event argument.
-* Invalid day in event markers : [day](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker#day) should configured in [eventMarkers](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker) to render striplines in a particular day. Failure to configure the `day` in `eventMarkers` triggers `actionFailure` event and displays issue information in the event argument.
-
-> Additionally, TreeGrid side error handling information is also displayed from the Gantt `actionFailure` event. For more details on TreeGrid side error handling, refer [here](https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started#handling-errors).
-
-The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/gantt#actionfailure) event in the Gantt control to display an exception when `isPrimaryKey` is not configured properly in the Gantt Chart column.
-
-```html
-
-<template>
-  <div>
-    <ejs-gantt
-      ref="gantt"
-      id="GanttContainer"
-      :dataSource="data"
-      :taskFields="taskFields"
-      :height="height"
-      :columns="columns"
-      :splitterSettings="splitterSettings"
-      :actionFailure="actionFailure"
-    ></ejs-gantt>
-  </div>
-</template>
-
-<script>
-import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-gantt': GanttComponent
-  },
-  data() {
-    return {
-      data: [
-        { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-        { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-
-        { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-        { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-        { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
-      ],
-
-      height: '450px',
-
-      taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'ParentID'
-      },
-
-      splitterSettings: {
-        columnIndex: 3
-      },
-
-      columns: [
-        { field: 'TaskName', headerText: 'Task Name', width: '250' },
-        { field: 'StartDate', headerText: 'Start Date', width: '150' },
-        { field: 'Duration', headerText: 'Duration', width: '150' },
-        { field: 'Progress', headerText: 'Progress', width: '150' }
-      ]
-    };
-  },
-
-  methods: {
-    actionFailure(args) {
-      let span = document.createElement('span');
-      let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0];
-      gantt.element.parentNode.insertBefore(span, gantt.element);
-      span.style.color = '#FF0000';
-      span.innerHTML = args.error[0];
-    }
-  }
-};
-</script>
-
-```
-
-The following screenshot represents the Gantt Exception handling in `actionFailure` event.
-
-![Error Handling](./images/error-handling.png)

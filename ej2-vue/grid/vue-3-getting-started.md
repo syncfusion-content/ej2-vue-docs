@@ -149,13 +149,13 @@ The grid code should be placed in the **src/App.vue** file.
 ## Run the project
 
 ```bash
-npm run serve
+npm run dev
 ```
 
 or
 
 ```bash
-yarn run serve
+yarn run dev
 ```
 
 ## See also
