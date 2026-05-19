@@ -22,60 +22,45 @@ The `Composition API` is a new feature introduced in Vue.js 3 that provides an a
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vite.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm create vite@latest
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn create vite
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1. **Project name** - Type: `my-project` (or any name you want)
 
-```bash
-? Project name: » my-project
-```
+2. **Select framework** - Choose: **Vue**
 
-2.Select `Vue` as the framework. It will creates a Vue 3 project.
+3. **Select variant** - Choose: **JavaScript**
 
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
+4. **Install with npm and start now?** - Choose: No
 
-3.Choose `JavaScript` as framework variant to build this Vite project using JavaScript and Vue.
+5. **Go to your project and install packages:**
 
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
-
-```bash
 cd my-project
 npm install
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 cd my-project
 yarn install
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -85,15 +70,18 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are avai
 
 This article uses the [Vue Grid component](https://www.syncfusion.com/vue-components/vue-grid) as an example. To use the Vue Grid component in the project, the `@syncfusion/ej2-vue-grids` package needs to be installed using the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-vue-grids --save
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn add @syncfusion/ej2-vue-grids
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
@@ -137,49 +125,7 @@ Follow the below steps to add the Vue Grid component using `Composition API`:
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and column definitions.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <ejs-grid :dataSource='data'>
-    <e-columns>
-      <e-column field='OrderID' width='100' textAlign="Right"></e-column>
-      <e-column field='CustomerID' width='100'></e-column>
-      <e-column field='EmployeeID' width='100' textAlign="Right"></e-column>
-      <e-column field='Freight' width='100' format="C2" textAlign="Right"></e-column>
-      <e-column field='ShipCountry' width='100'></e-column>
-    </e-columns>
-  </ejs-grid>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3.Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<script setup>
-const data = [
-  {
-    OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 
-  },
-  {
-    OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 
-  },
-  {
-    OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, ShipCountry: 'Brazil', Freight: 65.83 
-  }
-];
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+2.Define the Grid component with the dataSource property and column definitions. Declare the values for the dataSource property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -211,18 +157,6 @@ const data = [
 ];
 </script>
 
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-</style>
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -230,15 +164,19 @@ const data = [
 
 To run the project, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm run dev
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn run dev
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 The output will appear as follows:
 

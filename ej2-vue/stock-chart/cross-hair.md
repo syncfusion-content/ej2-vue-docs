@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.
 
-Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#enable-boolean)property in the `crosshair`.
+Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#enable-boolean)property in the `crosshair`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/v
 
 ## Tooltip for axis
 
-Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#enable-boolean) property of `crosshairTooltip` in the corresponding axis.
+Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#enable-boolean) property of `crosshairTooltip` in the corresponding axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfu
 
 ## Customization
 
-The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#fill-string) and [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#textstyle-fontmodel) property of the `crosshairTooltip` is used to customize the background color and font style of the crosshair label respectively. Color and width of the crosshair line can be customized by using the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#line-bordermodel) property in the crosshair.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#fill-string) and [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#textstyle-fontmodel) property of the `crosshairTooltip` is used to customize the background color and font style of the crosshair label respectively. Color and width of the crosshair line can be customized by using the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#line-bordermodel) property in the crosshair.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSet
 
 ## Crosshair label customization
 
-The [`crosshairLabelRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#crosshairlabelrender) event is triggered before each crosshair axis label is rendered in the stock chart. This event provides the ability to customize the appearance and content of crosshair labels, or to conditionally prevent specific labels from being displayed.
+The [`crosshairLabelRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#crosshairlabelrender) event is triggered before each crosshair axis label is rendered in the stock chart. This event provides the ability to customize the appearance and content of crosshair labels, or to conditionally prevent specific labels from being displayed.
 
 The event arguments include:
 
@@ -82,7 +82,7 @@ The event arguments include:
 
 **Snap to data**
 
-Enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
+Enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -94,5 +94,19 @@ Enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/cha
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/stockchart/cross-hair-cs4" %}
+
+## Trackball
+
+Trackball highlights the data point closest to the mouse or touch position. The trackball marker indicates the closest point and the trackball tooltip displays its details. To use the trackball feature, inject `Crosshair` and `Tooltip` into the `provide`.
+
+Enable the trackball by setting the crosshair [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip#enable) property to `true` and the [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipsettings#shared-boolean) property in `tooltip` to `true`.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/stockchart/getting-started-cs4/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/stockchart/getting-started-cs4" %}
 
 >Note: To use crosshair feature, we need to inject `Crosshair` into the `provide`.

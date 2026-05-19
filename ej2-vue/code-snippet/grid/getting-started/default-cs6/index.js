@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { GridPlugin, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin } from "@syncfusion/ej2-vue-grids";
 
 Vue.use(GridPlugin);
 
@@ -9,19 +9,14 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-grid :dataSource="data" :allowPaging="true" :allowSorting='true' :allowFiltering='true' :allowGrouping='true' :pageSettings='pageSettings'>
+        <ejs-grid :dataSource="data">
           <e-columns>
-            <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
-            <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-            <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+            <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
+            <e-column field='CustomerName' headerText='CustomerName' width=100></e-column>
+            <e-column field='OrderDate' headerText='OrderDate' width='100' format='yMd' textAlign='Right'></e-column>
+            <e-column field='Freight' headerText='Freight' width=100 format='C2' textAlign='Right'></e-column>
+            <e-column field='ShipCountry' headerText='ShipCountry' width=100></e-column>
           </e-columns>
-          <e-aggregates>
-            <e-aggregate>
-                <e-columns>
-                    <e-column type="Sum" field="Freight" format="C2" :footerTemplate='footerSum'></e-column>
-                </e-columns>
-            </e-aggregate>
-          </e-aggregates>
         </ejs-grid>
     </div>
 `,
@@ -29,28 +24,13 @@ new Vue({
   data() {
     return {
       data: [
-          { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
-          { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
-          { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
-          { OrderID: 10251, CustomerID: 'VICTE', Freight: 41.34 },
-          { OrderID: 10252, CustomerID: 'SUPRD', Freight: 51.3 },
-          { OrderID: 10253, CustomerID: 'HANAR', Freight: 58.17 },
-          { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
-          { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
-          { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
+        { OrderID: 10248, CustomerName: 'Ana Trujillo', OrderDate: new Date(2025, 0, 12), ShipCountry: 'France', Freight: 32.38 },
+        { OrderID: 10249, CustomerName: 'Martin Sommer', OrderDate: new Date(2025, 0, 15), ShipCountry: 'Germany', Freight: 11.61 },
+        { OrderID: 10250, CustomerName: 'Thomas Hardy', OrderDate: new Date(2025, 1, 5), ShipCountry: 'Brazil', Freight: 65.83 },
+        { OrderID: 10251, CustomerName: 'Elizabeth Lincoln', OrderDate: new Date(2025, 1, 18), ShipCountry: 'France', Freight: 41.34 },
+        { OrderID: 10252, CustomerName: 'Victoria Ashworth', OrderDate: new Date(2025, 2, 10), ShipCountry: 'Belgium', Freight: 51.30 },
+        { OrderID: 10253, CustomerName: 'Martine Rance', OrderDate: new Date(2025, 2, 22), ShipCountry: 'Brazil', Freight: 58.17 },
       ],
-      pageSettings: { pageSize: 5 },
-      footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
-            template: `<span>Sum: {{data.Sum}}</span>`,
-            data () {return { data: {}};}
-            })
-          }
-      }
     };
   },
-  provide: {
-    grid: [Page, Sort, Filter, Group, Aggregate]
-  }
-
 });

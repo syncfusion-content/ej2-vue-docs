@@ -14,24 +14,15 @@
 import { provide } from "vue";
 import { chartData } from "./datasource.js";
 import {
-  StockChartComponent as EjsStockchart, StockChartSeriesCollectionDirective as EStockchartSeriesCollection, StockChartSeriesDirective as EStockchartSeries, DateTime, CandleSeries, RangeTooltip, LineSeries, SplineSeries,
-  HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines, EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export
+  StockChartComponent as EjsStockchart, StockChartSeriesCollectionDirective as EStockchartSeriesCollection, StockChartSeriesDirective as EStockchartSeries, DateTime, CandleSeries
 } from "@syncfusion/ej2-vue-charts";
 
 
 const seriesData = chartData;
-const primaryXAxis = {
-  valueType: "DateTime",
-  majorGridLines: { color: "transparent" },
-};
-const primaryYAxis = {
-  majorTickLines: { color: "transparent", width: 0 }
-};
 const title = 'AAPL Stock Price';
 
 provide('stockChart', [
-  DateTime, RangeTooltip, LineSeries, SplineSeries, CandleSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines, EmaIndicator, RsiIndicator,
-  BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export
+  DateTime, CandleSeries
 ]);
 
 </script>
