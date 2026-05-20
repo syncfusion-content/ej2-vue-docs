@@ -70,7 +70,13 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Install dependencies and start the dev server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
 ```bash
 cd my-project
@@ -88,9 +94,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue File Manager component](https://www.syncfusion.com/vue-components/vue-file-manager) as an example. To use the Vue File Manager component in the project, the `@syncfusion/ej2-vue-filemanager` package needs to be installed using the following command:
+To install the File Manager component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-filemanager --save
@@ -104,9 +108,7 @@ yarn add @syncfusion/ej2-vue-filemanager
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+The following CSS files are available in the ../node_modules/@syncfusion package folder. Add these as references in **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -126,135 +128,23 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 
 {% endhighlight %}
 {% endtabs %}
+
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue File Manager component using `Composition API` or `Options API`:
-
-1.First, import and register the File Manager component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+The File manager code should be placed in the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-</script>
-
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
+{% include code-snippet/file-manager/getting-started-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-//Component registration
-export default {
-  name: "App",
-  components: {
-    "ejs-filemanager": FileManagerComponent 
-  }
-}
-</script>
-
+{% highlight html tabtitle="Option API ~/src/App.vue" %}
+{% include code-snippet/file-manager/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-  >Note: By default, LargeIcons view will be initialized in the File Manager. If Grid view is required then the DetailsView module needs to be injected using `provide`.
-
-2.Add the component definition in template section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings"></ejs-filemanager>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings"></ejs-filemanager>
-</template>
-
-<script setup>
-  import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-  import { provide } from "vue";
-
-  const filemanager = [DetailsView, NavigationPane, Toolbar];
-  provide('filemanager', filemanager);
-
-  const ajaxSettings = {
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-  };
-</script>
-
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material3.css";
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings"></ejs-filemanager>
-</template>
-
-<script>
-import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-//Component registration
-export default {
-  name: "App",
-  components: {
-    "ejs-filemanager": FileManagerComponent
-  },
-  data() {
-    return {
-      ajaxSettings:
-      {
-        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-        getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-        uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-        downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-      },
-    };
-  },
-  provide: {
-    filemanager: [DetailsView, NavigationPane, Toolbar]
-  }
-}
-</script>
-
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material3.css";
-</style>
-
-{% endhighlight %}
-{% endtabs %}
+{% previewsample "page.domainurl/code-snippet/file-manager/getting-started-cs1" %}
 
 ## Run the project
 
@@ -270,13 +160,15 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
-
-![vue-3-js-file-manager](./images/vue3-filemanager-demo.PNG)
-
 For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 
 * [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
 * [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+* [Ajax Settings Configuration (uploadUrl, downloadUrl, getImageUrl)](./file-operations#ajax-settings-configuration)
+* [Injecting Services for Overview](./user-interface#injecting-services-for-overview)
+* [File Manager Views](./views)
+* [File Manager File Operations](./file-operations)
+* [File Manager Upload](./upload)
+* [File Manager Customization](./customization)
