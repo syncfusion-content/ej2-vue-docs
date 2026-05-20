@@ -478,7 +478,7 @@ For this project, the "Bootstrap 5.3" theme is applied. Other themes can be sele
 
 Create a basic Diagram component in **src/App.vue**:
 
-```vue
+```html
 <template>
   <div>
     <ejs-diagram id="diagram" width="100%" height="600px"></ejs-diagram>
@@ -499,7 +499,7 @@ Remote data binding enables the diagram to fetch organizational chart data from 
 
 Add the data binding configuration to DiagramComponent:
 
-```vue
+```html
 <template>
   <div>
     <ejs-diagram
@@ -574,7 +574,7 @@ export default {
 
 Here is the complete **src/App.vue** file:
 
-```vue
+```html
 <template>
   <div>
     <ejs-diagram

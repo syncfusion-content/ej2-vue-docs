@@ -117,8 +117,6 @@ In this article, `material3` theme is applied using CSS styles, which are availa
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
-
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Follow the below steps to add the Vue Pivotview component using `Composition API` or `Options API`:
@@ -222,116 +220,101 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-        <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings"
-            :showFieldList="showFieldList" :showGroupingBar="showGroupingBar"
-            :allowCalculatedField="allowCalculatedField"></ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings"></ejs-pivotview>
+  </div>
 </template>
 
 <script setup>
-    import { provide } from "vue";
-    import { PivotViewComponent as EjsPivotview, GroupingBar, FieldList, CalculatedField } from "@syncfusion/ej2-vue-pivotview";
+import { provide } from "vue";
+import { PivotViewComponent as EjsPivotview } from "@syncfusion/ej2-vue-pivotview";
 
-    const dataSourceSettings = {
-        dataSource: [
-            { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-            { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-            { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-            { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-            { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-            { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-            { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-            { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-            { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" }
-        ],
-        rows: [{ name: 'Country' }],
-        columns: [{ name: 'Date' }],
-        values: [{ name: 'Amount' }, { name: 'Total', type: 'CalculatedField' }],
-        formatSettings: [{ name: 'Amount', format: 'C1' }],
-        calculatedFieldSettings: [{ name: 'Total', formula: '"Sum(Amount)"+"Sum(Quantity)"' }]
-    };
-    const showFieldList = true;
-    const showGroupingBar = true;
-    const allowCalculatedField = true;
-    const height = 350;
-    const width = '100%';
-
-    provide('pivotview', [GroupingBar, FieldList, CalculatedField]);
+const dataSourceSettings = {
+  dataSource: [
+    { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
+    { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
+    { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
+    { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
+    { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
+    { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
+    { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
+    { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
+    { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" }
+  ],
+  rows: [{ name: 'Country' }],
+  columns: [{ name: 'Date' }],
+  values: [{ name: 'Amount' }],
+  formatSettings: [{ name: 'Amount', format: 'C1' }]
+};
+const height = 350;
+const width = '100%';
 
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-  <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings" :showFieldList="showFieldList" :showGroupingBar="showGroupingBar" :allowCalculatedField="allowCalculatedField">
-  </ejs-pivotview>
+  <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings"></ejs-pivotview>
 </template>
 
 <script>
-  import { PivotViewComponent, FieldList, GroupingBar, CalculatedField } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 
-  export default {
-    name: "App",
-    // Declaring component and its directives.
-    components: {
-      "ejs-pivotview": PivotViewComponent
-    },
-    // Bound properties declaration.
-    data() {
-      return {
-        dataSourceSettings: {
-          dataSource: [
-            { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-            { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-            { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-            { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-            { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-            { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-            { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-            { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-            { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
-          ],
-          rows: [{ name: 'Country' }],
-          columns: [{ name: 'Date' }],
-          values: [{ name: 'Amount' }, { name: 'Total', type: 'CalculatedField' }],
-          formatSettings: [{ name: 'Amount', format: 'C1' }],
-          calculatedFieldSettings: [{ name: 'Total', formula: '"Sum(Amount)"+"Sum(Quantity)"' }]
-        },
-        showFieldList: true,
-        showGroupingBar: true,
-        allowCalculatedField: true,
-        height: '350px',
-        width: '100%'
-      };
-    },
-    // Injecting the required modules for additional features.
-    provide: { pivotview: [ FieldList, GroupingBar, CalculatedField] }
-  };
+export default {
+  name: "App",
+  // Declaring component and its directives.
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  // Bound properties declaration.
+  data() {
+    return {
+      dataSourceSettings: {
+        dataSource: [
+          { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
+          { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
+          { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
+          { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
+          { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
+          { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
+          { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
+          { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
+          { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
+        ],
+        rows: [{ name: 'Country' }],
+        columns: [{ name: 'Date' }],
+        values: [{ name: 'Amount' }],
+        formatSettings: [{ name: 'Amount', format: 'C1' }]
+      },
+      height: '350px',
+      width: '100%'
+    };
+  },
+};
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -357,508 +340,10 @@ The output will appear as follows:
 
 > **Sample**: [vue-3-pivot-table-getting-started](https://github.com/SyncfusionExamples/vue3-pivottable-getting-started).
 
-## Using template properties in the component
-
-The following sample uses the HTML elements to showcase each cell with custom format using the Pivot Table's `cellTemplate` property.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :dataBound="trend" :cellTemplate="cellTemplate">
-  </ejs-pivotview>
-</template>
-
-<script setup>
-  import { ref } from "vue";
-  import { PivotViewComponent as EjsPivotview } from "@syncfusion/ej2-vue-pivotview";
-  import { createApp } from 'vue';
-  import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material3.css";
-
-  const pivotview = ref(null);
-
-  var dataSourceSettings = {
-    dataSource: [
-      { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-      { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-      { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-      { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-      { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-      { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-      { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-      { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-      { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
-    ], // Dummy data source. Find the original data source from the below github sample,
-    rows: [{ name: "Country" }],
-    columns: [{ name: "Date" }],
-    values: [{ name: "Amount" }, { name: "Total", type: 'CalculatedField' }],
-    formatSettings: [{ name: "Amount", format: "C1" }],
-    calculatedFieldSettings: [{ name: 'Total', formula: '"Sum(Amount)"+"Sum(Quantity)"' }]
-  };
-
-  const cellTemplate = `<span class="template-wrap"><span class="tempwrap sb-icon-neutral pv-icons"></span></span>`;
-
-  const trend = () => {
-    let pivotObj = pivotview.value.ej2Instances;
-    let cTable = [].slice.call(document.getElementsByClassName("e-table"));
-    let colLen = pivotObj.pivotValues[3].length;
-    let cLen = cTable[1].children[0].children.length - 1;
-    let rLen = cTable[1].children[1].children.length;
-    let rowIndx;
-
-    for (let k = 0; k < rLen; k++) {
-      if (pivotObj.pivotValues[k] && pivotObj.pivotValues[k][0] !== undefined) {
-        rowIndx = (pivotObj.pivotValues[k][0]).rowIndex;
-        break;
-      }
-    }
-    let rowHeaders = [].slice.call(cTable[1].children[1].querySelectorAll('.e-rowsheader'));
-    let rows = pivotObj.dataSourceSettings.rows;
-    if (rowHeaders.length > 1) {
-      for (let i = 0, Cnt = rows; i < Cnt.length; i++) {
-        let fields = {};
-        let fieldHeaders = [];
-        for (let j = 0, Lnt = rowHeaders; j < Lnt.length; j++) {
-          let header = rowHeaders[j];
-          if (header.className.indexOf("e-gtot") === -1 && header.className.indexOf("e-rowsheader") > -1 &&
-            header.getAttribute("fieldname") === rows[i].name) {
-            var headerName = rowHeaders[j].getAttribute("fieldname") + "_" + rowHeaders[j].textContent;
-            fields[(rowHeaders[j]).textContent] = j;
-            fieldHeaders.push(rowHeaders[j].textContent);
-          }
-        }
-        if (i === 0) {
-          for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
-            if (rnt !== 0) {
-              let row = fields[fieldHeaders[rnt]];
-              let prevRow = fields[fieldHeaders[rnt - 1]];
-              for (let j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-                if (!cTable[1].children[1].children[row]) {
-                    break;
-                }
-                let node = cTable[1].children[1].children[row].childNodes[j];
-                let prevNode = cTable[1].children[1].children[prevRow].childNodes[j];
-                let ri = undefined;
-                let prevRi = undefined;
-                if (node) {
-                  ri = node.getAttribute("index");
-                }
-                if (prevNode) {
-                  prevRi = prevNode.getAttribute("index");
-                }
-                if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
-                  if (((pivotObj.pivotValues[prevRi][ci]).value) > ((pivotObj.pivotValues[ri][ci]).value) && node.querySelector(".tempwrap")) {
-                    let trendElement = node.querySelector(".tempwrap");
-                    trendElement.className = trendElement.className.replace(
-                      "sb-icon-neutral",
-                      "sb-icon-loss"
-                    );
-                  } else if (
-                    ((pivotObj.pivotValues[prevRi][ci]).value) < ((pivotObj.pivotValues[ri][ci]).value) && node.querySelector(".tempwrap")
-                  ) {
-                    let trendElement = node.querySelector(".tempwrap");
-                    trendElement.className = trendElement.className.replace(
-                      "sb-icon-neutral",
-                      "sb-icon-profit"
-                    );
-                  }
-                }
-              }
-            }
-          }
-        } else {
-          for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
-            var row = fields[fieldHeaders[rnt]];
-            for (let j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-              if (!cTable[1].children[1].children[row]) {
-                  break;
-              }
-              let node = cTable[1].children[1].children[row].childNodes[j];
-              let prevNode = cTable[1].children[1].children[row - 1].childNodes[j];
-              let ri = undefined;
-              let prevRi = undefined;
-              if (node) {
-                ri = node.getAttribute("index");
-              }
-              if (prevNode) {
-                prevRi = prevNode.getAttribute("index");
-              }
-              if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
-                let cRowFieldName = (cTable[1].children[1].children[row].childNodes[0]).getAttribute("fieldname");
-                let prevRowFieldName = (cTable[1].children[1].children[row - 1].childNodes[0]).getAttribute("fieldname");
-                if (((pivotObj.pivotValues[prevRi][ci]).value) > ((pivotObj.pivotValues[ri][ci]).value) &&
-                  node.querySelector(".tempwrap") && cRowFieldName === prevRowFieldName) {
-                  let trendElement = node.querySelector(".tempwrap");
-                  trendElement.className = trendElement.className.replace(
-                    "sb-icon-neutral",
-                    "sb-icon-loss"
-                  );
-                } else if (
-                  ((pivotObj.pivotValues[prevRi][ci]).value) < ((pivotObj.pivotValues[ri][ci]).value) &&
-                  node.querySelector(".tempwrap") && cRowFieldName === prevRowFieldName
-                ) {
-                  let trendElement = node.querySelector(".tempwrap");
-                  trendElement.className = trendElement.className.replace(
-                    "sb-icon-neutral",
-                    "sb-icon-profit"
-                  );
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  };
-</script>
-
-<style scoped>
-  /deep/ #pivotview {
-    width: 100%;
-  }
-
-  @font-face {
-    font-family: "e-pivot";
-    src: /* To get the output shown below, add the resource containing font data from the below reference sample. */;
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  /deep/ .pv-icons {
-    font-family: "e-pivot";
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    text-transform: none;
-    line-height: 1;
-  }
-
-  /deep/ .sb-icon-profit::before {
-    content: "\e234";
-    padding-left: 30px;
-    margin: auto !important;
-    color: #219122;
-    size: 20px;
-  }
-
-  /deep/ .sb-icon-neutral::before {
-    content: "\e84d";
-    padding-left: 30px;
-    margin: auto !important;
-    color: #82b5e9;
-  }
-
-  /deep/ .sb-icon-loss::before {
-    content: "\e239";
-    padding-left: 30px;
-    margin: auto !important;
-    color: #ff2222;
-  }
-
-  /deep/ .sb-sample-content-area {
-    min-height: 255px !important;
-  }
-
-  /deep/ .control-section {
-    min-height: 255px !important;
-  }
-
-  /deep/ .e-columnsheader .tempwrap.sb-icon-neutral.pv-icons{
-    display: none !important;
-  }
-
-  /deep/ .e-rowsheader .tempwrap.sb-icon-neutral.pv-icons {
-    display: none !important;
-  }
-
-  /deep/ .e-pivotview .e-grid .e-rowcell {
-      font-size: 13px;
-      padding-left: 8px;
-  }
-
-  /deep/ .e-cellvalue {
-    margin-top: 8px;
-    display: flex;
-    margin-left: 30px;
-  }
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :dataBound="trend" :cellTemplate="cellTemplate"></ejs-pivotview>
-</template>
-
-<script>
-  import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
-  import { createApp } from 'vue/dist/vue.esm-bundler';
-  import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-  import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material3.css";
-
-  const app = createApp();
-
-  // Template declaration.
-  var colVue = app.component("cellTemplate", {
-    data() {
-      return {
-        data: {},
-      };
-    },
-    methods: {
-      getCellContent: function () {
-        return '<span class="tempwrap sb-icon-neutral pv-icons"></span>';
-      },
-    },
-    template: `<span class="template-wrap"><span class="tempwrap sb-icon-neutral pv-icons"></span></span>`,
-  });
-
-  export default {
-    name: "App",
-    components: {
-      "ejs-pivotview": PivotViewComponent,
-    },
-    data() {
-      return {
-        dataSourceSettings: {
-          dataSource: [
-            { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-            { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-            { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-            { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-            { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-            { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-            { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-            { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-            { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
-          ], // Dummy data source. Find the original data source from the below github sample,
-          rows: [{ name: "Country" }],
-          columns: [{ name: "Date" }],
-          values: [{ name: "Amount" }, { name: "Total", type: 'CalculatedField' }],
-          formatSettings: [{ name: "Amount", format: "C1" }],
-          calculatedFieldSettings: [{ name: 'Total', formula: '"Sum(Amount)"+"Sum(Quantity)"' }]
-        },
-        height: 350,
-        cellTemplate: function () {
-          return { template: colVue };
-        },
-      };
-    },
-    methods: {
-      trend: function () {
-        let pivotObj = ((this).$refs.pivotview).ej2Instances;
-        let cTable = [].slice.call(document.getElementsByClassName("e-table"));
-        let colLen = pivotObj.pivotValues[3].length;
-        let cLen = cTable[1].children[0].children.length - 1;
-        let rLen = cTable[1].children[1].children.length;
-        let rowIndx;
-
-        for (let k = 0; k < rLen; k++) {
-          if (pivotObj.pivotValues[k] && pivotObj.pivotValues[k][0] !== undefined) {
-            rowIndx = (pivotObj.pivotValues[k][0]).rowIndex;
-            break;
-          }
-        }
-        let rowHeaders = [].slice.call(cTable[1].children[1].querySelectorAll('.e-rowsheader'));
-        let rows = pivotObj.dataSourceSettings.rows;
-        if (rowHeaders.length > 1) {
-          for (let i = 0, Cnt = rows; i < Cnt.length; i++) {
-            let fields = {};
-            let fieldHeaders = [];
-            for (let j = 0, Lnt = rowHeaders; j < Lnt.length; j++) {
-              let header = rowHeaders[j];
-              if (header.className.indexOf("e-gtot") === -1 && header.className.indexOf("e-rowsheader") > -1 &&
-                header.getAttribute("fieldname") === rows[i].name) {
-                var headerName = rowHeaders[j].getAttribute("fieldname") + "_" + rowHeaders[j].textContent;
-                fields[(rowHeaders[j]).textContent] = j;
-                fieldHeaders.push(rowHeaders[j].textContent);
-              }
-            }
-            if (i === 0) {
-              for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
-                if (rnt !== 0) {
-                  let row = fields[fieldHeaders[rnt]];
-                  let prevRow = fields[fieldHeaders[rnt - 1]];
-                  for (let j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-                    if (!cTable[1].children[1].children[row]) {
-                        break;
-                    }
-                    let node = cTable[1].children[1].children[row].childNodes[j];
-                    let prevNode = cTable[1].children[1].children[prevRow].childNodes[j];
-                    let ri = undefined;
-                    let prevRi = undefined;
-                    if (node) {
-                      ri = node.getAttribute("index");
-                    }
-                    if (prevNode) {
-                      prevRi = prevNode.getAttribute("index");
-                    }
-                    if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
-                      if (((pivotObj.pivotValues[prevRi][ci]).value) > ((pivotObj.pivotValues[ri][ci]).value) && node.querySelector(".tempwrap")) {
-                        let trendElement = node.querySelector(".tempwrap");
-                        trendElement.className = trendElement.className.replace(
-                          "sb-icon-neutral",
-                          "sb-icon-loss"
-                        );
-                      } else if (
-                        ((pivotObj.pivotValues[prevRi][ci]).value) < ((pivotObj.pivotValues[ri][ci]).value) && node.querySelector(".tempwrap")
-                      ) {
-                        let trendElement = node.querySelector(".tempwrap");
-                        trendElement.className = trendElement.className.replace(
-                          "sb-icon-neutral",
-                          "sb-icon-profit"
-                        );
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
-                var row = fields[fieldHeaders[rnt]];
-                for (let j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-                  if (!cTable[1].children[1].children[row]) {
-                      break;
-                  }
-                  let node = cTable[1].children[1].children[row].childNodes[j];
-                  let prevNode = cTable[1].children[1].children[row - 1].childNodes[j];
-                  let ri = undefined;
-                  let prevRi = undefined;
-                  if (node) {
-                    ri = node.getAttribute("index");
-                  }
-                  if (prevNode) {
-                    prevRi = prevNode.getAttribute("index");
-                  }
-                  if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
-                    let cRowFieldName = (cTable[1].children[1].children[row].childNodes[0]).getAttribute("fieldname");
-                    let prevRowFieldName = (cTable[1].children[1].children[row - 1].childNodes[0]).getAttribute("fieldname");
-                    if (((pivotObj.pivotValues[prevRi][ci]).value) > ((pivotObj.pivotValues[ri][ci]).value) &&
-                      node.querySelector(".tempwrap") && cRowFieldName === prevRowFieldName) {
-                      let trendElement = node.querySelector(".tempwrap");
-                      trendElement.className = trendElement.className.replace(
-                        "sb-icon-neutral",
-                        "sb-icon-loss"
-                      );
-                    } else if (
-                      ((pivotObj.pivotValues[prevRi][ci]).value) < ((pivotObj.pivotValues[ri][ci]).value) &&
-                      node.querySelector(".tempwrap") && cRowFieldName === prevRowFieldName
-                    ) {
-                      let trendElement = node.querySelector(".tempwrap");
-                      trendElement.className = trendElement.className.replace(
-                        "sb-icon-neutral",
-                        "sb-icon-profit"
-                      );
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-  };
-</script>
-
-<style scoped>
-  /deep/ #pivotview {
-    width: 100%;
-  }
-
-  @font-face {
-    font-family: "e-pivot";
-    src: /* To get the output shown below, add the resource containing font data from the below reference sample. */;
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  /deep/ .pv-icons {
-    font-family: "e-pivot";
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    text-transform: none;
-    line-height: 1;
-  }
-
-  /deep/ .sb-icon-profit::before {
-    content: "\e234";
-    padding-left: 30px;
-    margin: auto !important;
-    color: #219122;
-    size: 20px;
-  }
-
-  /deep/ .sb-icon-neutral::before {
-    content: "\e84d";
-    padding-left: 30px;
-    margin: auto !important;
-    color: #82b5e9;
-  }
-
-  /deep/ .sb-icon-loss::before {
-    content: "\e239";
-    padding-left: 30px;
-    margin: auto !important;
-    color: #ff2222;
-  }
-
-  /deep/ .sb-sample-content-area {
-    min-height: 255px !important;
-  }
-
-  /deep/ .control-section {
-    min-height: 255px !important;
-  }
-
-  /deep/ .e-columnsheader .tempwrap.sb-icon-neutral.pv-icons{
-    display: none !important;
-  }
-
-  /deep/ .e-rowsheader .tempwrap.sb-icon-neutral.pv-icons {
-    display: none !important;
-  }
-
-  /deep/ .e-pivotview .e-grid .e-rowcell {
-      font-size: 13px;
-      padding-left: 8px;
-  }
-
-  /deep/ .e-cellvalue {
-    margin-top: 8px;
-    display: flex;
-    margin-left: 30px;
-  }
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-The output will appear as follows:
-
-![Vue3-pivottable-celltemplate](./images/Vue3-pivottable-celltemplate.png)
-
-Refer the following sample, [vue3-pivot-table-cell-template](https://github.com/SyncfusionExamples/vue3-pivottable-celltemplate).
-
 ## See also
 
 * [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
 * [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+* [Data Binding](./data-binding)
+* [Field List](./field-list)
+* [Grouping Bar](./grouping-bar)

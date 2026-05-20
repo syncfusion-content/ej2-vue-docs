@@ -50,12 +50,10 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are avai
 This article uses the [Vue Gantt Chart component](https://www.syncfusion.com/vue-components/vue-gantt-chart) as an example. To use the Vue Gantt Chart component in the project, the `@syncfusion/ej2-vue-gantt` package needs to be installed using the following command:
 
 ```bash
-npm install @syncfusion/ej2-vue-gantt --save
+npm install @syncfusion/ej2-vue-gantt
 ```
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Gantt Chart component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
 
@@ -64,179 +62,127 @@ In this article, the `Tailwind3` theme is applied using CSS styles, which are av
 
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-gantt/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
+> **Note:** When using features like editing, toolbar, filtering, or dialogs, you need to import additional component styles:
+> ```css
+> /* For editing, toolbar, and dialog features */
+> @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+> @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+> 
+> /* For rich text editor in dialog notes tab */
+> @import "../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css";
+> ```
+
 > The order of importing CSS styles should be in line with their dependency graph.
+
+## Create sample data
+Define a simple task list with hierarchical relationships. Each task must have a `StartDate` and either a `Duration` or `EndDate` to render properly.
+
+```js
+const data = [
+  { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15') },
+  { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-08'), EndDate: new Date('2024-04-18') },
+  { TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 30, ParentID: 5 },
+  { TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 20, ParentID: 5 }
+]
+```
+## Configure task fields
+
+```js
+const taskFields = {
+  id: 'TaskID',
+  name: 'TaskName',
+  startDate: 'StartDate',
+  duration: 'Duration',
+  progress: 'Progress',
+  parentID: 'ParentID'
+};
+```
+### Field mapping reference
+
+| Property | Description | Required |
+|----------|-------------|----------|
+| `id` | Unique task identifier | Yes |
+| `name` | Task display name | Yes |
+| `startDate` | Task start date | Yes |
+| `duration` | Task duration in days | Yes |
+| `progress` | Task completion percentage (0-100) | No |
+| `parentID` | Parent task ID for hierarchy | No |
+
+*Either `duration` or `endDate` is required for a task to render properly.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Follow the below steps to add the Vue Gantt Chart component:
 
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Gantt Chart component and its child directives in the `script` section of the **src/app.vue** file.
+First, import and register the Gantt Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-   import { GanttComponent as EjsGantt, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-gantt';
+   import { GanttComponent as EjsGantt} from '@syncfusion/ej2-vue-gantt';
 </script>
 
 {% endhighlight %}
 {% endtabs %}
-   
-2\. Then, define the Gantt Chart component in the **src/app.vue** file, as shown below:
+
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <ejs-gantt :dataSource='data' :treeColumnIndex='1' child='subtasks' :taskFields= 'taskFields'>
-        <e-columns>
-            <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-            <e-column field='TaskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-            <e-column field='StartDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-            <e-column field='Duration' headerText='Duration' textAlign='Right' width=80></e-column>
-       </e-columns>
-    </ejs-gantt>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3\. Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-
-<script setup>
-    const data = [{
-         TaskID: 1,
-         TaskName: 'Planning',
-         StartDate: new Date('02/03/2017'),
-         EndDate: new Date('02/07/2017'),
-         Progress: 100,
-         Duration: 5,
-         subtasks: [
-             { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
-             { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
-         ]
-     },
-     {
-         TaskID: 6,
-         TaskName: 'Design',
-         StartDate: new Date('02/10/2017'),
-         EndDate: new Date('02/14/2017'),
-         Duration: 3,
-         Progress: 86,
-         subtasks: [
-             { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
-             { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
-             { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
-             { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
-             { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
-         ]
-     }];
-     const taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        child: 'subtasks',
-     };
-</script>
-
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/app.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-<template>
-  <ejs-gantt :dataSource='data' :treeColumnIndex='1' child='subtasks' :taskFields= 'taskFields'>
-        <e-columns>
-            <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-            <e-column field='TaskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-            <e-column field='StartDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-            <e-column field='Duration' headerText='Duration' textAlign='Right' width=80></e-column>
-       </e-columns>
-    </ejs-gantt>
+  <ejs-gantt 
+    :dataSource="data"
+    :taskFields="taskFields"
+  >
+  </ejs-gantt>
 </template>
 
 <script setup>
-    import { GanttComponent as EjsGantt, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-gantt';
-    const data = [{
-         TaskID: 1,
-         TaskName: 'Planning',
-         StartDate: new Date('02/03/2017'),
-         EndDate: new Date('02/07/2017'),
-         Progress: 100,
-         Duration: 5,
-         subtasks: [
-             { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
-             { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-             { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
-         ]
-     },
-     {
-         TaskID: 6,
-         TaskName: 'Design',
-         StartDate: new Date('02/10/2017'),
-         EndDate: new Date('02/14/2017'),
-         Duration: 3,
-         Progress: 86,
-         subtasks: [
-             { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
-             { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
-             { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
-             { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
-             { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
-         ]
-     }];
-     const taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        child: 'subtasks',
-     };
+  import { GanttComponent as EjsGantt} from '@syncfusion/ej2-vue-gantt';
+  const data = [
+    {TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15')},
+    {TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1},
+    {TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1},
+    {TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1},
+    {TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-08'), EndDate: new Date('2024-04-18')},
+    {TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 30, ParentID: 5},
+    {TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 20, ParentID: 5}
+  ];
+  const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'ParentID'
+  };
 </script>
 
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-gantt/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -250,6 +196,21 @@ To run the project, use the following command:
 npm run dev
 ```
 
-The output will appear as follows:
+## Output
+
+You will see a Gantt Chart with:
+
+- Task hierarchy with parent-child relationships
+- Timeline view showing task bars
+- Progress indicators on each task
+- Automatically calculated dates based on duration
+
+The chart displays two parent tasks ("Project initiation" and "Project estimation") with their subtasks shown in a tree structure. Task bars are rendered on the timeline, sized according to their duration and start dates.
 
 ![Quasar output](./images/quasar.png)
+
+## Next Steps
+
+- **[Key Elements](./key-elements)** - Learn about UI components and interactions
+- **[Feature Modules](./module)** - Enable advanced features with module injection
+- **[Overview](./overview)** - Explore all available features

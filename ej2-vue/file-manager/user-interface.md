@@ -28,6 +28,23 @@ The basic File Manager is a lightweight component with all the basic functions. 
 
 ![Basic File Manager](./images/default-ui.png)
 
+## Injecting Services for Overview
+
+Basically, the File Manager component contains large-icons view for displaying the files and folders, a breadcrumb bar for navigation and context menu for performing operations. However, these basic functionalities can be extended by using the additional feature modules like details view, toolbar, navigation pane, and context menu to change the layout and to simplify the navigation and file operations within the file system. The above modules can be injected using `provide`.
+
+The following example shows you the File Manager with all feature modules.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/overview-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/overview-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/overview-cs1" %}
+
 ## Toolbar
 
 The `Toolbar` provides easy access to the file operations using different buttons and it is presented at the top of the File Manager.
