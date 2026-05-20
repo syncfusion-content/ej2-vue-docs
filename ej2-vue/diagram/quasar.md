@@ -40,13 +40,13 @@ Use the Quasar project initializer to create a Quasar application. Quasar provid
 
 Create a new Quasar application using the following command:
 
-```bash
+```
 npm init quasar
 ```
 
 During project creation, you will be prompted to configure the project. Use the following recommended options:
 
-```text
+```
 √ What would you like to build?
 > App with Quasar CLI, let's go!
 
@@ -87,7 +87,7 @@ N> Selecting **Yes, use npm** automatically installs all required dependencies d
 
 Navigate to the project folder:
 
-```bash
+```
 cd quasar-project
 ```
 
@@ -97,7 +97,7 @@ All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https:
 
 Install the Vue Diagram package using the following command:
 
-```bash
+```
 npm install @syncfusion/ej2-vue-diagrams
 ```
 
@@ -107,7 +107,7 @@ N> Installing `@syncfusion/ej2-vue-diagrams` automatically installs the required
 
 Add the required Syncfusion® styles to the `src/App.vue` file in the `<style>` section:
 
-```vue
+```
 <style>
   @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
   @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
@@ -126,7 +126,7 @@ Import `DiagramComponent` from `@syncfusion/ej2-vue-diagrams` and use it in your
 
 Update the `src/App.vue` file as follows:
 
-```vue
+```
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
@@ -167,7 +167,7 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 Update the `src/App.vue` file as follows:
 
-```vue
+```
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
@@ -311,7 +311,7 @@ In this example:
 
 Run the application using the following command:
 
-```bash
+```
 npm run dev
 ```
 Open the generated local URL in the browser. The application displays the flowchart diagram as shown below:
