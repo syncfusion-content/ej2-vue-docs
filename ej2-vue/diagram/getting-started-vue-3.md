@@ -47,7 +47,7 @@ Use [Vite](https://vitejs.dev/) to create and manage Vue 3 applications. Vite pr
 
 Create a new Vue 3 application using the following command.
 
-```bash
+```
 npm create vite@latest my-diagram-app -- --template vue
 ```
 
@@ -55,13 +55,13 @@ If Vite prompts you to install dependencies and start the project immediately, s
 
 Navigate to the project folder:
 
-```bash
+```
 cd my-diagram-app
 ```
 
 Install the application dependencies:
 
-```bash
+```
 npm install
 ```
 N> If you prefer TypeScript instead of JavaScript, create the application using `npm create vite@latest my-diagram-app -- --template vue-ts`.
@@ -72,7 +72,7 @@ All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https:
 
 Install the Vue Diagram package using the following command:
 
-```bash
+```
 npm install @syncfusion/ej2-vue-diagrams --save
 ```
 
@@ -82,7 +82,7 @@ N> Installing `@syncfusion/ej2-vue-diagrams` automatically installs the required
 
 Add the required Syncfusion® styles to the `src/App.vue` file in the `<style>` section:
 
-```vue
+```
 <style>
   @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
   @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
@@ -99,7 +99,7 @@ Import `DiagramComponent` from `@syncfusion/ej2-vue-diagrams` and use it in your
 
 Update the `src/App.vue` file as follows:
 
-```vue
+```
 <template>
   <ejs-diagram
     id="diagram"
@@ -134,7 +134,7 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 Update the `src/App.vue` file as follows:
 
-```vue
+```
 <template>
   <ejs-diagram
     id="diagram"
@@ -273,7 +273,7 @@ In this example:
 
 Run the application using the following command:
 
-```bash
+```
 npm run dev
 ```
 Open the generated local URL in the browser. The application displays the flowchart diagram as shown below:
