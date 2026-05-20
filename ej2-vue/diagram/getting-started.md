@@ -35,7 +35,7 @@ Use [Vue CLI](https://cli.vuejs.org/) to create and manage Vue 2 applications. V
 
 Install Vue CLI globally using the following command:
 
-```bash
+```
 npm install -g @vue/cli
 ``` 
 
@@ -43,7 +43,7 @@ npm install -g @vue/cli
 
 Create a new Vue 2 application using the following command.
 
-```bash
+```
 vue create my-diagram-app
 ```
 
@@ -51,7 +51,7 @@ When prompted, select the **Default ([Vue 2] babel, eslint)** preset.
 
 Navigate to the project folder:
 
-```bash
+```
 cd my-diagram-app
 ```
 
@@ -61,7 +61,7 @@ All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https:
 
 Install the Vue Diagram package using the following command:
 
-```bash
+```
 npm install @syncfusion/ej2-vue-diagrams --save
 ```
 
@@ -73,7 +73,7 @@ Import `DiagramPlugin` from `@syncfusion/ej2-vue-diagrams` and register it in th
 
 Update the `src/main.js` file as follows:
 
-```js
+```
 import Vue from 'vue';
 import App from './App.vue';
 import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
@@ -90,7 +90,7 @@ new Vue({
 
 Add the required Syncfusion® styles to the `src/App.vue` file in the `<style>` section:
 
-```vue
+```
 <style>
   @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
   @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
@@ -109,7 +109,7 @@ Add the `ejs-diagram` component to the Vue component template.
 
 Update the `src/App.vue` file as follows:
 
-```vue
+```
 <template>
   <ejs-diagram
     id="diagram"
@@ -146,7 +146,7 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 Update the `src/App.vue` file as follows:
 
-```vue
+```
 <template>
   <ejs-diagram
     id="diagram"
@@ -288,7 +288,7 @@ In this example:
 
 Run the application using the following command:
 
-```bash
+```
 npm run serve
 ```
 Open the generated local URL in the browser. The application displays the flowchart diagram as shown below:
