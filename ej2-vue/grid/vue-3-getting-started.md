@@ -93,7 +93,7 @@ yarn install
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid packages
 
 To install the Grid component, use the following command:
 
@@ -107,7 +107,7 @@ or
 yarn add @syncfusion/ej2-vue-grids
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
 The following CSS files are available in the ../node_modules/@syncfusion package folder. Add these as references in **src/App.vue**.
 
@@ -129,11 +129,9 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+## Adding Grid component
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-The grid code should be placed in the **src/App.vue** file.
+The grid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
@@ -146,7 +144,7 @@ The grid code should be placed in the **src/App.vue** file.
         
 {% previewsample "page.domainurl/code-snippet/grid/getting-started/default-cs6" %}
 
-## Run the project
+## Run the application
 
 ```bash
 npm run dev

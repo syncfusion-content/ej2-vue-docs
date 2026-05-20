@@ -10,25 +10,32 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue Rich Text Editor
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion Vue Rich Text Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+The Syncfusion Vue Rich Text Editor is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion Vue Rich Text Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+
+To get started quickly with the Vue Rich Text Editor, refer to this video tutorial:
+
+{% youtube "https://www.youtube.com/watch?v=UfzKsdkxGpM" %}
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+This guide uses Vite as the bundler and development environment. Install Node.js 24.13.0 or higher before proceeding. For detailed information about Vite’s capabilities and configuration options, refer to the [Vite documentation](https://vitejs.dev/).
 
 ## Create a Vue Application
 
-Run the following commands to set up a Vue application:
-
-```bash
-npm create vite@7 my-app
-```
 To set-up a Vue application , run the following command.
 
 ```bash
-npm create vite@7 my-vue-app -- --template vue-ts
+npm create vite@latest my-app -- --template vue-ts
+```
+This command will prompt you to install the required packages and start the application. Select the options as shown below.
+
+![Rich Text Editor Initial setup](images/Initial-setup.png)
+
+As Syncfusion packages are not installed yet, currently, the `No` option will be selected. Then, navigate to the project directory and install the dependencies using the following commands:
+
+```
 cd my-app
-npm run dev
+npm install
 ```
 
 ## Adding Syncfusion Rich Text Editor package
@@ -55,11 +62,11 @@ The following CSS files are available in ../node_modules/@syncfusion package fol
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
 ```
 
-> The order of importing CSS styles should be in line with its dependency graph.
+I> To apply the application-specific styles correctly remove all the default styles from **src/style.css**. You can also refer to the [themes section](https://ej2.syncfusion.com/vue/documentation/appearance/theme) for details about built-in themes and CSS references for individual controls.
 
 ## Module Injection
 
-To create a Rich Text Editor with enhanced functionality, inject the required modules. The following modules extend the basic capabilities of the Rich Text Editor:
+The following modules provide the basic features of the Rich Text Editor.
 
 * **HtmlEditor** - Inject this module to use Rich Text Editor as html editor.
 * **Image** - Inject this module to use image feature in Rich Text Editor.
@@ -67,11 +74,11 @@ To create a Rich Text Editor with enhanced functionality, inject the required mo
 * **QuickToolbar** - Inject this module to use quick toolbar feature for the target element.
 * **Toolbar** - Inject this module to use Toolbar feature.
 
-These modules should be injected into the providers section of root NgModule or component class.
+I> Additional feature modules are available [here](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/module).
 
 ## Adding Rich Text Editor component
 
-Now, you can start adding Vue Rich Text Editor component in the application. For getting started, add the Rich Text Editor component in src/App.vue file using following sample.
+Now, you can start adding Vue Rich Text Editor component in the application. For getting started, add the Rich Text Editor component in **src/App.vue** file using following sample.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -81,61 +88,8 @@ Now, you can start adding Vue Rich Text Editor component in the application. For
 {% include code-snippet/rich-text-editor/toolbar-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs21" %}
-
-## Configure the toolbar
-
-Customize the toolbar using the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#toolbarsettings) property to define specific tools. The following example demonstrates basic toolbar configuration:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-  <template>
-    <div>
-        <ejs-richtexteditor ref="rte_instance" :toolbarSettings="toolbarSettings">
-        </ejs-richtexteditor>
-    </div>
-  </template>
-  
-  <script>
-  import { RichTextEditorComponent,Toolbar,Link,Image,HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-  export default {
-    name: "NormalView",
-    components: {
-        "ejs-richtexteditor": RichTextEditorComponent
-    },
-    data: function() {
-      return {
-        toolbarSettings: {
-          items: ['Bold', 'Italic', 'Underline', 'StrikeThrough','|',
-                'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-                'LowerCase', 'UpperCase', '|',
-                'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
-                'Outdent', 'Indent', '|',
-                'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
-                'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
-        },
-     }
-    },
-    provide: {
-        richtexteditor: [Toolbar, Link, Image, HtmlEditor]
-    },
-  };
-  </script>
-  <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/tailwind3.css"; 
-  </style>
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Run the application
 
@@ -144,19 +98,6 @@ Use the following command to run the application in the browser.
 ```bash
 npm run dev
 ```
-
-Output will be displayed as follows
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs22/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs22/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs22" %}
 
 ## See also
 

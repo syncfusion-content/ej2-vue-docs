@@ -81,7 +81,7 @@ yarn install
 
 With `my-project` ready to run with default settings, the next step is to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid packages
 
 To install the TreeGrid component, use the following command:
 
@@ -95,7 +95,7 @@ or
 yarn add @syncfusion/ej2-vue-treegrid
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
 The following CSS files are available in the ../node_modules/@syncfusion package folder. Add these as references in **src/App.vue**.
 
@@ -118,11 +118,9 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+## Adding TreeGrid component
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-The treegrid code should be placed in the **src/App.vue** file.
+The treegrid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
@@ -135,7 +133,7 @@ The treegrid code should be placed in the **src/App.vue** file.
    
 {% previewsample "page.domainurl/code-snippet/treegrid/getting-started/default-cs4" %}
 
-## Run the project
+## Run the application
 
 ```bash
 npm run dev

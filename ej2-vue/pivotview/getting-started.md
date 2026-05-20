@@ -80,16 +80,16 @@ import pivot table component CSS as given below in `<style>` section of the `App
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-pivotview/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-pivotview/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -165,36 +165,32 @@ export default {
     return {
       dataSourceSettings: {
         dataSource: [
-          { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-          { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-          { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-          { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-          { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-          { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-          { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-          { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-          { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
+            { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },
+            { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q2' },
+            { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q3' },
+            { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q4' }
         ],
-        rows: [{ name: 'Country' }],
-        columns: [{ name: 'Date' }],
-        values: [{ name: 'Amount' }],
-        formatSettings: [{ name: 'Amount', format: 'C1' }]
+        expandAll: true,
+        columns: [{ name: 'Year' }, { name: 'Quarter' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
+        formatSettings: [{ name: 'Amount', format: 'C0' }]
       }
     }
   }
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-pivotview/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-pivotview/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -214,7 +210,7 @@ yarn run serve
 
 For more information and to access the quick start project, visit: [GitHub Repository](https://github.com/SyncfusionExamples/getting-started-with-the-vue2-pivot-table-component)
 
-> You can also explore our [Vue Pivot Table example](https://ej2.syncfusion.com/vue/demos/#/material3/pivot-table/default.html) that shows how to rendering of the pivot table with drill-up and drill-down functionality bound to a relational report.
+> You can also explore our [Vue Pivot Table example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/pivot-table/default.html) that shows how to rendering of the pivot table with drill-up and drill-down functionality bound to a relational report.
 
 ## See also
 

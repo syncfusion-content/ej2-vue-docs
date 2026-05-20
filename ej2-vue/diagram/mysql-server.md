@@ -104,7 +104,7 @@ Use MySQL Workbench to create the required database and table for storing organi
 3.  The **SQL Editor** opens. This editor is used to write and execute SQL statements for the selected connection.
 4.  Paste the following SQL script into the SQL Editor:
 
-```sql
+```
 -- Create database with UTF-8 support
 CREATE DATABASE IF NOT EXISTS diagramdb
   CHARACTER SET utf8mb4
@@ -202,7 +202,7 @@ Alternatively, the project can be created using the .NET CLI, which is commonly 
 2. Navigate to the directory where the server application should be created.
 3. Run the following commands:
 
-```bash
+```
 dotnet new webapi -n Diagram_MySQL.Server
 cd Diagram_MySQL.Server
 ```
@@ -216,23 +216,23 @@ The Web API requires additional NuGet packages for LINQ2DB, MySQL connectivity, 
 1. In Visual Studio, go to **Tools → NuGet Package Manager → Package Manager Console**.
 2. Run the following commands sequentially:
 
-```bash
+```
 Install-Package linq2db -Version 6.1.0
 ```
 
-```bash
+```
 Install-Package linq2db.MySql -Version 6.1.0
 ```
 
-```bash
+```
 Install-Package linq2db.AspNet -Version 5.4.1.9
 ```
 
-```bash
+```
 Install-Package MySqlConnector -Version 2.5.0
 ```
 
-```bash
+```
 Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson -Version 8.0.0
 ```
 
@@ -240,7 +240,7 @@ Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson -Version 8.0.0
 
 Alternatively, the packages can be installed using the .NET CLI from the project directory.
 
-```powershell
+```
 dotnet add package linq2db --version 6.1.0
 dotnet add package linq2db.MySql --version 6.1.0
 dotnet add package linq2db.AspNet --version 5.4.1.9
@@ -287,7 +287,7 @@ The connection string defines how the application connects to the MySQL server.
 1. Open **appsettings.json**.
 2. Add or update the `ConnectionStrings` section with the MySQL connection details:
 
-```json
+```
 {
   "ConnectionStrings": {
     "MySqlConn": "Server=localhost;Port=3306;Database=diagramdb;User Id=root;Password=YOUR_PASSWORD_HERE;"
@@ -445,10 +445,10 @@ The following steps describe how to render the Diagram and connect it to the MyS
 
 Create the Vue client application using the following commands in a Visual Studio Code terminal or command prompt:
 
-```bash
+```
 npm create vite@latest diagram_mysql.client -- --template vue-ts
 ```
-```bash
+```
 cd diagram_mysql.client
 ```
 
@@ -458,14 +458,14 @@ This command scaffolds a new Vue application using Vite.
 
 Install the required Syncfusion® packages by running the following commands:
 
-```bash
+```
 npm install @syncfusion/ej2-vue-diagrams --save
 ```
 
 After installation, the necessary CSS files are available in the **node_modules** directory.
 Add the required CSS references to the **src/style.css** file to apply styling to the Diagram component.
 
-```css
+```
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/bootstrap5.3.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css";
@@ -478,7 +478,7 @@ For this project, the "Bootstrap 5.3" theme is applied. Other themes can be sele
 
 Create a basic Diagram component in **src/App.vue**:
 
-```html
+```
 <template>
   <div>
     <ejs-diagram id="diagram" width="100%" height="600px"></ejs-diagram>
@@ -499,7 +499,7 @@ Remote data binding enables the diagram to fetch organizational chart data from 
 
 Add the data binding configuration to DiagramComponent:
 
-```html
+```
 <template>
   <div>
     <ejs-diagram
@@ -561,7 +561,7 @@ export default {
 
 Provide the required services using `provide` in the component:
 
-```typescript
+```
 // ...existing code...
 export default {
   // ...existing options...
@@ -574,7 +574,7 @@ export default {
 
 Here is the complete **src/App.vue** file:
 
-```html
+```
 <template>
   <div>
     <ejs-diagram
@@ -658,13 +658,13 @@ export default {
 
 Open a terminal and navigate to the backend project:
 
-```bash
+```
 cd Diagram_MySQL.Server 
 ```
 
 Start the backend server:
 
-```bash
+```
 dotnet run
 ```
 
@@ -672,13 +672,13 @@ dotnet run
 
 Open a **new terminal** and navigate to the frontend project:
 
-```bash
+```
 cd diagram_mysql.client
 ```
 
 Start the Vue development server:
 
-```bash
+```
 npm run dev
 ```
 
@@ -691,20 +691,20 @@ npm run dev
 1. Verify services and processes
     - Verify the Windows service is running: press **Win+R**, run **services.msc**, and confirm **MySQL80** (or your service name) is running.
     - Ensure the ASP.NET backend is running. If not, run:
-      ```bash
+      ```
       dotnet run
       ```
 
 2. Verify backend binding and endpoint
    - Verify the MySQL connection string in **appsettings.json**: `Server`, `Port`, `Database`, `User Id`, and `Password` must match your MySQL setup.
    - Check the backend ports in **Properties/launchSettings.json** (look for `applicationUrl`):
-     ```json
+     ```
      "applicationUrl": "https://localhost:7092;http://localhost:5296"
      ```
      Use the HTTP port to test the endpoint in browser: **http://localhost:5296/api/diagram/items**
 
      Expected JSON response:
-     ```json
+     ```
      [
        {"id":1,"name":"CEO","parentId":null},
        {"id":2,"name":"VP Engineering","parentId":1}
@@ -718,7 +718,7 @@ npm run dev
 
 ### Application shows the diagram twice
   - Stop the Vue client application (press **Ctrl+C** in the terminal where it's running) and then restart it:
-    ```bash
+    ```
     npm run dev
     ```
 
