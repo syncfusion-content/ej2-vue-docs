@@ -46,7 +46,7 @@ To store and manage diagram data, MySQL Server must be installed and configured 
 
 MySQL Server provides the relational database engine used to store organizational chart data required by the diagram component.
 
-1. Download MySQL Installer version 8.0.46 from [mysql.com](https://dev.mysql.com/downloads/windows/installer/8.0.html).
+1. Download MySQL Installer version 8.0.46 from [mysql.com](https://dev.mysql.com/downloads/windows/installer).
 ![MySQL Installer](images/mysql-installer.png)
 2. Run the installer and follow the setup wizard.
    - Choose setup type as **Server only**.
@@ -66,7 +66,7 @@ MySQL Server provides the relational database engine used to store organizationa
 
 MySQL Workbench is a graphical tool used to connect to MySQL Server, manage databases, execute SQL queries, and inspect data.
 
-1. Download MySQL Workbench Installer version 8.0.47 from [mysql-workbench](https://dev.mysql.com/downloads/workbench/)
+1. Download MySQL Workbench Installer version 8.0.47 from [mysql-workbench](https://dev.mysql.com/downloads/workbench)
 2. Run the installer and follow the setup wizard.
    - Choose the setup type as **Complete**.
    - Click **Finish** after installing MySQL Workbench.
