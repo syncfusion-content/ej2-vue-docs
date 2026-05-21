@@ -32,7 +32,7 @@ The following minimum dependencies are required to use the Accumulation Chart:
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. You can install Vue CLI using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm install -g @vue/cli
@@ -41,7 +41,7 @@ cd quickstart
 npm run serve
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn global add @vue/cli
@@ -62,12 +62,12 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmj
 
 This article uses the `Vue Accumulation Chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts
 ```
-### Using Yarn
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
@@ -85,7 +85,7 @@ Follow the steps below to add the Vue Accumulation Chart component (Options API 
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
-import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries  } from "@syncfusion/ej2-vue-charts";
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries } from "@syncfusion/ej2-vue-charts";
 export default {
   components: {
     'ejs-accumulationchart': AccumulationChartComponent,
@@ -164,12 +164,13 @@ By default, a pie series is rendered when JSON data is assigned to the series us
 
 To start the development server, use either npm or Yarn:
 
-### Using npm
+**npm**
+
 ```bash
 npm run serve
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn run serve

@@ -42,21 +42,17 @@ cd quasar-project
 
 Now that `quasar-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue TreeGrid component](https://www.syncfusion.com/vue-components/vue-tree-grid) as an example. To use the Vue TreeGrid component in the project, the `@syncfusion/ej2-vue-treegrid` package needs to be installed using the following command:
+To install the TreeGrid component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-treegrid --save
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the TreeGrid component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
+The following CSS files are available in the ../node_modules/@syncfusion package folder. Add these as references in **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -77,76 +73,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with their dependency graph.
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding TreeGrid component
 
-Follow the below steps to add the Vue TreeGrid component:
-
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the TreeGrid component and its child directives in the `script` section of the **src/app.vue** file.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-
-<script setup>
-  import { TreeGridComponent as EjsTreegrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-treegrid';
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. Then, define the TreeGrid component in the **src/app.vue** file, as shown below:
-
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-
-<template>
-  <ejs-treegrid :dataSource='data' :treeColumnIndex='1' childMapping='subtasks'>
-      <e-columns>
-          <e-column field='taskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-          <e-column field='taskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-          <e-column field='startDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-          <e-column field='duration' headerText='Duration' textAlign='Right' width=80></e-column>
-      </e-columns>
-  </ejs-treegrid>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3\. Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-
-<script setup>
-const data = [
-  {
-            taskID: 1,
-            taskName: 'Planning', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'),      progress: 100, duration: 5, priority: 'Normal', approved: false,
-            subtasks: [
-                { taskID: 2, taskName: 'Plan timeline', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Normal', approved: false },
-                { taskID: 3, taskName: 'Plan budget', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, approved: true },
-                { taskID: 4, taskName: 'Allocate resources', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Critical', approved: false },
-                { taskID: 5, taskName: 'Planning complete', startDate: new Date('02/07/2017'), endDate: new Date('02/07/2017'), duration: 0, progress: 0, priority: 'Low', approved: true }
-            ]
-        },
-        {
-            taskID: 6, taskName: 'Design', startDate: new Date('02/10/2017'), endDate: new Date('02/14/2017'), duration: 3, progress: 86, priority: 'High', approved: false,
-            subtasks: [
-                { taskID: 7, taskName: 'Software Specification', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 60, priority: 'Normal', approved: false },
-                { taskID: 8, taskName: 'Develop prototype', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 100, priority: 'Critical', approved: false },
-                { taskID: 9, taskName: 'Get approval from customer', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-                { taskID: 10, taskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
-                { taskID: 11, taskName: 'Design complete', startDate: new Date('02/14/2017'), endDate: new Date('02/14/2017'), duration: 0, progress: 0, priority: 'Normal', approved: true }
-            ]
-        }
-];
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/app.vue** file:
+The treegrid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -204,9 +133,7 @@ const data = [
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
-
-To run the project, use the following command:
+## Run the application
 
 ```bash
 npm run dev

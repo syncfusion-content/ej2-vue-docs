@@ -14,10 +14,10 @@ new Vue({
           :filterSettings='filterSettings' :editSettings='editSettings' :toolbar='toolbar'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' :isPrimaryKey='true' :validationRules='orderIDRules' textAlign='Right' width=90></e-column>
-            <e-column field='CustomerName' headerText='CustomerName' :validationRules=' customerNameRules' width=120></e-column>
-            <e-column field='OrderDate' headerText='OrderDate' width='100' format='yMd' editType='datepickeredit' textAlign='Right'></e-column>
+            <e-column field='CustomerName' headerText='Customer Name' :validationRules=' customerNameRules' width=120></e-column>
+            <e-column field='OrderDate' headerText='Order Date' width='100' format='yMd' editType='datepickeredit' textAlign='Right'></e-column>
             <e-column field='Freight' headerText='Freight' format='C2' editType='numericedit' textAlign='Right' width=90></e-column>
-            <e-column field='ShipCountry' headerText='ShipCountry' editType='dropdownedit' width=120></e-column>
+            <e-column field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width=120></e-column>
           </e-columns>
         </ejs-grid>
     </div>

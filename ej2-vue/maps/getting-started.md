@@ -41,7 +41,7 @@ Below is the list of minimum dependencies required to use the Maps.
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. You can install Vue CLI using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm install -g @vue/cli
@@ -50,7 +50,7 @@ cd quickstart
 npm run serve
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn global add @vue/cli
@@ -71,16 +71,19 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmj
 
 This article uses the [Vue Maps component](https://www.syncfusion.com/vue-components/vue-maps-library) as an example. Install the `@syncfusion/ej2-vue-maps` package by using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-maps --save
+npm install @syncfusion/ej2-vue-maps
 ```
-### Using Yarn
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-maps
 ```
+
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps Component
 
@@ -145,13 +148,13 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 To run the project, use either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm run serve
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn run serve
