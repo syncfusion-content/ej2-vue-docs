@@ -22,13 +22,13 @@ Ensure that the development environment meets the required criteria listed in [S
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
-### Using npm
+**npm**
 
 ```bash
 npm create vite@latest
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn create vite
@@ -64,27 +64,16 @@ Vanilla
   Nuxt ↗
 ```
 
-**Step 4:** After creating the project, install dependencies by running:
+**Step 4:** Install dependencies
 
-Once the project is created, navigate to the project directory:
-
-```bash
-cd my-project
-```
-
-Install the project dependencies using either npm or Yarn:
-
-### Using npm
+After the project is created, the CLI prompts you to install dependencies and start the development server:
 
 ```bash
-npm install
+? Install with <package-manager> and start now?
+❯ Yes / No
 ```
 
-### Using Yarn
-
-```bash
-yarn install
-```
+Select **Yes**. The CLI automatically navigates to the project directory, installs all required dependencies, and starts the development server.
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -94,13 +83,13 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are avai
 
 This article uses the [Vue Accumulation Chart component](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Accumulation Chart component in the project, install the `@syncfusion/ej2-vue-charts` package using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
@@ -119,8 +108,7 @@ Follow the steps below to add the Vue Accumulation Chart component using `Compos
 
 <script setup>
 import { provide } from 'vue';
-import { AccumulationChartComponent as EjsAccumulationchart, AccumulationSeriesCollectionDirective as EAccumulationSeriesCollection, AccumulationSeriesDirective as EAccumulationSeries,
-PieSeries } from "@syncfusion/ej2-vue-charts";
+import { AccumulationChartComponent as EjsAccumulationchart, AccumulationSeriesCollectionDirective as EAccumulationSeriesCollection, AccumulationSeriesDirective as EAccumulationSeries, PieSeries } from "@syncfusion/ej2-vue-charts";
 
 let accumulationchart = [PieSeries];
 provide('accumulationchart', accumulationchart);
@@ -281,13 +269,13 @@ export default {
 
 To run the project, use either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm run dev
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn run dev
@@ -312,9 +300,10 @@ The output will appear as follows:
 
 
 > **Sample**: You can explore the complete sample project in the [`vue-3-accumulation-chart-getting-started`](https://github.com/SyncfusionExamples/vue3-accumulation-chart-getting-started).
+
 For migrating from Vue 2 to Vue 3, refer to the [Vue 3 Migration Guide](https://v3-migration.vuejs.org/).
 
 ## See Also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

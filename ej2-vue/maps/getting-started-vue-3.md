@@ -27,12 +27,13 @@ Ensure that the development environment meets the required criteria listed in [S
 
 [Vite](https://vitejs.dev/) provides a lightweight, fast development environment for Vue 3 projects. To create a new Vite project, run one of the following commands:
 
-### Using npm
+**npm**
+
 ```bash
 npm create vite@latest
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn create vite
@@ -69,27 +70,14 @@ Vanilla
   Nuxt ↗
 ```
 
-**Step 4:** **Install dependencies** - Navigate to the project directory and install dependencies:
-
-Move to the project directory:
+**Step 4:** **Install dependencies** - After the project is created, the CLI prompts you to install dependencies and start the development server:
 
 ```bash
-cd my-project
+? Install with <package-manager> and start now?
+❯ Yes / No
 ```
 
-Install the project dependencies using either npm or Yarn:
-
-### Using npm
-
-```bash
-npm install
-```
-
-### Using Yarn
-
-```bash
-yarn install
-```
+Select **Yes**. The CLI automatically navigates to the project directory, installs all required dependencies, and starts the development server.
 
 After setup completes, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -99,17 +87,19 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are avai
 
 This guide uses the [Vue Maps component](https://www.syncfusion.com/vue-components/vue-maps) as an example. Install the `@syncfusion/ej2-vue-maps` package using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-maps --save
+npm install @syncfusion/ej2-vue-maps
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-maps
 ```
+
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps Component
 
@@ -238,13 +228,13 @@ const shapeData = new MapAjax('https://cdn.syncfusion.com/maps/map-data/world-ma
 
 To run the project, use either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm run dev
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn run dev

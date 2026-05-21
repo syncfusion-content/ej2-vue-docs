@@ -24,12 +24,12 @@ Ensure that the development environment meets the required criteria listed in [S
 
 The recommended way to start a Vue 3 project is by scaffolding it with [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
-### Using npm
+**npm**
 ```bash
 npm create vite@latest
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn create vite
@@ -65,27 +65,16 @@ Vanilla
   Nuxt ↗
 ```
 
-**Step 4:** Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+**Step 4:** Install dependencies
 
-Once the project is created, navigate to the project directory:
-
-```bash
-cd my-project
-```
-
-Install the project dependencies using either npm or Yarn:
-
-### Using npm
+After the project is created, the CLI prompts you to install dependencies and start the development server:
 
 ```bash
-npm install
+? Install with <package-manager> and start now?
+❯ Yes / No
 ```
 
-### Using Yarn
-
-```bash
-yarn install
-```
+Select **Yes**. The CLI automatically navigates to the project directory, installs all required dependencies, and starts the development server.
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -95,19 +84,19 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are avai
 
 This article uses the [Vue Stock Chart component](https://www.syncfusion.com/vue-components/vue-stock-chart) as an example. To use the Vue Stock Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart Component
 
@@ -320,13 +309,13 @@ export default {
 
 To run the project, use either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm run dev
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn run dev

@@ -22,13 +22,13 @@ Ensure that the development environment meets the required criteria listed in [S
 
 The recommended way to start a Vue 3 application is by scaffolding a project using [`Vite`](https://vitejs.dev). Create a new Vite project using one of the following commands:
 
-### Using npm
+**npm**
 
 ```bash
 npm create vite@latest
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn create vite
@@ -65,26 +65,16 @@ Vanilla
   Nuxt ↗
 ```
 
-**Step 4:** After creating the project, install dependencies:
+**Step 4:** Install dependencies
 
-Once the project is created, navigate to the project directory:
-
-```bash
-cd my-project
-```
-
-Install the project dependencies using either npm or Yarn:
-
-### Using npm
+After the project is created, the CLI prompts you to install dependencies and start the development server:
 
 ```bash
-npm install
+? Install with <package-manager> and start now?
+❯ Yes / No
 ```
-### Using Yarn
 
-```bash
-yarn install
-```
+Select **Yes**. The CLI automatically navigates to the project directory, installs all required dependencies, and starts the development server.
 
 Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
 
@@ -94,13 +84,13 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are avai
 
 This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-components/vue-charts) as an example. To use the Vue Chart component in the project, install the `@syncfusion/ej2-vue-charts` package using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
@@ -271,13 +261,13 @@ export default {
 
 To run the project, use either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm run dev
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn run dev

@@ -32,7 +32,7 @@ The list of minimum dependencies required to use the Stock Chart is as follows:
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. You can install Vue CLI using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm install -g @vue/cli
@@ -41,7 +41,7 @@ cd quickstart
 npm run serve
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn global add @vue/cli
@@ -62,19 +62,19 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmj
 
 This article uses the [Vue Stock Chart component](https://www.syncfusion.com/vue-components/vue-stock-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart Component
 
@@ -115,13 +115,13 @@ export default {
 
 To run the project, use either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm run serve
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn run serve

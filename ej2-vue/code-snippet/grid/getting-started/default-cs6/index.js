@@ -12,10 +12,10 @@ new Vue({
         <ejs-grid :dataSource="data">
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
-            <e-column field='CustomerName' headerText='CustomerName' width=100></e-column>
-            <e-column field='OrderDate' headerText='OrderDate' width='100' format='yMd' textAlign='Right'></e-column>
+            <e-column field='CustomerName' headerText='Customer Name' width=100></e-column>
+            <e-column field='OrderDate' headerText='Order Date' width='100' format='yMd' textAlign='Right'></e-column>
             <e-column field='Freight' headerText='Freight' width=100 format='C2' textAlign='Right'></e-column>
-            <e-column field='ShipCountry' headerText='ShipCountry' width=100></e-column>
+            <e-column field='ShipCountry' headerText='Ship Country' width=100></e-column>
           </e-columns>
         </ejs-grid>
     </div>

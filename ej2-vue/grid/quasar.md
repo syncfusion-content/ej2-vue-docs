@@ -42,21 +42,17 @@ cd quasar-project
 
 The `quasar-project` is now ready to run with default settings. Next, the Vue Grid component is added to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, the corresponding npm package must be installed.
-
-This article uses the [Vue Grid component](https://www.syncfusion.com/vue-components/vue-grid) as an example. To use the Vue Grid component in the project, the `@syncfusion/ej2-vue-grids` package is installed using the following command:
+To install the Grid component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component can be imported in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). The [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) provides detailed information on built-in themes and the different ways to reference themes in a Vue project.
-
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component and its dependents are imported into the `<style>` section of the **src/app.vue** file.
+The following CSS files are available in the ../node_modules/@syncfusion package folder. Add these as references in **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -76,67 +72,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with their dependency graph.
+## Adding Grid component
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-The following steps add the Vue Grid component:
-
-1\. First, the `setup` attribute is added to the `script` tag to indicate that Vue is using the `Composition API`. And import the Grid component in the `script` section of the **src/app.vue** file.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-
-<script setup>
-  import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-   
-2\. In the `template` section, the Grid component is defined with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-
-<template>
-  <ejs-grid :dataSource='data' :width="1000">
-    <e-columns>
-      <e-column field='OrderID' textAlign="Center"></e-column>
-      <e-column field='CustomerID' textAlign="Center"></e-column>
-      <e-column field='EmployeeID' textAlign="Center"></e-column>
-      <e-column field='Freight' format="C2" textAlign="Center"></e-column>
-      <e-column field='ShipCountry' textAlign="Center"></e-column>
-    </e-columns>
-  </ejs-grid>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3\. The values for the `dataSource` property are declared in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
-
-<script setup>
-const data = [
-  {
-    OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 
-  },
-  {
-    OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 
-  },
-  {
-    OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, ShipCountry: 'Brazil', Freight: 65.83 
-  }
-];
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/app.vue** file:
+The grid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -183,9 +121,7 @@ const data = [
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
-
-To run the project, use the following command:
+## Run the application
 
 ```bash
 npm run dev

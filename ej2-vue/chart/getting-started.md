@@ -42,9 +42,9 @@ The following are the minimum required dependencies to use the Vue Chart compone
 
 ## Setting Up the Vue 2 Project
 
-To generate a Vue 2 project using Vue CLI, first install Vue CLI globally using either npm or Yarn, and then create a new project with the [`vue create`](https://cli.vuejs.org#getting-started) command:
+To generate a Vue 2 project using Vue CLI, install Vue CLI globally using either npm or Yarn, and then create a new project with the [`vue create`](https://cli.vuejs.org#getting-started) command:
 
-### Using npm
+**npm**
 
 ```bash
 npm install -g @vue/cli
@@ -53,7 +53,7 @@ cd quickstart
 npm run serve
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn global add @vue/cli
@@ -74,12 +74,13 @@ Syncfusion packages are available at [`npmjs.com`](https://www.npmjs.com/search?
 
 This article uses the `Vue Chart component` as an example. To use it in the project, install the `@syncfusion/ej2-vue-charts` package using either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts
 ```
-### Using Yarn
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
@@ -135,13 +136,13 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 To run the project, use either npm or Yarn:
 
-### Using npm
+**npm**
 
 ```bash
 npm run serve
 ```
 
-### Using Yarn
+**yarn**
 
 ```bash
 yarn run serve
