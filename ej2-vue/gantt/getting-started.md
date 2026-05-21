@@ -64,7 +64,7 @@ yarn add @syncfusion/ej2-vue-gantt
 In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Gantt Chart component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
@@ -132,39 +132,14 @@ const taskFields = {
 | `progress` | Task completion percentage (0-100) | No |
 | `parentID` | Parent task ID for hierarchy | No |
 
-*Either `duration` or `endDate` is required for a task to render properly.
-
-## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-A Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component needs to be registered so that Vue knows where to locate its implementation when it is encountered in a template.
-
-Import and register the Gantt Chart component in the `<script>` section of the `src/App.vue` file as shown below:
-
-{% tabs %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-    import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-gantt';
-    //Component registration
-    export default {
-      name: "App",
-      components: {
-        'ejs-gantt': GanttComponent,
-      }
-    }
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-The Gantt Chart and column directives are now registered and ready to use in this application.
- 
 ## Render the Gantt component
 
-To display the Gantt Chart, bind your task data using the dataSource property and map the corresponding fields using the taskFields property.
+Ensure that the Gantt component is imported and registered in the `<script>` section of the `src/App.vue` file so that Vue can recognize and render it within the template.
+
+To display the Gantt Chart, bind your task data using the `dataSource` property and map the corresponding fields using the `taskFields` property.
 
 {% tabs %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 
 <template>
      <div>
@@ -176,7 +151,7 @@ import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 export default {
 name: "App",
   components: {
-    'ejs-gantt': GanttComponent
+    'ejs-gantt': GanttComponent // Component registration
   },
   data: function() {
     return{
@@ -237,11 +212,11 @@ The chart displays two parent tasks ("Project initiation" and "Project estimatio
 You can preview the following sample by clicking the **Preview Sample** button.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 {% include code-snippet/gantt/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/getting-started-cs13" %}
 
 ## Next Steps
