@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Gantt Chart Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -171,27 +171,16 @@ const taskFields = {
 | `progress` | Task completion percentage (0-100) | No |
 | `parentID` | Parent task ID for hierarchy | No |
 
-*Either `duration` or `endDate` is required for a task to render properly.
+## Render the Gantt component
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+Follow the steps below to add the Vue Gantt Chart component using the Composition API:
 
-Follow the below steps to add the Vue Gantt Chart component using `Composition API`:
+First, import and register the Gantt component in the `<script>` section of the `src/App.vue` file. When using the Composition API, include the `setup` attribute in the `<script>` tag to enable it.
 
-First, import and register the Gantt Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-   import { GanttComponent as EjsGantt} from '@syncfusion/ej2-vue-gantt';
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
+To display the Gantt Chart, bind your task data using the `dataSource` property and map the corresponding fields using the `taskFields` property.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="App.vue" %}
 
 <template>
   <ejs-gantt 
@@ -202,6 +191,7 @@ First, import and register the Gantt Chart component and its child directives in
 </template>
 
 <script setup>
+  // Import and register the Gantt component
   import { GanttComponent as EjsGantt} from '@syncfusion/ej2-vue-gantt';
   const data = [
     {TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15')},
