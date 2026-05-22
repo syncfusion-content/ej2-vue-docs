@@ -97,21 +97,21 @@ yarn add @syncfusion/ej2-vue-pivotview
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, `material3` theme is applied using CSS styles, which are available in installed packages. The necessary `material3` CSS styles for the Pivotview component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `tailwind3` CSS styles for the Pivotview component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
@@ -127,14 +127,14 @@ Follow the below steps to add the Vue Pivotview component using `Composition API
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-  import { PivotViewComponent, FieldList, GroupingBar, CalculatedField } from "@syncfusion/ej2-vue-pivotview";
+  import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-  import { PivotViewComponent, FieldList, GroupingBar, CalculatedField } from "@syncfusion/ej2-vue-pivotview";
+  import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
   //Component registeration.
   export default {
     name: "App",
@@ -153,7 +153,7 @@ Follow the below steps to add the Vue Pivotview component using `Composition API
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-  <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings" :showFieldList="showFieldList" :showGroupingBar="showGroupingBar" :allowCalculatedField="allowCalculatedField"></ejs-pivotview>
+  <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings"></ejs-pivotview>
 </template>
 
 {% endhighlight %}
@@ -166,15 +166,10 @@ Follow the below steps to add the Vue Pivotview component using `Composition API
 
 <script setup>
   const dataSource = [
-    { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-    { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-    { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-    { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-    { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-    { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-    { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-    { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-    { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
+    { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },
+    { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q2' },
+    { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q3' },
+    { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q4' }
   ]
 </script>
 
@@ -186,25 +181,17 @@ Follow the below steps to add the Vue Pivotview component using `Composition API
     return {
       dataSourceSettings: {
         dataSource: [
-          { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-          { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-          { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-          { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-          { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-          { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-          { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-          { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-          { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
+          { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },
+          { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q2' },
+          { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q3' },
+          { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q4' }
         ],
-        rows: [{ name: 'Country' }],
-        columns: [{ name: 'Date' }],
-        values: [{ name: 'Amount' }, { name: 'Total', type: 'CalculatedField' }],
-        formatSettings: [{ name: 'Amount', format: 'C1' }],
-        calculatedFieldSettings: [{ name: 'Total', formula: '"Sum(Amount)"+"Sum(Quantity)"' }]
+        expandAll: true,
+        columns: [{ name: 'Year' }, { name: 'Quarter' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
+        formatSettings: [{ name: 'Amount', format: 'C0' }]
       },
-      showFieldList: true,
-      showGroupingBar: true,
-      allowCalculatedField: true,
       height: '350px',
       width: '100%'
     };
@@ -231,20 +218,16 @@ import { PivotViewComponent as EjsPivotview } from "@syncfusion/ej2-vue-pivotvie
 
 const dataSourceSettings = {
   dataSource: [
-    { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-    { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-    { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-    { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-    { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-    { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-    { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-    { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-    { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" }
+      { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },
+      { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q2' },
+      { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q3' },
+      { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q4' }
   ],
-  rows: [{ name: 'Country' }],
-  columns: [{ name: 'Date' }],
-  values: [{ name: 'Amount' }],
-  formatSettings: [{ name: 'Amount', format: 'C1' }]
+  expandAll: true,
+  columns: [{ name: 'Year' }, { name: 'Quarter' }],
+  rows: [{ name: 'Country' }, { name: 'Products' }],
+  values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
+  formatSettings: [{ name: 'Amount', format: 'C0' }]
 };
 const height = 350;
 const width = '100%';
@@ -283,20 +266,16 @@ export default {
     return {
       dataSourceSettings: {
         dataSource: [
-          { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
-          { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
-          { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
-          { Amount: 2060, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 93, State: "British Columbia" },
-          { Amount: 6200, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 36, State: "British Columbia" },
-          { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
-          { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
-          { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-          { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
+          { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },
+          { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q2' },
+          { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q3' },
+          { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q4' }
         ],
-        rows: [{ name: 'Country' }],
-        columns: [{ name: 'Date' }],
-        values: [{ name: 'Amount' }],
-        formatSettings: [{ name: 'Amount', format: 'C1' }]
+        expandAll: true,
+        columns: [{ name: 'Year' }, { name: 'Quarter' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
+        formatSettings: [{ name: 'Amount', format: 'C0' }]
       },
       height: '350px',
       width: '100%'

@@ -105,7 +105,7 @@ Follow the below steps to add the Vue Pivotview component:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-  import { PivotViewComponent, FieldList, GroupingBar, CalculatedField } from "@syncfusion/ej2-vue-pivotview";
+  import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 </script>
 
 {% endhighlight %}
