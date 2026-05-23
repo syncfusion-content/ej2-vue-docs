@@ -189,7 +189,7 @@ export default {
 ```
 You can also refer to the [Feature Modules](./feature-modules) page for the complete list of available modules and their supported features.
 
-> **Tip**: Inject only the modules you actually use to keep the bundle size smaller.
+> Note: Inject only the modules you actually use to keep the bundle size smaller.
 
 ## Populate Chart with Data
 
@@ -197,7 +197,7 @@ This section explains how to bind JSON data to the chart.
 
 * Add a series object to the chart using the [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart/series) property. Map the fields `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#yname) properties of the series, and set the JSON data to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
 
-* Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/valueType#valuetype) for the horizontal axis to `Category`. By default, the axis `valueType` is `Numeric`.
+* Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/valueType#valuetype) for the horizontal axis to `Category`. By default, the axis `valueType` is `Double`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
