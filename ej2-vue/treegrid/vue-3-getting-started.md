@@ -65,21 +65,17 @@ Vanilla
   Nuxt ↗
 ```
 
-4. After completing these steps to create the `my-project`, execute the following command to install its dependencies:
+4. Install dependencies and start the dev server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Terminate the application, then run the following command:
 
 ```bash
 cd my-project
-npm install
 ```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-With `my-project` ready to run with default settings, the next step is to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid packages
 
@@ -144,10 +140,6 @@ or
 ```bash
 yarn run dev
 ```
-
-The output will appear as follows:
-
-![vue-3-js-grid](images/Vue3-treegrid-demo.png)
 
 ## See also
 

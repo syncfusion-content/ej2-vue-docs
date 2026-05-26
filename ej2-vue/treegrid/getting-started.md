@@ -26,7 +26,6 @@ To generate a Vue 2 project using Vue-CLI, execute the [vue create](https://cli.
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
 ```
 
 or
@@ -34,14 +33,17 @@ or
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
 ```
 
 When creating a new project, select the option `Default ([Vue 2] babel, eslint)` from the menu.
 
 ![Vue 2 project](images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Navigate to the project directory:
+
+```bash
+cd quickstart
+```
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid packages
 
