@@ -77,21 +77,11 @@ Use rolldown-vite (Experimental)? No
 Install with npm and start now?: Yes
 ```
 
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
+Terminate the application, then run the following command:
 
 ```bash
 cd my-project
-npm install
 ```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid packages
 

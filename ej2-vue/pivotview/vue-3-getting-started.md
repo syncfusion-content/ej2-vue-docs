@@ -65,7 +65,13 @@ Vanilla
   Nuxt ↗
 ```
 
-**4.** Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Install dependencies and start the development server.
+
+```bash
+Install with npm and start now?: Yes
+```
+
+Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
 ```bash
 cd my-project
@@ -81,23 +87,22 @@ yarn install
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PivotTable packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-This article uses the [Vue Pivotview component](https://www.syncfusion.com/vue-components/vue-pivot-table) as an example. To use the Vue Pivotview component in the project, the `@syncfusion/ej2-vue-pivotview` package needs to be installed using the following command:
+To install the PivotTable component, run the following command:
+
 ```bash
 npm install @syncfusion/ej2-vue-pivotview --save
 ```
 or
+
 ```bash
 yarn add @syncfusion/ej2-vue-pivotview
 ```
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, `tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `tailwind3` CSS styles for the Pivotview component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+The following CSS files are available in the ../node_modules/@syncfusion package folder. Add them as references in **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -117,91 +122,9 @@ In this article, `tailwind3` theme is applied using CSS styles, which are availa
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding Pivot Table component
 
-Follow the below steps to add the Vue Pivotview component using `Composition API` or `Options API`:
-
-**1.** First, import and register the Pivotview component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-  import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
-  //Component registeration.
-  export default {
-    name: "App",
-    components: {
-      "ejs-pivotview": PivotViewComponent
-    }
-  }
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-**2.** In the `template` section, define the Pivotview component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/pivotview/idataoptions#datasource) property and column definitions.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings"></ejs-pivotview>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-**3.** Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  const dataSource = [
-    { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },
-    { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q2' },
-    { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q3' },
-    { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q4' }
-  ]
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-  data() {
-    return {
-      dataSourceSettings: {
-        dataSource: [
-          { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },
-          { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q2' },
-          { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q3' },
-          { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q4' }
-        ],
-        expandAll: true,
-        columns: [{ name: 'Year' }, { name: 'Quarter' }],
-        rows: [{ name: 'Country' }, { name: 'Products' }],
-        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
-        formatSettings: [{ name: 'Amount', format: 'C0' }]
-      },
-      height: '350px',
-      width: '100%'
-    };
-  }
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+The PivotTable code should be added to the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -316,8 +239,6 @@ yarn run dev
 The output will appear as follows:
 
 ![vue-3-js-pivot-table](./images/vue-3-js-pivot-table.png)
-
-> **Sample**: [vue-3-pivot-table-getting-started](https://github.com/SyncfusionExamples/vue3-pivottable-getting-started).
 
 ## See also
 
