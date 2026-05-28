@@ -97,7 +97,7 @@ The treegrid code should be added in the **src/App.vue** file.
 ## Run the application
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 ## See Also
