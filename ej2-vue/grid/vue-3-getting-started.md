@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Vue 3 getting started with the Grid component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Grid component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 getting started with the DataGrid component | Syncfusion
+description: Check out and learn about Vue 3 getting started with the Vue DataGrid component of Syncfusion Essential JS 2 and more details.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Grid Component in Vue 3
+# Getting Started with the Vue DataGrid Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataGrid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -83,9 +83,9 @@ Terminate the application, then run the following command:
 cd my-project
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
 
-To install the Grid component, use the following command:
+To install the Grids package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -121,9 +121,9 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Grid component
+## Adding DataGrid component
 
-The grid code should be added in the **src/App.vue** file.
+The DataGrid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
@@ -150,7 +150,7 @@ yarn run dev
 
 ## See also
 
-* [Grid Feature Modules](./module)
+* [DataGrid Feature Modules](./module)
 * [Getting Started with Vue UI Components using Composition API and TypeScript](../guide/introduction.html#composition-api)
 * [Getting Started with Vue UI Components using Options API and TypeScript](../guide/introduction.html#options-api)
 * [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
