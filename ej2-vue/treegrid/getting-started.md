@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started with Vue TreeGrid component | Syncfusion
-description:  Checkout and learn about Getting started with Vue TreeGrid component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Tree Grid component | Syncfusion
+description:  Checkout and learn about Getting started with Vue Tree Grid component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue TreeGrid component in Vue 2
+# Getting Started with the Vue Tree Grid component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Tree Grid component
 
 To get started quickly with Vue tree grid, check out this video:
 {% youtube "https://www.youtube.com/watch?v=FEMyOHKjjao" %}
@@ -45,9 +45,9 @@ Navigate to the project directory:
 cd quickstart
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Tree Grid packages
 
-To install the TreeGrid component, use the following command:
+To install the Tree Grid component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-treegrid --save
@@ -82,9 +82,9 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
-## Adding TreeGrid component
+## Adding Tree Grid component
 
-The treegrid code should be added in the **src/App.vue** file.
+The tree grid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}

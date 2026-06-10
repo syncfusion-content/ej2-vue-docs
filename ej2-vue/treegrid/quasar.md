@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Quasar Getting Started with Vue TreeGrid Component | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue TreeGrid Component of Syncfusion Essential JS 2 and more details.
+title: Quasar Getting Started with Vue Tree Grid Component | Syncfusion
+description: Check out and learn about getting started with the Quasar Framework and Vue Tree Grid Component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the TreeGrid Component in the Quasar Framework
+# Getting Started with the Tree Grid Component in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Tree Grid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
@@ -42,9 +42,9 @@ cd quasar-project
 
 Now that `quasar-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Tree Grid packages
 
-To install the TreeGrid component, use the following command:
+To install the Tree Grid component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-treegrid --save
@@ -73,9 +73,9 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
-## Adding TreeGrid component
+## Adding Tree Grid component
 
-The treegrid code should be added in the **src/App.vue** file.
+The tree grid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}

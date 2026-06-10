@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Getting Started with Quasar and Vue Grid Component | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue Grid Component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Quasar and Vue DataGrid Component | Syncfusion
+description: Check out and learn about getting started with the Quasar Framework and Vue DataGrid Component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Grid Component in the Quasar Framework
+# Getting Started with Vue DataGrid Component in Quasar Framework
 
-A step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+A step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataGrid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid components](../system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataGrid components](../system-requirements)
 
 ## Setup the Quasar project
 
@@ -40,11 +40,11 @@ Navigate to the project directory:
 cd quasar-project
 ```
 
-The `quasar-project` is now ready to run with default settings. Next, the Vue Grid component is added to the project.
+The `quasar-project` is now ready to run with default settings. Next, the Vue DataGrid component is added to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
 
-To install the Grid component, use the following command:
+To install the Grids package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -72,9 +72,9 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Grid component
+## Adding DataGrid component
 
-The grid code should be added in the **src/App.vue** file.
+The DataGrid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}

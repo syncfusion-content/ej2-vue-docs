@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Getting started with Vue Grid component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Grid component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue DataGrid component | Syncfusion
+description:  Checkout and learn about Getting started with Vue DataGrid component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Grid Component in Vue 2
+# Getting Started with the Vue DataGrid Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataGrid component.
 
-To get started quickly with Vue Grid, check this video:
+To get started quickly with Vue DataGrid, check this video:
 
 {% youtube "https://www.youtube.com/watch?v=pU0ERPrY2go" %}
 
@@ -46,9 +46,9 @@ Navigate to the project directory:
 cd quickstart
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
 
-To install the Grid component, use the following command:
+To install the Grids package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -81,9 +81,9 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Grid component
+## Adding DataGrid component
 
-The grid code should be added in the **src/App.vue** file.
+The DataGrid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
@@ -107,7 +107,7 @@ yarn run serve
 
 ## See also
 
-* [Grid Feature Modules](./module)
-* [Getting Started with the Vue Grid Component in Vue 3](https://ej2.syncfusion.com/vue/documentation/grid/vue-3-getting-started)
-* [Testing the Vue Grid](https://www.syncfusion.com/forums/140772/testing-the-vue-grid)
-* [Switching themes programmatically in Vue Grid](https://www.syncfusion.com/forums/145386/switching-themes-programmatically-in-vue-grid)
+* [DataGrid Feature Modules](./module)
+* [Getting Started with the Vue DataGrid Component in Vue 3](https://ej2.syncfusion.com/vue/documentation/grid/vue-3-getting-started)
+* [Testing the Vue DataGrid](https://www.syncfusion.com/forums/140772/testing-the-vue-grid)
+* [Switching themes programmatically in Vue DataGrid](https://www.syncfusion.com/forums/145386/switching-themes-programmatically-in-vue-grid)
