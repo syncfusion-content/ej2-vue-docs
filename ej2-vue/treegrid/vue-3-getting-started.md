@@ -77,9 +77,9 @@ Terminate the application, then run the following command:
 cd my-project
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Tree Grid packages
 
-To install the TreeGrid component, use the following command:
+To install the Tree Grid component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-treegrid --save
@@ -116,9 +116,9 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
-## Adding TreeGrid component
+## Adding Tree Grid component
 
-The treegrid code should be added in the **src/App.vue** file.
+The tree grid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}

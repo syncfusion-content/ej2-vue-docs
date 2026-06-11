@@ -49,7 +49,7 @@ npm install @syncfusion/ej2-vue-richtexteditor
 
 ## Adding CSS reference
 
-The following CSS files are available in ../node_modules/@syncfusion package folder. This can be referenced in the `<style>` section of **src/App.vue** file using the following code.
+The following CSS files are available in ../node_modules/@syncfusion package folder. This can be added as reference in `src/style.css`.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -86,6 +86,9 @@ Now, you can start adding Vue Rich Text Editor component in the application. For
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs21/app.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/rich-text-editor/toolbar-cs21/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
