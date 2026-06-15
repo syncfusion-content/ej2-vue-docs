@@ -122,6 +122,8 @@ The following CSS files are available in the ../node_modules/@syncfusion package
 {% endhighlight %}
 {% endtabs %}
 
+N> Before including Syncfusion styles, make sure to remove the default styles defined in **style.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
+
 ## Adding Pivot Table component
 
 The PivotTable code should be added to the **src/App.vue** file.
