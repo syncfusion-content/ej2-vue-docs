@@ -169,7 +169,7 @@ When you include the specific docs URL, the AI generates correct code: proper im
 
 When you autocomplete a GridComponent, the IDE AI suggests:
 
-```vue
+```html
 <Grid :data="gridData" />
 ```
 
@@ -179,7 +179,7 @@ That's incorrect Syncfusion syntax — it uses a wrong component name and a non-
 
 The IDE AI correctly suggests typed, accurate code.
 
-```vue
+```html
 <template>
   <ejs-grid
     :dataSource="employees"
