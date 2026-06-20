@@ -18,46 +18,46 @@ StockChart supports 10 types of technical indicators namely `Accumulation Distri
 ## Accumulation Distribution
 
 Accumulation Distribution combines price and volume to show how money may be flowing into or out of stock.
-To render a Accumulation Distribution Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `AccumulationDistribution` and inject `AccumulationDistributionIndicator` into the `provide`. To calculate the signal line [`volume`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#volume) field is additionally added with `dataSource`.
+To render a Accumulation Distribution Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `AccumulationDistribution` and inject `AccumulationDistributionIndicator` into the `provide`. To calculate the signal line [`volume`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#volume) field is additionally added with `dataSource`.
 
 ## Average True Range (ATR)
 
-ATR measures the stock volatility by comparing the current value with the previous value. To render a Average True Range (ATR) Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `Atr` and inject `AtrIndicator` into the `provide`.
+ATR measures the stock volatility by comparing the current value with the previous value. To render a Average True Range (ATR) Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `Atr` and inject `AtrIndicator` into the `provide`.
 
 ## Exponential Moving Average (EMA)
 
 Moving average Indicators are used to define the direction of the trend. To render a EMA Indicator,
-use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `Ema` and inject `EmaIndicator` into the `provide`.
+use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `Ema` and inject `EmaIndicator` into the `provide`.
 
 ## Momentum
 
-Momentum shows the speed at which the price of the stock is changing. To render a Momentum indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `Momentum`and inject `MomentumIndicator` into the `provide`. Momentum indicator will be represented by two lines (upperLine,
+Momentum shows the speed at which the price of the stock is changing. To render a Momentum indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `Momentum`and inject `MomentumIndicator` into the `provide`. Momentum indicator will be represented by two lines (upperLine,
 signalLine).In momentum indicator the upperBand value is always renders at the value 100.
 
 ## Moving Average Convergence Divergence (MACD)
 
-MACD is based on the difference between two EMA's. To render a MACD Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `Macd` and inject `MacdIndicator` into the `provide`.MACD indicator will be represented by MACD line,signal line, MACD histogram. MACD histogram is used to differentiate MACD line and signal line.
+MACD is based on the difference between two EMA's. To render a MACD Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `Macd` and inject `MacdIndicator` into the `provide`.MACD indicator will be represented by MACD line,signal line, MACD histogram. MACD histogram is used to differentiate MACD line and signal line.
 
 ## Relative Strength Index (RSI)
 
-RSI shows how strongly a stock is moving in its current direction. To render a RSI Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `Rsi` and inject `RsiIndicator` into the `provide`.RSI indicator will be represented by three lines (upperBand, lowerBand, signalLine). The upperBand and lowerBand values are customized by [`overBought`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#overBought) and [`overSold`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) properties of indicator and the signalLine is calculated by RSI formula.
+RSI shows how strongly a stock is moving in its current direction. To render a RSI Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `Rsi` and inject `RsiIndicator` into the `provide`.RSI indicator will be represented by three lines (upperBand, lowerBand, signalLine). The upperBand and lowerBand values are customized by [`overBought`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#overBought) and [`overSold`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) properties of indicator and the signalLine is calculated by RSI formula.
 
 ## Simple Moving Average (SMA)
 
-Moving average Indicators are used to define the direction of the trend. To render a SMA Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `Sma` and inject `SmaIndicator` into the `provide`.
+Moving average Indicators are used to define the direction of the trend. To render a SMA Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `Sma` and inject `SmaIndicator` into the `provide`.
 
 ## Stochastic
 
-It shows how a stock is, when compared to previous state. To render a Stochastic indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `Stochastic` and inject `StochasticIndicator` into the `provide`. stochastic indicator will be represented by four lines (upperLine, lowerLine, periodLine, signalLine). In stochastic indicator the upperBand value and lowerBand value is customized by [`overBought`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#overBought) and [`overSold`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#overSold) properties of indicators and the periodLine and signalLine is render based on stochastic formula.
+It shows how a stock is, when compared to previous state. To render a Stochastic indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `Stochastic` and inject `StochasticIndicator` into the `provide`. stochastic indicator will be represented by four lines (upperLine, lowerLine, periodLine, signalLine). In stochastic indicator the upperBand value and lowerBand value is customized by [`overBought`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#overBought) and [`overSold`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#overSold) properties of indicators and the periodLine and signalLine is render based on stochastic formula.
 
 ## Triangular Moving Average (TMA)
 
-Moving average Indicators are used to define the direction of the trend. To render a TMA Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `Tma` and inject `TmaIndicator` into the `provide`.
+Moving average Indicators are used to define the direction of the trend. To render a TMA Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `Tma` and inject `TmaIndicator` into the `provide`.
 
 ## Bollinger Band
 
-A StockChart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render a Bollinger Band, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#type) as `BollingerBand` and inject `BollingerBands` into the `provide`.
-Bollinger band will be represented by three lines (upperLine, lowerLine, signalLine).The default values of the Bollinger Band [`period`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#period) is 14 and [`standardDeviations`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#standardDeviations) is 2.
+A StockChart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render a Bollinger Band, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#type) as `BollingerBand` and inject `BollingerBands` into the `provide`.
+Bollinger band will be represented by three lines (upperLine, lowerLine, signalLine).The default values of the Bollinger Band [`period`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#period) is 14 and [`standardDeviations`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel#standardDeviations) is 2.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -69,3 +69,24 @@ Bollinger band will be represented by three lines (upperLine, lowerLine, signalL
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/stockchart/technical-indicators-cs1" %}
+
+## Indicator Events
+
+The StockChart component supports **indicator life cycle events**, allowing you to monitor and control indicator add and remove operations triggered through the built-in toolbar indicator dropdown. These events are useful for validating user actions, restricting specific indicators, tracking indicator changes, and integrating indicator interactions with application logic.
+
+The following indicator events are supported by the StockChart component:
+
+- **`beforeIndicatorChange`** – Fired before an indicator is added or removed. This event allows you to review the requested action in advance and cancel it by setting `cancel` to `true`.
+
+- **`indicatorChanged`** – Fired after an indicator has been added or removed successfully. This event occurs only if the action was not canceled and can be used to handle the updated state in your application.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/technical-indicators-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/technical-indicators-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/stockchart/technical-indicators-cs2" %}
