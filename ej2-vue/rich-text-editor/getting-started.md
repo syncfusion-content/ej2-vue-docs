@@ -2,6 +2,7 @@
 layout: post
 title: Getting started in Vue Rich text editor component | Syncfusion
 description: Learn here all about Getting started in Syncfusion Vue Rich text editor component of Syncfusion Essential JS 2 and more.
+canonical_url: "https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor"
 control: Get started 
 platform: ej2-vue
 documentation: ug
