@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Frequently Asked Questions in Vue Schedule Component
 
-This section provides solutions to common issues encountered while working with the Vue Schedule component.
+This section provides solutions to common issues encountered while working with the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) component.
 
 ## Maximum Call Stack Size Exceeded
 

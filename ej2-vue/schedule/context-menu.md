@@ -29,4 +29,4 @@ Appointment deletion can be performed using the [`deleteEvent`](https://ej2.sync
         
 {% previewsample "page.domainurl/code-snippet/schedule/context-menu-cs1" %}
 
-> Refer to the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) Vue Scheduler feature tour page for detailed feature descriptions. Explore the [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) examples for demonstrations of scheduling and interaction behaviors.
+> Refer to the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for detailed feature descriptions. Explore the [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview.html) examples for demonstrations of scheduling and interaction behaviors.
