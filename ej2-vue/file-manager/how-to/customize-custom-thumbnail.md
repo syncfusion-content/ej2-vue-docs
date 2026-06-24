@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize thumbnails in Vue File Manager component | Syncfusion
-description: Learn here all about Customize custom thumbnail in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Customize custom thumbnail in Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: File Manager
 platform: ej2-vue
 documentation: ug

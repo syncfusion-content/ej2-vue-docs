@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Access control in Vue File Manager component | Syncfusion
-description: Learn how to define access permissions for files and folders in the Syncfusion Vue File Manager component.
+description: Learn how to define access permissions for files and folders in the Vue File Manager component, enabling secure and role-based user access.
 control: File Manager 
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Access control in Vue File Manager component
 
-The [Vue FileManager](https://www.syncfusion.com/vue-ui-components/vue-file-manager) enables defining access permissions for folders and files by configuring a set of access rules per user or role.
+The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component enables defining access permissions for folders and files by configuring a set of access rules per user or role.
 
 * [Access Rules](#access-rules)
 * [Permissions](#permissions)

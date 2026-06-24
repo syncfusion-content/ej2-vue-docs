@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User Interface in Vue File Manager component | Syncfusion
-description: Learn here all about the File Manager UI sections and features in the Syncfusion Vue File Manager component.
+description: Learn about the UI sections and key features of the Vue File Manager component, including navigation, file views, and operations.
 control: File Manager 
 platform: ej2-vue
 documentation: ug
@@ -30,7 +30,7 @@ The basic File Manager is a lightweight component with all the basic functions. 
 
 ## Injecting Services for Overview
 
-Basically, the File Manager component contains large-icons view for displaying the files and folders, a breadcrumb bar for navigation and context menu for performing operations. However, these basic functionalities can be extended by using the additional feature modules like details view, toolbar, navigation pane, and context menu to change the layout and to simplify the navigation and file operations within the file system. The above modules can be injected using `provide`.
+Basically, the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component contains large-icons view for displaying the files and folders, a breadcrumb bar for navigation and context menu for performing operations. However, these basic functionalities can be extended by using the additional feature modules like details view, toolbar, navigation pane, and context menu to change the layout and to simplify the navigation and file operations within the file system. The above modules can be injected using `provide`.
 
 The following example shows you the File Manager with all feature modules.
 
@@ -116,7 +116,7 @@ The context menu can be customized using the [contextMenuSettings](https://ej2.s
 
 ### Upload Files or Folders via context menu
 
-File Manager component allows to perform the files or folder [upload](https://ej2.syncfusion.com/vue/documentation/file-manager/file-operations#upload) operations with the help of Context Menu items by switching between the Files or Folder from Upload menu item.
+[Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component allows to perform the files or folder [upload](https://ej2.syncfusion.com/vue/documentation/file-manager/file-operations#upload) operations with the help of Context Menu items by switching between the Files or Folder from Upload menu item.
 
 ![Uploading a file](./images/filemanager-fileupload.png)
 

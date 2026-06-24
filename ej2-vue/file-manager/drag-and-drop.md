@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and drop in Vue File Manager component | Syncfusion
-description: Learn how to enable, configure and use drag-and-drop features in the Syncfusion Vue File Manager component.
+description: Learn how to enable, configure, and use drag-and-drop features in the Vue File Manager component for seamless file and folder operations.
 control: File Manager 
 platform: ej2-vue
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Vue File Manager component | Syncfusion
-description: Learn how to localize the Syncfusion Vue File Manager component by providing culture-specific texts and messages.
+description: Learn how to localize the Vue File Manager component by providing culture-specific texts and messages.
 control: File Manager 
 platform: ej2-vue
 documentation: ug

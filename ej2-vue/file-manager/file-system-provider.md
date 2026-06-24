@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File system provider in Vue File Manager component | Syncfusion
-description: Learn how to configure and integrate various file system providers in the Syncfusion Vue File Manager component.
+description: Learn how to configure and integrate various file system providers in the Vue File Manager component.
 control: File Manager 
 platform: ej2-vue
 documentation: ug
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # File system provider in Vue File Manager component
 
-The file system provider enables the File Manager component to manage files and folders in physical or cloud-based storage. It exposes server-side methods for common file actions such as creating folders, copying and moving items, deleting, uploading, and downloading.
+The file system provider enables the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to manage files and folders in physical or cloud-based storage. It exposes server-side methods for common file actions such as creating folders, copying and moving items, deleting, uploading, and downloading.
 
-The following file providers are added in Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 File Manager component.
+The following file providers are added in [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component.
 
 * [Physical file system provider](#physical-file-system-provider)
 * [Azure cloud file system Provider](#azure-cloud-file-system-provider)
@@ -39,7 +39,7 @@ cd ej2-aspcore-file-provider
 
 After cloning,  open the project in Visual Studio and restore the NuGet packages. Now, we need to set the root directory of the physical file system in the FileManager controller.
 
-After setting the root directory of the file system,  build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the files in the physical file system.
+After setting the root directory of the file system,  build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the **ajaxSettings** property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate controller methods allows to manage the files in the physical file system.
 
 ```
 
@@ -121,7 +121,7 @@ void setBlobContainer( Blob-contatiner-url, Root-blob-directory-url)
 
 ```
 
-After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
+After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate controller methods allows to manage the Azure blob storage.
 
 ```
 
@@ -184,7 +184,7 @@ After cloning, open the project in Visual Studio and restore the NuGet packages.
 
 ```
 
-After registering the Amazon client account details,  build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
+After registering the Amazon client account details,  build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the **ajaxSettings** property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
 
 ```
 
@@ -278,7 +278,7 @@ To set up the SharePoint service provider, follow these steps:
 
 Replace "<--User Site Name-->", "<--User Drive ID-->", "tenantId", "clientId", and "clientSecret" with your actual values.
 
-After configuring the SharePoint file provider, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the files in the Microsoft SharePoint.
+After configuring the SharePoint file provider, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate controller methods allows to manage the files in the Microsoft SharePoint.
 
 ```
 </template>
@@ -334,7 +334,7 @@ After cloning, open the project in Visual Studio and restore the NuGet packages.
 
 ```
 
-After registering the File Transfer Protocol details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows you to manage the FTP’s objects storage.
+After registering the File Transfer Protocol details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the **ajaxSettings** property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate controller methods allows you to manage the FTP’s objects storage.
 
 ```
 
@@ -416,7 +416,7 @@ void SetSQLConnection(string name, string tableName, string tableID)
 
 > Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf), to learn  about the pre-defined file system SQL database for the EJ2 File Manager.
 
-After configuring the connection, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the SQL database table.
+After configuring the connection, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the ajaxSettings property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate controller methods allows to manage the files in the SQL database table.
 
 ```
 
@@ -481,7 +481,7 @@ After generating the client secret data, copy the JSON data to the following spe
 * EJ2GoogleDriveFileProvider > credentials > client_secret.json
 * GoogleOAuth2.0Base > credentials > client_secret.json
 
-After updating the credentials, build and run the project. Now, the project will be hosted in `http://localhost:{port}`, and it will ask to log on to the Gmail account  created the client secret credentials. Then, provide permission to access the Google Drive files by clicking the allow access button in the page. Now, mapping the ajaxSettings property of the FileManager component to the appropriate controller methods will allows to manage the files from the Google Drive.
+After updating the credentials, build and run the project. Now, the project will be hosted in `http://localhost:{port}`, and it will ask to log on to the Gmail account  created the client secret credentials. Then, provide permission to access the Google Drive files by clicking the allow access button in the page. Now, mapping the ajaxSettings property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate controller methods will allows to manage the files from the Google Drive.
 
 ```
 
@@ -566,7 +566,7 @@ To set the port in which the project to be hosted and the root directory of the 
 
 > **Note:** By default, the service will run `8090` port.
 
-Now, mapping the ajaxSettings property of the FileManager component to the appropriate file operation methods in the filesystem-server.js file will allow to manage the physical file system with Node file system provider.
+Now, mapping the ajaxSettings property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate file operation methods in the filesystem-server.js file will allow to manage the physical file system with Node file system provider.
 
 ```
 
@@ -669,7 +669,7 @@ Follow the given steps to generate the secret access key:
 
 ```
 
-Here, the `Files` denotes the `rootNode` and the subsequent object refers to the children of the root node. `rootNode` will be taken as the root folder of the file system loaded which will be loaded in File Manager component.
+Here, the `Files` denotes the `rootNode` and the subsequent object refers to the children of the root node. `rootNode` will be taken as the root folder of the file system loaded which will be loaded in [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component.
 
 * To import a JSON file into the Firebase Realtime Database, navigate to the **Data** tab and click on the action icon shown in the accompanying image. From there, select the **Import JSON** option and upload the JSON file that was created using the code provided above.
 
@@ -731,7 +731,7 @@ In the above code,
 
 * `hostingEnvironment.ContentRootPath + \\FirebaseRealtimeDBHelper\\access_key.json` denotes service account key path which has authentication key for the Firebase Realtime Database data.
 
-After configuring the Firebase Realtime Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the files in the Firebase Realtime Database.
+After configuring the Firebase Realtime Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate controller methods allows to manage the files in the Firebase Realtime Database.
 
 ```
 
@@ -777,7 +777,7 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 ## IBM Cloud Object Storage file provider
 
-The IBM Cloud Object Storage file provider module allows you work with the IBM Cloud Object Storage. It also provides the methods for performing various file actions such as creating a new folder, renaming files, and deleting files. The IBM Cloud Object Storage file provider serves the file provider support for the File Manager component with the IBM Cloud Object Storage. We can make use of IBM Cloud Object Storage file provider by installing the [ej2-filemanager-ibm-cos-node-file-provider](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-ibm-cos-node-file-provider) npm package or by cloning the [file provider](https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider) from the GitHub.
+The IBM Cloud Object Storage file provider module allows you work with the IBM Cloud Object Storage. It also provides the methods for performing various file actions such as creating a new folder, renaming files, and deleting files. The IBM Cloud Object Storage file provider serves the file provider support for the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component with the IBM Cloud Object Storage. We can make use of IBM Cloud Object Storage file provider by installing the [ej2-filemanager-ibm-cos-node-file-provider](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-ibm-cos-node-file-provider) npm package or by cloning the [file provider](https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider) from the GitHub.
 
 ### Using ej2-filemanager-ibm-cos-node-file-provider npm package
 
@@ -809,7 +809,7 @@ To set the port in which the project to be hosted. Run the following command.
 
 > **Note:** By default, the service will run `8090` port.
 
-Now, just mapping the **ajaxSettings** property of the FileManager component to the appropriate file operation methods in the index.js file will allow to manage the IBM Cloud Object Storage.
+Now, just mapping the **ajaxSettings** property of the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to the appropriate file operation methods in the index.js file will allow to manage the IBM Cloud Object Storage.
 
 ```
 
