@@ -24,3 +24,7 @@
     margin: 2px;
 }
 </style>
+<script>
+export default {
+};
+</script>

@@ -1,5 +1,5 @@
 <template>
-<ejs-button cssClass='e-flat'>Button</ejs-button>
+<ejs-button cssClass='e-flat' content='Button'></ejs-button>
 </template>
 <script setup>
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';

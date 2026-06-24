@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Appbar Component in Vue 2
+# Getting Started with the Vue AppBar Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Appbar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to set up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Appbar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ or
 yarn add @syncfusion/ej2-vue-navigations
 ```
 
-This example uses the [Vue Button component](https://www.syncfusion.com/vue-components/vue-button) inside the the [Vue Appbar component](https://www.syncfusion.com/vue-components/vue-appbar). Install the `@syncfusion/ej2-vue-buttons` package by running the following command:
+This example uses the [Vue Button component](https://www.syncfusion.com/vue-components/vue-button) inside the [Vue Appbar component](https://www.syncfusion.com/vue-components/vue-appbar). Install the `@syncfusion/ej2-vue-buttons` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-buttons --save
@@ -83,7 +83,7 @@ yarn add @syncfusion/ej2-vue-buttons
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Appbar component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the AppBar component and its dependencies are imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}

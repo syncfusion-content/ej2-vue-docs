@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Accordion Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accordion component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to set up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accordion component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-To get start quickly with Vue Accordion, you can check on this video:
+To get started quickly with Vue Accordion, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=roVbwFuuPrM" %}
 
@@ -77,9 +77,9 @@ yarn add @syncfusion/ej2-vue-navigations
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Add Accordion component's styles as given below in `<style>` section of the `App.vue` file.
+Add the Accordion component's styles as given below in `<style>` section of the `App.vue` file.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Accordion component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Accordion component and its dependencies were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}

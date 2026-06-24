@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Auto complete component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Auto complete component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue AutoComplete component | Syncfusion
+description:  Checkout and learn about Getting started with Vue AutoComplete component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Auto complete Component in Vue 2
+# Getting Started with the Vue AutoComplete Component in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue AutoComplete component.
 
@@ -48,7 +48,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Auto complete component](https://www.syncfusion.com/vue-components/vue-autocomplete) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
+This article uses the [Vue AutoComplete component](https://www.syncfusion.com/vue-components/vue-autocomplete) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-dropdowns --save
@@ -63,7 +63,7 @@ yarn add @syncfusion/ej2-vue-dropdowns
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the AutoComplete component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the AutoComplete component and its dependencies were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started vue3 with Vue Auto complete component | Syncfusion
-description:  Checkout and learn about Getting started vue3 with Vue Auto complete component of Syncfusion Essential JS 2 and more details.
+title: Getting started vue3 with Vue AutoComplete component | Syncfusion
+description:  Checkout and learn about Getting started vue3 with Vue AutoComplete component of Syncfusion Essential JS 2 and more details.
 control: Getting started vue3 
 platform: ej2-vue
 documentation: ug
@@ -113,7 +113,7 @@ yarn add @syncfusion/ej2-vue-dropdowns
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the AutoComplete component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the AutoComplete component and its dependencies were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
