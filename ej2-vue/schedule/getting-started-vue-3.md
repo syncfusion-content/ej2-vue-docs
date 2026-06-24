@@ -86,7 +86,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Scheduler component](https://www.syncfusion.com/vue-components/vue-scheduler) as an example. To use the `Vue Scheduler` component in the project, the `@syncfusion/ej2-vue-schedule` package needs to be installed using the following command
+This article uses the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) component as an example. To use the `Vue Scheduler` component in the project, the `@syncfusion/ej2-vue-schedule` package needs to be installed using the following command
 
 ```bash
 npm install @syncfusion/ej2-vue-schedule --save

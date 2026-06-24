@@ -52,7 +52,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Schedule component](https://www.syncfusion.com/vue-components/vue-scheduler) as an example. Install the `@syncfusion/ej2-vue-schedule` package by running the following command:
+This article uses the [Vue Schedule](https://www.syncfusion.com/vue-components/vue-scheduler) component as an example. Install the `@syncfusion/ej2-vue-schedule` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-schedule --save
