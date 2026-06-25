@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom value to server in Vue File Manager component | Syncfusion
-description: Learn here all about How to pass custom value to server in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about How to pass custom value to server in Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: File Manager 
 platform: ej2-vue
 documentation: ug
@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Pass custom value to server in Vue File Manager component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component allows seamless back-end server interaction by passing custom values. This enhances the functionality and security of file operations, particularly helpful for tasks like authentication, logging, or user role-based processing. In multi-user systems, it ensures file access permissions and actions are user-specific and secure. You can manage user-specific operations such as **Read**, **Delete**, **Rename**, **Create**, **Move**, **Copy**, **Details**, **Search**, **Upload**, **Download**, and **GetImage** using custom headers or query parameters. This guide demonstrates implementing these features using the [`beforeSend`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforesend), [`beforeDownload`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforedownload) and [`beforeImageLoad`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforeimageload) events. Let's explore how to achieve this in [`Physical file system provider`](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider).
+The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component allows seamless back-end server interaction by passing custom values. This enhances the functionality and security of file operations, particularly helpful for tasks like authentication, logging, or user role-based processing. In multi-user systems, it ensures file access permissions and actions are user-specific and secure. You can manage user-specific operations such as **Read**, **Delete**, **Rename**, **Create**, **Move**, **Copy**, **Details**, **Search**, **Upload**, **Download**, and **GetImage** using custom headers or query parameters. This guide demonstrates implementing these features using the [`beforeSend`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforesend), [`beforeDownload`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforedownload) and [`beforeImageLoad`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforeimageload) events. Let's explore how to achieve this in [`Physical file system provider`](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider).
 
 ## 1. Setting up the File Manager and provider
 
-To create a basic File Manager component, start by following the easy steps in the [`Getting Started`](https://ej2.syncfusion.com/vue/documentation/file-manager/getting-started) guide. This will allow you to manage files and folders on your system, whether they are stored physically or in the cloud.
+To create a basic [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component, start by following the easy steps in the [`Getting Started`](https://ej2.syncfusion.com/vue/documentation/file-manager/getting-started) guide. This will allow you to manage files and folders on your system, whether they are stored physically or in the cloud.
 
 For connecting the File Manager to a physical file system, check out the [`Physical file provider`](https://ej2.syncfusion.com/vue/documentation/file-manager/file-system-provider#physical-file-system-provider) section. This part of the documentation will help you configure it correctly.
 
 ## 2. Handling File Operations 
 
-After setting the File Manager component with the physical file system provider, you can handle file operations by passing custom values to the server. To pass custom values during the **Read**, **Delete**, **Rename**, **Create**, **Move**, **Copy**, **Details**, **Search** and **Upload** operations, utilize the [`beforeSend`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforesend) event of the File Manager component. This event allows you to modify the request before it is sent to the server. You can add custom headers to the request to pass additional information to the server.
+After setting the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component with the physical file system provider, you can handle file operations by passing custom values to the server. To pass custom values during the **Read**, **Delete**, **Rename**, **Create**, **Move**, **Copy**, **Details**, **Search** and **Upload** operations, utilize the [`beforeSend`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforesend) event of the File Manager component. This event allows you to modify the request before it is sent to the server. You can add custom headers to the request to pass additional information to the server.
 
 The `onBeforeSend` function is designed to enhance security by adding an authorization header to every outgoing AJAX request. Before a request is sent, this function is called, and it attaches the **Authorization** header with the value **User1** to the request. This ensures that the server can verify the request's authenticity and handle it accordingly.
 

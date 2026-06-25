@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File Operations in Vue File Manager component | Syncfusion
-description: Learn how to perform, manage and customize file operations in the Syncfusion Vue File Manager component.
+description: Learn how to perform, manage, and customize file operations in the Vue File Manager component for efficient file and folder handling.
 control: File Manager 
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # File Operations in Vue File Manager component
 
-The File Manager component enables browsing, managing, and organizing files and folders in a file system from a web application. Common file operations—creating folders, uploading and downloading files, deleting and renaming items, and previewing images—are supported by the component.
+The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component enables browsing, managing, and organizing files and folders in a file system from a web application. Common file operations—creating folders, uploading and downloading files, deleting and renaming items, and previewing images—are supported by the component.
 
 The following table lists the basic operations available in the File Manager and their purpose.
 
@@ -1041,7 +1041,7 @@ The File Manager's [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/a
 
 ### File Download support
 
-To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager component.
+To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1084,7 +1084,7 @@ To perform the download operation, initialize the `downloadUrl` property in a [a
 
 ### File Upload support
 
-To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager Component.
+To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1127,7 +1127,7 @@ To perform the upload operation, initialize the `uploadUrl` property in a [ajaxS
 
 ### Image Preview support
 
-To perform the image preview support in the File Manager component, need to initialize the `getImageUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager component.
+To perform the image preview support in the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component, need to initialize the `getImageUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) of File Manager component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

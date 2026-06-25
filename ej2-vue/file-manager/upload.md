@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upload in Vue File Manager component | Syncfusion
-description: Explore the upload options and advanced capabilities of the Syncfusion Vue File Manager, empowering smoother file handling and a more efficient user experience.
+description: Explore the upload options and advanced capabilities of the Vue File Manager, empowering smoother file handling and a more efficient user experience.
 control: File Manager 
 platform: ej2-vue
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Upload in Vue File Manager component
 
-The Vue File Manager component provides a [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
+The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component provides a [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
 
 ## Directory upload
 
-The [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#directoryupload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component. 
+The [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#directoryupload) property controls whether users can browse and upload entire directories (folders) in the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component. 
 
 To enable directory upload, set the `directoryUpload` property to `true` in the `uploadSettings` configuration.
 
@@ -37,7 +37,7 @@ To learn more about the folder upload actions, refer to this [link](https://ej2.
 
 ## Sequential upload
 
-The [sequentialUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#sequentialupload) property controls whether users can upload files one by one in a sequential manner in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue File Manager component. 
+The [sequentialUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#sequentialupload) property controls whether users can upload files one by one in a sequential manner in the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component. 
 
 To enable sequential upload, set the `sequentialUpload` property to `true` in the `uploadSettings` configuration.
 
@@ -54,7 +54,7 @@ When set to `true`, the selected files will process sequentially (one after the 
         
 {% previewsample "page.domainurl/code-snippet/file-manager/upload/sequential-upload" %}
 
-The screenshot below shows that each file begins uploading only after the previous one completes. This demonstrates how the `sequentialUpload` property works in the File Manager component.
+The screenshot below shows that each file begins uploading only after the previous one completes. This demonstrates how the `sequentialUpload` property works in the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component.
 
 ![File Manager with sequentialUpload](./images/filemanager-sequentialupload.png)
 
@@ -91,7 +91,7 @@ With chunk upload, the pause and resume options gives users enhanced control ove
 
 ## Auto upload
 
-The [autoUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#autoupload) property controls whether files are automatically uploaded when they are added to the upload queue in the File Manager component.
+The [autoUpload](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#autoupload) property controls whether files are automatically uploaded when they are added to the upload queue in the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component.
 
 The default value is `true`, the File Manager will automatically upload files as soon as they are added to the upload queue. If set to `false`, the files will not be uploaded automatically, giving you the chance to manipulate the files before uploading them to the server.
 
@@ -126,7 +126,7 @@ The default value is set to `false`, the upload dialog remains open even after t
 
 ## Prevent upload based on file extensions
 
-The [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#allowedextensions) property specifies which file types are allowed for upload in the File Manager component by defining their extensions.
+The [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettingsmodel#allowedextensions) property specifies which file types are allowed for upload in the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component by defining their extensions.
 
 This property lets you define which file types can be uploaded by specifying allowed extensions, separated by commas. For example, to allow only image files, you would set the `allowedExtensions` property to .jpg,.png.
 
@@ -147,7 +147,7 @@ If you want to allow only image files like .jpg and .png, you would set the prop
 
 ## Restrict external drag-and-drop upload
 
-The File Manager component provides support for external drag-and-drop functionality for uploading files by dragging it from local file system to File Manager.
+The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component provides support for external drag-and-drop functionality for uploading files by dragging it from local file system to File Manager.
 
 To completely prevent the external drag-and-drop upload functionality (i.e., disallowing users from dragging and dropping files from outside into the File Manager), you can set the [dropArea](https://ej2.syncfusion.com/vue/documentation/api/uploader#droparea) property to null. This can be done by accessing the File Manager instance via its class methods.
 

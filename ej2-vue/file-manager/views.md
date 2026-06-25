@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Views in Vue File Manager component | Syncfusion
-description: Learn about the available views and how to customize them in the Syncfusion Vue File Manager component.
+description: Learn about the available views and how to customize them in the Vue File Manager component for a tailored file browsing experience.
 control: File Manager 
 platform: ej2-vue
 documentation: ug
