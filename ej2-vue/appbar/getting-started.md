@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Vue Appbar component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Appbar component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue AppBar component | Syncfusion
+description:  Checkout and learn about Getting started with Vue AppBar component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue AppBar Component in Vue 2
 
-This article provides a step-by-step guide to set up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Appbar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to set up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue AppBar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Appbar component](https://www.syncfusion.com/vue-components/vue-appbar) as an example. Install the `@syncfusion/ej2-vue-navigations` package by running the following command:
+This article uses the [Vue AppBar component](https://www.syncfusion.com/vue-components/vue-appbar) as an example. Install the `@syncfusion/ej2-vue-navigations` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
@@ -68,7 +68,7 @@ or
 yarn add @syncfusion/ej2-vue-navigations
 ```
 
-This example uses the [Vue Button component](https://www.syncfusion.com/vue-components/vue-button) inside the [Vue Appbar component](https://www.syncfusion.com/vue-components/vue-appbar). Install the `@syncfusion/ej2-vue-buttons` package by running the following command:
+This example uses the [Vue Button component](https://www.syncfusion.com/vue-components/vue-button) inside the [Vue AppBar component](https://www.syncfusion.com/vue-components/vue-appbar). Install the `@syncfusion/ej2-vue-buttons` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-buttons --save
@@ -99,9 +99,9 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Appbar component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue AppBar component using `Composition API` or `Options API`:
 
-1\. First, import and register the Appbar component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the AppBar component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -129,7 +129,7 @@ import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 {% endhighlight %}
 {% endtabs %}
 
-2.\ In the `template` section, define the Appbar component with the [cssClass](https://ej2.syncfusion.com/vue/documentation/api/appbar/#cssclass) property.
+2.\ In the `template` section, define the AppBar component with the [cssClass](https://ej2.syncfusion.com/vue/documentation/api/appbar/#cssclass) property.
 
 {% tabs %}
 {% highlight html tabtitle="(~/src/App.vue)" %}
