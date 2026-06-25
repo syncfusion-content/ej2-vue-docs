@@ -108,7 +108,7 @@ import {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtile="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-vue-navigations';
