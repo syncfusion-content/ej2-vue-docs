@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Index in Vue File Manager component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn all about the Vue File Manager component, including its features, configuration options, and file management capabilities.
 control: Index 
 platform: ej2-vue
 documentation: ug

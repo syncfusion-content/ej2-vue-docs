@@ -36,6 +36,25 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue library has provided th
 
 > The Syncfusion<sup style="font-size:70%">&reg;</sup> Bootstrap theme is designed based on `Bootstrap v3`, however, it can be compatible with `Bootstrap v4` applications. In addition to these four built-in themes, [ThemeStudio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio) provides support for the Fusion Theme that can only be downloaded from [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
 
+## Theme packages
+
+Syncfusion built-in themes are distributed as theme packages available on npm. These packages include CSS/SCSS files for all components. The following table lists all available theme packages:
+
+| Theme | Light Package | Dark Package |
+|-------|---------------|---------------|
+| Tailwind 3 | [`@syncfusion/ej2-tailwind3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) | [`@syncfusion/ej2-tailwind3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-dark-theme) |
+| Bootstrap 5.3 | [`@syncfusion/ej2-bootstrap5.3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-theme) | [`@syncfusion/ej2-bootstrap5.3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-dark-theme) |
+| Fluent 2 | [`@syncfusion/ej2-fluent2-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-theme) | [`@syncfusion/ej2-fluent2-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-dark-theme) |
+| Material 3 | [`@syncfusion/ej2-material3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) | [`@syncfusion/ej2-material3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material3-dark-theme) |
+| Bootstrap 5 | [`@syncfusion/ej2-bootstrap5-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5-theme) | [`@syncfusion/ej2-bootstrap5-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5-dark-theme) |
+| Bootstrap 4 | [`@syncfusion/ej2-bootstrap4-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap4-theme) | - |
+| Bootstrap | [`@syncfusion/ej2-bootstrap-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap-theme) | [`@syncfusion/ej2-bootstrap-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap-dark-theme) |
+| Material | [`@syncfusion/ej2-material-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material-theme) | [`@syncfusion/ej2-material-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material-dark-theme) |
+| Tailwind | [`@syncfusion/ej2-tailwind-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-theme) | [`@syncfusion/ej2-tailwind-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-dark-theme) |
+| Fluent | [`@syncfusion/ej2-fluent-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent-theme) | [`@syncfusion/ej2-fluent-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent-dark-theme) |
+| Fabric | [`@syncfusion/ej2-fabric-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fabric-theme) | [`@syncfusion/ej2-fabric-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fabric-dark-theme) |
+| High Contrast | [`@syncfusion/ej2-highcontrast-theme`](https://www.npmjs.com/package/@syncfusion/ej2-highcontrast-theme) | - |
+
 ## Optimized CSS files
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> components provide two size modes for each theme: **normal** and **bigger**. 
@@ -57,90 +76,88 @@ Refer to the comparison below for the default and optimized theme file sizes:
 | -- | -- | -- |
 | Fluent 2 | 3.97 MB | 2.96 MB |
 
-Themes are shipped as individual and combined CSS files. Combined CSS file can be referred from the npm package `@syncfusion/ej2` and individual CSS files are available within same component repository’s `style` folder. In ej2 npm packages, we have shipped both CSS and SCSS files for all components.
+## Refer themes through npm packages
 
-Referring All components CSS
+Themes are shipped as both combined and individual CSS/SCSS files. Each theme package includes combined and component-specific styles in both CSS and SCSS formats. For a list of available theme packages, refer to the [available theme packages](#theme-packages) section.
 
+To use the combined SCSS/CSS files, install the required theme package. 
+
+```bash
+npm install @syncfusion/ej2-material3-theme --save
 ```
-@import "./node_modules/@syncfusion/ej2/<theme_name>.css";
+
+**Referring all components CSS**
+
+```css
+@import "@syncfusion/ej2-<theme-name>-theme/styles/<theme-name>.css";
 ```
 
-Referring All components SCSS
+**Example:**
+
+```css
+@import "@syncfusion/ej2-material3-theme/styles/material3.css";
+```
+
+**Referring all components SCSS**
 
 ```scss
-@import "ej2/<theme_name>.scss";
-```
-
-## Referring individual control theme
-
-We can get the individual theme from the individual npm package or from an overall ej2 npm package.
-
-Referring individual control from individual package
-
-```scss
-@import "<dependent-package>/<dependent-control>/<theme_name>.scss";
-@import "ej2-buttons/styles/button/<theme_name>.scss";
+@use "@syncfusion/ej2-<theme-name>-theme/styles/<theme-name>.scss" as *;
 ```
 
 **Example:**
 
 ```scss
-@import "ej2-base/styles/material3.scss";
-@import "ej2-buttons/styles/button/material3.scss";
+@use "@syncfusion/ej2-material3-theme/styles/material3.scss" as *;
 ```
 
-> `ej2-base` is common dependent package for all Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript control styles. So, it needs first to be added in the import statement.
+### Referring individual component theme
 
-Referring individual control from ej2 package
+You can reference individual component themes from the unified theme package. In this package, each component includes an `index.css/index.scss` files that automatically loads all the required dependency styles.
 
-```scss
-@import "ej2/<dependent-control>/<theme_name>.scss";
-@import "ej2/button/<theme_name>.scss";
+```css
+@import "@syncfusion/ej2-<theme-name>-theme/styles/<component-name>/index.css";
 ```
 
 **Example:**
 
-```scss
-@import "ej2/base/material3.scss";
-@import "ej2/button/material3.scss";
+```css
+@import "@syncfusion/ej2-material3-theme/styles/grid/index.css";
 ```
-
-> The individual control theme will not include its dependent control styles. I.e. The dependent controls theme should be added before adding the individual control themes.
 
 ### Referring all components optimized CSS file
 
-To refer to all component's optimized CSS files from the `@syncfusion/ej2` package, follow the below syntax:
+To refer to all component's optimized CSS files from the theme package, follow the below syntax:
 
 ```css
-@import "@syncfusion/ej2/<theme_name>-lite.css";
+@import "@syncfusion/ej2-<theme-name>-theme/styles/<theme-name>-lite.css";
 /* or */
-@import "@syncfusion/ej2/<theme_name>-lite.scss";
+@use "@syncfusion/ej2-<theme-name>-theme/styles/<theme-name>-lite.scss" as *;
 ```
 
 **Example:**
 
 ```css
-@import "@syncfusion/ej2/fluent2-lite.css";
+@import "@syncfusion/ej2-fluent2-theme/styles/fluent2-lite.css";
 /* or */
-@import "@syncfusion/ej2/fluent2-lite.scss";
+@use "@syncfusion/ej2-fluent2-theme/styles/fluent2-lite.scss" as *;
 ```
 
 ### Referring individual component optimized CSS file
 
-To refer to individual component's optimized CSS files from an individual packages, follow the below syntax:
+To refer to individual component's optimized CSS files from an theme packages, follow the below syntax:
 
 ```css
-@import "<dependent-package>/styles/<theme_name>-lite.css";
+@import "@syncfusion/ej2-<theme-name>-theme/styles/<component-name>/index-lite.css";
 /* or */
-@import "<dependent-package>/styles/<theme_name>-lite.scss";
+@use "@syncfusion/ej2-<theme-name>-theme/styles/<component-name>/index-lite.scss" as *;
 ```
 
 **Example:**
 
 ```css
-@import "@syncfusion/ej2-buttons/styles/fluent2-lite.css";
+@import "@syncfusion/ej2-fluent2-theme/styles/grid/index-lite.css";
 /* or */
-@import "@syncfusion/ej2-buttons/styles/fluent2-lite.scss";
+@use "@syncfusion/ej2-fluent2-theme/styles/grid/index-lite.scss" as *;
 ```
 
 ### Advantages of using the individual components theme

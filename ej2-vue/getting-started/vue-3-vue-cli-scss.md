@@ -121,15 +121,23 @@ Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` 
 
 ## Adding SCSS reference
 
+Adding an `SCSS` style reference for the `Grid` component from the theme package. This example uses the `Material 3` theme. To install the [Material 3](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-material3-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
 Add the styles of Grid component to the `<style>` section of the `App.vue` file as follows.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 
-<style lang="scss">
-// syncfusion styles
-@use "../node_modules/@syncfusion/ej2-base/styles/material3" as *;
-@use "../node_modules/@syncfusion/ej2-vue-grids/styles/material3" as *;
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
 </style>
 
 {% endhighlight %}
