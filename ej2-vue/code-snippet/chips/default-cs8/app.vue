@@ -14,5 +14,6 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css';
+  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
 </style>

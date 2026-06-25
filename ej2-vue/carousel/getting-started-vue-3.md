@@ -110,6 +110,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
 ```
+> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Carousel component in the application
 

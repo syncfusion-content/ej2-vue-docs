@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Color picker component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Color picker component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Color Picker component | Syncfusion
+description:  Checkout and learn about Getting started with Vue Color Picker component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Color picker Component in Vue 2
+# Getting Started with the Vue Color Picker Component in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue ColorPicker component.
 
@@ -46,7 +46,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Color picker component](https://www.syncfusion.com/vue-components/vue-color-picker) as an example. Install the `@syncfusion/ej2-vue-inputs` package by running the following command:
+This article uses the [Vue Color Picker component](https://www.syncfusion.com/vue-components/vue-color-picker) as an example. Install the `@syncfusion/ej2-vue-inputs` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-inputs --save
@@ -61,7 +61,7 @@ yarn add @syncfusion/ej2-vue-inputs
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
-In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the ColorPicker component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the ColorPicker component and its dependencies were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -109,7 +109,7 @@ components: {
 {% endtabs %}
 
 
-2\. In the `template` section, define the Color picker component.
+2\. In the `template` section, define the Color Picker component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
