@@ -74,19 +74,29 @@ yarn add @syncfusion/ej2-vue-inputs
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
+<<<<<<< HEAD
 To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-tailwind3-theme --save
 ```
 
+=======
+>>>>>>> 30cc17111653bca1b2d671fed64eef2ecbd1e1e3
 In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the SpeechToText component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
+<<<<<<< HEAD
 @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/speech-to-text/index.css";
+=======
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+>>>>>>> 30cc17111653bca1b2d671fed64eef2ecbd1e1e3
 </style>
 
 {% endhighlight %}
