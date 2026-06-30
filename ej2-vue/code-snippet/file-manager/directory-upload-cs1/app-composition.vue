@@ -51,16 +51,8 @@ provide('filemanager',  [NavigationPane, DetailsView, Toolbar]);
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/file-manager/index.css";
+
 .folder-upload .sample-container {
     margin: 10px 10px 10px 10px;
 }

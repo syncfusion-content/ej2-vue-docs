@@ -61,25 +61,52 @@ yarn add @syncfusion/ej2-vue-grids
 
 ## Adding CSS reference
 
-The following CSS files are available in the ../node_modules/@syncfusion package folder. Add these as references in **src/App.vue**.
+You can add the CSS files required for the Syncfusion Vue DataGrid component using one of the following methods.
+
+### Option 1: Add CSS References from a theme package
+
+Themes for Syncfusion® DataGrid components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/grids/grid/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
+
+### Option 2: Add CSS References from component packages
+
+After installing the grid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/App.vue** file:
+
+```css
+<style>
+    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+    @import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
+    @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+</style>
+```
 
 ## Adding DataGrid component
 
