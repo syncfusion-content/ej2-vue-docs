@@ -57,7 +57,7 @@ The following ARIA attributes are used in Gantt:
 | `aria-expanded` | Assigned to the parent task row; changes on expand/collapse. |
 | `aria-grabbed` | Assigned when the user starts taskbar editing. |
 
-The Syncfusion Vue Gantt Chart component is structured using a combined TreeGrid and chart architecture for rendering its grid (table) and timeline sections. To enhance accessibility for screen readers, roles and ARIA attributes are incorporated for the treegrid parent and all its child elements. Although this architectural approach may have some limitations with accessibility checker tools, it is important to note that these limitations do not affect the readability or usability of the Gantt content in screen readers.
+The Vue Gantt Chart component is structured using a combined TreeGrid and chart architecture for rendering its grid (table) and timeline sections. To enhance accessibility for screen readers, roles and ARIA attributes are incorporated for the treegrid parent and all its child elements. Although this architectural approach may have some limitations with accessibility checker tools, it is important to note that these limitations do not affect the readability or usability of the Gantt content in screen readers.
 
 The accessibility checker tools highlight the following known issues:
 

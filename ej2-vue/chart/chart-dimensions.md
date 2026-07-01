@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Size for Container
 
-The chart can render to its container size. Set the size via inline styles or CSS as shown below.
+The Chart can render to its container size. Set the size via inline styles or CSS as shown below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

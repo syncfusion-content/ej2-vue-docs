@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Schedule Dates in Vue Gantt Chart Component | Syncfusion
-description: Learn how to change schedule dates in the Syncfusion Vue Gantt Chart component of Essential JS 2.
+description: Learn how to change schedule dates in the Vue Gantt Chart using the updateProjectDates method to control timeline start and end dates.
 control: Change schedule dates
 platform: ej2-vue
 documentation: ug

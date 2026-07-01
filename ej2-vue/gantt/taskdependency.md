@@ -46,7 +46,7 @@ You cannot finish a task until the dependent task is completed.
 
 ## Define task relationship
 
-Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt Chart component by using the [taskFields.dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#dependency) property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
+Task relationship is defined in the data source as a string value, and this value is mapped to the [Vue Gantt Chart](https://www.syncfusion.com/vue-components/vue-gantt-chart) component by using the [taskFields.dependency](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields#dependency) property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

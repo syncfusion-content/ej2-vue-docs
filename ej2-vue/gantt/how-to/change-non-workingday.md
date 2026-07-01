@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Non-Working Day in Vue Gantt Chart Component | Syncfusion
-description: Learn how to change non-working days in the Syncfusion Vue Gantt Chart component of Essential JS 2.
+description: Learn how to configure non-working days in the Vue Gantt Chart using the workWeek property and customize weekends effectively.
 control: Change non workingday
 platform: ej2-vue
 documentation: ug

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # File system provider in Vue File Manager component
 
-The file system provider enables the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to manage files and folders in physical or cloud-based storage. It exposes server-side methods for common file actions such as creating folders, copying and moving items, deleting, uploading, and downloading.
+The file system provider enables the File Manager component to manage files and folders in physical or cloud-based storage. It exposes server-side methods for common file actions such as creating folders, copying and moving items, deleting, uploading, and downloading.
 
 The following file providers are added in [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component.
 

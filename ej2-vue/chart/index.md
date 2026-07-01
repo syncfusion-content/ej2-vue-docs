@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Index in Vue Chart component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+description: Explore the Index feature in Syncfusion Vue Chart (Essential JS 2) to manage data points, customize series order, and enhance chart rendering efficiently.
 control: Index 
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in Vue Chart component
 
-The Chart component is used to visualize data with rich interactivity and provides extensive customization options to represent data effectively. It supports data binding from various data sources such as an array of JSON objects, OData web services, or [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/). All chart elements are rendered using Scalable Vector Graphics (SVG), ensuring high-quality rendering and scalability across different screen resolutions.
+The Chart component is used to visualize data with rich interactivity and provides extensive customization options to represent data effectively. It supports data binding from various data sources such as an array of JSON objects, OData web services, or [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager). All chart elements are rendered using Scalable Vector Graphics (SVG), ensuring high-quality rendering and scalability across different screen resolutions.
 
 ## Key Features
 

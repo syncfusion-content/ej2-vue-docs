@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Gantt Chart in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the [Vue Gantt Chart](https://www.syncfusion.com/vue-components/vue-gantt-chart) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component](../system-requirements)
+[System requirements for Vue Gantt Chart component](../system-requirements)
 
 ## Set up the Quasar project
 

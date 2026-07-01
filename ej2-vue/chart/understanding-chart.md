@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Understanding of Vue Chart
 
-The Vue Chart component is a versatile visualization tool that presents data using a wide range of graphical formats. Each chart is composed of essential elements—such as the title, series, tooltip, legend, and axes—that work together to provide clear, interactive, and meaningful insights. Understanding these elements helps in configuring and customizing charts for various analytical needs.
+The [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) component is a versatile visualization tool that presents data using a wide range of graphical formats. Each chart is composed of essential elements—such as the title, series, tooltip, legend, and axes—that work together to provide clear, interactive, and meaningful insights. Understanding these elements helps in configuring and customizing charts for various analytical needs.
 
 The following image highlights the primary elements of a chart:
 
