@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Gantt Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Gantt Chart component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the [Vue Gantt Chart](https://www.syncfusion.com/vue-components/vue-gantt-chart) component.
 
 To get started quickly with Vue Gantt Chart, check this video:
 {% youtube "https://www.youtube.com/watch?v=S1GbWmVcre0" %}
@@ -224,3 +224,5 @@ You can preview the following sample by clicking the **Preview Sample** button.
 - **[Key Elements](./key-elements)** - Learn about UI components and interactions
 - **[Feature Modules](./module)** - Enable advanced features with module injection
 - **[Overview](./overview)** - Explore all available features
+
+N> Looking for the full Vue Gantt Chart component overview, features, pricing, and documentation? Visit the [Vue Gantt Chart](https://www.syncfusion.com/vue-components/vue-gantt-chart) page.

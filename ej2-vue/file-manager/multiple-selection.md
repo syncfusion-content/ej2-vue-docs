@@ -58,3 +58,5 @@ Setting the [`allowMultiSelection`](https://ej2.syncfusion.com/vue/documentation
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/file-manager/disablemultiselection" %}
+
+N> Looking for the full Vue File Manager component overview, features, pricing, and documentation? Visit the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) page.

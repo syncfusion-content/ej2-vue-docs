@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in Vue File Manager component
 
-The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component allows customization of its functionality and UI—such as the context menu, searching, uploading, and toolbar—using public APIs. The following topics describe customization options:
+The File Manager component allows customization of its functionality and UI—such as the context menu, searching, uploading, and toolbar—using public APIs. The following topics describe customization options:
 
 * [Context menu customization](#context-menu-customization)
 * [Details view customization](#details-view-customization)

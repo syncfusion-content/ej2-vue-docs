@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility customization in Vue Chart component
 
-The Syncfusion® Vue Chart component visualizes data graphically and provides accessibility customization options to improve usability for people with disabilities. The primary accessibility attributes are described in this section.
+The [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) component visualizes data graphically and provides accessibility customization options to improve usability for people with disabilities. The primary accessibility attributes are described in this section.
 
 The chart component exposes attributes that enable accessibility customization, including:
 

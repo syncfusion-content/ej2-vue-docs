@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Vue Gantt Chart Component | Syncfusion
-description: Learn all about Filtering in the Syncfusion Vue Gantt Chart component of Essential JS 2.
+description: Learn how to enable and use filtering in the Vue Gantt Chart to refine data with menu filters, search, hierarchy modes, and custom options.
 control: Filtering
 platform: ej2-vue
 documentation: ug

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue File Manager component
 
-The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It implements WAI-ARIA roles and attributes commonly used to evaluate accessibility.
+The File Manager component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It implements WAI-ARIA roles and attributes commonly used to evaluate accessibility.
 
 The File Manager component's accessibility compliance is summarized below.
 

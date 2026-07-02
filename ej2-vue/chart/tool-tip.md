@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-The chart displays detailed information about a data point through a tooltip when the mouse pointer moves over the point.
+The Chart displays detailed information about a data point through a tooltip when the mouse pointer moves over the point.
 
 ## Default tooltip
 
-By default, the tooltip is not visible. You can enable the tooltip by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#enable) property to **true** and by injecting `Tooltip` into the `provide`.
+By default, the tooltip is not visible. You can enable the tooltip by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#enable) property to **true** and by injecting `Tooltip` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -33,7 +33,7 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
 
 ## Fixed tooltip
 
-By default, the tooltip tracks the mouse movement. You can render the tooltip at a fixed position by using the [`location`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#location) property.
+By default, the tooltip tracks the mouse movement. You can render the tooltip at a fixed position by using the [`location`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#location) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -69,9 +69,9 @@ By default, the tooltip displays the x- and y-values of a data point. Additional
 
 <!-- markdownlint-disable MD013 -->
 
-Each series tooltip can be formatted separately by using the series [`tooltipFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#tooltipformat) property.
+Each series tooltip can be formatted separately by using the series [`tooltipFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel#tooltipformat) property.
 
-> Note: When the series [`tooltipFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#tooltipformat) property is specified, the tooltip for that series is displayed in the defined format. Otherwise, the global tooltip format is applied.
+> Note: When the series [`tooltipFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel#tooltipformat) property is specified, the tooltip for that series is displayed in the defined format. Otherwise, the global tooltip format is applied.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -88,7 +88,7 @@ Each series tooltip can be formatted separately by using the series [`tooltipFor
 
 ## Tooltip template
 
-Custom HTML content can be rendered in the tooltip by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#template) property. The `${x}` and `${y}` placeholders can be used within the template to display the x- and y-values of the corresponding data point.
+Custom HTML content can be rendered in the tooltip by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#template) property. The `${x}` and `${y}` placeholders can be used within the template to display the x- and y-values of the corresponding data point.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -103,7 +103,7 @@ Custom HTML content can be rendered in the tooltip by using the [`template`](htt
 
 ## Enable highlight
 
-By setting the [`enableHighlight`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#enablehighlight) property to **true**, all points in the hovered series are highlighted while the remaining points are dimmed. This behavior improves focus and readability during data analysis.
+By setting the [`enableHighlight`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#enablehighlight) property to **true**, all points in the hovered series are highlighted while the remaining points are dimmed. This behavior improves focus and readability during data analysis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -119,11 +119,11 @@ By setting the [`enableHighlight`](https://ej2.syncfusion.com/vue/documentation/
 ## Customize the appearance of tooltip
 
 The appearance of the tooltip can be customized by using the following properties:
-- [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#fill) to set the background color
-- [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#border) to configure the tooltip border
-- [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#textstyle) to customize the tooltip text style
+- [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#fill) to set the background color
+- [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#border) to configure the tooltip border
+- [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#textstyle) to customize the tooltip text style
 
-The [`highlightColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/#highlightcolor) property is used to change the color of a data point when it is highlighted during tooltip interaction.
+The [`highlightColor`](https://ej2.syncfusion.com/vue/documentation/api/chart#highlightcolor) property is used to change the color of a data point when it is highlighted during tooltip interaction.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -138,7 +138,7 @@ The [`highlightColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/#h
 
 ## Tooltip mapping name
 
-By default, the tooltip displays only the x- and y-values of a data point. Additional information from the data source can be shown by using the [`tooltipMappingName`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#tooltipmappingname) property of the series. Use the `${point.tooltip}` placeholder in the tooltip format to display the mapped value.
+By default, the tooltip displays only the x- and y-values of a data point. Additional information from the data source can be shown by using the [`tooltipMappingName`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel#tooltipmappingname) property of the series. Use the `${point.tooltip}` placeholder in the tooltip format to display the mapped value.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -153,7 +153,7 @@ By default, the tooltip displays only the x- and y-values of a data point. Addit
 
 ## Closest tooltip
 
-The [`showNearestTooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#shownearesttooltip) property displays the tooltip for the data point nearest to the pointer, even when the pointer is not directly positioned over the point.
+The [`showNearestTooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel#shownearesttooltip) property displays the tooltip for the data point nearest to the pointer, even when the pointer is not directly positioned over the point.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

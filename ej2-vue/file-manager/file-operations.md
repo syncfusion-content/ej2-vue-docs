@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # File Operations in Vue File Manager component
 
-The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component enables browsing, managing, and organizing files and folders in a file system from a web application. Common file operations—creating folders, uploading and downloading files, deleting and renaming items, and previewing images—are supported by the component.
+The File Manager component enables browsing, managing, and organizing files and folders in a file system from a web application. Common file operations—creating folders, uploading and downloading files, deleting and renaming items, and previewing images—are supported by the component.
 
 The following table lists the basic operations available in the File Manager and their purpose.
 
@@ -1139,3 +1139,5 @@ To perform the image preview support in the [Vue File Manager](https://www.syncf
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/file-manager/getting-started-cs2" %}
+
+N> Looking for the full Vue File Manager component overview, features, pricing, and documentation? Visit the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) page.
