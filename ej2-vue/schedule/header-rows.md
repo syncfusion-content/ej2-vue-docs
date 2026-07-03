@@ -22,7 +22,7 @@ The following header row types are supported:
 
 > The `Hour` row is not applicable for Timeline month view.
 
-Check out this video to learn about customizing header rows of the timeline views in Vue Scheduler.
+Check out this video to learn about customizing header rows of the timeline views in [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler).
 
 {% youtube "https://www.youtube.com/watch?v=cqMLo9Yr_0s" %}
 

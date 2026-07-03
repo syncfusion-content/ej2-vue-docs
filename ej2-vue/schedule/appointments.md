@@ -530,7 +530,7 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 
 It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through [`addEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#addevent) method of Scheduler.
 
-Watch this video to learn about dragging items from an external source into the Vue Scheduler:
+Watch this video to learn about dragging items from an external source into the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler):
 
 {% youtube "https://www.youtube.com/watch?v=MlRNsYaug48" %}
 

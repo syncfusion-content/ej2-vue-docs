@@ -107,4 +107,4 @@ Accessibility levels for the Schedule component are validated through automated 
 
 ## See Also
 
-- [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)
+- [Accessibility in Vue components](../common/accessibility)

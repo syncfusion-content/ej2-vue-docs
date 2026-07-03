@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue Schedule Component in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Schedule component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the Vue Schedule component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 Quasar is a Vue.js–based open-source framework designed to build high‑performance, responsive applications for web, mobile, and desktop platforms from a single code base.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](../system-requirements)
+[System requirements for Vue UI components](../system-requirements)
 
 ## Set up the Quasar project
 
@@ -42,9 +42,9 @@ cd quasar-project
 
 Now that `quasar-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add the Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components in the project, install the corresponding npm package.
 
 This article uses the [Vue Schedule](https://www.syncfusion.com/vue-components/vue-scheduler) component as an example. To use the Vue Schedule component in the project, the `@syncfusion/ej2-vue-schedule` package needs to be installed using the following command:
 
@@ -54,7 +54,7 @@ npm install @syncfusion/ej2-vue-schedule --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Schedule component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
 

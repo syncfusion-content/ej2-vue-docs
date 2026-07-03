@@ -579,7 +579,7 @@ Dragging and dropping a normal event performs an edit action. Dragging and dropp
 
 > By default, dragging a recurring instance edits only the occurrence, not the entire series.
 
-You can watch the following video to learn more about Vue Scheduler's advanced drag and resize options:
+You can watch the following video to learn more about [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler)'s advanced drag and resize options:
 
 {% youtube "https://www.youtube.com/watch?v=vDLrkQLO1uU" %}
 
