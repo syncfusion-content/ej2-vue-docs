@@ -324,7 +324,7 @@ It is possible to display the Scheduler in default mode without visually showcas
 
 The appointments belonging to the different resources will be displayed altogether on the default Scheduler, which will be differentiated based on the resource color assigned in the **resources** (depicting to which resource that particular appointment belongs) collection.
 
-Learn how to add appointments from multiple resources to Vue Scheduler by watching this video.
+Learn how to add appointments from multiple resources to [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) by watching this video.
 
 {% youtube "https://www.youtube.com/watch?v=kBwxxhC8bB0" %}
 

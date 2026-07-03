@@ -151,7 +151,7 @@ Each field defined within template should contain the **e-field** class, so as t
 
 As we are using our Syncfusion<sup style="font-size:70%">&reg;</sup> sub-components within our editor using template in the following example, the custom defined form elements needs to be configured as required Syncfusion<sup style="font-size:70%">&reg;</sup> components such as **DropDownList** and **DateTimePicker** within the [`popupOpen`](../api/schedule#popupopen) event. This particular step can be skipped, if the user needs to simply use the usual form elements.
 
-Check out this video for further information on how to customise an editor window using a template in the Vue Scheduler:
+Check out this video for further information on how to customise an editor window using a template in the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler):
 
 {% youtube "https://www.youtube.com/watch?v=0mNyH2X-FV0" %}
 
