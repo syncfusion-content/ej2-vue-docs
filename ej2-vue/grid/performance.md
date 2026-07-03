@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Performance tips for Vue DataGrid Component
 
-This article is a comprehensive guide on improving the loading performance of the Vue DataGrid, especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the Vue DataGrid during data binding, ensuring a smooth and efficient user experience.
+This article is a comprehensive guide on improving the loading performance of the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid), especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the Vue DataGrid during data binding, ensuring a smooth and efficient user experience.
 
 ## How to improve loading performance by binding large dataset
 As you all know, a grid is made up of rows and columns. For instance, when you bind 10 rows and 10 columns, it means 100 elements will be rendered in the DOM (Document Object Model). So, it is recommended to render only a limited number of rows and columns to guarantee the best loading performance for the component.
@@ -38,7 +38,7 @@ When integrating image or template elements into a column, it's recommended to u
 
 ## How to improve loading performance by referring individual script and CSS
 
-To improve the performance of Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component during the initial render as well as certain actions, suggested you to download the specific component scripts using CRG (Custom Resource Generator) to speed up the project. By default, the ej2.min.js script file contains all the Syncfusion<sup style="font-size:70%">&reg;</sup> component scripts. So, it will take some time to load the scripts to the project. Using [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator), you can select the components which you want to use, and the modules for those components, then you can download the scripts and CSS for the selected components and use them as per your need.
+To improve the performance of Vue Data Grid component during the initial render as well as certain actions, suggested you to download the specific component scripts using CRG (Custom Resource Generator) to speed up the project. By default, the ej2.min.js script file contains all the Syncfusion<sup style="font-size:70%">&reg;</sup> component scripts. So, it will take some time to load the scripts to the project. Using [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator), you can select the components which you want to use, and the modules for those components, then you can download the scripts and CSS for the selected components and use them as per your need.
 
 [CRG website link](https://crg.syncfusion.com/) 
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Data binding in Vue Grid component
 
-Data binding is a fundamental technique that empowers the Grid component to integrate data into its interface, enabling the creation of dynamic and interactive grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
+Data binding is a fundamental technique that empowers the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component to integrate data into its interface, enabling the creation of dynamic and interactive grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid utilizes the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started), which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
+The Vue Data Grid utilizes the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started), which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
 
 It supports two kinds of data binding methods:
 
@@ -25,7 +25,7 @@ To learn about binding local or remote data to the Vue Grid, refer to this video
 
 ## Loading indicator
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid offers a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
+The Vue Data Grid offers a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
 
 To achieve this, the [loadingIndicator.indicatorType](https://ej2.syncfusion.com/vue/documentation/api/grid/loadingindicatormodel#indicatortype) property of the grid, which supports two types of indicators:
 
@@ -47,7 +47,7 @@ The following example demonstrates setting the `loadingIndicator.indicatorType` 
 
 ## Refresh the datasource using property
 
-Refreshing the data source in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid involves updating the data that the grid displays dynamically. This operation reflects changes in the underlying data without reloading the entire page or component.
+Refreshing the data source in a Vue Data Grid involves updating the data that the grid displays dynamically. This operation reflects changes in the underlying data without reloading the entire page or component.
 
 To achieve this, use the [datasource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property in conjunction with the `setProperties` method. This ensures that the grid reflects the changes in the data source without requiring a complete page or component reload.
 
@@ -82,7 +82,7 @@ The following example demonstrates adding a new record to the data source throug
 
 ## Dynamically change the datasource or columns or both
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component supports dynamic modification of the data source, columns, or both. This feature refreshes the grid's content and structure without requiring a complete page reload.
+The Vue Data Grid component supports dynamic modification of the data source, columns, or both. This feature refreshes the grid's content and structure without requiring a complete page reload.
 
 To achieve dynamic changes, the [changeDataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#changedatasource) method allows updating the grid's data source dynamically. This method enables updating the data source, columns, or both, based on application requirements. However, it is important to note that during the changing process for the data source and columns, the grid's existing actions such as sorting, filtering, grouping, aggregation, and searching will be reset. The `changeDataSource` method has two optional arguments: the first argument represents the data source, and the second argument represents the columns. The various uses of the `changeDataSource` method are explained in the following topic.
 
@@ -183,7 +183,7 @@ The following code demonstrates using the `changeDataSource` method to bind the 
 
 ## Setting custom headers using a custom adaptor
 
-Custom headers in HTTP requests are used to send additional information such as authentication tokens, API keys, or metadata required by the server. These headers improve security and enable better control over data communication. In the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, custom headers can be added when making API requests, ensuring that each request carries the necessary information for server-side validation and processing.
+Custom headers in HTTP requests are used to send additional information such as authentication tokens, API keys, or metadata required by the server. These headers improve security and enable better control over data communication. In the Vue Data Grid, custom headers can be added when making API requests, ensuring that each request carries the necessary information for server-side validation and processing.
 
 This method is particularly useful when integrating the Grid with authenticated APIs, where requests must include authorization tokens or other security credentials to ensure secure access.
 
@@ -209,7 +209,7 @@ The following example demonstrates setting custom headers using the custom adapt
 
 ## Prevent conversion to local time zone for date columns
 
-By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid converts date values to the client system's local time zone. In some scenarios, it is necessary to display the original date as received from the server without timezone conversion.
+By default, Vue Data Grid converts date values to the client system's local time zone. In some scenarios, it is necessary to display the original date as received from the server without timezone conversion.
 
 To prevent timezone conversion for a date column, use the `DataUtil.serverTimezoneOffset` property. Setting this property to "0" ensures that dates remain in the original server-provided format without conversion to the local timezone.
 
@@ -229,4 +229,4 @@ The following example demonstrates preventing local time zone conversion for dat
 ## See also
 
 * [Binding a firebase data source to Grid using vueFire2](https://www.syncfusion.com/blogs/post/binding-a-firebase-data-source-to-grid-using-vuefire2.aspx)
-* [How to bind SQL Server data in vue DataGrid using SqlClient data provider](https://www.syncfusion.com/kb/11453/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)
+* [How to bind SQL Server data in Vue Data Grid using SqlClient data provider](https://www.syncfusion.com/kb/11453/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)

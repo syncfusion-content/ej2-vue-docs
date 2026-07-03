@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Ruler in Vue Diagram component
 
-The ruler provides horizontal and vertical guides for measuring in the diagram control. It can be used to measure diagram objects, indicate positions, and align diagram elements, making it especially useful for creating scale models.The ruler also includes a position indicator that displays the precise location of the mouse cursor on the diagram canvas, with the default color of the position indicator marker being red.
+The ruler provides horizontal and vertical guides for measuring in the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control. It can be used to measure diagram objects, indicate positions, and align diagram elements, making it especially useful for creating scale models.The ruler also includes a position indicator that displays the precise location of the mouse cursor on the diagram canvas, with the default color of the position indicator marker being red.
 
 ## Define rulers
 

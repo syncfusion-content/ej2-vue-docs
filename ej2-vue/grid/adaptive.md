@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Adaptive in Vue Grid component
 
-The Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
+The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
 
 ## Render adaptive dialogs
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance the user experience on smaller screens. This feature is particularly useful for optimizing the interface on mobile devices or other devices with limited screen space. The functionality is achieved by enabling the [enableAdaptiveUI](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableadaptiveui) property, allowing the grid to render filter, sort, and edit dialogs in full-screen mode.
+The Vue Data Grid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance the user experience on smaller screens. This feature is particularly useful for optimizing the interface on mobile devices or other devices with limited screen space. The functionality is achieved by enabling the [enableAdaptiveUI](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#enableadaptiveui) property, allowing the grid to render filter, sort, and edit dialogs in full-screen mode.
 
 Additionally, apply the `e-bigger` class to the grid's parent element to enable the adaptive view.
 
-The following sample demonstrates how to enable and utilize adaptive dialogs in the Syncfusion<sup style="font-size:70%">&reg;</sup> vue Grid:
+The following sample demonstrates how to enable and utilize adaptive dialogs in the Vue Data Grid:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -33,7 +33,7 @@ The following sample demonstrates how to enable and utilize adaptive dialogs in 
 
 ## Vertical row rendering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid introduces the feature of vertical row rendering, allowing you to display row elements in a vertical order. This is particularly useful for scenarios where a vertical presentation enhances data visibility. This is achieved by setting the [rowRenderingMode](https://ej2.syncfusion.com/vue/documentation/api/grid#rowrenderingmode) property to the value **Vertical**.
+The Vue Data Grid introduces the feature of vertical row rendering, allowing you to display row elements in a vertical order. This is particularly useful for scenarios where a vertical presentation enhances data visibility. This is achieved by setting the [rowRenderingMode](https://ej2.syncfusion.com/vue/documentation/api/grid#rowrenderingmode) property to the value **Vertical**.
 
 >The default row rendering mode is **Horizontal**.
 
@@ -518,7 +518,7 @@ export default {
         
 {% previewsample "page.domainurl/code-snippet/grid/adaptive-cs2" %}
 
-> [enableAdaptiveUI](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableadaptiveui) property must be enabled for vertical row rendering.
+> [enableAdaptiveUI](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#enableadaptiveui) property must be enabled for vertical row rendering.
 
 ### Supported features by vertical row rendering
 
@@ -543,7 +543,7 @@ A snapshot of the adaptive grid displaying enabled paging along with a pager dro
 
 ## Rendering an adaptive layout for smaller screens alone
 
-By default, adaptive UI layout is rendered in both mobile devices and desktop mode too while setting the [enableAdaptiveUI](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableadaptiveui) property as **true**. Now the DataGrid component has an option to render an adaptive layout only for mobile screen sizes. This can be achieved by specifying the `AdaptiveUIMode` property value as `Mobile`. The default value of the `AdaptiveUIMode` property is "Both".
+By default, adaptive UI layout is rendered in both mobile devices and desktop mode too while setting the [enableAdaptiveUI](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#enableadaptiveui) property as **true**. Now the DataGrid component has an option to render an adaptive layout only for mobile screen sizes. This can be achieved by specifying the `AdaptiveUIMode` property value as `Mobile`. The default value of the `AdaptiveUIMode` property is "Both".
 
 > The [rowRenderingMode](https://ej2.syncfusion.com/vue/documentation/api/grid#rowrenderingmode) property is rendered on the adaptive layout based on the `AdaptiveUIMode` property.
 
@@ -978,7 +978,3 @@ export default {
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/adaptive-cs1" %}
-
-## See Also
-
-* [Effective ways to utilize responsiveness](https://www.syncfusion.com/blogs/post/essential-js-2-effective-ways-to-utilize-responsiveness-in-the-vue-grid.aspx)

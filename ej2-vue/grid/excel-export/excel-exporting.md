@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Excel exporting in Vue Grid component
 
-The Excel or CSV exporting feature in the Vue Grid component allows you to export the Grid data to an Excel or CSV document. This can be useful when you need to share or analyze the data in a spreadsheet format.
+The Excel or CSV exporting feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to export the Grid data to an Excel or CSV document. This can be useful when you need to share or analyze the data in a spreadsheet format.
 
 To enable Excel export in the Grid component, you need to set the [allowExcelExport](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowexcelexport) property to **true**. This property is responsible for enabling the Excel or CSV export option in the Grid.
 
@@ -255,7 +255,7 @@ The following example demonstrates how to perform export with cell and row spann
 
 ## Exporting with custom date format
 
-The exporting functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values.
+The exporting functionality in the Vue Data Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values.
 
 To apply a custom date format to grid columns during the export, you can utilize the [columns.format](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#format) property. This property allows you to define a custom format using format options.
 
@@ -274,7 +274,7 @@ The following example demonstrates how to export the grid with custom date forma
 
 ## Merge duplicate cells in specific column and export in Grid
 
-You can merge duplicate cells (based on their values) in a specific column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event. Additionally, you can merge duplicate cells in the specified column during export by using the [excelQueryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#excelquerycellinfo) event for Excel and CSV formats. This functionality is useful for improving the readability of your data and providing a clearer visual representation.
+You can merge duplicate cells (based on their values) in a specific column of the Vue Data Grid. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event. Additionally, you can merge duplicate cells in the specified column during export by using the [excelQueryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#excelquerycellinfo) event for Excel and CSV formats. This functionality is useful for improving the readability of your data and providing a clearer visual representation.
 
 Here’s an example demonstrating how to merge duplicate cells in the OrderID column in both Grid view and export:
 
@@ -291,7 +291,7 @@ Here’s an example demonstrating how to merge duplicate cells in the OrderID co
 
 ## Exporting multiple grids
 
-Exporting multiple grids in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a Excel. Each grid is identified by its unique ID. You can specify which grid to export by listing their IDs in the [exportGrids](https://ej2.syncfusion.com/vue/documentation/api/grid/#exportgrids) property.
+Exporting multiple grids in the Vue Data Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a Excel. Each grid is identified by its unique ID. You can specify which grid to export by listing their IDs in the [exportGrids](https://ej2.syncfusion.com/vue/documentation/api/grid/#exportgrids) property.
 
 ### Same sheet
 
@@ -347,7 +347,7 @@ The following example demonstrates how to export multiple grids to a Excel file 
 
 ## Exporting hierarchy grid 
 
-Exporting a hierarchy grid in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component allows you to generate a Excel or CSV document that includes the parent grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
+Exporting a hierarchy grid in the Vue Data Grid component allows you to generate a Excel or CSV document that includes the parent grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
 
 To achieve this, you can customize the exporting behavior by using the `ExcelExportProperties.hierarchyExportMode` property of the Grid. This property allows you to specify the exporting behavior for the hierarchy grid. The following options are available:
 
@@ -372,7 +372,7 @@ The following example demonstrates how to export hierarchical grid to Excel docu
 
 ### Format the child Grid columns before exporting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows customization of the child Grid's Excel export options, enabling precise control over data formatting before export. This functionality is achieved using the [exportDetailDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#exportdetaildatabound) event, which is triggered for each child Grid during the export process. This event provides access to the child Grid instance, allowing modifications to its column formatting before generating the Excel document.
+The Vue Data Grid allows customization of the child Grid's Excel export options, enabling precise control over data formatting before export. This functionality is achieved using the [exportDetailDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#exportdetaildatabound) event, which is triggered for each child Grid during the export process. This event provides access to the child Grid instance, allowing modifications to its column formatting before generating the Excel document.
 
 In the following example, the `exportDetailDataBound` event is used to modify the **OrderDate** column of the child Grid. By setting the column's [format](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#format) property, the date values are formatted as `dd/MM/yyyy` when exported to Excel document.
 
@@ -394,7 +394,7 @@ In the following example, the `exportDetailDataBound` event is used to modify th
 
 ## Remove header row while exporting
 
-When exporting data from the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, you have an option to remove the header row from the exported file. This can be useful when you want to export grid data without including the header values in the exported document. To achieve this, you can utilize the [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#excelheaderquerycellinfo) and [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) event. 
+When exporting data from the Vue Data Grid, you have an option to remove the header row from the exported file. This can be useful when you want to export grid data without including the header values in the exported document. To achieve this, you can utilize the [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#excelheaderquerycellinfo) and [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) event. 
 
 The following example demonstrates how to perform an export without the header by using the `excelHeaderQueryCellInfo` event to clear cell content in the header row and the [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) event to remove the header row from the Grid:
 
@@ -430,7 +430,7 @@ In the following example, the [toolbarClick](https://ej2.syncfusion.com/vue/docu
 
 ## Passing additional parameters to the server when exporting
 
-Passing additional parameters to the server when exporting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+Passing additional parameters to the server when exporting data in the Vue Data Grid involves providing flexibility to include extra information or customize the export process based on specific requirements.
 
 You can achieve this by utilizing the [query](https://ej2.syncfusion.com/vue/documentation/api/grid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event. Within the `query` property, you can invoke the `addParams` method to add parameters to the request.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Register the grid using vue component in Vue Grid component
 
-Import the `GridComponent` from the `@syncfuion/ej2-vue-grids` package,register the same using the `Vue.component()` with name of the grid selector and the GridComponent as its arguments.
+Import the `GridComponent` from the `@syncfuion/ej2-vue-grids` package,register the same using the `Vue.component()` with name of the grid selector and the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) Component as its arguments.
 
 Refer to the code example given below.
 

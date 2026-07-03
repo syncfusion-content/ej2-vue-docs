@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connector interaction in ##Platform_Name## Diagram
 
-Connectors can be selected, dragged, and routed over the diagram page.
+Connectors can be selected, dragged, and routed over the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) page.
 
 ## Select and unSelect connector.
 
