@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue 3 Diagram Component
 
-This section explains how to create a Vue 3 application from scratch and build a simple diagram using the Syncfusion® Diagram component.
+This section explains how to create a Vue 3 application from scratch and build a simple diagram using the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component.
 
 In Vue 3, developers can choose between two APIs for building components:
 
@@ -18,7 +18,7 @@ In Vue 3, developers can choose between two APIs for building components:
 
 - The `Options API` is the traditional approach where component logic is defined using options such as data, methods, computed properties, watchers, and life cycle hooks.
 
-To create, edit, and view interactive diagrams using the Syncfusion® Vue Diagram component, refer to the video below.
+To create, edit, and view interactive diagrams using the Vue Diagram component, refer to the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=y11FMmfoqCg" %}
 
@@ -66,7 +66,7 @@ npm install
 ```
 N> If you prefer TypeScript instead of JavaScript, create the application using `npm create vite@latest my-diagram-app -- --template vue-ts`.
 
-## Step 3: Install the Syncfusion® Vue Diagram package
+## Step 3: Install the Vue Diagram package
 
 All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
 
@@ -279,3 +279,5 @@ npm run dev
 Open the generated local URL in the browser. The application displays the flowchart diagram as shown below:
 
 ![Getting started](./images/Getting-started.png)
+
+N> Looking for the full Vue Diagram component overview, features, pricing, and documentation? Visit the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) page.

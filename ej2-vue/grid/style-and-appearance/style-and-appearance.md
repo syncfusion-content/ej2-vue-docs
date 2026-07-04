@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style and appearance in Vue Grid component
 
-The Grid component offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
+The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
 
 **Default CSS overrides:**
 
@@ -39,7 +39,7 @@ Syncfusion's<sup style="font-size:70%">&reg;</sup> Theme Studio tool allows you 
 
 ## Customizing the grid root element
 
-To customize the appearance of the root element of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component, you can use CSS. Here's an example of how to modify the font family and row colors using CSS:
+To customize the appearance of the root element of the Vue Data Grid component, you can use CSS. Here's an example of how to modify the font family and row colors using CSS:
 
 ```css
 .e-grid {
@@ -50,7 +50,7 @@ To customize the appearance of the root element of the Syncfusion<sup style="fon
 
 ![grid root element](../images/whole-grid.png)
 
-The above code snippet, the **.e-grid** class targets the root element of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component, and the `font-family` property is set to cursive to change the font family of the grid content.
+The above code snippet, the **.e-grid** class targets the root element of the Vue Data Grid component, and the `font-family` property is set to cursive to change the font family of the grid content.
 
 In the following sample, the font family of grid content is changed to **cursive**, and the background color of rows, selected rows, alternate rows, and row hovering color is modified using the below CSS styles.
 

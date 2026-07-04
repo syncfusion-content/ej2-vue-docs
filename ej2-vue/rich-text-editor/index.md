@@ -15,13 +15,13 @@ The Rich Text Editor component is WYSIWYG ("what you see is what you get") edito
 ## Key features
 
 * **Mode**: Provides `IFRAME` and `DIV` mode.
-* **[Markdown](./markdown/)**: Handles markdown editing.
+* **[Markdown](./markdown)**: Handles markdown editing.
 * **Module**: Contains a modular library to load the necessary functionality on demand.
-* **[Toolbar](./toolbar/)**: Provides a fully customizable toolbar.
+* **[Toolbar](./toolbar)**: Provides a fully customizable toolbar.
 * **Editing**: HTML view to edit the source directly for developers.
-* **[Third-party Integration](./third-party-integration/)**: Supports to integrate third-party library.
+* **[Third-party Integration](./third-party-integration)**: Supports to integrate third-party library.
 * **Preview**: Preview the modified content before saving it.
 * **[Tools](./image)**: Handles images, hyperlinks, video, hyperlinks, uploads, and more.
 * **Undo and Redo**: Contains undo/redo manager.
 * **Lists**: Creates bulleted and numbered lists.
-* **[Table](./table/)**: Creates table and its related features.
+* **[Table](./table)**: Creates table and its related features.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Exporting grid with templates in Vue Grid control
 
-The grid offers the option to export the column, detail, and caption templates to an Excel document. The template contains images, hyperlinks, and customized text.
+The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) offers the option to export the column, detail, and caption templates to an Excel document. The template contains images, hyperlinks, and customized text.
 
 ## Exporting with column template
 

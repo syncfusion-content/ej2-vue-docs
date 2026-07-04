@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Row selection in Vue Grid component
 
-Row selection in the Grid component allows you to interactively select specific rows or ranges of rows within the grid. This selection can be done effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when you want to highlight, manipulate, or perform actions on specific row within the Grid.
+Row selection in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to interactively select specific rows or ranges of rows within the grid. This selection can be done effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when you want to highlight, manipulate, or perform actions on specific row within the Grid.
 
 >To enable row selection, you should set the [selectionSettings.mode](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#mode) property to either **Row** or **Both**. This property determines the selection mode of the grid.
 
@@ -689,7 +689,7 @@ components: {
 
 ## Pass selected records to server using AJAX
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to select multiple or single records and send them to the server using AJAX requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
+The Vue Data Grid allows you to select multiple or single records and send them to the server using AJAX requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
 
 To achieve passing selected records to the server using AJAX requests in the Grid, follow these steps:
 
@@ -1001,7 +1001,7 @@ The following screenshot shows how to pass selected records to the server:
 
 ## Pass selected records to server using FETCH
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to select multiple or single records and send them to the server using Fetch requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
+The Vue Data Grid allows you to select multiple or single records and send them to the server using Fetch requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
 
 To achieve passing selected records to the server using Fetch requests in the Grid, follow these steps:
 

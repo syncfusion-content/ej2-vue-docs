@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style Encapsulation in Vue Rich Text Editor
 
-Style encapsulation determines how styles are applied within the Syncfusion Vue **Rich Text Editor**. This feature helps control whether the component's content inherits global styles from the application or remains isolated. 
+Style encapsulation determines how styles are applied within the Vue **Rich Text Editor**. This feature helps control whether the component's content inherits global styles from the application or remains isolated. 
 
 ## Encapsulation modes
 

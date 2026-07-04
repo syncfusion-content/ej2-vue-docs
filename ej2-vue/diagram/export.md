@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in Vue Diagram component
 
-Diagram provides support to export its content as image/svg files. The  [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#exportdiagram) method of diagrams helps to export the diagram. The following code illustrates how to export the diagram as image.
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support to export its content as image/svg files. The  [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram#exportdiagram) method of diagrams helps to export the diagram. The following code illustrates how to export the diagram as image.
 
 N> To use Print and Export, you need to inject `PrintAndExport` in the diagram.
 
@@ -41,7 +41,7 @@ export default {
 
 ## Exporting options
 
-The diagram provides support to export the desired region of the diagram to various formats. The following table shows the list of [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#iexportoptions) in diagram.
+The diagram provides support to export the desired region of the diagram to various formats. The following table shows the list of [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#iexportoptions) in diagram.
 
 | Name | Type | Description|
 |-------- | -------- | -------- |
@@ -59,11 +59,11 @@ The diagram provides support to export the desired region of the diagram to vari
 
 ### File Name
 
-[`FileName`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#filename) is the name of the file to be downloaded. By default, the file name is set to **Diagram**.
+[`FileName`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#filename) is the name of the file to be downloaded. By default, the file name is set to **Diagram**.
 
 ### Format
 
-[`Format`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#format) is to specify the type/format of the exported file. By default, the diagram is exported as .jpg format. You can export diagram to the following formats:
+[`Format`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#format) is to specify the type/format of the exported file. By default, the diagram is exported as .jpg format. You can export diagram to the following formats:
 
 * JPG
 * PNG
@@ -83,7 +83,7 @@ The diagram provides support to export the desired region of the diagram to vari
 
 ### Margin
 
-[`Margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#margin) specifies the amount of space that has to be left around the diagram.
+[`Margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#margin) specifies the amount of space that has to be left around the diagram.
 
 
 {% tabs %}
@@ -100,7 +100,7 @@ The diagram provides support to export the desired region of the diagram to vari
 
 ### Mode
 
-[`Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#mode) specifies whether to export the diagram as an image or to return the base64 data of the diagram. The available export modes are:
+[`Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#mode) specifies whether to export the diagram as an image or to return the base64 data of the diagram. The available export modes are:
 
 * Download: Exports and downloads the diagram as an image or SVG file.
 * Data: Returns a base64 string representation of the diagram.
@@ -137,7 +137,7 @@ export default {
 
 ### Region
 
-Exporting particular region of diagram is possible by using the [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#region) property of the [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#iexportoptions). The available export regions are listed in the table below.
+Exporting particular region of diagram is possible by using the [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#region) property of the [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#iexportoptions). The available export regions are listed in the table below.
 
 | Region | Description |
 |-------- | -------- |
@@ -159,12 +159,12 @@ The following example shows how to export diagram with different regions.
 {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs3" %}
 
 
-N> The [`bounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#bounds) property of [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#iexportoptions) should be defined to export the diagram with CustomBounds region.
+N> The [`bounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#bounds) property of [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#iexportoptions) should be defined to export the diagram with CustomBounds region.
 
 
 ### MultiplePage
 
-When the [`multiplePage`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#multiplepage) option is set to false, the diagram is exported as a single image. When it set to true, the diagram is exported as multiple images based on its width and height.
+When the [`multiplePage`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#multiplepage) option is set to false, the diagram is exported as a single image. When it set to true, the diagram is exported as multiple images based on its width and height.
 
 The following code example demonstrates how to export the diagram as multiple images.
 
@@ -183,7 +183,7 @@ The following code example demonstrates how to export the diagram as multiple im
 
 ### Export image
 
-You can pass the base64 data of an image to the [`exportImage`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#exportimage) method to export it directly. The following example shows how to export base64 data using the `exportImage` method.
+You can pass the base64 data of an image to the [`exportImage`](https://ej2.syncfusion.com/vue/documentation/api/diagram#exportimage) method to export it directly. The following example shows how to export base64 data using the `exportImage` method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -199,7 +199,7 @@ You can pass the base64 data of an image to the [`exportImage`](https://ej2.sync
 
 ### Get diagram content
 
-To get the html diagram content, the [`getDiagramContent`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#getdiagramcontent) method is used. the following example shows how to get the diagram content at runtime.
+To get the html diagram content, the [`getDiagramContent`](https://ej2.syncfusion.com/vue/documentation/api/diagram#getdiagramcontent) method is used. the following example shows how to get the diagram content at runtime.
 
 
 {% tabs %}
@@ -216,7 +216,7 @@ To get the html diagram content, the [`getDiagramContent`](https://ej2.syncfusio
 
 ### Export diagram with stretch option
 
-Diagram provides support to export the diagram as image for [`stretch`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#stretch) option. The exported images will be clearer but larger in file size.
+Diagram provides support to export the diagram as image for [`stretch`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexportoptions#stretch) option. The exported images will be clearer but larger in file size.
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 

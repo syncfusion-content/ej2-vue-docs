@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in Vue Diagram component
 
-The Diagram control creates rich `Visio` like applications. Its Framework comprises of many Elements that helps you to create an application easily. The rich feature set of the Diagram control includes Snapping, Guidelines, Grid lines, Serialization and Zooming. All diagram elements are rendered using Scalable Vector Graphics (SVG).
+The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control creates rich `Visio` like applications. Its Framework comprises of many Elements that helps you to create an application easily. The rich feature set of the Diagram control includes Snapping, Guidelines, Grid lines, Serialization and Zooming. All diagram elements are rendered using Scalable Vector Graphics (SVG).
 
 ## Key Features
 

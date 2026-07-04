@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
   
 # Headers in Vue Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component provides a comprehensive set of options to customize and manage headers efficiently. Headers play a crucial role in organizing and presenting data effectively in the grid.
+The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides a comprehensive set of options to customize and manage headers efficiently. Headers play a crucial role in organizing and presenting data effectively in the grid.
 
 ## Header text
 
-The `headerText` feature proves particularly beneficial when there is a need for more meaningful and descriptive column headers in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component.
+The `headerText` feature proves particularly beneficial when there is a need for more meaningful and descriptive column headers in the Vue Data Grid component.
 
-By default, the header text of a column in Grid is displayed from the column's [field](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#field) value. However, you can easily override the default header title and provide a custom header text for the column using the [headerText](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertext) property. 
+By default, the header text of a column in Grid is displayed from the column's [field](https://ej2.syncfusion.com/vue/documentation/api/grid/column#field) value. However, you can easily override the default header title and provide a custom header text for the column using the [headerText](https://ej2.syncfusion.com/vue/documentation/api/grid/column#headertext) property. 
 
 To enable the `headerText` property, you simply need to define it in the **e-column** element. The following example demonstrates how to enable header text for a  Grid column.
 
@@ -33,13 +33,13 @@ To enable the `headerText` property, you simply need to define it in the **e-col
 
 > * If both the `field` and `headerText` are not defined in the column, the column renders with **empty** header text.
 > * The `headerText` property is optional, and if it is not defined, then the corresponding column's field value is set as header text for that column.  
-> * You can also use the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertemplate) property to apply custom HTML content to the header cell.
+> * You can also use the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column#headertemplate) property to apply custom HTML content to the header cell.
 
 ## Header template
 
-The header template feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component allows you to create custom header layouts and content, providing enhanced functionality such as sorting or filtering.
+The header template feature in the Vue Data Grid component allows you to create custom header layouts and content, providing enhanced functionality such as sorting or filtering.
 
-To implement a header template, set the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertemplate) property within a specific column definition. This allows you to render custom HTML elements or Vue components to the header.
+To implement a header template, set the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column#headertemplate) property within a specific column definition. This allows you to render custom HTML elements or Vue components to the header.
 
 The following example demonstrate, the custom element is rendered for both **CustomerID** and **OrderDate** column headers.
 
@@ -214,11 +214,11 @@ components: {
 
 ## Stacked header 
 
-In Grid, you can group multiple levels of column headers by stacking the Grid columns. This feature allows you to organize the Grid columns in a more structured and understandable way. This can be achieved by setting the [columns->columns](https://ej2.syncfusion.com/documentation/api/grid/column/#columns) property. Within this property, you can define an array of column objects to group together as sub-headers under a main header. You can define the `headerText` property of each sub-header column to set the text for that sub-header.
+In Grid, you can group multiple levels of column headers by stacking the Grid columns. This feature allows you to organize the Grid columns in a more structured and understandable way. This can be achieved by setting the [columns->columns](https://ej2.syncfusion.com/documentation/api/grid/column#columns) property. Within this property, you can define an array of column objects to group together as sub-headers under a main header. You can define the `headerText` property of each sub-header column to set the text for that sub-header.
 
 You can customize the appearance of the stacked header elements by using the `headerTemplate` property. This allows you to render custom HTML elements or Vue components to the header. 
 
-Here's an example of how to use stacked headers with a custom `headerTemplate` in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid.
+Here's an example of how to use stacked headers with a custom `headerTemplate` in Vue Data Grid.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -458,7 +458,7 @@ components: {
 
 ## Align the text of header text
 
-You can horizontally align the text in column headers of the Grid component using the [headerTextAlign](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertextalign) property. By default, the text is aligned to the left, but you can change the alignment by setting the value of the `headerTextAlign` property to one of the following options:
+You can horizontally align the text in column headers of the Grid component using the [headerTextAlign](https://ej2.syncfusion.com/vue/documentation/api/grid/column#headertextalign) property. By default, the text is aligned to the left, but you can change the alignment by setting the value of the `headerTextAlign` property to one of the following options:
 
 * **Left**: Aligns the text to the left (default).
 * **Center**: Aligns the text to the center.
@@ -478,14 +478,14 @@ The following example demonstrates how to dynamically change the alignment of th
         
 {% previewsample "page.domainurl/code-snippet/grid/column/column-headertext-align" %}
 
->* The `headerTextAlign` property only changes the alignment of the text in the column header, and not the content of the column. If you want to align both the column header and content, you can use the [textAlign](https://ej2.syncfusion.com/documentation/api/grid/column/#textalign) property.
->* You can also use the `headerTextAlign` property with the stacked header feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. The property will align the header text in the sub-headers as well.
+>* The `headerTextAlign` property only changes the alignment of the text in the column header, and not the content of the column. If you want to align both the column header and content, you can use the [textAlign](https://ej2.syncfusion.com/documentation/api/grid/column#textalign) property.
+>* You can also use the `headerTextAlign` property with the stacked header feature in Vue Data Grid. The property will align the header text in the sub-headers as well.
 
 ## Autowrap the header text
 
-The Autowrap allows the cell content of the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you should set the appropriate [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
+The Autowrap allows the cell content of the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Vue Data Grid, you should set the appropriate [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column#width) for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
 
-To enable Autowrap, set the `allowTextWrap` property to **true**. You can also configure the auto wrap mode by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/vue/documentation/api/grid/textWrapSettings/#wrapmode) property.
+To enable Autowrap, set the `allowTextWrap` property to **true**. You can also configure the auto wrap mode by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/vue/documentation/api/grid/textWrapSettings#wrapmode) property.
 
 Grid provides the below three options for configuring:
 
@@ -495,7 +495,7 @@ Grid provides the below three options for configuring:
 
 >* If a column width is not specified, then the Autowrap of columns will be adjusted with respect to the grid's width.
 >* If a column's header text contains no white space, the text may not be wrapped.
->* If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertemplate) and [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) properties of the column to customize the appearance of the header and cell content.
+>* If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column#headertemplate) and [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column#template) properties of the column to customize the appearance of the header and cell content.
 
 The following example demonstrates how to dynamically change the auto-wrap of the header text based on DropDown change.
 
@@ -526,7 +526,7 @@ You can use CSS to override the default height of the **.e-grid .e-headercell** 
 
 **Using methods**
 
-To change the height of the header dynamically, you can use the [getHeaderContent](https://ej2.syncfusion.com/vue/documentation/api/grid#getheadercontent) method to get the header content element of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. Then, you can use the **querySelectorAll** method to get all the header cell elements with the class **e-headercell**. Finally, you can loop through each header cell element and set its style property to adjust the height.
+To change the height of the header dynamically, you can use the [getHeaderContent](https://ej2.syncfusion.com/vue/documentation/api/grid#getheadercontent) method to get the header content element of the Vue Data Grid. Then, you can use the **querySelectorAll** method to get all the header cell elements with the class **e-headercell**. Finally, you can loop through each header cell element and set its style property to adjust the height.
 
 The following example demonstrates how to dynamically change the height of the header based on a Button `click` event.
 
@@ -546,11 +546,11 @@ The following example demonstrates how to dynamically change the height of the h
 
 ## Change header text dynamically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides a way to modify the header text of a corresponding column in real-time based on events or other events. This feature can be useful in various scenarios, such as displaying a custom header text for a specific column or updating the header text dynamically based on input. By allowing for dynamic changes to the header text, the Grid provides a more flexible and customizable experience.
+The Vue Data Grid component provides a way to modify the header text of a corresponding column in real-time based on events or other events. This feature can be useful in various scenarios, such as displaying a custom header text for a specific column or updating the header text dynamically based on input. By allowing for dynamic changes to the header text, the Grid provides a more flexible and customizable experience.
 
 **Using Event**
 
-To modify the header text of a corresponding column dynamically, you can use the [headerCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#headercellinfo) event provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This event is triggered for each header cell element rendered in the Grid.
+To modify the header text of a corresponding column dynamically, you can use the [headerCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid#headercellinfo) event provided by the Vue Data Grid. This event is triggered for each header cell element rendered in the Grid.
 
 When the `headerCellInfo` event is triggered, it provides a **HeaderCellInfoEventArgs** object as a parameter. This object contains the following properties:
 
@@ -563,21 +563,21 @@ You can use these properties to access and modify the header text of the corresp
 
 The Grid component provides several methods that allow you to change the column header text dynamically. Here are some of the methods you can use:
 
-1. [getColumnByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnbyfield): This method takes a field name as a parameter and returns the entire column object that corresponds to that field name, including properties such as headerText, width, and alignment. You can use this method to modify any aspect of the column.
+1. [getColumnByField](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnbyfield): This method takes a field name as a parameter and returns the entire column object that corresponds to that field name, including properties such as headerText, width, and alignment. You can use this method to modify any aspect of the column.
 
-2.	[getColumnHeaderByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyfield): Retrieves the header element of a column based on its field name. You can modify the **textContent** property of the header element to change the header text. This method does not return a reference to the column object itself, only to the header element.
+2.	[getColumnHeaderByField](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyfield): Retrieves the header element of a column based on its field name. You can modify the **textContent** property of the header element to change the header text. This method does not return a reference to the column object itself, only to the header element.
 
-3.	[getColumnIndexByField](https://ej2.syncfusion.com/documentation/api/grid/#getcolumnindexbyfield): Retrieves the index of a column based on its field name. You can then use the `getColumnByIndex` method to retrieve the column object and modify its `headerText` property to change the header text.
+3.	[getColumnIndexByField](https://ej2.syncfusion.com/documentation/api/grid#getcolumnindexbyfield): Retrieves the index of a column based on its field name. You can then use the `getColumnByIndex` method to retrieve the column object and modify its `headerText` property to change the header text.
 
-4.	[getColumnByUid](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnbyuid): Retrieves the column object based on its unique identifier (UID). You can modify the `headerText` property of the column object to change the header text.
+4.	[getColumnByUid](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnbyuid): Retrieves the column object based on its unique identifier (UID). You can modify the `headerText` property of the column object to change the header text.
 
-5.	[getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyindex): Retrieves the header element of a column based on its zero-based index. You can modify the **textContent** property of the header element to change the header text. This method does not return a reference to the column object itself, only to the header element.
+5.	[getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyindex): Retrieves the header element of a column based on its zero-based index. You can modify the **textContent** property of the header element to change the header text. This method does not return a reference to the column object itself, only to the header element.
 
-6.	[getColumnIndexByUid](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnindexbyuid): Retrieves the index of a column based on its unique identifier (UID). You can then use the `getColumnByIndex` method to retrieve the column object and modify its `headerText` property to change the header text.
+6.	[getColumnIndexByUid](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnindexbyuid): Retrieves the index of a column based on its unique identifier (UID). You can then use the `getColumnByIndex` method to retrieve the column object and modify its `headerText` property to change the header text.
 
-7.	[getColumnHeaderByUid](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyuid): Retrieves the header element of a column based on its unique identifier (UID). You can modify the **textContent** property of the  header element to change the header text. This method does not return a reference to the column object itself, only to the header element.If you only have an `template` for the column header, and the column itself is not defined with a `field` , then you can use the `getColumnHeaderByUid` method to get a reference to the header element and modify its text content to change the header text.
+7.	[getColumnHeaderByUid](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyuid): Retrieves the header element of a column based on its unique identifier (UID). You can modify the **textContent** property of the  header element to change the header text. This method does not return a reference to the column object itself, only to the header element.If you only have an `template` for the column header, and the column itself is not defined with a `field` , then you can use the `getColumnHeaderByUid` method to get a reference to the header element and modify its text content to change the header text.
 	
->* When you change the header text dynamically, you need to **refresh** the Grid to reflect the changes by calling the [refreshHeader](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshheader) method.
+>* When you change the header text dynamically, you need to **refresh** the Grid to reflect the changes by calling the [refreshHeader](https://ej2.syncfusion.com/vue/documentation/api/grid#refreshheader) method.
 >* The UID is automatically generated by the Grid component and may change whenever the grid is refreshed or updated.
 
 Here is an example of how to change the header text of a column using the `getColumnByField` method:
@@ -595,17 +595,17 @@ Here is an example of how to change the header text of a column using the `getCo
 
 **Changing header text using headerValueAccessor property**
 
-The `headerValueAccessor` property in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to customize the text of a column header cell, which can be useful in scenarios where you want to change the text to display it in a different language, format or add additional information to the header. This property is triggered every time the header cell is rendered.
+The `headerValueAccessor` property in Vue Data Grid allows you to customize the text of a column header cell, which can be useful in scenarios where you want to change the text to display it in a different language, format or add additional information to the header. This property is triggered every time the header cell is rendered.
 
-To enable the `headerValueAccessor` property, you need to set the [headerValueAccessor](https://ej2.syncfusion.com/vue/documentation/api/grid/headervalueaccessor/) property of the corresponding column. This property accepts a callback function that takes two arguments:
+To enable the `headerValueAccessor` property, you need to set the [headerValueAccessor](https://ej2.syncfusion.com/vue/documentation/api/grid/headervalueaccessor) property of the corresponding column. This property accepts a callback function that takes two arguments:
 
   * **field**: Represents the current field of the column.
   * **column**: Represents the current column object.
 
->* The `headerValueAccessor` property should only be used to change the text of the header and not to perform any DOM-oriented operations such as adding or manipulating DOM elements in the header. In such cases, you should use the [headerCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#headercellinfo) event instead.
+>* The `headerValueAccessor` property should only be used to change the text of the header and not to perform any DOM-oriented operations such as adding or manipulating DOM elements in the header. In such cases, you should use the [headerCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid#headercellinfo) event instead.
 >* The `headerValueAccessor` property is triggered every time the header cell is rendered or refreshed.
 >* The callback function defined for the `headerValueAccessor` property should return a string that represents the new text of the column header.
->* If you only need to refresh the column header, you can dynamically change the header content using the [refreshHeader](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshheader) method.
+>* If you only need to refresh the column header, you can dynamically change the header content using the [refreshHeader](https://ej2.syncfusion.com/vue/documentation/api/grid#refreshheader) method.
 >* You can use this property for individual columns or for all columns by adding it to the grid's properties.
   
 Here's an example of how to use the `headerValueAccessor` property to change the header text of a column:
@@ -638,7 +638,7 @@ If you want to change the header text of all columns in the grid, you can loop t
         
 ## Change the orientation of header text
 
-By default, the text in the column headers of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid control is oriented horizontally. However, in some cases, you may want to change the orientation of the header text to vertical, diagonal, or at a custom angle. This can be achieved by adding a custom CSS class to the column header cell using the [customAttributes](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#customattributes) property of the Grid columns.
+By default, the text in the column headers of the Vue Data Grid control is oriented horizontally. However, in some cases, you may want to change the orientation of the header text to vertical, diagonal, or at a custom angle. This can be achieved by adding a custom CSS class to the column header cell using the [customAttributes](https://ej2.syncfusion.com/vue/documentation/api/grid/column#customattributes) property of the Grid columns.
 
 Follow the below steps to change the orientation of the header text in Grid:
 
@@ -694,9 +694,9 @@ The following example demonstrates how to change the orientation of the **Freigh
 
 ## Custom tooltip for header
 
-Custom tooltips for headers provide additional information when hovering over a column header in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This can be useful in situations where there is not enough space to display all of the information related to a column, or when there is additional context that may be helpful.
+Custom tooltips for headers provide additional information when hovering over a column header in the Vue Data Grid. This can be useful in situations where there is not enough space to display all of the information related to a column, or when there is additional context that may be helpful.
 
-To enable custom tooltips for headers, you can use the [beforeRender](https://ej2.syncfusion.com/vue/documentation/api/grid/#beforeRender) event of the Grid component. This event is triggered for each header cell before it is rendered, allowing you to add a custom tooltip to the header cell using [tooltip](https://ej2.syncfusion.com/vue/documentation/tooltip/content) component.
+To enable custom tooltips for headers, you can use the [beforeRender](https://ej2.syncfusion.com/vue/documentation/api/grid#beforeRender) event of the Grid component. This event is triggered for each header cell before it is rendered, allowing you to add a custom tooltip to the header cell using [tooltip](https://ej2.syncfusion.com/vue/documentation/tooltip/content) component.
 
 Here's an example of how to use the `beforeRender` event to add a custom tooltip to a header cell:
 
@@ -711,11 +711,11 @@ Here's an example of how to use the `beforeRender` event to add a custom tooltip
         
 {% previewsample "page.domainurl/code-snippet/grid/column/column-header-tooltip" %}
 
-> * The [headerCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event can also be used to customize the header tooltip. This event is triggered for each header cell after it is rendered.
+> * The [headerCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid#querycellinfo) event can also be used to customize the header tooltip. This event is triggered for each header cell after it is rendered.
 
 ## Customize header text styles 
 
-Customizing the grid header styles allows you to modify the appearance of the column header in the Grid control to meet your design requirements. You can customize the font, background color, and other styles of the header cells. To customize the header styles in the grid, you can use CSS, properties, methods, or event support provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component.
+Customizing the grid header styles allows you to modify the appearance of the column header in the Grid control to meet your design requirements. You can customize the font, background color, and other styles of the header cells. To customize the header styles in the grid, you can use CSS, properties, methods, or event support provided by the Vue Data Grid component.
 
 ### Using CSS
 
@@ -742,7 +742,7 @@ Here's an example that demonstrates how to customize the appearance of a column 
 
 ### Using property 
 
-You can customize the appearance of the column headers in Grid using the [customAttributes](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#customattributes) property. The `customAttributes` property takes an object with the name-value pair to customize the CSS properties for grid header cells. You can also set multiple CSS properties to the custom class using the `customAttributes` property.
+You can customize the appearance of the column headers in Grid using the [customAttributes](https://ej2.syncfusion.com/vue/documentation/api/grid/column#customattributes) property. The `customAttributes` property takes an object with the name-value pair to customize the CSS properties for grid header cells. You can also set multiple CSS properties to the custom class using the `customAttributes` property.
 
 To customize the header of a column, you can follow the steps below:
 
@@ -779,16 +779,16 @@ The following example demonstrates how to customize the appearance of the **Orde
 
 ### Using method 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides methods to customize the appearance of the grid columns header.
+The Vue Data Grid provides methods to customize the appearance of the grid columns header.
 
-1. [getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyindex): The method is used to customize the appearance of a specific column header in the grid by specifying the index of the column for which you want to customize the header.
+1. [getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyindex): The method is used to customize the appearance of a specific column header in the grid by specifying the index of the column for which you want to customize the header.
 
-2. [getColumnHeaderByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyfield): This method is used to retrieve the header element of a specific column by its field name. You can use the retrieved element to customize the appearance of the header element.
-3. [getColumnHeaderByUid](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyuid): This method is used to retrieve the header element of a specific column by its unique ID. You can use the retrieved element to customize the appearance of the header element.
+2. [getColumnHeaderByField](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyfield): This method is used to retrieve the header element of a specific column by its field name. You can use the retrieved element to customize the appearance of the header element.
+3. [getColumnHeaderByUid](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyuid): This method is used to retrieve the header element of a specific column by its unique ID. You can use the retrieved element to customize the appearance of the header element.
 
- 4. [getColumnIndexByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnindexbyfield):This method is used to retrieve the index of a specific column by its field name. You can use the retrieved index to access the header element and customize its appearance.
+ 4. [getColumnIndexByField](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnindexbyfield):This method is used to retrieve the index of a specific column by its field name. You can use the retrieved index to access the header element and customize its appearance.
 
- 5. [getColumnIndexByUid](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnindexbyuid): This method is used to retrieve the index of a specific column by its unique ID. You can use the retrieved index to access the header element and customize its appearance.
+ 5. [getColumnIndexByUid](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnindexbyuid): This method is used to retrieve the index of a specific column by its unique ID. You can use the retrieved index to access the header element and customize its appearance.
 
 Here's an example of how to use these methods to change the style of a specific column header:
 
@@ -807,7 +807,7 @@ Here's an example of how to use these methods to change the style of a specific 
 
 ### Using event
 
-To customize the appearance of the grid header, you can handle the [headerCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event of the grid. This event is triggered when each header cell is rendered in the grid, and provides an object that contains information about the header cell. You can use this object to modify the styles of the header column.
+To customize the appearance of the grid header, you can handle the [headerCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid#querycellinfo) event of the grid. This event is triggered when each header cell is rendered in the grid, and provides an object that contains information about the header cell. You can use this object to modify the styles of the header column.
 
 The following example demonstrates how to add a `headerCellInfo` event handler to the grid. In the event handler, checked whether the current header column is **Order Date** field and then applied the appropriate CSS class to the cell based on its value.
 
@@ -824,9 +824,9 @@ The following example demonstrates how to add a `headerCellInfo` event handler t
 
 ## How to refresh header 
 
-The refresh header feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows you to update the header section of the grid whenever changes are made to the grid's columns. This feature is useful when you want to reflect changes in the header immediately, such as modifying the column header text, width, or alignment.
+The refresh header feature in the Vue Data Grid allows you to update the header section of the grid whenever changes are made to the grid's columns. This feature is useful when you want to reflect changes in the header immediately, such as modifying the column header text, width, or alignment.
 
-To use the refresh header feature, you can call the [refreshHeader](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshheader) method of the Grid component. This method updates the grid header with the latest changes made to the columns.
+To use the refresh header feature, you can call the [refreshHeader](https://ej2.syncfusion.com/vue/documentation/api/grid#refreshheader) method of the Grid component. This method updates the grid header with the latest changes made to the columns.
 
 The following example demonstrates how to use the `refreshHeader` method to update the grid header:
 
@@ -846,31 +846,31 @@ The following example demonstrates how to use the `refreshHeader` method to upda
 
 ## How to get header element 
 
-To get the header element in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use one of the following methods:
+To get the header element in a Vue Data Grid, you can use one of the following methods:
 
-1. [getHeaderContent](https://ej2.syncfusion.com/vue/documentation/api/grid/#getheadercontent): This method returns the header div element of the Grid. You can use this method to access the entire header content of the Grid.
+1. [getHeaderContent](https://ej2.syncfusion.com/vue/documentation/api/grid#getheadercontent): This method returns the header div element of the Grid. You can use this method to access the entire header content of the Grid.
 
     ```ts
     const headerElement = this.$refs.grid.ej2Instances.getHeaderContent();    
     ```
-2. [getHeaderTable](https://ej2.syncfusion.com/vue/documentation/api/grid/#getheadertable): This method returns the header table element of the Grid. You can use this method to access only the header table of the Grid.
+2. [getHeaderTable](https://ej2.syncfusion.com/vue/documentation/api/grid#getheadertable): This method returns the header table element of the Grid. You can use this method to access only the header table of the Grid.
 
    ```ts
     const headerTableElement = this.$refs.grid.ej2Instances.getHeaderTable();
    ```
 
-3. [getColumnHeaderByUid](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnindexbyuid): This method returns the column header element by its unique identifier.
+3. [getColumnHeaderByUid](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnindexbyuid): This method returns the column header element by its unique identifier.
 
    ```ts
     const columnHeaderElement = this.$refs.grid.ej2Instances.getColumnHeaderByUid("e-grid2");
    ```
 
-4. [getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyindex): This method returns the column header element by its index.
+4. [getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyindex): This method returns the column header element by its index.
 
    ```ts
     const columnHeaderElement = this.$refs.grid.ej2Instances.getColumnHeaderByIndex(0);
    ```
-5. [getColumnHeaderByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyfield): This method returns the column header element by its field name.
+5. [getColumnHeaderByField](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyfield): This method returns the column header element by its field name.
 
    ```ts
     const columnHeaderElement = this.$refs.grid.ej2Instances.getColumnHeaderByField("OrderID"); 

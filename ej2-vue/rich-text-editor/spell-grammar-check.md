@@ -24,7 +24,7 @@ WProofreader is a powerful tool that enhances content quality by detecting and c
 
 ## Set up the WProofreader
 
-For integrating the `WProofreader` refer the following link : https://webspellchecker.com, you need to install the[@webspellchecker/wproofreader-sdk-js](https://www.npmjs.com/package/@webspellchecker/wproofreader-sdk-js) package using NPM or Yarn:
+For integrating the `WProofreader` refer the following link : [WebSpellChecker]https://webspellchecker.com, you need to install the `@webspellchecker/wproofreader-sdk-js` package using NPM or Yarn:
 
 ```bash
 npm install @webspellchecker/wproofreader-sdk-js
@@ -45,7 +45,7 @@ After installing the package, you can integrate WProofreader with the Vue Rich T
 4. Set the `lang` property to specify the language of the text to be checked.
 5. Configure the activation key in the `serviceId` property.
 
-Below is an example code snippet to integrate WProofreader with the Syncfusion Vue Rich Text Editor:
+Below is an example code snippet to integrate WProofreader with the Vue Rich Text Editor:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -56,6 +56,6 @@ Below is an example code snippet to integrate WProofreader with the Syncfusion V
 {% endhighlight %}
 {% endtabs %}
 
-Below is a GIF demonstrating how to integrate WProofreader with the Syncfusion Vue Rich Text Editor
+Below is a GIF demonstrating how to integrate WProofreader with the Vue Rich Text Editor
 
 ![WebSpellChecker](images/spell-grammar-check.gif)

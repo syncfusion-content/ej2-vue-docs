@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar Types in Vue Rich Text Editor component | Syncfusion
-description: Learn here all about Toolbar Types in Syncfusion Vue Rich Text Editor component of Syncfusion Essential JS 2 and more.
+title: Toolbar Position in Vue Rich Text Editor component | Syncfusion
+description: Learn here all about Toolbar Positions in Syncfusion Vue Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Toolbar Position
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar position in Vue Rich Text Editor Component
 
-The Rich Text Editor allows you to configure the toolbar's position using the [position](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#position) field in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/) property. The available positions are:
+The Rich Text Editor allows you to configure the toolbar's position using the [position](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings#position) field in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings) property. The available positions are:
 
 1. Top 
 2. Bottom
@@ -21,7 +21,7 @@ The Rich Text Editor allows you to position the toolbar at the top or bottom of 
 
 By default, the toolbar is displayed at the top of the editor, making all formatting and editing tools immediately accessible above the content.
 
-To position the toolbar at the bottom, use the [position](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#position) property in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/) configuration and set its value to `Bottom`. This places the toolbar below the content area, which can help maintain a cleaner top layout and improve accessibility for certain use cases.
+To position the toolbar at the bottom, use the [position](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings#position) property in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings) configuration and set its value to `Bottom`. This places the toolbar below the content area, which can help maintain a cleaner top layout and improve accessibility for certain use cases.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

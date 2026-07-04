@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-The commands in diagram control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
+The commands in [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
 
 * Alignment commands
 * Distribute commands
@@ -31,7 +31,7 @@ The alignment command enables you to align selected or defined objects, such as 
 
 ### Alignment Options
 
-The [`Alignment Options`](https://ej2.syncfusion.com/vue/documentation/api/diagram/alignmentOptions/) defines the alignment position of objects to be aligned.
+The [`Alignment Options`](https://ej2.syncfusion.com/vue/documentation/api/diagram/alignmentoptions) defines the alignment position of objects to be aligned.
 
 |Alignment|Description|
 |----|----|
@@ -50,7 +50,7 @@ Defines the objects to be aligned. This is an optional parameter. By default, al
 
 ### Alignment Mode
 
-[`Alignment Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/alignmentMode/) defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. The accepted values of the argument "alignment mode" are as follows.
+[`Alignment Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/alignmentmode) defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. The accepted values of the argument "alignment mode" are as follows.
 
 The below table shows the alignment as `Left` for different alignment modes.
 
@@ -81,7 +81,7 @@ The [`Distribute`](https://ej2.syncfusion.com/vue/documentation/api/diagram#dist
 
 ### Distribute options
 
-The factor to distribute the shapes  using [`DistributeOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/distributeOptions#DistributeOptions) are listed as follows:
+The factor to distribute the shapes  using [`DistributeOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/distributeoptions#distributeoptions) are listed as follows:
 
 |Distribute option| Description|
 |----|----|
@@ -115,11 +115,11 @@ The following code example illustrates how the nodes are distributed using the `
 
 ## Sizing commands
 
-Sizing [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#samesize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#samesize) method are explained below.
+Sizing [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram#samesize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram#samesize) method are explained below.
 
 ### Sizing options
 
-[`SizingOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/sizingOptions) include:
+[`SizingOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/sizingoptions) include:
 
 |Sizing options|Description|
 |----|----|
@@ -195,7 +195,7 @@ The following code examples demonstrate how to use the grouping commands in diag
 
 ## Rotate commands
 
-The [`rotate`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#rotate) commands in the diagram allow users to rotate selected elements by specified angles. These commands are useful for adjusting the rotate angle of nodes or shapes within the diagram.
+The [`rotate`](https://ej2.syncfusion.com/vue/documentation/api/diagram#rotate) commands in the diagram allow users to rotate selected elements by specified angles. These commands are useful for adjusting the rotate angle of nodes or shapes within the diagram.
 
 | Parameter | Type | Description |
 |----------|-------|-------------|
@@ -435,21 +435,21 @@ The following code illustrates how to execute the bringToCenter command.
 
 ## FitToPage
 
-The [`fitToPage`](https://ej2.syncfusion.com/vue/documentation/api/diagram#fittopage) command adjusts the diagram content to fit within the viewport, considering either width, height, or the entire content. The fitToPage method takes one parameter, [`fitOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions/), which specifies the options for fitting the diagram to the page.
+The [`fitToPage`](https://ej2.syncfusion.com/vue/documentation/api/diagram#fittopage) command adjusts the diagram content to fit within the viewport, considering either width, height, or the entire content. The fitToPage method takes one parameter, [`fitOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/ifitoptions), which specifies the options for fitting the diagram to the page.
 
 ### FitOptions
 
-The [`mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/fitModes#modes) parameter defines how the diagram should fit into the viewport—horizontally, vertically, or based on the entire bounds of the diagram.
+The [`mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/fitmodes#modes) parameter defines how the diagram should fit into the viewport—horizontally, vertically, or based on the entire bounds of the diagram.
 
-The [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramRegions#region) parameter specifies the region of the diagram that should be fit within viewport.
+The [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramregions#region) parameter specifies the region of the diagram that should be fit within viewport.
 
-The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#margin) parameter sets the margin around the diagram content that should be included in the view.
+The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/ifitoptions#margin) parameter sets the margin around the diagram content that should be included in the view.
 
-The [`canZoomIn`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#canZoomIn) parameter enables or disables zooming in to fit smaller content into a larger viewport.
+The [`canZoomIn`](https://ej2.syncfusion.com/vue/documentation/api/diagram/ifitoptions#canzoomin) parameter enables or disables zooming in to fit smaller content into a larger viewport.
 
-The [`canZoomOut`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions/#canzoomout) parameter enables or disables zooming out to fit larger content into a smaller viewport.
+The [`canZoomOut`](https://ej2.syncfusion.com/vue/documentation/api/diagram/ifitoptions#canzoomout) parameter enables or disables zooming out to fit larger content into a smaller viewport.
 
-The [`customBounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#customBounds) parameter defines a custom region that should be fit into the viewport.
+The [`customBounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/ifitoptions#custombounds) parameter defines a custom region that should be fit into the viewport.
 
 
 The following code illustrates how to execute `FitToPage` command.
@@ -469,7 +469,7 @@ The following code illustrates how to execute `FitToPage` command.
 ## Command manager
 
 The Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the
-[`CommandManager`](https://ej2.syncfusion.com/vue/documentation/api/diagram/commandManager#commandManager). Custom commands are executed when the specified key gesture is recognized.
+[`CommandManager`](https://ej2.syncfusion.com/vue/documentation/api/diagram/commandmanager#commandmanager). Custom commands are executed when the specified key gesture is recognized.
 
 ### Custom command
 

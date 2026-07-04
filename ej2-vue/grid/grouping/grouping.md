@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Grouping in Vue Grid component
 
-The grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid enables data to be organized into a hierarchical structure, allowing records to be expanded and collapsed for improved readability and analysis.
+The grouping feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) enables data to be organized into a hierarchical structure, allowing records to be expanded and collapsed for improved readability and analysis.
 
 The grouping feature is enabled by importing the `Group` module from `@syncfusion/ej2-vue-grids` and injecting it in the `provide` section.
 
@@ -176,7 +176,7 @@ The following example demonstrates grouping the "Order Date" and "Freight" colum
 
 ## Show grouped rows based on page size
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, controlling the number of grouped rows per page is useful when working with grouped data and a fixed page size.
+In the Vue Data Grid, controlling the number of grouped rows per page is useful when working with grouped data and a fixed page size.
 
 By default, the [pageSize](https://ej2.syncfusion.com/vue/documentation/api/grid/pagesettings#pagesize) setting applies to individual grid rows, not grouped rows. To show grouped column rows based on the `pageSize`, a custom implementation can be used.
 
@@ -195,7 +195,7 @@ This can be achieved by customizing the `generateQuery` method of the "Data prot
 
 ## Collapse all grouped rows at initial rendering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid provides the ability to expand or collapse grouped rows, enabling better control over data visibility. This is especially useful for large datasets where an initial summarized view is preferred.
+The Vue Data Grid provides the ability to expand or collapse grouped rows, enabling better control over data visibility. This is especially useful for large datasets where an initial summarized view is preferred.
 
 To collapse all grouped rows on initial render, use the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#databound) event in combination with the [collapseAll](https://ej2.syncfusion.com/vue/documentation/api/grid/group#collapseall) method. This can be achieved in the below example.
 
@@ -226,7 +226,7 @@ The following example demonstrates collapsing all grouped rows during the initia
 
 ## Group or ungroup column externally
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid supports both interactive and programmatic approaches to column grouping. Columns can be grouped manually via drag-and-drop or programmatically using the [groupColumn](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#groupcolumn) and [ungroupColumn](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#ungroupcolumn) methods.
+The Vue Data Grid supports both interactive and programmatic approaches to column grouping. Columns can be grouped manually via drag-and-drop or programmatically using the [groupColumn](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#groupcolumn) and [ungroupColumn](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#ungroupcolumn) methods.
 
 The following example demonstrates grouping and ungrouping columns in a Grid. It utilizes the [DropDownList](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started) component to select the column. When an external button is clicked, the `groupColumn` and `ungroupColumn` methods are called to group or ungroup the selected column.
 
@@ -243,7 +243,7 @@ The following example demonstrates grouping and ungrouping columns in a Grid. It
 
 ## Expand or collapse externally
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid supports external control of grouped row visibility through programmatic expand and collapse. This functionality can be integrated using the grid's methods to manage grouped data display dynamically.
+The Vue Data Grid supports external control of grouped row visibility through programmatic expand and collapse. This functionality can be integrated using the grid's methods to manage grouped data display dynamically.
 
 ### Expand or collapse all grouped rows
 
@@ -264,7 +264,7 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 
 ### Expand or collapse selected grouped row
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid allows programmatic expand or collapse of specific grouped rows through the [expandCollapseRows](https://ej2.syncfusion.com/vue/documentation/api/grid/group#expandcollapserows) method, which toggles the state of a targeted group caption row based on its current visibility.
+The Vue Data Grid allows programmatic expand or collapse of specific grouped rows through the [expandCollapseRows](https://ej2.syncfusion.com/vue/documentation/api/grid/group#expandcollapserows) method, which toggles the state of a targeted group caption row based on its current visibility.
 
 To implement this functionality, follow these steps:
 
@@ -418,7 +418,7 @@ components: {
 
 ## Clear grouping 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid provides a [clearGrouping](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#cleargrouping) method to remove all grouped columns programmatically. This is useful for resetting the grid to an ungrouped state.
+The Vue Data Grid provides a [clearGrouping](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#cleargrouping) method to remove all grouped columns programmatically. This is useful for resetting the grid to an ungrouped state.
 
 The following example demonstrates clearing the grouping using the clearGrouping method through an external button click.
 
@@ -435,7 +435,7 @@ The following example demonstrates clearing the grouping using the clearGrouping
 
 ## Grouping events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> vue Grid provides two key events for handling grouping operations. These events enable the integration of custom logic before and after a grouping action:
+The Vue Data Grid provides two key events for handling grouping operations. These events enable the integration of custom logic before and after a grouping action:
 
 1. [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#actionbegin): Triggered before a grouping action starts. It provides details such as the group field name and `requestType`, allowing conditional logic or cancellation.
 
