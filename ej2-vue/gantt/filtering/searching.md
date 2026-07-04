@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Searching in Vue Gantt Chart Component | Syncfusion
-description: Learn all about Searching in the Syncfusion Vue Gantt Chart component of Essential JS 2.
+description: Learn how to use searching in the Vue Gantt Chart to quickly find records with toolbar search, methods, and customizable search settings.
 control: Searching
 platform: ej2-vue
 documentation: ug

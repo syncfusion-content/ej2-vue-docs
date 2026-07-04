@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 # Strip line in Vue Chart component
 
-The Vue Chart component supports horizontal and vertical strip lines, providing visual guides to highlight specific ranges in the chart area. Strip lines can be added to both axes and fully customized based on visual and functional requirements. To use strip line features, inject the `StripLine` module into the `provide`.
+The [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) component supports horizontal and vertical strip lines, providing visual guides to highlight specific ranges in the chart area. Strip lines can be added to both axes and fully customized based on visual and functional requirements. To use strip line features, inject the `StripLine` module into the `provide`.
 
 ## Horizontal strip lines
 

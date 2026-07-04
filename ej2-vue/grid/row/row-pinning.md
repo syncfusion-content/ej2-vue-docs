@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Row Pinning in EJ2 Vue Grid Control
 
-The Syncfusion <sup style="font-size:70%">&reg;</sup> Vue Grid control provides option to pin specific rows at the top, ensuring important information remains visible while scrolling vertically. This feature is useful when you want to keep specific rows always visible for quick reference or priority viewing, regardless of user interactions.
+The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) control provides option to pin specific rows at the top, ensuring important information remains visible while scrolling vertically. This feature is useful when you want to keep specific rows always visible for quick reference or priority viewing, regardless of user interactions.
 
 To enable the row pinning feature, configure the [isRowPinned](https://ej2.syncfusion.com/vue/documentation/api/grid/#isrowpinned) callback function, which returns **true** or **false** based on the required condition. The function receives each row's data as input, allowing the pinning logic to be determined. It executes only during initial rendering, ensuring that any condition defined within it is evaluated during that initial stage.
 

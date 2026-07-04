@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-The chart displays detailed information about a data point through a tooltip when the mouse pointer moves over the point.
+The Chart displays detailed information about a data point through a tooltip when the mouse pointer moves over the point.
 
 ## Default tooltip
 

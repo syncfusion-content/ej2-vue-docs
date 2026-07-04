@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Steps to create a routing sample in Vue Grid component
 
-**1. Creating a vue project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component:**
+**1. Creating a vue project and integrating the Vue Data Grid component:**
 
 A simple vue project can be created by following the steps under [getting started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) section of this documentation. Install the Vue Router package by running the following command in your project's directory.
 

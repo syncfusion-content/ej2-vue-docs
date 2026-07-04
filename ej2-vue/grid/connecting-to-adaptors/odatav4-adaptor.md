@@ -9,13 +9,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# ODataV4Adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid Component
+# ODataV4Adaptor in Vue Data Grid Component
 
-The `ODataV4Adaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid Component allows seamless integration of the Vue Grid with ODataV4 v4 services, enabling efficient data fetching and manipulation. This guide provides detailed instructions on binding data and performing CRUD (Create, Read, Update, Delete) actions using the `ODataV4Adaptor` in your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid Component.
+The `ODataV4Adaptor` in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) Component allows seamless integration of the Vue Grid with ODataV4 v4 services, enabling efficient data fetching and manipulation. This guide provides detailed instructions on binding data and performing CRUD (Create, Read, Update, Delete) actions using the `ODataV4Adaptor` in your Vue Data Grid Component.
 
 ## Creating an ODataV4 service
 
-To configure a server with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, you need to follow the below steps:
+To configure a server with Vue Data Grid, you need to follow the below steps:
 
 **1. Project Creation:**
 
@@ -138,9 +138,9 @@ Run the application in Visual Studio. It will be accessible on a URL like **http
 
 After running the application, you can verify that the server-side API controller is successfully returning the order data in the URL(https://localhost:xxxx/odata/Orders). Here **xxxx** denotes the port number.
 
-## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid to an ODataV4 service
+## Connecting Vue Data Grid to an ODataV4 service
 
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component into your Vue and ASP.NET Core project using Visual Studio, follow the steps below:
+To integrate the Vue Data Grid component into your Vue and ASP.NET Core project using Visual Studio, follow the steps below:
 
 **Step 1:** Install Syncfusion<sup style="font-size:70%">&reg;</sup> Package
 
@@ -171,7 +171,7 @@ Include the necessary CSS files in your `App.Vue` file to style the Syncfusion<s
 @import '../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css';
 ```
 
-**Step 4:** Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid Component
+**Step 4:** Adding Vue Data Grid Component
 
 To add the Vue Grid component using **Composition API** or **Options API**, follow these steps:
 
@@ -762,9 +762,9 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in your server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PATCH, and DELETE.
+To manage CRUD (Create, Read, Update, Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the Vue Data Grid for [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in your server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PATCH, and DELETE.
 
-To enable CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component within an Vue application, follow the below steps:
+To enable CRUD operations in the Vue Data Grid component within an Vue application, follow the below steps:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -860,11 +860,11 @@ To enable CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup
 
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
 
 **Insert Record**
 
-To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **OrdersController**:
+To insert a new record into your Vue Data Grid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **OrdersController**:
 
 ```cs
 /// <summary>
@@ -889,7 +889,7 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 
 **Update Record**
 
-Updating a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
+Updating a record in the Vue Data Grid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
 
 ```cs
 /// <summary>
@@ -920,7 +920,7 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
 
 **Delete Record**
 
-To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
+To delete a record from your Vue Data Grid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
 
 ```cs
 /// <summary>
@@ -949,7 +949,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> ODataV4 adaptor extends sup
 
 **Configuring Custom URLs**
 
-To work with custom URLs for CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use the following properties:
+To work with custom URLs for CRUD operations in the Vue Data Grid, you can use the following properties:
 
 * insertUrl: Specifies the custom URL for inserting new records.
 * removeUrl: Specifies the custom URL for deleting records.

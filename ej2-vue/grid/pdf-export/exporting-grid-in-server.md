@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Exporting grid in server in Vue Grid component
 
-The Grid component provides an option to export grid data to a PDF document on the server side using the Grid server export library. This allows you to perform PDF export operations on the server, providing additional security and flexibility. To enable server-side PDF exporting, you need to configure the server dependencies and implement the necessary server configuration.
+The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides an option to export grid data to a PDF document on the server side using the Grid server export library. This allows you to perform PDF export operations on the server, providing additional security and flexibility. To enable server-side PDF exporting, you need to configure the server dependencies and implement the necessary server configuration.
 
 ## Server dependencies
 
-To enable server-side PDF exporting in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component, you need to include the following dependencies:
+To enable server-side PDF exporting in the Vue Data Grid component, you need to include the following dependencies:
 
 * Syncfusion.EJ2
 * Syncfusion.EJ2.GridExport
@@ -295,7 +295,7 @@ private void PdfHeaderQueryCellInfo(object pdf)
 
 ## Passing additional parameters to the server while exporting
 
-Passing additional parameters to the server when exporting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+Passing additional parameters to the server when exporting data in the Vue Data Grid involves providing flexibility to include extra information or customize the export process based on specific requirements.
 
 You can achieve this by utilizing the [query](https://ej2.syncfusion.com/vue/documentation/api/grid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event. Within the `query` property, you can invoke the `addParams` method to add parameters to the request.
 

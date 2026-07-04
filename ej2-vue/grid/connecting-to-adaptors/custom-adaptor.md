@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # CustomAdaptor in Syncfusion Vue Grid
 
-The `CustomAdaptor` in the Syncfusion Vue Grid allows to create their own custom adaptors by extending the built-in adaptors. The custom adaptor involves handling the query process, requests, and responses of the built-in adaptor. The `CustomAdaptor` can be used to extend OData V4 services, enabling efficient data fetching and manipulation. By default, there are three built-in methods available for `CustomAdaptor`.
+The `CustomAdaptor` in the Syncfusion [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows to create their own custom adaptors by extending the built-in adaptors. The custom adaptor involves handling the query process, requests, and responses of the built-in adaptor. The `CustomAdaptor` can be used to extend OData V4 services, enabling efficient data fetching and manipulation. By default, there are three built-in methods available for `CustomAdaptor`.
 
 ## Types of CustomAdaptor methods
 
@@ -19,7 +19,7 @@ There are three types of methods in custom adaptors.
 
 ### ProcessQuery
 
-The `ProcessQuery` method handles the execution of a query sent to a [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource), such as a database or custom data service. This query is responsible for performing operations like data retrieval, insertion, updating, or deletion. The `ProcessQuery` method accepts two arguments: 
+The `ProcessQuery` method handles the execution of a query sent to a [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource), such as a database or custom data service. This query is responsible for performing operations like data retrieval, insertion, updating, or deletion. The `ProcessQuery` method accepts two arguments: 
 
 * `DataManager`: Used to modify the URL dynamically.
 
@@ -1006,7 +1006,7 @@ To enable CRUD operations in the Grid within an Vue application, follow the belo
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
 
 **Insert Record**
 

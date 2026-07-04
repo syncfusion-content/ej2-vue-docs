@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 ## Enable zooming
 
-The chart supports zooming through the following three interaction methods:
+The Chart supports zooming through the following three interaction methods:
 
-* **Selection** – By setting [`enableSelectionZooming`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enableselectionzooming) to **true** in `zoomSettings`, zooming can be performed using a rubber-band selection.
-* **Mouse wheel** – By setting [`enableMouseWheelZooming`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enablemousewheelzooming) to **true** in `zoomSettings`, the chart can be zoomed in and out by scrolling the mouse wheel.
-* **Pinch** – By setting [`enablePinchZooming`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enablepinchzooming) to **true** in `zoomSettings`, zooming can be performed using pinch gestures on touch-enabled devices.
+* **Selection** – By setting [`enableSelectionZooming`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel#enableselectionzooming) to **true** in `zoomSettings`, zooming can be performed using a rubber-band selection.
+* **Mouse wheel** – By setting [`enableMouseWheelZooming`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel#enablemousewheelzooming) to **true** in `zoomSettings`, the chart can be zoomed in and out by scrolling the mouse wheel.
+* **Pinch** – By setting [`enablePinchZooming`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel#enablepinchzooming) to **true** in `zoomSettings`, zooming can be performed using pinch gestures on touch-enabled devices.
 
 > Pinch zooming is supported only in browsers that support multi-touch gestures.
 
@@ -38,7 +38,7 @@ Selecting **Pan** allows the chart to be panned, and selecting **Reset** restore
 
 ## Modes
 
-The [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettings/#mode) property in `zoomSettings` specifies whether zooming can be applied along the horizontal axis, vertical axis, or both. The default value is **XY**.
+The [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettings#mode) property in `zoomSettings` specifies whether zooming can be applied along the horizontal axis, vertical axis, or both. The default value is **XY**.
 
 The supported zooming modes are:
 
@@ -59,9 +59,9 @@ The supported zooming modes are:
 
 ## Toolbar
 
-By default, the **zoomin**, **zoomout**, **pan**, and **reset** buttons are displayed when the chart is zoomed. The toolbar contents can be customized by using the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#toolbaritems) property.  
+By default, the **zoomin**, **zoomout**, **pan**, and **reset** buttons are displayed when the chart is zoomed. The toolbar contents can be customized by using the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel#toolbaritems) property.  
 
-Additionally, the zooming toolbar can be displayed during initial rendering by setting the [`showToolbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#showtoolbar) property to **true**.
+Additionally, the zooming toolbar can be displayed during initial rendering by setting the [`showToolbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel#showtoolbar) property to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,10 +76,10 @@ Additionally, the zooming toolbar can be displayed during initial rendering by s
 
 ### Toolbar customization
 
-The zoom toolbar position can be customized by using the [`toolbarPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#toolbarposition) property. This property supports horizontal alignments (**Near**, **Center**, and **Far**) and vertical alignments (**Top**, **Middle**, and **Bottom**). The default values are **Far** for horizontal alignment and **Top** for vertical alignment.
+The zoom toolbar position can be customized by using the [`toolbarPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel#toolbarposition) property. This property supports horizontal alignments (**Near**, **Center**, and **Far**) and vertical alignments (**Top**, **Middle**, and **Bottom**). The default values are **Far** for horizontal alignment and **Top** for vertical alignment.
 
-For precise placement, the [`x`](https://ej2.syncfusion.com/vue/documentation/api/chart/toolbarPositionModel/#x) and [`y`](https://ej2.syncfusion.com/vue/documentation/api/chart/toolbarPositionModel/#y) properties can be used.  
-Enabling the [`draggable`](https://ej2.syncfusion.com/vue/documentation/api/chart/toolbarPositionModel/#draggable) property allows the toolbar to be repositioned freely within the chart area.
+For precise placement, the [`x`](https://ej2.syncfusion.com/vue/documentation/api/chart/toolbarPositionModel#x) and [`y`](https://ej2.syncfusion.com/vue/documentation/api/chart/toolbarPositionModel#y) properties can be used.  
+Enabling the [`draggable`](https://ej2.syncfusion.com/vue/documentation/api/chart/toolbarPositionModel#draggable) property allows the toolbar to be repositioned freely within the chart area.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -94,7 +94,7 @@ Enabling the [`draggable`](https://ej2.syncfusion.com/vue/documentation/api/char
 
 ## Enable pan
 
-By using the [`enablePan`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettings/#enablepan) property, the zoomed chart can be panned without using toolbar items.
+By using the [`enablePan`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettings#enablepan) property, the zoomed chart can be panned without using toolbar items.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -109,13 +109,13 @@ By using the [`enablePan`](https://ej2.syncfusion.com/vue/documentation/api/char
 
 ## Enable scrollbar
 
-By using the [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enablescrollbar) property, a scrollbar can be displayed for the zoomed chart. This scrollbar supports both zooming and panning interactions.
+By using the [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel#enablescrollbar) property, a scrollbar can be displayed for the zoomed chart. This scrollbar supports both zooming and panning interactions.
 
-Scrollbar appearance can be customized using properties within [`scrollbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/). For example:
-- [`trackColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#trackcolor) and [`trackRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#trackradius) control the track appearance.
-- [`scrollbarColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#scrollbarcolor) and [`scrollbarRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#scrollbarradius) customize the scroller.
-- Zooming through the scrollbar can be enabled or disabled using [`enableZoom`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#enablezoom).
-- The grip color and scrollbar height can be customized using [`gripColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#gripcolor) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#height).
+Scrollbar appearance can be customized using properties within [`scrollbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings). For example:
+- [`trackColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings#trackcolor) and [`trackRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings#trackradius) control the track appearance.
+- [`scrollbarColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings#scrollbarcolor) and [`scrollbarRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings#scrollbarradius) customize the scroller.
+- Zooming through the scrollbar can be enabled or disabled using [`enableZoom`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings#enablezoom).
+- The grip color and scrollbar height can be customized using [`gripColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings#gripcolor) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings#height).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -130,7 +130,7 @@ Scrollbar appearance can be customized using properties within [`scrollbarSettin
 
 ### Position
 
-The [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#position) property specifies where the scrollbar is rendered. By default, both vertical and horizontal scrollbars are placed near their respective axes.
+The [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings#position) property specifies where the scrollbar is rendered. By default, both vertical and horizontal scrollbars are placed near their respective axes.
 
 The available positions are:
 
@@ -151,7 +151,7 @@ The available positions are:
 
 ## Enable animation
 
-Use the [`enableAnimation`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enableanimation) property to apply smooth animation effects during zoom operations.
+Use the [`enableAnimation`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel#enableanimation) property to apply smooth animation effects during zoom operations.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

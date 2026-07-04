@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Node Interaction in Vue Diagram control
 
-The diagram provides support for selecting, dragging, resizing, and rotating nodes interactively. A node can be selected by simply clicking on it, dragged by dragging it on diagram canvas, resized using the resize handle, and rotated using the rotate handle. Additionally, interactions can be performed using some public methods, which are explained below:
+The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support for selecting, dragging, resizing, and rotating nodes interactively. A node can be selected by simply clicking on it, dragged by dragging it on diagram canvas, resized using the resize handle, and rotated using the rotate handle. Additionally, interactions can be performed using some public methods, which are explained below:
 
 ## Select
 

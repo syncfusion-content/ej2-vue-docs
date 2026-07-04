@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Testing the Vue application using Jest
 
-Vue [Jest](https://v2.vuejs.org/v2/guide/testing.html) testing is a popular approach to test Vue applications using the Jest testing framework. This approach involves the creation and execution of unit tests specifically designed for Vue components. By conducting unit testing, which focuses on testing isolated units of code like functions, methods, and components to ensure that they behave as expected. This approach validates the individual units of your Vue components, catch potential bugs early in the development process, and maintains the reliability and stability of your Vue application. To create a Jest test case for the Grid component, follow the below steps:
+Vue [Jest](https://v2.vuejs.org/v2/guide/testing.html) testing is a popular approach to test Vue applications using the Jest testing framework. This approach involves the creation and execution of unit tests specifically designed for Vue components. By conducting unit testing, which focuses on testing isolated units of code like functions, methods, and components to ensure that they behave as expected. This approach validates the individual units of your Vue components, catch potential bugs early in the development process, and maintains the reliability and stability of your Vue application. To create a Jest test case for the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component, follow the below steps:
 
 **Step 1: Set up the Jest testing environment**
 
@@ -18,9 +18,9 @@ Vue [Jest](https://v2.vuejs.org/v2/guide/testing.html) testing is a popular appr
 
 You need to verify if the installed version of Node is 14 or higher. If it is below version 14, you must install a version of Node above 14. You can refer the following link to install the [node version](https://nodejs.org/en/download). You can select the any node version is 14 or above and installed.
 
-**II. Create an Vue application and install the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package:**
+**II. Create an Vue application and install the Vue Data Grid package:**
 
-To create an Vue application and install the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package, you can refer to the [Getting started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation.
+To create an Vue application and install the Vue Data Grid package, you can refer to the [Getting started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation.
 
 **III. Install the Jest:**
 

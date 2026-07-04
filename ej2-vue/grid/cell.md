@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Cell in Vue Grid component
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid, a **cell** refers to an individual data point or a unit within a grid column that displays data. It represents the intersection of a row and a column, and it contains specific information associated with that row and column. Each cell can display text, numbers, or other content related to the data it represents. 
+In the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid), a **cell** refers to an individual data point or a unit within a grid column that displays data. It represents the intersection of a row and a column, and it contains specific information associated with that row and column. Each cell can display text, numbers, or other content related to the data it represents. 
 
 The Grid component allows you to customize the appearance and behavior of cells using various features and options. You can define templates, format cell values, enable or disable editing, and perform various other operations on the cells to create interactive and informative data grids in your web applications.
 
 ## Displaying the HTML content
 
-Displaying HTML content in a Grid can be useful in scenarios where you want to display formatted content, such as images, links, or tables, in a tabular format. Grid component allows you to display HTML tags in the Grid header and content. By default, the HTML content is encoded to prevent potential security vulnerabilities. However, you can enable the [disableHtmlEncode](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#disablehtmlencode) property by setting the value as false to display HTML tags without encoding. This feature is useful when you want to display HTML content in a grid cell.
+Displaying HTML content in a Grid can be useful in scenarios where you want to display formatted content, such as images, links, or tables, in a tabular format. Grid component allows you to display HTML tags in the Grid header and content. By default, the HTML content is encoded to prevent potential security vulnerabilities. However, you can enable the [disableHtmlEncode](https://ej2.syncfusion.com/vue/documentation/api/grid/column#disablehtmlencode) property by setting the value as false to display HTML tags without encoding. This feature is useful when you want to display HTML content in a grid cell.
 
-In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added  to enable and disable the [disableHtmlEncode](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#disablehtmlencode) property. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered and the `disableHtmlEncode` property of the column is updated accordingly. The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method is called to refresh the grid and display the updated content.
+In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added  to enable and disable the [disableHtmlEncode](https://ej2.syncfusion.com/vue/documentation/api/grid/column#disablehtmlencode) property. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch#change) event is triggered and the `disableHtmlEncode` property of the column is updated accordingly. The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid#refreshcolumns) method is called to refresh the grid and display the updated content.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,12 +31,12 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
         
 {% previewsample "page.domainurl/code-snippet/grid/cell/encode-cs1" %}
 
-> * The [disableHtmlEncode](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#disablehtmlencode) property disables HTML encoding for the corresponding column in the grid. 
+> * The [disableHtmlEncode](https://ej2.syncfusion.com/vue/documentation/api/grid/column#disablehtmlencode) property disables HTML encoding for the corresponding column in the grid. 
 > * If the property is set to **true**, any HTML tags in the column's data will be displayed. 
 > * If the property is set to **false**, the HTML tags will be removed and displayed as plain text.
 > * Disabling HTML encoding can potentially introduce security vulnerabilities, so use caution when enabling this feature.
-> * If [enableHtmlSanitizer](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablehtmlsanitizer) property of grid is set to true, then the content is sanitized to prevent any potential security vulnerabilities.
-> * You can also disable the `disableHtmlEncode` property of the column using [getColumns](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumns) method on [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event of Switch component.This is demonstrated in the below code snippet, 
+> * If [enableHtmlSanitizer](https://ej2.syncfusion.com/vue/documentation/api/grid#enablehtmlsanitizer) property of grid is set to true, then the content is sanitized to prevent any potential security vulnerabilities.
+> * You can also disable the `disableHtmlEncode` property of the column using [getColumns](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumns) method on [change](https://ej2.syncfusion.com/vue/documentation/api/switch#change) event of Switch component.This is demonstrated in the below code snippet, 
 
 ```typescript
 change: function(args) {
@@ -51,9 +51,9 @@ change: function(args) {
 
 ## Autowrap the grid content
 
-The auto wrap feature allows the cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you should set the appropriate [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
+The auto wrap feature allows the cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Vue Data Grid, you should set the appropriate [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column#width) for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
 
-To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowtextwrap) property to **true**. You can also configure the wrap mode by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/vue/documentation/api/grid/textWrapSettings/#wrapmode) property.
+To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/vue/documentation/api/grid#allowtextwrap) property to **true**. You can also configure the wrap mode by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/vue/documentation/api/grid/textWrapSettings#wrapmode) property.
 
 Grid provides the below three options for configuring:
 
@@ -61,7 +61,7 @@ Grid provides the below three options for configuring:
 * **Header** - With this option, only the grid header text is wrapped.
 * **Content** - With this option, only the grid content is wrapped.
 
-The following example demonstrates how to set the `allowTextWrap` property to **true** and specify the wrap mode as **Content** by setting the `textWrapSettings.wrapMode` property. Also change the `textWrapSettings.wrapMode` property to **Content** and **Both** on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the DropDownList component.
+The following example demonstrates how to set the `allowTextWrap` property to **true** and specify the wrap mode as **Content** by setting the `textWrapSettings.wrapMode` property. Also change the `textWrapSettings.wrapMode` property to **Content** and **Both** on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#change) event of the DropDownList component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -80,7 +80,7 @@ Customizing the grid cell styles allows you to modify the appearance of cells in
 
 ### Using event
 
-To customize the appearance of the grid cell, you can use the [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event of the grid. This event is triggered when each header cell is rendered in the grid, and provides an object that contains information about the header cell. You can use this object to modify the styles of the header cell.
+To customize the appearance of the grid cell, you can use the [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid#querycellinfo) event of the grid. This event is triggered when each header cell is rendered in the grid, and provides an object that contains information about the header cell. You can use this object to modify the styles of the header cell.
 
 The following example demonstrates how to add a `queryCellInfo` event handler to the grid. In the event handler, checked whether the current column is **Freight** field and then applied the appropriate CSS class to the cell based on its value.
 
@@ -95,7 +95,7 @@ The following example demonstrates how to add a `queryCellInfo` event handler to
         
 {% previewsample "page.domainurl/code-snippet/grid/cell/default-cs1" %}
 
-> * The [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event is triggered for every cell of the grid, so it may impact the performance of the grid whether used to modify a large number of cells.
+> * The [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid#querycellinfo) event is triggered for every cell of the grid, so it may impact the performance of the grid whether used to modify a large number of cells.
 
 ### Using CSS
 
@@ -123,7 +123,7 @@ The following example demonstrates how to customize the appearance of a specific
 
 ### Using property
 
-To customize the style of grid cells, define [customAttributes](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#customattributes) property to the column definition object. The `customAttributes` property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
+To customize the style of grid cells, define [customAttributes](https://ej2.syncfusion.com/vue/documentation/api/grid/column#customattributes) property to the column definition object. The `customAttributes` property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
 
 ```CSS
 .custom-css {
@@ -155,11 +155,11 @@ The following example demonstrates how to customize the appearance of the **Orde
 
 The Grid provides below methods to customize the appearance of the grid columns header and cell:
 
-1. [getHeaderContent](https://ej2.syncfusion.com/vue/documentation/api/grid/#getheadercontent): The `getHeaderContent` method is used to customize the appearance of the column header in the grid and accessing the header element using the `querySelector` method and applying the style using the style property of the cell element.
+1. [getHeaderContent](https://ej2.syncfusion.com/vue/documentation/api/grid#getheadercontent): The `getHeaderContent` method is used to customize the appearance of the column header in the grid and accessing the header element using the `querySelector` method and applying the style using the style property of the cell element.
 
-2. [getCellFromIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcellfromindex): The `getCellFromIndex` method is used to customize the appearance of a specific cell in the grid by specifying the index of the row and column for which you want to customize the appearance.
+2. [getCellFromIndex](https://ej2.syncfusion.com/vue/documentation/api/grid#getcellfromindex): The `getCellFromIndex` method is used to customize the appearance of a specific cell in the grid by specifying the index of the row and column for which you want to customize the appearance.
 
-The following example demonstrates how to use [getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyindex) and [getCellFromIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcellfromindex) methods to customize the appearance of the **CustomerID** column header and specific cell inside the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event of the grid.
+The following example demonstrates how to use [getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid#getcolumnheaderbyindex) and [getCellFromIndex](https://ej2.syncfusion.com/vue/documentation/api/grid#getcellfromindex) methods to customize the appearance of the **CustomerID** column header and specific cell inside the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid#databound) event of the grid.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -172,11 +172,11 @@ The following example demonstrates how to use [getColumnHeaderByIndex](https://e
         
 {% previewsample "page.domainurl/code-snippet/grid/cell/default-cs4" %}
 
-> Make sure to pass the correct row and column indices to [getCellFromIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcellfromindex) method, or else the appearance of the wrong cell might get customized.
+> Make sure to pass the correct row and column indices to [getCellFromIndex](https://ej2.syncfusion.com/vue/documentation/api/grid#getcellfromindex) method, or else the appearance of the wrong cell might get customized.
 
 ## Clip mode
 
-The clip mode feature is useful when you have a long text or content in a grid cell, which overflows the cell's width or height. It provides options to display the overflow content by either truncating it, displaying an ellipsis or displaying an ellipsis with a tooltip. You can enable this feature by setting [columns.clipMode](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#clipmode) property to one of the below available options.
+The clip mode feature is useful when you have a long text or content in a grid cell, which overflows the cell's width or height. It provides options to display the overflow content by either truncating it, displaying an ellipsis or displaying an ellipsis with a tooltip. You can enable this feature by setting [columns.clipMode](https://ej2.syncfusion.com/vue/documentation/api/grid/column#clipmode) property to one of the below available options.
 
 There are three types of `clipMode` available:
 
@@ -184,7 +184,7 @@ There are three types of `clipMode` available:
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
 * **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied. Also it will display the tooltip while hover on ellipsis is applied.
 
-The following example demonstrates, how to set the `clipMode` property to **Clip** , **Ellipsis** and **EllipsisWithTooltip** for the **Main Fields of Invention** column, on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the `DropDownList` component. The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method is used to refresh the grid and display the updated content.
+The following example demonstrates, how to set the `clipMode` property to **Clip** , **Ellipsis** and **EllipsisWithTooltip** for the **Main Fields of Invention** column, on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#change) event of the `DropDownList` component. The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid#refreshcolumns) method is used to refresh the grid and display the updated content.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -199,7 +199,7 @@ The following example demonstrates, how to set the `clipMode` property to **Clip
 
 ## Tooltip
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to display information about the grid columns to the user when they hover over them with the mouse.
+The Vue Data Grid allows you to display information about the grid columns to the user when they hover over them with the mouse.
 
 ### Render bootstrap tooltip in grid cells
 
@@ -231,7 +231,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 ```
 
-Step 2: The following code demonstrates how to render Bootstrap tooltip for the **CustomerID** field with [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template)
+Step 2: The following code demonstrates how to render Bootstrap tooltip for the **CustomerID** field with [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column#template)
 
 {% tabs %}
 {% highlight ts tabtitle="app-composition.vue" %}
@@ -293,7 +293,7 @@ The Grid provides a feature to display custom tooltips for its columns using the
 
 To enable custom tooltips for columns in the Grid, you can render the Grid control inside the Tooltip component and set the target as `.e-rowcell`. This will display the tooltip when hovering over the grid cells.
 
-Change the tooltip content for the grid cells by using the following code in the [beforeRender](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#beforerender) event.
+Change the tooltip content for the grid cells by using the following code in the [beforeRender](https://ej2.syncfusion.com/vue/documentation/api/tooltip#beforerender) event.
 
 ```typescript
 beforeRender(args){
@@ -304,7 +304,7 @@ beforeRender(args){
 }
 ```
 
-The following example demonstrates how to customize the tooltip content for the grid cells by using the [beforeRender](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#beforerender) event of the EJ2 Tooltip component.
+The following example demonstrates how to customize the tooltip content for the grid cells by using the [beforeRender](https://ej2.syncfusion.com/vue/documentation/api/tooltip#beforerender) event of the EJ2 Tooltip component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -319,7 +319,7 @@ The following example demonstrates how to customize the tooltip content for the 
 
 ## Grid lines
 
-The [gridLines](https://ej2.syncfusion.com/vue/documentation/api/grid/#gridlines) in a grid are used to separate the cells with horizontal and vertical lines for better readability. You can enable the grid lines by setting the `gridLines` property to one of the following values:
+The [gridLines](https://ej2.syncfusion.com/vue/documentation/api/grid#gridlines) in a grid are used to separate the cells with horizontal and vertical lines for better readability. You can enable the grid lines by setting the `gridLines` property to one of the following values:
 
 | Modes | Actions |
 |-------|---------|
@@ -329,7 +329,7 @@ The [gridLines](https://ej2.syncfusion.com/vue/documentation/api/grid/#gridlines
 | Vertical | Displays the vertical grid lines only.|
 | Default | Displays grid lines based on the theme.|
 
-The following example demonstrates how to set the [gridLines](https://ej2.syncfusion.com/vue/documentation/api/grid/#gridlines) property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the DropDownList component.
+The following example demonstrates how to set the [gridLines](https://ej2.syncfusion.com/vue/documentation/api/grid#gridlines) property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#change) event of the DropDownList component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

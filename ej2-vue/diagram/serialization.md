@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Serialization in Vue Diagram component
 
-**Serialization** is the process of converting the state of the diagram into a format that can be saved and later restored. This ensures that the diagram's current state, including its nodes, connectors, and configurations, can be persisted across sessions.
+**Serialization** is the process of converting the state of the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) into a format that can be saved and later restored. This ensures that the diagram's current state, including its nodes, connectors, and configurations, can be persisted across sessions.
 
 Serialization involves saving the diagram's state as a JSON string, which can then be stored in a database, file, or other storage medium. When needed, the serialized string can be deserialized to recreate the diagram in its previous state.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
  
 # Detail template in Vue Grid component
 
-The detail template in the Grid component allows you to display additional information about a specific row in the grid by expanding or collapsing detail content. This feature is useful when you need to show additional data or custom content that is specific to each row in the grid. You can use the [detailTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid#detailtemplate) property to define an HTML template for the detail row. This template can include any HTML element or Vue component that you want to display as detail content.
+The detail template in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to display additional information about a specific row in the grid by expanding or collapsing detail content. This feature is useful when you need to show additional data or custom content that is specific to each row in the grid. You can use the [detailTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid#detailtemplate) property to define an HTML template for the detail row. This template can include any HTML element or Vue component that you want to display as detail content.
 
 Here's an example of using the `detailTemplate` property in the grid component:
 
@@ -340,7 +340,7 @@ For example, to render grid inside the detail row, place an HTML div element as 
 
 The Grid provides a feature that allows you to expand the detail row of a grid using an external button. By default, detail rows render in a collapsed state, but this feature enables users to view additional details associated with a particular row. 
 
-To achieve expanding the detail row of a grid using an external button, you need to invoke the [expand](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow#expand) method provided by the **detailRowModule** object of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid library. This method will expand the detail row of a specific grid row.
+To achieve expanding the detail row of a grid using an external button, you need to invoke the [expand](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow#expand) method provided by the **detailRowModule** object of the Vue Data Grid library. This method will expand the detail row of a specific grid row.
 
 Here is an example of how to use the `expand` method to expand a detail row:
 
@@ -684,7 +684,7 @@ td {
 
 ## Customize detail template icon
 
-The detail template icon in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid is used to expand or collapse the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. If you want to customize this icon, you can achieve it by overriding the following CSS styles:
+The detail template icon in the Vue Data Grid is used to expand or collapse the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. If you want to customize this icon, you can achieve it by overriding the following CSS styles:
 
 ```css
 

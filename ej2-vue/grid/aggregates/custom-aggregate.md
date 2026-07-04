@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Custom aggregate in Vue Grid component
 
-The custom aggregate feature in Syncfusion's Vue Grid component allows you to calculate aggregate values using your own aggregate function. This feature can be useful in scenarios where the built-in aggregate functions do not meet your specific requirements. To use the custom aggregate option, follow the steps below:
+The custom aggregate feature in [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to calculate aggregate values using your own aggregate function. This feature can be useful in scenarios where the built-in aggregate functions do not meet your specific requirements. To use the custom aggregate option, follow the steps below:
 
-* Set the [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#type) property to **Custom** in the [e-aggregate -> e-column](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/).
+* Set the [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#type) property to **Custom** in the [e-aggregate -> e-column](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn).
 
-* Provide your custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#CustomAggregate) property.
+* Provide your custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#customaggregate) property.
 
 The custom aggregate function will be invoked differently for total and group aggregations:
 
@@ -154,7 +154,7 @@ components: {
 
 ## Show the count of distinct values in aggregate row
 
-You can calculate the count of distinct values in an aggregate row by using custom aggregate functions. By specifying the [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#type) as **Custom** and providing a custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#CustomAggregate) property, you can achieve this behavior.
+You can calculate the count of distinct values in an aggregate row by using custom aggregate functions. By specifying the [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#type) as **Custom** and providing a custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#customaggregate) property, you can achieve this behavior.
 
 Here's an example that demonstrates how to show the count of distinct values for the **ShipCountry** column using a custom aggregate.
 

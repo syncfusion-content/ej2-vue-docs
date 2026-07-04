@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { DiagramPlugin, SnapConstraints } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramPlugin, SnapConstraints,UmlSequenceParticipantStereotype } from '@syncfusion/ej2-vue-diagrams';
 Vue.use(DiagramPlugin);
 
 // Define the model for the UML Sequence Diagram
@@ -9,12 +9,11 @@ const model = {
     {
       id: "User", // Unique identifier for the participant
       content: "User", // Label or name of the participant
-      isActor: true, // Indicates that the participant is an actor
+     stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Actor // Indicates that the participant is an actor
     },
     {
       id: "System", // Unique identifier for the participant
       content: "System", // Label or name of the participant
-      isActor: false,
       showDestructionMarker: true, // Flag to show destruction marker at the end of the lifeline
     }
   ],

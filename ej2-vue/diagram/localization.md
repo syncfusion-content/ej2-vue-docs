@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in EJ2 vue Diagram control
 
-The EJ2 Diagram component supports `localization`. In the Diagram component, the symbol palette search box and context menu items can be localized based on the selected culture. By using the locale property of the diagram, you can change the culture.
+The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component supports `localization`. In the Diagram component, the symbol palette search box and context menu items can be localized based on the selected culture. By using the locale property of the diagram, you can change the culture.
 
 ## Localize Diagram context menu
 

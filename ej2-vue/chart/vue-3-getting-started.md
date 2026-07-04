@@ -293,6 +293,8 @@ For migrating from Vue 2 to Vue 3, refer to the [Vue 3 Migration Guide](https://
 
 - **Console errors**: Check the browser console for import or runtime errors, and verify that the file paths and package installations are correct.
 
+N> Looking for the full Vue Charts component overview, features, pricing, and documentation? Visit the [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) page.
+
 ## See Also
 
 * [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Selection in Vue Grid component
 
-Selection in the Grid component allows you to interactively select specific cells, rows, or columns within the grid. This selection can be done through mouse clicks or arrow keys (up, down, left, and right) or touch. This feature is useful when you want to highlight, manipulate, or perform actions on specific  cells, rows, or columns within the Grid.
+Selection in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to interactively select specific cells, rows, or columns within the grid. This selection can be done through mouse clicks or arrow keys (up, down, left, and right) or touch. This feature is useful when you want to highlight, manipulate, or perform actions on specific  cells, rows, or columns within the Grid.
 
 To disable selection in the Grid, set the [allowSelection](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowselection) to **false**.
 
@@ -139,7 +139,7 @@ Persist selection feature in the Grid allows you to retain the selected items ev
 To enable persist selection, set the [selectionSettings.persistSelection](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#persistselection) property to **true**.
 
 > * While using persist selection feature, at least one column in your grid should be enabled as a primary key. This ensures that the grid can identify and persist the selected items correctly.
->* The `persistSelection` feature is not supported for cell selections in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component.
+>* The `persistSelection` feature is not supported for cell selections in the Vue Data Grid component.
 >* The `persistSelection` feature is only supported for grid `multiple` type selections.
 
 In the following example, it demonstrates how to enable the persist selection feature for both rows and columns using the `selectionSettings.persistSelection` property :

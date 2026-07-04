@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Constraints in Vue Diagram component
 
-Constraints are used to enable/disable certain behaviors of the diagram, nodes and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled/disabled using Bitwise operators (&, |, ~, <<, etc.).
+Constraints are used to enable/disable certain behaviors of the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram), nodes and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled/disabled using Bitwise operators (&, |, ~, <<, etc.).
 
 To know more about Bitwise operators, refer to [`Bitwise Operations`](#bitwise-operations).
 
 ## Diagram constraints
 
-[`Diagram constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramConstraints/) allows you to enable or disable the following behaviors:
+[`Diagram constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramconstraints) allows you to enable or disable the following behaviors:
 
 The following table displays the list of all diagram constraints.
 
@@ -721,7 +721,7 @@ export default {
 }
 ```
 
-The following code example shows how to disable the userhandle functionality for the selected item.
+The following code example shows how to disable the user handle functionality for the selected item.
 
 ```javascript
 export default {
