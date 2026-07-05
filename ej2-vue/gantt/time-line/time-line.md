@@ -2,7 +2,7 @@
 layout: post
 title: Timeline in Vue Gantt Chart Component | Syncfusion
 description: Learn here all about Time line in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Time line 
+control: Timeline
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -16,11 +16,11 @@ In the Gantt Chart component, timeline is used to represent the project duration
 
 Gantt contains the following in-built timeline view modes:
 
-* Hour – Minute
-* Day – Hour
-* Week – Day
-* Month – Week
-* Year – Month
+- Hour – Minute
+- Day – Hour
+- Week – Day
+- Month – Week
+- Year – Month
 
 Timescale mode in the Gantt Chart component can be defined using the [timelineViewMode](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineviewmode) property, and you can define a timescale mode for the top tier and bottom tier using the [topTier.unit](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineTierSettings#unit) and [bottomTier.unit](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineTierSettings#unit) properties.
 
@@ -36,7 +36,7 @@ In the `Week` timeline mode, the upper part of the schedule header displays the 
 {% include code-snippet/gantt/timeline-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/timeline-cs1" %}
 
 ### Month timeline mode
@@ -51,7 +51,7 @@ In the `Month` timeline mode, the upper part of the schedule header displays the
 {% include code-snippet/gantt/timeline-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/timeline-cs2" %}
 
 ### Year timeline mode
@@ -66,7 +66,7 @@ In the `Year` timeline mode, the upper schedule header displays the years wherea
 {% include code-snippet/gantt/timeline-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/timeline-cs3" %}
 
 ### Day timeline mode
@@ -81,7 +81,7 @@ In the `Day` timeline mode, the upper part of the header displays the days where
 {% include code-snippet/gantt/timeline-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/timeline-cs4" %}
 
 ### Hour timeline mode
@@ -96,7 +96,7 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the upp
 {% include code-snippet/gantt/timeline-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/timeline-cs5" %}
 
 ## Timeline view dates
@@ -111,20 +111,20 @@ The Gantt Chart control supports rendering a fixed timeline range using the [vie
 {% include code-snippet/gantt/view-dates-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/view-dates-cs1" %}
 
 **Key behaviors**
 
 When `viewStartDate` and `viewEndDate` are set to concrete Date values, the timeline rendering is restricted to the inclusive range [viewStartDate, viewEndDate].
 
-* When `viewStartDate` is set to **auto**:
-  * If `projectStartDate` is defined, the timeline begins at `projectStartDate`.
-  * If `projectStartDate` is not defined, the earliest task start date is used as the beginning of the visible range.
+- When `viewStartDate` is set to **auto**:
+  - If `projectStartDate` is defined, the timeline begins at `projectStartDate`.
+  - If `projectStartDate` is not defined, the earliest task start date is used as the beginning of the visible range.
 
-* When `viewEndDate` is set to `auto`: 
-  * If `projectEndDate` is defined, the timeline ends at `projectEndDate`.
-  * If `projectEndDate` is not defined, the maximum task end date is used. If this end date leaves visible white‑space in the timeline area, the end date is automatically extended to fill the chart width.
+- When `viewEndDate` is set to `auto`:
+  - If `projectEndDate` is defined, the timeline ends at `projectEndDate`.
+  - If `projectEndDate` is not defined, the maximum task end date is used. If this end date leaves visible white‑space in the timeline area, the end date is automatically extended to fill the chart width.
 
 > Note: The `ZoomToFit` feature uses `projectStartDate` and `projectEndDate` to fit the entire project within the available timeline viewport.
 
@@ -140,7 +140,7 @@ In the Gantt Chart component, you can customize the week start day using the [we
 {% include code-snippet/gantt/timeline-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/timeline-cs6" %}
 
 ## Customize automatic timescale update action
@@ -155,7 +155,7 @@ In the Gantt Chart component, the schedule timeline will be automatically update
 {% include code-snippet/gantt/timeline-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/timeline-cs7" %}s
 
 ## Timeline cells tooltip
@@ -170,14 +170,14 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 {% include code-snippet/gantt/tooltip-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs2" %}
 
 ## Show/hide weekends
 
 The [timelineSettings.showWeekend](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings#showweekend) property is used to customize the timeline in the Gantt Chart component by controlling the visibility of weekends. To exclude weekends from the timeline, set the `showWeekend` property to `false` in the `timelineSettings` configuration. This feature is particularly useful for focusing the timeline on working days, enhancing project management efficiency by hiding weekends from the view.
 
->Note: To customize non-working or weekend days in the Gantt chart, refer to the [workWeek](https://ej2.syncfusion.com/vue/documentation/gantt/task-scheduling#weekendnon-working-days) documentation for detailed information.
+> Note: To customize non-working or weekend days in the Gantt chart, refer to the [workWeek](https://ej2.syncfusion.com/vue/documentation/gantt/task-scheduling#weekendnon-working-days) documentation for detailed information.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -187,14 +187,14 @@ The [timelineSettings.showWeekend](https://ej2.syncfusion.com/vue/documentation/
 {% include code-snippet/gantt/showweekend-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/showweekend-cs1" %}
 
 > Limitations
->* The `showWeekend` feature does not support baselines.
->* The `showWeekend` is not compatible with the manual task mode.
->* Non-working hours cannot be excluded when `showWeekend` is set to false.
->* Holidays are not excluded from the timeline if `showWeekend` is set to false.
+> - The `showWeekend` feature does not support baselines.
+> - The `showWeekend` is not compatible with the manual task mode.
+> - Non-working hours cannot be excluded when `showWeekend` is set to false.
+> - Holidays are not excluded from the timeline if `showWeekend` is set to false.
 
 ## Timeline template
 
@@ -202,9 +202,9 @@ In the Gantt Chart component, you can customize timeline cells using the [timeli
 
 When designing the timeline cells, you can utilize the following context properties within the template:
 
-* `date`: Defines the date of the timeline cells.
-* `value`: Defines the formatted date value that will be displayed in the timeline cells.
-* `tier`: Defines whether the cell is part of the top or bottom tier.
+- `date`: Defines the date of the timeline cells.
+- `value`: Defines the formatted date value that will be displayed in the timeline cells.
+- `tier`: Defines whether the cell is part of the top or bottom tier.
 
 The following code example how to customize the top tier to display the week's weather details and the bottom tier to highlight working and non-working days, with formatted text for holidays.
 
@@ -212,28 +212,29 @@ The following code example how to customize the top tier to display the week's w
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 <template>
-    <div>
-        <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields="taskFields" :treeColumnIndex="1"
+<div>
+<ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields="taskFields" :treeColumnIndex="1"
             :holidays="holidays" :labelSettings="labelSettings" :splitterSettings="splitterSettings" :height="height"
             :columns="columns" :timelineSettings="timelineSettings" :timelineTemplate="'timelineTemplates'">
-            <template v-slot:timlelineTemplate="{ data }">
-                <div v-if="data.tier == 'topTier'" class="e-header-cell-label e-gantt-top-cell-text"
+<template v-slot:timlelineTemplate="{ data }">
+<div v-if="data.tier == 'topTier'" class="e-header-cell-label e-gantt-top-cell-text"
                     style="width:100%;background-color: #FBF9F1 ;  font-weight: bold;height: 100%;display: flex; justify-content: center ; align-items: center;   "
                     title={{data.date}}>
-                    <div> {{ value }}</div>
-                    <div style="width:20px; height: 20px; line-height: normal; padding-left: 10px; ">
-                        <img :style="{ width: '100%', height: '100%' }" :src="imagedate()">
-                    </div>
-                </div>
-                <div v-else-if="data.tier === 'bottomTier'" class="e-header-cell-label e-gantt-top-cell-text" :style="{
+<div> {{ value }}</div>
+<div style="width:20px; height: 20px; line-height: normal; padding-left: 10px; ">
+<img :style="{ width: '100%', height: '100%' }" :src="imagedate()">
+</div>
+</div>
+<div v-else-if="data.tier === 'bottomTier'" class="e-header-cell-label e-gantt-top-cell-text" :style="{
                     width: '100%',backgroundColor: bgColor(data.value, data.date),textAlign: 'center',height: '100%',
                     display: 'flex',alignItems: 'center',fontWeight: 'bold',justifyContent: 'center'}" title={{data.date}}>
-                    {{ holidayValue(data.value, data.date) }}
-                </div>
-            </template>
-        </ejs-gantt>
-    </div>
+{{ holidayValue(data.value, data.date) }}
+</div>
 </template>
+</ejs-gantt>
+</div>
+</template>
+
 <script setup>
 import { GanttComponent as EjsGantt } from "@syncfusion/ej2-vue-gantt";
 import { editingData } from './data-source.js';
@@ -322,33 +323,35 @@ const holidayValue = (value, date) => {
     return value
 }
 </script>
+
 {% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% raw %}
 <template>
-    <div>
-        <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields="taskFields" :treeColumnIndex="1"
+<div>
+<ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields="taskFields" :treeColumnIndex="1"
             :holidays="holidays" :labelSettings="labelSettings" :splitterSettings="splitterSettings" :height="height"
             :columns="columns" :timelineSettings="timelineSettings" :timelineTemplate="'timelineTemplates'">
-            <template v-slot:timelineTemplates="{ data }">
-                <div v-if="data.tier == 'topTier'" class="e-header-cell-label e-gantt-top-cell-text"
+<template v-slot:timelineTemplates="{ data }">
+<div v-if="data.tier == 'topTier'" class="e-header-cell-label e-gantt-top-cell-text"
                     style="width:100%;background-color: #FBF9F1 ;  font-weight: bold;height: 100%;display: flex; justify-content: center ; align-items: center;   "
                     title={{data.date}}>
-                    <div> {{data.value }}</div>
-                    <div style="width:20px; height: 20px; line-height: normal; padding-left: 10px; ">
-                        <img :style="{ width: '100%', height: '100%' }" :src="imagedate()">
-                    </div>
-                </div>
-                <div v-else-if="data.tier === 'bottomTier'" class="e-header-cell-label e-gantt-top-cell-text" :style="{
+<div> {{data.value }}</div>
+<div style="width:20px; height: 20px; line-height: normal; padding-left: 10px; ">
+<img :style="{ width: '100%', height: '100%' }" :src="imagedate()">
+</div>
+</div>
+<div v-else-if="data.tier === 'bottomTier'" class="e-header-cell-label e-gantt-top-cell-text" :style="{
                     width: '100%',backgroundColor: bgColor(data.value, data.date),textAlign: 'center',height: '100%',
                     display: 'flex',alignItems: 'center',fontWeight: 'bold',justifyContent: 'center'}" title={{data.date}}>
-                    {{ holidayValue(data.value, data.date) }}
-                </div>
-            </template>
-        </ejs-gantt>
-    </div>
+{{ holidayValue(data.value, data.date) }}
+</div>
 </template>
+</ejs-gantt>
+</div>
+</template>
+
 <script>
 
 import { GanttComponent, DayMarkers, Selection } from "@syncfusion/ej2-vue-gantt"; 
@@ -462,8 +465,32 @@ export default {
     }
 };
 </script>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs8" %}
+
+## Infinite timeline scrolling
+
+The [enableInfiniteTimelineScroll](https://ej2.syncfusion.com/vue/documentation/api/gantt#enableinfinitetimelinescroll) property enables infinite horizontal scrolling in the Gantt Chart timeline by dynamically extending the visible timeline range as the user navigates. Set `enableInfiniteTimelineScroll` to **true** to enable this behavior.
+
+**Key behaviors**
+
+- When `enableInfiniteTimelineScroll` is enabled, the timeline automatically extends in the forward direction as the user scrolls using the horizontal scrollbar or clicks the forward scroll arrow.
+- In the backward direction, the timeline extends only when the user clicks the backward scroll arrow. Scrolling or dragging the scrollbar backward does not trigger timeline extension.
+- Infinite scrolling extends only the visible timeline range and does not modify the project dates.
+
+This feature enables exploration of long project schedules without manually updating the timeline range.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/infinite-scroll-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/infinite-scroll-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/gantt/infinite-scroll-cs1" %}

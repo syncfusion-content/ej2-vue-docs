@@ -48,11 +48,10 @@ new Vue({
       responseToolbarSettings: {
         items: [
           { type: 'Button', iconCss: 'e-icons e-assist-copy', tooltip: 'Copy' },
-          { type: 'Button', iconCss: 'e-icons e-audio', tooltip: 'Read Aloud' },
+          { type: 'Button', iconCss: 'e-icons e-assist-audio', tooltip: 'Read Aloud' },
           { type: 'Button', iconCss: 'e-icons e-assist-like', tooltip: 'Like' },
           { type: 'Button', iconCss: 'e-icons e-assist-dislike', tooltip: 'Need Improvement' },
         ],
-        itemClicked: (args) => onResponseToolbarItemClicked(args)
       },
     };
   },
@@ -115,33 +114,6 @@ new Vue({
     },
     stopRespondingClick() {
       this.stopStreaming = true;
-    },
-    onResponseToolbarItemClicked(args) {
-      const responseHtml = this.$refs.aiAssist.ej2Instances.prompts[args.dataIndex].response;
-      if (responseHtml) {
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = responseHtml;
-        const text = (tempDiv.textContent || tempDiv.innerText || '').trim();
-        if (args.item.iconCss === 'e-icons e-audio' || args.item.iconCss === 'e-icons e-assist-stop') {
-          if (currentUtterance) {
-            speechSynthesis.cancel();
-            currentUtterance = null;
-            this.$refs.aiAssist.ej2Instances.responseToolbarSettings.items[1].iconCss = 'e-icons e-audio';
-            this.$refs.aiAssist.ej2Instances.responseToolbarSettings.items[1].tooltip = 'Read Aloud';
-          } else {
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.onend = () => {
-              currentUtterance = null;
-              this.$refs.aiAssist.ej2Instances.responseToolbarSettings.items[1].iconCss = 'e-icons e-audio';
-              this.$refs.aiAssist.ej2Instances.responseToolbarSettings.items[1].tooltip = 'Read Aloud';
-            };
-            speechSynthesis.speak(utterance);
-            currentUtterance = utterance;
-            this.$refs.aiAssist.ej2Instances.responseToolbarSettings.items[1].iconCss = 'e-icons e-assist-stop';
-            this.$refs.aiAssist.ej2Instances.responseToolbarSettings.items[1].tooltip = 'Stop';
-          }
-        }
-      }
     },
   },
 });

@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text-to-Speech in Vue AI AssistView
+# Text to Speech in AI AssistView
 
-The Syncfusion Vue AI AssistView component integrates `Text-to-Speech` (TTS) functionality using the browser's Web Speech API, specifically the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface. This allows AI-generated responses to be converted into spoken audio, enhancing accessibility and user interaction.
+The Syncfusion Vue AI AssistView component provides built-in `Text-to-Speech` (TTS) support using the browser's Web Speech API, specifically the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface. This allows AI-generated responses into spoken audio, enhancing accessibility and user interaction.
 
 ## Prerequisites
 
@@ -19,12 +19,12 @@ Before integrating `Text-to-Speech`, ensure the following:
 1. The Syncfusion AI AssistView component is properly set up in your Vue application.
     - [Vue Getting Started Guide](../getting-started)
 
-2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
+2. The AI AssistView component is integrated with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/).
     - [Integration of Azure OpenAI With Vue AI AssistView component](../ai-integrations/openai-integration)
 
-## Configure Text-to-Speech
+## Configure text to speech
 
-To enable Text-to-Speech functionality, modify the `App.vue` file to incorporate the Web Speech API. A custom `Read Aloud` button is added to the response toolbar using the [responseToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/#responsetoolbarsettings) property. When clicked, the [itemClicked](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/responseToolbarSettingsModel/#itemclicked) event extracts plain text from the generated AI response and use the browser SpeechSynthesis API to read it aloud.
+To enable the built-in Text-to-Speech functionality, add the `e-assist-audio` response toolbar item to the `items` collection of the [responseToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview#responsetoolbarsettings) property. When clicked, it fetches the plain text from the generated AI response and uses the browser's SpeechSynthesis API to read it aloud.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -36,6 +36,21 @@ To enable Text-to-Speech functionality, modify the `App.vue` file to incorporate
 {% endtabs %}
   
 {% previewsample "page.domainurl/code-snippet/ai-assistview/speech/tts" %}
+
+## Customizing speech settings
+
+You can use the [textToSpeechSettings](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview#texttospeechsettings) property to customize the speech synthesis behavior using the following available properties such as [language](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/textToSpeechSettingsModel#language), [speechPitch](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/textToSpeechSettingsModel#speechpitch), [speechRate](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/textToSpeechSettingsModel#speechrate), [volume](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/textToSpeechSettingsModel#volume) and [voice](https://ej2.syncfusion.com/vue/documentation/api/ai-assistview/textToSpeechSettingsModel#voice).
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/speech/tts-settings/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/speech/tts-settings/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ai-assistview/speech/tts-settings" %}
 
 ## See Also
 

@@ -16,7 +16,7 @@ The 3D Chart will display details about the points through tooltip, when the mou
 
 ## Default tooltip
 
-By default, tooltip is not visible. The tooltip can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#enable) property in `tooltipSettings` to **true** and by injecting `Tooltip3D` into the `provide`.
+By default, tooltip is not visible. The tooltip can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings#enable) property in `tooltipSettings` to **true** and by injecting `Tooltip3D` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -33,7 +33,7 @@ By default, tooltip is not visible. The tooltip can be enabled by setting the [`
 
 ## Fixed tooltip
 
-By default, tooltip track the mouse movement, but the tooltip can be set in fixed position by using the [`location`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#location) property.
+By default, tooltip track the mouse movement, but the tooltip can be set in fixed position by using the [`location`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings#location) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -50,7 +50,7 @@ By default, tooltip track the mouse movement, but the tooltip can be set in fixe
 
 <!-- markdownlint-disable MD013 -->
 
-By default, tooltip shows information of x and y value in points. In addition to that, more information can be shown in tooltip by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#format) property. For example the format `${series.name} : ${point.y}` shows series name and point x value.
+By default, tooltip shows information of x and y value in points. In addition to that, more information can be shown in tooltip by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings#format) property. For example the format `${series.name} : ${point.y}` shows series name and point x value.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -63,9 +63,59 @@ By default, tooltip shows information of x and y value in points. In addition to
         
 {% previewsample "page.domainurl/code-snippet/chart3d/user-interaction/format-tooltip" %}
 
+## Inline tooltip formatting
+
+The tooltip content can be formatted directly within the [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipsettings#format) property by adding DateTime or number format specifiers to supported tooltip tokens. This allows you to control how point and series values are displayed without using additional events.
+
+A format specifier can be applied to a tooltip token by adding a colon (`:`) followed by the required format.
+
+For example:
+
+```typescript
+const tooltip = {
+    enable: true,
+    format: '${series.name} (${series.type})<br>${point.x:MMM yyyy} : ${point.y:n2}<br>Opacity: ${series.opacity}'
+}
+```
+
+In the above example, `point.x` is displayed in month-year format, `point.y` is displayed with two decimal places, and `series.opacity` displays the opacity value applied to the series.
+
+Inline formatting can be applied to the following tooltip tokens:
+
+- `point.x` – Specifies the x-value of the data point, such as DateTime or category values.
+- `point.y` – Specifies the numeric y-value of the data point.
+- `series.name` – Specifies the name assigned to the series.
+- `series.type` – Specifies the rendering type of the series, such as `Column`, `Bar`, `Line`, or `StackingColumn`.
+- `series.opacity` – Specifies the opacity value applied to the series. This value controls the visual transparency of the series and can be customized in the series configuration.
+
+**Important:** The availability of point-specific tokens depends on the values configured in the data source and the 3D chart series type. The `series.name` and `series.type` tokens return string values, so DateTime or number formatting is not applied to these tokens.
+
+The following format types are supported:
+
+- DateTime formats such as `MMM yyyy`, `MM:yy`, and `dd MMM`
+- Number formats such as:
+  - `n2` – number with two decimal places
+  - `n0` – number without decimal places
+  - `c2` – currency format
+  - `p1` – percentage format
+  - `e1` – exponential notation
+
+If the specified format does not match the resolved value type, the original value is displayed.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/tooltip-format/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/tooltip-format/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart3d/user-interaction/tooltip-format" %}
+
 ## Tooltip template
 
-Any HTML elements can be displayed in the tooltip by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#template) property of the tooltip. The ${x} and ${y} can be used as place holders in the HTML element to display the x and y values of the corresponding data point.
+Any HTML elements can be displayed in the tooltip by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings#template) property of the tooltip. The ${x} and ${y} can be used as place holders in the HTML element to display the x and y values of the corresponding data point.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -80,7 +130,7 @@ Any HTML elements can be displayed in the tooltip by using the [`template`](http
 
 ## Customize the appearance of tooltip
 
-The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#border) properties are used to customize the background color and border of the tooltip respectively. The [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#textstyle) property in the tooltip is used to customize the font of the tooltip text.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings#border) properties are used to customize the background color and border of the tooltip respectively. The [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings#textstyle) property in the tooltip is used to customize the font of the tooltip text.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

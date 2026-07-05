@@ -21,29 +21,58 @@ Using the below approaches, the icons can be referenced in the Vue application.
 
 ### The npm package
 
-All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are available in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package, published on [npmjs.com](https://www.npmjs.com/~syncfusionorg). This package contains CSS and SCSS theme files for all Syncfusion<sup style="font-size:70%">&reg;</sup> themes.
+All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are available in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package and as well as through all theme packages such as [@syncfusion/ej2-material3-theme](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) available on npm. These packages include CSS/SCSS files for all supported themes.
 
-Icons can be used from the npm package `ej2-icons`. To use the icons, install the npm package using the following command:
+Install the package:
 
-```bash
- npm install @syncfusion/ej2-icons
-```
+{% tabs %}
+{% highlight bash tabtitle="Theme Package" %}
+
+npm install @syncfusion/ej2-material3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="Icon Package" %}
+
+npm install @syncfusion/ej2-icons --save
+
+{% endhighlight %}
+{% endtabs %}
 
 Refer to the following syntax to use icons in a Vue application:
 
 `[src/App.vue]`
 
-```
+{% tabs %}
+{% highlight vue tabtitle="Theme Package" %}
+
+<style>
+@import "../node_modules/@syncfusion/ej2-<theme-name>-theme/styles/icons/<theme_name>.css";
+</style>
+
+{% endhighlight %}
+{% highlight vue tabtitle="Icon Package" %}
+
 <style>
 @import "../node_modules/@syncfusion/ej2-icons/styles/<theme_name>.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Example:**
 
-```
+{% tabs %}
+{% highlight css tabtitle="Theme Package" %}
+
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/icons/material3.css";
+
+{% endhighlight %}
+{% highlight css tabtitle="Icon Package" %}
+
 @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### CDN reference
 

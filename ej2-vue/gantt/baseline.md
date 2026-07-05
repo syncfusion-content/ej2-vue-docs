@@ -70,3 +70,31 @@ The following example demonstrates complete baseline configuration with proper f
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/baseline-cs1" %}
+
+## Customize baseline templates
+
+The [baselineTemplate](https://ej2.syncfusion.com/vue/documentation/api/gantt#baselinetemplate) property allows customization of baseline rendering by replacing the default baseline UI with a custom HTML structure. This enables advanced scenarios such as rendering additional baseline elements, visual indicators, or multiple baselines using task-specific data.
+
+Set the `baselineTemplate` property with a template string or function. The template receives the task data object, which can be used to dynamically generate baseline elements.
+
+### Multiple baseline rendering using template
+
+By default, the Gantt component supports a single baseline per task. However, using the `baselineTemplate`, you can extend this behavior to render multiple baselines by maintaining additional baseline data within a custom field in your data source.
+
+This enables rich visualization scenarios such as:
+* Comparing original vs revised schedules.
+* Visualizing multiple planning phases.
+* Highlighting deviations across timeline checkpoints.
+
+The following example demonstrates how to render multiple baselines using `baselineTemplate`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/baseline-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/baseline-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/baseline-cs2" %}

@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in Vue application
+# Register Syncfusion® License key in Vue application
 
-A Syncfusion<sup style="font-size:70%">&reg;</sup> license key must be registered if your project references Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages. The generated license key is a string that needs to be registered after any [Syncfusion<sup style="font-size:70%">&reg;</sup> Vue reference](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/#creating-vue-sample).
+A Syncfusion<sup style="font-size:70%">&reg;</sup> license key must be registered if your project references Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages. The generated license key is a string that needs to be registered after any [Syncfusion<sup style="font-size:70%">&reg;</sup> Vue reference](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-js-composition).
 
 > Note: Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is performed offline during application execution and does not require internet access. Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system without an internet connection.
 
@@ -213,6 +213,19 @@ npx syncfusion-license activate
 ```
 
 ![Bash task](images/bash-script.png)
+
+## Register Multiple License Keys
+
+If you need to register multiple Syncfusion<sup style="font-size:70%">&reg;</sup> license keys in your application, you can do so by separating each key with a semicolon. This is useful when your application uses multiple Syncfusion<sup style="font-size:70%">&reg;</sup> products or editions.
+
+**Format:** `key1;key2;key3`
+
+**Example:**
+```ts
+registerLicense('license-key-1-here;license-key-2-here');
+```
+
+> When registering multiple keys, ensure there are no spaces before or after the semicolon separator.
 
 ## See also
 

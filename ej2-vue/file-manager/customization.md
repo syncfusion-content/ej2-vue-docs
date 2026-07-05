@@ -219,16 +219,7 @@ The following code snippet demonstrates specifying the current path in File Mana
 
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/file-manager/index.css";
 </style>
 {% endraw %}
 {% endhighlight %}
@@ -268,16 +259,7 @@ The following code snippet demonstrates specifying the current path in File Mana
     }
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/file-manager/index.css";
 </style>
 
 {% endhighlight %}

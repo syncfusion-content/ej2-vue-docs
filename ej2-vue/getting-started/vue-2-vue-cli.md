@@ -47,27 +47,32 @@ After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component 
 
 Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) section to know more about built-in themes and different ways (npm packages, CDN and CRG) to refer the themes in the Vue application.
 
-Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. Let’s import the `Material3` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
+Here the themes are referred through the npm theme packages which contains the built-in themes of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. To install the [Material 3](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) theme package, use the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
 
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-</style>
+npm install @syncfusion/ej2-material3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/@syncfusion/ej2-material3-theme
 
 {% endhighlight %}
 {% endtabs %}
 
->Grid components use other Syncfusion<sup style="font-size:70%">&reg;</sup> components as well, so CSS references for the dependent component must be added in order to use all grid functionalities. Use this same order to display the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component's predefined appearance.
+Let's import the `Material3` theme for the Grid component in the `<style>` section of the `App.vue` file as follows.
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 

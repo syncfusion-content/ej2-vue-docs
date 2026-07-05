@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-import { UmlSequenceMessageType, SnapConstraints } from '@syncfusion/ej2-diagrams';
+import { UmlSequenceMessageType, SnapConstraints , UmlSequenceParticipantStereotype} from '@syncfusion/ej2-diagrams';
 
 Vue.use(DiagramPlugin);
 
@@ -11,12 +11,11 @@ const model = {
     {
       id: "User",
       content: "User",
-      isActor: true,
+      stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Actor
     },
     {
       id: "System",
       content: "System",
-      isActor: false,
       showDestructionMarker: true,
       // Activation boxes for System
       activationBoxes: [

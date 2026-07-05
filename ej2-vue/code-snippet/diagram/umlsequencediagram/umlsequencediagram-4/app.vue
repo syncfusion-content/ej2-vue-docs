@@ -6,17 +6,15 @@
 
 <script>
 import { DiagramComponent } from "@syncfusion/ej2-vue-diagrams";
-import { UmlSequenceMessageType, UmlSequenceFragmentType, SnapConstraints } from '@syncfusion/ej2-diagrams';
+import { UmlSequenceMessageType, UmlSequenceFragmentType, SnapConstraints, UmlSequenceParticipantStereotype } from '@syncfusion/ej2-diagrams';
 
 const  // Define the UML Sequence Diagram model
   model = {
     // Define the space between participants
     spaceBetweenParticipants: 300,
-    participants: [
-      { id: "Customer", content: "Customer", isActor: true, },
-      { id: "OrderSystem", content: "Order System", isActor: false, },
-      { id: "PaymentGateway", content: "Payment Gateway", isActor: false, }
-    ],
+    participants: [ { id: "Customer", content: "Customer", stereotype: UmlSequenceParticipantStereotype.Actor},
+    { id: "OrderSystem", content: "Order System" },
+    { id: "PaymentGateway", content: "Payment Gateway" }],
     // Define the messages passed between participants
     messages: [
       {
