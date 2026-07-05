@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Footer aggregate in Vue Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#footertemplate) property to render the aggregate value in the footer cells.
+The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#footertemplate) property to render the aggregate value in the footer cells.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -157,11 +157,11 @@ components: {
 {% previewsample "page.domainurl/code-snippet/grid/aggregates/default-cs2" %}
 
 > * Use the template reference variable name **#footerTemplate** to specify the footer template.
-> * Inside the template, access the aggregate values using their corresponding [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#type) name. For example, to access the sum aggregate value, use **data.sum**.
+> * Inside the template, access the aggregate values using their corresponding [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#type) name. For example, to access the sum aggregate value, use **data.sum**.
 
 ## Format the aggregate value
 
-To format the aggregate value result in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component, you can use the [format](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#format) property of the[AggregateColumnDirective](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/). The `format` property allows you to specify a format string that determines how the aggregate value will be displayed.
+To format the aggregate value result in the Vue Data Grid component, you can use the [format](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#format) property of the[AggregateColumnDirective](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective). The `format` property allows you to specify a format string that determines how the aggregate value will be displayed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -309,7 +309,7 @@ components: {
 
 ## How to place aggregates on top of the Grid
 
-By default, the aggregated values are placed at the bottom of the footer section. It is possible to place the aggregated values at the top of the header. This is achieved by using the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event, [getHeaderContent](https://ej2.syncfusion.com/vue/documentation/api/grid/#getheadercontent), and [getFooterContent](https://ej2.syncfusion.com/vue/documentation/api/grid/#getfootercontent) methods of the Grid.
+By default, the aggregated values are placed at the bottom of the footer section. It is possible to place the aggregated values at the top of the header. This is achieved by using the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#databound) event, [getHeaderContent](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#getheadercontent), and [getFooterContent](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#getfootercontent) methods of the Grid.
 
 In the following, footer content is appended to the header content using the `dataBound` event of the Grid.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Export in Vue Gantt Chart Component | Syncfusion
-description: Learn all about Excel export in the Syncfusion Vue Gantt Chart component of Essential JS 2.
+description: Learn how to enable and use Excel export in the Syncfusion Vue Gantt Chart component to export data to Excel and CSV formats easily.
 control: Excel export
 platform: ej2-vue
 documentation: ug

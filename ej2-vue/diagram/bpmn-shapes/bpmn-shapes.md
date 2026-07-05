@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bpmn shapes in Vue Diagram component
+# BPMN shapes in Vue Diagram component
 
 BPMN shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, in the node property shape, type should be set as “bpmn” and its shape should be set as any one of the built-in shapes. The following code example illustrates how to create a simple business process.
 
-N> If you want to use BPMN shapes in diagram, you need to inject BpmnDiagrams in the diagram.
+N> If you want to use BPMN shapes in [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram), you need to inject BpmnDiagrams in the diagram.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

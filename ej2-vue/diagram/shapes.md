@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Shapes in Vue Diagram component
 
-Diagram provides support to add different kind of nodes. They are as follows:
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support to add different kind of nodes. They are as follows:
 
 * Text node
 * Image node

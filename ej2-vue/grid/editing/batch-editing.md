@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Batch editing in Vue Grid component
 
-Batch editing is a powerful feature in the Grid component that allows you to edit multiple cells simultaneously. It provides a convenient way to make changes to multiple cells and save them in a single request to the data source. This feature is particularly useful when dealing with large datasets or when you need to update multiple cells at once.
+Batch editing is a powerful feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component that allows you to edit multiple cells simultaneously. It provides a convenient way to make changes to multiple cells and save them in a single request to the data source. This feature is particularly useful when dealing with large datasets or when you need to update multiple cells at once.
 
 In batch edit mode, when you double-click on a grid cell, the target cell changes to an editable state. You can perform bulk update of the added, changed, and deleted data by either clicking on the toolbar's **Update** button or by externally invoking the [batchSave](https://ej2.syncfusion.com/vue/documentation/api/grid/edit/#batchsave) method.
 

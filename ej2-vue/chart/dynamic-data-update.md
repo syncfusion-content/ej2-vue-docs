@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Dynamic data update in Vue Chart component
 
-The Vue Chart component provides methods to dynamically modify data without requiring a full chart refresh. This enables real-time data visualization, interactive features, and responsive user experiences. Common scenarios include adding sensor readings, removing outdated data points, replacing entire datasets, and enabling click-based data manipulation.
+The [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) component provides methods to dynamically modify data without requiring a full chart refresh. This enables real-time data visualization, interactive features, and responsive user experiences. Common scenarios include adding sensor readings, removing outdated data points, replacing entire datasets, and enabling click-based data manipulation.
 
 ## Adding a new data point
 

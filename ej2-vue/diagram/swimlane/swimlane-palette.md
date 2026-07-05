@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 ## Add swimlane to palette
 
-Diagram provides support to add swimlane and phases to symbol palette. The following code sample illustrate how to add swimlane and phases to palette.
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support to add swimlane and phases to symbol palette. The following code sample illustrate how to add swimlane and phases to palette.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

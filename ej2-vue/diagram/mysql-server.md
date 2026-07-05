@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connecting MySQL Server to Syncfusion® Vue Diagram using LINQ2DB
 
-This guide explains how to load and visualize organizational chart data stored in a MySQL database using the Syncfusion® Vue Diagram component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a Vue application to render an organizational chart.
+This guide explains how to load and visualize organizational chart data stored in a MySQL database using the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a Vue application to render an organizational chart.
 
 **What is LINQ2DB?**
 
@@ -173,7 +173,7 @@ The database can also be created using the MySQL Command Line Client.
 
 ## Integrating MySQL Server with ASP.NET Core Web API
 
-This section explains how to create an ASP.NET Core Web API project that connects to MySQL and exposes data for use by the Syncfusion® Vue Diagram component.
+This section explains how to create an ASP.NET Core Web API project that connects to MySQL and exposes data for use by the Vue Diagram component.
 
 ### Creating the Web API project using Visual Studio
 
@@ -437,7 +437,7 @@ app.Run();
 
 The backend API is now configured.
 
-## Integrating Syncfusion® Vue Diagram
+## Integrating Vue Diagram
 
 The following steps describe how to render the Diagram and connect it to the MySQL Server back-end.
 
@@ -474,7 +474,7 @@ Add the required CSS references to the **src/style.css** file to apply styling t
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion® Vue Components Appearance](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio) documentation.
 
-### Step 3: Add Syncfusion® Vue Diagram
+### Step 3: Add Vue Diagram
 
 Create a basic Diagram component in **src/App.vue**:
 
@@ -730,6 +730,6 @@ You can clone the sample repository, update the MySQL connection string, and run
 
 ## See also
 
-- [Syncfusion® Vue Diagram Getting Started](https://ej2.syncfusion.com/vue/documentation/diagram/getting-started)
+- [Vue Diagram Getting Started](https://ej2.syncfusion.com/vue/documentation/diagram/getting-started)
 - [Data Binding Documentation](https://ej2.syncfusion.com/vue/documentation/diagram/data-binding)
 - [Organizational Chart Layout](https://ej2.syncfusion.com/vue/documentation/diagram/automatic-layout/org-chart)

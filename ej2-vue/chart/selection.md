@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 # Selection in Vue Chart component
 
-The chart provides selection support for both series and individual data points when users interact with the chart using mouse clicks.
+The Chart provides selection support for both series and individual data points when users interact with the chart using mouse clicks.
 
 > When a data point is clicked, the corresponding series legend item is also selected.
 

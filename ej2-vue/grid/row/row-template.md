@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Row template in Vue Grid component
 
-The row template feature in Grid allows you to customize the appearance and layout of rows in the grid. This feature is useful when you want to display custom content, such as images, buttons, or other controls, within the rows.
+The row template feature in [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows you to customize the appearance and layout of rows in the grid. This feature is useful when you want to display custom content, such as images, buttons, or other controls, within the rows.
 
 To enable the row template feature, you need to set the [rowTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowtemplate) property of the Grid component. This property accepts a custom HTML template that defines the layout for each row. 
 
@@ -257,9 +257,9 @@ td {
 
 ## Row template with formatting
 
-The row template feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to customize the layout of rows in the grid. This is useful when you want to display images, buttons, or other custom content within the rows of a grid.
+The row template feature in Vue Data Grid allows you to customize the layout of rows in the grid. This is useful when you want to display images, buttons, or other custom content within the rows of a grid.
 
-By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides the [columns.format](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#format) property to format the values displayed in each column. However, when using the [rowTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowtemplate), the `columns.format` property cannot be directly applied to format the values inside the template.
+By default, Vue Data Grid provides the [columns.format](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#format) property to format the values displayed in each column. However, when using the [rowTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowtemplate), the `columns.format` property cannot be directly applied to format the values inside the template.
 
 To format the values within the row template, you can define a global function that handles the formatting logic. This function can be invoked inside the template to format the corresponding values.
 
@@ -540,7 +540,7 @@ td {
 {% previewsample "page.domainurl/code-snippet/grid/row/row-template-format" %}
 
 
->When using the `rowTemplate` feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, keep in mind that any formatting applied to columns using the `columns.format` property will not work inside the template.
+>When using the `rowTemplate` feature in Vue Data Grid, keep in mind that any formatting applied to columns using the `columns.format` property will not work inside the template.
 
 ## Render syncfusion<sup style="font-size:70%">&reg;</sup> control in row template
 
@@ -709,7 +709,7 @@ components: {
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> Chart in row template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides the flexibility to include custom controls, such as Chart, within the rows of the Grid. This feature enhances Grid interactivity by allowing you to display graphical representations of data instead of plain text.
+The Vue Data Grid component provides the flexibility to include custom controls, such as Chart, within the rows of the Grid. This feature enhances Grid interactivity by allowing you to display graphical representations of data instead of plain text.
 
 To render a Syncfusion<sup style="font-size:70%">&reg;</sup> Chart within a row template of the Grid, you can utilize the [rowTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowtemplate)  property. This property accepts a custom HTML template that specifies the layout for each row, allowing for rich data visualization.
 

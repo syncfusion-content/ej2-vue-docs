@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Sorting in Vue Grid component
 
-The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) property to **true**.
+The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) property to **true**.
 
 To sort a particular column in the grid, click on its column header. Each time you click the header, the order of the column will switch between **Ascending** and **Descending**.
 
@@ -114,7 +114,7 @@ The following example demonstrates how to define custom sort comparer function f
 
 ### Display null values always at bottom 
 
-By default, null values in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, there may be scenarios where you want to always display null values at the bottom of the grid regardless of the sort direction. This can be achieved by utilizing the [column.sortComparer](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#sortcomparer)  method. This feature is particularly useful when working with data sets where null values might need to be clearly separated from actual data entries.
+By default, null values in a Vue Data Grid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, there may be scenarios where you want to always display null values at the bottom of the grid regardless of the sort direction. This can be achieved by utilizing the [column.sortComparer](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#sortcomparer)  method. This feature is particularly useful when working with data sets where null values might need to be clearly separated from actual data entries.
 
 The example below demonstrates how to display null values at the bottom of the grid while sorting the **OrderDate** column in both ascending and descending order.
 

@@ -32,7 +32,7 @@ The following example demonstrates two‑way binding with the [`selectedDate`](h
 
 ## Two‑Way Binding With Vue Schedule Component's currentView Property
 
-In the following example, when you change the `currentDate` value in the Vue Scheduler component, `v-model` will automatically update the value in the Dropdown component, and if you change the value in the Dropdown component, it will automatically update the value in the Vue Scheduler.
+In the following example, when you change the `currentDate` value in the Vue Scheduler component, `v-model` will automatically update the value in the Dropdown component, and if you change the value in the Dropdown component, it will automatically update the value in the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler).
 
 The following example demonstrates how to set the two-way-binding with the [`currentView`](https://ej2.syncfusion.com/vue/documentation/api/schedule#currentview) property in the Vue Scheduler.
 

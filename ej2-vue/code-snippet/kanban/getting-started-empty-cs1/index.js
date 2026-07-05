@@ -1,11 +1,10 @@
+import Vue from 'vue';
+import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+Vue.use(KanbanPlugin);
 
-  import Vue from 'vue';
-  import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
-  Vue.use(KanbanPlugin);
-  
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
   <div id='app'>
       <ejs-kanban id="kanban" keyField="Status">
           <e-columns>
@@ -17,5 +16,5 @@ new Vue({
       </ejs-kanban>
   </div>
 `,
- 
+
 });

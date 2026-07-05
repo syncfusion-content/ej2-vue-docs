@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Connector Events in Vue Diagram
 
-Diagram provides some events support for connectors that triggers when interacting with the connector.
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides some events support for connectors that triggers when interacting with the connector.
 
 ## Click event
 

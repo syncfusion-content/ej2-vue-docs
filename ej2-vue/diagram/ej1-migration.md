@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## How to load EJ1 diagram in EJ2 diagram
+# How to load EJ1 diagram in EJ2 diagram
 
-To load EJ1 JSON data in an EJ2 diagram, follow these steps.
+To load EJ1 JSON data in an [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram), follow these steps.
 
 1.	Import and inject the EJ1SerializationModule as shown in the following code example.
 

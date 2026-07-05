@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Check box Selection in Vue Grid component
 
-Checkbox selection in the Grid component allows you to provide an option to select multiple records by using a checkbox in each row. This feature is particularly useful when you need to perform bulk actions or operations on selected records within the Grid.
+Checkbox selection in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to provide an option to select multiple records by using a checkbox in each row. This feature is particularly useful when you need to perform bulk actions or operations on selected records within the Grid.
 
 To render checkbox in each grid row, you need to use checkbox column with type as **checkbox** using column [type](https://ej2.syncfusion.com/vue/documentation/api/grid/column#type) property.
 
@@ -52,7 +52,7 @@ In the following example, it demonstrates how to dynamically enable and change t
 
 ## Hide selectall checkbox in column header 
 
-You can hide the select all checkbox in the column header of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This is a useful feature in various scenarios where you want to customize the appearance and behavior of the checkboxes within the grid.
+You can hide the select all checkbox in the column header of the Vue Data Grid. This is a useful feature in various scenarios where you want to customize the appearance and behavior of the checkboxes within the grid.
 
 By default, when you set the column type as [checkbox](https://ej2.syncfusion.com/vue/documentation/api/grid/column#type), it renders a column with checkboxes for selection purposes. However, if you want to hide the header checkbox, you can achieve this by defining an empty [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column#headertemplate) in the grid Column.
 

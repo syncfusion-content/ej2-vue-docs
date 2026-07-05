@@ -6,7 +6,7 @@
 
 <script>
 import { DiagramComponent } from "@syncfusion/ej2-vue-diagrams";
-import { UmlSequenceMessageType, SnapConstraints } from '@syncfusion/ej2-diagrams';
+import { UmlSequenceMessageType, SnapConstraints, UmlSequenceParticipantStereotype } from '@syncfusion/ej2-diagrams';
 
 const // Define the UML Sequence Diagram model with participants and activation boxes
   model = {
@@ -15,12 +15,11 @@ const // Define the UML Sequence Diagram model with participants and activation 
       {
         id: "User",
         content: "User",
-        isActor: true,
+        stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Actor
       },
       {
         id: "System",
         content: "System",
-        isActor: false,
         showDestructionMarker: true,
         // Activation boxes for System
         activationBoxes: [

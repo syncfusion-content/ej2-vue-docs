@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Diagram Component in the Quasar Framework
 
-This section explains how to create a [Quasar](https://quasar.dev/) application from scratch and build a simple diagram using the Syncfusion® Diagram component with the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This section explains how to create a [Quasar](https://quasar.dev/) application from scratch and build a simple diagram using the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component with the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
@@ -91,7 +91,7 @@ Navigate to the project folder:
 cd quasar-project
 ```
 
-## Step 3: Install the Syncfusion® Vue Diagram package
+## Step 3: Install the Vue Diagram package
 
 All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
 
@@ -317,3 +317,5 @@ npm run dev
 Open the generated local URL in the browser. The application displays the flowchart diagram as shown below:
 
 ![Getting started](./images/Getting-started.png)
+
+N> Looking for the full Vue Diagram component overview, features, pricing, and documentation? Visit the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) page.

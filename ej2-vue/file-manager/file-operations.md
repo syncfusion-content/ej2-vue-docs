@@ -1139,3 +1139,5 @@ To perform the image preview support in the [Vue File Manager](https://www.syncf
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/file-manager/getting-started-cs2" %}
+
+N> Looking for the full Vue File Manager component overview, features, pricing, and documentation? Visit the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) page.

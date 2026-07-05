@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Cell Selection in Vue Grid component 
 
-Cell selection in the Grid component allows you to interactively select specific cells or ranges of cells within the grid. This selection can be done effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when you want to highlight, manipulate, or perform actions on specific cell within the Grid.
+Cell selection in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to interactively select specific cells or ranges of cells within the grid. This selection can be done effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when you want to highlight, manipulate, or perform actions on specific cell within the Grid.
 
 > To enable cell selection, you should set the [selectionSettings.mode](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#mode) property to either **Cell** or **Both**. This property determines the selection mode of the grid.
 

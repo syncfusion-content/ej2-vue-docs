@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Data Source in Vue Gantt Chart Component | Syncfusion
-description: Learn how to use a custom data source in the Syncfusion Vue Gantt Chart component.
+description: Learn how to configure a custom data source in the Syncfusion Vue Gantt Chart and dynamically export it using exportProperties.
 control: Custom data source
 platform: ej2-vue
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Holidays in Vue Gantt Chart component | Syncfusion
-description: Learn here all about Holidays in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn how to display and customize holidays in the Vue Gantt Chart using the holidays property to highlight non-working days effectively.
 control: Holidays 
 platform: ej2-vue
 documentation: ug

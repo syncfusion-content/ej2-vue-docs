@@ -154,3 +154,5 @@ npm run dev
 The output will appear as follows:
 
 ![Quasar CLI chart output showing a line chart](./images/quasar-output.png)
+
+N> Looking for the full Vue Charts component overview, features, pricing, and documentation? Visit the [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) page.

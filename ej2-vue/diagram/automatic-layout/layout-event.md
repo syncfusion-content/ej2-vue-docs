@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## DataLoaded event
 
-The [`dataLoaded`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iDataLoadedEventArgs/) event is triggered after the diagram is populated from the external data source.
+The [`dataLoaded`](https://ej2.syncfusion.com/vue/documentation/api/diagram/idataloadedeventargs) event is triggered after the diagram is populated from the external data source.
 
-The following code example explains the data loaded event in the diagram.
+The following code example explains the data loaded event in the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram).
 
 ```javascript
 
@@ -47,7 +47,7 @@ The following code example explains the data loaded event in the diagram.
 
 ## ExpandStateChange event
 
-The [`expandStateChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExpandStateChangeEventArgs/) will be triggered when the state of the expand and collapse icon change for a node.
+The [`expandStateChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iexpandstatechangeeventargs) will be triggered when the state of the expand and collapse icon change for a node.
 
 The following code example explains the `expandStateChange` event in the diagram.
 
@@ -64,7 +64,7 @@ The following code example explains the `expandStateChange` event in the diagram
 
 ## Animation complete event
 
-The [`animationComplete`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#animationcomplete) event is triggered after the animation of the diagram elements is completed. The following example demonstrates how to handle the animation complete event and customize based on the expand state of the root node.
+The [`animationComplete`](https://ej2.syncfusion.com/vue/documentation/api/diagram#animationcomplete) event is triggered after the animation of the diagram elements is completed. The following example demonstrates how to handle the animation complete event and customize based on the expand state of the root node.
 
 
 {% tabs %}
@@ -80,7 +80,7 @@ The [`animationComplete`](https://ej2.syncfusion.com/vue/documentation/api/diagr
 
 ## Layout updated event
 
-The [`layoutUpdated`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#layoutupdated) event is triggered when the layout rendering process in the diagram either starts or completes. This event allows users to track the state of the layout rendering process.
+The [`layoutUpdated`](https://ej2.syncfusion.com/vue/documentation/api/diagram#layoutupdated) event is triggered when the layout rendering process in the diagram either starts or completes. This event allows users to track the state of the layout rendering process.
 
 The following code example explains the layout updated event in the diagram.
 

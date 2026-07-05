@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Getting Started with Quasar and Vue DataGrid Component | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue DataGrid Component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Quasar and Vue Data Grid Component | Syncfusion
+description: Check out and learn about getting started with the Quasar Framework and Vue Data Grid Component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue DataGrid Component in Quasar Framework
+# Getting Started with Vue Data Grid Component in Quasar Framework
 
-A step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataGrid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+A step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataGrid components](../system-requirements)
+[System requirements for Vue Data Grid components](../system-requirements)
 
 ## Setup the Quasar project
 
@@ -40,9 +40,9 @@ Navigate to the project directory:
 cd quasar-project
 ```
 
-The `quasar-project` is now ready to run with default settings. Next, the Vue DataGrid component is added to the project.
+The `quasar-project` is now ready to run with default settings. Next, the Vue Data Grid component is added to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
+## Add Vue Data Grids package
 
 To install the Grids package, use the following command:
 
@@ -52,11 +52,39 @@ npm install @syncfusion/ej2-vue-grids --save
 
 ## Adding CSS reference
 
-The following CSS files are available in the ../node_modules/@syncfusion package folder. Add these as references in **src/App.vue**.
+You can add the CSS files required for the Syncfusion Vue DataGrid component using one of the following methods.
+
+### Option 1: Add CSS References from a theme package
+
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
 
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
+    @import "../node_modules/@syncfusion/ej2-material3-theme/grids/grid/index.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Option 2: Add CSS References from component packages
+
+After installing the grid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/App.vue** file:
+
+```css
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
     @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
@@ -66,11 +94,10 @@ The following CSS files are available in the ../node_modules/@syncfusion package
     @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
     @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
     @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+    @import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
     @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 </style>
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Adding DataGrid component
 

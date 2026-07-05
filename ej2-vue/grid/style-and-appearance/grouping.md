@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Grouping in Vue Grid component
 
-You can customize the appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid component using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
+You can customize the appearance of grouping elements in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 
 ## Customizing the group header
 

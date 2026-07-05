@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tools in Vue Diagram component
 
-The tools in the diagram control can perform various actions such as selecting, panning, and drawing. These tools are explained below.
+The tools in the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control can perform various actions such as selecting, panning, and drawing. These tools are explained below.
 
 - `Select`: Allows you to choose specific elements within the diagram.
 - `Pan`: Enables you to move the view of the diagram to different areas without altering the elements.
