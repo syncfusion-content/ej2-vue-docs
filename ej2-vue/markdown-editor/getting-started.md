@@ -86,7 +86,11 @@ Now, you can start adding Vue Markdown Editor component in the application. For 
 {% include code-snippet/markdown-editor/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 30cc17111653bca1b2d671fed64eef2ecbd1e1e3
 ## Run the project
 
 To run the project, use the following command:
