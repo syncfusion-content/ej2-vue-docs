@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sending additional parameters to server with Vue DataManager | Syncfusion
-description: Learn here all about Sending additional parameters to server with Syncfusion Vue DataManager of Syncfusion Essential JS 2 and more.
+title: Vue DataManager - Sending Additional Parameters to Server | Syncfusion
+description: Pass additional custom parameters to the server with Syncfusion Vue DataManager using addParams method.
 platform: ej2-vue
 control: Sending additional parameters to server in Vue DataManager 
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 In Vue applications, when working with remote data sources, it's often necessary to pass additional parameters to the server to customize the data retrieval process. These parameters could include filters, sorting criteria, or any other information required for server-side processing. 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) provides a convenient method for including custom parameters in data requests, allowing for enhanced server-side processing. By utilizing the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class, you can seamlessly integrate additional information into your data requests.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) provides a convenient method for including custom parameters in data requests, allowing for enhanced server-side processing. By utilizing the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/addparams) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class, helps to seamlessly integrate additional information into the data requests.
 
 In the following example, the top 15 records of the service are displayed in the table using the `addParams` method of `query` class. 
 
@@ -23,12 +23,11 @@ In the following example, the top 15 records of the service are displayed in the
 <template>
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>   
   </div>
@@ -47,9 +46,9 @@ onMounted(() => {
     adaptor: new ODataV4Adaptor()
   });
   dataManager.executeQuery(new Query().addParams('$top', '15')).then((e) => {
-    this.items = e.result;
+    items.value = e.result;
   });
-});
+})
 </script>
 
 <style>
@@ -82,12 +81,11 @@ onMounted(() => {
 <template>
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>   
   </div>

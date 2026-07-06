@@ -1,11 +1,12 @@
----
+
+--
 layout: post
 title: Maintain Record Index In Vue Gantt Chart Component | Syncfusion
 description: Learn here all about Maintain record index in Syncfusion Vue Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Maintain record index
 platform: ej2-vue
 documentation: ug
-domain url: ##DomainURL##
+domainurl: ##DomainURL##
 ---
 
 # Maintain Record Index In Vue Gantt Chart Component
