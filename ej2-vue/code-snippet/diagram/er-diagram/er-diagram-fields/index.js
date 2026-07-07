@@ -1,18 +1,20 @@
 
 import Vue from 'vue';
-import { DiagramPlugin, Diagram, ERDiagrams } from '@syncfusion/ej2-vue-diagrams';
-Diagram.Inject(ERDiagrams);
+import { DiagramPlugin, Diagram, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
+Diagram.Inject(ErDiagrams);
 Vue.use(DiagramPlugin);
 
 // Define an ER entity with various field properties
 var product = {
   id: 'Product',
-  offsetX: 400,
-  offsetY: 350,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
-      annotation: { content: 'Product' }
+      annotation: {
+        content: 'Product'
+      }
     },
     fields: [
       {
@@ -60,16 +62,14 @@ new Vue({
     template: `
 <div id="app">
     <ejs-diagram id="diagram" ref="diagramObj" :width='width' :height='height' :nodes="nodes">
-    </ejs-diagram>
-    
+    </ejs-diagram>  
 </div>
 `,
-
     name: 'app',
     data() {
         return {
             width: "100%",
-            height: "600px",
+            height: "400px",
             nodes: [product],
         }
     }

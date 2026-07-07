@@ -1,81 +1,106 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" ref="diagramObj" :width="width" :height="height" :connectors="connectors"></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagramObj" :width="width" :height="height" :nodes='nodes' :connectors="connectors"
+          :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
     </div>
 </template>
 
 <script>
-import { DiagramComponent, ERDiagrams, ERCardinality } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
-// Define ER connectors with all multiplicity types
-var connectors = [
-  // One
-  {
-    id: 'er_one',
-    sourcePoint: { x: 100, y: 100 },
-    targetPoint: { x: 300, y: 100 },
-    shape: {
-      type: 'Er',
-      sourceMultiplicity: { type: 'One' },
-      targetMultiplicity: { type: 'One' }
+var customer = {
+  id: 'Customer',
+  offsetX: 250,
+  offsetY: 100,
+  shape: {
+    type: 'Er',
+    header: {
+      annotation: {
+        content: 'Customer'
+      }
+    },
+    fields: [
+      {
+        id: 'customer_id',
+        name: 'CustomerID',
+        dataType: 'INT',
+        isPrimaryKey: true
+      }
+    ]
+  },
+  style: {
+    fill: '#ffffff',
+    strokeColor: '#7c3aed',
+    strokeWidth: 1.5
+  }
+};
+
+var order = {
+  id: 'Order',
+  offsetX: 400,
+  offsetY: 250,
+  shape: {
+    type: 'Er',
+    header: {
+      annotation: {
+        content: 'Order'
+      }
+    },
+    fields: [
+      {
+        id: 'order_id',
+        name: 'OrderID',
+        dataType: 'INT',
+        isPrimaryKey: true
+      },
+      {
+        id: 'customer_id_fk',
+        name: 'CustomerID',
+        dataType: 'INT',
+        isForeignKey: true
+      }
+    ]
+  },
+  style: {
+    fill: '#ffffff',
+    strokeColor: '#7c3aed',
+    strokeWidth: 1.5
+  }
+};
+
+var relationship = {
+  id: 'customer_order',
+  sourceID: 'Customer',
+  targetID: 'Order',
+  shape: {
+    type: 'Er',
+    sourceMultiplicity: {
+      type: 'One'
+    },
+    targetMultiplicity: {
+      type: 'OneOrMany'
     }
   },
-  // Many
-  {
-    id: 'er_many',
-    sourcePoint: { x: 100, y: 140 },
-    targetPoint: { x: 300, y: 140 },
-    shape: {
-      type: 'Er',
-      sourceMultiplicity: { type: 'Many' },
-      targetMultiplicity: { type: 'Many' }
+  style: {
+    strokeColor: '#7c3aed',
+    strokeWidth: 1.5
+  },
+  sourceDecorator: {
+    style: {
+      strokeColor: '#7c3aed',
+      strokeWidth: 1.5
     }
   },
-  // One and only one
-  {
-    id: 'er_one_or_one',
-    sourcePoint: { x: 100, y: 180 },
-    targetPoint: { x: 300, y: 180 },
-    shape: {
-      type: 'Er',
-      sourceMultiplicity: { type: 'OneAndOnlyOne' },
-      targetMultiplicity: { type: 'OneAndOnlyOne' }
-    }
-  },
-  // One or many
-  {
-    id: 'er_one_or_many',
-    sourcePoint: { x: 100, y: 220 },
-    targetPoint: { x: 300, y: 220 },
-    shape: {
-      type: 'Er',
-      sourceMultiplicity: { type: 'OneOrMany' },
-      targetMultiplicity: { type: 'OneOrMany' }
-    }
-  },
-  // Zero or one
-  {
-    id: 'er_zero_or_one',
-    sourcePoint: { x: 100, y: 260 },
-    targetPoint: { x: 300, y: 260 },
-    shape: {
-      type: 'Er',
-      sourceMultiplicity: { type: 'ZeroOrOne' },
-      targetMultiplicity: { type: 'ZeroOrOne' }
-    }
-  },
-  // Zero or many
-  {
-    id: 'er_zero_or_many',
-    sourcePoint: { x: 100, y: 300 },
-    targetPoint: { x: 300, y: 300 },
-    shape: {
-      type: 'Er',
-      sourceMultiplicity: { type: 'ZeroOrMany' },
-      targetMultiplicity: { type: 'ZeroOrMany' }
+  targetDecorator: {
+    style: {
+      strokeColor: '#7c3aed',
+      strokeWidth: 1.5
     }
   }
-];
+};
+
+const nodes = [customer, order];
+const connectors = [relationship];
 
 export default {
     name: 'App',
@@ -85,11 +110,17 @@ export default {
     data() {
         return {
             width: '100%',
-            height: '600px',
+            height: '400px',
+            nodes: nodes,
             connectors: connectors,
+            getConnectorDefaults: (connector, diagram) => {
+              connector.cornerRadius = 10;
+              connector.type = 'Orthogonal';
+              return connector;
+            }
         };
     },
-    provide: { diagram: [ERDiagrams] },
+    provide: { diagram: [ErDiagrams] },
 };
 </script>
 

@@ -11,10 +11,7 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in ##Platform_Name## Block Editor control
 
-The Block Editor supports real-time collaborative editing, enabling multiple users to work 
-on the same document simultaneously. Collaboration is powered by **Yjs**, a Conflict-free 
-Replicated Data Type (CRDT) framework that synchronizes document changes across all 
-connected users and automatically resolves conflicts.
+The Block Editor supports real-time collaborative editing, enabling multiple users to work on the same document simultaneously. Collaboration is powered by **Yjs**, a Conflict-free Replicated Data Type (CRDT) framework that synchronizes document changes across all connected users and automatically resolves conflicts.
 
 With collaboration enabled, users can:
 
@@ -24,10 +21,11 @@ With collaboration enabled, users can:
 * Perform collaboration-aware undo and redo operations.
 * Create, restore, compare, export, and import document versions.
 
+*Try the live demo [here](https://ej2.syncfusion.com/)*
+
 ## Prerequisites
 
-Before enabling collaboration, install the `yjs` library and a Yjs provider. See 
-[Yjs Providers](https://docs.yjs.dev/ecosystem/connection-provider) to choose the right provider for your use case.
+Before enabling collaboration, install the `yjs` library and a Yjs provider. See [Yjs Providers](https://docs.yjs.dev/ecosystem/connection-provider) to choose the right provider for your use case.
 
 Inject the `Collaboration` module into the Block Editor before use.
 
@@ -37,8 +35,7 @@ BlockEditor.Inject(Collaboration);
 
 ## Yjs Providers
 
-A Yjs provider handles the transport of document updates between connected users. Choose a 
-provider based on your deployment requirements.
+A Yjs provider handles the transport of document updates between connected users. Choose a provider based on your deployment requirements.
 
 | Provider | Type | Use Case |
 | -------- | ---- | -------- |
@@ -53,14 +50,7 @@ provider based on your deployment requirements.
 
 ## Configure collaboration settings
 
-Use the `collaborationSettings` property of type `CollaborationSettingsModel` to configure collaboration settings for your Block Editor. It provides the following properties that allow you to customize the collaboration behavior:
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `provider` | `any` | Real-time transport used to synchronize document changes. |
-| `enableAwareness` | `boolean` | Enables user presence, remote cursors, and text selection overlays. |
-| `adapter` | `CollaborationAdapter` | Provides the Yjs runtime and shared XML fragment. |
-| `versionHistory` | `VersionHistorySettingsModel` | Configures document version history support. |
+Use the `collaborationSettings` property of type `CollaborationSettingsModel` to configure collaboration settings for your Block Editor. It provides properties such as `provider`, `enableAwareness`, `adapter` and `versionHistory` which allows to customize the collaboration behavior.
 
 ## Getting Started
 
@@ -92,9 +82,7 @@ const adapter = new YjsAdapter({
 
 ### Step 3: Configure a provider
 
-Create a provider that connects users to the same shared document. The following example 
-uses `y-websocket` for production use. For local development, replace it with `y-webrtc` 
-or a PartyKit provider — no server setup is required.
+Create a provider that connects users to the same shared document. The following example uses `y-websocket` for production use. For local development, replace it with `y-webrtc` or a PartyKit provider — no server setup is required.
 
 **Production (y-websocket):**
 
@@ -118,8 +106,7 @@ const provider = new WebrtcProvider('document-room-id', yDoc);
 
 ### Step 4: Enable Collaboration
 
-Pass the adapter and provider to the Block Editor through the `collaborationSettings` 
-property.
+Pass the adapter and provider to the Block Editor through the `collaborationSettings` property.
 
 ```html
 <template>
@@ -140,9 +127,7 @@ const collaborationSettings = {
 
 ## User presence and remote cursors
 
-The Block Editor can display remote cursors, text selection overlays, and user details on 
-hover. To enable these user presence features, set `enableAwareness` to `true` in 
-`collaborationSettings` property.
+The Block Editor can display remote cursors, text selection overlays, and user details on hover. To enable these user presence features, set `enableAwareness` to `true` in `collaborationSettings` property.
 
 ```html
 <template>
@@ -164,17 +149,7 @@ const collaborationSettings = {
 
 ## Configure the current user
 
-Set the current user's display name and cursor highlight avatarBgColor using the `users` and 
-`currentUserId` properties. The `avatarBgColor` value is used for that user's remote cursor and 
-text selection overlay.
-
-The following properties are available when configuring users via the `users` property.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `id` | `string` | Unique identifier for the user. |
-| `user` | `string` | Display name shown on remote cursors and presence indicators. |
-| `avatarBgColor` | `string` | Hex color used for this user's remote cursor and selection highlight. |
+Set the current user's display name and cursor highlight color using the `users` and `currentUserId` properties. The `avatarBgColor` value is used for that user's remote cursor and text selection overlay. The users property includes `id`, `user` and `avatarBgColor`.
 
 ```html
 <template>
@@ -226,14 +201,11 @@ Only changes made by the current user are included in that user's undo history. 
 
 ## Version history
 
-`Version History` allows you to capture document snapshots and restore earlier versions. 
-This is a built-in capability of the Block Editor and does not require a third-party 
-service.
+`Version History` allows you to capture document snapshots and restore earlier versions. This is a built-in capability of the Block Editor and does not require a third-party service.
 
 ### Enable version history
 
-Inject the `VersionHistory` module and configure the `versionHistory` property under 
-`collaborationSettings` property.
+Inject the `VersionHistory` module and configure the `versionHistory` property under `collaborationSettings` property.
 
 ```typescript
 BlockEditor.Inject(VersionHistory);
@@ -276,8 +248,7 @@ const collaborationSettings = {
 
 ### Configure snapshot storage
 
-Version snapshots need to be persisted to enable version history across browser sessions. 
-Implement the `IVersionStorage` interface to provide a custom storage backend for managing snapshots. You can use IndexedDB, a backend database, or any other storage solution suitable for your deployment.
+Version snapshots need to be persisted to enable version history across browser sessions. Implement the `IVersionStorage` interface to provide a custom storage backend for managing snapshots. You can use IndexedDB, a backend database, or any other storage solution suitable for your deployment.
 
 The `IVersionStorage` interface defines the following methods:
 
@@ -300,6 +271,8 @@ await versionHistory.whenReady();
 ```
 
 ### Methods
+
+The following are the methods available in the `IVersionHistory`:
 
 #### Create a snapshot
 
@@ -351,8 +324,7 @@ Compares two snapshots to identify differences such as added, removed, or modifi
 const diff = versionHistory.compareVersions(snapshotIdA, snapshotIdB);
 ```
 
-The returned `VersionDiff` object provides a summary of the differences between the two 
-selected versions.
+The returned `VersionDiff` object provides a summary of the differences between the two selected versions.
 
 #### Export a snapshot
 
@@ -442,16 +414,11 @@ The following properties are available in `CollaborationSettingsModel`.
 
 ## Best Practices
 
-* **Use WebRTC or PartyKit for development** — These providers require no server setup and 
-  are ideal for local testing and prototyping before moving to a production provider.
-* **Use WebSocket-based providers in production** — `y-websocket`, Hocuspocus, or a managed 
-  service like Liveblocks provides reliable, low-latency, persistent synchronization at scale.
-* **Use stable room identifiers** — Use a unique document ID as the collaboration room name 
-  to prevent unintended document sharing between different documents.
-* **Persist snapshots externally** — Store snapshots in a database or cloud storage to 
-  preserve version history across sessions.
-* **Enable awareness selectively** — Disable `enableAwareness` when user presence 
-  information is not required to reduce network and processing overhead.
+* **Use WebRTC or PartyKit for development** - These providers require no server setup and are ideal for local testing and prototyping before moving to a production provider.
+* **Use WebSocket-based providers in production** - `y-websocket`, Hocuspocus, or a managed service like Liveblocks provides reliable, low-latency, persistent synchronization at scale.
+* **Use stable room identifiers** - Use a unique document ID as the collaboration room name to prevent unintended document sharing between different documents.
+* **Persist snapshots externally** - Store snapshots in a database or cloud storage to preserve version history across sessions.
+* **Enable awareness selectively** - Disable `enableAwareness` when user presence information is not required to reduce network and processing overhead.
 
 ## Troubleshooting
 

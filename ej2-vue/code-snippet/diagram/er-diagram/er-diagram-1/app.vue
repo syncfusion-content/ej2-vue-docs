@@ -1,21 +1,29 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagramObj" :width="width" :height="height" :nodes="nodes"></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram
+      id="diagram"
+      ref="diagramObj"
+      :width="width"
+      :height="height"
+      :nodes="nodes"
+    />
+  </div>
 </template>
 
 <script>
-import { DiagramComponent, ERDiagrams } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
 // Define a basic ER entity (Customer table)
 var customer = {
   id: 'Customer',
-  offsetX: 400,
-  offsetY: 300,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
-      annotation: { content: 'Customer' }
+      annotation: {
+        content: 'Customer',
+      },
     },
     fields: [
       {
@@ -23,37 +31,39 @@ var customer = {
         name: 'CustomerID',
         dataType: 'INT',
         isPrimaryKey: true,
-        constraints: ['NotNull']
+        constraints: ['NotNull'],
       },
       {
         id: 'cust_firstname',
         name: 'FirstName',
         dataType: 'VARCHAR(50)',
-        constraints: ['NotNull']
+        constraints: ['NotNull'],
       },
       {
         id: 'cust_email',
         name: 'Email',
         dataType: 'VARCHAR(100)',
-        constraints: ['Unique']
-      }
-    ]
-  }
+        constraints: ['Unique'],
+      },
+    ],
+  },
 };
 
 export default {
-    name: 'App',
-    components: {
-        'ejs-diagram': DiagramComponent,
-    },
-    data() {
-        return {
-            width: '100%',
-            height: '600px',
-            nodes: [customer],
-        };
-    },
-    provide: { diagram: [ERDiagrams] },
+  name: 'App',
+  components: {
+    'ejs-diagram': DiagramComponent,
+  },
+  data() {
+    return {
+      width: '100%',
+      height: '400px',
+      nodes: [customer],
+    };
+  },
+  provide: {
+    diagram: [ErDiagrams],
+  },
 };
 </script>
 

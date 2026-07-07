@@ -6,18 +6,19 @@
 
 <script setup>
 import { provide, ref, onMounted } from "vue";
-import { DiagramComponent as EjsDiagram, ERDiagrams } from '@syncfusion/ej2-vue-diagrams';
-
+import { DiagramComponent as EjsDiagram, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
 // Define an ER entity with various field properties
 var product = {
   id: 'Product',
-  offsetX: 400,
-  offsetY: 350,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
-      annotation: { content: 'Product' }
+      annotation: {
+        content: 'Product'
+      }
     },
     fields: [
       {
@@ -63,9 +64,9 @@ var product = {
 const nodes = [product];
 
 const width = "100%";
-const height = "600px";
+const height = "400px";
 
-provide('diagram', [ERDiagrams]);
+provide('diagram', [ErDiagrams]);
 
 </script>
 
