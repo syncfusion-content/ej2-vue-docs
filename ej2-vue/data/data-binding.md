@@ -1,30 +1,34 @@
 ---
 layout: post
-title: Vue DataManger - Data Binding | Syncfusion
-description: Explore local and remote data binding in Syncfusion Vue DataManager, bind JavaScript arrays or REST APIs with executeLocal and executeQuery.
-control: Data binding 
+title: Data binding in Vue DataManager | Syncfusion
+description: Learn here all about Data binding in Syncfusion Vue DataManager of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
+control: Data binding 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data Binding in Vue DataManager
+# Data binding in Vue DataManager
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager enables efficient data management in Vue applications. It supports both RESTful JSON data services binding and local JavaScript object array binding, providing flexibility to handle and manipulate data.
 
-Data binding is the process of connecting Syncfusion Vue components with data sources, allowing the UI to reflect changes in the data automatically. [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) simplifies this process by providing seamless integration with Vue components, enabling efficient data binding without unnecessary code.
+Data binding is the process of connecting UI elements with data sources, allowing the UI to reflect changes in the data automatically. [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) simplifies this process by providing seamless integration with Vue components, enabling efficient data binding without unnecessary code.
 
 ## Local data binding
 
-Local data binding allows to bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) directly to an array of JavaScript objects stored within the application. This approach is simple and efficient for small datasets or static data that does not need to be fetched from a server.
+Local data binding allows you to bind DataManager directly to an array of JavaScript objects stored within the application. This method is particularly useful for small-scale applications or when the data does not need to be fetched from external sources.
 
-DataManager initialization enables binding local data by assigning the array of JavaScript objects to the `json` property or passing them to the constructor during instantiation. Once initialized, the array of JavaScript objects becomes the datasource for `DataManager`, enabling seamless querying and data manipulation. Follow these steps to bind local data using Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
+**Initializing DataManager with local data**
 
-1. Define a local array of objects.
-2. Initialize DataManager with the `json` property set to that array.
-3. Use the `executeLocal` method of DataManager to run queries and perform data operations directly on local datasets.
+You can initialize [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) with local data by either assigning the array of JavaScript objects to the **json** property or passing them to the constructor during instantiation. Once initialized, the array of JavaScript objects becomes the datasource for `DataManager`, enabling you to query and manipulate the data seamlessly.
 
-The following example demonstrates how to bind JSON data using the [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of `DataManager`.
+Follow these steps to bind local data using Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
+
+1. Define your data directly in your Vue component or import it from an external source.
+
+2. Use the `DataManager` class to create a data source and bind it to your data.
+
+The following example demonstrates how to bind JSON data using the [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -33,11 +37,12 @@ The following example demonstrates how to bind JSON data using the [executeLocal
 <template>
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>  
   </div>
@@ -80,11 +85,12 @@ const items = new DataManager(data).executeLocal(new Query().take(12));
 <template>
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>  
   </div>
@@ -133,15 +139,17 @@ export default {
 
 ## Remote data binding
 
+Remote data binding with [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) in Vue allows you to connect your application to a remote data source by specifying the service endpoint URL. This approach is Essential<sup style="font-size:70%">&reg;</sup> for applications that require real-time or dynamic data fetching from a server, enhancing the efficiency of data interaction. `DataManager` handles all communication with the data server using queries.
+
 Remote data binding is particularly useful in scenarios where large datasets need to be fetched from a server, real-time data updates are required, or data needs to be accessed from an external API or database.
 
 Follow these steps to bind remote data using Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager`:
 
 1. Start by creating an instance of `DataManager` and assign the service endpoint URL to the `url` property.
 
-2. Use the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager#executequery) method to send a [query](https://ej2.syncfusion.com/documentation/api/data/query) to the server and fetch data in JSON format.
+2. Use the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executequery) method to send a [query](https://ej2.syncfusion.com/documentation/api/data/query) to the server and fetch data in JSON format.
 
-3. After calling `executeQuery`, the DataManager waits for the server response, converts it into a JSON format, and returns the data to the UI.
+3. After calling `executeQuery`, DataManager waits for the server response, converts it into a JSON format, and return the data to the UI.
 
 The following example demonstrates how to bind JSON data using the `executeQuery` method of `DataManager`.
 
@@ -152,11 +160,12 @@ The following example demonstrates how to bind JSON data using the `executeQuery
 <template>
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>   
   </div>
@@ -174,7 +183,7 @@ onMounted(() => {
     adaptor: new ODataV4Adaptor()
   });
   dataManager.executeQuery(new Query().take(12)).then((e) => {
-    items.value = e.result;
+    this.items = e.result;
   });
 })
 </script>
@@ -209,11 +218,12 @@ onMounted(() => {
 <template>
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>   
   </div>
@@ -269,14 +279,4 @@ export default {
         
 {% previewsample "page.domainurl/code-snippet/data/data-binding/default-cs2" %}
 
-> - The queried data will not be cached locally unless offline mode is enabled.
-> - DataManager is directly bound to Syncfusion components such as the Grid through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property rather than using `executeQuery`. Refer to the Grid data‑binding [documentation](https://ej2.syncfusion.com/vue/documentation/grid/data-binding/data-binding).
-
-## See Also
-
-* [Binding with ODataV4 service](./adaptors/odatav4-adaptor)
-* [Binding with Web API](./adaptors/web-api-adaptor)
-* [How to write custom adaptor](./adaptors/adaptors#writing-custom-adaptor)
-* [How to work in offline mode](./how-to#work-in-offline-mode)
-* [How to send additional parameters](./how-to#sending-additional-parameters-to-server)
-* [How to add custom request headers](./how-to#adding-custom-headers)
+> The queried data will not be cached locally unless offline mode is enabled.

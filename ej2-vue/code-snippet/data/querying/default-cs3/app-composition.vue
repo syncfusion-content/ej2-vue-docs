@@ -5,11 +5,13 @@
         <th>Order ID</th>
         <th>Customer ID</th>
         <th>Employee Name</th>
+        <th>Ship Country</th>
       </tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.Employee.FirstName }}</td>
+        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>
   </div>
@@ -28,7 +30,7 @@ onMounted(() => {
     adaptor: new ODataV4Adaptor()
   });
   dataManager.executeQuery(new Query()
-    .expand('Employee').take(8)).then((e) => {
+    .expand('Employee').take(12)).then((e) => {
       items.value = e.result;
     });
 })
