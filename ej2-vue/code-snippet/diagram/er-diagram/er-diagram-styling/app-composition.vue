@@ -6,8 +6,7 @@
 
 <script setup>
 import { provide, ref, onMounted } from "vue";
-import { DiagramComponent as EjsDiagram, ERDiagrams } from '@syncfusion/ej2-vue-diagrams';
-
+import { DiagramComponent as EjsDiagram, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
 // Define ER entities with custom styling
 const customer = {
@@ -57,8 +56,8 @@ const customer = {
 
 const product = {
   id: 'Product',
-  offsetX: 850,
-  offsetY: 300,
+  offsetX: 600,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
@@ -105,9 +104,9 @@ const product = {
 const nodes = [customer, product];
 
 const width = "100%";
-const height = "600px";
+const height = "400px";
 
-provide('diagram', [ERDiagrams]);
+provide('diagram', [ErDiagrams]);
 
 </script>
 

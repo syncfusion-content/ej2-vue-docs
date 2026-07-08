@@ -5,10 +5,10 @@ Diagram.Inject(ERDiagrams);
 Vue.use(DiagramPlugin);
 
 // Define ER entities with custom styling
-var customer = {
+const customer = {
   id: 'Customer',
-  offsetX: 300,
-  offsetY: 300,
+  offsetX: 200,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
@@ -50,10 +50,10 @@ var customer = {
   }
 };
 
-var product = {
+const product = {
   id: 'Product',
-  offsetX: 850,
-  offsetY: 300,
+  offsetX: 600,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
@@ -106,12 +106,11 @@ new Vue({
     
 </div>
 `,
-
     name: 'app',
     data() {
         return {
             width: "100%",
-            height: "600px",
+            height: "400px",
             nodes: [customer, product],
         }
     }
