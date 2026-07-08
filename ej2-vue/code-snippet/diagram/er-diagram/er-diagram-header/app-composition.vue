@@ -6,23 +6,25 @@
 
 <script setup>
 import { provide, ref, onMounted } from "vue";
-import { DiagramComponent as EjsDiagram, ERDiagrams } from '@syncfusion/ej2-vue-diagrams';
-
+import { DiagramComponent as EjsDiagram, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
 // Define an ER entity with customized header
-const customer = {
+var customer = {
   id: 'Customer',
-  offsetX: 400,
-  offsetY: 300,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
-      annotation: { content: 'CUSTOMER TABLE', style: {
-        color: 'white',
-        fontSize: 13,
-        bold: true,
-        fontFamily: 'Arial'
-      }},
+      annotation: {
+        content: 'CUSTOMER TABLE',
+        style: {
+          color: 'white',
+          fontSize: 13,
+          bold: true,
+          fontFamily: 'Arial'
+        }
+      },
       height: 35,
       style: {
         fill: '#2E75B6'
@@ -52,9 +54,9 @@ const customer = {
 const nodes = [customer];
 
 const width = "100%";
-const height = "600px";
+const height = "400px";
 
-provide('diagram', [ERDiagrams]);
+provide('diagram', [ErDiagrams]);
 
 </script>
 

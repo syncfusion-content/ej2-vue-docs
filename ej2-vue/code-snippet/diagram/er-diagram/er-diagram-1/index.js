@@ -1,18 +1,21 @@
 
 import Vue from 'vue';
-import { DiagramPlugin, Diagram, ERDiagrams } from '@syncfusion/ej2-vue-diagrams';
-Diagram.Inject(ERDiagrams);
+import { DiagramPlugin, Diagram, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
+Diagram.Inject(ErDiagrams);
 Vue.use(DiagramPlugin);
 
 // Define a basic ER entity (Customer table)
+// Define a basic ER entity (Customer table)
 var customer = {
   id: 'Customer',
-  offsetX: 400,
-  offsetY: 300,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
-      annotation: { content: 'Customer' }
+      annotation: {
+        content: 'Customer',
+      },
     },
     fields: [
       {
@@ -20,39 +23,38 @@ var customer = {
         name: 'CustomerID',
         dataType: 'INT',
         isPrimaryKey: true,
-        constraints: ['NotNull']
+        constraints: ['NotNull'],
       },
       {
         id: 'cust_firstname',
         name: 'FirstName',
         dataType: 'VARCHAR(50)',
-        constraints: ['NotNull']
+        constraints: ['NotNull'],
       },
       {
         id: 'cust_email',
         name: 'Email',
         dataType: 'VARCHAR(100)',
-        constraints: ['Unique']
-      }
-    ]
-  }
+        constraints: ['Unique'],
+      },
+    ],
+  },
 };
+
 new Vue({
-    el: '#app',
-    template: `
+  el: '#app',
+  template: `
 <div id="app">
     <ejs-diagram id="diagram" ref="diagramObj" :width='width' :height='height' :nodes="nodes">
-    </ejs-diagram>
-    
+    </ejs-diagram>   
 </div>
 `,
-
-    name: 'app',
-    data() {
-        return {
-            width: "100%",
-            height: "600px",
-            nodes: [customer],
-        }
+  name: 'app',
+  data() {
+    return {
+      width: "100%",
+      height: "400px",
+      nodes: [customer],
     }
+  }
 });

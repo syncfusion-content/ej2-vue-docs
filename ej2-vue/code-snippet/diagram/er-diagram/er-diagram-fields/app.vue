@@ -5,17 +5,19 @@
 </template>
 
 <script>
-import { DiagramComponent, ERDiagrams } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
 // Define an ER entity with various field properties
 var product = {
   id: 'Product',
-  offsetX: 400,
-  offsetY: 350,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
-      annotation: { content: 'Product' }
+      annotation: {
+        content: 'Product'
+      }
     },
     fields: [
       {
@@ -58,7 +60,6 @@ var product = {
   }
 };
 
-
 export default {
     name: 'App',
     components: {
@@ -67,11 +68,11 @@ export default {
     data() {
         return {
             width: '100%',
-            height: '600px',
+            height: '400px',
             nodes: [product],
         };
     },
-    provide: { diagram: [ERDiagrams] },
+    provide: { diagram: [ErDiagrams] },
 };
 </script>
 

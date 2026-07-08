@@ -1,23 +1,26 @@
 
 import Vue from 'vue';
-import { DiagramPlugin, Diagram, ERDiagrams } from '@syncfusion/ej2-vue-diagrams';
-Diagram.Inject(ERDiagrams);
+import { DiagramPlugin, Diagram, ErDiagrams } from '@syncfusion/ej2-vue-diagrams';
+Diagram.Inject(ErDiagrams);
 Vue.use(DiagramPlugin);
 
 // Define an ER entity with customized header
 var customer = {
   id: 'Customer',
-  offsetX: 400,
-  offsetY: 300,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
-      annotation: { content: 'CUSTOMER TABLE', style: {
-        color: 'white',
-        fontSize: 13,
-        bold: true,
-        fontFamily: 'Arial'
-      }},
+      annotation: {
+        content: 'CUSTOMER TABLE',
+        style: {
+          color: 'white',
+          fontSize: 13,
+          bold: true,
+          fontFamily: 'Arial'
+        }
+      },
       height: 35,
       style: {
         fill: '#2E75B6'
@@ -53,12 +56,11 @@ new Vue({
     
 </div>
 `,
-
     name: 'app',
     data() {
         return {
             width: "100%",
-            height: "600px",
+            height: "400px",
             nodes: [customer],
         }
     }
