@@ -123,7 +123,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-material3-theme/grids/grid/index.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
 </style>
 
 {% endhighlight %}
