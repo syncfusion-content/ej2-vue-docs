@@ -15,7 +15,7 @@ const // Define the UML Sequence Diagram model with participants and activation 
       {
         id: "User",
         content: "User",
-        stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Actor
+        stereotype: UmlSequenceParticipantStereotype.Actor
       },
       {
         id: "System",
