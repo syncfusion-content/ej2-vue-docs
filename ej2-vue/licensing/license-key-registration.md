@@ -36,11 +36,11 @@ createApp(App).mount('#app')
 
 > License key registration is required from 2022 Vol 1 v20.1.0.47 onwards for Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 products.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key in the Nuxt project
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key in the Nuxt project
 
 Register the license key in the `app.vue` file of the Nuxt project.
 
-```ts
+```vue
 <script>
 import { registerLicense } from '@syncfusion/ej2-base';
 
