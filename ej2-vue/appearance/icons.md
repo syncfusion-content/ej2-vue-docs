@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Predefined Icons Library in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Component
+# Predefined Icons Library in Syncfusion® Vue Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> icon library provides a collection of pre-designed icons to enhance application user interfaces. These icons are base64-formatted font icons that help create a cohesive, visually appealing design across applications.
 
@@ -43,14 +43,14 @@ Refer to the following syntax to use icons in a Vue application:
 `[src/App.vue]`
 
 {% tabs %}
-{% highlight vue tabtitle="Theme Package" %}
+{% highlight html tabtitle="Theme Package" %}
 
 <style>
 @import "../node_modules/@syncfusion/ej2-<theme-name>-theme/styles/icons/<theme_name>.css";
 </style>
 
 {% endhighlight %}
-{% highlight vue tabtitle="Icon Package" %}
+{% highlight html tabtitle="Icon Package" %}
 
 <style>
 @import "../node_modules/@syncfusion/ej2-icons/styles/<theme_name>.css";
@@ -97,7 +97,7 @@ To use the icons from the CDN, refer to the icons by URLs in the application. Th
 
 Let's create a Vue application using the following command:
 
-For an introduction and configuration of the common specifications, see [getting started with the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue application](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial).
+For an introduction and configuration of the common specifications, see [getting started with the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue application](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-js-composition).
 
 ### Using icons directly in HTML element
 
