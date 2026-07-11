@@ -22,6 +22,7 @@ System.config({
         "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
+        "@syncfusion/ej2-layouts": "syncfusion:ej2-layouts/dist/ej2-layouts.umd.min.js",
         "@syncfusion/ej2-popups": "syncfusion:ej2-popups/dist/ej2-popups.umd.min.js",
         "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
         "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
@@ -30,6 +31,7 @@ System.config({
         "@syncfusion/ej2-vue-interactive-chat": "syncfusion:ej2-vue-interactive-chat/dist/ej2-vue-interactive-chat.umd.min.js",
         "@syncfusion/ej2-vue-inputs": "syncfusion:ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js",
         "@syncfusion/ej2-vue-navigations": "syncfusion:ej2-vue-navigations/dist/ej2-vue-navigations.umd.min.js",
+        "@syncfusion/ej2-vue-layouts": "syncfusion:ej2-vue-layouts/dist/ej2-vue-layouts.umd.min.js",
         "@syncfusion/ej2-vue-notifications": "syncfusion:ej2-vue-notifications/dist/ej2-vue-notifications.umd.min.js",
         "@syncfusion/ej2-markdown-converter":"syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
     }

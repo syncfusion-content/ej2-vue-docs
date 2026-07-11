@@ -10,27 +10,39 @@ domainurl: ##DomainURL##
 
 # UML Sequence Diagram in Vue Diagram component
 
-A UML sequence diagram is an interaction diagram that demonstrates how objects interact with each other and the order of these interactions. The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control provides comprehensive support for creating and visualizing UML sequence diagrams through the [UmlSequenceDiagramModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceDiagramModel/). To enable this functionality, assign the `UmlSequenceDiagramModel` to the [model](https://ej2.syncfusion.com/vue/documentation/api/diagram/#model) property of the diagram control.
+A UML sequence diagram is an interaction diagram that demonstrates how objects interact with each other and the order of these interactions. The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control provides comprehensive support for creating and visualizing UML sequence diagrams through the [UmlSequenceDiagramModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceDiagramModel). To enable this functionality, assign the `UmlSequenceDiagramModel` to the [model](https://ej2.syncfusion.com/vue/documentation/api/diagram#model) property of the diagram control.
 
 ## UML Sequence Diagram Elements
 
-A sequence diagram includes several key elements such as participants, messages, activation boxes, and fragments. The sections below demonstrate how to define and configure these components using the diagram control.
+A sequence diagram includes several key elements, such as participants, messages, activation boxes, and fragments. The sections below demonstrate how to define and configure these components using the Diagram control.
 
 ### Participants
 
-[UmlSequenceParticipantModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceParticipantModel/) in a sequence diagram represent the entities that interact with each other, appearing at the top of the diagram with lifelines extending vertically downward.
+[UmlSequenceParticipantModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceParticipantModel) represents an entity that interacts with other entities in a sequence diagram. Participants appear at the top of the diagram, with lifelines extending vertically downward.
 
 #### UmlSequenceParticipantModel Properties
 
 | Property | Type | Description |
 |---|---|---|
-| id | string \| number | A unique identifier for the participant |
-| content | string | The display text for the participant |
-| isActor | boolean | Specifies whether the participant is displayed as an actor (true) or an object (false) |
-| showDestructionMarker | boolean | Indicates whether a destruction marker (X) is shown at the end of the lifeline |
-| activationBoxes | UmlSequenceActivationBoxModel[] | A collection of activation boxes associated with the participant |
+| id | string \| number | A unique identifier for the participant. |
+| content | string | The display text of the participant. |
+| showDestructionMarker | boolean | Indicates whether a destruction marker (X) is shown at the end of the participant lifeline. |
+| activationBoxes | UmlSequenceActivationBoxModel[] | A collection of activation boxes associated with the participant. |
+| stereotype | UmlSequenceParticipantStereotype | The visual stereotype used to render the participant header, such as Actor, Boundary, Control, Entity, or Database. |
 
-The following code example illustrates how to create participants:
+#### Participant Stereotypes
+
+The [UmlSequenceParticipantStereotype](https://ej2.syncfusion.com/documentation/api/diagram/umlSequenceParticipantStereotype) enum defines the visual style of a participant. A stereotype helps show the role of a participant in the interaction.
+
+| Stereotype | Description | Shape |
+|---|---|---|
+| Default | Standard object participant displayed as a labeled rectangle. | ![Default stereotype](./images/umlSequenceDiagram-images/Default.png) |
+| Actor | External person or system that interacts with the process. | ![Actor stereotype](./images/umlSequenceDiagram-images/Actor.png) |
+| Boundary | Interface or entry point, such as a UI, API gateway, or external system. | ![Boundary stereotype](./images/umlSequenceDiagram-images/Boundary.png) |
+| Control | Object that manages the flow, such as a controller or coordinator. | ![Control stereotype](./images/umlSequenceDiagram-images/Control.png) |
+| Entity | Object that represents data, domain objects, or stored information. | ![Entity stereotype](./images/umlSequenceDiagram-images/Entity.png) |
+| Database | Database or persistent storage system, displayed using a cylindrical shape. | ![Database stereotype](./images/umlSequenceDiagram-images/Database.png) |
+
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -45,7 +57,7 @@ The following code example illustrates how to create participants:
 
 ### Messages
 
-[UmlSequenceMessageModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceMessageModel/) represents communication between participants and are displayed as arrows connecting lifelines.
+[UmlSequenceMessageModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceMessageModel) represents communication between participants and are displayed as arrows connecting lifelines.
 
 #### Types of Messages
 
@@ -83,7 +95,7 @@ The following code example illustrates how to create messages:
 
 ### Activation Boxes
 
-[UmlSequenceActivationBoxModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceActivationBoxModel/) represents periods when a participant is active and processing a message. They appear as thin rectangles on participant lifelines.
+[UmlSequenceActivationBoxModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceActivationBoxModel) represents periods when a participant is active and processing a message. They appear as thin rectangles on participant lifelines.
 
 #### UmlSequenceActivationBoxModel Properties
 
@@ -108,11 +120,11 @@ The following code example illustrates how to create activation boxes:
 
 ### Fragments
 
-[UmlSequenceFragmentModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceFragmentModel/) groups a set of messages based on specific conditions in a sequence diagram. They are displayed as rectangular enclosures that visually separate conditional or looping interactions.
+[UmlSequenceFragmentModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceFragmentModel) groups a set of messages based on specific conditions in a sequence diagram. They are displayed as rectangular enclosures that visually separate conditional or looping interactions.
 
 #### Types of Fragments
 
-The [UmlSequenceFragmentType](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceFragmentType/) enum defines the following fragment types:
+The [UmlSequenceFragmentType](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceFragmentType) enum defines the following fragment types:
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
@@ -151,7 +163,7 @@ The following code example illustrates how to create fragments:
 
 ### Customizing Participant Spacing in Sequence Diagram 
 
-The [spaceBetweenParticipants](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceDiagramModel/#spaceBetweenParticipants) property in `UmlSequenceDiagramModel` controls the horizontal spacing between participants. The default value is 100, and it can be adjusted based on your layout requirements.
+The [spaceBetweenParticipants](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceDiagramModel#spaceBetweenParticipants) property in `UmlSequenceDiagramModel` controls the horizontal spacing between participants. The default value is 100, and it can be adjusted based on your layout requirements.
 
 ```javascript
 // Define the UML Sequence Diagram model

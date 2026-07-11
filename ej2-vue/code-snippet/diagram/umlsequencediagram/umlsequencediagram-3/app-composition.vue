@@ -16,7 +16,7 @@ const model = {
     {
       id: "User",
       content: "User",
-      stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Actor
+      stereotype: UmlSequenceParticipantStereotype.Actor
     },
     {
       id: "System",
