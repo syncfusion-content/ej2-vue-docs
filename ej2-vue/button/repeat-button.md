@@ -73,23 +73,13 @@ The `isRepeat` property indicates whether the `clicked` event was triggered by t
 
 The following example demonstrates repeat-click functionality with configurable delay and interval settings. The sample also tracks initial click events separately from repeat-generated events.
 
-{% if page.publishingplatform == "vue" %}
-
 {% tabs %}
-{% highlight vue tabtitle="app.vue" %}
-{% include code-snippet/button/default-cs19/app.vue %}
-{% endhighlight %}
-{% highlight vue tabtitle="app-composition.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs19/app-composition.vue %}
 {% endhighlight %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/button/default-cs19/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/button/default-cs19/index.html %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
+        
 {% previewsample "page.domainurl/code-snippet/button/default-cs19" %}
-
-{% endif %}
