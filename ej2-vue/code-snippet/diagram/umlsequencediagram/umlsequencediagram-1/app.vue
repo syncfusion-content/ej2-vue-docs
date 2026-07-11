@@ -13,7 +13,7 @@ const model = {
     {
       id: "User", // Unique identifier for the participant
       content: "User", // Label or name of the participant
-      stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Actor // Indicates that the participant is an actor
+      stereotype: UmlSequenceParticipantStereotype.Actor // Indicates that the participant is an actor
     },
     {
       id: "System", // Unique identifier for the participant

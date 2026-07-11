@@ -151,6 +151,7 @@ const onResponseToolbarItemClicked = (args) => {
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 
 </style>

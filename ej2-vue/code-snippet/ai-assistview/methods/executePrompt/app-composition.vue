@@ -29,6 +29,7 @@ const buttonClick = () => {
 @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
 
 #executePrompt {
