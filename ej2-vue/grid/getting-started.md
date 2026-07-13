@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue DataGrid Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the [Vue DataGrid](https://www.syncfusion.com/vue-components/vue-grid) component.
 
 To get started quickly with Vue DataGrid, check this video:
 
@@ -46,7 +46,7 @@ Navigate to the project directory:
 cd quickstart
 ```
 
-## Add Vue Data Grids package
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
 
 To install the Grids package, use the following command:
 
@@ -131,7 +131,7 @@ or
 ```bash
 yarn run serve
 ```
-N> Looking for the full Vue Data Grid component overview, features, pricing, and documentation? Visit the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) page.
+N> Looking for the full Vue DataGrid component overview, features, pricing, and documentation? Visit the [Vue DataGrid](https://www.syncfusion.com/vue-components/vue-grid) page.
 
 ## See also
 

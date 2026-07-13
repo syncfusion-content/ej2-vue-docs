@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 Batch editing is a powerful feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component that allows you to edit multiple cells simultaneously. It provides a convenient way to make changes to multiple cells and save them in a single request to the data source. This feature is particularly useful when dealing with large datasets or when you need to update multiple cells at once.
 
-In batch edit mode, when you double-click on a grid cell, the target cell changes to an editable state. You can perform bulk update of the added, changed, and deleted data by either clicking on the toolbar's **Update** button or by externally invoking the [batchSave](https://ej2.syncfusion.com/vue/documentation/api/grid/edit/#batchsave) method.
+In batch edit mode, when you double-click on a grid cell, the target cell changes to an editable state. You can perform bulk update of the added, changed, and deleted data by either clicking on the toolbar's **Update** button or by externally invoking the [batchSave](https://ej2.syncfusion.com/vue/documentation/api/grid/edit#batchsave) method.
 
-To enable batch editing mode, you need to set the [editSettings.mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) property to **Batch**. This property determines the editing mode of the Grid and allows you to activate the batch editing feature.
+To enable batch editing mode, you need to set the [editSettings.mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings#mode) property to **Batch**. This property determines the editing mode of the Grid and allows you to activate the batch editing feature.
 
 Here's an example how to enable batch editing in the Vue grid component:
 
@@ -46,17 +46,17 @@ In the following example, the **TotalCost** column value is updated based on cha
         
 {% previewsample "page.domainurl/code-snippet/grid/edit/default-cs2" %}
 
-> * You can utilize the [updateCell](https://ej2.syncfusion.com/vue/documentation/api/grid/#updatecell) method to update cells in batch mode.
+> * You can utilize the [updateCell](https://ej2.syncfusion.com/vue/documentation/api/grid#updatecell) method to update cells in batch mode.
 
 ## Cancel edit based on condition
 
 The Grid component provides to cancel the CRUD operations (Edit, Add, Delete) for particular row or cell in batch edit mode based on specific conditions. This feature allows you to control over whether editing should be allowed or prevented for certain rows or cells in the grid.
 
-To cancel the edit action, you need to handle the [cellEdit](https://ej2.syncfusion.com/vue/documentation/api/grid/#cellEdit) event. This event is triggered when a cell enters the edit mode. Within the event handler, you can add a condition to check whether the edit operation should be allowed or canceled. If the condition is met, set the `args.cancel` property to **true** to cancel the edit operation.
+To cancel the edit action, you need to handle the [cellEdit](https://ej2.syncfusion.com/vue/documentation/api/grid#cellEdit) event. This event is triggered when a cell enters the edit mode. Within the event handler, you can add a condition to check whether the edit operation should be allowed or canceled. If the condition is met, set the `args.cancel` property to **true** to cancel the edit operation.
 
-To cancel the add action, you need to handle the [beforeBatchAdd](https://ej2.syncfusion.com/vue/documentation/api/grid/#beforeBatchAdd) event. This event is triggered before a new record is added to the batch changes. Within the event handler, you can add a condition to determine whether the add operation should proceed or be canceled. If the condition is met, set the `args.cancel` property to **true** to cancel the add operation.
+To cancel the add action, you need to handle the [beforeBatchAdd](https://ej2.syncfusion.com/vue/documentation/api/grid#beforeBatchAdd) event. This event is triggered before a new record is added to the batch changes. Within the event handler, you can add a condition to determine whether the add operation should proceed or be canceled. If the condition is met, set the `args.cancel` property to **true** to cancel the add operation.
 
-To cancel the delete action, you need to handle the [beforeBatchDelete](https://ej2.syncfusion.com/vue/documentation/api/grid/#beforeBatchDelete) event. This event is triggered before a record is deleted from the batch changes. Within the event handler, you can add a condition to control whether the delete operation should take place or be canceled. If the condition is met, set the `args.cancel` property to **true** to cancel the delete operation.
+To cancel the delete action, you need to handle the [beforeBatchDelete](https://ej2.syncfusion.com/vue/documentation/api/grid#beforeBatchDelete) event. This event is triggered before a record is deleted from the batch changes. Within the event handler, you can add a condition to control whether the delete operation should take place or be canceled. If the condition is met, set the `args.cancel` property to **true** to cancel the delete operation.
 
 In the below demo, prevent the CRUD operation based on the **Role** column value. If the Role Column is **Admin**, then edit/delete action is prevented for that row.
 
@@ -73,7 +73,7 @@ In the below demo, prevent the CRUD operation based on the **Role** column value
 
 ## Adding a new row at the bottom of the grid
 
-The grid component allows you to add a new row at the bottom of the grid, allowing you to insert a new record at the end of the existing data set. This feature is particularly useful when you want to conveniently add new records without the need to scroll up or manually reposition the newly added row. To achieve this, you can make use of the [newRowPosition](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#newrowposition) property in the `editSettings` configuration and set it to **Bottom**.
+The grid component allows you to add a new row at the bottom of the grid, allowing you to insert a new record at the end of the existing data set. This feature is particularly useful when you want to conveniently add new records without the need to scroll up or manually reposition the newly added row. To achieve this, you can make use of the [newRowPosition](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings#newrowposition) property in the `editSettings` configuration and set it to **Bottom**.
 
 >* If you set `newRowPosition` as **Bottom**, you can use the **TAB** key to easily move between cells or rows in edit mode. As you enter data in each cell and press **TAB**, the grid will automatically create new rows below the current row, allowing you to conveniently add data for multiple rows without having to leave the edit mode.
 >* If you set `newRowPosition` as **Top**, the grid will display a blank row form at the top by default, allowing you to enter data for the new record. However, when the data is saved or updated, it will be inserted at the bottom of the grid ,ensuring the new record appears at the end of the existing data set. 
@@ -98,9 +98,9 @@ Here's an example that demonstrates how to enable adding new rows at the bottom 
 
 Displaying a confirmation dialog provides an additional layer of confirmation when performing actions like saving a record or canceling changes in the grid. This dialog prompts for confirmation before proceeding with the action, ensuring that accidental or undesired changes are avoided. The grid component offers a built-in confirmation dialog that can be used to confirm save, cancel, and other actions.
 
-To enable the confirmation dialog, you can set the [editSettings.showConfirmDialog](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#showconfirmdialog) property of the `editSettings` configuration to **true**. The default value is **true**.
+To enable the confirmation dialog, you can set the [editSettings.showConfirmDialog](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings#showconfirmdialog) property of the `editSettings` configuration to **true**. The default value is **true**.
 
-> * `editSettings.showConfirmDialog` requires the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) to be **Batch**
+> * `editSettings.showConfirmDialog` requires the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings#mode) to be **Batch**
 > * If `editSettings.showConfirmDialog` set to **false**, then confirmation dialog does not display in batch editing.
 > * While performing both update and delete operations, a separate delete confirmation dialog is shown at the time of clicking the delete button or pressing the delete key itself.
 
@@ -121,9 +121,9 @@ Here's an example that demonstrates how to enable/disable the confirmation dialo
 
 You can enable editing in a single click and navigate between cells or rows using arrow keys without having to double-click or use the mouse for navigation. By default, in batch mode, the **TAB** key can be used to edit or move to the next cell or row and the **Enter** key is used to move to the next row cell. However, you can customize this behavior to enable editing with a single click or using arrow keys.
 
-To enable editing in a single click, you can handle the [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) event of the Grid. Within the event handler,bind the click event to the grid cells and call the `editCell` method to make the clicked cell editable.
+To enable editing in a single click, you can handle the [created](https://ej2.syncfusion.com/vue/documentation/api/grid#created) event of the Grid. Within the event handler,bind the click event to the grid cells and call the `editCell` method to make the clicked cell editable.
 
-To enable editing using arrow keys, you can handle the [load](https://ej2.syncfusion.com/vue/documentation/api/grid/#load) event of the Grid component. Inside the event handler, you can bind the keydown event to the grid element and check for arrow key presses. Based on the arrow key pressed, you can identify the next or previous cell using the `editCell` method and make it editable.
+To enable editing using arrow keys, you can handle the [load](https://ej2.syncfusion.com/vue/documentation/api/grid#load) event of the Grid component. Inside the event handler, you can bind the keydown event to the grid element and check for arrow key presses. Based on the arrow key pressed, you can identify the next or previous cell using the `editCell` method and make it editable.
 
 Here's an example that demonstrates how to achieve both single-click editing and arrow key navigation using the `created` and `load` events in conjunction with the `editCell` method:
 
@@ -142,7 +142,7 @@ Here's an example that demonstrates how to achieve both single-click editing and
 
 You can prevent editing of specific cells based on certain conditions in the Grid component. This feature is useful when you want to restrict editing for certain cells, such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.
 
-To disable editing for a particular cell in batch mode, use the [cellEdit](https://ej2.syncfusion.com/vue/documentation/api/grid/#celledit) event of the grid. You can then use the **args.cancel** property and set it to **true**  to prevent editing for that cell.
+To disable editing for a particular cell in batch mode, use the [cellEdit](https://ej2.syncfusion.com/vue/documentation/api/grid#celledit) event of the grid. You can then use the **args.cancel** property and set it to **true**  to prevent editing for that cell.
 
 Here's an example demonstrating how you can disable editing for cells containing the value **France** using the `cellEdit` event:
 
@@ -159,7 +159,7 @@ Here's an example demonstrating how you can disable editing for cells containing
 
 ## Save or update the changes immediately
 
-The Grid component provides a convenient way to save or update changes immediately in batch mode without the need for a separate Save button. This feature is particularly useful when you want to allow you to edit data efficiently without having to manually trigger a save action. You can achieve this by utilizing the [cellSaved](https://ej2.syncfusion.com/vue/documentation/api/grid/#cellsaved) event and the [batchSave](https://ej2.syncfusion.com/vue/documentation/api/grid/edit/#batchsave) method. 
+The Grid component provides a convenient way to save or update changes immediately in batch mode without the need for a separate Save button. This feature is particularly useful when you want to allow you to edit data efficiently without having to manually trigger a save action. You can achieve this by utilizing the [cellSaved](https://ej2.syncfusion.com/vue/documentation/api/grid#cellsaved) event and the [batchSave](https://ej2.syncfusion.com/vue/documentation/api/grid/edit#batchsave) method. 
 
 By default, when you use the `batchSave` method to save or update data, a confirmation dialog is displayed. This dialog prompts for confirmation before proceeding with the save or cancel action, ensuring that accidental or undesired changes are avoided.
 
@@ -182,3 +182,26 @@ Here's an example that demonstrates how to achieve immediate saving or updating 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/edit/default-save-batch" %}
+
+## Enable Undo / Redo
+ 
+The Grid supports Undo / Redo actions in batch editing, allowing changes such as cell edits, row additions, and row deletions to be reverted or reapplied before saving. This feature can be enabled by setting the `editSettings.enableUndoRedo` property to **true**.
+ 
+Undo and redo operations can be performed using keyboard shortcuts. Press Ctrl + Z to undo an action, and Ctrl + Y to redo an action.
+ 
+In addition, **Undo** and **Redo** toolbar items can be added to the Grid toolbar to perform these actions through the user interface.
+
+Here's an example that demonstrates how to enable Undo / Redo in batch editing:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/undo-redo-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/undo-redo-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/edit/undo-redo-cs1" %}
+
+> Note: The maximum number of undo and redo actions stored in the stack can be controlled using the `editSettings.undoRedoLimit` property. This property limits the number of actions that can be reverted or reapplied during a batch editing session. The default value is `20`.
