@@ -43,7 +43,7 @@ The following example demonstrates default and custom format of DatePicker compo
         
 {% previewsample "page.domainurl/code-snippet/datepicker/mask-module-cs2" %}
 
-# Configure Mask Placeholder
+## Configure Mask Placeholder
 
 You can change mask placeholder value through property `maskPlaceholder`. By default , it takes the full name of date and time co-ordinates such as `day`, `month`, `year`, `hour` etc.
 
