@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue DataGrid Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the [Vue DataGrid](https://www.syncfusion.com/vue-components/vue-grid) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -83,7 +83,7 @@ Terminate the application, then run the following command:
 cd my-project
 ```
 
-## Add Vue Data Grids package
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
 
 To install the Grids package, use the following command:
 
@@ -174,7 +174,7 @@ or
 ```bash
 yarn run dev
 ```
-N> Looking for the full Vue Data Grid component overview, features, pricing, and documentation? Visit the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) page.
+N> Looking for the full Vue DataGrid component overview, features, pricing, and documentation? Visit the [Vue DataGrid](https://www.syncfusion.com/vue-components/vue-grid) page.
 
 ## See also
 

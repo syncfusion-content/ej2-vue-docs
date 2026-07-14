@@ -3,7 +3,7 @@ layout: post
 title: AI-Powered Development with Syncfusion Vue Components | Syncfusion
 description: Master AI-powered development with Syncfusion Vue components using MCP Server and skills. Learn which approach fits the workflow and get better results.
 platform: ej2-vue
-control: AI AssistView
+control: AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---

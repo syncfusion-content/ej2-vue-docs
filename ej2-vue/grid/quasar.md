@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Getting Started with Quasar and Vue Data Grid Component | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue Data Grid Component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Quasar and Vue DataGrid Component | Syncfusion
+description: Check out and learn about getting started with the Quasar Framework and Vue DataGrid Component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue Data Grid Component in Quasar Framework
+# Getting Started with Vue DataGrid Component in Quasar Framework
 
-A step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+A step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the [Vue DataGrid](https://www.syncfusion.com/vue-components/vue-grid) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
 ## Prerequisites
 
-[System requirements for Vue Data Grid components](../system-requirements)
+[System requirements for Vue DataGrid components](../system-requirements)
 
 ## Setup the Quasar project
 
@@ -40,9 +40,9 @@ Navigate to the project directory:
 cd quasar-project
 ```
 
-The `quasar-project` is now ready to run with default settings. Next, the Vue Data Grid component is added to the project.
+The `quasar-project` is now ready to run with default settings. Next, the Vue DataGrid component is added to the project.
 
-## Add Vue Data Grids package
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
 
 To install the Grids package, use the following command:
 
