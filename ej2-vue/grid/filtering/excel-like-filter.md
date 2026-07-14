@@ -45,15 +45,32 @@ Here is an example that showcasing how to render the check box filter within the
         
 {% previewsample "page.domainurl/code-snippet/grid/filter/excel-filter-cs2" %}
 
+## Filter modes
+ 
+The Grid `Excel` and `CheckBox` filtering features support two modes, `Default` and `Immediate`. In `Default` mode, filter changes are applied only after clicking the "Filter" or "OK" button in the filter dialog, which is the default behavior. In `Immediate` mode, filters are applied automatically when filter items are checked or unchecked in the filter dialog.
+ 
+The following example enables immediate mode by setting the `filterSettings.mode` property to `Immediate`:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/excel-filter-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/excel-filter-cs7/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/filter/excel-filter-cs7" %}
+
 ## Customize the filter choice count
 
 By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 records bind to the Grid to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
 
 The Grid component allows you to customize the number of distinct data displayed in the checkbox list of the excel/checkbox type filter dialog. This can be useful when you want to customize the default filter choice count values while using large datasets.
 
-However, you have the flexibility to increase or decrease the filter choice count based on your specific requirements. This can be achieved by adjusting the [filterChoiceCount](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSearchBeginEventArgs/#filterchoicecount) value.
+However, you have the flexibility to increase or decrease the filter choice count based on your specific requirements. This can be achieved by adjusting the [filterChoiceCount](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSearchBeginEventArgs#filterchoicecount) value.
 
-The following example demonstrates how to customize the filter choice count in the checkbox list of the filter dialog. In the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event, you need to check if the [requestType](https://ej2.syncfusion.com/vue/documentation/api/grid/filterEventArgs/#requesttype) is either `filterChoiceRequest` or `filterSearchBegin`, and then you can set the `filterChoiceCount` property to the desired value.
+The following example demonstrates how to customize the filter choice count in the checkbox list of the filter dialog. In the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid#actionbegin) event, you need to check if the [requestType](https://ej2.syncfusion.com/vue/documentation/api/grid/filterEventArgs#requesttype) is either `filterChoiceRequest` or `filterSearchBegin`, and then you can set the `filterChoiceCount` property to the desired value.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -405,7 +422,7 @@ The following example demonstrates how to remove the context menu option in the 
 
 ## Bind custom remote datasource for excel/checkbox filtering
 
-The Vue Data Grid allows you to dynamically change the filter data source for the Excel or checkbox filter module using custom remote data as well. This can be done by either assigning a custom remote [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started) as the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#datasource) or by fetching the data initially and storing it in a global variable. This data can then be bound directly to the filter module's `dataSource` in the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event for the `filterBeforeOpen` [requestType](https://ej2.syncfusion.com/vue/documentation/api/grid/filterEventArgs/#requesttype), as detailed in our [knowledge base](https://support.syncfusion.com/kb/article/10065/how-to-change-the-data-source-for-checkbox-filter-popup-in-grid).
+The Vue Data Grid allows you to dynamically change the filter data source for the Excel or checkbox filter module using custom remote data as well. This can be done by either assigning a custom remote [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started) as the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/column#datasource) or by fetching the data initially and storing it in a global variable. This data can then be bound directly to the filter module's `dataSource` in the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid#actionbegin) event for the `filterBeforeOpen` [requestType](https://ej2.syncfusion.com/vue/documentation/api/grid/filterEventArgs#requesttype), as detailed in our [knowledge base](https://support.syncfusion.com/kb/article/10065/how-to-change-the-data-source-for-checkbox-filter-popup-in-grid).
 
 The following example demonstrates how to dynamically change the remote custom data source for all columns in the Excel or checkbox filter dialog using a `DataManager` with `WebApiAdaptor`.
 

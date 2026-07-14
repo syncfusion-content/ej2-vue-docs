@@ -19,11 +19,11 @@ You can use the [Image](https://ej2.syncfusion.com/vue/documentation/api/blocked
 
 ### Configure image block
 
-You can render an `Image` block by setting the [blockType](../../api/blockeditor/blockModel#blockType) property to `Image` in the block model. The [properties](../../api/blockeditor/blockModel#properties) property allows you to configure the image source, allowed file types, display dimensions, and more.
+You can render an `Image` block by setting the [blockType](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/blockmodel#blocktype) property to `Image` in the block model. The [properties](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/blockmodel#properties) property allows you to configure the image source, allowed file types, display dimensions, and more.
 
 #### Global image settings
 
-You can configure global settings for image blocks using the [imageBlockSettings](../../api/blockeditor/imageBlockSettings) property in the Block Editor root configuration. This ensures consistent behavior for image uploads, resizing, and display.
+You can configure global settings for image blocks using the [imageBlockSettings](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/imageblocksettings) property in the Block Editor root configuration. This ensures consistent behavior for image uploads, resizing, and display.
 
 The `imageBlockSettings` property supports the following options:
 
@@ -44,7 +44,7 @@ The `imageBlockSettings` property supports the following options:
 
 #### Maximum file size restriction
 
-You can restrict the image uploaded from the local machine when the uploaded image file size is greater than the allowed size by using the [maxFileSize](../../api/blockeditor/imageBlockSettings#maxFileSize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+You can restrict the image uploaded from the local machine when the uploaded image file size is greater than the allowed size by using the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/imageblocksettings#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
 
 ```ts
 
@@ -68,7 +68,7 @@ You can allow the specific images alone to be uploaded using the the allowedType
 
 #### Configure image block properties
 
-The `Image` block [properties](../../api/blockeditor/blockModel) property supports the following options:
+The `Image` block [properties](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/blockmodel) property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
@@ -113,9 +113,9 @@ To insert an image from your local machine, render the `Image` block. It opens a
 
 ## Saving images to server
 
-Upload the selected image to a specified destination using the controller action specified in [imageBlockSettings.saveUrl](../../api/blockeditor/imageBlockSettings#saveUrl). Ensure to map this method name appropriately and provide the required destination path through the [imageBlockSettings.path](../../api/blockeditor/imageBlockSettings#path) properties.
+Upload the selected image to a specified destination using the controller action specified in [imageBlockSettings.saveUrl](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/imageblocksettings#saveurl). Ensure to map this method name appropriately and provide the required destination path through the [imageBlockSettings.path](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/imageblocksettings#path) properties.
 
-Set the [imageBlockSettings.saveFormat](../../api/blockeditor/imageBlockSettings#saveformat) property to determine whether the image should be saved as Blob or Base64, aligning with your application's requirements.
+Set the [imageBlockSettings.saveFormat](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/imageblocksettings#saveformat) property to determine whether the image should be saved as Blob or Base64, aligning with your application's requirements.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -189,7 +189,7 @@ public class HomeController : Controller
 
 ### Secure image upload with authentication
 
-You can add additional data with the image uploaded from the Block Editor on the client side, which can even be received on the server side. By using the [fileUploading](../../api/blockeditor#fileUploading) event and it's arguments you can access the current request and set the request header within these event. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
+You can add additional data with the image uploaded from the Block Editor on the client side, which can even be received on the server side. By using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/index-default#fileuploading) event and it's arguments you can access the current request and set the request header within these event. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

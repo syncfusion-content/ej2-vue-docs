@@ -21,7 +21,7 @@ With collaboration enabled, users can:
 * Perform collaboration-aware undo and redo operations.
 * Create, restore, compare, export, and import document versions.
 
-*Try the live demo [here](https://ej2.syncfusion.com/)*
+Try the live demo [here](https://ej2.syncfusion.com/showcase/vue/blockeditor-collaborative-editing/)
 
 ## Prerequisites
 
