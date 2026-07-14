@@ -28,7 +28,8 @@ export default {
             eventSettings: {
                 query: new Query(),
                 includeFiltersInQuery: true,
-                dataSource: dataManager, fields: {
+                dataSource: dataManager, 
+                fields: {
                     id: 'Id',
                     subject: { name: 'ShipName' },
                     location: { name: 'ShipCountry' },
