@@ -3,7 +3,7 @@ layout: post
 title: AI-Powered Development with Syncfusion Vue Components | Syncfusion
 description: Master AI-powered development with Syncfusion Vue components using MCP Server and skills. Learn which approach fits the workflow and get better results.
 platform: ej2-vue
-control: AI AssistView
+control: AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -169,7 +169,7 @@ When you include the specific docs URL, the AI generates correct code: proper im
 
 When you autocomplete a GridComponent, the IDE AI suggests:
 
-```html
+```vue
 <Grid :data="gridData" />
 ```
 
@@ -179,7 +179,7 @@ That's incorrect Syncfusion syntax — it uses a wrong component name and a non-
 
 The IDE AI correctly suggests typed, accurate code.
 
-```html
+```vue
 <template>
   <ejs-grid
     :dataSource="employees"
