@@ -21,14 +21,14 @@ The `codeBlockSettings` property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
-| [languages](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/codeblocksettingsmodel#languages) | Specifies the array of language options for syntax highlighting. | [] |
-| [defaultLanguage](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/codeblocksettingsmodel#defaultlanguages) | Defines the default language to use for syntax highlighting. | 'plaintext' |
+| [languages](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/codeblocksettings#languages) | Specifies the array of language options for syntax highlighting. | [] |
+| [defaultLanguage](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/codeblocksettingsmodel#defaultlanguage) | Defines the default language to use for syntax highlighting. | 'plaintext' |
 
 ## Configure code properties
 
-For Code blocks, you can specify the language for syntax highlighting using the [properties](../../api/blockeditor/blockModel) property. This property supports the following options:
+For Code blocks, you can specify the language for syntax highlighting using the [properties](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/blockmodel) property. This property supports the following options:
 
-- [language](../../api/blockeditor/codeLanguageModel#language): The default language value used for syntax highlighting.
+- [language](https://ej2.syncfusion.com/vue/documentation/api/blockeditor/codelanguagemodel#language): The default language value used for syntax highlighting.
 
 ### Block type & properties
 ```typescript
