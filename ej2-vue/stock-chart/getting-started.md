@@ -76,6 +76,37 @@ yarn add @syncfusion/ej2-vue-charts
 
 > Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart component themes can be applied using CSS or SASS from the [npm theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages). Additionally, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
+
+This example uses the `Material 3` theme for the Stock Chart component from the theme package. To install the [Material 3](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-material3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/@syncfusion/ej2-material3-theme
+
+{% endhighlight %}
+{% endtabs %}
+
+The necessary CSS styles for the Stock Chart component were imported into the `<style>` section of **src/App.vue** file. Vite app generates a default `styles.css` file which we do not need for this example. Before running the sample, delete the content of `src/style.css` or remove the file if it's unused.
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/stock-chart/index.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart Component
 
 Follow the steps below to add the Vue Stock Chart component:
