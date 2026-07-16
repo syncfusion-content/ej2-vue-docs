@@ -52,10 +52,6 @@ npm install @syncfusion/ej2-vue-treegrid --save
 
 ## Adding CSS reference
 
-You can add the CSS files required for the Syncfusion Vue Tree Grid component using one of the following methods.
-
-### Option 1: Add CSS References from a theme package
-
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Tree Grid components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
  
 Install the **Material 3** theme package using the following command:
@@ -74,30 +70,11 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-material3-theme/treegrid/treegrid/index.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/treegrid/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
-
-### Option 2: Add CSS References from component packages
-
-After installing the treegrid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/App.vue** file:
-
-```css
-<style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-    @import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
-    @import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material3.css";
-</style>
-```
 
 ## Adding Tree Grid component
 

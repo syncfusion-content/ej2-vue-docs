@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Vue 3 getting started with the DataGrid component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue DataGrid component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 getting started with the Data Grid component | Syncfusion
+description: Check out and learn about Vue 3 getting started with the Vue Data Grid component of Syncfusion Essential JS 2 and more details.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue DataGrid Component in Vue 3
+# Getting Started with the Vue Data Grid Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the [Vue DataGrid](https://www.syncfusion.com/vue-components/vue-grid) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -101,11 +101,7 @@ yarn add @syncfusion/ej2-vue-grids
 
 ## Adding CSS reference
 
-You can add the CSS files required for the Syncfusion Vue DataGrid component using one of the following methods.
-
-### Option 1: Add CSS References from a theme package
-
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
  
 Install the **Material 3** theme package using the following command:
 
@@ -129,28 +125,9 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-### Option 2: Add CSS References from component packages
+## Adding Data Grid component
 
-After installing the grid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/App.vue** file:
-
-```css
-<style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-    @import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
-    @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-</style>
-```
-
-## Adding DataGrid component
-
-The DataGrid code should be added in the **src/App.vue** file.
+The Data Grid code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
@@ -174,11 +151,11 @@ or
 ```bash
 yarn run dev
 ```
-N> Looking for the full Vue DataGrid component overview, features, pricing, and documentation? Visit the [Vue DataGrid](https://www.syncfusion.com/vue-components/vue-grid) page.
+N> Looking for the full Vue Data Grid component overview, features, pricing, and documentation? Visit the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) page.
 
 ## See also
 
-* [DataGrid Feature Modules](./module)
+* [Data Grid Feature Modules](./module)
 * [Getting Started with Vue UI Components using Composition API and TypeScript](../guide/introduction.html#composition-api)
 * [Getting Started with Vue UI Components using Options API and TypeScript](../guide/introduction.html#options-api)
 * [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)

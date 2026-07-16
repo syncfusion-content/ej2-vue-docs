@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Pivot Table component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Pivotview component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Pivot Table component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -19,6 +19,8 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+
+Make sure Node.js (version 18 or later) is installed on your machine before scaffolding the Vite project. You can verify by running `node -v` in your terminal.
 
 ## Set up the Vite project
 
@@ -34,7 +36,7 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+The scaffold wizard will then prompt for the following options:
 
 **1.** Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
@@ -65,7 +67,7 @@ Vanilla
   Nuxt ↗
 ```
 
-4.Install dependencies and start the development server.
+**4.** Install dependencies and start the development server. When prompted, select `Yes` to install with npm and start now.
 
 ```bash
 Install with npm and start now?: Yes
@@ -87,18 +89,22 @@ yarn install
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PivotTable packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Pivot Table packages
 
-To install the PivotTable component, run the following command:
+To install the Pivot Table component, run the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-vue-pivotview --save
-```
-or
 
-```bash
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
 yarn add @syncfusion/ej2-vue-pivotview
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
@@ -133,9 +139,9 @@ Import the required theme styles in the `<style>` section of the `src/App.vue` f
 
 N> Before including Syncfusion styles, make sure to remove the default styles defined in **style.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
 
-## Adding Pivot Table component
+## Adding the Pivot Table component
 
-The PivotTable code should be added to the **src/App.vue** file.
+The Pivot Table code should be added to the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -168,15 +174,7 @@ const width = '100%';
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pivotview/index.css';
 </style>
 
 {% endhighlight %}
@@ -219,15 +217,7 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pivotview/index.css";
 </style>
 
 {% endhighlight %}
@@ -247,7 +237,7 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
+The development server starts and the app can be viewed at the local URL printed in the terminal (typically `http://localhost:5173`). The output will appear as follows:
 
 ![vue-3-js-pivot-table](./images/vue-3-js-pivot-table.png)
 
