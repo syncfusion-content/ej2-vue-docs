@@ -86,9 +86,31 @@ new Vue({
 }).$mount('#app');
 ```
 
-## Step 5: Add the required CSS references
+## Step 5: Add the required styles
 
-Add the required Syncfusion® styles to the `src/App.vue` file in the `<style>` section:
+The Diagram component needs Syncfusion® theme styles to display correctly. Add the styles using one of the following options.
+
+### Option 1: Add styles from a theme package
+
+Syncfusion® theme packages include ready-to-use styles for supported components. Install the Tailwind 3 theme package using the following command:
+
+```
+npm install @syncfusion/ej2-tailwind3-theme --save
+```
+
+Add the following import to the **src/App.vue** file:
+
+```
+<style>
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css";
+</style>
+```
+
+For the list of available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+
+### Option 2: Add styles from component packages
+
+After installing the Diagram package, the required style files are available under the **node_modules/@syncfusion** directory. Add the following imports to the **src/App.vue** file:
 
 ```
 <style>
@@ -99,7 +121,7 @@ Add the required Syncfusion® styles to the `src/App.vue` file in the `<style>` 
 </style>
 ```
 
-N> Syncfusion® provides multiple built-in themes. If your application uses a different theme, replace the `tailwind3.css` references with the corresponding theme file, such as `material3.css`.
+N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace the **tailwind3.css** references with the corresponding theme file, such as **material3.css**.
 
 N> The CSS references can also be moved to a separate global stylesheet if your application follows a centralized styling approach.
 

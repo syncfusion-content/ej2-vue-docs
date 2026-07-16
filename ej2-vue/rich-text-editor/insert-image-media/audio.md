@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Audios in Vue Rich Text Editor Component
 
-The Rich Text Editor allows you to insert audio from online sources and local computers and then insert them into your content. You can insert the audio with the following list of options in the [insertAudioSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertaudiosettings) property.
+The Rich Text Editor allows you to insert audio from online sources and local computers and then insert them into your content. You can insert the audio with the following list of options in the [insertAudioSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#insertaudiosettings) property.
 
 ## Configuring the audio tool in the toolbar
 
-You can add an `Audio` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+You can add an `Audio` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings#items) property.
 
 > Rich Text Editor features are segregated into individual feature-wise modules. To use audio, inject the `Audio` module in `provides` section.
 
@@ -33,7 +33,7 @@ To configure the `Audio` toolbar item, refer to the below code.
 
 ## Audio save formats
 
-The audio files can be saved as `Blob` or `Base64` URL by using the [insertAudioSettings.saveFormat](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel/#saveformat) property, which is of enum type, and the generated URL will be set to the `src` attribute of the `<source>` tag.
+The audio files can be saved as `Blob` or `Base64` URL by using the [insertAudioSettings.saveFormat](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel#saveformat) property, which is of enum type, and the generated URL will be set to the `src` attribute of the `<source>` tag.
 
 > The default `saveFormat` property is set to `Blob` format.
 
@@ -63,11 +63,11 @@ By default, the audio tool opens the audio dialog, allowing you to insert audio 
 
 You can use the `browse` option on the audio dialog, to select the audio from the local machine and insert it into the Rich Text Editor content.
 
-If the path field is not specified in the [insertAudioSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertaudiosettings), the audio will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
+If the path field is not specified in the [insertAudioSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#insertaudiosettings), the audio will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
 
 ## Maximum file size restriction
 
-You can restrict the audio uploaded from the local machine when the uploaded audio file size is greater than the allowed size by using the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel/#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+You can restrict the audio uploaded from the local machine when the uploaded audio file size is greater than the allowed size by using the [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
 
 In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
 
@@ -117,15 +117,15 @@ provide('richtexteditor', [Toolbar, Link, Image, QuickToolbar, HtmlEditor, Table
 
 ## Saving audio to the server 
 
-[saveFormat](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettings/#saveformat) Sets the default save format of the audio element when inserted. Possible options are: `Blob` and `Base64`.
+[saveFormat](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettings#saveformat) Sets the default save format of the audio element when inserted. Possible options are: `Blob` and `Base64`.
 
-[saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettings/#saveurl) provides URL to map the action result method to save the audio.
+[saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettings#saveurl) provides URL to map the action result method to save the audio.
 
-[removeUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettings/#removeurl) provides URL to map the action result method to remove the audio.
+[removeUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettings#removeurl) provides URL to map the action result method to remove the audio.
 
 ### Server-side action
 
-The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [insertAudioSettings.saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel/#saveurl) and provide the required destination path through [insertAudioSettings.path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel/#path) properties.
+The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [insertAudioSettings.saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel#saveurl) and provide the required destination path through [insertAudioSettings.path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel#path) properties.
 
 > If you want to insert lower-sized audio files in the editor and don't want a specific physical location for saving the audio, you can opt to save the format as `Base64`.
 
@@ -253,7 +253,7 @@ namespace FileUpload.Controllers
 
 ### Renaming audio before inserting
 
-You can use the [insertAudioSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertaudiosettings) property, to specify the server handler to upload the selected audio. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
+You can use the [insertAudioSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#insertaudiosettings) property, to specify the server handler to upload the selected audio. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
 
 ```
 <template>
@@ -365,7 +365,7 @@ public void Rename()
 
 ### Uploading audio with authentication
 
-You can add additional data with the audio uploaded from the Rich Text Editor on the client side, which can even be received on the server side by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
+You can add additional data with the audio uploaded from the Rich Text Editor on the client side, which can even be received on the server side by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
 
 > By default, it doesn't support the `UseDefaultCredentials` property; we need to manually append the default credentials with the upload request.
 
@@ -429,13 +429,13 @@ public void SaveFiles(IList<IFormFile> UploadFiles)
 
 ## Audio replacement functionality
 
-Once an audio file has been inserted, you can change it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `audioReplace` option. You can replace the audio file using the web URL or the browse option in the audio dialog.
+Once an audio file has been inserted, you can change it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings#quicktoolbarsettings) `audioReplace` option. You can replace the audio file using the web URL or the browse option in the audio dialog.
 
 ![Vue Rich Text Editor Audio replace](../images/vue-richtexteditor-audio-replace.png)
 
 ## Deleting audios
 
-To remove audio from the Rich Text Editor content, select the audio and click the `audioRemove` button from the quick toolbar. It will delete the audio from the Rich Text Editor content as well as from the service location if the [insertAudioSettings.removeUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel/#removeurl) is given.
+To remove audio from the Rich Text Editor content, select the audio and click the `audioRemove` button from the quick toolbar. It will delete the audio from the Rich Text Editor content as well as from the service location if the [insertAudioSettings.removeUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel#removeurl) is given.
 
 Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
 
@@ -443,7 +443,7 @@ Once you select the audio from the local machine, the URL for the audio will be 
 
 ## Configuring audio display position
 
-Sets the default display property for audio when it is inserted in the Rich Text Editor using the [insertAudioSettings.layoutOption](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel/#layoutOption) property. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the audio elements’ layout position.
+Sets the default display property for audio when it is inserted in the Rich Text Editor using the [insertAudioSettings.layoutOption](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/audioSettingsModel#layoutOption) property. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the audio elements’ layout position.
 
 > The default `layoutOption` property is set to `Inline`.
 
@@ -492,6 +492,11 @@ provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 
 ```
 
+## Paste audio files into the editor
+
+The Rich Text Editor supports pasting audio files directly into the editor content. You can paste single or multiple audio files from your file system directly into the editor.
+
+
 ## Drag and drop audio insertion
 
 By default, the Rich Text Editor allows you to insert audios by drag-and-drop from the local file system such as Windows Explorer into the content editor area. And, you can upload the audios to the server before inserting into the editor by configuring the saveUrl property.
@@ -526,5 +531,5 @@ You can prevent drag-and-drop action by setting the actionBegin argument cancel 
 ## See also
 
 * [Audio Quick Toolbar](../toolbar/quick-toolbar#audio-quick-toolbar)
-* [How to Use the Video Editing Option in Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/video)
-* [How to Use the Image Editing Option in Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/insert-images)
+* [How to Use the Video Editing Option in Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/insert-image-media/video)
+* [How to Use the Image Editing Option in Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/insert-image-media/insert-images)
