@@ -14,7 +14,7 @@ This guide explains how to install Syncfusion<sup style="font-size:70%">&reg;</s
 
 **Prerequisites**
 
-* [Node.js](https://nodejs.org/) and npm installed. npm is bundled with Node.js.
+* Node.js and npm installed. npm is bundled with Node.js.
 * An existing Vue 2 or Vue 3 project created with the [Vue CLI](https://cli.vuejs.org/) or [Vite](https://vitejs.dev/).
 * Access to the npm registry (public, or your private registry if applicable).
 

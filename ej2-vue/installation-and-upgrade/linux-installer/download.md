@@ -17,7 +17,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer 
 **Prerequisites**
 
 * A registered Syncfusion<sup style="font-size:70%">&reg;</sup> account. To create one, see the [Syncfusion downloads page](https://www.syncfusion.com/downloads).
-* A Linux machine running a supported distribution (Ubuntu, Debian, Fedora, RHEL, or openSUSE — see the [Syncfusion system requirements](https://help.syncfusion.com/common/essential-studio/system-requirements) for the full list).
 * A tool to extract `.zip` files, such as `unzip` on most distributions.
 * For npm-based JavaScript components (the EJ2 packages): Node.js and npm installed.
 

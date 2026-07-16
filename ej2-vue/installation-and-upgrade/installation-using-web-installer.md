@@ -110,7 +110,7 @@ The steps below describe how to install Essential<sup style="font-size:70%">&reg
 
     * To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel, click **Launch Control Panel**.
 
-12. After installation, there are two Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel entries, as shown below. The **Essential<sup style="font-size:70%">&reg;</sup> Studio** entry manages all Syncfusion<sup style="font-size:70%">&reg;</sup> products installed in the same version, while the **Product** entry only uninstalls the specific product setup.
+12. After installation, there are two Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel entries, as shown below. The **Essential<sup style="font-size:70%">&reg;</sup> Studio** entry manages all Syncfusion<sup style="font-size:70%">&reg;</sup> products installed in the same version, while the **Product** entry only uninstall the specific product setup.
 
     ![Control panel entries](images/13.png)
 

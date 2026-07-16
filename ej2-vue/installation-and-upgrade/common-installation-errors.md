@@ -79,7 +79,7 @@ This article describes common installation errors, their causes, and solutions. 
 
 1. Obtain a new license from the [Syncfusion sales page](https://www.syncfusion.com/sales/products).
 2. Contact the account administrator to verify that a license is assigned to your account.
-3. Send an email to clientrelations@syncfusion.com to request a license.
+3. Send an email to client relations@syncfusion.com to request a license.
 4. Contact the sales team at sales@syncfusion.com for assistance.
 
 ## Unable to Install Because Another Installation Is in Progress

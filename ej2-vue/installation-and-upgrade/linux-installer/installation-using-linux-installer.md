@@ -18,7 +18,7 @@ This guide explains how to extract and use the Syncfusion<sup style="font-size:7
 
 * The downloaded Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer in `.zip` format. See [Download Syncfusion JavaScript (EJ2) Linux Installer](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/linux-installer/download).
 * A tool to extract `.zip` files, such as `unzip`:
-* For running the bundled JavaScript sample applications: a current LTS version of [Node.js](https://nodejs.org/) and npm.
+* For running the bundled JavaScript sample applications: a current LTS version of Node.js and npm.
 
 ## Step-by-Step Installation
 
@@ -40,7 +40,7 @@ The steps below show how to install the JavaScript Linux installer.
 
    > **Note:** The Unlock key is not required to install or use the Linux installer.
 
-3. To use the pre-packaged npm archives in an offline project, point npm at the bundled `npm` folder using the `--registry` or local file path syntax. For example, to install from a local tarball:
+3. To use the pre-packaged npm archives in an offline project, point npm at the bundled `npm` folder using the `--registry` or local file path syntax. For example, to install from a local package file:
 
    ```bash
    npm install ./npm/@syncfusion/ej2-vue-grids-<version>.tgz --save
