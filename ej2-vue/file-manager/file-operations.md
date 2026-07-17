@@ -818,7 +818,7 @@ The following table represents the request parameters of *download* operations.
             permission:null,
             _fm_created:"2019-07-22T12:15:45.081Z",
             _fm_modified:"2019-07-22T12:15:45.097Z",
-            _fm_imageUrl:"https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage?path=/1.png",
+            _fm_imageUrl:"https://physical-service.syncfusion.com/api/FileManager/GetImage?path=/1.png",
             _fm_imageAttr:
             {
                 alt:"1.png"
@@ -1051,8 +1051,8 @@ To perform the download operation, initialize the `downloadUrl` property in a [a
 
     const ajaxSettings =
     {
-        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-        downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+        url: "https://physical-service.syncfusion.com/api/FileManager/FileOperations",
+        downloadUrl: "https://physical-service.syncfusion.com/api/FileManager/Download"
     };
 </script>
 {% endraw %}
@@ -1071,8 +1071,8 @@ To perform the download operation, initialize the `downloadUrl` property in a [a
             return {
             ajaxSettings:
                 {
-                    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                    url: "https://physical-service.syncfusion.com/api/FileManager/FileOperations",
+                    downloadUrl: "https://physical-service.syncfusion.com/api/FileManager/Download"
                 }
             }
         }
@@ -1094,8 +1094,8 @@ To perform the upload operation, initialize the `uploadUrl` property in a [ajaxS
 
     const ajaxSettings =
     {
-        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-        uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+        url: "https://physical-service.syncfusion.com/api/FileManager/FileOperations",
+        uploadUrl: "https://physical-service.syncfusion.com/api/FileManager/Upload"
     };
 </script>
 {% endraw %}
@@ -1114,8 +1114,8 @@ To perform the upload operation, initialize the `uploadUrl` property in a [ajaxS
             return {
             ajaxSettings:
                 {
-                    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                    url: "https://physical-service.syncfusion.com/api/FileManager/FileOperations",
+                    uploadUrl: "https://physical-service.syncfusion.com/api/FileManager/Upload"
                 }
             }
         }

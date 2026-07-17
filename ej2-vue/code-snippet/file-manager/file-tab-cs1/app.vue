@@ -36,13 +36,13 @@ var fileTemp = createApp().component('demoTemplate2', {
   data() {
     return {
       ajaxSettings: {
-        url: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations',
+        url: 'https://physical-service.syncfusion.com/api/FileManager/FileOperations',
         getImageUrl:
-          'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage',
+          'https://physical-service.syncfusion.com/api/FileManager/GetImage',
         uploadUrl:
-          'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload',
+          'https://physical-service.syncfusion.com/api/FileManager/Upload',
         downloadUrl:
-          'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download',
+          'https://physical-service.syncfusion.com/api/FileManager/Download',
       },
     };
   },

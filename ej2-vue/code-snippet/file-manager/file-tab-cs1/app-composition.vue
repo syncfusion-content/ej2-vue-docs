@@ -38,10 +38,10 @@ const Template2 = Vue.component("demoTemplate2", {
     return {
        ajaxSettings:
             {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                url: "https://physical-service.syncfusion.com/api/FileManager/FileOperations",
+                getImageUrl: "https://physical-service.syncfusion.com/api/FileManager/GetImage",
+                uploadUrl: "https://physical-service.syncfusion.com/api/FileManager/Upload",
+                downloadUrl: "https://physical-service.syncfusion.com/api/FileManager/Download"
             },
     };
   },

@@ -11,10 +11,10 @@ import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, To
 
 const ajaxSettings =
 {
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/Download"
+    url: "https://physical-service.syncfusion.com/api/FileManagerAccess/FileOperations",
+    getImageUrl: "https://physical-service.syncfusion.com/api/FileManagerAccess/GetImage",
+    uploadUrl: "https://physical-service.syncfusion.com/api/FileManagerAccess/Upload",
+    downloadUrl: "https://physical-service.syncfusion.com/api/FileManagerAccess/Download"
 };
 provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 

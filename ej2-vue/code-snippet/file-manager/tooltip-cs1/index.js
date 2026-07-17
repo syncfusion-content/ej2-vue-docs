@@ -5,7 +5,7 @@ import { FileManagerPlugin, NavigationPane, Toolbar, DetailsView, FileManagerCom
 
 Vue.use(FileManagerPlugin);
 
-let hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+let hostUrl = 'https://physical-service.syncfusion.com/';
 
 
 new Vue({

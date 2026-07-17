@@ -7,9 +7,9 @@
 
 <script setup>
 import { provide } from 'vue';
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, HtmlEditor, ClipboardCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, HtmlEditor, ClipBoardCleanup } from "@syncfusion/ej2-vue-richtexteditor";
 
-provide('richtexteditor', [Toolbar, HtmlEditor, ClipboardCleanup]);
+provide('richtexteditor', [Toolbar, HtmlEditor, ClipBoardCleanup]);
 </script>
 
 <style>
