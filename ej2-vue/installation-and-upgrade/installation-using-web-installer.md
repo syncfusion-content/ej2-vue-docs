@@ -31,7 +31,7 @@ The steps below describe how to install Essential<sup style="font-size:70%">&reg
 
     ![license download](images/1.png)
 
-    > Note: The installer wizard displays a dialog showing the package extraction progress.
+    N> The installer wizard displays a dialog showing the package extraction progress.
 
 2. The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Web Installer's welcome wizard appears. Click Next.
 
@@ -59,7 +59,7 @@ The steps below describe how to install Essential<sup style="font-size:70%">&reg
 
     ![license download](images/6.png)
 
-    > Note: Starting from 2021 Volume 1, Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall versions from 18.1 onward when installing a new version.
+    N> Starting from 2021 Volume 1, Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall versions from 18.1 onward when installing a new version.
 
 5. A pop-up appears to confirm uninstallation of selected previous versions.
 

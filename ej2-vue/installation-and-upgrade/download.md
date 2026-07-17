@@ -74,7 +74,7 @@ You should initiate an evaluation if you have already obtained our components th
 
 3. Begin your trial by selecting the JavaScript – EJ2 product.
 
-    > Note: If trial products have already been used and have not expired, starting a new trial for the same product is not possible.
+    N> If trial products have already been used and have not expired, starting a new trial for the same product is not possible.
     
 4. After starting the trial, visit the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/start-trials) page to download the latest trial installer. Generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) at any time before the trial expires (see screenshot below).
 
