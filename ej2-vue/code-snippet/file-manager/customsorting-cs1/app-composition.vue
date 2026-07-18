@@ -12,10 +12,10 @@ import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, To
 
 const ajaxSettings =
 {
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/NaturalSorting/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/NaturalSorting/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/NaturalSorting/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/NaturalSorting/Download"
+    url: "https://physical-service.syncfusion.com/api/NaturalSorting/FileOperations",
+    getImageUrl: "https://physical-service.syncfusion.com/api/NaturalSorting/GetImage",
+    uploadUrl: "https://physical-service.syncfusion.com/api/NaturalSorting/Upload",
+    downloadUrl: "https://physical-service.syncfusion.com/api/NaturalSorting/Download"
 };
 const sortComparer = sortComparer;
 const detailsViewSettings = {

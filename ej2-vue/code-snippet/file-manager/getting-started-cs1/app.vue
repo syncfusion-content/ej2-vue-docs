@@ -16,7 +16,7 @@ export default {
         return {
            ajaxSettings:
             {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                url: "https://physical-service.syncfusion.com/api/FileManager/FileOperations"
             }
         }
     }

@@ -100,22 +100,29 @@ yarn add @syncfusion/ej2-vue-schedule
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-In this article, `material3` theme is applied using CSS styles, which are available in installed packages. The necessary `material3` CSS styles for the Scheduler component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
+Install the **Tailwind 3** theme package using the following command:
 
-```html
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-tailwind3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material3.css';
+    @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/schedule/index.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > **Note**: Scheduler component use other Syncfusion<sup style="font-size:70%">&reg;</sup> components too, the dependent component's CSS references need to be added for using all the Scheduler functionalities.
 

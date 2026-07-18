@@ -18,11 +18,44 @@ To get started quickly with Vue Data Grid, check this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
+
+### Vue supported versions
+
+| Vue version | Minimum Syncfusion Vue Data Grid version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
+
+### Browser Support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
+
+### Security
+
+Syncfusion® Vue Data Grid includes built-in support for common security practices such as Cross-Site Scripting (XSS) protection, Content Security Policy (CSP) compliance, Cross-Site Request Forgery (CSRF) prevention, and protection against injection attacks. These features help build secure and enterprise-ready applications.
 
 ## Setup the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
+
+> **Note:** To create a Vue 2 application using Vue CLI, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-2-vue-cli) for more details.
+
+To create a new Vue 2 application, run the following commands based on your preferred package manager:
+
 
 ```bash
 npm install -g @vue/cli
@@ -36,9 +69,14 @@ yarn global add @vue/cli
 vue create quickstart
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-![Vue 2 project](./images/vue2-terminal.png)
+- **Which linter to use?** → **Default ([Vue 2] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
 
 Navigate to the project directory:
 
@@ -46,7 +84,7 @@ Navigate to the project directory:
 cd quickstart
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
+## Adding Vue Grid packages
 
 To install the Grids package, use the following command:
 
@@ -97,6 +135,24 @@ The Data Grid code should be added in the **src/App.vue** file.
 
 {% previewsample "page.domainurl/code-snippet/grid/getting-started/default-cs6" %}
 
+## Registering Your Syncfusion License
+
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 2 application:
+
+{% tabs %}
+{% highlight html tabtitle="main.js" %}
+
+```javascript
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
+
 ## Run the application
 
 ```bash
@@ -109,6 +165,26 @@ or
 yarn run serve
 ```
 N> Looking for the full Vue Data Grid component overview, features, pricing, and documentation? Visit the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) page.
+
+## Production build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally by serving the generated `dist` folder with a static server:
+
+```bash
+npx serve dist
+```
+
+## Troubleshooting
+
+- **Grid not rendering styles:** Ensure the theme CSS is imported in `src/App.vue` and that you removed any default Vue CLI starter styles that may override the Grid styles.
+- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
+- **Port 8080 already in use:** Stop the conflicting process or run the Vue CLI dev server on a different port with `npm run serve -- --port 3000`.
 
 ## See also
 

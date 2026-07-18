@@ -33,7 +33,7 @@ import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { DialogComponent } from '@syncfusion/ej2-vue-popups';
 import { FileManagerComponent, NavigationPane, Toolbar, DetailsView } from "@syncfusion/ej2-vue-filemanager";
 
-let hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+let hostUrl = 'https://physical-service.syncfusion.com/';
 
 export default {
 name: "App",
