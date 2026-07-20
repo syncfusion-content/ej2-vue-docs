@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-The commands in [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
+The commands in [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
 
 * Alignment commands
 * Distribute commands

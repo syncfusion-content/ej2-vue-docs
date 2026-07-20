@@ -16,14 +16,38 @@ The `Composition API` is a new feature introduced in Vue.js 3 that provides an a
 
 The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
-To get start quickly with Vue File Manager, you can check on this video:
+To get started quickly with Vue File Manager, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=eckcKFeoVyg" %}
 
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
+
+### Vue supported versions
+
+| Vue version | Minimum Syncfusion Vue File Manager version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
+
+### Browser Support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
 ## Set up the Vite project
 
@@ -108,16 +132,22 @@ yarn add @syncfusion/ej2-vue-filemanager
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-To install the [Material3](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) theme package, use the following command:
-
-```bash
-npm i @syncfusion/ej2-material3-theme
-```
-
-In this package, the File Manager component includes an `index.css` file that automatically loads all the required dependency styles. Add the following import to the **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> File Manager components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
     @import "../node_modules/@syncfusion/ej2-material3-theme/styles/file-manager/index.css";
@@ -130,18 +160,44 @@ In this package, the File Manager component includes an `index.css` file that au
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-The File manager code should be placed in the **src/App.vue** file.
+Add the following code to the **src/App.vue** file. The Composition API and Options API variants are shown below; choose the one that matches your project style.
+
+To enable file operation functionality in the File Manager, configure the [url](https://ej2.syncfusion.com/vue/documentation/api/file-manager/ajaxsettingsmodel#url) property within the [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/ajaxsettings). This URL handles the file operation requests from the server.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
 {% include code-snippet/file-manager/getting-started-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Option API ~/src/App.vue" %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% include code-snippet/file-manager/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/file-manager/getting-started-cs1" %}
+
+### Server-side setup
+
+The sample uses `https://physical-service.syncfusion.com/api/FileManager/FileOperations` as the `url` endpoint in `ajaxSettings`.
+
+To use your own files, host a File Manager service and replace the `url` value with your service endpoint. See the [File System Provider](./file-system-provider) documentation for setup details.
+
+## Registering Your Syncfusion License
+
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 3 application:
+
+{% tabs %}
+{% highlight html tabtitle="main.js" %}
+
+```javascript
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 
 ## Run the project
 
@@ -159,7 +215,25 @@ yarn run dev
 
 For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
 
-N> Looking for the full Vue File Manager component overview, features, pricing, and documentation? Visit the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) page.
+## Production build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally by serving the generated `dist` folder with a static server:
+
+```bash
+npx serve dist
+```
+
+## Troubleshooting
+
+- **File Manager not rendering styles:** Ensure the theme CSS is imported in `src/App.vue` and that you removed any default Vue CLI starter styles that may override the File Manager styles.
+- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
+- **Port 8080 already in use:** Stop the conflicting process or run the Vue CLI dev server on a different port with `npm run serve -- --port 3000`.
 
 ## See also
 

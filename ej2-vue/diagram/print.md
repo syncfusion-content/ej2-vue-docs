@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 
 # Print in Vue Diagram component
 
-The [`print`](https://ej2.syncfusion.com/vue/documentation/api/diagram#print) method helps to print the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) as image.
+The [`print`](https://ej2.syncfusion.com/vue/documentation/api/diagram#print) method helps to print the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) as image.
 
 ```javascript
 

@@ -108,7 +108,7 @@ Follow the below steps to add the Vue Ribbon component using:
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
-import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
+import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
 export default {
     components: {
       'ejs-ribbon': RibbonComponent
@@ -246,7 +246,7 @@ You can use the `e-ribbon-collection` selector to define each ribbon collection 
     },
     data: function () {
       return {
-        pasteSettigs:{ 
+        pasteSettings:{ 
           iconCss: "e-icons e-paste", content: "Paste",
           items: [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }]
         },

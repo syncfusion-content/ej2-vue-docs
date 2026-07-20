@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-In a Graphical User Interface (GUI), a tooltip is a message that appears when the mouse hovers over an element. The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control provides tooltip support while dragging, resizing, rotating a node, and when the mouse hovers over any diagram element.
+In a Graphical User Interface (GUI), a tooltip is a message that appears when the mouse hovers over an element. The [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) control provides tooltip support while dragging, resizing, rotating a node, and when the mouse hovers over any diagram element.
 
 ## Default tooltip
 

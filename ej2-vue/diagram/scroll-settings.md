@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scroll settings in ##Platform_Name## Diagram control
 
-The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) can be scrolled using both the vertical and horizontal scrollbars. Additionally, the mouse wheel can be used to scroll the diagram. The diagram's [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/) allow you to read the current scroll status, view port size, current zoom level, and zoom factor. These settings also provide the capability to programmatically control the scrolling of the diagram.
+The [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) can be scrolled using both the vertical and horizontal scrollbars. Additionally, the mouse wheel can be used to scroll the diagram. The diagram's [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/) allow you to read the current scroll status, view port size, current zoom level, and zoom factor. These settings also provide the capability to programmatically control the scrolling of the diagram.
 
 ## Access and Customize Scroll Settings
 

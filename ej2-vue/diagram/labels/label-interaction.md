@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Annotation Interactions in Vue Diagram component
 
-[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) allows annotation to be interacted by selecting, dragging, rotating, and resizing. Annotation interaction is disabled, by default. You can enable annotation interaction with the `constraints` property of annotation. You can also curtail the services of interaction by enabling either selecting, dragging, rotating, or resizing individually with the respective constraints property of annotation. The following code illustrates how to enable interactive mode.
+[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) allows annotation to be interacted by selecting, dragging, rotating, and resizing. Annotation interaction is disabled, by default. You can enable annotation interaction with the `constraints` property of annotation. You can also curtail the services of interaction by enabling either selecting, dragging, rotating, or resizing individually with the respective constraints property of annotation. The following code illustrates how to enable interactive mode.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

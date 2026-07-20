@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connector customization
 
-[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
+[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
 
 ## Decorator
 

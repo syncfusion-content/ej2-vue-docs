@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Undo redo in Vue Diagram component
 
-[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) tracks the history of actions that are performed after initializing the diagram and provides support to reverse and restore those changes.
+[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) tracks the history of actions that are performed after initializing the diagram and provides support to reverse and restore those changes.
 
 ## Undo and redo
 

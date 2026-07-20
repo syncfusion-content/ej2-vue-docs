@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue Diagram component
 
-[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA Accessibility supports are achieved through the attributes like `aria-label`. It helps to provides information about elements in a document for assistive technology.
+[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA Accessibility supports are achieved through the attributes like `aria-label`. It helps to provides information about elements in a document for assistive technology.
 
 The accessibility compliance for the diagram component is outlined below.
 

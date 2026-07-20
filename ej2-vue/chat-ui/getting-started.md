@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Chat UI component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chat UI component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chat UI component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -153,7 +153,7 @@ yarn run serve
 
 ## Configure messages and user
 
-To define the chat content, use the `<e-messages>` tag to group all messages, and the `<e-message>` tag for each individual message. The [user](../api/chat-ui#user) property assigns an identity to the current user, which is essential for distinguishing the user's messages from those of other participants.
+To define the chat content, use the `<e-messages>` tag to group all messages and the `<e-message>` tag for each individual message. The [user](../api/chat-ui#user) property assigns an identity to the current user, which is essential for distinguishing the user's messages from those of other participants.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

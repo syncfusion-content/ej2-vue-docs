@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Page settings in Vue Diagram component
 
-Page settings allow customization of the appearance, size, and orientation of the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) page.
+Page settings allow customization of the appearance, size, and orientation of the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) page.
 
 ## Page size and appearance
 
