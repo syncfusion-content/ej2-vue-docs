@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { RichTextEditorComponent, Toolbar, HtmlEditor, ClipboardCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorComponent, Toolbar, HtmlEditor, ClipBoardCleanup } from "@syncfusion/ej2-vue-richtexteditor";
 import { detach } from '@syncfusion/ej2-base';
 
 export default {
@@ -22,7 +22,7 @@ export default {
         }
     },
     provide: {
-        richtexteditor: [Toolbar, HtmlEditor, ClipboardCleanup]
+        richtexteditor: [Toolbar, HtmlEditor, ClipBoardCleanup]
     }
 }
 </script>

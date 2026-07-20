@@ -28,7 +28,7 @@
     const uploadDialog = ref(null);
     const filemanagerObj = ref(null);
     const uploadObj = ref(null);
-    let hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+    let hostUrl = 'https://physical-service.syncfusion.com/';
     const ajaxSettings = {
         url: hostUrl + 'api/FileManager/FileOperations',
         getImageUrl: hostUrl + 'api/FileManager/GetImage',

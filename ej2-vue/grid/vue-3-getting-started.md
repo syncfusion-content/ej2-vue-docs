@@ -18,74 +18,74 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
 
-## Setup the Vite project
+### Vue supported versions
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+| Vue version | Minimum Syncfusion Vue Data Grid version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
-```bash
-npm create vite@latest
-```
+### Browser Support
 
-or
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
-```bash
-yarn create vite
-```
+### Security
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Syncfusion® Vue Data Grid includes built-in support for common security practices such as Cross-Site Scripting (XSS) protection, Content Security Policy (CSP) compliance, Cross-Site Request Forgery (CSRF) prevention, and protection against injection attacks. These features help build secure and enterprise-ready applications.
 
-1.Define the project name: The name of the project can be specified directly. For this article, the project name is set as `my-project`.
+## Setup for local development
 
-```bash
-? Project name: » my-project
-```
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
 
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
 
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Rolldown is Vite's new experimental faster bundler (rust-based, replacing rollup). Choose `No` uses the stable, proven rollup-based Vite (recommended for most users)
+***Vue with JavaScript***
 
 ```bash
-Use rolldown-vite (Experimental)? No
+npm create vite@latest my-app -- --template vue
 ```
 
-5.Install dependencies and start the dev server.
+***Vue with TypeScript***
 
 ```bash
-Install with npm and start now?: Yes
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-Terminate the application, then run the following command:
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-cd my-project
+cd my-app
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grids package
+## Add Vue Grid packages
 
-To install the Grids package, use the following command:
+To install the Grid packages, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -140,6 +140,25 @@ The Data Grid code should be added in the **src/App.vue** file.
         
 {% previewsample "page.domainurl/code-snippet/grid/getting-started/default-cs6" %}
 
+## Registering Your Syncfusion License
+
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 3 application:
+
+{% tabs %}
+{% highlight html tabtitle="main.js" %}
+
+```javascript
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
+
+
 ## Run the application
 
 ```bash
@@ -151,7 +170,26 @@ or
 ```bash
 yarn run dev
 ```
-N> Looking for the full Vue Data Grid component overview, features, pricing, and documentation? Visit the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) page.
+
+## Production build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally by serving the generated `dist` folder with a static server:
+
+```bash
+npx serve dist
+```
+
+## Troubleshooting
+
+- **Grid not rendering styles:** Ensure the theme CSS is imported in `src/App.vue` and that you removed any default Vue CLI starter styles that may override the Grid styles.
+- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
+- **Port 8080 already in use:** Stop the conflicting process or run the Vue CLI dev server on a different port with `npm run serve -- --port 3000`.
 
 ## See also
 

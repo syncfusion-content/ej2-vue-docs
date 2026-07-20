@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, HtmlEditor, ClipboardCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorPlugin, Toolbar, HtmlEditor, ClipBoardCleanup } from "@syncfusion/ej2-vue-richtexteditor";
 import { detach } from '@syncfusion/ej2-base';
 
 Vue.use(RichTextEditorPlugin);
@@ -18,6 +18,6 @@ new Vue({
         }
     },
     provide:{
-        richtexteditor:[Toolbar, HtmlEditor, ClipboardCleanup]
+        richtexteditor:[Toolbar, HtmlEditor, ClipBoardCleanup]
     }
 });

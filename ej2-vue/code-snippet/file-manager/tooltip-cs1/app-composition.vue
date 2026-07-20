@@ -13,7 +13,7 @@ import { provide } from "vue";
 import { getValue, select } from '@syncfusion/ej2-base';
 import { FileManagerComponent as EjsFilemanager, NavigationPane, Toolbar, DetailsView } from "@syncfusion/ej2-vue-filemanager";
 
-let hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+let hostUrl = 'https://physical-service.syncfusion.com/';
 const ajaxSettings =
 {
     url: hostUrl + 'api/FileManager/FileOperations',

@@ -18,66 +18,72 @@ The `Options API` is the traditional approach to writing Vue.js components, orga
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
 
-## Set up the Vite project
+### Vue supported versions
 
-A recommended way to get started with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, execute one of the following commands that are specific to either NPM or Yarn:
+| Vue version | Minimum Syncfusion Vue Tree Grid version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
-```bash
-npm create vite@latest
-```
+### Browser Support
 
-or
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
-```bash
-yarn create vite
-```
+### Security
 
-Executing one of the above commands will prompt a series of configuration steps for the project setup:
+Syncfusion® Vue Tree Grid includes built-in support for common security practices such as Cross-Site Scripting (XSS) protection, Content Security Policy (CSP) compliance, Cross-Site Request Forgery (CSRF) prevention, and protection against injection attacks. These features help build secure and enterprise-ready applications.
 
-1. Define the project name: Specify the name of the project directly. For this article, the project name is `my-project`.
+## Setup for local development
 
-```bash
-? Project name: » my-project
-```
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-2. Select `Vue` as the framework. This creates a Vue 3 project.
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
 
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
 
-3. Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4. Install dependencies and start the dev server.
+***Vue with JavaScript***
 
 ```bash
-Install with npm and start now?: Yes
+npm create vite@latest my-app -- --template vue
 ```
 
-Terminate the application, then run the following command:
+***Vue with TypeScript***
 
 ```bash
-cd my-project
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Tree Grid packages
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```bash
+cd my-app
+```
+
+## Add Vue Tree Grid packages
 
 To install the Tree Grid component, use the following command:
 
@@ -135,6 +141,24 @@ The tree grid code should be added in the **src/App.vue** file.
    
 {% previewsample "page.domainurl/code-snippet/treegrid/getting-started/default-cs4" %}
 
+## Registering Your Syncfusion License
+
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 3 application:
+
+{% tabs %}
+{% highlight html tabtitle="main.js" %}
+
+```javascript
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
+
 ## Run the application
 
 ```bash
@@ -146,6 +170,26 @@ or
 ```bash
 yarn run dev
 ```
+
+## Production build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally by serving the generated `dist` folder with a static server:
+
+```bash
+npx serve dist
+```
+
+## Troubleshooting
+
+- **Tree Grid not rendering styles:** Ensure the theme CSS is imported in `src/App.vue` and that you removed any default Vue CLI starter styles that may override the Tree Grid styles.
+- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
+- **Port 8080 already in use:** Stop the conflicting process or run the Vue CLI dev server on a different port with `npm run serve -- --port 3000`.
 
 ## See also
 
