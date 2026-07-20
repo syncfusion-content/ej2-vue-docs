@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Layers in Vue Diagram component
 
-**Layer** organizes related shapes within a [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control as named categories. Assigning shapes to different layers enables selective viewing, removal, and locking of distinct shape categories.
+**Layer** organizes related shapes within a [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) control as named categories. Assigning shapes to different layers enables selective viewing, removal, and locking of distinct shape categories.
 
 In a diagram, [Layers](https://ej2.syncfusion.com/vue/documentation/api/diagram/layermodel) facilitate the modification of properties for all shapes assigned to a specific layer. Key properties that can be configured include:
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started with Vue Rich Text Editor component | Syncfusion
-description: Learn here all about Getting started in Syncfusion Vue Rich Text Editor component of Syncfusion Essential JS 2 and more.
-canonical_url: "https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor"
+title: Getting started in Vue Rich text editor component | Syncfusion
+description: Learn here all about Getting started in Syncfusion Vue Rich text editor component of Syncfusion Essential JS 2 and more.
+canonical_url: "https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor"
 control: Get started 
 platform: ej2-vue
 documentation: ug
@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue Rich Text Editor
 
-The [Vue Rich Text Editor](https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor) is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Vue Rich Text Editor component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+The [Vue Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor) is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Vue Rich Text Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 To get started quickly with the Vue Rich Text Editor, refer to this video tutorial:
 
@@ -122,8 +122,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Rich Text Editor is dis
 
 ## See also
 
-* [Accessibility in Rich Text Editor](./accessibility.md)
-* [Keyboard support in Rich Text Editor](./keyboard-support.md)
-* [Globalization in Rich Text Editor](./globalization.md)
+* [Accessibility in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility)
+* [Keyboard support in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/keyboard-support)
+* [Globalization in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/globalization)
 
-N> Looking for the full Vue Rich Text Editor component overview, features, pricing, and documentation? Visit the [Vue Rich Text Editor](https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor) page.
+For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.

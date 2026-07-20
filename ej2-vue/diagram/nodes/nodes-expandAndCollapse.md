@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Expand icon and collapse icon in Vue Diagram control
 
-[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support to describe the state of the node. i.e., the node is expanded or collapsed state. The IsExpanded property of node is used to expand or collapse the children nodes.The Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
+[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) provides support to describe the state of the node. i.e., the node is expanded or collapsed state. The IsExpanded property of node is used to expand or collapse the children nodes.The Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
 
 The following properties of the Node are used to represent the state of the node and allows user to Expand and Collapse the desired Node:
 

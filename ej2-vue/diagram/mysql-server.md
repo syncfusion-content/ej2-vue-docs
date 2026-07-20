@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connecting MySQL Server to Syncfusion® Vue Diagram using LINQ2DB
 
-This guide explains how to load and visualize organizational chart data stored in a MySQL database using the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a Vue application to render an organizational chart.
+This guide explains how to load and visualize organizational chart data stored in a MySQL database using the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a Vue application to render an organizational chart.
 
 **What is LINQ2DB?**
 

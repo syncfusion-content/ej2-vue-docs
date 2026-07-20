@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Vue Diagram component | Syncfusion®
 description: Check out and learn about Getting started with Vue Diagram component of Syncfusion Essential® JS 2 and more details.
-control: Getting started 
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue 2 Diagram Component
 
-This section explains how to create a Vue 2 application from scratch and build a simple diagram using the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component.
+This section explains how to create a Vue 2 application from scratch and build a simple diagram using the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) component.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/vue/documentation/mcp-server/ai-coding-assistant/getting-started)
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/vue/documentation/mcp-server/ai-coding-assistant/getting-started).
 
 ## Prerequisites
 
-Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Before You Begin
 
@@ -35,15 +35,15 @@ Use [Vue CLI](https://cli.vuejs.org/) to create and manage Vue 2 applications. V
 
 Install Vue CLI globally using the following command:
 
-```
+```bash
 npm install -g @vue/cli
 ``` 
 
 ## Step 2: Create a Vue 2 application
 
-Create a new Vue 2 application using the following command.
+Create a new Vue 2 application using the following command:
 
-```
+```bash
 vue create my-diagram-app
 ```
 
@@ -51,7 +51,7 @@ When prompted, select the **Default ([Vue 2] babel, eslint)** preset.
 
 Navigate to the project folder:
 
-```
+```bash
 cd my-diagram-app
 ```
 
@@ -61,8 +61,8 @@ All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https:
 
 Install the Vue Diagram package using the following command:
 
-```
-npm install @syncfusion/ej2-vue-diagrams --save
+```bash
+npm install @syncfusion/ej2-vue-diagrams
 ```
 
 N> Installing `@syncfusion/ej2-vue-diagrams` automatically installs the required dependency packages.
@@ -71,9 +71,9 @@ N> Installing `@syncfusion/ej2-vue-diagrams` automatically installs the required
 
 Import `DiagramPlugin` from `@syncfusion/ej2-vue-diagrams` and register it in the Vue application.
 
-Update the `src/main.js` file as follows:
+Replace the entire contents of **src/main.js** with the following code:
 
-```
+```js
 import Vue from 'vue';
 import App from './App.vue';
 import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
@@ -82,25 +82,24 @@ Vue.config.productionTip = false;
 Vue.use(DiagramPlugin);
 
 new Vue({
- render: h => h(App)
+  render: h => h(App)
 }).$mount('#app');
 ```
 
+
 ## Step 5: Add the required styles
 
-The Diagram component needs Syncfusion® theme styles to display correctly. Add the styles using one of the following options.
+The Diagram component needs Syncfusion® theme styles to display correctly. Syncfusion® theme packages include ready-to-use styles for supported control.
 
-### Option 1: Add styles from a theme package
+To add the styles, install the Tailwind 3 theme package using the following command:
 
-Syncfusion® theme packages include ready-to-use styles for supported components. Install the Tailwind 3 theme package using the following command:
-
-```
-npm install @syncfusion/ej2-tailwind3-theme --save
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
 ```
 
 Add the following import to the **src/App.vue** file:
 
-```
+```vue
 <style>
   @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css";
 </style>
@@ -108,20 +107,7 @@ Add the following import to the **src/App.vue** file:
 
 For the list of available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-### Option 2: Add styles from component packages
-
-After installing the Diagram package, the required style files are available under the **node_modules/@syncfusion** directory. Add the following imports to the **src/App.vue** file:
-
-```
-<style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-  @import '../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css';
-</style>
-```
-
-N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace the **tailwind3.css** references with the corresponding theme file, such as **material3.css**.
+N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace **@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css** with the corresponding stylesheet from the desired theme package. For example, to use the Material 3 theme, import **@syncfusion/ej2-material3-theme/styles/diagram/index.css**.
 
 N> The CSS references can also be moved to a separate global stylesheet if your application follows a centralized styling approach.
 
@@ -129,9 +115,9 @@ N> The CSS references can also be moved to a separate global stylesheet if your 
 
 Add the `ejs-diagram` component to the Vue component template.
 
-Update the `src/App.vue` file as follows:
+Replace the entire contents of **src/App.vue** with the following code:
 
-```
+```vue
 <template>
   <ejs-diagram
     id="diagram"
@@ -147,10 +133,7 @@ Update the `src/App.vue` file as follows:
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-  @import '../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css';
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css";
 </style>
 ```
 
@@ -164,11 +147,11 @@ N> In a Vue CLI-generated Vue 2 application, the root element is defined in `pub
 
 This section explains how to create a simple flowchart by adding nodes, customizing their appearance, and connecting them using connectors.
 
-The following example creates a flowchart with four nodes: **Start**, **Process**, **Decision**, and **End**. It also applies common node and connector settings using the `getNodeDefaults` and `getConnectorDefaults` properties.
+The following example creates a flowchart with four nodes: **Start**, **Process**, **Decision**, and **End**. It also applies common node and connector settings through the `getNodeDefaults` and `getConnectorDefaults` callback bindings.
 
-Update the `src/App.vue` file as follows:
+Replace the entire contents of **src/App.vue** with the following code:
 
-```
+```vue
 <template>
   <ejs-diagram
     id="diagram"
@@ -290,10 +273,7 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-diagrams/styles/tailwind3.css';
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css";
 </style>
 ```
 
@@ -310,11 +290,9 @@ In this example:
 
 Run the application using the following command:
 
-```
+```bash
 npm run serve
 ```
-Open the generated local URL in the browser. The application displays the flowchart diagram as shown below:
+Then open the local URL shown in the terminal, such as `http://localhost:8080`. The application displays the flowchart diagram as shown below:
 
 ![Getting started](./images/Getting-started.png)
-
-N> Looking for the full Vue Diagram component overview, features, pricing, and documentation? Visit the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) page.

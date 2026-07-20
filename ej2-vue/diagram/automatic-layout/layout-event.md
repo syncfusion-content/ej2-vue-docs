@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 The [`dataLoaded`](https://ej2.syncfusion.com/vue/documentation/api/diagram/idataloadedeventargs) event is triggered after the diagram is populated from the external data source.
 
-The following code example explains the data loaded event in the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram).
+The following code example explains the data loaded event in the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram).
 
 ```javascript
 

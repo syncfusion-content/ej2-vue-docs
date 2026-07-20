@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in Vue Diagram component
 
-[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support to export its content as image/svg files. The  [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram#exportdiagram) method of diagrams helps to export the diagram. The following code illustrates how to export the diagram as image.
+[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) provides support to export its content as image/svg files. The  [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram#exportdiagram) method of diagrams helps to export the diagram. The following code illustrates how to export the diagram as image.
 
 N> To use Print and Export, you need to inject `PrintAndExport` in the diagram.
 

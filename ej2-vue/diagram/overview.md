@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview in Vue Diagram component
 
-The Overview control allows you to see a preview or an overall view of the entire content of a [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram). This helps you to grasp the overall picture of a large diagram and navigate, pan, or zoom to a specific position on the page.
+The Overview control allows you to see a preview or an overall view of the entire content of a [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram). This helps you to grasp the overall picture of a large diagram and navigate, pan, or zoom to a specific position on the page.
 
 ## Usage scenario
 

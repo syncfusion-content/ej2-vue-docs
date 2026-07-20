@@ -67,22 +67,25 @@ yarn add @syncfusion/ej2-vue-schedule
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-In this article, the `material3` theme is applied using CSS styles, which are available in installed packages. The necessary `material3` CSS styles for the Schedule component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Install the **Tailwind 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-tailwind3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-@import '/node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '/node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-@import '/node_modules/@syncfusion/ej2-calendars/styles/material3.css';
-@import '/node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-@import '/node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '/node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '/node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '/node_modules/@syncfusion/ej2-vue-schedule/styles/material3.css';
+    @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/schedule/index.css";
 </style>
 
 {% endhighlight %}
@@ -348,4 +351,3 @@ The output will display the Scheduler with the specified view configuration.
 
 > Explore the live demo at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material3/schedule/overview.html) to see Scheduler view customizations in action.
 
-N> Looking for the full Vue Scheduler component overview, features, pricing, and documentation? Visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) page.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data binding in Vue Diagram component
 
-* [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) can be populated with the `nodes` and `connectors` based on the information provided from an external data source.
+* [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) can be populated with the `nodes` and `connectors` based on the information provided from an external data source.
 
 * Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
 

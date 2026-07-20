@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Node Interaction Events
 
-[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides some events support for node that triggers when interacting with the node.
+[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) provides some events support for node that triggers when interacting with the node.
 
 ## Click event
 

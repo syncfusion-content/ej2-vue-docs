@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Constraints in Vue Diagram component
 
-Constraints are used to enable/disable certain behaviors of the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram), nodes and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled/disabled using Bitwise operators (&, |, ~, <<, etc.).
+Constraints are used to enable/disable certain behaviors of the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram), nodes and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled/disabled using Bitwise operators (&, |, ~, <<, etc.).
 
 To know more about Bitwise operators, refer to [`Bitwise Operations`](#bitwise-operations).
 

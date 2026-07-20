@@ -14,7 +14,7 @@ Virtualization is a technique to optimize the performance of diagrams, especiall
 
 ## Virtualization in Diagram
 
-Virtualization optimizes the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) performance by loading only the diagramming objects within the visible area, or ViewPort, of the Scroll Viewer. This means that only the nodes and connectors that are currently in view are loaded, while the remaining objects are loaded dynamically as they come into view.
+Virtualization optimizes the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) performance by loading only the diagramming objects within the visible area, or ViewPort, of the Scroll Viewer. This means that only the nodes and connectors that are currently in view are loaded, while the remaining objects are loaded dynamically as they come into view.
 
 This feature significantly enhances performance, especially when working with diagrams containing a large number of nodes and connectors. By reducing the number of objects that need to be processed at any given time, virtualization ensures smoother interactions, such as loading and dragging items within the diagram.
 
