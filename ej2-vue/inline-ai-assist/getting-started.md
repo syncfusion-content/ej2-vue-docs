@@ -76,7 +76,7 @@ To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwin
 npm install @syncfusion/ej2-tailwind3-theme --save
 ```
 
-To render the Inline AI assist component, import the required Tailwind3 CSS styles for the component and its dependencies into the `<style>` section of the **src/App.vue** file. This approach ensures that all necessary dependency styles are loaded, as shown below.
+To render the Inline AI Assist component, import the required Tailwind3 CSS styles for the component and its dependencies into the `<style>` section of the **src/App.vue** file. This approach ensures that all necessary dependency styles are loaded, as shown below.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

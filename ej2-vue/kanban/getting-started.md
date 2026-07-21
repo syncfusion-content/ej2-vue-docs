@@ -10,11 +10,23 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Kanban Component
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion Vue Kanban component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Kanban component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-## Create the Vue application
+By the end of this guide, you will have a working Kanban board with four columns — **To Do**, **In Progress**, **Testing**, and **Done** — populated with sample cards.
 
-Run the following commands to set up a Vue application with TypeScript:
+## Prerequisites
+
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+
+Before you begin, make sure the following are installed on your development machine:
+
+* [Node.js](https://nodejs.org/en) version 18 or higher (required by Vite 7)
+* [npm](https://www.npmjs.com/) (bundled with Node.js) or [yarn](https://yarnpkg.com/)
+* A code editor such as Visual Studio Code
+
+## Create the Vue Application
+
+Run the following commands in the terminal to scaffold a new Vue 3 + TypeScript project using [Vite](https://vitejs.dev/):
 
 ```bash
 npm create vite@7 my-vue-app -- --template vue-ts
@@ -22,9 +34,19 @@ cd my-vue-app
 npm install
 ```
 
-## Install Syncfusion Vue Kanban package
+> You can also use `npm create vite@latest` to scaffold with the most recent Vite version. Replace `my-vue-app` with the name of your project.
 
-All available Essential JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
+After the install completes, start the dev server to verify the scaffolded app works before adding Syncfusion packages:
+
+```bash
+npm run dev
+```
+
+Vite serves the default app at `http://localhost:5173`. Stop the server with **Ctrl + C** before moving on to the next steps.
+
+## Install Syncfusion Vue Kanban Package
+
+All available Essential JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. The `@syncfusion/ej2-vue-kanban` package depends on **Vue 3**.
 
 Install the Kanban component with the following command:
 
@@ -32,39 +54,44 @@ Install the Kanban component with the following command:
 npm install @syncfusion/ej2-vue-kanban --save
 ```
 
-## Adding CSS reference
+## Adding CSS Reference
 
-Include the required styles in your Vue application. The following CSS files are available in the `../node_modules/@syncfusion` package folder. Add these imports to the `<style>` section of your **src/App.vue** file or in a global CSS file:
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Kanban component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-```css
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-vue-kanban/styles/tailwind3.css';
-</style>
-```
+Install the **Tailwind 3** theme package using the following command:
 
-## Import and Configure Kanban components
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
-Import the required Kanban components from the `@syncfusion/ej2-vue-kanban` package in your **src/App.vue** file. Use the following code to import the necessary components:
+npm install @syncfusion/ej2-tailwind-theme
 
-```typescript
-import {
-  KanbanComponent as EjsKanban,
-  ColumnsDirective as EColumns,
-  ColumnDirective as EColumn,
-} from "@syncfusion/ej2-vue-kanban";
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Adding Kanban component
+Add these imports to the `<style>` section of the **src/App.vue** file, or include them in a global CSS file:
 
-Update the **src/App.vue** file to render the Kanban component. Add the Kanban component with columns and sample data to get started quickly.
+{% tabs %}
+{% highlight css tabtitle="App.vue" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind-theme/styles/kanban/index.css";
+
+{% endhighlight %}
+{% endtabs %}
+
+## Adding Kanban Component
+
+The Kanban component is registered automatically when you import it into **src/App.vue**. The following snippet shows the complete `App.vue` file using both the Composition API and the Options API.
+
+### Key Properties Used
+
+| Property / Directive | Description |
+| --- | --- |
+| `keyField` | Maps each card to a column based on a field in the data source (for example, `Status`). |
+| `dataSource` | An array of objects that populates the Kanban cards. |
+| `cardSettings` | Configures card appearance. `contentField` sets the card body and `headerField` sets the card header. |
+| `<e-columns>` / `<e-column>` | Directives that define the Kanban columns. Each `e-column` requires `headerText` and `keyField`. |
+
+The data source used in this example exposes the following fields: `Id`, `Status`, `Summary`, `Type`, `Priority`, `Tags`, `Estimate`, `Assignee`, and `RankId`. The value of each card's `Status` field must match one of the `keyField` values defined on the columns.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -75,7 +102,7 @@ Update the **src/App.vue** file to render the Kanban component. Add the Kanban c
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
+## Run the Application
 
 To run the Vue application, use the following command in the terminal from the project root directory:
 
@@ -83,19 +110,23 @@ To run the Vue application, use the following command in the terminal from the p
 npm run dev
 ```
 
-This command builds the application and opens it in your default web browser.
-Once the application is running, a Kanban board will be displayed with the configured columns.
+This command starts the Vite development server. By default, the app is served at `http://localhost:5173/`. Once the application is running, a Kanban board will be displayed with the configured **To Do**, **In Progress**, **Testing**, and **Done** columns, populated with the sample cards from `kanbanData`.
 
-In this example, the Kanban cards are populated using default fields such as ID, Summary, and Status.
+> `npm run dev` does not produce a production build. To generate an optimized production bundle, run `npm run build` and preview it with `npm run preview`.
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/kanban/getting-started-key-field-cs2/app-composition.vue %}
-{% endhighlight %}
+## Troubleshooting
 
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/kanban/getting-started-key-field-cs2/app.vue %}
-{% endhighlight %}
-{% endtabs %}
+| Issue | Likely Cause | Resolution |
+| --- | --- | --- |
+| Kanban board renders without styles | CSS imports are missing or out of order. | Verify all CSS files listed above are imported and that `ej2-base` is imported first. |
+| Cards do not appear in columns | `keyField` on the component does not match any `e-column` `keyField`. | Make sure each card's `Status` value matches one of the column `keyField` values. |
+| Console error: "Failed to resolve component ej-kanban" | Import statement is missing or the package is not installed. | Re-run `npm install @syncfusion/ej2-vue-kanban --save` and confirm the import is present in `App.vue`. |
+
+## Next Steps
+
+* [Configure Kanban columns](./columns.md)
+* [Bind data from a remote service](./data-binding.md)
+* [Customize Kanban cards](./cards.md)
+* [Enable dialog editing](./dialog.md)
 
 {% previewsample "page.domainurl/code-snippet/kanban/getting-started-key-field-cs2" %}

@@ -22,7 +22,7 @@ To get started quickly with Vue Charts, refer to the following introductory vide
 
 ## Prerequisites
 
-Ensure that the development environment meets the required criteria listed in [`System requirements for Syncfusion Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+Ensure your development environment meets the following requirements as listed in [`System requirements for Syncfusion Vue UI components`](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Dependencies
 
@@ -49,8 +49,6 @@ To generate a Vue 2 project using Vue CLI, install Vue CLI globally using either
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 **yarn**
@@ -58,15 +56,19 @@ npm run serve
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
 ![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+Once the `quickstart` project is set up with default settings, navigate to the project directory:
+
+```bash
+cd quickstart
+```
+
+Now, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> packages to the project.
 
 ## Add Syncfusion Vue Packages
 
@@ -124,7 +126,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the complete code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -147,7 +149,8 @@ npm run serve
 ```bash
 yarn run serve
 ```
-        
+Open the generated local URL (for example, `http://localhost:8080`) from terminal in the browser. The application  renders an empty Syncfusion Chart container (350px height) with default axes with no series, displaying a blank chart.
+
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
 
 ## Module Injection
@@ -155,8 +158,7 @@ yarn run serve
 In Vue, register the chart's feature modules using the component's `provide` option.
 
 The Chart component is split into feature-specific modules. To enable a specific feature in a Vue 2
-application, register the corresponding module(s) in the component's `provide` option. The following
-example shows the modules used in this guide and their purpose.
+application, register the corresponding module(s) in the component's `provide` option. The following example shows the modules used in this guide and their purpose.
 
 * `LineSeries` - Register to enable the line series type.
 * `Legend` - Register to enable the legend feature.
@@ -187,6 +189,9 @@ export default {
 };
 </script>
 ```
+
+> **Note:** If a required module is not registered, you will encounter an error such as `"Series type is not registered"` or `"Module is not found"`. Always register all modules used in your chart.
+
 You can also refer to the [Feature Modules](./feature-modules) page for the complete list of available modules and their supported features.
 
 > Note: Inject only the modules you actually use to keep the bundle size smaller.
@@ -246,5 +251,26 @@ export default {
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs4" %}
+
+
+## Troubleshooting
+
+**Chart is not rendering:**
+- Ensure all required modules are registered in the `provide` option
+- Verify the `dataSource` is correctly assigned with proper field mappings
+- Check the browser console for any error messages
+
+**Module not found error:**
+- Confirm that the module is imported from `@syncfusion/ej2-vue-charts`
+- Verify the module name is spelled correctly in the import statement and `provide` option
+
+**No data is displayed:**
+- Check that `xName` and `yName` properties match the field names in your data
+- Verify the `valueType` is set to `Category` if using category axis
+- Ensure the `dataSource` array contains data
+
+For more assistance, refer to the [`Vue Charts API Documentation`](https://ej2.syncfusion.com/vue/documentation/api/chart) and the [Feature Modules](./feature-modules) page.
+
+## Next Steps
 
 > You can refer to our [`Vue Charts`](https://www.syncfusion.com/vue-ui-components/vue-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Vue Charts example`](https://ej2.syncfusion.com/vue/demos/#/material/chart/line.html) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

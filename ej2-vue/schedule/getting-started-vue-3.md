@@ -19,7 +19,31 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
+
+### Vue supported versions
+
+| Vue version | Minimum Syncfusion Vue Data Grid version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
+
+### Browser Support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
 ## Set up the Vite project
 
@@ -56,7 +80,7 @@ Vanilla
   Others
 ```
 
-3.Choose `JavaScript` as framework variant to build this Vite project using JavaScript and Vue.
+3.Select `JavaScript` as the framework variant.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -100,14 +124,14 @@ yarn add @syncfusion/ej2-vue-schedule
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-Install the **Tailwind 3** theme package using the following command:
+Install the **Material3 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
  
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-material3-theme --save
  
 {% endhighlight %}
 {% endtabs %}
@@ -118,13 +142,13 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/schedule/index.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/schedule/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Note**: Scheduler component use other Syncfusion<sup style="font-size:70%">&reg;</sup> components too, the dependent component's CSS references need to be added for using all the Scheduler functionalities.
+> **Note**: Scheduler component uses other Syncfusion<sup style="font-size:70%">&reg;</sup> components. The dependent component's CSS references need to be added to utilize all Scheduler functionalities.
 
 ## Add Vue component
 
@@ -466,6 +490,8 @@ or
 ```bash
 yarn run dev
 ```
+
+The development server will start, typically at `http://localhost:5173`. Open this URL in your browser to view the Scheduler component. The terminal will display the exact URL and hot reload will be enabled for development.
 
 The output will appear as follows:
 

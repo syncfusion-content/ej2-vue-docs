@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Accumulation Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accumulation Chart component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accumulation Chart component.
 
 ## Prerequisites
 
-Ensure that the development environment meets the required criteria listed in [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+Ensure your development environment meets the following requirements as listed in  [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Dependencies
 
@@ -30,15 +30,13 @@ The following minimum dependencies are required to use the Accumulation Chart:
 
 ## Setting Up the Vue 2 Project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. You can install Vue CLI using either npm or Yarn:
+To generate a Vue 2 project using Vue CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. You can install Vue CLI using either npm or Yarn:
 
 **npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 **yarn**
@@ -46,15 +44,19 @@ npm run serve
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+Select **Default ([Vue 2] babel, eslint)** when prompted.
 
 ![Terminal showing Vue CLI creating a Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Once the `quickstart` project is set up with default settings, navigate to the project directory:
+
+```bash
+cd quickstart
+```
+
+Now, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> packages to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Packages
 
@@ -102,9 +104,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Declare the value for the `dataSource` property in the `script` section.
+**Step 2:** Declare the data for the `dataSource` property in the `script` section.
 
-Ensure that `seriesData` is defined as an array of objects that contains the values to be displayed in the chart.
+Define `seriesData` as an array of objects containing the category values (`x`) and numeric values (`y`) to be displayed in the chart.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -176,16 +178,20 @@ npm run serve
 yarn run serve
 ```
 
-Open the project URL shown in the terminal (typically `http://localhost:8080`) and verify the chart displays as expected.
+Open your browser and navigate to `http://localhost:8080`. Verify that the pie chart displays with the sample data.
 
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs9" %}
 
-## Troubleshooting (Common Issues)
+## Troubleshooting
 
-- **Chart not rendering**: Ensure that the required accumulation series modules are registered correctly and that `seriesData` is defined as a valid array of data objects.
+The following are common issues and solutions when integrating the Accumulation Chart component:
 
-- **Undefined `seriesData` reference**: Ensure that the data bound to the series is defined correctly as an array of objects such as `{ x: 'Category', y: 10 }`.
+- **Chart not rendering**: Ensure that the required accumulation series modules are registered in the `provide` option and that `seriesData` is defined as a valid array of data objects with `x` and `y` properties.
 
-- **Version mismatch**: Verify that the installed `@syncfusion/ej2-vue-charts` package is compatible with the Vue version used in your project.
+- **Undefined `seriesData` reference**: Verify that `seriesData` is defined in the `data()` function and follows the correct format: `{ x: 'Category', y: value }`.
+
+- **Module import errors**: Confirm that all required modules (`AccumulationChartComponent`, `AccumulationSeriesCollectionDirective`, `AccumulationSeriesDirective`, `PieSeries`) are imported from `@syncfusion/ej2-vue-charts`.
+
+- **Version mismatch**: Verify that the installed `@syncfusion/ej2-vue-charts` package is compatible with your Vue 2 version. Check package.json for the correct version range.
 
 

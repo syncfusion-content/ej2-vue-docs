@@ -28,7 +28,7 @@ The steps below describe how to install the Essential<sup style="font-size:70%">
 
     ![license download](images/offline1.png)
 
-    N> The Installer wizard displays a dialog showing the package extraction progress.
+    > Note: The Installer wizard displays a dialog showing the package extraction progress.
 
 2. To unlock the Syncfusion<sup style="font-size:70%">&reg;</sup> offline installer, choose one of the following options:
 

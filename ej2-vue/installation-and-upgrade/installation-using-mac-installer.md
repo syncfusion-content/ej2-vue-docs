@@ -44,7 +44,7 @@ The steps below show how to install the Essential<sup style="font-size:70%">&reg
 
    ![License Agree Confirmation](images/Mac_Installer4.png)
 
-N> An unlock key is not required to install the Mac installer. The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript - EJ2 Mac installer can be used for development purposes without registering an unlock key.
+> Note: An unlock key is not required to install the Mac installer. The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript - EJ2 Mac installer can be used for development purposes without registering an unlock key.
 
 5. Now you can open the folder to explore the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio Mac installer.
 
