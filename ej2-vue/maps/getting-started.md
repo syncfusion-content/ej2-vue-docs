@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting Started with Vue Maps Component | Syncfusion
-description:  Check out and learn about Getting Started with Vue Maps component of Syncfusion Essential JS 2 and more details.
-control: Getting Started 
+description: Learn how to set up a Vue 2 project from scratch and integrate the Syncfusion Vue Maps component to render geographic data.
+control: Getting Started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Maps Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component. By the end of this guide, you'll have a working Maps component displaying geographic data with features like legends, tooltips, and data labels.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component. By the end of this guide, you'll have a working Maps component rendering the world map from a local shape data file.
 
 > **Note**: If you're using Vue 3, refer to the [Vue 3 Getting Started guide](./getting-started-vue-3.md).
+>
+> **Note**: Vue 2 reached end-of-life on December 31, 2023. For new projects, we strongly recommend using [Vue 3](./getting-started-vue-3.md).
 
 You can explore the Maps component's capabilities using the following video:
 
@@ -24,7 +26,7 @@ Ensure that the development environment meets the required criteria listed in [S
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Maps.
+The following are the minimum dependencies required to use the Maps component.
 
 ```
 |-- @syncfusion/ej2-vue-maps
@@ -39,15 +41,13 @@ Below is the list of minimum dependencies required to use the Maps.
 
 ## Setting Up the Vue 2 Project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. You can install Vue CLI using either npm or Yarn:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Install Vue CLI globally using either npm or Yarn:
 
 **npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 **yarn**
@@ -55,21 +55,23 @@ npm run serve
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When prompted, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
 ![Vue 2 project](./images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Once the `quickstart` project is set up with default settings, navigate to the project directory:
+
+```bash
+cd quickstart
+```
+
+Now, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> packages to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
-
-This article uses the [Vue Maps component](https://www.syncfusion.com/vue-components/vue-maps-library) as an example. Install the `@syncfusion/ej2-vue-maps` package by using either npm or Yarn:
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use the Maps component, install the `@syncfusion/ej2-vue-maps` package. Use the latest stable version compatible with Vue 2.
 
 **npm**
 
@@ -83,14 +85,15 @@ npm install @syncfusion/ej2-vue-maps
 yarn add @syncfusion/ej2-vue-maps
 ```
 
-> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
+> Note: npm v5+ saves packages to `dependencies` by default; the `--save` flag is not required.
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps Component
 
 **Note**: Before adding the Maps component, make sure the map shape data is available in your project.  
 
-- In this example, the shape data is imported from a local `world-map.js` file placed in the `src` folder.  
-- You can either use local GeoJSON data or load shape data from an external source.
+- In this example, the shape data is imported from a local `world-map.js` file placed in the `src` folder.
+- Download the [`world_map` sample data (ZIP archive)](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-1580932177), extract it, and place the resulting `world-map.js` file in the `src` folder of your project.
+- You can also use any local GeoJSON data or load shape data from an external source.
 
 **Step 1:** Import and register the Maps component in the `script` section of the **src/App.vue** file.
 
@@ -136,7 +139,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the combined code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -159,6 +162,9 @@ npm run serve
 ```bash
 yarn run serve
 ```
+
+Open the generated local URL (for example, `http://localhost:8080`) from terminal in the browser to see the basic Maps component rendering the world map.
+
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs105" %}
 
 ## Module Injection
@@ -208,29 +214,41 @@ export default {
 
 This section explains how to bind GeoJSON data to the map.
 
-```ts
+The following snippet defines a `FeatureCollection` containing a single state (Massachusetts):
 
-let usMap: Object =
-{
+```js
+const usMap = {
     "type": "FeatureCollection",
     "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
     "features": [
-        { "type": "Feature", "properties": { "iso_3166_2": "MA", "name": "Massachusetts", "admin": "United States of America" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -70.801756294617277, 41.248076234530558 ]] ] ] }
+        {
+            "type": "Feature",
+            "properties": { "iso_3166_2": "MA", "name": "Massachusetts", "admin": "United States of America" },
+            "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -70.801756294617277, 41.248076234530558 ] ] ] ] }
         }
     ]
 };
-
 ```
 
-Map shapes are rendered within layers. So add a layer collection to the Maps by using [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps#layers) property. Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapedata) property.
+Map shapes are rendered within layers. Add a layer collection to the Maps by using the [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps#layers) property, then bind the GeoJSON data to the layer's [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapedata) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/maps/getting-started-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs34" %}
 
->**Note**: Refer to the data values for [`world_map`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-1580932177).
+>**Note**: For the full set of world map shape data used in the basic example, download the [`world_map` sample data (ZIP archive)](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-1580932177), extract it, and place the resulting `world-map.js` file in the `src` folder of your project.
+
+## Troubleshooting
+
+The following are common issues you may encounter when getting started with the Maps component:
+
+* **Blank map is displayed** — Ensure that the shape data is correctly imported and that the file path in the import statement matches the file's location in your project.
+* **`world_map is not defined` error** — Verify that `world-map.js` exists in the `src` folder.
+* **Module features do not render (tooltips, legend, data labels)** — Confirm the corresponding module is added to the `provide.maps` array in the Vue component.
+* **Shape renders off-canvas or is invisible** — The shape's CRS does not match the map's default projection. Set [`projectionType`](https://ej2.syncfusion.com/vue/documentation/api/maps/projectionType) on the `MapsComponent` (for example, `Equirectangular`, `Mercator`, or `Miller`) or transform the GeoJSON to the expected CRS.
+
 

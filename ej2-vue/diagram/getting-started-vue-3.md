@@ -24,7 +24,7 @@ To create, edit, and view interactive diagrams using the Vue Diagram component, 
 
 ## Prerequisites
 
-Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements). This guide requires Node.js 18.0 or later and Vite 5.0 or later.
 
 ## Before You Begin
 This guide uses a Vue 3 project created with Vite using the JavaScript template, which provides fast builds and an optimized development experience.
@@ -34,7 +34,7 @@ The main files used in this guide are:
 - `src/main.js` — Application entry point.
 - `index.html` — Root HTML file.
 
-N> In a Vite Vue 3 application, the root component is commonly generated as `src/App.vue`.
+N> In a Vite Vue application, the root element is defined in `index.html` as `<div id="app"></div>`, and the application is mounted from `src/main.js`. In a Vite Vue 3 application, the root component is commonly located at `src/App.vue`.
 
 N> This guide uses the Composition API with `<script setup>`, which is the recommended approach for Vue 3 applications.
 
@@ -49,7 +49,7 @@ Create a new Vue 3 application using the following command.
 npm create vite@latest my-diagram-app -- --template vue
 ```
 
-If Vite prompts you to install dependencies and start the project immediately, select **No**. The Syncfusion package is installed in a later step.
+If Vite prompts you to install dependencies and start the project immediately, select **No**. Dependencies are installed in the next step instead, so that the Syncfusion package can be added together with the rest of the application dependencies.
 
 Navigate to the project folder:
 
@@ -62,7 +62,7 @@ Install the application dependencies:
 ```bash
 npm install
 ```
-N> If you prefer TypeScript instead of JavaScript, create the application using `npm create vite@latest my-diagram-app -- --template vue-ts`.
+N> If you prefer TypeScript instead of JavaScript, create the application using `npm create vite@latest my-diagram-app -- --template vue-ts`. For TypeScript-specific guidance, refer to the [Vite Vue-TS template](https://vitejs.dev/guide/) documentation.
 
 ## Step 2: Install the Vue Diagram package
 
@@ -78,7 +78,7 @@ N> Installing `@syncfusion/ej2-vue-diagrams` automatically installs the required
 
 ## Step 3: Add the required styles
 
-The Diagram component needs Syncfusion® theme styles to display correctly. Syncfusion® theme packages include ready-to-use styles for supported control.
+The Diagram component needs Syncfusion® theme styles to display correctly. Syncfusion® theme packages include ready-to-use styles for supported controls.
 
 To add the styles, install the Tailwind 3 theme package using the following command:
 
@@ -96,7 +96,7 @@ Add the following import to the **src/App.vue** file:
 
 For the list of available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace **@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css** with the corresponding stylesheet from the desired theme package. For example, to use the Material 3 theme, import **@syncfusion/ej2-material3-theme/styles/diagram/index.css**.
+N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace **@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css** with the corresponding stylesheet from the desired theme package. For example, to use the Material 3 theme, import **@syncfusion/ej2-material3-theme/styles/diagram/index.css**. Install the theme package at the same version as `@syncfusion/ej2-vue-diagrams` to avoid style mismatches.
 
 ## Step 4: Add the Diagram component
 
@@ -124,9 +124,7 @@ Replace the entire contents of **src/App.vue** with the following code:
 
 At this stage, the Diagram component renders an empty canvas.
 
-N> The Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
-
-N> In a Vite Vue application, the root element is defined in `index.html` as `<div id="app"></div>`, and the application is mounted from `src/main.js`.
+N> The `DiagramComponent as EjsDiagram` alias is required for `<script setup>`, because the `<ejs-diagram>` element name in the template must match the registered component alias. The Diagram component must also have a valid height; if the height is not set, the canvas may not be visible. If the canvas does not render, verify that the height is set, the theme CSS is imported, and the component alias matches the `EjsDiagram` import.
 
 ## Step 5: Create your first Diagram with nodes and connectors
 
@@ -277,4 +275,6 @@ npm run dev
 ```
 Then open the generated local URL (`http://localhost:5173`) in the browser. The application displays the flowchart diagram as shown below:
 
-![Getting started](./images/Getting-started.png)
+![Rendered flowchart with four nodes connected vertically by arrows](./images/Getting-started.png)
+
+N> Looking for the full Vue Diagram component overview, features, pricing, and documentation? Visit the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) page.

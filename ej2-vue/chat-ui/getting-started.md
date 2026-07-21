@@ -1,30 +1,54 @@
 ---
 layout: post
 title: Getting started with Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about getting started with the Vue Chat UI component of Syncfusion Essential JS 2 and more details.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Chat UI component in Vue 2
+# Getting Started with the Vue Chat UI Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chat UI component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chat UI component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
 
-## Setting up the Vue 2 project
+### Vue supported versions
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+| Vue version | Minimum Syncfusion Vue Chat UI version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
+
+### Browser support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
+
+## Setup the Vue 2 project
+
+Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
+
+To create a new Vue 2 application, run the following commands based on your preferred package manager:
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 or
@@ -32,112 +56,78 @@ or
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-<img src="https://ej2.syncfusion.com/vue/documentation/appearance/images/vue2-terminal.png" alt="Vue 2 project">
+- **Which linter to use?** → **Default ([Vue 2] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Navigate to the project directory:
 
-This article uses the `Vue Chat UI component` as an example. Install the `@syncfusion/ej2-vue-interactive-chat` package by running the following command:
+```bash
+cd quickstart
+```
+
+## Adding Vue Chat UI packages
+
+To install the Chat UI package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-interactive-chat --save
 ```
+
 or
 
 ```bash
 yarn add @syncfusion/ej2-vue-interactive-chat
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project. 
+## Adding CSS reference
 
-To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-```bash
-npm install @syncfusion/ej2-tailwind3-theme --save
-```
-
-To render the Chat UI component, import the required Tailwind3 CSS styles for the component and its dependencies into the `<style>` section of the **src/App.vue** file. This approach ensures that all necessary dependency styles are loaded, as shown below.
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-material3-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/chat-ui/index.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/chat-ui/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding Chat UI component
 
-Follow the below steps to add the Vue Chat UI component using `Composition API` or `Options API`:
+The Chat UI code should be added in the **src/App.vue** file.
 
-1\. First, import and register the Chat UI component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+The [user](../api/chat-ui#user) property assigns an identity to the current user, which is essential for distinguishing the user's messages from those of other participants.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { ChatUIComponent as EjsChatui } from "@syncfusion/ej2-vue-interactive-chat";
-  const currentUser = {
-  id: "user",
-  user: "Albert"
-};
-</script>
-
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { ChatUIComponent } from "@syncfusion/ej2-vue-interactive-chat";
-
-export default {
-  components: {
-    'ejs-chatui': ChatUIComponent
-  },
-  data () {
-    return {
-       currentUser: {
-        id: "user1",
-        user: "Current User",
-      }
-    }
-  }
-}
-</script>
-
+{% include code-snippet/chat-ui/defaultMessage/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
-2\. In the `template` section, define the Chat UI component.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <div id="app">
-    <div id='container' style="height: 400px; width: 400px;">
-      <ejs-chatui :user="currentUser"></ejs-chatui>
-    </div>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/defaultMessage" %}
 
 ## Run the application
-
-To run the application, use the following command:
 
 ```bash
 npm run serve
@@ -149,19 +139,25 @@ or
 yarn run serve
 ```
 
-{% previewsample "page.domainurl/code-snippet/chat-ui/getting-started" %}
+## Registering your Syncfusion license
 
-## Configure messages and user
-
-To define the chat content, use the `<e-messages>` tag to group all messages and the `<e-message>` tag for each individual message. The [user](../api/chat-ui#user) property assigns an identity to the current user, which is essential for distinguishing the user's messages from those of other participants.
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 2 application:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/defaultMessage/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chat-ui/defaultMessage/app.vue %}
+{% highlight html tabtitle="main.js" %}
+
+```javascript
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
 {% endhighlight %}
 {% endtabs %}
-  
-{% previewsample "page.domainurl/code-snippet/chat-ui/defaultMessage" %}
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
+
+## Troubleshooting
+
+- **Chat UI not rendering styles:** Ensure the theme CSS is imported in `src/App.vue` and that any default Vue CLI starter styles are not overriding the Chat UI styles.
+- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
