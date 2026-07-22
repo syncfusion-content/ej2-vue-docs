@@ -112,17 +112,13 @@ export default {
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <div id='container' style="margin: 50px auto;">
-        <ejs-blockeditor></ejs-blockeditor>
-    </div>
+  <ejs-blockeditor></ejs-blockeditor>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
 The complete example below combines the previous steps into a single **src/App.vue** file.
-
-The following code summarizes the steps:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

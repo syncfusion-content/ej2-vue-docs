@@ -1,7 +1,5 @@
 <template>
-    <div id='container'>
-      <ejs-blockeditor></ejs-blockeditor>
-    </div>
+  <ejs-blockeditor></ejs-blockeditor>
 </template>
 
 <script>
@@ -18,9 +16,4 @@ export default {
 
 <style>
   @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/blockeditor/index.css";
-
-  #container {
-    margin: 50px auto;
-
-  }
 </style>
