@@ -107,7 +107,7 @@ Add the required Syncfusion® styles to the **src/App.vue** file in the `<style>
 
 N> The `ej2-base`, `ej2-popups`, and `ej2-navigations` style references provide the shared base styles (popups, dialogs, and navigation UI) that the Diagram component relies on. Without them, popups and context menus may render incorrectly.
 
-```vue
+```
 <style>
   @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
   @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
@@ -127,7 +127,7 @@ Import `DiagramComponent` from `@syncfusion/ej2-vue-diagrams` and use it in your
 
 Replace the entire contents of **src/App.vue** with the following code:
 
-```vue
+```
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
@@ -166,7 +166,7 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 Replace the entire contents of **src/App.vue** with the following code:
 
-```vue
+```
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
