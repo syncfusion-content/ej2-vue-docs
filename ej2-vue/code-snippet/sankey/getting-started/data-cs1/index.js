@@ -1,9 +1,6 @@
 import Vue from "vue";
 import {
-  SankeyPlugin,
-  SankeyTooltip,
-  SankeyLegend,
-  SankeyExport
+  SankeyPlugin
 } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(SankeyPlugin);
@@ -41,9 +38,5 @@ new Vue({
         </ejs-sankey>
       </div>
     </div>
-  `,
-
-  provide: {
-    sankey: [SankeyTooltip, SankeyLegend, SankeyExport]
-  }
+  `
 });

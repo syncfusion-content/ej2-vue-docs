@@ -76,7 +76,7 @@ letter-spacing: 0.7px;
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/document-editor/getting-started">Document Editor</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/inplace-editor/getting-started/">In-place Editor</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/image-editor/getting-started">Image Editor</a></div>
-        <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/">RichTextEditor</a></div>
+        <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/">Rich Text Editor</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/">PDF Viewer</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/document-editor/getting-started/">Word Processor</a></div>
         <div><p class="control-category">LAYOUT</p></div>

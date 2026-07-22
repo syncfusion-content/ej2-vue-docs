@@ -25,21 +25,17 @@
 </template>
 
 <script setup>
-import { ref, provide } from "vue";
+import { ref } from "vue";
 import {
   SankeyComponent as EjsSankey,
   SankeyNodesCollectionDirective as ESankeyNodesCollection,
   SankeyNodeDirective as ESankeyNode,
   SankeyLinksCollectionDirective as ESankeyLinksCollection,
-  SankeyLinkDirective as ESankeyLink,
-  SankeyTooltip,
-  SankeyLegend,
-  SankeyExport
+  SankeyLinkDirective as ESankeyLink
 } from "@syncfusion/ej2-vue-charts";
 
 const title = ref("Energy Flow Diagram");
 
-provide("sankey", [SankeyTooltip, SankeyLegend, SankeyExport]);
 </script>
 
 <style>

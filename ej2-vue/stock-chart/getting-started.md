@@ -26,19 +26,24 @@ The list of minimum dependencies required to use the Stock Chart is as follows:
     |-- @syncfusion/ej2-file-utils
     |-- @syncfusion/ej2-compression
     |-- @syncfusion/ej2-svg-base
+    |-- @syncfusion/ej2-navigations
+    |-- @syncfusion/ej2-calendars
+    |-- @syncfusion/ej2-popups
+    |-- @syncfusion/ej2-lists
+    |-- @syncfusion/ej2-inputs
+    |-- @syncfusion/ej2-buttons
+    |-- @syncfusion/ej2-splitbuttons
 ```
 
-## Setup the Vue 2 Project
+## Set Up the Vue 2 Project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. You can install Vue CLI using either npm or Yarn:
+To generate a Vue 2 project using Vue CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. You can install Vue CLI using either npm or Yarn:
 
 **npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 **yarn**
@@ -46,21 +51,25 @@ npm run serve
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+Select **Default ([Vue 2] babel, eslint)** when prompted.
 
 ![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Once the `quickstart` project is set up with default settings, navigate to the project directory:
+
+```bash
+cd quickstart
+```
+
+All subsequent commands should be run from the `quickstart` directory. Now, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> packages to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Stock Chart component](https://www.syncfusion.com/vue-components/vue-stock-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by using either npm or Yarn:
+This article uses the [Vue Stock Chart component](https://www.syncfusion.com/vue-components/vue-stock-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package using either npm or Yarn:
 
 **npm**
 
@@ -74,13 +83,13 @@ npm install @syncfusion/ej2-vue-charts
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
+> **Note:** npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart component themes can be applied using CSS or SASS from the [npm theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages). Additionally, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart component themes can be applied using CSS or SASS from [npm theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages), CDN, CRG or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
 
-This example uses the `Material 3` theme for the Stock Chart component from the theme package. To install the [Material 3](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) theme package, use the following command:
+This example uses the `Material 3` theme for the Stock Chart component. To install the [Material 3](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) theme package, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -158,20 +167,23 @@ npm run serve
 yarn run serve
 ```
 
+Open your browser and navigate to `http://localhost:8080`.
+
 The output will appear as follows:
 
 ![Vue 2 Stock Chart demo](./images/vue2-stockchart-demo.png)
 
 ## Module Injection
 
-To create a Stock Chart with additional features, inject the required modules. The following modules extend the Stock Chart's basic functionality.
+To create a Stock Chart with additional features, inject the required modules. The following modules extend the Stock Chart's basic functionality:
 
-- `CandleSeries` — Inject this module to use candle series.
-- `DateTime` — Inject this module to use date time axis.
-- `RangeTooltip` — Inject this module to show the tooltip.
+* `CandleSeries` — Inject this module to use candle series.
+* `DateTime` — Inject this module to use date time axis.
+* `RangeTooltip` — Inject this module to show tooltip.
 
-Inject these modules in the `provide` section as shown below.
- ```javascript
+Register these modules in the `provide` option as shown below:
+
+```vue
 <script>
 import { StockChartComponent, CandleSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
 
@@ -184,11 +196,13 @@ export default {
   }
 };
 </script>
- ```
+```
 
 ## Populate Stock Chart with Data
 
-This section demonstrates how to bind JSON data to the Stock Chart. The data includes DateTime values for the x-axis.
+This section demonstrates how to bind JSON data to the Stock Chart. The data includes DateTime values for the x-axis and OHLC (Open, High, Low, Close) values.
+
+The stock chart data requires fields for date (`x`), opening price (`open`), high price (`high`), low price (`low`), closing price (`close`), and trading volume (`volume`):
 
 ```javascript
 export default {
@@ -248,6 +262,18 @@ Add a `series` object to the Stock Chart using the [`series`](https://ej2.syncfu
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/stockchart/getting-started-cs1" %}
+
+## Troubleshooting
+
+The following are common issues and solutions when integrating the Stock Chart component:
+
+- **Chart not rendering**: Ensure that all required modules (`CandleSeries`, `DateTime`, `RangeTooltip`) are injected using the `provide` option and that `chartData` is defined as a valid array of data objects with `x`, `open`, `high`, `low`, and `close` properties.
+
+- **Undefined chart data**: Verify that `chartData` is defined in the `data()` function with the correct structure and that the series configuration includes proper field mappings (`xName`, `open`, `high`, `low`, `close`).
+
+- **Module import errors**: Confirm that all required modules are imported from `@syncfusion/ej2-vue-charts` and that component directives are registered correctly.
+
+- **Incorrect date formatting**: Verify that date values in the data are created using `new Date()` constructor to avoid parsing errors.
 
 > You can refer to our [Vue Stock Chart](https://www.syncfusion.com/vue-ui-components/vue-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Stock Chart example](https://ej2.syncfusion.com/vue/demos/#material3/stock-chart/default.html) that shows you how to present and manipulate data.
 

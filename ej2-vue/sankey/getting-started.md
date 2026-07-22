@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Vue Sankey Chart component | Syncfusion
-description:  Quickstart create a Vue 2 project and add the Syncfusion Vue Sankey Chart (Essential JS 2); includes setup, module registration, and examples.
+title: Getting Started with Vue Sankey Chart Component | Syncfusion
+description: Quick guide to create a Vue 2 project and integrate the Syncfusion Vue Sankey Chart component; includes setup, module registration, data binding, and examples.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
@@ -9,18 +9,18 @@ domainurl: ##DomainURL##
 ---
 
 
-# Getting started with Vue Sankey chart component in Vue 2
+# Getting Started with Vue Sankey Chart Component in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sankey chart component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure your development environment meets the following requirements as listed in [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Sankey Chart component.
+The following list shows the minimum dependencies required to use the Sankey Chart component:
 
 ```
 
@@ -43,8 +43,6 @@ To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuej
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 or
@@ -52,15 +50,19 @@ or
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
 ![Terminal showing Vue CLI creating a Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Once the `quickstart` project is set up with default settings, navigate to the project directory:
+
+```bash
+cd quickstart
+```
+
+Now, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> packages to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
@@ -77,13 +79,13 @@ or
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
+> **Note:** npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Component
 
 Follow the steps below to add the Sankey Chart component:
 
-1. First, import and register the Sankey Chart component in the `script` section of the **src/App.vue** file.
+**Step 1:** Import and register the Sankey Chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -103,7 +105,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the Sankey Chart component.
+**Step 2:** In the `template` section, define the Sankey Chart component:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -125,23 +127,27 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
-To run the project, use the following command:
+To run the project, use either npm or Yarn:
+
+**npm**
 
 ```bash
 npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run serve
 ```
 
+Open your browser and navigate to `http://localhost:8080` to view the Sankey Chart.
+
 {% previewsample "page.domainurl/code-snippet/sankey/getting-started/initialize-cs1" %}
 
-## Module registration
+## Module Registration
 
 The Sankey Chart component is organized into feature-specific modules. In Vue, enable a feature by registering its module(s) in the component's `provide` option. The following features are demonstrated in the examples:
 
@@ -168,71 +174,48 @@ export default {
 };
 ```
 
-## Populate Sankey chart with data
+## Populate Sankey Chart with Data
 
+This section explains how to bind JSON data to the Sankey Chart. The data structure requires three properties:
 
-This section explains how to plot below JSON data to the Sankey Chart.
+- **source** — The starting node name for the link
+- **target** — The ending node name for the link
+- **weight** — The value that determines the width of the link
+
+Here is an example data structure:
 
 ```javascript
 export default {
-  data () {
+  data() {
     return {
       sankeyLinks: [
         { source: 'A', target: 'B', weight: 5 },
         { source: 'A', target: 'C', weight: 3 },
         { source: 'B', target: 'D', weight: 2 },
         { source: 'C', target: 'D', weight: 4 }
-      ],
+      ]
     };
   }
 };
 ```
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/sankey/getting-started/data-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/sankey/getting-started/data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 {% previewsample "page.domainurl/code-snippet/sankey/getting-started/data-cs1" %}
 
-## Enable tooltip
+## Troubleshooting
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`enable`] property as true in [`tooltip`] object and by injecting `SankeyTooltip` into the `provide`.
+The following are common issues and solutions when integrating the Sankey Chart component:
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/sankey/getting-started/tooltip-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
+- **Chart not rendering**: Ensure that all required modules (`SankeyLegend`, `SankeyTooltip`) are registered in the `provide` option. Verify that the `dataSource` property contains valid data with `source`, `target`, and `weight` properties.
 
-{% previewsample "page.domainurl/code-snippet/sankey/getting-started/tooltip-cs1" %}
+- **Module import errors**: Confirm that all required modules are imported from `@syncfusion/ej2-vue-charts` and that the component is registered correctly using the corresponding component-name directive.
 
-## Verify the chart
+- **Data not displaying**: Verify that the data structure matches the expected format. Each link object must have `source`, `target`, and `weight` properties. Check the browser console for any data-related errors.
 
-After starting the dev server, confirm the Sankey Chart renders correctly:
+- **Version mismatch**: Confirm that the `@syncfusion/ej2-vue-charts` package version is compatible with Vue 2.6+ used in your project. Install the latest compatible version if needed.
 
-- Start the dev server with `npm run serve` or `yarn run serve`.
-- Open the project URL shown in the terminal (typically `http://localhost:8080`) and verify the chart displays.
-- If the chart does not render, inspect the browser console for errors related to missing modules, incorrect imports, or undefined data values.
-
-## Troubleshooting (common issues)
-
-- Chart not rendering: ensure the Sankey modules and directives are registered in `provide` and that `sankeyLinks` contains valid data.
-- Version mismatch: confirm `@syncfusion/ej2-vue-charts` is compatible with Vue 2 used in the project.
-
-## Run the project
-
-To run the project, use the following command:
-
-```bash
-npm run serve
-```
-
-or
-
-```bash
-yarn run serve
-```
+- **Tooltip not showing**: If the tooltip feature is enabled but not displaying, verify that `SankeyTooltip` is registered in the `provide` option and the `tooltip` object has `enable: true`.

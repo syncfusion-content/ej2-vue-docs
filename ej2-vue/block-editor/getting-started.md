@@ -17,31 +17,13 @@ This section explains how to create a simple Block Editor and configure its avai
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Dependencies
+## Create a Vue Application
 
-The list of dependencies required to use the Block Editor component in your application is given as follows:
-
-```js
-|-- @syncfusion/ej2-vue-blockeditor
-    |-- @syncfusion/ej2-vue-base
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-popups
-    |-- @syncfusion/ej2-buttons
-    |-- @syncfusion/ej2-splitbuttons
-    |-- @syncfusion/ej2-navigations
-    |-- @syncfusion/ej2-dropdowns
-    |-- @syncfusion/ej2-inputs
-```
-
-## Setting up the Vue 2 project
-
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. If Vue CLI is not installed yet, run the first command below.
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 or
@@ -49,21 +31,21 @@ or
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-<img src="https://ej2.syncfusion.com/vue/documentation/appearance/images/vue2-terminal.png" alt="Vue 2 project">
+<img src="https://ej2.syncfusion.com/vue/documentation/appearance/images/vue2-terminal.png" alt="Selecting the Vue 2 preset during project creation">
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Navigate to the project directory:
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+```bash
+cd quickstart
+```
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-This article uses the `Vue Block Editor component` as an example. Install the block editor package by running the following command:
+All Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published on [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). Install the Vue Block Editor package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-blockeditor --save
@@ -74,17 +56,17 @@ or
 yarn add @syncfusion/ej2-vue-blockeditor
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion provides multiple themes for the Block Editor component. For a complete list of available themes, refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages).
 
-To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+To apply the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme, install the corresponding theme package by using the following command:
 
 ```bash
 npm install @syncfusion/ej2-tailwind3-theme --save
 ```
 
-To render the Block Editor component, import the required Tailwind3 CSS styles for the component and its dependencies into the `<style>` section of the **src/App.vue** file. This approach ensures that all necessary dependency styles are loaded, as shown below.
+Then add the following CSS reference to the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -96,9 +78,9 @@ To render the Block Editor component, import the required Tailwind3 CSS styles f
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding Block Editor component
 
-Follow the below steps to add the Vue Block Editor component using `Composition API` or `Options API`:
+Follow the steps below to add the Vue Block Editor component using `Composition API` or `Options API`:
 
 1\. First, import and register the Block Editor component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
@@ -138,7 +120,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+The complete example below combines the previous steps into a single **src/App.vue** file.
+
+The following code summarizes the steps:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -149,9 +133,11 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+{% previewsample "page.domainurl/code-snippet/block-editor/getting-started/index" %}
 
-To run the project, use the following command:
+## Run the application
+
+Use the following command to run the application in the browser.
 
 ```bash
 npm run serve
@@ -163,4 +149,4 @@ or
 yarn run serve
 ```
 
-{% previewsample "page.domainurl/code-snippet/block-editor/getting-started/index" %}
+For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.

@@ -77,7 +77,7 @@ import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollect
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <script setup>
-let seriesData = [
+const seriesData = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
     { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
@@ -90,8 +90,21 @@ const primaryXAxis = { valueType: 'Category' };
 
 {% endhighlight %}
 {% endtabs %}
-   
-**Step 3:** In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
+
+**Step 3:** Register the required chart modules using the `provide()` method.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/pages/App.vue" %}
+
+<script setup>
+// Module injection
+provide('chart', [LineSeries, Category]);
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 4:** In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -99,7 +112,7 @@ const primaryXAxis = { valueType: 'Category' };
 <template>
     <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
         <e-series-collection>
-            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
+            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'></e-series>
         </e-series-collection>
     </ejs-chart>
 </template>
@@ -117,7 +130,7 @@ Here is the summarized code for the above steps in the **src/app.vue** file:
 <template>
     <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
         <e-series-collection>
-            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'> </e-series>
+            <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' name='Sales'></e-series>
         </e-series-collection>
     </ejs-chart>
 </template>
@@ -126,7 +139,8 @@ Here is the summarized code for the above steps in the **src/app.vue** file:
 import { provide } from 'vue';
 import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
-let seriesData = [
+// Data source for the chart
+const seriesData = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
     { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
@@ -134,9 +148,11 @@ let seriesData = [
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
 ];
-let primaryXAxis = {valueType: 'Category'};
 
-// Register required modules (idiomatic one-liner)
+// Primary X-axis configuration
+const primaryXAxis = { valueType: 'Category' };
+
+// Module injection
 provide('chart', [LineSeries, Category]);
 </script>
 
@@ -151,6 +167,26 @@ To run the project, use the following command:
 npm run dev
 ```
 
-The output will appear as follows:
+Open the generated local URL (for example, `http://localhost:9000`) from terminal in the browser. The application displays the chart as shown below:
 
 ![Quasar CLI chart output showing a line chart](./images/quasar-output.png)
+
+**Chart not rendering:**
+- Ensure that the required chart modules (`LineSeries`, `Category`) are registered using `provide()` in the script section
+- Verify the `dataSource` is correctly assigned with proper field mappings
+- Check the browser console (F12 → Console tab) for any error messages
+
+**Module not found error:**
+- Confirm that the module is imported from `@syncfusion/ej2-vue-charts`
+- Verify the module name is spelled correctly in the import statement and `provide()` call
+
+**Incorrect package version:**
+- Verify that `@syncfusion/ej2-vue-charts` is compatible with your Quasar and Vue versions
+- Run `npm list @syncfusion/ej2-vue-charts` to check the installed version
+
+**Components not rendering in Quasar layout:**
+- Ensure the component is placed in a Quasar page file (e.g., `src/pages/IndexPage.vue`)
+- Check that the component has proper container sizing (add CSS for `#container` height)
+
+For additional assistance, refer to the [`Vue Charts API Documentation`](https://ej2.syncfusion.com/vue/documentation/api/chart) and the [Feature Modules](./feature-modules) page.
+

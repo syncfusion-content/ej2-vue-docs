@@ -18,23 +18,24 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
-
-Make sure Node.js (version 18 or later) is installed on your machine before scaffolding the Vite project. You can verify by running `node -v` in your terminal.
+Ensure your development environment meets the [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Set up the Vite project
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm create vite@latest
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn create vite
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The scaffold wizard will then prompt for the following options:
 
@@ -75,17 +76,20 @@ Install with npm and start now?: Yes
 
 Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 cd my-project
 npm install
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 cd my-project
 yarn install
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -227,15 +231,18 @@ export default {
 
 To run the project, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm run dev
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn run dev
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The development server starts and the app can be viewed at the local URL printed in the terminal (typically `http://localhost:5173`). The output will appear as follows:
 

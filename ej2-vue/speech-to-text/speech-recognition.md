@@ -99,6 +99,23 @@ The [showTooltip](../api/speech-to-text/#showTooltip) property determines whethe
 
 {% previewsample "page.domainurl/code-snippet/speech-to-text/speechRecognition/showTooltip/index" %}
 
+## Customizing button content
+
+The content of the SpeechToText button can be customized for its active and inactive states. Use the [`content`](../api/speech-to-text/buttonSettingsModel#content) property to define the text for the start listening state and the [`stopContent`](../api/speech-to-text/buttonSettingsModel#stopcontent) property for the stop listening state. These properties are configured within the [`buttonSettings`](../api/speech-to-text#buttonSettings) property.
+
+The following example shows how to configure `buttonSettings` in the SpeechToText component.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/button-setting/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/button-setting/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/button-setting/index" %}
+
 ## Setting Disabled
 
 The [disabled](../api/speech-to-text/#disabled) property, when set to `true`, disables the SpeechToText component and prevents user interaction. By default, it is `false`.
