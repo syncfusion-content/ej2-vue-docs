@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3 with Vue CLI
+# Vue 3 with Vue CLI - Getting Started
 
 This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application using Vue CLI. For modern setup with Vite and Composition API, refer to the [Getting Started with Composition API](./vue-3-js-composition) section.
 
@@ -25,8 +25,6 @@ To create a Vue 3 application using Vue CLI, use the [vue create](https://cli.vu
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 3] babel, eslint)` from the menu.
@@ -34,6 +32,11 @@ Initiating a new project prompts us to choose the type of project to be used for
 ![Reference](../appearance/images/vue3-terminal.png)
 
 > **Recommended Alternative:** For new projects, consider using [Vite](https://vite.dev/) with `npm create vue@latest`, which provides faster development experience and modern tooling.
+
+Navigate to your project directory:
+```bash
+cd quickstart
+```
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -100,7 +103,7 @@ Now, the Grid and column directives are registered to use it in this application
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
-Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
+Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -144,17 +147,6 @@ Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` 
       },
     };
   </script>
-  <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-  </style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -211,7 +203,7 @@ It is required to register the component and any child directives used within th
   {% endtabs %}
     
 
-In the above code, `ejs-grid` denotes the Grid component tag.`e-columns` and `e-column` denotes the child column directives tag which is used for Column definition declaration.
+In the above code, `ej-grid` denotes the Grid component tag. `e-columns` and `e-column` denotes the child column directives tag which is used for Column definition declaration.
 
 >Registering the child directives is not needed if they are not used.
 

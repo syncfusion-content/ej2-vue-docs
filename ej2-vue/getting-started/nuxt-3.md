@@ -24,9 +24,16 @@ To initiate the creation of a new [Nuxt](https://nuxt.com/) project, use the fol
 
 ```bash
 npx nuxi@latest init my-project
+```
 
+This command prompts additional configurations. Follow the steps outlined in the image below:
+
+![Nuxt-setup](../appearance/images/nuxt-setup.png)
+
+Navigate to your project and install dependencies:
+
+```bash
 cd my-project
-
 npm install
 ```
 

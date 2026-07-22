@@ -33,7 +33,7 @@ npm create vite@latest
 yarn create vite
 
 {% endhighlight %}
-{% endtabs %}create vite
+{% endtabs %}
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 

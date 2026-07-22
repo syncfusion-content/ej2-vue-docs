@@ -31,6 +31,11 @@ Initiating a new project prompts us to choose the type of project to be used for
 
 ![Vue 2 project](../appearance/images/vue2-terminal.png)
 
+Navigate to your project directory:
+```bash
+cd quickstart
+```
+
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
 Once the Vue 2 application is created, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component package in the application. All the available Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published in the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry. Choose the component to be installed. In this article, the Grid component is used as an example.
@@ -170,18 +175,6 @@ npm run serve
 ```
 
 The output will appear as follows:
-
-{% tabs %}
-
-{% highlight html tabtitle="Composition" %}
-{% include code-snippet/common/default-cs1/app-composition.vue %}
-{% endhighlight %}
-
-{% highlight html tabtitle="Options" %}
-{% include code-snippet/common/default-cs1/app.vue %}
-{% endhighlight %}
-
-{% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs1" %}
 

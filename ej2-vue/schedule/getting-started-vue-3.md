@@ -26,7 +26,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue Schedule version |
 | ------------- | ------------------------------------------- |
 |[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
 |[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
@@ -126,7 +126,7 @@ yarn add @syncfusion/ej2-vue-schedule
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-Install the **Material3 3** theme package using the following command:
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -142,7 +142,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/schedule/index.css";
+    @import '../node_modules/@syncfusion/ej2-material3-theme/styles/schedule/index.css';
 </style>
 
 {% endhighlight %}
@@ -500,8 +500,6 @@ The output will appear as follows:
 Refer the sample [Vue 3 using Composition API Scheduler getting started](https://github.com/SyncfusionExamples/vue3-schedule-getting-started)
 
 For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
-
-N> Looking for the full Vue Scheduler component overview, features, pricing, and documentation? Visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) page.
 
 ## See also
 

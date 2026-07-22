@@ -18,28 +18,26 @@ To get started quickly with the Vue [Pivot Table](https://www.syncfusion.com/vue
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
-
-Make sure the following minimum versions are installed before you begin:
-
-- **Node.js** 14.x or later
-- **npm** 6.x or later (bundled with Node.js)
+Ensure your development environment meets the [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Setting up the Vue 2 project
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install -g @vue/cli
 vue create quickstart
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn global add @vue/cli
 vue create quickstart
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
@@ -47,17 +45,20 @@ When creating a new project, choose the option `Default ([Vue 2] babel, eslint)`
 
 Once the project is created, move into the project folder and start the development server:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 cd quickstart
 npm run serve
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 cd quickstart
 yarn run serve
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The dev server starts at `http://localhost:8080` by default. Open this URL in a browser to verify the scaffold runs before adding Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
@@ -67,14 +68,18 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 To install the Vue Pivot Table component, run the following command:
 
-```bash
-npm install @syncfusion/ej2-vue-pivotview --save
-```
-or
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
-```bash
+npm install @syncfusion/ej2-vue-pivotview --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
 yarn add @syncfusion/ej2-vue-pivotview
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
@@ -157,13 +162,18 @@ export default {
 
 Use the following command to run the application:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm run serve
-```
-or
-```bash
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
 yarn run serve
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > **Troubleshooting:** If the dev server fails to start, ensure no other process is using the default port (`8080`), and that the `@vue/cli` global install completed successfully (run `vue --version` to verify). If the `vue` command is not recognized, restart your terminal so the updated PATH is picked up.
 

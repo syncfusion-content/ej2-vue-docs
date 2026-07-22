@@ -28,7 +28,7 @@ The shiftEnterKey property accepts the following values:
 
 ## Enter key configuration
 
-By default, pressing the Enter key in the Rich Text Editor creates a new `<p>` tag. You can customize this behavior using the [enterKey](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#enterkey) property.
+By default, pressing the Enter key in the Rich Text Editor creates a new `<p>` tag. You can customize this behavior using the [enterKey](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#enterkey) property.
 
 When you customize the Enter key, the editor will create the specified tag when the Enter key is pressed. This configuration also affects the default content structure of the Rich Text Editor.
 
@@ -45,7 +45,7 @@ When you customize the Enter key, the editor will create the specified tag when 
 
 ## Shift+Enter key configuration
 
-By default, pressing Shift+Enter in the Rich Text Editor inserts a `<br>` tag. You can customize this behavior using the [shiftEnterKey](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#shiftEnterkey) property.
+By default, pressing Shift+Enter in the Rich Text Editor inserts a `<br>` tag. You can customize this behavior using the [shiftEnterKey](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#shiftEnterkey) property.
 
 When you customize the Shift+Enter key, the editor will create the specified tag when the key combination is pressed. This configuration also affects the default content structure of the Rich Text Editor.
 

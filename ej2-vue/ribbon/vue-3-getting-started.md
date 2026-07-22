@@ -18,74 +18,68 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 3.x |
+| Node.js | 16.0.0 or above |
 
-## Set up the Vite project
+### Vue supported versions
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+| Vue version | Minimum Syncfusion Vue Ribbon version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
-```bash
-npm create vite@latest
-```
+### Browser support
 
-or
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
-```bash
-yarn create vite
-```
+## Setup for local development
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev/), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide).
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
 
-```bash
-? Project name: » my-project
-```
-
-2.Select `Vue` as the framework. It will create a Vue 3 project.
-
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+**Vue with JavaScript**
 
 ```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
+npm create vite@latest my-app -- --template vue
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+**Vue with TypeScript**
 
 ```bash
-cd my-project
-npm install
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-or
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-cd my-project
-yarn install
+cd my-app
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+## Add Vue Ribbon packages
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue Ribbon component](https://www.syncfusion.com/vue-components/vue-ribbon) as an example. To use the Vue Ribbon component in the project, the `@syncfusion/ej2-vue-ribbon` package needs to be installed using the following command:
+To install the Ribbon package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-ribbon --save
@@ -97,29 +91,37 @@ or
 yarn add @syncfusion/ej2-vue-ribbon
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+> Before including Syncfusion styles, make sure to remove the default styles defined in **src/style.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+## Adding CSS reference
 
-In this article, `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the Button component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
-
-```bash
-npm install @syncfusion/ej2-tailwind3-theme --save
-```
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-material3-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/ribbon/index.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding Ribbon component
+
+The Ribbon code should be added in the **src/App.vue** file.
 
 Follow the below steps to add the Vue Ribbon component using `Composition API` or `Options API`:
 
@@ -204,7 +206,7 @@ Add the component definition in `template` section.
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Ribbon Tab
+### Adding Ribbon tab
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -250,7 +252,7 @@ Add the component definition in `template` section.
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Ribbon Group
+### Adding Ribbon group
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -310,7 +312,7 @@ Add the component definition in `template` section.
 
 The `orientation` property of ribbon group defines whether the collection of items will be rendered column-wise or row-wise.
 
-### Adding Ribbon Items
+### Adding Ribbon items
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -900,9 +902,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
-
-To run the project, use the following command:
+## Run the application
 
 ```bash
 npm run dev
@@ -918,8 +918,28 @@ The output will appear as follows:
 
 ![Output](./images/ribbon.png)
 
+## Registering your Syncfusion license
 
-For migrating from Vue 2 to Vue 3, refer to the [migration](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 3 application:
+
+{% tabs %}
+{% highlight html tabtitle="main.js" %}
+
+```javascript
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
+
+## Troubleshooting
+
+- **Ribbon not rendering styles:** Ensure the theme CSS is imported in `src/App.vue` and that any default Vite starter styles are not overriding the Ribbon styles.
+- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
 
 ## See also
 

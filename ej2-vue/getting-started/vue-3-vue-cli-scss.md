@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components in Vue 3 with Vue CLI and SCSS
+# Vue 3 with Vue CLI and SCSS - Getting Started
 
 This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application with SCSS styling. To get started with Vue 3 using Composition API and Vite, refer to the [getting started with Vue 3 Composition API](./vue-3-js-composition) section.
 
@@ -25,8 +25,6 @@ To create a Vue 3 application using Vue CLI with SCSS support, use the [vue crea
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Manually select features` from the menu and then select the required features as shown in the following screenshot.
@@ -35,6 +33,10 @@ Initiating a new project prompts us to choose the type of project to be used for
 
 > **Recommended Alternative:** For new projects, consider using [Vite](https://vite.dev/) with `npm create vue@latest`, which provides faster development experience and modern tooling with built-in SCSS support.
 
+Navigate to your project directory:
+```bash
+cd quickstart
+```
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -71,7 +73,7 @@ Now, the Grid and column directives are registered to use it in this application
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
-Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
+Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -136,8 +138,8 @@ Add the styles of Grid component to the `<style>` section of the `App.vue` file 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
 
-<style>
-  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+<style lang="scss">
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.scss"
 </style>
 
 {% endhighlight %}

@@ -27,7 +27,7 @@ Check the following video to learn how to build a [Vue Scheduler](https://www.sy
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue Schedule version |
 | ------------- | ------------------------------------------- |
 |[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
 
@@ -94,7 +94,7 @@ yarn add @syncfusion/ej2-vue-schedule
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). The following example uses the **Tailwind 3** theme. For other available themes (Bootstrap, Material, Fluent, etc.), refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-Install the **Material3 3** theme package using the following command:
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -110,7 +110,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/schedule/index.css";
+    @import '../node_modules/@syncfusion/ej2-material3-theme/styles/schedule/index.css';
 </style>
 
 {% endhighlight %}
@@ -377,5 +377,3 @@ Each individual Scheduler view can be customized with its own options, such as s
 {% previewsample "page.domainurl/code-snippet/schedule/view-cs1" %}
 
 > Explore the live demo at [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material3/schedule/overview.html) to see Scheduler view customizations in action.
-
-N> Looking for the full Vue Scheduler component overview, features, pricing, and documentation? Visit the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) page.

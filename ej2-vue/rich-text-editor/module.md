@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Module in Vue Rich Text Editor Component
 
-The [Vue Rich Text Editor](https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor) component follows a modular architecture, enabling users to include or exclude features as needed to ensure optimal performance and customization.
+The [Vue Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor) component follows a modular architecture, enabling users to include or exclude features as needed to ensure optimal performance and customization.
 
 ## What is a module in Vue Rich Text Editor?
 
@@ -67,4 +67,4 @@ The following example demonstrates how to import and inject modules.
 
 These modules should be injected into the `provide` section and use `richtexteditor` as a key of the object.
 
-N> Looking for the full Vue Rich Text Editor component overview, features, pricing, and documentation? Visit the [Vue Rich Text Editor](https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor) page.
+N> Looking for the full Vue Rich Text Editor component overview, features, pricing, and documentation? Visit the [Vue Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor) page.

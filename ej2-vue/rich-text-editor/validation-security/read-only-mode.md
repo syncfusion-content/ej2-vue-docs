@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 The Rich Text Editor component offers a read-only mode that prevents you from editing the content while still allowing them to view it. This feature is particularly useful when you want to display formatted content without permitting modifications.
 
-To enable the read-only mode, set the [readonly](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#readonly) property to `true`. 
+To enable the read-only mode, set the [readonly](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#readonly) property to `true`. 
 
 This will allow you to view the content without making any modifications.
 
@@ -37,7 +37,7 @@ The Vue Rich Text Editor component offers a feature to disable the editor, preve
 
 ### How to disable the editor
 
-To disable the editor, set the [enabled](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#enabled) property to `false`.
+To disable the editor, set the [enabled](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#enabled) property to `false`.
 
 When disabled, the editor becomes non-interactive, ensuring that users cannot edit or modify the content.
 

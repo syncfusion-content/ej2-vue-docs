@@ -125,7 +125,7 @@ Follow the below steps to add the Vue Schedule component using `Options API`:
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script lang="ts">
-  import { ScheduleComponent as EjsSchedule, ViewsDirective as EViews, ViewDirective as EView, ResourcesDirective as EResources, ResourceDirective as EResource, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
+  import { ScheduleComponent as EjsSchedule, ViewsDirective as EViews, ViewDirective as EView, ResourcesDirective as EResources, ResourceDirective as EResource, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 </script>
 
 {% endhighlight %}
@@ -136,7 +136,7 @@ Follow the below steps to add the Vue Schedule component using `Options API`:
 {% tabs %}
 {% highlight js tabtitle="~/src/App.vue" %}
 
-import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
+import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 //Component registration
 export default {
   name: "App",
@@ -196,7 +196,7 @@ export default {
 </template>
 
 <script lang="ts">
-import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize, EventSettingsModel } from "@syncfusion/ej2-vue-schedule";
+import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 
 export default {
   name: "App",
@@ -244,7 +244,7 @@ export default {
             OwnerId: 1
           }
         ]
-      } as EventSettingsModel,
+      },
     };
   },
   provide: {
@@ -275,7 +275,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue-3-ts-options](../appearance/images/vue-3-ts-options.png)
+![vue-3-ts-options](../appearance/images/vue-3-ts-option.png)
 
 ## See also
 

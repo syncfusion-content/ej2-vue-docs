@@ -1,43 +1,54 @@
 ---
 layout: post
-title: Getting started with Vue SpeechToText Component | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Essential Vue SpeechToText component, its elements, and more details.
+title: Getting started with Vue SpeechToText component | Syncfusion
+description: Checkout and learn about getting started with the Syncfusion Vue SpeechToText component, its elements, and more details.
 platform: ej2-vue
-control: SpeechToText 
-publishingplatform: ##Platform_Name##
+control: SpeechToText
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue SpeechToText component in Vue 2
+# Getting Started with the Vue SpeechToText Component in Vue 2
 
-This section explains how to create a simple SpeechToText and configure its available functionalities in the Vue environment.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue SpeechToText component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
 
-## Dependencies
+### Vue supported versions
 
-The list of dependencies required to use the SpeechToText component in your application is given as follows:
+| Vue version | Minimum Syncfusion Vue Data Grid version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
-```js
-|-- @syncfusion/ej2-vue-inputs
-    |-- @syncfusion/ej2-vue-base
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-buttons
-    |-- @syncfusion/ej2-popups
-```
+### Browser support
 
-## Setting up the Vue 2 project
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+## Setup the Vue 2 project
+
+Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
+
+To create a new Vue 2 application, run the following commands based on your preferred package manager:
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 or
@@ -45,109 +56,76 @@ or
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-<img src="https://ej2.syncfusion.com/vue/documentation/appearance/images/vue2-terminal.png" alt="Vue 2 project">
+- **Which linter to use?** → **Default ([Vue 2] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Navigate to the project directory:
 
-This article uses the `Vue SpeechToText component` as an example. Install the `@syncfusion/ej2-vue-inputs` package by running the following command:
+```bash
+cd quickstart
+```
+
+## Adding Vue SpeechToText packages
+
+To install the SpeechToText package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-inputs --save
 ```
+
 or
 
 ```bash
 yarn add @syncfusion/ej2-vue-inputs
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
-To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
-
-```bash
-npm install @syncfusion/ej2-tailwind3-theme --save
-```
-
-In this article, the `Tailwind3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind3` CSS styles for the SpeechToText component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-material3-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/speech-to-text/index.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/speech-to-text/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding SpeechToText component
 
-Follow the below steps to add the Vue SpeechToText component using `Composition API` or `Options API`:
-
-1\. First, import and register the SpeechToText component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+The SpeechToText code should be added in the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-import { SpeechToTextComponent as EjsSpeechtotext  } from "@syncfusion/ej2-vue-inputs";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { SpeechToTextComponent  } from "@syncfusion/ej2-vue-inputs";
-export default {
-  components: {
-    'ejs-speechtotext': SpeechToTextComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section define the SpeechToText component.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-    <div id='container' style="margin: 50px auto;">
-        <ejs-speechtotext id="speechtotext"></ejs-speechtotext>
-    </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/Speech-to-text/getting-started-cs1/app-composition.vue %}
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/Speech-to-text/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+{% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1/index" %}
 
-To run the project, use the following command:
+## Run the application
 
 ```bash
 npm run serve
@@ -159,23 +137,27 @@ or
 yarn run serve
 ```
 
-{% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1/index" %}
-
 > The SpeechToText component requires an internet connection and browser support for the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition).
 
-## Customizing button content
+## Registering your Syncfusion license
 
-The content of the SpeechToText button can be customized for its active and inactive states. Use the [`content`](../api/speech-to-text/buttonSettingsModel#content) property to define the text for the start listening state and the [`stopContent`](../api/speech-to-text/buttonSettingsModel#stopcontent) property for the stop listening state. These properties are configured within the [`buttonSettings`](../api/speech-to-text#buttonSettings) property.
-
-The following example shows how to configure `buttonSettings` in the SpeechToText component.
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 2 application:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/speech-to-text/button-setting/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/speech-to-text/button-setting/app.vue %}
+{% highlight html tabtitle="main.js" %}
+
+```javascript
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/speech-to-text/button-setting/index" %}
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
+
+## Troubleshooting
+
+- **SpeechToText not rendering styles:** Ensure the theme CSS is imported in `src/App.vue` and that any default Vue CLI starter styles are not overriding the SpeechToText styles.
+- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.

@@ -21,11 +21,11 @@ There are two ways to perform Undo and Redo operations:
 
 ## Configuring Undo/Redo timer
 
-By default, the time interval for storing Undo/Redo actions is 300 milliseconds. You can adjust this interval using the [undoRedoTimer](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#undoredotimer) property.
+By default, the time interval for storing Undo/Redo actions is 300 milliseconds. You can adjust this interval using the [undoRedoTimer](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#undoredotimer) property.
 
 ## Configuring Undo/Redo steps
 
-The editor allows up to 30 Undo/Redo actions by default. You can modify the number of undo/redo steps using the [undoRedoSteps](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#undoredosteps) property.
+The editor allows up to 30 Undo/Redo actions by default. You can modify the number of undo/redo steps using the [undoRedoSteps](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#undoredosteps) property.
 
 Here's an example of how to customize both the Undo/Redo timer and steps:
 
@@ -44,7 +44,7 @@ Here's an example of how to customize both the Undo/Redo timer and steps:
 
 The Rich Text Editor automatically maintains an undo/redo stack, allowing users to revert or redo changes made during editing.
 
-To clear the entire undo and redo stack, use the public [clearUndoRedo](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#clearundoredo) method. This is helpful when loading new content dynamically or resetting the editor to its initial state.
+To clear the entire undo and redo stack, use the public [clearUndoRedo](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#clearundoredo) method. This is helpful when loading new content dynamically or resetting the editor to its initial state.
 
 Here's an example of how to clear the Undo/Redo stack:
 

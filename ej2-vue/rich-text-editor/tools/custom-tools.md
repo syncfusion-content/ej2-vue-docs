@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Custom Toolbar Items in Vue Rich Text Editor Component
 
-The Rich Text Editor allows you to configure your own commands to its toolbar using the [`toolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind the action to the command by getting its instance.
+The Rich Text Editor allows you to configure your own commands to its toolbar using the [`toolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarsettings#toolbarsettings) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind the action to the command by getting its instance.
 
 This sample shows how to add your own commands to the toolbar of the Rich Text Editor. The “Ω” command is added to insert special characters in the editor. By clicking the “Ω” command, it will show the special characters list, and then choose the character to be inserted in the editor.
 
-The following code snippet illustrates custom tool with tooltip text which will be included in [items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#items) field of the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property.
+The following code snippet illustrates custom tool with tooltip text which will be included in [items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarsettings#items) field of the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarsettings#toolbarsettings) property.
 
 ```javascript
 {
@@ -28,7 +28,7 @@ The following code snippet illustrates custom tool with tooltip text which will 
 
 ```
 
-The Rich Text Editor provides options to customize tool functionalities. Use the [`undo`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarStatusEventArgs/) property to enable or disable the undo function for specific tools. Additionally, the [click](https://helpej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarClickEventArgs/) property lets you configure and bind the onclick event of a tool to a specific method.
+The Rich Text Editor provides options to customize tool functionalities. Use the [`undo`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarstatuseventargs) property to enable or disable the undo function for specific tools. Additionally, the [click](https://helpej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarclickeventargs) property lets you configure and bind the onclick event of a tool to a specific method.
 
 This sample demonstrates how to add a custom "Ω" icon to the toolbar. Clicking on this icon opens a dialog where you can insert special characters into the editor. It also shows how to enable undo and redo functionalities.
 
@@ -47,6 +47,6 @@ This sample demonstrates how to add a custom "Ω" icon to the toolbar. Clicking 
 
 ## Enabling and disabling toolbar items
 
-You can use the [enableToolbarItem](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#enabletoolbaritem) and [disableToolbarItem](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#disabletoolbaritem) methods to control the state of toolbar items. This methods takes a single item or an array of [items](#available-toolbar-items) as parameter.
+You can use the [enableToolbarItem](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#enabletoolbaritem) and [disableToolbarItem](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#disabletoolbaritem) methods to control the state of toolbar items. This methods takes a single item or an array of [items](#available-toolbar-items) as parameter.
 
 >You can add the command name `Custom` to disable the custom toolbar items on source code view and other quick toolbar operations.

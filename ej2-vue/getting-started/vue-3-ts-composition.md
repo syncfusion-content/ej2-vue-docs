@@ -232,7 +232,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue-3-ts-composition](../appearance/images/vue-3-ts-composition.png)
+![vue-3-ts-composition](../appearance/images/vue-3-ts-compositions.png)
 
 ## See also
 

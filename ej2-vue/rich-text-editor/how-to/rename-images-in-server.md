@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Rename images in server in Vue Rich text editor component
 
-By using the [`insertImageSettings`](https://ej2.syncfusion.com/vue/documentation/api-richTextEditor.html#insertimagesettings) property, you can specify the server handler to upload the selected image. Then you can bind the [`imageUploadSuccess`](https://ej2.syncfusion.com/vue/documentation/api-richTextEditor.html#imageUploadSuccess) event, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
+By using the [`insertImageSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/imagesettings) property, you can specify the server handler to upload the selected image. Then you can bind the [`imageUploadSuccess`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/imageuploadingeventargs) event, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
 
 ```
 <template>
