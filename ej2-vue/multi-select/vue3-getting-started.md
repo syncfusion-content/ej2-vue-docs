@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started vue3 with Vue Multi select component | Syncfusion
-description:  Checkout and learn about Getting started vue3 with Vue Multi select component of Syncfusion Essential JS 2 and more details.
-control: Getting started vue3 
+title: Getting started vue3 with Vue MultiSelect component | Syncfusion
+description: Checkout and learn about Getting started vue3 with Vue MultiSelect component of Syncfusion Essential JS 2 and more details.
+control: MultiSelect
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -18,89 +18,74 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 3.0 or higher |
+| Node.js | 16.0.0 or above |
 
-## Set up the Vite project
+### Vue supported versions
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+| Vue version | Minimum Syncfusion Vue Data Grid version |
+| ------------- | ------------------------------------------- |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
+
+### Browser support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
+
+> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+
+## Setup for local development
+
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
+
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
+
+***Vue with JavaScript***
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+***Vue with TypeScript***
 
 ```bash
-yarn create vite
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+## Add Vue Dropdowns package
+
+To install the Dropdowns package, use the following command:
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
-
-```bash
-Use rolldown-vite (Experimental)? No
-```
-
-5.Install dependencies and start the dev server.
-
-```bash
-Install with npm and start now?: Yes
-```
-
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
-
-```bash
-cd my-project
-npm install
-```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue MultiSelect component](https://www.syncfusion.com/vue-components/vue-multiselect-dropdown) as an example. To use the Vue MultiSelect component in the project, the `@syncfusion/ej2-vue-dropdowns` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-dropdowns --save
+npm install @syncfusion/ej2-vue-dropdowns
 ```
 
 or
@@ -109,72 +94,37 @@ or
 yarn add @syncfusion/ej2-vue-dropdowns
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the MultiSelect component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Dropdown components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/multi-select/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add MultiSelect component
 
-Follow the below steps to add the Vue MultiSelect component using `Composition API` or `Options API`:
-
-  1.First, import and register the MultiSelect component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { MultiSelectComponent as EjsMultiselect } from "@syncfusion/ej2-vue-dropdowns";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
-//Component registration
-export default {
-    name: "App",
-    components: {
-        'ejs-multiselect' : MultiSelectComponent,
-    }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-   
-2.In the `template` section, define the MultiSelect component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/multi-select#datasource) property and column definitions.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-    <div class="control_wrapper">
-       <ejs-multiselect id='multiselect' :dataSource='sportsData'></ejs-multiselect>
-    </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Now, you can add the Vue MultiSelect component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/multi-select#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -184,17 +134,14 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
         <ejs-multiselect id='multiselect' :dataSource='data[0].sportsData'></ejs-multiselect>
     </div>
 </template>
-<script setup>
-import { MultiSelectComponent as EjsMultiselect } from "@syncfusion/ej2-vue-dropdowns";
 
-  const data = [{ sportsData: ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis']}]
-  
+<script setup>
+    import { MultiSelectComponent as EjsMultiselect } from "@syncfusion/ej2-vue-dropdowns";
+    const data = [{ sportsData: ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis']}];
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/multi-select/index.css";
 </style>
 
 {% endhighlight %}
@@ -205,27 +152,26 @@ import { MultiSelectComponent as EjsMultiselect } from "@syncfusion/ej2-vue-drop
         <ejs-multiselect id='multiselect' :dataSource='sportsData'></ejs-multiselect>
     </div>
 </template>
+
 <script>
-import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
-//Component registeration
-export default {
-    name: 'App',
-    components: {
-        "ejs-multiselect": MultiSelectComponent
-    },
-    data () {
-        return {
-            sportsData: ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis']
+    import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
+    //Component registeration
+    export default {
+        name: 'App',
+        components: {
+            "ejs-multiselect": MultiSelectComponent
+        },
+        data () {
+            return {
+                sportsData: ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis']
+            }
         }
     }
-}
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-</style>
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/multi-select/index.css";
+</style> 
 
 {% endhighlight %}
 {% endtabs %}
@@ -244,78 +190,15 @@ or
 yarn run dev
 ```
 
-## Configure the Popup List
-
-By default, the width of the popup list automatically adjusts according to the MultiSelect input element's width and the height of the popup list has '300px'.
-
-You can also customize the suggestion list height and width using [popupHeight](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#popupwidth) properties respectively.
-
-In the following sample, popup list's width and height are configured.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <div id='container' style="margin:50px auto 0; width:250px;">
-        <br>
-        <ejs-multiselect id='multiselect' :dataSource='data[0].sportsData' popupHeight="250px" popupWidth="250px" placeholder="Find a game"></ejs-multiselect>
-    </div>
-  </div>
-</template>
-<script setup>
-import { MultiSelectComponent as EjsMultiselect } from "@syncfusion/ej2-vue-dropdowns";
-
-  const data = [{ sportsData: ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis'] }]
-   
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <div id='container' style="margin:50px auto 0; width:250px;">
-        <br>
-        <ejs-multiselect id='multiselect' :dataSource='sportsData' popupHeight="250px" popupWidth="250px" placeholder="Find a game"></ejs-multiselect>
-    </div>
-  </div>
-</template>
-<script>
-import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
-//Component registration
-export default {
-    name: 'App',
-    components: {
-        "ejs-multiselect": MultiSelectComponent
-    },
-    data (){
-        return {
-            sportsData: ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis']
-        }
-    }
-}
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
 The output will appear as follows:
 
-![Multiselect suggestion list customized height and width](./images/popup.png)
+{% previewsample "page.domainurl/code-snippet/multi-select/getting-started/getting-started-cs1" %}
 
-## See Also
+> You can refer to our [Vue MultiSelect](https://www.syncfusion.com/vue-components/vue-multiselect-dropdown) feature tour page for its groundbreaking feature representations. You can also explore our [Vue MultiSelect example](https://ej2.syncfusion.com/vue/demos/#/material/multi-select/default.html) that shows how to render the MultiSelect in Vue.
 
-* [How to bind the data](./data-binding)
+## See also
+
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

@@ -34,13 +34,3 @@ export default {
   }
 }
 </script>
-<style>
-.spark {
-    border: 1px solid rgb(209, 209, 209);
-    border-radius: 2px;
-    width: 100%;
-    height: 100%;
-}
-</style>
-
-

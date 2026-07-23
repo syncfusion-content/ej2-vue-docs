@@ -14,6 +14,22 @@ domainurl: ##DomainURL##
 
 Legend is a key used in smithchart, that contains symbol and descriptions. It provides valuable information for interpreting what the smithchart is displaying and can be represented in various colors, shapes or other identifiers based on the data. In simple words, we can define that legend is used to denote the series rendered in the smithchart.
 
+
+## Enable legend for Smith chart
+
+The legend displays series identifiers. Inject the `SmithchartLegend` module using the `provide` option and enable the legend by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartlegendsettingsmodel#visible) property to `true` in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartlegendsettingsmodel). Series names can be customized using the series [`name`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#name) property.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/smithchart/getting-started-cs5/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs5" %}
+
 ## Position and Alignment
 
 By default visibility of the legend is false. To enable the legend, kindly set visible as true in  legendSettings. Default position for the legend is bottom. By using [`position`] property, you can change the position of the legend. You can either place the legend at bottom, top, right and left side of the smithchart. To use the legend in smithchart, you need to import and inject the SmithchartLegend from chart.

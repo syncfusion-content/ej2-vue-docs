@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started with Vue Sparkline component | Syncfusion
-description: Checkout and learn how to set up and use the Vue Sparkline component from Syncfusion Essential JS 2.
-control: Getting started 
+title: Getting Started with the Vue Sparkline Component | Syncfusion
+description: Set up a Vue 2 application and integrate the Syncfusion Essential JS 2 Vue Sparkline component with component registration, and data binding.
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Sparkline Component in Vue 2
 
-This article provides a step-by-step guide for creating a Vue 2 project with [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sparkline component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue Sparkline component.
 
 To get started quickly with Vue Sparkline, watch this video:
 
@@ -18,13 +18,15 @@ To get started quickly with Vue Sparkline, watch this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+
+> **Note:** Vue CLI is in maintenance mode. This guide uses Vue CLI because it describes integration with a Vue 2 application.
 
 ## Dependencies
 
-The following minimum dependencies are required to use the sparkline:
+The following are the minimum dependencies required to use the Vue Sparkline component:
 
-```js
+```
 |-- @syncfusion/ej2-vue-charts
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
@@ -36,103 +38,66 @@ The following minimum dependencies are required to use the sparkline:
     |-- @syncfusion/ej2-vue-base
 ```
 
-## Setting up the Vue 2 project
+Only the `@syncfusion/ej2-vue-charts` package must be installed directly. Its required dependencies are installed automatically.
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Use a package release that supports Vue 2. Before upgrading, check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and the package release notes.
+
+## Setting Up the Vue 2 Project
+
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+
+**npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating the project, select `Default ([Vue 2] babel, eslint)` from the menu. If this preset is unavailable, select the manual configuration option and choose Vue 2 when prompted for the Vue version.
 
 ![Vue 2 project](./images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available on npm. The Vue Sparkline component is provided in the `@syncfusion/ej2-vue-charts` package, which includes the necessary Sparkline modules. For advanced or custom integrations, developers can install the lower-level `@syncfusion/ej2-sparkline` package together with `@syncfusion/ej2-vue-base`.
-
-This article uses the Vue Sparkline component as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+After the project is created, navigate to its directory:
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+cd quickstart
 ```
-or
+
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
+
+Syncfusion Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the `@syncfusion/ej2-vue-charts` package using either npm or yarn.
+
+**npm**
+
+```bash
+npm install @syncfusion/ej2-vue-charts
+```
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+> **Note:** npm v5 and later save installed packages to `dependencies` by default, so the `--save` option is not required.
 
-Follow these steps to add the Vue Sparkline component:
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sparkline Component
 
-1. Import and register the Sparkline component in the `script` section of the **src/App.vue** file.
+Follow these steps to add the Vue Sparkline component.
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<script>
-import { SparklineComponent } from "@syncfusion/ej2-vue-charts";
-
-export default {
-  components: {
-    'ejs-sparkline': SparklineComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2. In the `template` section, define the Sparkline component.
+**Step 1:** Import and locally register the Sparkline component in the `script` section of **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-    <div id="app">
-    <ejs-sparkline></ejs-sparkline>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Run the project
-
-To run the project, use the following command:
-
-```bash
-npm run serve
-```
-
-or
-
-```bash
-yarn run serve
-```
-
-The following example shows a basic Sparkline.
-
-```
-<template>
-<ejs-sparkline id="sparkline"></ejs-sparkline>
-</template>
 
 <script>
 import { SparklineComponent } from '@syncfusion/ej2-vue-charts';
@@ -141,47 +106,62 @@ export default {
   components: {
     'ejs-sparkline': SparklineComponent
   }
-}
+};
 </script>
-```
 
-Since no data source is provided, the sparkline renders an empty SVG element.
+{% endhighlight %}
+{% endtabs %}
 
-## Module Injection
+**Step 2:** Define the Sparkline component in the `template` section.
 
-The Sparkline component is split into feature modules. To enable a feature, import its module and provide it to the component using the `provide` option. Available modules include:
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-- SparklineTooltip — enables tooltip display for points and series.
-
-The example below demonstrates enabling the tooltip feature by importing `SparklineTooltip` and providing it to the component.
-
-```
 <template>
-    <div class="control_wrapper">
-        <ejs-sparkline id="sparkline"></ejs-sparkline>
-    </div>
+  <div id="app">
+    <ejs-sparkline id="sparkline"></ejs-sparkline>
+  </div>
 </template>
-<script>
-import { SparklineComponent, SparklineTooltip } from "@syncfusion/ej2-vue-charts";
 
-export default {
-  components: {
-    'ejs-sparkline': SparklineComponent
-  },
-  data: function() {
-    return {
-    }
-  },
-provide:{
-    sparkline:[SparklineTooltip]
-}
-}
-</script>
+{% endhighlight %}
+{% endtabs %}
+
+At this stage, the component is registered, but no visible Sparkline series is rendered until a data source is configured.
+
+## Bind a Data Source to the Sparkline
+
+The Sparkline component uses the following properties to bind object data:
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/sparkline/index#datasource) specifies an array of data objects or a `DataManager` instance.
+- [`xName`](https://ej2.syncfusion.com/vue/documentation/api/sparkline#xname) maps the horizontal-value field.
+- [`yName`](https://ej2.syncfusion.com/vue/documentation/api/sparkline#yname) maps the numeric-value field.
+- [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/sparkline#valuetype) specifies how x-values are interpreted.
+
+When the x-values are category strings, set `valueType` to `Category`. Each data object must contain the fields assigned to `xName` and `yName`, and the field assigned to `yName` must contain a numeric value.
+
+```html
+<ejs-sparkline
+  :dataSource="dataSource"
+  xName="day"
+  yName="value"
+  valueType="Category"
+></ejs-sparkline>
 ```
 
-## Bind data source to Sparkline
-
-Use the `dataSource` property to bind data to the sparkline. This property accepts a collection (for example, an array of objects) as input.
+```javascript
+data() {
+  return {
+    dataSource: [
+      { day: 'Mon', value: 3 },
+      { day: 'Tue', value: 5 },
+      { day: 'Wed', value: 2 },
+      { day: 'Thu', value: 4 },
+      { day: 'Fri', value: 6 }
+    ]
+  };
+}
+```
+The following is the complete code for the **src/App.vue** file. Replace the contents of **src/App.vue** with the following complete example:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -191,26 +171,62 @@ Use the `dataSource` property to bind data to the sparkline. This property accep
         
 {% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs14" %}
 
-## Change the type of Sparkline
+## Run the Project
 
-Change the sparkline type by setting the `type` property to `Line`, `Column`, `WinLoss`, `Pie`, or `Area`. The example below uses the `area` type.
+Save **src/App.vue**, and then start the development server using either npm or yarn.
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/sparkline/getting-started-cs15/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs15" %}
+**npm**
 
-## Enable tooltip for Sparkline
+```bash
+npm run serve
+```
 
-The sparkline displays additional information in a tooltip when hovering over points. Enable tooltips by setting `tooltipSettings.visible` to `true` and injecting the `SparklineTooltip` module via the `provide` option.
+**yarn**
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/sparkline/getting-started-cs16/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs16" %}
+```bash
+yarn run serve
+```
+
+Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that an area Sparkline displays.
+
+## Module Injection
+
+The Sparkline component is split into feature modules. To enable a feature, import its module and provide it to the component using the `provide` option.
+
+Tooltip support is provided by the optional `SparklineTooltip` module. Register it with the component's `provide` option only when tooltips are enabled.
+
+```javascript
+import {
+  SparklineComponent,
+  SparklineTooltip
+} from '@syncfusion/ej2-vue-charts';
+
+export default {
+  components: {
+    'ejs-sparkline': SparklineComponent
+  },
+  provide: {
+    sparkline: [SparklineTooltip]
+  }
+};
+```
+
+## Troubleshooting
+
+- **The Sparkline is not rendered.** Verify that `SparklineComponent` is imported and registered, the component has valid width and height values, and the browser console contains no component, data, or licensing errors.
+- **No data is displayed.** Verify that `dataSource` contains records, `xName` and `yName` match fields in every data object, and the field mapped by `yName` contains numeric values.
+- **Category values are not interpreted correctly.** Set `valueType` to `Category` when the field mapped by `xName` contains category strings.
+- **The tooltip is not displayed.** Set `tooltipSettings.visible` to `true`, bind the settings object with `:tooltipSettings="tooltipSettings"`, and register `SparklineTooltip` with the exact `sparkline` key.
+- **A package or Vue version error occurs.** Confirm that the installed `@syncfusion/ej2-vue-charts` release supports Vue 2 and that all Syncfusion packages use compatible versions.
+
+For additional assistance, refer to the [Vue Sparkline API documentation](https://ej2.syncfusion.com/vue/documentation/api/sparkline/index).
+
+## See Also
+
+- [Getting Started with the Vue Sparkline Chart video](https://www.youtube.com/watch?v=XdDcvJ0ZJrE)
+- [Vue Sparkline user interaction](https://ej2.syncfusion.com/vue/documentation/sparkline/user-interaction)
+- [Vue Sparkline examples](https://ej2.syncfusion.com/vue/demos/#/material3/sparkline/default.html)
+- [Vue Sparkline getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-sparkline-chart-component)
+- [Getting Started with the Vue 3 Sparkline Component](vue-3-getting-started)
+- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
