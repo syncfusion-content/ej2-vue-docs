@@ -108,7 +108,7 @@ npm install @syncfusion/ej2-tailwind3-theme
 
 Add the following import to the **src/App.vue** file:
 
-```vue
+```
 <style>
   @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css";
 </style>
@@ -124,7 +124,7 @@ Add the `ejs-diagram` component to the Vue component template.
 
 Replace the entire contents of **src/App.vue** with the following code:
 
-```vue
+```
 <template>
   <ejs-diagram
     id="diagram"
@@ -156,7 +156,7 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 Replace the entire contents of **src/App.vue** with the following code:
 
-```vue
+```
 <template>
   <ejs-diagram
     id="diagram"

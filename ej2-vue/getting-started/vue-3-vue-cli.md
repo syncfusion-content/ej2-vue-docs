@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Vue3 tutorial with Vue Getting started component | Syncfusion
-description:  Checkout and learn about Vue3 tutorial with Vue Getting started component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 with Vue CLI Getting Started | Syncfusion
+description: Checkout and learn about the Vue 3 with Vue CLI getting started guide for Syncfusion Essential JS 2 components.
 control: Vue3 tutorial 
 platform: ej2-vue
 documentation: ug
@@ -203,7 +203,7 @@ It is required to register the component and any child directives used within th
   {% endtabs %}
     
 
-In the above code, `ej-grid` denotes the Grid component tag. `e-columns` and `e-column` denotes the child column directives tag which is used for Column definition declaration.
+In the above code, `ejs-grid` denotes the Grid component tag. `e-columns` and `e-column` denotes the child column directives tag which is used for Column definition declaration.
 
 >Registering the child directives is not needed if they are not used.
 
