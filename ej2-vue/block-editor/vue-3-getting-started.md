@@ -67,15 +67,13 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 ## Adding Block Editor component
 
-Now, you can start adding the Vue Block Editor component in the application. For getting started, add the Block Editor component in **src/App.vue** file using following sample.
+Now, add the Vue Block Editor component to the **src/App.vue** file using the following sample.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div style="margin: 50px auto;">
-        <ejs-blockeditor id="BlockEditor"></ejs-blockeditor>
-    </div>
+    <ejs-blockeditor id="BlockEditor"></ejs-blockeditor>
 </template>
 
 <script setup>
@@ -90,9 +88,7 @@ Now, you can start adding the Vue Block Editor component in the application. For
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <div style="margin: 50px auto;">
-        <ejs-blockeditor id="BlockEditor"></ejs-blockeditor>
-    </div>
+    <ejs-blockeditor id="BlockEditor"></ejs-blockeditor>
 </template>
 
 <script>

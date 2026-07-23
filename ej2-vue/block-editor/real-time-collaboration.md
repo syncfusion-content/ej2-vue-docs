@@ -29,7 +29,7 @@ Before enabling collaboration, install the `yjs` library and a Yjs provider. See
 
 Inject the `Collaboration` module into the Block Editor before use.
 
-```vue
+```html
 <template>
   <ejs-blockeditor></ejs-blockeditor>
 </template>
@@ -118,7 +118,7 @@ const provider = new WebrtcProvider('document-room-id', yDoc);
 
 Pass the adapter and provider to the Block Editor through the `collaborationSettings` property.
 
-```vue
+```html
 <template>
   <ejs-blockeditor  :collaborationSettings="collaborationSettings"></ejs-blockeditor>
 </template>
@@ -161,7 +161,7 @@ const collaborationSettings = {
 
 The Block Editor can display remote cursors, text selection overlays, and user details on hover. To enable these user presence features, set `enableAwareness` to `true` in `collaborationSettings` property.
 
-```vue
+```html
 <template>
   <ejs-blockeditor :collaborationSettings="collaborationSettings"></ejs-blockeditor>
 </template>
@@ -186,7 +186,7 @@ provide('blockeditor', [Collaboration]);
 
 Set the current user's display name and cursor highlight color using the `users` and `currentUserId` properties. The `avatarBgColor` value is used for that user's remote cursor and text selection overlay. The users property includes `id`, `user` and `avatarBgColor`.
 
-```vue
+```html
 <template>
   <ejs-blockeditor :users="users" :currentUserId="currentUserId"></ejs-blockeditor>
 </template>
@@ -210,7 +210,7 @@ provide('blockeditor', [Collaboration]);
 
 Retrieve all currently connected users.
 
-```vue
+```html
 <template>
   <div id='container'>
     <ejs-blockeditor ref="editor"></ejs-blockeditor>
@@ -242,7 +242,7 @@ Only changes made by the current user are included in that user's undo history. 
 
 Inject the `VersionHistory` module and configure the `versionHistory` property under `collaborationSettings` property.
 
-```vue
+```html
 <template>
   <ejs-blockeditor><ejs-blockeditor/>
 </template>
@@ -267,7 +267,7 @@ export class CustomVersionStorage implements IVersionStorage {}
 
 Configure collaboration settings with version history:
 
-```vue
+```html
 <template>
   <ejs-blockeditor :collaborationSettings="collaborationSettings"></ejs-blockeditor>
 </template>
@@ -399,7 +399,7 @@ You can respond to version history events through the version history settings.
 
 Triggered when a new snapshot is created.
 
-```vue
+```html
 <template>
   <ejs-blockeditor :collaborationSettings="collaborationSettings"></ejs-blockeditor>
 </template>
@@ -424,7 +424,7 @@ provide('blockeditor', [Collaboration, VersionHistory]);
 
 Triggered when a snapshot is restored.
 
-```vue
+```html
 <template>
   <ejs-blockeditor :collaborationSettings="collaborationSettings"></ejs-blockeditor>
 </template>
