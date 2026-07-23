@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Common Installation Errors
+# Common installation errors
 
 This article describes common installation errors, their causes, and solutions.
 
