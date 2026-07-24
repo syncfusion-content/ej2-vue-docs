@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Vue 3 getting started with the TreeMap component | Syncfusion
-description:  Checkout and learn about Vue 3 getting started with the Vue TreeMap component of Syncfusion Essential JS 2 and more details.
-control: Vue 3 getting started 
+title: Vue 3 Getting Started with the TreeMap Component | Syncfusion
+description: Create a Vite-based Vue 3 project and integrate the Syncfusion Vue TreeMap component with data binding using the Composition API or Options API.
+control: TreeMap
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,365 +10,330 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue TreeMap Component in Vue 3
 
-This guide demonstrates how to set up the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component in a Vue 3 project using [Vite](https://vitejs.dev) as the build tool, alongside either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api) for component logic management.
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-## Composition API vs Options API
-
-Vue 3 supports two approaches for writing components:
-
-* **Composition API**: Introduced in Vue 3, this approach organizes component logic as reusable functions called composition functions. It provides greater flexibility for code organization and reuse, making it ideal for complex components or shared logic patterns.
-
-* **Options API**: The traditional Vue approach where component logic is organized into defined options (data, methods, computed properties, watchers, and life cycle hooks). This approach remains fully supported and is familiar to Vue 2 developers.
+The TreeMap visualizes flat or hierarchical data as nested rectangles. Each rectangle is sized by a numeric weight and can be colored by a category or numeric range. The example in this guide binds airport-count data, applies equal color mapping, and displays a legend.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
-## Set up the Vite project
+Use a release of `@syncfusion/ej2-vue-treemap` that supports Vue 3 and the Node.js version used by the project. Check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and package release notes before upgrading.
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+## Set Up the Vite Project
+
+Create a Vite project using either npm or yarn.
+
+**npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+**yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-Using one of the above commands will lead to a series of configuration prompts. Follow these steps to complete the setup:
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The project dependencies and Syncfusion package are installed in the following steps.
 
-1. **Define the project name**: Specify the project name directly. For this guide, the project is named `my-project`.
+Navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2. **Select the framework**: Choose `Vue` from the available framework options to create a Vue 3 project.
+Install the project dependencies.
+
+**npm**
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3. **Select the variant**: Choose `JavaScript` to build the Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4. **Install dependencies**: After completing the above steps to create the `my-project`, run the following command to install its dependencies:
-
-```bash
-cd my-project
 npm install
 ```
 
-or
+**yarn**
 
 ```bash
-cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+> **Note:** To create a TypeScript project, use the `vue-ts` template instead of `vue`.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published on [npm](https://www.npmjs.com/search?q=ej2-vue).
 
-This article uses the [Vue TreeMap component](https://www.syncfusion.com/vue-components/vue-treemap) as an example. To use the Vue TreeMap component in the project, the `@syncfusion/ej2-vue-treemap` package needs to be installed using the following command:
+Install the `@syncfusion/ej2-vue-treemap` package using either npm or yarn.
+
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-treemap --save
+npm install @syncfusion/ej2-vue-treemap
 ```
 
-or
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-treemap
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap Component
+The package manager reports an error if installation fails. You can also confirm that `@syncfusion/ej2-vue-treemap` appears in `package.json` and the package manager's lock file.
 
-Follow these steps to add the Vue TreeMap component using either the Composition API or Options API:
+> **Note:** The TreeMap renders its visualization with SVG. This example does not require a separate TreeMap theme stylesheet. Import a Syncfusion theme only when other controls in the application require one.
 
-1. Import and register the TreeMap component and required modules in the `script` section of the **src/App.vue** file. For the Composition API, add the `setup` attribute to the `script` tag.
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap Component
+
+Follow these steps to initialize the TreeMap. The code fragments in this section accumulate into the complete examples that follow.
+
+**Step 1:** Import and Register the Component
+
+Import the TreeMap component in **src/App.vue**.
+
+In the Composition API example, use the `<script setup>` syntax. Imported components are available to the template without a `components` option.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { TreeMapComponent as EjsTreemap, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
-import { TreeMap } from '@syncfusion/ej2-treemap';
-TreeMap.Inject(TreeMapLegend);
+import {
+  TreeMapComponent as EjsTreemap
+} from '@syncfusion/ej2-vue-treemap';
+
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { TreeMapComponent, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
-//Component registration
+import { TreeMapComponent } from '@syncfusion/ej2-vue-treemap';
+
 export default {
-  name: "App",
+  name: 'App',
   components: {
-      'ejs-treemap': TreeMapComponent
+    'ejs-treemap': TreeMapComponent
   }
-}
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the TreeMap component with properties such as [dataSource](https://ej2.syncfusion.com/vue/documentation/api/treemap#datasource), [weightValuePath](https://ej2.syncfusion.com/vue/documentation/api/treemap#weightvaluepath), [leafItemSettings](https://ej2.syncfusion.com/vue/documentation/api/treemap#leafitemsettings), and [legendSettings](https://ej2.syncfusion.com/vue/documentation/api/treemap#legendsettings).
+**Step 2:** Declare the TreeMap Data and Settings
+
+Add the following values to the existing `<script setup>` block for the Composition API or to `data()` inside the existing `export default` object for the Options API.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const dataSource = [
+        { state: 'Brazil', count: 25 },
+        { state: 'Colombia', count: 12 },
+        { state: 'Argentina', count: 9 },
+        { state: 'Ecuador', count: 7 },
+        { state: 'Chile', count: 6 },
+        { state: 'Peru', count: 3 },
+        { state: 'Venezuela', count: 3 },
+        { state: 'Bolivia', count: 2 },
+        { state: 'Paraguay', count: 2 },
+        { state: 'Uruguay', count: 2 },
+        { state: 'Falkland Islands', count: 1 },
+        { state: 'French Guiana', count: 1 },
+        { state: 'Guyana', count: 1 },
+        { state: 'Suriname', count: 1 }
+];
+
+const weightValuePath = 'count';
+const leafItemSettings = {
+  labelPath: 'state'
+};
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+export default {
+  data() {
+    return {
+      dataSource: [
+        { state: 'Brazil', count: 25 },
+        { state: 'Colombia', count: 12 },
+        { state: 'Argentina', count: 9 },
+        { state: 'Ecuador', count: 7 },
+        { state: 'Chile', count: 6 },
+        { state: 'Peru', count: 3 },
+        { state: 'Venezuela', count: 3 },
+        { state: 'Bolivia', count: 2 },
+        { state: 'Paraguay', count: 2 },
+        { state: 'Uruguay', count: 2 },
+        { state: 'Falkland Islands', count: 1 },
+        { state: 'French Guiana', count: 1 },
+        { state: 'Guyana', count: 1 },
+        { state: 'Suriname', count: 1 }
+      ],
+      weightValuePath: 'count',
+      leafItemSettings: {
+        labelPath: 'state'
+      }
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3:** Define the TreeMap in the Template
+
+Add the TreeMap to the `template` section of **src/App.vue**.
+
+The example uses the following properties:
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#datasource) specifies the data objects.
+- [`weightValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#weightvaluepath) specifies the numeric field that determines rectangle size.
+- [`leafItemSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#leafitemsettings) configures leaf labels and color mapping.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-  <ejs-treemap id="treemap" :dataSource="dataSource" :weightValuePath="weightValuePath" :leafItemSettings="leafItemSettings" :equalColorValuePath="equalColorValuePath" :legendSettings="legendSettings"></ejs-treemap>
+  <div id="app">
+    <ejs-treemap
+      id="treemap"
+      :dataSource="dataSource"
+      :weightValuePath="weightValuePath"
+      :leafItemSettings="leafItemSettings"
+    ></ejs-treemap>
+  </div>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-3. In the `script` section, declare the values for the properties defined in the `template` section.
+Here is the summarized code for the above steps. Replace the contents of **src/App.vue** with either the Composition API or Options API example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
+<template>
+  <div id="app">
+    <ejs-treemap id="treemap" :dataSource="dataSource" :weightValuePath="weightValuePath" :leafItemSettings="leafItemSettings">
+    </ejs-treemap>
+  </div>
+</template>
+
 <script setup>
-    const dataSource= [
-            { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
-            { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 12 },
-            { Title: 'State wise International Airport count in South America', State: "Argentina", Count: 9 },
-            { Title: 'State wise International Airport count in South America', State: "Ecuador", Count: 7 },
-            { Title: 'State wise International Airport count in South America', State: "Chile", Count: 6 },
-            { Title: 'State wise International Airport count in South America', State: "Peru", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Venezuela", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Bolivia", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Paraguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Uruguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Falkland Islands",Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "French Guiana", Count:1 },
-            { Title: 'State wise International Airport count in South America', State: "Guyana", Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "Suriname", Count: 1 }
-    ];
-    const weightValuePath = 'Count';
-    const equalColorValuePath = "Count";
-    const leafItemSettings = {
-          labelPath: "State",
-          colorMapping: [
-              { value: "25", color: "#634D6F" },
-              { value: "12", color: "#B34D6D" },
-              { value: "9", color: "#557C5C" },
-              { value: "7", color: "#44537F" },
-              { value: "6", color: "#637392" },
-              { value: "3", color: "#7C754D" },
-              { value: "2", color: "#2E7A64" },
-              { value: "1", color: "#95659A" }
-            ]
-          };
-    const legendSettings = {
-            visible: true
+import { TreeMapComponent as EjsTreemap } from '@syncfusion/ej2-vue-treemap';
+
+const dataSource = [
+    { state: 'Brazil', count: 25 },
+    { state: 'Colombia', count: 12 },
+    { state: 'Argentina', count: 9 },
+    { state: 'Ecuador', count: 7 },
+    { state: 'Chile', count: 6 },
+    { state: 'Peru', count: 3 },
+    { state: 'Venezuela', count: 3 },
+    { state: 'Bolivia', count: 2 },
+    { state: 'Paraguay', count: 2 },
+    { state: 'Uruguay', count: 2 },
+    { state: 'Falkland Islands', count: 1 },
+    { state: 'French Guiana', count: 1 },
+    { state: 'Guyana', count: 1 },
+    { state: 'Suriname', count: 1 }
+];
+
+const weightValuePath = 'count';
+const leafItemSettings = {
+  labelPath: 'state'
+};
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-treemap id="treemap" :dataSource="dataSource" :weightValuePath="weightValuePath" :leafItemSettings="leafItemSettings">
+    </ejs-treemap>
+  </div>
+</template>
+
+<script>
+import { TreeMapComponent } from '@syncfusion/ej2-vue-treemap';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-treemap': TreeMapComponent
+  },
+  data() {
+    return {
+      dataSource: [
+        { state: 'Brazil', count: 25 },
+        { state: 'Colombia', count: 12 },
+        { state: 'Argentina', count: 9 },
+        { state: 'Ecuador', count: 7 },
+        { state: 'Chile', count: 6 },
+        { state: 'Peru', count: 3 },
+        { state: 'Venezuela', count: 3 },
+        { state: 'Bolivia', count: 2 },
+        { state: 'Paraguay', count: 2 },
+        { state: 'Uruguay', count: 2 },
+        { state: 'Falkland Islands', count: 1 },
+        { state: 'French Guiana', count: 1 },
+        { state: 'Guyana', count: 1 },
+        { state: 'Suriname', count: 1 }
+      ],
+      weightValuePath: 'count',
+      leafItemSettings: {
+        labelPath: 'state',
+      }
     };
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-  return {
-    dataSource: [
-      { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
-      { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 12 },
-      { Title: 'State wise International Airport count in South America', State: "Argentina", Count: 9 },
-      { Title: 'State wise International Airport count in South America', State: "Ecuador", Count: 7 },
-      { Title: 'State wise International Airport count in South America', State: "Chile", Count: 6 },
-      { Title: 'State wise International Airport count in South America', State: "Peru", Count: 3 },
-      { Title: 'State wise International Airport count in South America', State: "Venezuela", Count: 3 },
-      { Title: 'State wise International Airport count in South America', State: "Bolivia", Count: 2 },
-      { Title: 'State wise International Airport count in South America', State: "Paraguay", Count: 2 },
-      { Title: 'State wise International Airport count in South America', State: "Uruguay", Count: 2 },
-      { Title: 'State wise International Airport count in South America', State: "Falkland Islands",Count: 1 },
-      { Title: 'State wise International Airport count in South America', State: "French Guiana", Count:1 },
-      { Title: 'State wise International Airport count in South America', State: "Guyana", Count: 1 },
-      { Title: 'State wise International Airport count in South America', State: "Suriname", Count: 1 }
-    ],
-    weightValuePath: 'Count',
-    equalColorValuePath: "Count",
-    leafItemSettings: {
-      labelPath: "State",
-      colorMapping: [
-        { value: "25", color: "#634D6F" },
-        { value: "12", color: "#B34D6D" },
-        { value: "9", color: "#557C5C" },
-        { value: "7", color: "#44537F" },
-        { value: "6", color: "#637392" },
-        { value: "3", color: "#7C754D" },
-        { value: "2", color: "#2E7A64" },
-        { value: "1", color: "#95659A" }
-      ]
-    },
-    legendSettings: {
-      visible: true
-    }
-  };
-}
+  }
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+## Run the Project
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+Save **src/App.vue**, and then start the development server.
 
-<template>
-     <ejs-treemap id="treemap" :dataSource="dataSource" :weightValuePath="weightValuePath" :leafItemSettings="leafItemSettings" :equalColorValuePath="equalColorValuePath" :legendSettings="legendSettings"></ejs-treemap>
-</template>
-
-<script setup>
-import { TreeMapComponent as EjsTreemap, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
-import { TreeMap } from '@syncfusion/ej2-treemap';
-TreeMap.Inject(TreeMapLegend);
-const dataSource= [
-            { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
-            { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 12 },
-            { Title: 'State wise International Airport count in South America', State: "Argentina", Count: 9 },
-            { Title: 'State wise International Airport count in South America', State: "Ecuador", Count: 7 },
-            { Title: 'State wise International Airport count in South America', State: "Chile", Count: 6 },
-            { Title: 'State wise International Airport count in South America', State: "Peru", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Venezuela", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Bolivia", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Paraguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Uruguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Falkland Islands",Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "French Guiana", Count:1 },
-            { Title: 'State wise International Airport count in South America', State: "Guyana", Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "Suriname", Count: 1 }
-  ];
-  const weightValuePath = 'Count';
-  const equalColorValuePath = "Count";
-  const leafItemSettings = {
-        labelPath: "State",
-        colorMapping: [
-            { value: "25", color: "#634D6F" },
-            { value: "12", color: "#B34D6D" },
-            { value: "9", color: "#557C5C" },
-            { value: "7", color: "#44537F" },
-            { value: "6", color: "#637392" },
-            { value: "3", color: "#7C754D" },
-            { value: "2", color: "#2E7A64" },
-            { value: "1", color: "#95659A" }
-          ]
-        };
-  const legendSettings = {
-          visible: true
-  };
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-     <ejs-treemap id="treemap" :dataSource="dataSource" :weightValuePath="weightValuePath" :leafItemSettings="leafItemSettings" :equalColorValuePath="equalColorValuePath" :legendSettings="legendSettings"></ejs-treemap>
-</template>
-
-<script>
-  import { TreeMapComponent, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
-  // Component registration
-  export default {
-    name: "App",
-    // Declaring component and its directives
-    components: {
-        'ejs-treemap': TreeMapComponent
-    },
-    // Bound properties declarations
-    data() {
-      return {
-        dataSource: [
-            { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
-            { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 12 },
-            { Title: 'State wise International Airport count in South America', State: "Argentina", Count: 9 },
-            { Title: 'State wise International Airport count in South America', State: "Ecuador", Count: 7 },
-            { Title: 'State wise International Airport count in South America', State: "Chile", Count: 6 },
-            { Title: 'State wise International Airport count in South America', State: "Peru", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Venezuela", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Bolivia", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Paraguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Uruguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Falkland Islands",Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "French Guiana", Count:1 },
-            { Title: 'State wise International Airport count in South America', State: "Guyana", Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "Suriname", Count: 1 }
-          ],
-          weightValuePath: 'Count',
-          equalColorValuePath: "Count",
-          leafItemSettings: {
-            labelPath: "State",
-            colorMapping: [
-              { value: "25", color: "#634D6F" },
-              { value: "12", color: "#B34D6D" },
-              { value: "9", color: "#557C5C" },
-              { value: "7", color: "#44537F" },
-              { value: "6", color: "#637392" },
-              { value: "3", color: "#7C754D" },
-              { value: "2", color: "#2E7A64" },
-              { value: "1", color: "#95659A" }
-            ]
-          },
-          legendSettings: {
-            visible: true
-          }
-      };
-    },
-    provide: {
-      treemap:[TreeMapLegend]
-    }
-  };
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Run the project
-
-To run the project, use the following command:
+**npm**
 
 ```bash
 npm run dev
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run dev
 ```
 
-The output will appear as follows:
+Open the URL displayed in the terminal, commonly `http://localhost:5173`, and verify that the TreeMap is displayed correctly.
 
 ![vue-3-js-TreeMap](./images/vue3-treemap-demo.png)
 
-> **Sample**: [vue3-treemap-getting-started](https://github.com/SyncfusionExamples/vue3-treemap-getting-started).
+> **Sample:** The older [vue3-treemap-getting-started sample](https://github.com/SyncfusionExamples/vue3-treemap-getting-started) uses Vue CLI. Use the code in this guide for the Vite-based setup.
 
+## Troubleshooting
 
-## See also
+- **The TreeMap is not rendered.** Verify that `TreeMapComponent` is imported or registered correctly, the data source contains records, and the browser console contains no package or runtime errors.
+- **The TreeMap is blank.** Verify that `weightValuePath` matches a numeric field in every data object.
+- **Labels are not displayed.** Verify that `leafItemSettings.labelPath` matches a field in every data object.
+- **A module-not-found error occurs.** Verify that `@syncfusion/ej2-vue-treemap` appears in `package.json`, reinstall dependencies, and restart the development server.
+- **A package or Vue version error occurs.** Confirm that the installed package release supports Vue 3 and the project's Node.js version.
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)
+For additional assistance, refer to the [Vue TreeMap API documentation](https://ej2.syncfusion.com/vue/documentation/api/treemap).
+
+## See Also
+
+- [Vue TreeMap color mapping](https://ej2.syncfusion.com/vue/documentation/treemap/color-mapping)
+- [Vue TreeMap legend](https://ej2.syncfusion.com/vue/documentation/treemap/legend)
+- [Vue TreeMap examples](https://ej2.syncfusion.com/vue/demos/#/material3/treemap/default.html)
+- [Composition API with TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Options API with TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

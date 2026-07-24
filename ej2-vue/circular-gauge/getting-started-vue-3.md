@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Vue 3 getting started with the Circular Gauge component | Syncfusion
-description:  Checkout and learn about Vue 3 getting started with the Vue Circular Gauge component of Syncfusion Essential JS 2 and more details.
-control: Vue 3 getting started 
+title: Vue 3 Getting Started with the Circular Gauge Component | Syncfusion
+description: Create a Vite-based Vue 3 project and integrate the Syncfusion Vue Circular Gauge component using the Composition API or Options API.
+control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,276 +10,209 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Circular Gauge Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Circular Gauge component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Circular Gauge component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The **Composition API** is a modern feature in Vue 3 that organizes component logic into reusable composition functions, allowing developers to write more scalable and maintainable components with better code reusable.
+The **Composition API** groups related logic into reusable functions. The **Options API** organizes component logic with options such as `data`, `methods`, and life cycle hooks. Choose the API that best fits the application's structure.
 
-The **Options API** is the traditional approach for writing Vue components, where logic is organized into predefined options (data, methods, computed properties, watchers, life cycle hooks, and more).
+The Circular Gauge visualizes numeric values on a circular scale. It can be configured as a speedometer, meter gauge, analog clock, or other radial indicator by customizing its axes, pointers, ranges, ticks, and labels.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
-## Set up the Vite project
+## Set Up the Vite Project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Create a Vite project using either npm or yarn.
+
+**npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+**yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The project dependencies and Syncfusion package are installed in the following steps.
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+Navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2. Select `Vue` as the framework to create a Vue 3 project.
+Install the project dependencies.
+
+**npm**
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3. Choose `JavaScript` as the framework variant.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
-
-```bash
-cd my-project
 npm install
 ```
 
-or
+**yarn**
 
 ```bash
-cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+> **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Circular Gauge Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue). Refer to the product documentation or npm search when identifying the package used by another Syncfusion component.
 
-This article uses the [Vue Circular Gauge component](https://www.syncfusion.com/vue-components/vue-circular-gauge) as an example. To use the Vue Circular Gauge component in the project, the package needs to be installed using the following command:
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-circulargauge --save
+npm install @syncfusion/ej2-vue-circulargauge
 ```
 
-or
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-circulargauge
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+> **Note:** For TypeScript projects, refer to [Vue 3 with the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition) or [Vue 3 with the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options).
 
-Follow the steps below to add the Vue Circular Gauge component to your application using either `Composition API` or `Options API`:
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Circular Gauge Component
 
-1. Import and register the Circular Gauge component and its child directives in the `script` section of the **src/App.vue** file. For the `Composition API`, add the `setup` attribute to the `script` tag.
+Follow these steps to add the Vue Circular Gauge component using the Composition API or Options API.
+
+**Step 1:** Import and Register the Component
+
+Import the Circular Gauge component in **src/App.vue**.
+
+In the Composition API example, the aliases correspond to the custom-element names used in the template. Components imported in `<script setup>` are available to the template without a `components` option.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-  import { CircularGaugeComponent as EjsCirculargauge, AxesDirective as EAxes, AxisDirective as EAxis, PointersDirective as EPointers, PointerDirective as EPointer, RangesDirective as ERanges, RangeDirective as ERange } from '@syncfusion/ej2-vue-circulargauge';
+import {
+  CircularGaugeComponent as EjsCirculargauge
+} from '@syncfusion/ej2-vue-circulargauge';
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-circulargauge';
-//Component registration
+import {
+  CircularGaugeComponent
+} from '@syncfusion/ej2-vue-circulargauge';
+
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    'ejs-circulargauge' : CircularGaugeComponent,
-    'e-axes' : AxesDirective,
-    'e-axis' : AxisDirective,
-    'e-pointers': PointersDirective,
-    'e-pointer' : PointerDirective,
-    'e-ranges' : RangesDirective,
-    'e-range' : RangeDirective
+    'ejs-circulargauge': CircularGaugeComponent
   }
-}
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
-   
-2. Define the Circular Gauge component in the `template` section with axis, pointer, and range properties.
+
+**Step 2:** Define the Circular Gauge in the Template
+
+Add the Circular Gauge to the `template` section of **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-  <ejs-circulargauge :title ='title' orientation='Horizontal'>
-        <e-axes>
-            <e-axis minimum=0 maximum=200>
-                <e-pointers>
-                    <e-pointer value=140></e-pointer>
-                </e-pointers>
-                <e-ranges>
-                    <e-range start=0 end=80 startWidth=15 endWidth=15></e-range>
-                    <e-range start=80 end=120 startWidth=15 endWidth=15></e-range>
-                    <e-range start=120 end=140 startWidth=15 endWidth=15></e-range>
-                    <e-range start=140 end=200 startWidth=15 endWidth=15></e-range>
-                </e-ranges>
-            </e-axis>
-        </e-axes>
+  <div id="app">
+    <ejs-circulargauge id="circulargauge" :title="title">
     </ejs-circulargauge>
+  </div>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-3.In the `script` section, declare the values for the properties defined in the `template` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-    const title = "Circular Gauge";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-  return {
-    title: 'Circular Gauge'
-  };
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the summarized code for the above steps. Replace the contents of **src/App.vue** with either the Composition API or Options API example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <ejs-circulargauge :title ='title' orientation='Horizontal'>
-        <e-axes>
-            <e-axis minimum=0 maximum=200>
-                <e-pointers>
-                    <e-pointer value=140></e-pointer>
-                </e-pointers>
-                <e-ranges>
-                    <e-range start=0 end=80 startWidth=15 endWidth=15></e-range>
-                    <e-range start=80 end=120 startWidth=15 endWidth=15></e-range>
-                    <e-range start=120 end=140 startWidth=15 endWidth=15></e-range>
-                    <e-range start=140 end=200 startWidth=15 endWidth=15></e-range>
-                </e-ranges>
-            </e-axis>
-        </e-axes>
+  <div id="app">
+    <ejs-circulargauge id="circulargauge" :title="title">
     </ejs-circulargauge>
+  </div>
 </template>
 
 <script setup>
-import { CircularGaugeComponent as EjsCirculargauge, AxesDirective as EAxes, AxisDirective as EAxis, PointersDirective as EPointers, PointerDirective as EPointer, RangesDirective as ERanges, RangeDirective as ERange } from '@syncfusion/ej2-vue-circulargauge';
-const title = "Circular Gauge";
+import {
+  CircularGaugeComponent as EjsCirculargauge
+} from '@syncfusion/ej2-vue-circulargauge';
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <ejs-circulargauge :title ='title' orientation='Horizontal'>
-        <e-axes>
-            <e-axis minimum=0 maximum=200>
-                <e-pointers>
-                    <e-pointer value=140></e-pointer>
-                </e-pointers>
-                <e-ranges>
-                    <e-range start=0 end=80 startWidth=15 endWidth=15></e-range>
-                    <e-range start=80 end=120 startWidth=15 endWidth=15></e-range>
-                    <e-range start=120 end=140 startWidth=15 endWidth=15></e-range>
-                    <e-range start=140 end=200 startWidth=15 endWidth=15></e-range>
-                </e-ranges>
-            </e-axis>
-        </e-axes>
+  <div id="app">
+    <ejs-circulargauge id="circulargauge" :title="title">
     </ejs-circulargauge>
+  </div>
 </template>
 
 <script>
-  import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-circulargauge';
-  // Component registration
-  export default {
-    name: "App",
-    // Declaring component and its directives
-    components: {
-       'ejs-circulargauge' : CircularGaugeComponent,
-       'e-axes' : AxesDirective,
-       'e-axis' : AxisDirective,
-       'e-pointers': PointersDirective,
-       'e-pointer' : PointerDirective,
-       'e-ranges' : RangesDirective,
-       'e-range' : RangeDirective
-    },
-    // Bound properties declarations
-    data() {
-      return {
-        title: 'Circular Gauge'
-      };
-    }
-  };
+import {
+  CircularGaugeComponent
+} from '@syncfusion/ej2-vue-circulargauge';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-circulargauge': CircularGaugeComponent
+  }
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
-To run the project, use the following command:
+Save **src/App.vue**, and then start the development server.
+
+**npm**
 
 ```bash
 npm run dev
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run dev
 ```
 
-The application displays the following output:
+Open the URL displayed in the terminal, commonly `http://localhost:5173`, and verify that the Circular Gauge is displayed correctly.
 
 ![vue-3-js-circular-gauge](./images/vue3-cg-demo.png)
 
-> **Sample**: [vue3-circular-gauge-getting-started](https://github.com/SyncfusionExamples/vue3-circulargauge-getting-started)
+> **Sample:** Explore the [Vue Circular Gauge getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-circular-gauge-component).
 
-Explore additional features and functionality:
+## Troubleshooting
 
-* For TypeScript setup, refer to [Getting Started with Composition API and TypeScript](../getting-started/vue-3-ts-composition) and [Getting Started with Options API and TypeScript](../getting-started/vue-3-ts-options)
-* For migration from Vue 2 to Vue 3, see the [Migration Guide](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial#migration-from-vue-2-to-vue-3)
-* Explore [Circular Gauge features](./gauge-axes.md) and [user interactions](./gauge-user-interaction.md) for more advanced use cases
+- **The Circular Gauge is not rendered.** Verify that the component and all child directives are imported or registered correctly and check the browser console for component, package, or licensing errors.
+- **The gauge is blank.** Ensure that at least one `e-axis` is declared inside `e-axes` and that the axis contains a pointer or other visible elements.
+- **A module-not-found error occurs.** Ensure that the required Circular Gauge package is installed, and then restart the development server.
+- **A package or Vue version error occurs.** Confirm that the installed package release supports Vue 3 and the project's Node.js version.
+
+For additional assistance, refer to the [Vue Circular Gauge API documentation](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge).
+
+## See Also
+
+- [Vue Circular Gauge axes](https://ej2.syncfusion.com/vue/documentation/circular-gauge/gauge-axes)
+- [Vue Circular Gauge ranges](https://ej2.syncfusion.com/vue/documentation/circular-gauge/gauge-ranges)
+- [Vue Circular Gauge user interaction](https://ej2.syncfusion.com/vue/documentation/circular-gauge/gauge-user-interaction)
+- [Vue Circular Gauge examples](https://ej2.syncfusion.com/vue/demos/#/material3/circular-gauge/default-functionalities.html)
+- [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue UI Components using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

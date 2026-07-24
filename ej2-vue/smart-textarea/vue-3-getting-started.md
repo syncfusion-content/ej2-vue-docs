@@ -20,10 +20,10 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-To get started with application, ensure the following software to be installed in the machine.
+To get started with the application, ensure the following software is installed on your machine.
 
-* [OpenAI](https://github.com/syncfusion/smart-ai-samples/blob/master/typescript/README.md#openai) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) 
-* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+* [OpenAI](https://github.com/syncfusion/smart-ai-samples/blob/master/typescript/README.md#openai) or an [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) 
+* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -84,7 +84,7 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-project` is ready to run with default settings, let's add the Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add syncfusion<sup style="font-size:70%">&reg;</sup> vue packages
 
@@ -104,22 +104,34 @@ yarn add @syncfusion/ej2-vue-inputs
 
 ## Import syncfusion<sup style="font-size:70%">&reg;</sup> css styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component themes can be applied using CSS or SASS from the [npm theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages). Additionally, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Smart TextArea component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+This example uses the `Tailwind 3` theme for the Smart TextArea Component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+
+{% endhighlight %}
+{% endtabs %}
+
+The necessary `Tailwind 3` CSS styles for the Smart TextArea component were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/textarea/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
-
-> The order of importing CSS styles should be in line with its dependency graph.
 
 ## Add syncfusion<sup style="font-size:70%">&reg;</sup> vue component
 
@@ -143,7 +155,7 @@ import { SmartTextAreaComponent } from "@syncfusion/ej2-vue-inputs";
 export default {
     name: "App",
     components: {
-        "ejs-smarttextarea'": SmartTextAreaComponent
+        "ejs-smarttextarea": SmartTextAreaComponent
     }
 }
 </script>
@@ -151,7 +163,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.Declare the values for the properties and methods in the script section.
+2.Declare the values for the properties and methods in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -260,8 +272,7 @@ const serverAIRequest = async function (settings) {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/textarea/index.css";
 </style>
 
 {% endhighlight %}
@@ -306,8 +317,7 @@ export default {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/textarea/index.css"; 
 </style>
 
 {% endhighlight %}
