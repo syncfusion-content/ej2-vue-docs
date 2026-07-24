@@ -16,7 +16,8 @@ The `Quasar` Framework is a Vue.js-based open-source framework that empowers dev
 
 ## Prerequisites
 
-[System requirements for Vue Data Grid components](../system-requirements)
+* Vue supported version >= `2.6+`.
+* Required [Node.js](https://nodejs.org/en/) version >= `16+`.
 
 ## Setup the Quasar project
 
@@ -52,22 +53,18 @@ npm install @syncfusion/ej2-vue-grids --save
 
 ## Adding CSS reference
 
-You can add the CSS files required for the Syncfusion Vue Data Grid component using one of the following methods.
-
-### Option 1: Add CSS References from a theme package
-
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
- 
+
 Install the **Material 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
- 
+
 npm install @syncfusion/ej2-material3-theme --save
- 
+
 {% endhighlight %}
 {% endtabs %}
- 
+
 Then add the following CSS reference to the **src/App.vue** file:
 
 {% tabs %}
@@ -79,25 +76,6 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 {% endhighlight %}
 {% endtabs %}
-
-### Option 2: Add CSS References from component packages
-
-After installing the grid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/App.vue** file:
-
-```css
-<style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-    @import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
-    @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-</style>
-```
 
 ## Adding Data Grid component
 

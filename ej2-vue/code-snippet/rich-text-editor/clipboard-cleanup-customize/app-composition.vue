@@ -7,7 +7,7 @@
 
 <script setup>
 import { provide } from 'vue';
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, HtmlEditor, ClipboardCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, HtmlEditor, ClipBoardCleanup } from "@syncfusion/ej2-vue-richtexteditor";
 import { detach } from '@syncfusion/ej2-base';
 
 const beforeClipboardWrite = (args) => {
@@ -16,7 +16,7 @@ const beforeClipboardWrite = (args) => {
         args.plainTextContent = 'This is customized content triggered while copy event';
     }
 },
-provide('richtexteditor', [Toolbar, HtmlEditor, ClipboardCleanup]);
+provide('richtexteditor', [Toolbar, HtmlEditor, ClipBoardCleanup]);
 </script>
 
 <style>
