@@ -14,7 +14,7 @@ Sparkline has two user interaction features: tooltip and tracker line.
 
 ## Tooltip
 
-The sparkline provides options to display details about values of data points through tooltips when hovering the mouse over data point. To use tooltip in sparkline, inject the `SparklineTooltip` module to sparkline using the inject method.
+The sparkline provides options to display details about values of data points through tooltips when hovering the mouse over data point. Enable tooltips by setting `tooltipSettings.visible` to true and injecting the `SparklineTooltip` module via the provide option.
 
 The following code example shows enabling tooltip for sparkline with format.
 

@@ -1,34 +1,62 @@
 ---
 layout: post
-title: Getting started with Vue Drop down list component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Drop down list component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting started with Vue Dropdown List component | Syncfusion
+description: Checkout and learn about Getting started with Vue Dropdown List component of Syncfusion Essential JS 2 and more details.
+control: Dropdown List
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Drop down list Component in Vue 2
+# Getting Started with the Vue Dropdown List Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Dropdown list  component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [Dropdown List](https://www.syncfusion.com/vue-components/vue-dropdown-list) component.
 
-To get started quickly with Vue Dropdown list , check this video:
+To get started quickly with Vue Dropdown List, check this video:
 
 {% youtube "https://www.youtube.com/watch?v=u51N4m76Z74" %}
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
+
+### Vue supported versions
+
+| Vue version | Minimum Syncfusion Vue Data Grid version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+
+### Browser support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
+
+> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Setup the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
+
+> **Note:** To create a Vue 2 application using Vue CLI, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-2-vue-cli) for more details.
+
+To create a new Vue 2 application, run the following commands based on your preferred package manager:
+
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 or
@@ -36,24 +64,29 @@ or
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-![Vue 2 project](./images/vue2-terminal.png)
+- **Which linter to use?** → **Default ([Vue 2] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
-
-This article uses the [Vue Drop down list component](https://www.syncfusion.com/vue-components/vue-dropdown-list) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
+Navigate to the project directory:
 
 ```bash
-npm install @syncfusion/ej2-vue-dropdowns --save
+cd quickstart
+```
+
+## Adding Vue Dropdowns package
+
+To install the Dropdowns package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-dropdowns
 ```
 or
 
@@ -61,75 +94,37 @@ or
 yarn add @syncfusion/ej2-vue-dropdowns
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Dropdown list  component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Dropdown components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-list/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add Dropdown List component
 
-Follow the below steps to add the Vue Dropdown list  component:
-
-1\. First, import and register the Dropdown list  component in the `script` section of the **src/App.vue** file.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
-
-export default {
-  components: {
-    'ejs-dropdownlist': DropDownListComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section, define the Drop down list component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#datasource) and [placeholder](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#placeholder) property.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <div id="app">
-    <div id='container' style="margin:50px auto 0; width:250px;">
-        <br>
-        <ejs-dropdownlist id='Dropdownlist' :dataSource='sportsData' placeholder='Select a game'></ejs-dropdownlist>
-    </div>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Binding data source
-
-After initialization, populate the Dropdown list with data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#datasource) &nbsp;property. Here, an array of string values is passed to the Dropdown list component.
+Now, you can add the Vue Dropdown List component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -144,9 +139,13 @@ After initialization, populate the Dropdown list with data using the [dataSource
 </template>
 
 <script setup>
-import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
-const sportsData = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
+  import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
+  const sportsData = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
 </script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-list/index.css";
+</style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -159,32 +158,25 @@ const sportsData = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
     </div>
   </div>
 </template>
+
 <script>
-import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
-export default {
-  components: {
-    'ejs-dropdownlist': DropDownListComponent
-  },
-  data (){
-    return {
-      sportsData: ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis']
+  import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+  export default {
+    components: {
+      'ejs-dropdownlist': DropDownListComponent
+    },
+    data (){
+      return {
+        sportsData: ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis']
+      }
     }
   }
-}
-
 </script>
 
-{% endhighlight %}
-{% endtabs %}
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-list/index.css";
+</style>
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/drop-down-list/getting-started/getting-started-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/drop-down-list/getting-started/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -202,27 +194,15 @@ or
 yarn run serve
 ```
         
+The output will appear as follows:
+
 {% previewsample "page.domainurl/code-snippet/drop-down-list/getting-started/getting-started-cs1" %}
 
-## Configure the Popup List
+> You can refer to our [Vue Dropdown List](https://www.syncfusion.com/vue-components/vue-dropdown-list) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dropdown List example](https://ej2.syncfusion.com/vue/demos/#/material/drop-down-list/default.html) that shows how to render the Dropdown List in Vue.
 
-By default, the width of the popup list automatically adjusts according to the Dropdown list input element's width, and the height of the popup list has '300px'.
+## See also
 
-The height and width of the popup list can also be customized using the [popupHeight](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#popupwidth) properties respectively
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/drop-down-list/getting-started/popup-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/drop-down-list/getting-started/popup-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/drop-down-list/getting-started/popup-cs1" %}
-
-> You can refer to our [Vue Dropdown List](https://www.syncfusion.com/vue-components/vue-dropdown-list) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dropdown list example](https://ej2.syncfusion.com/vue/demos/#/material/drop-down-list/default.html) that shows how to render the Dropdown List in Vue.
-
-## See Also
-
-* [How to bind the data](./data-binding)
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

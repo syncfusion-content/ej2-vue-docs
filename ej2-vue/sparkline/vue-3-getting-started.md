@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Vue 3 getting started with the Sparkline component | Syncfusion
-description: Quick guide to set up and use the Vue Sparkline component with Vue 3 (Vite), including data binding and tooltip configuration.
+title: Vue 3 Getting Started with the Sparkline Component | Syncfusion
+description: Create a Vite-based Vue 3 project and integrate the Syncfusion Essential JS 2 Vue Sparkline component using the Composition API or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -10,301 +10,343 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Sparkline Component in Vue 3
 
-This article provides a step-by-step guide for creating a [Vite](https://vitejs.dev) project (JavaScript) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sparkline component using either the Composition API or the Options API.
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup>®</sup> Vue Sparkline component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The Composition API is function-based and groups related logic into reusable composition functions. The Options API organizes component logic into options such as `data`, `methods`, `computed`, and life cycle hooks. Both approaches are supported; choose the one that best fits the project.
+The **Composition API** groups related logic into reusable functions. The **Options API** organizes component logic with options such as `data`, `methods`, and life cycle hooks. Choose the API that best fits the application's structure.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
-## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+## Set Up the Vite Project
+
+Create a Vite project using either npm or yarn.
+
+**npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+**yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-Follow the prompts to configure the project as shown below:
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The Syncfusion package is installed in a later step.
 
-1. Define the project name. For this article, use `my-project`.
+Navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2. Select `Vue` as the framework to create a Vue 3 project.
+Install the project dependencies.
+
+**npm**
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-    React
-    Preact
-    Lit
-    Svelte
-    Others
-```
-
-3. Choose `JavaScript` as the project variant.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-    TypeScript
-    Customize with create-vue ↗
-    Nuxt ↗
-```
-
-4. After project creation, install dependencies:
-
-```bash
-cd my-project
 npm install
 ```
 
-or
+**yarn**
 
 ```bash
-cd my-project
 yarn install
 ```
 
-With the project created, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+> **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available on npm. The Vue Sparkline component is included in the `@syncfusion/ej2-vue-charts` package. For advanced or custom integrations, the lower-level packages `@syncfusion/ej2-sparkline` and `@syncfusion/ej2-vue-base` can be installed instead.
+Syncfusion Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
 
-This article uses the Vue Sparkline component as an example. Install the `@syncfusion/ej2-vue-charts` package using one of the commands below:
+Install the `@syncfusion/ej2-vue-charts` package. Use a package release compatible with Vue 3 and the Node.js version used by the project.
+
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
-or
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+> **Note:** For TypeScript projects, refer to [Vue 3 with the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition) or [Vue 3 with the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options).
 
-Follow the below steps to add the Vue Sparkline component using `Composition API` or `Options API`:
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sparkline Component
 
-1.First, import and register the Sparkline component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+Follow these steps to add the Vue Sparkline component using the Composition API or Options API.
+
+**Step 1:** Import and Register the Component
+
+Import the Sparkline component in **src/App.vue**.
+
+In the Composition API example, alias the component import to the name used by the custom element in the template. Components imported in `<script setup>` are available directly in the template.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { SparklineComponent as EjsSparkline, SparklineTooltip } from "@syncfusion/ej2-vue-charts";
+import {
+  SparklineComponent as EjsSparkline,
+} from '@syncfusion/ej2-vue-charts';
+
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { SparklineComponent, SparklineTooltip } from "@syncfusion/ej2-vue-charts";
-//Component registration
+import {
+  SparklineComponent,
+} from '@syncfusion/ej2-vue-charts';
+
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "ejs-sparkline": SparklineComponent
+    'ejs-sparkline': SparklineComponent
   }
-}
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the Sparkline component with the [dataSource](https://helpej2.syncfusion.com/vue/documentation/api/sparkline#datasource) property.
+**Step 2:** Declare the Data and Configuration
+
+Define the data source and Sparkline configuration values in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const dataSource = [
+  { year: '2005', population: 20090440 },
+  { year: '2006', population: 20264080 },
+  { year: '2007', population: 20434180 },
+  { year: '2008', population: 21007310 },
+  { year: '2009', population: 21262640 },
+  { year: '2010', population: 21515750 },
+  { year: '2011', population: 21766710 },
+  { year: '2012', population: 22015580 },
+  { year: '2013', population: 22262500 },
+  { year: '2014', population: 22507620 }
+];
+
+const type = 'Area';
+const valueType = 'Category';
+const xName = 'year';
+const height = '200px';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+export default {
+  data() {
+    return {
+      dataSource: [
+        { year: '2005', population: 20090440 },
+        { year: '2006', population: 20264080 },
+        { year: '2007', population: 20434180 },
+        { year: '2008', population: 21007310 },
+        { year: '2009', population: 21262640 },
+        { year: '2010', population: 21515750 },
+        { year: '2011', population: 21766710 },
+        { year: '2012', population: 22015580 },
+        { year: '2013', population: 22262500 },
+        { year: '2014', population: 22507620 }
+      ],
+      type: 'Area',
+      valueType: 'Category',
+      xName: 'year',
+      height:'200px',
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3:** Define the Sparkline in the Template
+
+Add the Sparkline component to the `template` section of **src/App.vue**.
+
+The example uses the following properties:
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/sparkline/index#datasource) specifies an array of data objects or a `DataManager` instance.
+- [`xName`](https://ej2.syncfusion.com/vue/documentation/api/sparkline/index#xname) maps the horizontal-value field.
+- [`yName`](https://ej2.syncfusion.com/vue/documentation/api/sparkline/index#yname) maps the numeric-value field.
+- [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/sparkline/index#valuetype) specifies how the x-values are interpreted.
+- [`type`](https://ej2.syncfusion.com/vue/documentation/api/sparkline/index#type) specifies the Sparkline type. Supported values include `Line`, `Column`, `WinLoss`, `Pie`, and `Area`; the default is `Line`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <ejs-sparkline id="sparkline" :dataSource='dataSource' :height='height' :xName='xName' :yName='yName' :type='type' :tooltipSettings='tooltipSettings'></ejs-sparkline>
+  <div id="app">
+    <ejs-sparkline
+      id="sparkline"
+      :dataSource="dataSource"
+      :xName="xName"
+      :yName="yName"
+      :valueType="valueType"
+      :type="type"
+      :height='height'
+    ></ejs-sparkline>
+  </div>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-3.Declare the values for the `dataSource` property in the `script` section.
+Each data object must contain the fields assigned to `xName` and `yName`. The field assigned to `yName` must contain a numeric value. Set `valueType` to `Category` when the field assigned to `xName` contains category strings.
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-const dataSource = [
-        { x: 0, xval: '2005', yval: 20090440 },
-        { x: 1, xval: '2006', yval: 20264080 },
-        { x: 2, xval: '2007', yval: 20434180 },
-        { x: 3, xval: '2008', yval: 21007310 },
-        { x: 4, xval: '2009', yval: 21262640 },
-        { x: 5, xval: '2010', yval: 21515750 },
-        { x: 6, xval: '2011', yval: 21766710 },
-        { x: 7, xval: '2012', yval: 22015580 },
-        { x: 8, xval: '2013', yval: 22262500 },
-        { x: 9, xval: '2014', yval: 22507620 }
-    ];
-const type = 'Area';
-const xName = 'xval';
-const yName = 'yval';
-const height = '200px';
-const tooltipSettings = {
-        visible: true,
-        format: '${xval} : ${yval}'
-};
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-    return {
-        dataSource: [
-            { x: 0, xval: '2005', yval: 20090440 },
-            { x: 1, xval: '2006', yval: 20264080 },
-            { x: 2, xval: '2007', yval: 20434180 },
-            { x: 3, xval: '2008', yval: 21007310 },
-            { x: 4, xval: '2009', yval: 21262640 },
-            { x: 5, xval: '2010', yval: 21515750 },
-            { x: 6, xval: '2011', yval: 21766710 },
-            { x: 7, xval: '2012', yval: 22015580 },
-            { x: 8, xval: '2013', yval: 22262500 },
-            { x: 9, xval: '2014', yval: 22507620 }
-        ],
-        type:'Area',
-        xName:'xval',
-        yName:'yval',
-        height:'200px',
-        tooltipSettings: {
-            visible: true,
-            format: '${xval} : ${yval}'
-        }
-    };
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Replace the contents of **src/App.vue** with either the Composition API or Options API example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <ejs-sparkline id="sparkline" :dataSource='dataSource' :height='height' :xName='xName' :yName='yName' :type='type' :tooltipSettings='tooltipSettings'></ejs-sparkline>
+  <div id="app">
+    <ejs-sparkline
+      id="sparkline"
+      :dataSource="dataSource"
+      :xName="xName"
+      :yName="yName"
+      :valueType="valueType"
+      :type="type"
+      :height='height'
+    ></ejs-sparkline>
+  </div>
 </template>
 
 <script setup>
-import { provide } from 'vue';
-import { SparklineComponent as EjsSparkline, SparklineTooltip } from "@syncfusion/ej2-vue-charts";
+import {
+  SparklineComponent as EjsSparkline
+} from '@syncfusion/ej2-vue-charts';
 
 const dataSource = [
-        { x: 0, xval: '2005', yval: 20090440 },
-        { x: 1, xval: '2006', yval: 20264080 },
-        { x: 2, xval: '2007', yval: 20434180 },
-        { x: 3, xval: '2008', yval: 21007310 },
-        { x: 4, xval: '2009', yval: 21262640 },
-        { x: 5, xval: '2010', yval: 21515750 },
-        { x: 6, xval: '2011', yval: 21766710 },
-        { x: 7, xval: '2012', yval: 22015580 },
-        { x: 8, xval: '2013', yval: 22262500 },
-        { x: 9, xval: '2014', yval: 22507620 }
-    ];
+  { year: '2005', population: 20090440 },
+  { year: '2006', population: 20264080 },
+  { year: '2007', population: 20434180 },
+  { year: '2008', population: 21007310 },
+  { year: '2009', population: 21262640 },
+  { year: '2010', population: 21515750 },
+  { year: '2011', population: 21766710 },
+  { year: '2012', population: 22015580 },
+  { year: '2013', population: 22262500 },
+  { year: '2014', population: 22507620 }
+];
+
 const type = 'Area';
-const xName = 'xval';
-const yName = 'yval';
+const valueType = 'Category';
+const xName = 'year';
+const yName = 'population';
 const height = '200px';
-const tooltipSettings = {
-        visible: true,
-        format: '${xval} : ${yval}'
-};
-const sparkline = [SparklineTooltip];
-provide('sparkline', sparkline);
+
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <ejs-sparkline id="sparkline" :dataSource='dataSource' :height='height' :xName='xName' :yName='yName' :type='type' :tooltipSettings='tooltipSettings'></ejs-sparkline>
+  <div id="app">
+    <ejs-sparkline
+      id="sparkline"
+      :dataSource="dataSource"
+      :xName="xName"
+      :yName="yName"
+      :valueType="valueType"
+      :type="type"
+      :height='height'
+    ></ejs-sparkline>
+  </div>
 </template>
 
 <script>
-import { SparklineComponent, SparklineTooltip } from "@syncfusion/ej2-vue-charts";
-//Component registration
+import {
+  SparklineComponent
+} from '@syncfusion/ej2-vue-charts';
+
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "ejs-sparkline": SparklineComponent
+    'ejs-sparkline': SparklineComponent
   },
-    data() {
+  data() {
     return {
-        dataSource: [
-            { x: 0, xval: '2005', yval: 20090440 },
-            { x: 1, xval: '2006', yval: 20264080 },
-            { x: 2, xval: '2007', yval: 20434180 },
-            { x: 3, xval: '2008', yval: 21007310 },
-            { x: 4, xval: '2009', yval: 21262640 },
-            { x: 5, xval: '2010', yval: 21515750 },
-            { x: 6, xval: '2011', yval: 21766710 },
-            { x: 7, xval: '2012', yval: 22015580 },
-            { x: 8, xval: '2013', yval: 22262500 },
-            { x: 9, xval: '2014', yval: 22507620 }
-        ],
-        type:'Area',
-        xName:'xval',
-        yName:'yval',
-        height:'200px',
-        tooltipSettings: {
-            visible: true,
-            format: '${xval} : ${yval}'
-        }
+      dataSource: [
+        { year: '2005', population: 20090440 },
+        { year: '2006', population: 20264080 },
+        { year: '2007', population: 20434180 },
+        { year: '2008', population: 21007310 },
+        { year: '2009', population: 21262640 },
+        { year: '2010', population: 21515750 },
+        { year: '2011', population: 21766710 },
+        { year: '2012', population: 22015580 },
+        { year: '2013', population: 22262500 },
+        { year: '2014', population: 22507620 }
+      ],
+      type: 'Area',
+      valueType: 'Category',
+      xName: 'year',
+      yName: 'population',
+      height:'200px',
     };
- },
-    provide: {
-        sparkline:[SparklineTooltip]
-    },
+  }
 };
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
-To run the project, use the following command:
+Save **src/App.vue**, and then start the development server using either npm or yarn.
+
+**npm**
 
 ```bash
 npm run dev
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run dev
 ```
 
-The output will appear as follows:
+Open the local URL displayed in the terminal, commonly `http://localhost:5173`, and verify that an area Sparkline displays population values from 2005 through 2014.
 
 ![vue3-sparkline-charts-demo](./images/vue3-sparkline-charts-demo.png)
 
-> **Sample**: [vue-3-sparkline-charts-getting-started](https://github.com/SyncfusionExamples/vue3-sparkline-charts-getting-started).
-For migrating from Vue 2 to Vue 3, refer to the `migration` documentation.
+> **Sample:** Explore the [Vite-based Vue Sparkline getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-sparkline-chart-component).
 
-## See also
+For information about migrating an application from Vue 2 to Vue 3, see the [Vue 3 Migration Guide](https://v3-migration.vuejs.org/).
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+## Troubleshooting
+
+- **The Sparkline is not rendered.** Verify that the component import is aliased correctly in the Composition API or registered in `components` in the Options API. 
+- **No data is displayed.** Verify that `dataSource` contains records, `xName` and `yName` match fields in every data object, and the field mapped by `yName` contains numeric values.
+- **Category values are not interpreted correctly.** Set `valueType` to `Category` when the field mapped by `xName` contains category strings.
+- **The requested type is not displayed.** Use one of the supported case-sensitive values: `Line`, `Column`, `WinLoss`, `Pie`, or `Area`.
+- **An import or runtime error is displayed.** Verify that `@syncfusion/ej2-vue-charts` is installed and that its version supports the project's Vue and Node.js versions.
+
+For additional assistance, refer to the [Vue Sparkline API documentation](https://ej2.syncfusion.com/vue/documentation/api/sparkline/index).
+
+## See Also
+
+- [Vue 3 Sparkline getting-started documentation](https://ej2.syncfusion.com/vue/documentation/sparkline/vue-3-getting-started)
+- [Vue Sparkline user interaction](https://ej2.syncfusion.com/vue/documentation/sparkline/user-interaction)
+- [Vue Sparkline examples](https://ej2.syncfusion.com/vue/demos/#/material3/sparkline/default.html)
+- [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue UI Components using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

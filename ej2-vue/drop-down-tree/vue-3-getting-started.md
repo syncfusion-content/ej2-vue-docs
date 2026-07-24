@@ -2,7 +2,7 @@
 layout: post
 title: Vue 3 getting started with the Dropdown Tree component | Syncfusion
 description: Check out and learn about Vue 3 getting started with the Vue Dropdown Tree component of Syncfusion Essential JS 2 and more details.
-control: Vue 3 getting started
+control: Dropdown Tree
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -16,91 +16,74 @@ The `Composition API` is a new feature introduced in Vue.js 3 that provides an a
 
 The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
-## Prerequisites
+| Requirement | Version |
+|-------------|---------|
+| Vue | 3.0 or higher |
+| Node.js | 16.0.0 or above |
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+### Vue supported versions
 
-## Setup the Vite project
+| Vue version | Minimum Syncfusion Vue Data Grid version |
+| ------------- | ------------------------------------------- |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+### Browser support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
+
+> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+
+## Setup for local development
+
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
+
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
+
+***Vue with JavaScript***
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+***Vue with TypeScript***
 
 ```bash
-yarn create vite
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-1.Define the project name: The name of the project can be specified directly. For this article, the project name is set as `my-project`.
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+## Add Vue Dropdowns package
+
+To install the Dropdowns package, use the following command:
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Rolldown is Vite's new experimental faster bundler (rust-based, replacing rollup). Choose `No` uses the stable, proven rollup-based Vite (recommended for most users)
-
-```bash
-Use rolldown-vite (Experimental)? No
-```
-
-5.Install dependencies and start the dev server.
-
-```bash
-Install with npm and start now?: Yes
-```
-
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
-
-```bash
-cd my-project
-npm install
-```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue Dropdown Tree component](https://www.syncfusion.com/vue-components/vue-dropdown-tree) as an example. To use the Vue Dropdown Tree component in the project, the `@syncfusion/ej2-vue-navigations` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-dropdowns --save
+npm install @syncfusion/ej2-vue-dropdowns
 ```
 
 or
@@ -109,68 +92,37 @@ or
 yarn add @syncfusion/ej2-vue-dropdowns
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Dropdown Tree component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Dropdown components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-tree/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-Follow the below steps to add the Vue Dropdown Tree component using `Composition API` or `Options API`:
+## Add Dropdown Tree component
 
-1.First, import and register the Dropdown Tree component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { DropDownTreeComponent as EjsDropdowntree } from "@syncfusion/ej2-vue-dropdowns";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
-//Component registration
-export default {
-  name: "App",
-  components: {
-    "ejs-dropdowntree": DropDownTreeComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2.Add the component definition in template section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <ejs-dropdowntree id='dropdowntree' :fields='fields'></ejs-dropdowntree>
-</template>  
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Now, you can add the Vue Dropdown Tree component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#fields) property, which accepts an array of string values to display as suggestions. Use the following code:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -182,7 +134,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 <script setup>
   import { DropDownTreeComponent as EjsDropdowntree } from "@syncfusion/ej2-vue-dropdowns";
 
-  const data =  [
+  const data = [
     {
       nodeId: '01', nodeText: 'Music',
       nodeChild: [
@@ -204,16 +156,13 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
         { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
         { nodeId: '03-04', nodeText: 'Social Network.pdf' },
         { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
-    ]
-  }];
+      ]
+    }];
   const fields = { dataSource: data, value: 'nodeId', text: 'nodeText', child: 'nodeChild' };
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-tree/index.css";
 </style>
 
 {% endhighlight %}
@@ -224,8 +173,8 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 </template>
 
 <script>
-import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
-  const data =  [
+  import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
+  const data = [
     {
       nodeId: '01', nodeText: 'Music',
       nodeChild: [
@@ -247,28 +196,25 @@ import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
         { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
         { nodeId: '03-04', nodeText: 'Social Network.pdf' },
         { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
-    ]
-  }];
-//Component registration
-export default {
-  name: "App",
-  components: {
-    "ejs-dropdowntree": DropDownTreeComponent
-  },
-  data() {
-    return {
-      fields: { dataSource: data, value: 'nodeId', text: 'nodeText', child: 'nodeChild' }
-    };
+      ]
+    }];
+  //Component registration
+  export default {
+    name: "App",
+    components: {
+      "ejs-dropdowntree": DropDownTreeComponent
+    },
+    data() {
+      return {
+        fields: { dataSource: data, value: 'nodeId', text: 'nodeText', child: 'nodeChild' }
+      };
+    }
   }
-}
 </script>
 
- <style>
-   @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-   @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-   @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-   @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material3.css";
- </style>
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-tree/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -289,11 +235,13 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue-3-js-dropdown-tree](./images/dropdowntree.PNG)
+{% previewsample "page.domainurl/code-snippet/drop-down-tree/getting-started/getting-started-cs1" %}
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+> You can refer to our [Vue Dropdown Tree](https://www.syncfusion.com/vue-components/vue-dropdown-tree) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dropdown Tree example](https://ej2.syncfusion.com/vue/demos/#/material/drop-down-tree/default.html) that shows how to render the Dropdown Tree in Vue.
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

@@ -25,65 +25,29 @@ Ensure that the development environment meets the required criteria listed in [S
 
 ## Set Up the Vite Project
 
-[Vite](https://vitejs.dev/) provides a lightweight, fast development environment for Vue 3 projects. To create a new Vite project, run one of the following commands from the directory where you want the project to live:
+Create a Vite project using either npm or yarn.
 
 **npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
 **yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-If you prefer the interactive flow, run `npm create vite@latest` (or `yarn create vite`) and answer the prompts as shown below.
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The Syncfusion package is installed in a later step.
 
-**Step 1:** **Project name** - Enter `my-project` (or your preferred name):
-
-```text
-? Project name: » my-project
-```
-
-**Step 2:** **Framework selection** - Select `Vue`:
-
-```text
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-**Step 3:** **Variant selection** - Choose `JavaScript`:
-
-```text
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-**Step 4:** **Install dependencies** - After the project is created, the CLI prompts you to install dependencies and start the development server:
+Navigate to the project directory:
 
 ```bash
-? Install with <package-manager> and start now?
-❯ Yes / No
+cd my-app
 ```
 
-Select **No** and navigate to the project directory:
-
-```bash
-cd my-project
-```
-
-Then install the base dependencies using either package manager:
+Install the project dependencies using either npm or yarn.
 
 **npm**
 
@@ -98,6 +62,8 @@ yarn install
 ```
 
 Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
+
+> **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Packages
 

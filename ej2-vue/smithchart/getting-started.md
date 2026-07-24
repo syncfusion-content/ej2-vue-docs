@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started with Vue Smith Chart component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Smith Chart component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with the Vue Smith Chart Component | Syncfusion
+description: Set up a Vue 2 application and integrate the Syncfusion Essential JS 2 Vue Smith Chart with module registration, and data binding.
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,15 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Smith Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smith Chart component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue Smith Chart component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+
+> **Note:** Vue CLI is in maintenance mode. This guide uses Vue CLI because it describes integration with a Vue 2 application.
 
 ## Dependencies
 
-The following minimum dependencies are required to use the Smith Chart component:
+The following are the minimum dependencies required to use the Vue Smith Chart component:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -32,104 +34,101 @@ The following minimum dependencies are required to use the Smith Chart component
     |-- @syncfusion/ej2-vue-base
 ```
 
-## Setup the Vue 2 project
+Only the `@syncfusion/ej2-vue-charts` package must be installed directly. Its required dependencies are installed automatically.
 
-To generate a Vue 2 project using Vue CLI, run the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Use a package release that supports Vue 2. Before upgrading, check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and the package release notes.
+
+## Setting Up the Vue 2 Project
+
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+
+**npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating the project, select `Default ([Vue 2] babel, eslint)` from the menu. If this preset is unavailable, select the manual configuration option and choose Vue 2 when prompted for the Vue version.
 
 ![Vue 2 project](./images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). Install the package required for the Smith Chart component.
-
-This article uses the [Vue Smith Chart component](https://www.syncfusion.com/vue-components/vue-smith-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+After the project is created, navigate to its directory:
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+cd quickstart
 ```
-or
+
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the `@syncfusion/ej2-vue-charts` package using either npm or yarn.
+
+**npm**
+
+```bash
+npm install @syncfusion/ej2-vue-charts
+```
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** option will instruct NPM to include the Progress Bar package inside of the `dependencies` section of the `package.json`.
+> **Note:** npm v5 and later save installed packages to `dependencies` by default, so the `--save` option is not required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smith Chart Component
 
-Follow these steps to add the Vue Smith Chart component:
+Follow these steps to add the Vue Smith Chart component.
 
-1\. First, import and register the Smith Chart component in the `script` section of the **src/App.vue** file.
+**Step 1:** Import and locally register the Smith Chart component in the `script` section of **src/App.vue**.
 
 {% tabs %}
-{% highlight html tabtitle="~src/App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
-import { SmithchartComponent } from "@syncfusion/ej2-vue-charts";
+import { SmithchartComponent } from '@syncfusion/ej2-vue-charts';
+
 export default {
   components: {
     'ejs-smithchart': SmithchartComponent
   }
-}
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Smith Chart component.
+**Step 2:** Define the Smith Chart component in the `template` section.
 
 {% tabs %}
-{% highlight html tabtitle="~src/App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <div id="app">
-    <ejs-smithchart></ejs-smithchart>
-  </div>
+    <ejs-smithchart id="smithchart"></ejs-smithchart>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
+At this stage, the component is registered, but no plotted data is displayed until a series is configured.
 
-## Run the project
+The following is the complete code for the **src/App.vue** file:
 
-To run the project, use the following command:
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```bash
-npm run serve
-```
-
-or
-
-```bash
-yarn run serve
-```
-
-The following example shows a basic Smith Chart component instance.
-
-```
 <template>
-<ejs-smithchart id="smithchart"></ejs-smithchart>
+    <ejs-smithchart id="smithchart"></ejs-smithchart>
 </template>
 
 <script>
@@ -142,62 +141,69 @@ export default {
 }
 </script>
 
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-charts/styles/material3.css";
-</style>
+{% endhighlight %}
+{% endtabs %}
+
+## Run the Project
+
+Save **src/App.vue**, and then start the development server using either npm or yarn.
+
+**npm**
+
+```bash
+npm run serve
 ```
 
-## Module Injection
+**yarn**
 
-The Smith Chart component is modular: optional features are provided as separate modules that must be imported and injected. To enable a feature, import its module and inject it using the `provide` option in the component definition (Vue 2).
-
-Available feature modules include:
-
-- `SmithchartLegend` — Provides the legend feature.
-- `TooltipRender` — Provides the tooltip feature.
-
-The example below shows how to import these modules and inject them into the Smith Chart via `provide`.
-
+```bash
+yarn run serve
 ```
-<template>
-    <div class="control_wrapper">
-        <ejs-smithchart id="smithchart"></ejs-smithchart>
-    </div>
-</template>
-<script>
-import { SmithchartComponent, SmithchartLegend, TooltipRender } from "@syncfusion/ej2-vue-charts";
+
+Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that the Smith Chart displays with the transmission-line series.
+
+## Module Registration
+
+The Smith Chart component uses feature-specific modules. Register only the modules required by the application with the component's `provide` option.
+
+The following optional modules are used in this guide:
+
+- `SmithchartLegend` enables the legend.
+- `TooltipRender` enables series tooltips.
+
+```javascript
+import {
+  SmithchartComponent,
+  SmithchartLegend,
+  TooltipRender
+} from '@syncfusion/ej2-vue-charts';
 
 export default {
   components: {
     'ejs-smithchart': SmithchartComponent
   },
-  data: function() {
-    return {
-    }
-  },
   provide: {
     smithchart: [SmithchartLegend, TooltipRender]
   }
-}
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-charts/styles/material3.css";
-</style>
+};
 ```
 
-## Add series to Smith chart
+Register `SmithchartLegend` only when the legend is enabled. Register `TooltipRender` only when series tooltips are enabled.
 
-The Smith Chart supports two ways to specify series:
 
-- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#datasource) — Bind a data object that specifies resistance and reactance values.
-- [`points`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#points) — Provide a collection of resistance and reactance points for the series.
+## Add a Series to the Smith Chart
 
-The following examples demonstrate two approaches to add series to the Smith Chart:
+Import and register `SeriesCollectionDirective` and `SeriesDirective` to declare series in the Vue template.
 
-- The first series, `Transmission1`, is bound using `dataSource`.
-- The second series, `Transmission2`, is defined using `points`.
+A Smith Chart series can be populated using either [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#datasource) or [`points`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#points).
+
+When `dataSource` is used, map the source fields with the series [`resistance`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#resistance) and [`reactance`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#reactance) properties. Each data object must contain numeric fields mapped by `resistance` and `reactance`.
+
+Alternatively, assign an array of resistance and reactance objects directly to the series `points` property:
+
+Use either `dataSource` with field mappings or `points` for a series according to the application's data model.
+
+Replace the contents of **src/App.vue** with the following complete example:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -207,72 +213,20 @@ The following examples demonstrate two approaches to add series to the Smith Cha
         
 {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs1" %}
 
-## Add title to Smith chart
+## Troubleshooting
 
-The following Smith Chart APIs control the chart title:
+- **The Smith Chart is not rendered.** Verify that `SmithchartComponent` is imported and registered, the component has valid width and height values, and the browser console contains no component, data, or licensing errors.
+- **The series is not displayed.** Verify that `SeriesCollectionDirective` and `SeriesDirective` are imported and registered and that the series is declared inside `e-series-collection`.
+- **No data is displayed.** Verify that `dataSource` contains records, the `resistance` and `reactance` properties match fields in every data object, and both mapped fields contain numeric values.
+- **The tooltip is not displayed.** Set `tooltip.visible` to `true`, bind the tooltip object to the series, and register `TooltipRender` with the exact `smithchart` key.
+- **A package or Vue version error occurs.** Confirm that the installed `@syncfusion/ej2-vue-charts` release supports Vue 2 and that all Syncfusion packages use compatible versions.
 
-- [`title`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/titlemodel) — Configures the chart title.
-- [`text`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/titlemodel#text) — Sets the title text.
-- [`visible`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/titlemodel#visible) — Shows or hides the title.
+For additional assistance, refer to the [Vue Smith Chart API documentation](https://ej2.syncfusion.com/vue/documentation/api/smithchart).
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/smithchart/getting-started-cs2/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs2" %}
+## See Also
 
-## Enable marker to the Smith chart
-
-To enable and customize markers for a series, use the series [`marker`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/seriesmarkermodel) API. Set the marker's [`visible`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/seriesmarkermodel#visible) property to `true` for the series that should display markers. The following sample enables the marker for the first series only.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/smithchart/getting-started-cs3/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs3" %}
-
-## Enable data label to marker
-
-To display and customize data labels on markers, use the marker [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/seriesmarkerdatalabelmodel) settings. Set the data label's [`visible`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/seriesmarkerdatalabelmodel#visible) property to `true` within the series [`marker`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/seriesmarkermodel) configuration. The following sample enables data labels for the first series marker.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/smithchart/getting-started-cs4/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs4" %}
-
-## Enable legend for Smith chart
-
-The legend displays series identifiers. Inject the `SmithchartLegend` module using the `provide` option and enable the legend by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartlegendsettingsmodel#visible) property to `true` in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartlegendsettingsmodel). Series names can be customized using the series [`name`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/smithchartseriesmodel#name) property.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/smithchart/getting-started-cs5/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs5" %}
-
-## Enable tooltip for the Smith chart series
-
-Tooltips show point values on hover. Inject the `TooltipRender` module using the `provide` option and enable tooltips by setting [`visible`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/seriestooltipmodel#visible) to `true` in [`tooltipSettings`](https://ej2.syncfusion.com/vue/documentation/api/smithchart/seriestooltipmodel). The following sample shows tooltip configuration for the Smith Chart series collection.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/smithchart/getting-started-cs6/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs6" %}
-
-## See also
-
-* [Getting Started with Vue 3 Smith Chart](vue-3-getting-started)
-* [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-* [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
+- [Vue Smith Chart overview](https://www.syncfusion.com/vue-components/vue-smith-chart)
+- [Vue Smith Chart series](https://ej2.syncfusion.com/vue/documentation/smithchart/smithchart-series)
+- [Vue Smith Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/smith-chart/default.html)
+- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
