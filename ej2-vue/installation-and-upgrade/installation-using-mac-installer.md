@@ -24,7 +24,7 @@ If this alert appears, follow these steps:
       ![pop-up Image](images/Mac_Catalina_MacOS_Alert2.png)
 
 3. Click "Open" to launch the installer window.
-## Step-by-step installation
+## Step-by-Step Installation
 
 The steps below show how to install the Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript - EJ2 Mac installer.
 

@@ -183,7 +183,7 @@ To create a Stock Chart with additional features, inject the required modules. T
 
 Register these modules in the `provide` option as shown below:
 
-```vue
+```
 <script>
 import { StockChartComponent, CandleSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
 

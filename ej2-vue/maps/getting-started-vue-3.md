@@ -25,65 +25,29 @@ Ensure that the development environment meets the required criteria listed in [S
 
 ## Set Up the Vite Project
 
-[Vite](https://vitejs.dev/) provides a lightweight, fast development environment for Vue 3 projects. To create a new Vite project, run one of the following commands from the directory where you want the project to live:
+Create a Vite project using either npm or yarn.
 
 **npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
 **yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-If you prefer the interactive flow, run `npm create vite@latest` (or `yarn create vite`) and answer the prompts as shown below.
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The Syncfusion package is installed in a later step.
 
-**Step 1:** **Project name** - Enter `my-project` (or your preferred name):
-
-```text
-? Project name: » my-project
-```
-
-**Step 2:** **Framework selection** - Select `Vue`:
-
-```text
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-**Step 3:** **Variant selection** - Choose `JavaScript`:
-
-```text
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-**Step 4:** **Install dependencies** - After the project is created, the CLI prompts you to install dependencies and start the development server:
+Navigate to the project directory:
 
 ```bash
-? Install with <package-manager> and start now?
-❯ Yes / No
+cd my-app
 ```
 
-Select **No** and navigate to the project directory:
-
-```bash
-cd my-project
-```
-
-Then install the base dependencies using either package manager:
+Install the project dependencies using either npm or yarn.
 
 **npm**
 
@@ -98,6 +62,8 @@ yarn install
 ```
 
 Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
+
+> **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Packages
 
@@ -316,7 +282,7 @@ export default {
 
 The following are common issues you may encounter when getting started with the Maps component in Vue 3:
 
-* **Blank map is displayed** — Confirm that `MapAjax` is constructed and passed to the `shapeData` property on `<e-layer>`, and that the template is wrapped in a single root element if Vite reports a multi-root warning.
+* **Blank map is displayed** — Confirm that `MapAjax` is constructed and passed to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layersettingsmodel#shapedata) property on `<e-layer>`, and that the template is wrapped in a single root element if Vite reports a multi-root warning.
 * **CORS errors when loading the remote GeoJSON** — Self-host the `world-map.json` file in your `public/` folder and replace the URL with a relative path, or configure CORS on the host serving the JSON.
 * **Module features do not render (tooltips, legend, data labels)** — Confirm the corresponding module is added to the `provide.maps` array (Options API) or passed to `provide('maps', [...])` (Composition API).
 

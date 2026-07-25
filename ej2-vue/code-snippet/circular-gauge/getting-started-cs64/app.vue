@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div class='wrapper'>
       <ejs-circulargauge></ejs-circulargauge>
-    </div>
   </div>
 </template>
 <script>
@@ -15,9 +13,3 @@ export default {
   }
 }
 </script>
-<style>
-.wrapper {
-  max-width: 300px;
-  margin: 0 auto;
-}
-</style>

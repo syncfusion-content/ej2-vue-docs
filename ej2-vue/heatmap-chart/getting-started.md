@@ -1,26 +1,33 @@
 ---
 layout: post
-title: Getting started with Vue HeatMap chart component | Syncfusion
-description:  Checkout and learn about Getting started with Vue HeatMap chart component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with the Vue HeatMap Component in Vue 2 | Syncfusion
+description: Set up a Vue 2 application and integrate the Syncfusion Vue HeatMap Component with data binding and module registration.
+control: HeatMap
 platform: ej2-vue
 documentation: ug
+framework-version: 2
 domainurl: ##DomainURL##
 ---
 
 # Getting Started with the Vue HeatMap Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component into your application.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue HeatMap component.
+
+> **Note:** This guide covers Vue 2. Vue CLI is in maintenance mode, so use Node.js, Vue CLI, and Syncfusion package releases that remain compatible with the Vue 2 project.
+
+The HeatMap represents two-dimensional data through color variations. Each matrix value is rendered as a cell whose color indicates its magnitude. The component supports SVG and canvas rendering, categorical and numerical axes, legends, data labels, custom palettes, and tooltips.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+
+This guide requires a compatible Node.js version, npm or yarn, Vue CLI with Vue 2 support, and a Syncfusion license key for licensed use. See [license key registration](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration).
 
 ## Dependencies
 
-The HeatMap component requires the following packages:
+The following packages are used by the Vue HeatMap package:
 
-```javascript
+```
 |-- @syncfusion/ej2-vue-heatmap
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
@@ -29,141 +36,158 @@ The HeatMap component requires the following packages:
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Setting up the Vue 2 project
+Only `@syncfusion/ej2-vue-heatmap` must be installed directly. Its required dependencies are installed automatically. Use a release that supports Vue 2 and the selected Node.js version.
 
-To create a new Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and initialize your project:
+## Set Up the Vue 2 Project
+
+Install Vue CLI and create a Vue 2 project.
+
+**npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
 When prompted, select the `Default ([Vue 2] babel, eslint)` option from the menu.
 
 ![Vue 2 project](./images/vue2-terminal.png)
 
-After the `quickstart` project is created with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use the Vue HeatMap component, install the required npm package.
-
-This article uses the [Vue HeatMap component](https://www.syncfusion.com/vue-components/vue-heatmap-chart) as an example. Install the `@syncfusion/ej2-vue-heatmap` package by running the following command:
+Navigate to the project:
 
 ```bash
-npm install @syncfusion/ej2-vue-heatmap --save
+cd quickstart
 ```
 
-or
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap Package
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are published on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+**npm**
+
+```bash
+npm install @syncfusion/ej2-vue-heatmap
+```
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-heatmap
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component
+> **Note:** npm v5 and later save installed packages to `dependencies` automatically.
 
-To add the Vue HeatMap component to your project, follow these steps:
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap Component
 
-1\. Import and register the HeatMap component in the `script` section of the **src/App.vue** file.
+Initialize an empty HeatMap first. Data binding is added in the next section.
+
+**Step 1:** Import and register the component in **src/App.vue**.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { HeatMapComponent } from '@syncfusion/ej2-vue-heatmap';
 
 export default {
+  name: 'App',
   components: {
-    'ejs-heatmap' : HeatMapComponent
-  },
-  data: function() {
-    return {
-      dataSource: [
-        [73, 39, 26, 39, 94, 0],
-        [93, 58, 53, 38, 26, 68],
-        [99, 28, 22, 4, 66, 90],
-        [14, 26, 97, 69, 69, 3],
-        [7, 46, 47, 47, 88, 6],
-        [41, 55, 73, 23, 3, 79],
-        [56, 69, 21, 86, 3, 33],
-        [45, 7, 53, 81, 95, 79],
-        [60, 77, 74, 68, 88, 51],
-        [25, 25, 10, 12, 78, 14],
-        [25, 56, 55, 58, 12, 82],
-        [74, 33, 88, 23, 86, 59]
-      ]
-    }
+    'ejs-heatmap': HeatMapComponent
   }
-}
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the HeatMap component element.
+**Step 2:** Add an empty HeatMap to the template.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-      <ejs-heatmap id="heatmap" :dataSource='dataSource'></ejs-heatmap>
-    </div>
+  <div id="app">
+    <ejs-heatmap id="heatmap"></ejs-heatmap>
+  </div>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-Here is the complete code for the **src/App.vue** file after implementing the above steps:
+At this stage, no cells are displayed because no data has been bound.
+
+## Populate the HeatMap with Data
+
+Bind a two-dimensional numeric array to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/heatmap#datasource). Each value represents one cell and determines its color.
+
+```javascript
+dataSource: [
+  [73, 39, 26, 39, 94, 0],
+  [93, 58, 53, 38, 26, 68],
+  [99, 28, 22, 4, 66, 90],
+  [14, 26, 97, 69, 69, 3],
+  [7, 46, 47, 47, 88, 6],
+  [41, 55, 73, 23, 3, 79],
+  [56, 69, 21, 86, 3, 33],
+  [45, 7, 53, 81, 95, 79],
+  [60, 77, 74, 68, 88, 51],
+  [25, 25, 10, 12, 78, 14],
+  [25, 56, 55, 58, 12, 82],
+  [74, 33, 88, 23, 86, 59]
+]
+```
+
+Bind it in the template:
+
+```html
+<ejs-heatmap :dataSource="dataSource"></ejs-heatmap>
+```
+
+Here is the  for the above steps. Replace **src/App.vue** with the following complete example:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/heatmap-chart/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-## Run the project
 
-To run the project, use the following command:
+## Run the Project
+
+To run the project, use either npm or yarn:
+
+**npm**
 
 ```bash
 npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run serve
 ```
 
+- Open the project URL shown in the terminal (usually `http://localhost:8080`) and verify the HeatMap displays with data.
+
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs8" %}
 
-## Module injection
+## Module Registration
 
-The heat map components are segregated into individual feature-wise modules. To use its feature, you need to inject its feature service in the AppModule. In the current application,the basic heat map is modified to visualize sales revenue data for week, and  the tooltip and legend features of the heat map are used. Find the relevant feature modules and descriptions as follows.
+Optional features require feature modules. Register only the modules used by the application with the exact `heatmap` key.
 
-* Legend - Provides the legend feature by injecting it.
-* Tooltip - Provides the tooltip feature by injecting it.
+- `Legend` enables the legend.
+- `Tooltip` enables tooltips.
 
-Now, import the above-mentioned modules from the heat map package and inject them into `provide`.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
+```html
 <script>
-import Vue from "vue";
-import { HeatMapComponent, Legend, Tooltip } from "@syncfusion/ej2-vue-heatmap";
+import { HeatMapComponent, Legend, Tooltip } from '@syncfusion/ej2-vue-heatmap';
 
 export default {
   components: {
@@ -174,95 +198,25 @@ export default {
   }
 };
 </script>
+```
 
-{% endhighlight %}
-{% endtabs %}
+Registration makes a feature available. The related properties must also be configured.
 
-**Available feature modules:**
+## Troubleshooting
 
-* **Legend** - Enables the legend display to indicate the color gradient and value ranges.
-* **Tooltip** - Enables interactive tooltips that display information when hovering over HeatMap cells.
+- **The HeatMap is not rendered.** Verify that `HeatMapComponent` is imported and registered and that the browser console contains no component, package, or licensing errors.
+- **The HeatMap is blank.** Verify that `dataSource` is a nonempty two-dimensional array containing numeric values.
+- **Palette colors are incorrect.** Define palette values in ascending order and cover the data range.
+- **A module-not-found error occurs.** Verify that `@syncfusion/ej2-vue-heatmap` is installed and restart the development server.
+- **A package or Vue version error occurs.** Confirm that the package release supports Vue 2 and that all Syncfusion packages use compatible versions.
 
-## Populate the HeatMap with data
+For additional assistance, refer to the [Vue HeatMap API documentation](https://ej2.syncfusion.com/vue/documentation/api/heatmap).
 
-Add data to the HeatMap by binding a two-dimensional array to the `dataSource` property:
+## See Also
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/heatmap-chart/getting-started-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs1" %}
-
-## Enable axis labels
-
-Display axis labels on the HeatMap using the [xAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#xaxis) and [yAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#yaxis) properties. Axis labels provide context for the data values displayed in each cell.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/heatmap-chart/getting-started-cs2/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs2" %}
-
-## Add a HeatMap title
-
-Include a title on the HeatMap using the [titleSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#titlesettings) property. A title provides context and improves the clarity of the visualization.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/heatmap-chart/getting-started-cs3/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs3" %}
-
-## Enable the legend
-
-Display a legend on the HeatMap by enabling the [legendSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#legendsettings) property. Set the [visible](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#visible) property to **true** and ensure the `Legend` module is injected into the `provide` option.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/heatmap-chart/getting-started-cs4/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs4" %}
-
-## Add data labels
-
-Enhance HeatMap readability by displaying data labels in each cell. Set the [showLabel](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings#showlabel) property to **true** in the [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellsettings) object.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/heatmap-chart/getting-started-cs5/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs5" %}
-
-## Apply a custom cell palette
-
-Customize the color scheme of HeatMap cells using the [paletteSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#palettesettings) property. The [palette](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings#palette) property allows you to define custom colors, while the [type](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings#type) property controls whether colors are applied as fixed or gradient modes.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/heatmap-chart/getting-started-cs6/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs6" %}
-
-## Enable tooltips
-
-Tooltips provide additional information when space constraints prevent displaying data labels. Enable tooltips by setting the [showTooltip](https://ej2.syncfusion.com/vue/documentation/api/heatmap#showtooltip) property to **true** and injecting the `Tooltip` module into the `provide` option.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/heatmap-chart/getting-started-cs7/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/getting-started-cs7" %}
+- [Vue HeatMap overview](https://www.syncfusion.com/vue-components/vue-heatmap-chart)
+- [Vue HeatMap axis](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/axis)
+- [Vue HeatMap legend](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/legend)
+- [Vue HeatMap palette](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/palette)
+- [Vue HeatMap tooltip](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/tooltip)
+- [Vue HeatMap examples](https://ej2.syncfusion.com/vue/demos/#/material3/heat-map-chart/default-functionalities.html)

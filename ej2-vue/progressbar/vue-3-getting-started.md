@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Vue 3 getting started with the Progressbar component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Progressbar component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 Getting Started with the Progress Bar Component | Syncfusion
+description: Create a Vite-based Vue 3 project and integrate the Syncfusion Essential JS 2 Vue Progress Bar component using the Composition API or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -10,19 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Progress Bar Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progress Bar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup>®</sup> Vue Progress Bar component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
-
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
+The **Composition API** groups related logic into reusable functions. The **Options API** organizes component logic with options such as `data`, `methods`, and lifecycle hooks. Choose the API that best fits the application's structure.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Progress Bar component:
+The following are the minimum dependencies required to use the Vue Progress Bar component:
 
 ```
 |-- @syncfusion/ej2-vue-progressbar
@@ -32,121 +30,99 @@ Below is the list of minimum dependencies required to use the Progress Bar compo
     |-- @syncfusion/ej2-vue-base
 ```
 
-## Setup the Vite project
+Only the `@syncfusion/ej2-vue-progressbar` package must be installed directly. Its required dependencies are installed automatically.
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands specific to NPM or Yarn:
+Use a package release compatible with Vue 3 and the Node.js version used by the project. Before upgrading, check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and package release notes.
+
+## Set Up the Vite Project
+
+Create a Vite project using either npm or yarn.
+
+**npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+**yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The Syncfusion package is installed in a later step.
 
-1.Define the project name: The name of the project can be specified directly. For this article, the project name is set as `my-project`.
+Navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+Install the project dependencies.
+
+**npm**
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Rolldown is Vite's new experimental faster bundler (rust-based, replacing rollup). Choose `No` uses the stable, proven rollup-based Vite (recommended for most users)
-
-```bash
-Use rolldown-vite (Experimental)? No
-```
-
-5.Install dependencies and start the dev server.
-
-```bash
-Install with npm and start now?: Yes
-```
-
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
-
-```bash
-cd my-project
 npm install
 ```
 
-or
+**yarn**
 
 ```bash
-cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+> **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in your project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
 
-This guide uses the [Vue Progress Bar component](https://www.syncfusion.com/vue-components/vue-progressbar). Install the package using the following command:
+Install the `@syncfusion/ej2-vue-progressbar` package using either npm or yarn.
+
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-progressbar --save
+npm install @syncfusion/ej2-vue-progressbar
 ```
 
-or
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-progressbar
 ```
 
-> The **--save** option will instruct NPM to include the Progress Bar package inside of the `dependencies` section of the `package.json`.
+> **Note:** For TypeScript projects, refer to [Vue 3 with the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition) or [Vue 3 with the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options).
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progress Bar Component
 
-Follow the below steps to add the Vue Progress Bar component using `Composition API` or `Options API`:
+Follow these steps to add the Vue Progress Bar component using the Composition API or Options API.
 
-1.First, import and register the Progress Bar component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+**Step 1:** Import and Register the Component
+
+Import the Progress Bar component in **src/App.vue**.
+
+In the Composition API example, alias the component import to the name used by the custom element in the template. Components imported in `<script setup>` are available directly in the template.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { ProgressBarComponent } from "@syncfusion/ej2-vue-progressbar";
+import {
+  ProgressBarComponent as EjsProgressbar
+} from '@syncfusion/ej2-vue-progressbar';
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { ProgressBarComponent } from "@syncfusion/ej2-vue-progressbar";
+import { ProgressBarComponent } from '@syncfusion/ej2-vue-progressbar';
 
-// Component registration
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "ejs-progressbar": ProgressBarComponent
+    'ejs-progressbar': ProgressBarComponent
   }
 };
 </script>
@@ -154,183 +130,187 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the Progress Bar component with the [type](https://ej2.syncfusion.com/vue/documentation/api/progressbar#type), [value](https://ej2.syncfusion.com/vue/documentation/api/progressbar#value), and [animation](https://ej2.syncfusion.com/vue/documentation/api/progressbar#animation) properties.
+**Step 2:** Declare the Progress Bar Configuration
+
+Define the type, value, and dimensions settings in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const type = 'Circular';
+const value = 75;
+const minimum = 0;
+const maximum = 100;
+const width = '250px';
+const height = '250px';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+export default {
+  data() {
+    return {
+      type: 'Circular',
+      value: 75,
+      minimum: 0,
+      maximum: 100,
+      width: '250px',
+      height: '250px',
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3:** Define the Progress Bar in the Template
+
+Add the Progress Bar component to the `template` section of **src/App.vue**.
+
+The example uses the following properties:
+
+- [`type`](https://ej2.syncfusion.com/vue/documentation/api/progressbar#type) specifies the Progress Bar shape. Supported values include `Linear` and `Circular`.
+- [`value`](https://ej2.syncfusion.com/vue/documentation/api/progressbar#value) specifies the current progress value.
+- [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/progressbar#minimum) specifies the minimum scale value.
+- [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/progressbar#maximum) specifies the maximum scale value.
+- [`width`](https://ej2.syncfusion.com/vue/documentation/api/progressbar#width) specifies the component width.
+- [`height`](https://ej2.syncfusion.com/vue/documentation/api/progressbar#height) specifies the component height.
+
+Keep `value` between `minimum` and `maximum`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <ejs-progressbar id="percentage" :type='type' :value='value' :animation="animation">
-    </ejs-progressbar>
+  <div id="app">
+    <ejs-progressbar
+      id="progressbar"
+      :type="type"
+      :value="value"
+      :minimum="minimum"
+      :maximum="maximum"
+      :width="width"
+      :height="height"
+    ></ejs-progressbar>
+  </div>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-3.Declare the values for the `type`, `value`, and `animation` properties in the `script` section.
+## Complete App.vue Example
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-const type = 'Circular';
-const value = 100;
-const animation = {
-    enable: true,
-    duration: 2000,
-    delay: 0
-};
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-export default {
-  data() {
-    return {
-      type: 'Circular',
-      value: 100,
-      animation: {
-        enable: true,
-        duration: 2000,
-        delay: 0
-      }
-    };
-  }
-};
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the complete code for the **src/App.vue** file with both API approaches:
+Here is the summarized code for the above steps. Replace the contents of **src/App.vue** with either the Composition API or Options API example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <ejs-progressbar id="percentage" :type='type' :value='value' :animation="animation">
-    </ejs-progressbar>
+  <div id="app">
+    <ejs-progressbar
+      id="progressbar"
+      :type="type"
+      :value="value"
+      :minimum="minimum"
+      :maximum="maximum"
+      :width="width"
+      :height="height"
+    ></ejs-progressbar>
+  </div>
 </template>
 
 <script setup>
-import { ProgressBarComponent } from "@syncfusion/ej2-vue-progressbar";
+import {
+  ProgressBarComponent as EjsProgressbar
+} from '@syncfusion/ej2-vue-progressbar';
 
 const type = 'Circular';
-const value = 100;
-const animation = {
-    enable: true,
-    duration: 2000,
-    delay: 0
-};
+const value = 75;
+const minimum = 0;
+const maximum = 100;
+const width = '250px';
+const height = '250px';
 </script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-progressbar/styles/material.css";
-</style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <ejs-progressbar id="percentage" :type='type' :value='value' :animation="animation">
-    </ejs-progressbar>
+  <div id="app">
+    <ejs-progressbar
+      id="progressbar"
+      :type="type"
+      :value="value"
+      :minimum="minimum"
+      :maximum="maximum"
+      :width="width"
+      :height="height"
+    ></ejs-progressbar>
+  </div>
 </template>
 
 <script>
-import { ProgressBarComponent } from "@syncfusion/ej2-vue-progressbar";
+import { ProgressBarComponent } from '@syncfusion/ej2-vue-progressbar';
 
-// Component registration
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "ejs-progressbar": ProgressBarComponent
+    'ejs-progressbar': ProgressBarComponent
   },
   data() {
     return {
       type: 'Circular',
-      value: 100,
-      animation: {
-        enable: true,
-        duration: 2000,
-        delay: 0
-      }
+      value: 75,
+      minimum: 0,
+      maximum: 100,
+      width: '250px',
+      height: '250px'
     };
   }
 };
 </script>
 
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-progressbar/styles/material.css";
-</style>
-
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
-To run the application in development mode, use the following command:
+Save **src/App.vue**, and then start the development server using either npm or yarn.
+
+**npm**
 
 ```bash
 npm run dev
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run dev
 ```
 
-The development server will start, typically at `http://localhost:5173`. Open this URL in your browser to view the circular Progress Bar with animation.
+Open the local URL displayed in the terminal, commonly `http://localhost:5173`, and verify the Progress Bar displays.
 
-The output will appear as follows:
+![Vue 3 circular Progress Bar](./images/vue3-progressbar-demo.png)
 
-![vue3-progressbar-demo](./images/vue3-progressbar-demo.png)
+> **Sample:** Explore the [Vite-based Vue Progress Bar getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-progress-bar-component).
 
-> **Sample**: [vue-3-progressbar-getting-started](https://github.com/SyncfusionExamples/vue3-progressbar-getting-started).
+## Troubleshooting
 
-## Module Injection
+- **The Progress Bar is not rendered.** Verify that the component import is aliased correctly in the Composition API or registered in `components` in the Options API. Confirm that valid width and height values are configured, and check the browser console for component or licensing errors.
+- **The value is not displayed as expected.** Verify that `value` is numeric and falls between `minimum` and `maximum`.
+- **The circular Progress Bar is clipped.** Increase the configured width and height or verify that the parent container does not restrict the component dimensions.
+- **An import or runtime error is displayed.** Verify that `@syncfusion/ej2-vue-progressbar` is installed and that its version supports the project's Vue and Node.js versions.
 
-The Progress Bar component features are organized into individual feature-wise modules. To use specific features such as annotations, you must inject the corresponding feature service using the `provide` option. The following feature service is available:
+For additional assistance, refer to the [Vue Progress Bar API documentation](https://ej2.syncfusion.com/vue/documentation/api/progressbar).
 
-* `ProgressAnnotation` - Inject this service to enable annotations on the Progress Bar.
+## See Also
 
-These modules should be injected into the `provide` section as follows:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script>
-import { ProgressBarComponent, ProgressAnnotation } from "@syncfusion/ej2-vue-progressbar";
-import { provide } from 'vue';
-
-provide('progressbar', [ProgressAnnotation]);
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { ProgressBarComponent, ProgressAnnotationService } from "@syncfusion/ej2-vue-progressbar";
-
-export default {
-  name: "App",
-  components: {
-    "ejs-progressbar": ProgressBarComponent
-  },
-  provide: {
-    progressbar: [ProgressAnnotationService]
-  }
-};
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-## See also
-
-* [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
+- [Vue Progress Bar annotations](https://ej2.syncfusion.com/vue/documentation/progressbar/annotation)
+- [Vue Progress Bar examples](https://ej2.syncfusion.com/vue/demos/#/material3/progress-bar/linear.html)
+- [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue UI Components using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

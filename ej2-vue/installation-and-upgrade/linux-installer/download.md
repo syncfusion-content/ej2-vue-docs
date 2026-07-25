@@ -18,7 +18,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> installer can be downloaded
 
 You can download the Syncfusion<sup style="font-size:70%">&reg;</sup> installer from [Syncfusion<sup style="font-size:70%">&reg;</sup>.com](https://www.syncfusion.com/) website 
 
-## Download the trial version
+## Download the Trial Version
 
 Our 30-day trial can be downloaded in two ways.
 
@@ -26,7 +26,7 @@ Our 30-day trial can be downloaded in two ways.
 * Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
 
 
-### Download free trial setup
+### Download Free Trial Setup
 
 1. Evaluate the 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and selecting the product.
 2. After completing the required form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, download the trial installer from the confirmation page (as shown below).
@@ -42,7 +42,7 @@ Our 30-day trial can be downloaded in two ways.
 6. Click the **More Download Options** button (element 2 in the screenshot above) to get the JavaScript Product Offline trial installer, available in ZIP format.
    ![License and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript](images/start-trial-download-offline-installer.png)
 
-### Start trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+### Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
 
 You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
 
@@ -64,7 +64,7 @@ You should initiate an evaluation if you have already obtained our components th
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
    
 
-## Download the license version
+## Download the License Version
 
 1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page under the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 2. All licenses (both active and expired) associated with the account can be viewed.
