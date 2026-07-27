@@ -1,7 +1,7 @@
 ---
 layout: post
 title: getting started with the SmartPasteButton component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue SmartPasteButton component of Syncfusion Essential JS 2 and more details.
+description: Check out and learn about getting started with the Vue 3 Smart Paste Button component of Syncfusion Essential JS 2 and more details.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -12,16 +12,16 @@ domainurl: ##DomainURL##
 
 The `Smart Paste Button` is a user interface component designed to simplify and improve the experience of pasting text into form fields. It comes with smart features such as automatic text formatting, validation, and integration with various form controls. It is especially useful in applications where users frequently paste text from other sources and where data consistency is important.
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smart Paste Button component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smart Paste Button component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
 ## Prerequisites
 
 * [OpenAI](https://github.com/syncfusion/smart-ai-samples/blob/master/typescript/README.md#openai) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
-* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -37,7 +37,7 @@ or
 yarn create vite
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Using one of the above commands will lead you to set up additional configurations for the project as follows:
 
 1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
@@ -82,7 +82,7 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-project` is ready to run with default settings, let's add the Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
@@ -102,28 +102,40 @@ yarn add @syncfusion/ej2-vue-buttons
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component themes can be applied using CSS or SASS from the [npm theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages). Additionally, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Smart Paste Button component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+This example uses the `Tailwind 3` theme for the Smart Paste Button component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+
+{% endhighlight %}
+{% endtabs %}
+
+The necessary `Tailwind 3` CSS styles for the Smart Paste Button component were imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/button/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
-
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue Smart Paste Button component using `Composition API` or `Options API`:
+Follow the steps below to add the Vue Smart Paste Button component using the `Composition API` or `Options API`:
 
-1.First, import and register the Smart Paste Button component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1.First, import and register the Smart Paste Button component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -149,7 +161,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the Smart Paste Button component with the [content](https://helpej2.syncfusion.com/vue/documentation/api/smart-paste-button/#content) and [iconCss](https://helpej2.syncfusion.com/vue/documentation/api/smart-paste-button/#iconcss) and [aiAssistHandler](https://helpej2.syncfusion.com/vue/documentation/api/smart-paste-button/#aiassisthandler) properties.
+2.In the `template` section, define the Smart Paste Button component with the [content](https://ej2.syncfusion.com/vue/documentation/api/smart-paste-button/index-default#content), [iconCss](https://ej2.syncfusion.com/vue/documentation/api/smart-paste-button/index-default#iconcss), and [aiAssistHandler](https://ej2.syncfusion.com/vue/documentation/api/smart-paste-button/index-default#aiassisthandler) properties.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -228,8 +240,7 @@ const serverAIRequest = async (options: ChatOptions) => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/button/index.css";
 </style>
 
 {% endhighlight %}
@@ -266,8 +277,7 @@ const serverAIRequest = async (options: ChatOptions) => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/button/index.css";
 </style>
 
 {% endhighlight %}

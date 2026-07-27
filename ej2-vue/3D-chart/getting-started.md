@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Getting started with Vue 3D Chart component | Syncfusion
-description: Checkout and learn how to get started with the Syncfusion Essential JS 2 Vue 3D Chart component, along with detailed steps and examples.
-control: Getting started 
+title: Getting Started with Vue 3D Chart Component | Syncfusion
+description: Set up a Vue 2 application and integrate the Syncfusion EJ2 Vue 3D Chart component with module registration, and data binding.
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the 3D Chart component (Vue 2)
+# Getting Started with the Vue 3D Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> 3D Chart component.
+This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>�</sup> Vue 3D Chart component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the 3D Chart component.
+The following are the minimum dependencies required to use the Vue 3D Chart component:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -32,80 +32,73 @@ Below is the list of minimum dependencies required to use the 3D Chart component
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Setting up the Vue 2 project
+Only the `@syncfusion/ej2-vue-charts` package must be installed directly. Its required dependencies are installed automatically.
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Use a package release that supports Vue 2. Before upgrading, check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and the package release notes.
+
+## Setting Up the Vue 2 Project
+
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+
+**npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating the project, select `Default ([Vue 2] babel, eslint)` from the menu. If this preset is unavailable, select the manual configuration option and choose Vue 2 when prompted for the Vue version.
 
 ![Terminal showing Vue CLI creating a Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+After the project is created, navigate to its directory:
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+```bash
+cd quickstart
+```
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+## Add the Syncfusion Vue Package
 
-This article uses the `Vue 3D Chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running:
+Syncfusion Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the `@syncfusion/ej2-vue-charts` package using either npm or yarn.
+
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts
 ```
-or
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
+> **Note:** npm v5 and later save installed packages to `dependencies` by default, so the `--save` option is not required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add the Syncfusion Vue 3D Chart Component
 
-Follow the steps below to add the 3D Chart component:
+Follow the steps below to add the Vue 3D Chart component:
 
-1. First, import and register the 3D Chart component in the `script` section of the **src/App.vue** file.
+**Step 1:** Import and register the 3D Chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
-<template>
-  <div id="app">
-    <ejs-chart3d id="container">
-      <e-chart3d-series-collection>
-        <e-chart3d-series type="Column"></e-chart3d-series>
-      </e-chart3d-series-collection>
-    </ejs-chart3d>
-  </div>
-</template>
-
 <script>
-import { 
-  Chart3DComponent, 
-  Chart3DSeriesCollectionDirective, 
-  Chart3DSeriesDirective 
-} from '@syncfusion/ej2-vue-charts';
+import { Chart3DComponent } from '@syncfusion/ej2-vue-charts';
 
 export default {
   components: {
-    'ejs-chart3d': Chart3DComponent,
-    'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series': Chart3DSeriesDirective
+    'ejs-chart3d': Chart3DComponent
   }
 }
 </script>
@@ -113,7 +106,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the 3D Chart component.
+**Step 2:** In the `template` section, define the 3D Chart component.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -127,7 +120,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the complete code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -135,38 +128,43 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
-To run the project, use the following command:
+Save the changes and start the development server using either npm or yarn.
+
+**npm**
 
 ```bash
 npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run serve
 ```
-        
+
+Open the local URL displayed in the terminal, such as `http://localhost:8080`, and verify that the 3D Chart displays the monthly sales data.
+
 {% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs1" %}
 
-## Module registration
+## Module Registration
 
-The 3D Chart component is organized into feature-specific modules. In Vue, enable a feature by registering its module(s) in the component's `provide` option. The following features are demonstrated in the examples:
+The 3D Chart component is divided into feature-specific modules. Register the modules required by the application using the component's `provide` option.
 
-* `ColumnSeries3D` — Module for column series.
-* `Legend3D` — Module for legend support.
-* `Tooltip3D` — Module for tooltip support.
-* `DataLabel3D` — Module for data labels.
-* `Category3D` — Module for category axis support.
+The following modules are used in this guide:
 
-The sample code below shows how to register the required modules in the component `provide` option:
+- `ColumnSeries3D` enables the 3D column series.
+- `Category3D` enables category values on the horizontal axis.
+- `DataLabel3D` enables data labels.
+- `Tooltip3D` enables tooltips.
+
+Register `ColumnSeries3D` when the series `type` is `Column`. Register `Category3D` when `primaryXAxis.valueType` is `Category`. Register `DataLabel3D` and `Tooltip3D` only when their corresponding features are enabled.
 
 ```javascript
-import { 
+import {
   Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective,
-  Chart3D, ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D 
+  ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D 
 } from "@syncfusion/ej2-vue-charts";
 
 export default {
@@ -176,14 +174,22 @@ export default {
     'e-chart3d-series': Chart3DSeriesDirective
   },
   provide: {
-    chart3d: [Chart3D, ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D]
+    chart3d: [ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D]
   }
 };
 ```
 
-## Populate 3D chart with data
+> **Note:** Register only the modules used by the application to keep the bundle size smaller. The `provide` key for the 3D Chart component must be `chart3d`.
 
-This section explains how to plot below JSON data to the 3D Chart.
+## Populate the 3D Chart with Data
+
+The 3D Chart series uses the following properties to bind data:
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#datasource) specifies the array of data objects.
+- [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#xname) maps the horizontal-axis field.
+- [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#yname) maps the numeric value field.
+- [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#type) specifies the series type.
+- [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3daxismodel#valuetype) specifies the type of values used on an axis.
 
 ```javascript
 export default {
@@ -202,9 +208,11 @@ export default {
 };
 ```
 
-* Add a series object to the 3D Chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#datasource) property.
+Because the `month` field in this example contains category values, set `primaryXAxis.valueType` to `Category` and register the `Category3D` module. The default axis value type is `Numeric`.
 
-Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/valueType) for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
+The sales values are expressed in thousands. Set `primaryYAxis.labelFormat` to `${value}K` to add a dollar-sign prefix and a `K` suffix to each vertical-axis label.
+
+Each data object must contain the fields assigned to `xName` and `yName`. The field assigned to `yName` must contain a numeric value.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -214,68 +222,20 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
         
 {% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs2" %}
 
-* The sales data are in thousands. Format the vertical axis labels by adding <b>$</b> as a prefix and <b>K</b> as a suffix by setting the axis `labelFormat` to '${value}K' using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3daxismodel#labelformat) property. Here, `{value}` is a placeholder for each axis label.
+## Troubleshooting
 
-## Verify the chart
+- **The 3D Chart is not rendered.** Verify that `Chart3DComponent`, `Chart3DSeriesCollectionDirective`, and `Chart3DSeriesDirective` are imported and registered. Check the browser console for component, module, data, or licensing errors.
+- **The column series is not displayed.** Import `ColumnSeries3D` and add it to the `chart3d` array in the `provide` option.
+- **Category values are not displayed correctly.** Set `primaryXAxis.valueType` to `Category`, import `Category3D`, and add it to the `chart3d` array.
+- **No data is displayed.** Verify that `dataSource` contains data, `xName` and `yName` match the fields in each data object, and the field assigned to `yName` contains numeric values.
+- **Module registration is not recognized.** Ensure that the `provide` option uses the exact `chart3d` key.
+- **A package or Vue version error occurs.** Confirm that the installed `@syncfusion/ej2-vue-charts` release supports Vue 2 and that all Syncfusion packages use compatible versions.
 
-After starting the dev server, confirm the 3D chart renders correctly:
+## See Also
 
-- Start the dev server with `npm run serve` or `yarn run serve`.
-- Open the project URL shown in the terminal and verify the chart displays.
-- If the chart does not render, check the browser console for errors related to missing modules, incorrect imports, or incompatible Vue versions.
-
-## Troubleshooting (common issues)
-
-- Chart not rendering: ensure required 3D modules are registered in `provide` and that `seriesData` contains valid data.
-- Incorrect module key: some sample code uses the `chart3d` key in `provide`; keep the key consistent with the examples used in the project.
-- Version mismatch: confirm `@syncfusion/ej2-vue-charts` is compatible with the project's Vue version.
-
-## Add 3D chart title
-
-You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#title) property to the 3D Chart to provide quick information to the user about the data plotted in the 3D Chart.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/chart3d/getting-started/sample-cs3/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs3" %}
-
-## Enable legend
-
-You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dlegendsettingsmodel#visible) property to true in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#legendsettings) object and by injecting the `Legend3D` into the `provide`.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/chart3d/getting-started/sample-cs4/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs4" %}
-
-## Add data label
-
-You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3ddatalabelsettingsmodel#visible) property to true in the [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#datalabel) object and by injecting `DataLabel3D` into the `provide`.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/chart3d/getting-started/sample-cs5/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs5" %}
-
-## Enable tooltip
-
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dtooltipsettingsmodel#enable) property as true in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#tooltip) object and by injecting `Tooltip3D` into the `provide`.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/chart3d/getting-started/sample-cs6/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs6" %}
+- [Vue 3D Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-chart/column.html)
+- [Vue 3D Chart API reference](https://ej2.syncfusion.com/vue/documentation/api/chart3d)
+- [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
 
 > You can refer to our `Vue 3D Charts` feature tour page for its groundbreaking feature representations. You can also explore our [Vue 3D Charts example](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-chart/column.html) that shows various 3D Chart types and how to represent time-dependent data, showing trends in data at equal intervals.

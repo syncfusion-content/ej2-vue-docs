@@ -25,7 +25,7 @@ To get started quickly with Vue MultiSelect, check this video:
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue MultiSelect version |
 | ------------- | ------------------------------------------- |
 |[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
 
@@ -122,12 +122,12 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add MultiSelect component
+## Adding MultiSelect component
 
 Now, you can add the Vue MultiSelect component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/multi-select#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
 {% tabs %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div class="control_wrapper">
@@ -136,7 +136,7 @@ Now, you can add the Vue MultiSelect component to your **src/App.vue** file by i
 </template>
 
 <script setup>
-  import { MultiSelectComponent as EjsMultiselect } from "@syncfusion/ej2-vue-dropdowns";
+  import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
   const sportsData = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];
 </script>
 
@@ -174,9 +174,9 @@ Now, you can add the Vue MultiSelect component to your **src/App.vue** file by i
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the application
 
-To run the project, use the following command:
+To run the application, use the following command:
 
 ```bash
 npm run serve

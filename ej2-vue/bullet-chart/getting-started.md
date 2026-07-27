@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started with Vue Bullet Chart component | Syncfusion
-description:  Set up a Vue 2 project using Vue CLI and integrate the Syncfusion Essential JS 2 Vue Bullet Chart component, including module registration and usage examples.
-control: Getting started 
+title: Getting Started with the Vue Bullet Chart Component | Syncfusion
+description: Set up a Vue 2 application and integrate the Syncfusion Essential JS 2 Vue Bullet Chart component with module registration, and data binding.
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,15 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Bullet Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+
+> **Note:** Vue CLI is in maintenance mode. This guide uses Vue CLI because it describes integration with a Vue 2 application.
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Bullet Chart component.
+The following are the minimum dependencies required to use the Vue Bullet Chart component:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -32,54 +34,63 @@ Below is the list of minimum dependencies required to use the Bullet Chart compo
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Setup the Vue 2 project
+Only the `@syncfusion/ej2-vue-charts` package must be installed directly. Its required dependencies are installed automatically.
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Use a package release that supports Vue 2. Before upgrading, check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and the package release notes.
+
+## Setting Up the Vue 2 Project
+
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+
+**npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating the project, select `Default ([Vue 2] babel, eslint)` from the menu. If this preset is unavailable, select the manual configuration option and choose Vue 2 when prompted for the Vue version.
 
 ![Terminal showing Vue CLI creating a Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+After the project is created, navigate to its directory:
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+```bash
+cd quickstart
+```
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
 
-This article uses the [Vue Bullet Chart component](https://www.syncfusion.com/vue-components/vue-bullet-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+Syncfusion Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the `@syncfusion/ej2-vue-charts` package using either npm or yarn.
+
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
 ```
-or
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The –save will instruct NPM to include the Bullet Chart package inside of the `dependencies` section of the `package.json`.
+> **Note:** npm v5 and later save installed packages to `dependencies` by default, so the `--save` option is not required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart Component
 
-Follow the steps below to add the Vue Bullet Chart component:
+Follow these steps to add the Vue Bullet Chart component.
 
-1. First, import and register the Bullet Chart component in the `script` section of the **src/App.vue** file.
+**Step 1:** Import and locally register the Bullet Chart component in the `script` section of **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -91,20 +102,20 @@ export default {
   components: {
     'ejs-bulletchart': BulletChartComponent
   }
-}
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the Bullet Chart component.
+**Step 2:** Define the Bullet Chart component in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-  <div>
-      <ejs-bulletchart id="bulletChart"> </ejs-bulletchart>
+  <div id="app">
+    <ejs-bulletchart id="bulletChart"></ejs-bulletchart>
   </div>
 </template>
 
@@ -119,32 +130,37 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
-To run the project, use the following command:
+Save **src/App.vue**, and then start the development server using either npm or yarn.
+
+**npm**
 
 ```bash
 npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run serve
 ```
-        
+
+Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that the Bullet Chart displays.
+
 {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/initialize-cs1" %}
 
-## Module Injection
+## Module Registration
 
-Bullet Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature module using `provide` method. In the current application, we are going to use tooltip feature of the Bullet Chart.
+The Bullet Chart component uses feature-specific modules. Register only the modules required by the application with the component's `provide` option.
 
-• `BulletTooltip` - Inject this provider to use tooltip feature.
+This guide uses `BulletTooltip`, which enables tooltip support.
 
-These modules should be injected to the provide method as follows,
-
-```ts
-import { BulletChartComponent, BulletTooltip } from "@syncfusion/ej2-vue-charts";
+```javascript
+import {
+  BulletChartComponent,
+  BulletTooltip
+} from '@syncfusion/ej2-vue-charts';
 
 export default {
   components: {
@@ -156,22 +172,48 @@ export default {
 };
 ```
 
-## BulletChart With Data
+Register `BulletTooltip` only when the tooltip is enabled.
 
-This section explains how to plot local data to the Bullet Chart.
+> **Note:** The module injection key must be `bulletChart`.
 
-```ts
-let data: any[] = [
-       { value: 100, target: 80 },
-       { value: 200, target: 180 },
-       { value: 300, target: 280 },
-       { value: 400, target: 380 },
-       { value: 500, target: 480 },
-];
+## Populate the Bullet Chart with Data
+
+The Bullet Chart uses the following properties to bind data:
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#datasource) specifies the array of data objects.
+- [`valueField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#valuefield) maps the feature-measure field.
+- [`targetField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#targetfield) maps the comparative-target field.
+- [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#minimum) specifies the minimum value of the quantitative scale.
+- [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#maximum) specifies the maximum value of the quantitative scale.
+- [`interval`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#interval) specifies the interval between scale labels.
+
+Each data object must contain the fields assigned to `valueField` and `targetField`. Those fields must contain numeric values.
+
+The following template binds the `value` and `target` fields and configures a scale that contains both values:
+
+```html
+<ejs-bulletchart
+  :dataSource="data"
+  valueField="value"
+  targetField="target"
+  :minimum="minimum"
+  :maximum="maximum"
+  :interval="interval"
+></ejs-bulletchart>
 ```
 
-Now assign the local data to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#datasource) property. Map the `value` and `target` fields to [`valueField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#valuefield) and [`targetField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#targetfield) respectively.
-
+```javascript
+data() {
+  return {
+    data: [
+      { value: 75, target: 85 }
+    ],
+    minimum: 0,
+    maximum: 100,
+    interval: 20
+  };
+}
+```
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/bullet-chart/getting-started/datasource-cs1/app.vue %}
@@ -180,58 +222,21 @@ Now assign the local data to the [`dataSource`](https://ej2.syncfusion.com/vue/d
         
 {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/datasource-cs1" %}
 
-## Add Bullet Chart Title
+## Troubleshooting
 
-You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#title) property to the Bullet Chart to provide quick information to the user about the data plotted in the Bullet Chart.
+- **The Bullet Chart is not rendered.** Verify that `BulletChartComponent` is imported and registered, the chart has a valid size, and the browser console contains no component, data, or licensing errors.
+- **No feature measure or target is displayed.** Verify that `dataSource` contains records, `valueField` and `targetField` match fields in every data object, and the mapped fields contain numeric values.
+- **The scale does not contain the measure or target.** Set `minimum` and `maximum` so that both mapped values fall within the quantitative scale.
+- **A package or Vue version error occurs.** Confirm that the installed `@syncfusion/ej2-vue-charts` release supports Vue 2 and that all Syncfusion packages use compatible versions.
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/bullet-chart/getting-started/title-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/title-cs1" %}
+For additional assistance, refer to the [Vue Bullet Chart API documentation](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart).
 
-## Ranges
+## See Also
 
-You can add a range using `e-bullet-range` of the `e-bullet-range-collection`.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/bullet-chart/getting-started/ranges-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/ranges-cs1" %}
-
-## Tooltip
-
-Enable tooltip for the Bullet Chart by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/bulletTooltipSettingsModel#enable) property to `true` in the [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#tooltip) object and registering the `BulletTooltip` module in `provide`.
-
-## Verify the chart
-
-After starting the dev server, confirm the bullet chart renders correctly:
-
-- Start the dev server with `npm run serve` or `yarn run serve`.
-- Open the project URL shown in the terminal and verify the chart displays.
-- If the chart does not render, inspect the browser console for errors related to missing modules, incorrect imports, or incompatible Vue versions.
-
-## Troubleshooting (common issues)
-
-- Chart not rendering: ensure the `BulletTooltip` and other required modules are registered in `provide` and that `dataSource` contains valid data.
-- Incorrect mappings: verify `valueField` and `targetField` point to the correct keys in the data objects.
-- Version mismatch: confirm `@syncfusion/ej2-vue-charts` is compatible with Vue 2 in the project.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/bullet-chart/getting-started/tooltip-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/tooltip-cs1" %}
-
-## See also
-
-* [Getting Started with Vue 3 Bullet Chart](vue-3-getting-started)
-* [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-* [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
+- [Vue Bullet Chart overview](https://www.syncfusion.com/vue-components/vue-bullet-chart)
+- [Vue Bullet Chart examples](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/bullet-chart/default.html)
+- [Vue Bullet Chart customization](https://ej2.syncfusion.com/vue/documentation/bullet-chart/customization)
+- [Vue Bullet Chart getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-bullet-chart-component)
+- [Getting Started with the Vue 3 Bullet Chart](vue-3-getting-started)
+- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
