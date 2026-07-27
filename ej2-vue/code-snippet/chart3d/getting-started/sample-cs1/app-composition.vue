@@ -7,8 +7,3 @@
 import { Chart3DComponent as EjsChart3d} from '@syncfusion/ej2-vue-charts';
 
 </script>
-<style>
- #container{
-   height: 350px;
- }
-</style>

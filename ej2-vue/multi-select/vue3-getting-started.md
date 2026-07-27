@@ -25,7 +25,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue MultiSelect version |
 | ------------- | ------------------------------------------- |
 |[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
@@ -122,7 +122,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add MultiSelect component
+## Adding MultiSelect component
 
 Now, you can add the Vue MultiSelect component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/multi-select#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
@@ -131,13 +131,13 @@ Now, you can add the Vue MultiSelect component to your **src/App.vue** file by i
 
 <template>
     <div class="control_wrapper">
-        <ejs-multiselect id='multiselect' :dataSource='data[0].sportsData'></ejs-multiselect>
+        <ejs-multiselect id='multiselect' :dataSource='sportsData'></ejs-multiselect>
     </div>
 </template>
 
 <script setup>
-    import { MultiSelectComponent as EjsMultiselect } from "@syncfusion/ej2-vue-dropdowns";
-    const data = [{ sportsData: ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis']}];
+    import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
+    const sportsData = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];
 </script>
 
 <style>
@@ -176,9 +176,9 @@ Now, you can add the Vue MultiSelect component to your **src/App.vue** file by i
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the application
 
-To run the project, use the following command:
+To run the application, use the following command:
 
 ```bash
 npm run dev

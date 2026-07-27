@@ -16,6 +16,8 @@ The `Composition API` is a new feature introduced in Vue.js 3 that provides an a
 
 The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
+## Prerequisites
+
 | Requirement | Version |
 |-------------|---------|
 | Vue | 3.0 or higher |
@@ -23,7 +25,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue Dropdown Tree version |
 | ------------- | ------------------------------------------- |
 |[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
@@ -122,7 +124,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 ## Add Dropdown Tree component
 
-Now, you can add the Vue Dropdown Tree component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#fields) property, which accepts an array of string values to display as suggestions. Use the following code:
+Now, you can add the Vue Dropdown Tree component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#fields) property. Use the following code:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

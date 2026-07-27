@@ -21,7 +21,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue Dropdown Tree version |
 | ------------- | ------------------------------------------- |
 |[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
 
@@ -120,7 +120,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 ## Add Dropdown Tree component
 
-Now, you can add the Vue Dropdown Tree component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#fields) property, which accepts an array of string values to display as suggestions. Use the following code:
+Now, you can add the Vue Dropdown Tree component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#fields) property. Use the following code:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -226,9 +226,9 @@ Now, you can add the Vue Dropdown Tree component to your **src/App.vue** file by
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the application
 
-To run the project, use the following command:
+To run the application, use the following command:
 
 ```bash
 npm run serve

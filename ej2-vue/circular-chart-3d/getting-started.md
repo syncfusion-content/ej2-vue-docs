@@ -1,16 +1,16 @@
----
+ ---
 layout: post
-title: Getting Started with 3D Circular Chart (Vue 2) | Syncfusion
-description: Set up a Vue 2 app and integrate Syncfusion EJ2 3D Circular Chart, including setup steps, module registration, and practical example usage.
-control: Getting started 
+title: Getting Started with the Vue 3D Circular Chart Component | Syncfusion
+description: Set up a Vue 2 application and integrate the Syncfusion EJ2 Vue 3D Circular Chart with project setup, module registration, and data binding.
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with 3D Circular Chart (Vue 2)
+# Getting Started with the Vue 3D Circular Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> 3D Circular Chart component.
+This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Circular Chart component.
 
 To get started quickly with 3D Circular Charts, watch the following introduction video:
 
@@ -18,11 +18,13 @@ To get started quickly with 3D Circular Charts, watch the following introduction
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+
+> **Note:** Vue CLI is in maintenance mode. This guide uses Vue CLI because it describes integration with a Vue 2 application.
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the 3D Circular Chart component.
+The following are the minimum dependencies required to use the Vue 3D Circular Chart component:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -36,90 +38,96 @@ Below is the list of minimum dependencies required to use the 3D Circular Chart 
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Setting up the Vue 2 project
+Only the `@syncfusion/ej2-vue-charts` package must be installed directly. Its required dependencies are installed automatically.
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Use a package release that supports Vue 2. Before upgrading, check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and the package release notes.
+
+## Setting Up the Vue 2 Project
+
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+
+**npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating the project, select `Default ([Vue 2] babel, eslint)` from the menu. If this preset is unavailable, select the manual configuration option and choose Vue 2 when prompted for the Vue version.
 
-![Terminal showing Vue CLI creating a Vue 2 project](images/vue2-terminal.png)
+![Terminal showing Vue CLI creating a Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+After the project is created, navigate to its directory:
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+```bash
+cd quickstart
+```
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
 
-This article uses the `Vue 3D Circular Chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the `@syncfusion/ej2-vue-charts` package using either npm or yarn.
+
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts
 ```
-or
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
+> **Note:** npm v5 and later save installed packages to `dependencies` by default, so the `--save` option is not required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Circular Chart Component
 
-Follow the steps below to add the 3D Circular Chart component:
+Follow these steps to add the Vue 3D Circular Chart component.
 
-1. First, import and register the 3D Circular Chart component and provide the required 3D series module in the `script` section of **src/App.vue**. The example below is a complete, copy-paste-ready Vue 2 `App.vue` with a concrete `seriesData` array and `provide` registration for `PieSeries3D`.
+**Step 1:** Import and locally register the 3D Circular Chart component and its series directives in the `script` section of **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
-import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D } from '@syncfusion/ej2-vue-charts';
+import {
+  CircularChart3DComponent,
+  CircularChart3DSeriesCollectionDirective,
+  CircularChart3DSeriesDirective
+} from '@syncfusion/ej2-vue-charts';
 
 export default {
-  provide: {
-    circularchart3d: [PieSeries3D]
-  },
   components: {
     'ejs-circularchart3d': CircularChart3DComponent,
     'e-circularchart3d-series-collection': CircularChart3DSeriesCollectionDirective,
     'e-circularchart3d-series': CircularChart3DSeriesDirective
-  },
-  data() {
-    return {
-      seriesData: [
-        { x: 'Apple', y: 35, text: '35%' },
-        { x: 'Mango', y: 28, text: '28%' },
-        { x: 'Orange', y: 34, text: '34%' },
-        { x: 'Banana', y: 32, text: '32%' },
-        { x: 'Grapes', y: 40, text: '40%' }
-      ],
-      dataLabel: { visible: true, name: 'text', position: 'Inside' }
-    };
   }
-}
+};
 </script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 2:** Define the 3D Circular Chart component and its series collection in the `template` section.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <div id="app">
-    <ejs-circularchart3d id="container" title="Fruit Distribution">
+    <ejs-circularchart3d id="container">
       <e-circularchart3d-series-collection>
-        <e-circularchart3d-series :dataSource="seriesData" xName="x" yName="y" :dataLabel="dataLabel"></e-circularchart3d-series>
+        <e-circularchart3d-series></e-circularchart3d-series>
       </e-circularchart3d-series-collection>
     </ejs-circularchart3d>
   </div>
@@ -128,41 +136,143 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding the 3D Circular Chart
+At this stage, the component and directives are registered, but the chart does not display data until the series data and required feature module are configured.
 
-- Use the `<ejs-circularchart3d>` selector in the template section of `App.vue` to add a 3D Circular Chart.
+## Module Registration
 
-The example below shows a basic pie series.
+The 3D Circular Chart component uses feature-specific modules. Register the modules required by the application with the component's `provide` option.
 
-By default, a pie series is rendered when JSON data is assigned to the series using the `dataSource` property. Map the field names in the JSON data to the `xName` and `yName` properties of the series.
+This guide uses `PieSeries3D`, which renders 3D pie and doughnut series.
 
-<!-- Inline example above replaces the external include for a ready-to-run snippet -->
+```javascript
+import {
+  CircularChart3DComponent,
+  CircularChart3DSeriesCollectionDirective,
+  CircularChart3DSeriesDirective,
+  PieSeries3D
+} from '@syncfusion/ej2-vue-charts';
 
-## Verify the chart
+export default {
+  components: {
+    'ejs-circularchart3d': CircularChart3DComponent,
+    'e-circularchart3d-series-collection': CircularChart3DSeriesCollectionDirective,
+    'e-circularchart3d-series': CircularChart3DSeriesDirective
+  },
+  provide: {
+    circularchart3d: [PieSeries3D]
+  }
+};
+```
 
-After starting the dev server, confirm the 3D Circular Chart renders correctly:
+Register `PieSeries3D` when the application uses a 3D pie or doughnut series.
 
-- Start the dev server with `npm run serve` or `yarn run serve`.
-- Open the project URL shown in the terminal and verify the chart displays.
-- If the chart does not render, inspect the browser console for errors related to missing modules, incorrect imports, or undefined data values.
+> **Note:** The module injection key must be `circularchart3d`. Register only the modules used by the application to keep the bundle size smaller.
 
-## Troubleshooting (common issues)
+## Populate the 3D Circular Chart with Data
 
-- Chart not rendering: ensure the 3D series modules and directives are registered and that `seriesData` contains a valid array of objects.
-- Version mismatch: confirm `@syncfusion/ej2-vue-charts` is compatible with Vue 2 used in the project.
+The 3D Circular Chart series uses the following properties to bind data:
 
-## Run the project
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/circularchart3d/pieseries3d#datasource) specifies an array of data objects or a `DataManager` instance.
+- [`xName`](https://ej2.syncfusion.com/vue/documentation/api/circularchart3d/pieseries3d#xname) maps the category field.
+- [`yName`](https://ej2.syncfusion.com/vue/documentation/api/circularchart3d/pieseries3d#yname) maps the numeric value field.
+- [`innerRadius`](https://ej2.syncfusion.com/vue/documentation/api/circularchart3d/pieseries3d#innerradius) controls whether the series is displayed as a pie or doughnut. Its default value is `0`.
+- [`tilt`](https://ej2.syncfusion.com/vue/documentation/api/circularchart3d/index-default#tilt) defines the slope angle for the Circular 3D Chart.
 
-To run the project, use the following command:
+A 3D pie series is rendered by default when data is assigned to the series and `PieSeries3D` is registered. Set `innerRadius` to a percentage greater than `0` to render a doughnut series.
+
+Each data object must contain the fields assigned to `xName` and `yName`. The field assigned to `yName` must contain a numeric value.
+
+Replace the contents of **src/App.vue** with the following complete example:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+    <ejs-circularchart3d
+      id="container"
+      title="Fruit Distribution"
+      :tilt='tilt'
+    >
+      <e-circularchart3d-series-collection>
+        <e-circularchart3d-series
+          :dataSource="seriesData"
+          xName="fruit"
+          yName="share"
+        ></e-circularchart3d-series>
+      </e-circularchart3d-series-collection>
+    </ejs-circularchart3d>
+  </div>
+</template>
+
+<script>
+import {
+  CircularChart3DComponent,
+  CircularChart3DSeriesCollectionDirective,
+  CircularChart3DSeriesDirective,
+  PieSeries3D
+} from '@syncfusion/ej2-vue-charts';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-circularchart3d': CircularChart3DComponent,
+    'e-circularchart3d-series-collection': CircularChart3DSeriesCollectionDirective,
+    'e-circularchart3d-series': CircularChart3DSeriesDirective
+  },
+  provide: {
+    circularchart3d: [PieSeries3D]
+  },
+  data() {
+    return {
+      seriesData: [
+        { fruit: 'Apple', share: 25 },
+        { fruit: 'Mango', share: 20 },
+        { fruit: 'Orange', share: 18 },
+        { fruit: 'Banana', share: 17 },
+        { fruit: 'Grapes', share: 20 }
+      ],
+      tilt: -45
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the Project
+
+Save **src/App.vue**, and then start the development server using either npm or yarn.
+
+**npm**
 
 ```bash
 npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run serve
 ```
 
-> You can refer to our `Vue 3D Circular Chart` feature tour page for its groundbreaking feature representations. You can also explore our `Vue 3D Circular Chart example` that shows various 3D Circular Chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that a 3D pie chart titled **Fruit Distribution** displays five fruit categories.
+
+## Troubleshooting
+
+- **The 3D Circular Chart is not rendered.** Verify that `CircularChart3DComponent`, `CircularChart3DSeriesCollectionDirective`, and `CircularChart3DSeriesDirective` are imported and registered. Check the browser console for component, module, data, or licensing errors.
+- **The pie series is not displayed.** Import `PieSeries3D` and add it to the array provided with the exact `circularchart3d` key.
+- **No data is displayed.** Verify that `dataSource` contains records, `xName` and `yName` match fields in each data object, and the field mapped by `yName` contains numeric values.
+- **A package or Vue version error occurs.** Confirm that the installed `@syncfusion/ej2-vue-charts` release supports Vue 2 and that all Syncfusion packages use compatible versions.
+
+For additional assistance, refer to the [Vue 3D Circular Chart API documentation](https://ej2.syncfusion.com/vue/documentation/api/circularchart3d).
+
+## See Also
+
+- [Getting Started with the Vue 3D Circular Charts Component video](https://www.youtube.com/watch?v=hGpINPEOi1E)
+- [Vue 3D Circular Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-circular-chart/pie)
+- [Vue 3D Circular Chart overview](https://www.syncfusion.com/vue-components/vue-3d-circular-chart)
+- [Getting Started with the Vue 3D Circular Chart Component in Vue 3](vue-3-getting-started)
+- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

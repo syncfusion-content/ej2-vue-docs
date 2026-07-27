@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Vue 3 getting started with the Bullet chart component | Syncfusion
-description: Scaffold a Vue 3 project using Vite and integrate Syncfusion EJ2 Bullet Chart with module registration, setup steps, and a complete working example.
+title: Vue 3 Getting Started with the Bullet Chart Component | Syncfusion
+description: Create a Vite-based Vue 3 project and integrate the Syncfusion Bullet Chart component using the Composition API or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -10,325 +10,324 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Bullet Chart Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to setting up a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
-
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
+The **Composition API** groups related logic into reusable functions. The **Options API** organizes component logic with options such as `data`, `methods`, and life cycle hooks. Choose the API that best fits the application's structure.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
-## Setup the Vite project
+## Set Up the Vite Project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Create a Vite project using either npm or yarn.
+
+**npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+**yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The Syncfusion package is installed in a later step.
 
-1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+Navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2. Select `Vue` as the framework. It will create a Vue 3 project.
+Install the project dependencies using either npm or yarn.
+
+**npm**
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3. Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
-
-```bash
-cd my-project
 npm install
 ```
 
-or
+**yarn**
 
 ```bash
-cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+> **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
 
-This article uses the [Vue Bullet Chart component](https://www.syncfusion.com/vue-components/vue-bullet-chart) as an example. To use the Vue Bullet Chart component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+Install the `@syncfusion/ej2-vue-charts` package. Use a package release compatible with Vue 3 and the Node.js version used by the project.
+
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
-or
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** will instruct NPM to include the range navigator package inside of the `dependencies` section of the `package.json`.
+> **Note:** For TypeScript projects, refer to [Vue 3 with the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition) or [Vue 3 with the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options).
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart Component
 
-Follow the below steps to add the Vue Bullet Chart component using `Composition API` or `Options API`:
+Follow these steps to add the Vue Bullet Chart component using the Composition API or Options API.
 
-1. First, import and register the Bullet Chart component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+**Step 1:** Import and Register the Component
+
+Import the Bullet Chart component used by the example in **src/App.vue**.
+
+In the Composition API example, alias the imports to names that match the custom elements used in the template. Components imported in `<script setup>` are available directly in the template.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { BulletChartComponent as EjsBulletchart, BulletTooltip, BulletRangeCollectionDirective as EBulletRangeCollection, BulletRangeDirective as EBulletRange } from "@syncfusion/ej2-vue-charts";
+import {
+  BulletChartComponent as EjsBulletchart
+} from '@syncfusion/ej2-vue-charts';
+
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { BulletChartComponent, BulletTooltip, BulletRangeCollectionDirective, BulletRangeDirective } from "@syncfusion/ej2-vue-charts";
-//Component registration
+import {
+  BulletChartComponent
+} from '@syncfusion/ej2-vue-charts';
+
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "ejs-bulletchart": BulletChartComponent,
-    "e-bullet-range-collection": BulletRangeCollectionDirective,
-    "e-bullet-range": BulletRangeDirective
+    'ejs-bulletchart': BulletChartComponent
   }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2. In the `template` section, define the Bullet Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#datasource) property.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-    <ejs-bulletchart :dataSource="data" :valueField="valueField" :tooltip="tooltip" :targetField="targetField" :height="height"
-        :title="title" :minimum="minimum" :maximum="maximum" :interval="interval">
-        <e-bullet-range-collection>
-          <e-bullet-range end="100" color="red"></e-bullet-range>
-          <e-bullet-range end="200" color="blue"></e-bullet-range>
-          <e-bullet-range end="300" color="green"></e-bullet-range>
-        </e-bullet-range-collection>
-    </ejs-bulletchart>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3. Declare the values for the `dataSource` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-const data = [
-    { value: 100, target: 80 },
-    { value: 200, target: 180 },
-    { value: 300, target: 280 },
-    { value: 400, target: 180 },
-    { value: 500, target: 230 }
-];
-const minimum = 0;
-const maximum = 300;
-const interval = 50;
-const tooltip = { enable: true };
-const title = 'Revenue';
-const height = '300px';
-const targetField = 'target';
-const valueField = 'value';
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-    return {
-        data: [
-            { value: 100, target: 80 },
-            { value: 200, target: 180 },
-            { value: 300, target: 280 },
-            { value: 400, target: 180 },
-            { value: 500, target: 230 }
-        ],
-        minimum: 0,
-        maximum: 300,
-        interval: 50,
-        tooltip: { enable: true },
-        title: 'Revenue',
-        height: '300px',
-        targetField: 'target',
-        valueField: 'value'
-    };
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <ejs-bulletchart :dataSource="data" :valueField="valueField" :tooltip="tooltip" :targetField="targetField" :height="height"
-        :title="title" :minimum="minimum" :maximum="maximum" :interval="interval">
-        <e-bullet-range-collection>
-          <e-bullet-range end="100" color="red"></e-bullet-range>
-          <e-bullet-range end="200" color="blue"></e-bullet-range>
-          <e-bullet-range end="300" color="green"></e-bullet-range>
-        </e-bullet-range-collection>
-    </ejs-bulletchart>
-</template>
-
-<script setup>
-import { provide } from 'vue';
-import { BulletChartComponent as EjsBulletchart, BulletTooltip, BulletRangeCollectionDirective as EBulletRangeCollection, BulletRangeDirective as EBulletRange } from "@syncfusion/ej2-vue-charts";
-
-const data = [
-    { value: 100, target: 80 },
-    { value: 200, target: 180 },
-    { value: 300, target: 280 },
-    { value: 400, target: 180 },
-    { value: 500, target: 230 }
-];
-const minimum = 0;
-const maximum = 300;
-const interval = 50;
-const tooltip = { enable: true };
-const title = 'Revenue';
-const height = '300px';
-const targetField = 'target';
-const valueField = 'value';
-const bulletChart = [ BulletTooltip ];
-provide('bulletChart', bulletChart);
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-    <ejs-bulletchart :dataSource="data" :valueField="valueField" :tooltip="tooltip" :targetField="targetField" :height="height"
-        :title="title" :minimum="minimum" :maximum="maximum" :interval="interval">
-        <e-bullet-range-collection>
-          <e-bullet-range end="100" color="red"></e-bullet-range>
-          <e-bullet-range end="200" color="blue"></e-bullet-range>
-          <e-bullet-range end="300" color="green"></e-bullet-range>
-        </e-bullet-range-collection>
-    </ejs-bulletchart>
-</template>
-
-<script>
-import { BulletChartComponent, BulletTooltip, BulletRangeCollectionDirective, BulletRangeDirective } from "@syncfusion/ej2-vue-charts";
-//Component registration
-export default {
-  name: "App",
-  components: {
-    "ejs-bulletchart": BulletChartComponent,
-    "e-bullet-range-collection": BulletRangeCollectionDirective,
-    "e-bullet-range": BulletRangeDirective
-  },
-    data() {
-    return {
-        data: [
-            { value: 100, target: 80 },
-            { value: 200, target: 180 },
-            { value: 300, target: 280 },
-            { value: 400, target: 180 },
-            { value: 500, target: 230 }
-        ],
-        minimum: 0,
-        maximum: 300,
-        interval: 50,
-        tooltip: { enable: true },
-        title: 'Revenue',
-        height: '300px',
-        targetField: 'target',
-        valueField: 'value'
-    };
- },
-    provide: {
-        bulletChart: [ BulletTooltip ]
-    },
 };
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+**Step 2:** Declare the Data and Configuration
 
-To run the project, use the following command:
+Define the chart data, scale, title and dimensions configuration in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const data = [
+  { value: 75, target: 85 }
+];
+
+const valueField = 'value';
+const targetField = 'target';
+const minimum = 0;
+const maximum = 100;
+const interval = 20;
+const title = 'Revenue Performance';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+export default {
+  data() {
+    return {
+      data: [
+        { value: 75, target: 85 }
+      ],
+      valueField: 'value',
+      targetField: 'target',
+      minimum: 0,
+      maximum: 100,
+      interval: 20,
+      title: 'Revenue Performance'
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3:** Define the Bullet Chart in the Template
+
+Add the Bullet Chart to the `template` section of **src/App.vue**.
+
+The example uses the following properties:
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#datasource) specifies the array of data objects.
+- [`valueField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#valuefield) maps the feature-measure field.
+- [`targetField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#targetfield) maps the comparative-target field.
+- [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#minimum) specifies the minimum value of the quantitative scale.
+- [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#maximum) specifies the maximum value of the quantitative scale.
+- [`interval`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#interval) specifies the interval between scale labels.
+- [`title`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#title) specifies the chart title.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+    <ejs-bulletchart
+      id="bulletChart"
+      :dataSource="data"
+      :valueField="valueField"
+      :targetField="targetField"
+      :minimum="minimum"
+      :maximum="maximum"
+      :interval="interval"
+      :title="title"
+    >
+    </ejs-bulletchart>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+Each data object must contain the fields assigned to `valueField` and `targetField`. Both mapped fields must contain numeric values within the configured scale.
+
+Here is the summarized code for the above steps in the **src/App.vue** file.
+
+Replace the contents of **src/App.vue** with either the Composition API or Options API example.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-bulletchart
+      id="bulletChart"
+      :dataSource="data"
+      :valueField="valueField"
+      :targetField="targetField"
+      :minimum="minimum"
+      :maximum="maximum"
+      :interval="interval"
+      :title="title"
+      :height="height"
+    >
+    </ejs-bulletchart>
+  </div>
+</template>
+
+<script setup>
+import {
+  BulletChartComponent as EjsBulletchart
+} from '@syncfusion/ej2-vue-charts';
+
+const data = [
+  { value: 75, target: 85 }
+];
+
+const valueField = 'value';
+const targetField = 'target';
+const minimum = 0;
+const maximum = 100;
+const interval = 20;
+const title = 'Revenue Performance';
+const height = '300px';
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-bulletchart
+      id="bulletChart"
+      :dataSource="data"
+      :valueField="valueField"
+      :targetField="targetField"
+      :minimum="minimum"
+      :maximum="maximum"
+      :interval="interval"
+      :title="title"
+      :height="height"
+    >
+    </ejs-bulletchart>
+  </div>
+</template>
+
+<script>
+import {
+  BulletChartComponent
+} from '@syncfusion/ej2-vue-charts';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-bulletchart': BulletChartComponent
+  },
+  data() {
+    return {
+      data: [
+        { value: 75, target: 85 }
+      ],
+      valueField: 'value',
+      targetField: 'target',
+      minimum: 0,
+      maximum: 100,
+      interval: 20,
+      title: 'Revenue Performance',
+      height: '300px'
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the Project
+
+Save **src/App.vue**, and then start the development server using either npm or yarn.
+
+**npm**
 
 ```bash
 npm run dev
 ```
 
-or
+**yarn**
 
 ```bash
-yarn run dev
+yarn dev
 ```
 
+Open the local URL displayed in the terminal, commonly `http://localhost:5173`, and verify that the Bullet Chart displays.
 
-The output will appear as follows:
+![Vue 3 Bullet Chart](./images/vue3-bullet-chart-demo.png)
 
-![Vue 3 Bullet Chart sample showing bullet ranges and tooltip](./images/vue3-bullet-chart-demo.png)
+> **Sample:** Explore the [Vue 3 Bullet Chart getting-started sample](https://github.com/SyncfusionExamples/vue3-bullet-chart-getting-started).
 
-## Verify the chart
+## Troubleshooting
 
-After starting the development server, confirm the chart renders correctly:
+- **The Bullet Chart is not rendered.** Verify that the component import is aliased correctly in the Composition API or registered in `components` in the Options API. Check the browser console for component, data, module, or licensing errors.
+- **No feature measure or target is displayed.** Verify that `dataSource` contains records, `valueField` and `targetField` match fields in every data object, and the mapped fields contain numeric values.
+- **The scale does not contain the measure or target.** Set `minimum` and `maximum` so that both mapped values fall within the quantitative scale.
+- **An import or runtime error is displayed.** Verify that `@syncfusion/ej2-vue-charts` is installed and that its version supports the project's Vue and Node.js versions.
 
-- Start the development server with `npm run dev` or `yarn run dev`.
-- Open the project URL shown in the terminal (commonly `http://localhost:5173`) and verify the bullet chart displays with ranges and tooltip.
-- If the chart does not render, open the browser console and check for errors related to missing modules, incorrect imports, or incompatible Vue versions.
+For additional assistance, refer to the [Vue Bullet Chart API documentation](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart).
 
-## Troubleshooting (common issues)
+## See Also
 
-- Chart not rendering: ensure chart modules (for example, `BulletTooltip`) are provided via `provide` (Composition API) or `provide`/`provide:` (Options API).
-- Wrong package version: confirm `@syncfusion/ej2-vue-charts` matches the project's Vue version.
-- Missing child directives: ensure `BulletRangeCollectionDirective` and `BulletRangeDirective` are registered when using directives.
-- Console errors: inspect import paths and verify dependencies are installed.
-
-> **Sample**: [vue-3-bullet-chart-getting-started](https://github.com/SyncfusionExamples/vue3-bullet-chart-getting-started).
-
-## See also
-
-* [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
+- [Vue Bullet Chart overview](https://www.syncfusion.com/vue-components/vue-bullet-chart)
+- [Vue Bullet Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/bullet-chart/default.html)
+- [Vue Bullet Chart customization](https://ej2.syncfusion.com/vue/documentation/bullet-chart/customization)
+- [Vue 3 Migration Guide](https://v3-migration.vuejs.org/)
+- [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue UI Components using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
