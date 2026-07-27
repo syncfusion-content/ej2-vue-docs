@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Vue 3 getting started with the HeatMap component | Syncfusion
-description:  Checkout and learn about Vue 3 getting started with the Vue HeatMap component of Syncfusion Essential JS 2 and more details.
-control: Vue 3 getting started 
-platform: ej2-vue
+title: Vue 3 Getting Started with the HeatMap Component | Syncfusion
+description: Create a Vite-based Vue 3 project and integrate the Syncfusion Vue HeatMap component using the Composition API or Options API.
+control: HeatMap
 documentation: ug
+platform: ej2-vue
 domainurl: ##DomainURL##
 ---
 
 # Getting Started with the Vue HeatMap Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup>®</sup> Vue HeatMap component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-Vue 3 supports two authoring styles: the **Composition API** (recommended for new projects) and the **Options API** (the traditional Vue 2 pattern). Both approaches are covered in this guide using practical code examples. Choose the style that best fits your project requirements.
+The HeatMap represents two-dimensional data through color variations. Each matrix value is rendered as a cell whose color indicates its magnitude.
 
 You can explore some useful features in the HeatMap component using the video below.
 
@@ -20,379 +20,283 @@ You can explore some useful features in the HeatMap component using the video be
 
 ## Prerequisites
 
-Before beginning, ensure the following prerequisites are met:
+Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
-- **Node.js**: Version 14 or later installed on your system
-- **Package Manager**: NPM (v6+) or Yarn (v1.22+)
-- **Code Editor**: Any JavaScript-enabled editor (e.g., Visual Studio Code)
-- **Syncfusion License** (for production use): Review [licensing requirements](https://ej2.syncfusion.com/vue/documentation/licensing)
+## Set Up the Vite Project
 
-For detailed system requirements, refer to [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Create a Vite project using either npm or yarn.
 
-## Set up the Vite project
-
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+**npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+**yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
-
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+Navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+Install the project dependencies.
+
+**npm**
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
-
-```bash
-cd my-project
 npm install
 ```
 
-or
+**yarn**
 
 ```bash
-cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+> **Note:** To create a TypeScript project, use the `vue-ts` template instead of `vue`.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published on [npm](https://www.npmjs.com/search?q=ej2-vue).
 
-This article uses the [Vue HeatMap component](https://www.syncfusion.com/vue-components/vue-heatmap-chart) as an example. To use the Vue HeatMap component in the project, the `@syncfusion/ej2-vue-heatmap` package needs to be installed using the following command:
+Install the `@syncfusion/ej2-vue-heatmap` package using either npm or yarn.
+
+**npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-heatmap --save
+npm install @syncfusion/ej2-vue-heatmap
 ```
 
-or
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-heatmap
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+Confirm that `@syncfusion/ej2-vue-heatmap` appears in `package.json` and the package-manager lock file.
 
-Follow the below steps to add the Vue HeatMap component using `Composition API` or `Options API`:
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap Component
 
-1. Import and register the HeatMap component and its child directives in the `script` section of the **src/App.vue** file. For the Composition API, add the `setup` attribute to the `script` tag to enable the Composition API syntax. The component will be automatically registered in the template.
+The following steps build the component progressively. Use the complete examples later in this article as the copy-ready versions.
+
+**Step 1:** Import and Register the Component
+
+Import the HeatMap component in **src/App.vue**.
+
+In the Composition API example, use the `<script setup>` syntax. Components imported in this block are available to the template without a `components` option.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-import { HeatMapComponent  as EjsHeatmap, Tooltip, Legend }  from "@syncfusion/ej2-vue-heatmap";
-import { HeatMap } from '@syncfusion/ej2-heatmap';
-HeatMap.Inject(Legend, Tooltip);
+import { HeatMapComponent as EjsHeatmap } from '@syncfusion/ej2-vue-heatmap';
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { HeatMapComponent, Tooltip, Legend } from "@syncfusion/ej2-vue-heatmap";
-//Component registration
+import { HeatMapComponent } from '@syncfusion/ej2-vue-heatmap';
+
 export default {
-  name: "App",
+  name: 'App',
   components: {
     'ejs-heatmap': HeatMapComponent
   }
-}
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
-   
-2. In the `template` section, define the HeatMap component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/heatmap#datasource), [xAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#xaxis), [yAxis](https://ej2.syncfusion.com/vue/documentation/api/heatmap#yaxis), and other property bindings.
+
+**Step 2:** Declare the HeatMap Data
+
+Add the following values to the existing `<script setup>` block for the Composition API or to `data()` inside the existing `export default` object for the Options API.
+
+Each inner array represents one x-axis category and must contain one numeric value for every y-axis category. All rows must have the same length.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const dataSource = [
+  [73, 39, 26, 39, 94, 0],
+  [93, 58, 53, 38, 26, 68],
+  [99, 28, 22, 4, 66, 90],
+  [14, 26, 97, 69, 69, 3],
+  [7, 46, 47, 47, 88, 6],
+  [41, 55, 73, 23, 3, 79],
+  [56, 69, 21, 86, 3, 33],
+  [45, 7, 53, 81, 95, 79],
+  [60, 77, 74, 68, 88, 51],
+  [25, 25, 10, 12, 78, 14],
+  [25, 56, 55, 58, 12, 82],
+  [74, 33, 88, 23, 86, 59]
+];
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+export default {
+  data() {
+    return {
+      dataSource: [
+        [73, 39, 26, 39, 94, 0],
+        [93, 58, 53, 38, 26, 68],
+        [99, 28, 22, 4, 66, 90],
+        [14, 26, 97, 69, 69, 3],
+        [7, 46, 47, 47, 88, 6],
+        [41, 55, 73, 23, 3, 79],
+        [56, 69, 21, 86, 3, 33],
+        [45, 7, 53, 81, 95, 79],
+        [60, 77, 74, 68, 88, 51],
+        [25, 25, 10, 12, 78, 14],
+        [25, 56, 55, 58, 12, 82],
+        [74, 33, 88, 23, 86, 59]
+      ],
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3:** Define the HeatMap in the Template
+
+Add the HeatMap to the `template` section of **src/App.vue**.
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/heatmap#datasource) supplies the two-dimensional numeric data.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <ejs-heatmap id="heatmap" :dataSource='dataSource' :xAxis='xAxis' :yAxis='yAxis' :titleSettings='titleSettings' :legendSettings='legendSettings' :cellSettings='cellSettings' :showTooltip='showTooltip'></ejs-heatmap>
+  <div id="app">
+    <ejs-heatmap id="heatmap" :dataSource="dataSource"></ejs-heatmap>
+  </div>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-3. In the `script` section, declare the values for the HeatMap properties defined in the `template` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-    const xAxis = {
-          labels: ['Nancy', 'Andrew','Janet', 'Margaret', 'Steven', 'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin', 'Mario'],
-    };
-    const yAxis = {
-        labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
-    };
-    const cellSettings = {
-        showLabel: true,
-    };
-    const titleSettings = {
-        text: 'Sales Revenue per Employee (in 1000 US$)',
-        textStyle: {
-            size: '15px',
-            fontWeight: '500',
-            fontStyle: 'Normal',
-            fontFamily: 'Segoe UI'
-        }
-    };
-    const dataSource = [
-        [73, 39, 26, 39, 94, 0],
-        [93, 58, 53, 38, 26, 68],
-        [99, 28, 22, 4, 66, 90],
-        [14, 26, 97, 69, 69, 3],
-        [7, 46, 47, 47, 88, 6],
-        [41, 55, 73, 23, 3, 79],
-        [56, 69, 21, 86, 3, 33],
-        [45, 7, 53, 81, 95, 79],
-        [60, 77, 74, 68, 88, 51],
-        [25, 25, 10, 12, 78, 14],
-        [25, 56, 55, 58, 12, 82],
-        [74, 33, 88, 23, 86, 59]
-    ];
-    const legendSettings = {
-      visible:true,
-      position: 'Right',
-      showLabel: true,
-      height: "150"
-    };
-    const showTooltip = true;
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-  return {
-    xAxis: {
-      labels: ['Nancy', 'Andrew','Janet', 'Margaret', 'Steven', 'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin', 'Mario'],
-    },
-    yAxis:{
-      labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
-    },
-    cellSettings: {
-        showLabel: true,
-    },
-    titleSettings: {
-        text: 'Sales Revenue per Employee (in 1000 US$)',
-        textStyle: {
-            size: '15px',
-            fontWeight: '500',
-            fontStyle: 'Normal',
-            fontFamily: 'Segoe UI'
-        }
-    },
-    dataSource: [
-        [73, 39, 26, 39, 94, 0],
-        [93, 58, 53, 38, 26, 68],
-        [99, 28, 22, 4, 66, 90],
-        [14, 26, 97, 69, 69, 3],
-        [7, 46, 47, 47, 88, 6],
-        [41, 55, 73, 23, 3, 79],
-        [56, 69, 21, 86, 3, 33],
-        [45, 7, 53, 81, 95, 79],
-        [60, 77, 74, 68, 88, 51],
-        [25, 25, 10, 12, 78, 14],
-        [25, 56, 55, 58, 12, 82],
-        [74, 33, 88, 23, 86, 59]
-    ],
-    legendSettings: {
-        visible:true,
-        position: 'Right',
-        showLabel: true,
-        height: "150"
-    },
-    showTooltip:true
-  };
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Here is the summarized code for the above steps. Replace the contents of **src/App.vue** with either complete example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <ejs-heatmap id="heatmap" :dataSource='dataSource' :xAxis='xAxis' :yAxis='yAxis' :titleSettings='titleSettings' :legendSettings='legendSettings' :cellSettings='cellSettings' :showTooltip='showTooltip'></ejs-heatmap>
+  <div id="app">
+    <ejs-heatmap id="heatmap" :dataSource="dataSource"
+    ></ejs-heatmap>
+  </div>
 </template>
 
 <script setup>
-import { HeatMapComponent  as EjsHeatmap, Tooltip, Legend }  from "@syncfusion/ej2-vue-heatmap";
-import { HeatMap } from '@syncfusion/ej2-heatmap';
-HeatMap.Inject(Legend, Tooltip);
-    const xAxis = {
-          labels: ['Nancy', 'Andrew','Janet', 'Margaret', 'Steven', 'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin', 'Mario'],
-    };
-    const yAxis = {
-        labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
-    };
-    const cellSettings = {
-        showLabel: true,
-    };
-    const titleSettings = {
-        text: 'Sales Revenue per Employee (in 1000 US$)',
-        textStyle: {
-            size: '15px',
-            fontWeight: '500',
-            fontStyle: 'Normal',
-            fontFamily: 'Segoe UI'
-        }
-    };
-    const dataSource = [
-        [73, 39, 26, 39, 94, 0],
-        [93, 58, 53, 38, 26, 68],
-        [99, 28, 22, 4, 66, 90],
-        [14, 26, 97, 69, 69, 3],
-        [7, 46, 47, 47, 88, 6],
-        [41, 55, 73, 23, 3, 79],
-        [56, 69, 21, 86, 3, 33],
-        [45, 7, 53, 81, 95, 79],
-        [60, 77, 74, 68, 88, 51],
-        [25, 25, 10, 12, 78, 14],
-        [25, 56, 55, 58, 12, 82],
-        [74, 33, 88, 23, 86, 59]
-    ];
-    const legendSettings = {
-      visible:true,
-      position: 'Right',
-      showLabel: true,
-      height: "150"
-    };
-    const showTooltip = true;
+import { HeatMapComponent as EjsHeatmap } from '@syncfusion/ej2-vue-heatmap';
+
+const dataSource = [
+  [73, 39, 26, 39, 94, 0],
+  [93, 58, 53, 38, 26, 68],
+  [99, 28, 22, 4, 66, 90],
+  [14, 26, 97, 69, 69, 3],
+  [7, 46, 47, 47, 88, 6],
+  [41, 55, 73, 23, 3, 79],
+  [56, 69, 21, 86, 3, 33],
+  [45, 7, 53, 81, 95, 79],
+  [60, 77, 74, 68, 88, 51],
+  [25, 25, 10, 12, 78, 14],
+  [25, 56, 55, 58, 12, 82],
+  [74, 33, 88, 23, 86, 59]
+];
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <ejs-heatmap id="heatmap" :dataSource='dataSource' :xAxis='xAxis' :yAxis='yAxis' :titleSettings='titleSettings' :legendSettings='legendSettings' :cellSettings='cellSettings' :showTooltip='showTooltip'></ejs-heatmap>
+  <div id="app">
+    <ejs-heatmap id="heatmap" :dataSource="dataSource"
+    ></ejs-heatmap>
+  </div>
 </template>
 
 <script>
-  import { HeatMapComponent, Tooltip, Legend } from "@syncfusion/ej2-vue-heatmap";
-  // Component registration
-  export default {
-    name: "App",
-    // Declaring component and its directives
-    components: {
-        'ejs-heatmap': HeatMapComponent
-    },
-    // Bound properties declarations
-    data() {
-      return {
-         xAxis: {
-          labels: ['Nancy', 'Andrew','Janet', 'Margaret', 'Steven', 'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin', 'Mario'],
-        },
-        yAxis:{
-          labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
-        },
-        cellSettings: {
-            showLabel: true,
-        },
-        titleSettings: {
-            text: 'Sales Revenue per Employee (in 1000 US$)',
-            textStyle: {
-                size: '15px',
-                fontWeight: '500',
-                fontStyle: 'Normal',
-                fontFamily: 'Segoe UI'
-            }
-        },
-        dataSource: [
-            [73, 39, 26, 39, 94, 0],
-            [93, 58, 53, 38, 26, 68],
-            [99, 28, 22, 4, 66, 90],
-            [14, 26, 97, 69, 69, 3],
-            [7, 46, 47, 47, 88, 6],
-            [41, 55, 73, 23, 3, 79],
-            [56, 69, 21, 86, 3, 33],
-            [45, 7, 53, 81, 95, 79],
-            [60, 77, 74, 68, 88, 51],
-            [25, 25, 10, 12, 78, 14],
-            [25, 56, 55, 58, 12, 82],
-            [74, 33, 88, 23, 86, 59]
-        ],
-        legendSettings: {
-            visible:true,
-            position: 'Right',
-            showLabel: true,
-            height: "150"
-        },
-        showTooltip:true
-      };
-    },
-    provide: {
-      heatmap:[Tooltip, Legend]
-    }
-  };
+import { HeatMapComponent } from '@syncfusion/ej2-vue-heatmap';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-heatmap': HeatMapComponent
+  },
+  data() {
+    return {
+      dataSource: [
+        [73, 39, 26, 39, 94, 0],
+        [93, 58, 53, 38, 26, 68],
+        [99, 28, 22, 4, 66, 90],
+        [14, 26, 97, 69, 69, 3],
+        [7, 46, 47, 47, 88, 6],
+        [41, 55, 73, 23, 3, 79],
+        [56, 69, 21, 86, 3, 33],
+        [45, 7, 53, 81, 95, 79],
+        [60, 77, 74, 68, 88, 51],
+        [25, 25, 10, 12, 78, 14],
+        [25, 56, 55, 58, 12, 82],
+        [74, 33, 88, 23, 86, 59]
+      ],
+    };
+  }
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
+## Run the Application
 
-To run the project, use the following command:
+Save **src/App.vue**, and then start the development server.
+
+**npm**
 
 ```bash
 npm run dev
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run dev
 ```
 
-The Vite server will start on a local port (typically `http://localhost:5173`). Open this URL in your browser to view the HeatMap component in action. The output will display as follows:
+Open the URL displayed in the terminal, commonly `http://localhost:5173`, and verify that the HeatMap displays. Press `Ctrl+C` to stop the server.
 
 ![vue-3-js-HeatMap](./images/vue3-heatmap-demo.PNG)
 
+## Troubleshooting
 
-## See also
+- **The HeatMap is not rendered.** Verify that `HeatMapComponent` is imported or registered correctly and check the browser console for package, runtime, or licensing errors.
+- **The HeatMap is blank.** Verify that `dataSource` is a nonempty rectangular array containing numeric values.
+- **A module-not-found error occurs.** Verify that `@syncfusion/ej2-vue-heatmap` appears in `package.json`, reinstall dependencies, and restart the development server.
+- **A package or Vue version error occurs.** Confirm that the installed package release supports Vue 3 and the project's Node.js version.
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)
-* [HeatMap API Reference](https://ej2.syncfusion.com/vue/documentation/api/heatmap)
+For additional assistance, refer to the [Vue HeatMap API documentation](https://ej2.syncfusion.com/vue/documentation/api/heatmap).
+
+## See Also
+
+- [Vue 3 HeatMap getting-started documentation](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/getting-started-vue-3)
+- [Vue HeatMap axis](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/axis)
+- [Vue HeatMap legend](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/legend)
+- [Vue HeatMap palette](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/palette)
+- [Vue HeatMap tooltip](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/tooltip)
+- [Vue HeatMap examples](https://ej2.syncfusion.com/vue/demos/#/material3/heat-map-chart/default-functionalities.html)
+- [Composition API with TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Options API with TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

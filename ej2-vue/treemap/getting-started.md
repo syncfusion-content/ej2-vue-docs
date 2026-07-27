@@ -1,32 +1,33 @@
 ---
 layout: post
-title: Getting started with Vue TreeMap component | Syncfusion
-description:  Checkout and learn about Getting started with Vue TreeMap component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with the Vue TreeMap Component in Vue 2 | Syncfusion
+description: Set up a Vue 2 application and integrate the Syncfusion Vue TreeMap component with data binding, and a working example.
+control: TreeMap
 platform: ej2-vue
 documentation: ug
+framework-version: 2
 domainurl: ##DomainURL##
 ---
 
 # Getting Started with the Vue TreeMap Component in Vue 2
 
-This guide demonstrates how to set up the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component in a Vue 2 project and explore its core features such as data binding, color mapping, and legends.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue TreeMap component.
 
 You can explore some useful features of the TreeMap component in the following video.
 
 {% youtube "https://www.youtube.com/watch?v=fFSUhC9SAoQ" %}
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component.
+The [Vue TreeMap customization video](https://www.youtube.com/watch?v=fFSUhC9SAoQ) demonstrates data binding, item customization, color mapping, and related visualization features.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 ## Dependencies
 
-The following list of minimum dependencies are required to use the TreeMap:
+The following packages are used by the Vue TreeMap package:
 
-```javascript
+```
 |-- @syncfusion/ej2-treemap
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
@@ -36,219 +37,181 @@ The following list of minimum dependencies are required to use the TreeMap:
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Setting up the Vue 2 project
+Only the `@syncfusion/ej2-vue-treemap` package must be installed directly. Its required dependencies are installed automatically.
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Use a package release that supports Vue 2. Before upgrading, check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and package release notes.
+
+> **Note:** The TreeMap renders its visualization with SVG. This basic example does not require a separate TreeMap theme stylesheet.
+
+## Set Up the Vue 2 Project
+
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+
+**npm**
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating the project, select `Default ([Vue 2] babel, eslint)` from the menu.
 
 ![Vue 2 project](./images/vue2-terminal.png)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
-
-This article uses the [Vue Treemap component](https://www.syncfusion.com/vue-components/vue-treemap) as an example. Install the `@syncfusion/ej2-vue-treemap` package by running the following command:
+After the project is created, navigate to its directory:
 
 ```bash
-npm install @syncfusion/ej2-vue-treemap --save
+cd quickstart
 ```
-or
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap Package
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are published on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the `@syncfusion/ej2-vue-treemap` package using either npm or yarn.
+
+**npm**
+
+```bash
+npm install @syncfusion/ej2-vue-treemap
+```
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-treemap
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component
+> **Note:** npm v5 and later save installed packages to `dependencies` by default, so the `--save` option is not required.
 
-Follow these steps to add the Vue TreeMap component:
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap Component
 
-1\. First, import and register the TreeMap component in the `script` section of the **src/App.vue** file. 
+Follow these steps to initialize an empty Vue TreeMap component. Data binding is added in the next section.
+
+**Step 1:** Import and locally register the TreeMap component in the `script` section of **src/App.vue**.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<script setup>
-import { TreeMapComponent as EjsTreemap } from "@syncfusion/ej2-vue-treemap";
-
-const dataSource = [
-            { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
-            { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 12 },
-            { Title: 'State wise International Airport count in South America', State: "Argentina", Count: 9 },
-            { Title: 'State wise International Airport count in South America', State: "Ecuador", Count: 7 },
-            { Title: 'State wise International Airport count in South America', State: "Chile", Count: 6 },
-            { Title: 'State wise International Airport count in South America', State: "Peru", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Venezuela", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Bolivia", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Paraguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Uruguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Falkland Islands",Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "French Guiana", Count:1 },
-            { Title: 'State wise International Airport count in South America', State: "Guyana", Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "Suriname", Count: 1 },
-];
-const weightValuePath = 'Count';
-const leafItemSettings: {
-  labelPath: 'State',
-};
-
-</script>
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { TreeMapComponent } from "@syncfusion/ej2-vue-treemap";
+import { TreeMapComponent } from '@syncfusion/ej2-vue-treemap';
 
 export default {
-name: "App",
+  name: 'App',
   components: {
     'ejs-treemap': TreeMapComponent
-  },
-  data: function() {
-    return {
-        dataSource: [
-            { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
-            { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 12 },
-            { Title: 'State wise International Airport count in South America', State: "Argentina", Count: 9 },
-            { Title: 'State wise International Airport count in South America', State: "Ecuador", Count: 7 },
-            { Title: 'State wise International Airport count in South America', State: "Chile", Count: 6 },
-            { Title: 'State wise International Airport count in South America', State: "Peru", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Venezuela", Count: 3 },
-            { Title: 'State wise International Airport count in South America', State: "Bolivia", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Paraguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Uruguay", Count: 2 },
-            { Title: 'State wise International Airport count in South America', State: "Falkland Islands",Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "French Guiana", Count:1 },
-            { Title: 'State wise International Airport count in South America', State: "Guyana", Count: 1 },
-            { Title: 'State wise International Airport count in South America', State: "Suriname", Count: 1 },
-        ],
-        weightValuePath: 'Count',
-        leafItemSettings: {
-            labelPath: 'State',
-        }
-     }
   }
-}
+};
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the TreeMap component.
+**Step 2:** Add an empty TreeMap component to the `template` section of **src/App.vue**.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-        <ejs-treemap :dataSource='dataSource' :weightValuePath='weightValuePath' :leafItemSettings='leafItemSettings'></ejs-treemap>
-    </div>
+  <div id="app">
+    <ejs-treemap id="treemap"></ejs-treemap>
+  </div>
 </template>
 
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+At this stage, the component contains no data and does not display TreeMap items.
+
+**Step 3:** Bind Data to TreeMap
+
+The example uses the following properties:
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#datasource) specifies the array of data objects.
+- [`weightValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#weightvaluepath) specifies the numeric field that determines each rectangle's size.
+- [`leafItemSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#leafitemsettings) configures leaf labels and appearance.
+- [`labelPath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafitemsettingsmodel#labelpath) specifies the data field displayed as the leaf label.
+
+Replace the contents of **src/App.vue** with the below example.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/treemap/getting-started-cs60/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/treemap/getting-started-cs60/app.vue %}
+{% include code-snippet/treemap/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
-To run the project, use the following command:
+Save **src/App.vue**, and then start the development server.
+
+**npm**
 
 ```bash
 npm run serve
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run serve
 ```
-{% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs60" %}
 
-## Module Injection
+Open the URL displayed in the terminal, commonly `http://localhost:8080`, and verify that the TreeMap is displayed correctly.
 
-The TreeMap component is composed of individual feature-specific modules that are loaded on demand. To enable advanced features such as legends, tooltips, and interactive selection, inject the required modules using the `provide` option. This approach optimizes bundle size by including only the features needed for the application.
-
-* TreeMapHighlight - Inject this provider to use highlight feature.
-* TreeMapSelection - Inject this provider to use selection feature.
-* TreeMapLegend - Inject this provider to use legend feature.
-* TreeMapTooltip - Inject this provider to use tooltip series.
-
-In the current application, the above basic tree map is modified to visualize international airport count in South America.
-
-For basic rendering with labels (as shown in the following sections), no module injection is required. Module injection becomes necessary only when implementing the respective features.
-
-## Render tree map
-
-This section explains how to render the TreeMap with a data source and customize its appearance using leaf item settings.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/treemap/getting-started-cs15/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/treemap/getting-started-cs15/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
 {% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs15" %}
 
-Here, the tree map is created with data source and set with the [`weightValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#weightvaluepath) as count. You can customize the leaf level tree map items using the [`leafItemSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#leafitemsettings). The properties such as [`fill`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafitemsettingsmodel#fill), [`border`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafitemsettingsmodel#border), and [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafitemsettingsmodel#labelposition) can be changed using the [`leafItemSettings`].
+## Register Feature Modules
 
-## Apply color mapping
+The TreeMap loads optional features through feature-specific modules. If a required module is not registered, the related feature is not rendered.
 
-The color mapping feature supports customization of item colors based on the underlying value of item received from bound data source. Specify the field name from the values that have to be compared for the item in the [`equalColorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#equalcolorvaluepath) or [`rangeColorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/index-default#rangecolorvaluepath) property.
+The following modules are commonly used:
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/treemap/getting-started-cs16/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/treemap/getting-started-cs16/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs16" %}
+- `TreeMapHighlight` enables highlighting.
+- `TreeMapSelection` enables selection.
+- `TreeMapLegend` enables the legend.
+- `TreeMapTooltip` enables tooltips.
 
-## Enable legend
+Register only the modules required by the application inside the component's `export default` object, using the exact `treemap` key:
 
-You can display a legend for the TreeMap by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendsettings#visible) property to `true` in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings) object and injecting the `TreeMapLegend` module using the `provide` option. The legend helps users understand the color mapping and value ranges used in the visualization.
+```html
+<script>
+import { TreeMapComponent, TreeMapHighlight, TreeMapSelection, TreeMapLegend, TreeMapTooltip } from '@syncfusion/ej2-vue-treemap';
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/treemap/getting-started-cs17/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/treemap/getting-started-cs17/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs17" %}
+export default {
+  components: {
+    'ejs-treemap': TreeMapComponent
+  },
+  provide: {
+    treemap: [TreeMapHighlight, TreeMapSelection, TreeMapLegend, TreeMapTooltip]
+  }
+};
+</script>
+```
+
+Refer to the [TreeMap API documentation](https://ej2.syncfusion.com/vue/documentation/api/treemap) and the related feature pages for configuration details.
+
+> **Sample:** Explore the [Vue TreeMap getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-treemap-component).
+
+## Troubleshooting
+
+- **The TreeMap is not rendered.** Verify that `TreeMapComponent` is imported and registered, the data source contains records, and the browser console contains no component, package, or licensing errors.
+- **The TreeMap is blank.** Verify that `weightValuePath` matches a numeric field in every data object.
+- **Labels are not displayed.** Verify that `leafItemSettings.labelPath` matches a field in every data object.
+- **A module-not-found error occurs.** Verify that `@syncfusion/ej2-vue-treemap` is installed and restart the development server.
+- **A package or Vue version error occurs.** Confirm that the installed package release supports Vue 2 and that all Syncfusion packages use compatible versions.
+
+For additional assistance, refer to the [Vue TreeMap API documentation](https://ej2.syncfusion.com/vue/documentation/api/treemap).
+
+## See Also
+
+- [Vue TreeMap color mapping](https://ej2.syncfusion.com/vue/documentation/treemap/color-mapping)
+- [Vue TreeMap legend](https://ej2.syncfusion.com/vue/documentation/treemap/legend)
+- [Vue TreeMap examples](https://ej2.syncfusion.com/vue/demos/#/material3/treemap/default.html)
+- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
