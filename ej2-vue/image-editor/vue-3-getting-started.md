@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Vue 3 getting started with the Badge component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Badge component of Syncfusion Essential JS 2 and more details.
-control: Vue 3 getting started
+title: Getting Started Vue3 with Vue Image Editor component | Syncfusion
+description:  Checkout and learn about Getting Started vue3 with Vue Image Editor component of Syncfusion Essential JS 2 and more details.
+control: Vue 3 Getting Started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Badge Component in Vue 3
+# Getting Started with the Vue Image Editor Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Badge component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Image Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -55,18 +55,18 @@ Then, navigate to the project directory:
 cd my-app
 ```
 
-## Add Vue Badge packages
+## Add Vue Image Editor packages
 
-To install the Badge packages, use the following command:
+To install the Image Editor packages, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-vue-notifications
+npm install @syncfusion/ej2-vue-image-editor
 ```
 
 or
 
 ```bash
-yarn add @syncfusion/ej2-vue-notifications
+yarn add @syncfusion/ej2-vue-image-editor
 ```
 
 ## Adding CSS reference
@@ -89,28 +89,63 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/badge/index.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/image-editor/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Vue Badge component
+## Adding Vue Image Editor component
 
-The Badge code should be added in the **src/App.vue** file.
+The Image Editor code should be added in the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
-  <div id='element'>
-    <h1>Badge Component <span class="e-badge e-badge-primary">New</span></h1>
+    <div>
+    <ejs-imageeditor id="image-editor" height="350px" width="550px"></ejs-imageeditor>
+    </div>
+</template>
+
+<script setup>
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+</script>
+
+
+<style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/image-editor/index.css";
+</style>
+
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div>
+    <ejs-imageeditor id="image-editor" height="350px" width="550px"></ejs-imageeditor>
   </div>
 </template>
 
+<script>
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+
+export default {
+  name: "App",
+  components: {
+    'ejs-imageeditor': ImageEditorComponent
+  },
+  data: function() {
+      return {};
+  }
+}
+</script>
+
 <style>
-  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/badge/index.css";
- </style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/image-editor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -128,8 +163,6 @@ or
 ```bash
 yarn run dev
 ```
-
-![vue-3-js-badge](./images/vue3-badge-demo.PNG)
 
 ## See also
 

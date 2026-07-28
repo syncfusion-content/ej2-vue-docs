@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started vue3 with Vue TextArea component | Syncfusion
-description:  Checkout and learn about Getting started vue3 with Vue TextArea component of Syncfusion Essential JS 2 and more details.
-control: Getting started vue3 
+title: Getting Started vue3 with Vue TextArea component | Syncfusion
+description:  Checkout and learn about Getting Started vue3 with Vue TextArea component of Syncfusion Essential JS 2 and more details.
+control: Getting Started vue3 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -20,87 +20,47 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Set up the vite project
+## Setup for local development
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
+
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
+
+***Vue with JavaScript***
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+***Vue with TypeScript***
 
 ```bash
-yarn create vite
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+## Add Vue TextArea packages
+
+To install the TextArea packages, use the following command:
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
-
-```bash
-Use rolldown-vite (Experimental)? No
-```
-
-5.Install dependencies and start the dev server.
-
-```bash
-Install with npm and start now?: Yes
-```
-
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
-
-```bash
-cd my-project
-npm install
-```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add syncfusion<sup style="font-size:70%">&reg;</sup> vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue TextArea component](https://www.syncfusion.com/vue-components/vue-textarea) as an example. To use the Vue TextArea component in the project, the `@syncfusion/ej2-vue-inputs` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-inputs --save
+npm install @syncfusion/ej2-vue-inputs
 ```
 
 or
@@ -109,74 +69,74 @@ or
 yarn add @syncfusion/ej2-vue-inputs
 ```
 
-## Import syncfusion<sup style="font-size:70%">&reg;</sup> css styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the TextArea component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/textarea/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+## Adding Vue TextArea component
 
-## Add syncfusion<sup style="font-size:70%">&reg;</sup> vue component
-
-Follow the below steps to add the Vue TextArea component using `Composition API` or `Options API`:
-
-First, import and register the TextArea component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+The TextArea code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { TextAreaComponent as EjsTextArea } from "@syncfusion/ej2-vue-inputs";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 
+<template>
+  <ejs-textarea id="default"></ejs-textarea>
+</template>
+
 <script setup>
-  import { TextAreaComponent as EjsTextArea } from "@syncfusion/ej2-vue-inputs";
+import { TextAreaComponent as EjsTextarea } from "@syncfusion/ej2-vue-inputs";
 </script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/textarea/index.css";
+</style>
 
 {% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
+<template>
+  <ejs-textarea id="default"></ejs-textarea>
+</template>
+
 <script>
 import { TextAreaComponent } from "@syncfusion/ej2-vue-inputs";
-//Component registeration
+//Component registration
 export default {
 name: "App",
 components: {
-"ejs-textarea'":TextareaComponent
+"ejs-textarea": TextAreaComponent
 }
 }
 </script>
 
-{% endhighlight %}
-{% endtabs %}
-   
-In the `template` section, define the TextArea component.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default"></ejs-textarea>
-    </div>
-</template>
+<style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/textarea/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -195,375 +155,11 @@ or
 yarn run dev
 ```
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <div class ='wrap'>
-        <div id ='input-container'>
-            <ejs-textarea id='default'></ejs-textarea>
-        </div>
-    </div>
-</template>
-
-<script setup>
-import { TextAreaComponent as EjsTextarea } from '@syncfusion/ej2-vue-inputs';
-</script>
-
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-
-  .wrap {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 20px 10px;
-    width: 340px;
-  }
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div class ='wrap'>
-    <div id ='input-container'>
-      <ejs-textarea id='default'></ejs-textarea>
-    </div>
-  </div>
-</template>
-<script>
-import { TextAreaComponent } from '@syncfusion/ej2-vue-inputs';
-export default {
-name: "App",
-components: {
-"ejs-textarea":TextAreaComponent
-},
-  data: function() {
-      return { }
-  }
-}
-</script>
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-  .wrap {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 20px 10px;
-    width: 340px;
-  }
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-The output will appear as follows:
-
 ![Output](./images/textarea-control.png)
 
-## Getting and setting values
-
-To set the initial value of the TextArea component, you can utilize the [`value`](https://ej2.syncfusion.com/vue/documentation/api/textarea/#value) property. Here's how you can achieve it:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default" value="comments"></ejs-textarea>
-    </div>
-</template>
-
-<script setup>
-
-import { TextAreaComponent as EjsTextarea} from "@syncfusion/ej2-vue-inputs";
-
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-.wrap {
-  margin: 50px auto;
-  text-align: center;
-}
-
-</style>
-
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default" value="comments"></ejs-textarea>
-    </div>
-</template>
-
-<script>
-
-import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
-
-export default {
-name: "App",
-components: {
-"ejs-textarea":TextAreaComponent
-},
-data: function() {
-  return { }
-}
-}
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-.wrap {
-  margin: 50px auto;
-  text-align: center;
-}
-
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-* Alternatively, you can set the value of the TextArea using v-model.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default" v-model="value"></ejs-textarea>
-    </div>
-</template>
-
-<script setup>
-
-import { TextAreaComponent as EjsTextArea } from "@syncfusion/ej2-vue-inputs";
-
-let value = 'Comments';
-  
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-.wrap {
-  margin: 50px auto;
-  text-align: center;
-}
-
-</style>
-
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default" v-model="value"></ejs-textarea>
-    </div>
-</template>
-
-<script>
-
-import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
-
-export default {
-name: "App",
-components: {
-"ejs-textarea":TextAreaComponent
-},
-  data: function() {
-    return {
-      value: 'Comments'
-    }
-  }
-}
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-.wrap {
-  margin: 50px auto;
-  text-align: center;
-}
-
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-* You can dynamically retrieve the value of the TextArea component using the state variable assigned to the `value` property of the TextArea component.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default" v-model="value"></ejs-textarea>
-        <button id="valuebtn" @click="onButtonClick">Get Value</button>
-    </div>
-</template>
-
-<script setup>
-
-import { TextAreaComponent as EjsTextarea } from "@syncfusion/ej2-vue-inputs";
-
-let value = 'Comments';
-
-const onButtonClick = () => {
-    // Retrieve the value from the textarea
-    const textareaValue = value;
-    console.log(textareaValue);
-}
-
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-.wrap {
-  margin: 50px auto;
-  text-align: center;
-}
-</style>
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default" v-model="value"></ejs-textarea>
-        <button id="valuebtn" @click="onButtonClick">Get Value</button>
-    </div>
-</template>
-
-<script>
-
-import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
-
-export default {
-name: "App",
-components: {
-"ejs-textarea":TextAreaComponent
-},
-data() {
-    return {
-        value: 'Comments'
-    }
-},
-methods: {
-    onButtonClick() {
-        // Retrieve the value from the textarea
-        const textareaValue = this.value;
-        console.log(textareaValue);
-    }
-}
-}
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-.wrap {
-  margin: 50px auto;
-  text-align: center;
-}
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-* You can retrieve the value of the TextArea by accessing it as an argument from the [`change`](https://ej2.syncfusion.com/vue/documentation/api/textarea/#change) event.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default" v-model="value" :change="onChange"></ejs-textarea>
-    </div>
-</template>
-
-<script setup>
-
-import { TextAreaComponent as EjsTextarea } from "@syncfusion/ej2-vue-inputs";
-
-let value = 'Comments';
-
-const onChange = (args) => {
-    // Retrieve the value from the textarea
-    const textareaValue = args.value;
-    console.log(textareaValue);
-}
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-.wrap {
-  margin: 50px auto;
-  text-align: center;
-}
-</style>
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-
-<template>
-    <div class='wrap'>
-        <ejs-textarea id="default" v-model="value" :change="onChange"></ejs-textarea>
-    </div>
-</template>
-
-<script>
-
-import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
-
-export default {
-name: "App",
-components: {
-"ejs-textarea":TextAreaComponent
-},
-data() {
-    return {
-        value: 'Comments'
-    }
-},
-methods: {
-    onChange: function(args) {
-      let textareaValue = args.value;
-    }
-}
-}
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-.wrap {
-  margin: 50px auto;
-  text-align: center;
-}
-</style>
-
-{% endhighlight %}
-{% endtabs %}
+## See also
+
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting Started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)
