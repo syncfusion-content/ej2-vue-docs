@@ -25,7 +25,7 @@ To get started quickly with Vue Dropdown List, check this video:
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue Dropdown List version |
 | ------------- | ------------------------------------------- |
 |[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
 
@@ -122,7 +122,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Dropdown List component
+## Adding Dropdown List component
 
 Now, you can add the Vue Dropdown List component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
@@ -133,7 +133,7 @@ Now, you can add the Vue Dropdown List component to your **src/App.vue** file by
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;">
         <br>
-        <ejs-dropdownlist id='Dropdownlist' :dataSource='sportsData' placeholder='Select a game'></ejs-dropdownlist>
+        <ejs-dropdownlist id='dropdownlist' :dataSource='sportsData' placeholder='Select a game'></ejs-dropdownlist>
     </div>
   </div>
 </template>
@@ -154,7 +154,7 @@ Now, you can add the Vue Dropdown List component to your **src/App.vue** file by
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;">
         <br>
-        <ejs-dropdownlist id='Dropdownlist' :dataSource='sportsData' placeholder='Select a game'></ejs-dropdownlist>
+        <ejs-dropdownlist id='dropdownlist' :dataSource='sportsData' placeholder='Select a game'></ejs-dropdownlist>
     </div>
   </div>
 </template>
@@ -180,9 +180,9 @@ Now, you can add the Vue Dropdown List component to your **src/App.vue** file by
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the application
 
-To run the project, use the following command:
+To run the application, use the following command:
 
 ```bash
 npm run serve

@@ -25,7 +25,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue Dropdown List version |
 | ------------- | ------------------------------------------- |
 |[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
@@ -131,7 +131,7 @@ Now, you can add the Vue Dropdown List component to your **src/App.vue** file by
 
 <template>
     <div class="control_wrapper">
-        <ejs-dropdownlist id='Dropdownlist' :dataSource='data[0].sportsData'></ejs-dropdownlist>
+        <ejs-dropdownlist id='dropdownlist' :dataSource='data[0].sportsData'></ejs-dropdownlist>
     </div>
 </template>
 
@@ -149,7 +149,7 @@ Now, you can add the Vue Dropdown List component to your **src/App.vue** file by
 
 <template>
     <div class="control_wrapper">
-        <ejs-dropdownlist id='Dropdownlist' :dataSource='sportsData'></ejs-dropdownlist>
+        <ejs-dropdownlist id='dropdownlist' :dataSource='sportsData'></ejs-dropdownlist>
     </div>
 </template>
 
@@ -176,9 +176,9 @@ Now, you can add the Vue Dropdown List component to your **src/App.vue** file by
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the application
 
-To run the project, use the following command:
+To run the application, use the following command:
 
 ```bash
 npm run dev

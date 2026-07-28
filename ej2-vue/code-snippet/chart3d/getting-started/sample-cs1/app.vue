@@ -17,8 +17,3 @@ export default {
   }
 }
 </script>
-<style>
-#container {
-  height: 350px;
-}
-</style>

@@ -8,102 +8,81 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the Vue Range Navigator component in Vue 3
+# Getting Started with the Vue Range Navigator Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to setting up a [Vite](https://vitejs.dev) project using JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component with either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
-
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
+The **Composition API** groups related logic into reusable functions and is recommended for larger, composition-friendly code bases. The **Options API** uses `data`, `methods`, and life cycle options and may be preferable for smaller components or teams familiar with Vue 2 patterns. Choose the API that best fits your project's structure and long-term maintainability.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure your development environment meets the following requirements as listed in https://ej2.syncfusion.com/vue/documentation/system-requirements.
 
-## Setup the Vite project
+## Set Up the Vite Project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Create a Vite project using either npm or yarn.
+
+**npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+**yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
-Using one of the above commands will lead you through a short interactive setup:
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The Syncfusion package is installed in a later step.
 
-1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+Navigate to the project directory:
+
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2. Select `Vue` as the framework. It will create a Vue 3 project.
+Install the project dependencies using either npm or yarn.
+
+**npm**
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3. Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
-
-```bash
-cd my-project
 npm install
 ```
 
-or
+**yarn**
 
 ```bash
-cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+> **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at https://www.npmjs.com/search?q=ej2-vue. To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Range Navigator component](https://www.syncfusion.com/vue-components/vue-range-selector) as an example. To use the Vue Range Navigator component in the project, the `@syncfusion/ej2-vue-charts` package needs to be installed using the following command:
+This article uses the https://www.syncfusion.com/vue-components/vue-range-selector as an example. To use the Vue Range Navigator component in the project, install the `@syncfusion/ej2-vue-charts` package using either npm or yarn. The package is compatible with Vue 3.0 and later versions.
+
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
 ```
 
-or
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
+> **Note:** For TypeScript support, refer to https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition or https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator Component
 
+Follow the steps below to add the Vue Range Navigator component using the `Composition API` or `Options API`.
 
-Follow the steps below to add the Vue Range Navigator component using the Composition or Options API:
-
-1. First, import and register the Range Navigator component and its child directives in the `script` section of the **src/App.vue** file. If you are using the Composition API, add the `setup` attribute to the `script` tag.
+**Step 1:** First, import and register the Range Navigator component and its child directives in the `script` section of **src/App.vue**. If using the `Composition API`, add the `setup` attribute to the `script` tag.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -118,13 +97,13 @@ import { RangeNavigatorComponent as EjsRangenavigator, StepLineSeries, DateTime,
 <script>
 import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
 RangenavigatorSeriesDirective } from '@syncfusion/ej2-vue-charts';
-//Component registration
+// Register Range Navigator component and its child directives
 export default {
   name: "App",
   components: {
     "ejs-rangenavigator": RangeNavigatorComponent,
     "e-rangenavigator-series-collection": RangenavigatorSeriesCollectionDirective,
-    "e-rangenavigator-series":  RangenavigatorSeriesDirective
+    "e-rangenavigator-series": RangenavigatorSeriesDirective
   }
 }
 </script>
@@ -132,7 +111,55 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the Range Navigator component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#datasource) property.
+**Step 2:** Declare the data source and component configuration values in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const data = [
+  { x: new Date('2005-01-01'), y: 21 },
+  { x: new Date('2006-01-01'), y: 24 },
+  { x: new Date('2007-01-01'), y: 36 },
+  { x: new Date('2008-01-01'), y: 38 },
+  { x: new Date('2009-01-01'), y: 54 },
+  { x: new Date('2010-01-01'), y: 57 },
+  { x: new Date('2011-01-01'), y: 62 }
+];
+
+const valueType = 'DateTime';
+const value = [new Date('2008-01-01'), new Date('2010-01-01')];
+const labelFormat = 'MMM-yy';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+export default {
+  data() {
+    return {
+      data: [
+        { x: new Date('2005-01-01'), y: 21 },
+        { x: new Date('2006-01-01'), y: 24 },
+        { x: new Date('2007-01-01'), y: 36 },
+        { x: new Date('2008-01-01'), y: 38 },
+        { x: new Date('2009-01-01'), y: 54 },
+        { x: new Date('2010-01-01'), y: 57 },
+        { x: new Date('2011-01-01'), y: 62 }
+      ],
+      valueType: 'DateTime',
+      value: [new Date('2008-01-01'), new Date('2010-01-01')],
+      labelFormat: 'MMM-yy'
+    };
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3:** In the `template` section, define the Range Navigator component and configure a series with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#datasource), [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname), and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#yname) properties.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -149,52 +176,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-3. Declare the values for the `dataSource` property in the `script` section.
+Here is the summarized code for the above steps in the **src/App.vue** file.
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-const data = [
-    { x: new Date('2005-01-01'), y: 21 },
-    { x: new Date('2006-01-01'), y: 24 },
-    { x: new Date('2007-01-01'), y: 36 },
-    { x: new Date('2008-01-01'), y: 38 },
-    { x: new Date('2009-01-01'), y: 54 },
-    { x: new Date('2010-01-01'), y: 57 },
-    { x: new Date('2011-01-01'), y: 62 }
-];
-const valueType = 'DateTime';
-const value = [new Date('2008-01-01'), new Date('2010-01-01')];
-const labelFormat = 'MMM-yy';
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-    return {
-        data: [
-            { x: new Date('2005-01-01'), y: 21 },
-            { x: new Date('2006-01-01'), y: 24 },
-            { x: new Date('2007-01-01'), y: 36 },
-            { x: new Date('2008-01-01'), y: 38 },
-            { x: new Date('2009-01-01'), y: 54 },
-            { x: new Date('2010-01-01'), y: 57 },
-            { x: new Date('2011-01-01'), y: 62 }
-        ],
-        valueType: 'DateTime',
-        value: [new Date('2008-01-01'), new Date('2010-01-01')],
-        labelFormat: 'MMM-yy'
-    };
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+> **Note:** The Composition API example uses an import alias for `RangeNavigatorComponent`, while the Options API example uses `RangeNavigatorComponent` directly. The names shown in each example match the corresponding imports.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -276,27 +260,47 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the Project
 
-To run the project, use the following command:
+To run the project, use either npm or yarn:
+
+**npm**
 
 ```bash
 npm run dev
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run dev
 ```
 
+- Open the project URL shown in the terminal (usually `http://localhost:5173`) and verify the Range Navigator displays.
+
 The output will appear as follows:
 
 ![Vue 3 Range Navigator demo](./images/vue3-RN-demo.png)
 
-> **Sample**: [vue-3-range-navigator-getting-started](https://github.com/SyncfusionExamples/vue3-range-navigator-getting-started).
+> **Sample:** You can explore the complete sample project in the https://github.com/SyncfusionExamples/vue3-range-navigator-getting-started repository.
 
-## See also
+For migration information from Vue 2 to Vue 3, refer to the https://v3-migration.vuejs.org/.
+
+## Troubleshooting
+
+- **The Range Navigator is not rendered.** Ensure that the required modules (`DateTime`, `StepLineSeries`) are injected using `provide()` in the Composition API or the `provide` option in the Options API. Verify that the data source is correctly assigned and check the browser console for any runtime errors.
+
+- **The series type is not registered.** Confirm that the required series module, such as `StepLineSeries`, is imported from `@syncfusion/ej2-vue-charts` and added to the `rangeNavigator` collection in the `provide` configuration.
+
+- **No data is displayed.** Verify that [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#datasource) contains records, ensure that [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname)and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname) match the field names in the data source, and confirm that the field specified in `yName` contains numeric values.
+
+- **Date-time values are not displayed correctly.** Set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorModel#valuetype) property to `DateTime`, import and inject the `DateTime` module, and ensure that the data source contains valid JavaScript `Date` objects.
+
+- **Console errors are displayed.** Verify that the `@syncfusion/ej2-vue-charts` package is installed correctly, ensure that the development server is running, and review the browser developer tools for import or runtime errors.
+
+For additional assistance, refer to the [Vue Range Navigator API Documentation](https://ej2.syncfusion.com/vue/documentation/api/range-navigator) and the ./feature-modules page.
+
+## See Also
 
 * [Getting Started with Vue UI Components using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
 * [Getting Started with Vue UI Components using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

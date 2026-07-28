@@ -1,97 +1,78 @@
 ---
 layout: post
-title: Vue 3 getting started with the 3D Chart component | Syncfusion
-description: Set up a Vite Vue 3 project and integrate Syncfusion EJ2 3D Charts with Composition and Options API examples plus essential setup tips.
+title: Vue 3 Getting Started with the 3D Chart Component | Syncfusion
+description: Create a Vite-based Vue 3 project and integrate the Syncfusion Essential JS 2 3D Chart component using the Composition API or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: https://ej2.syncfusion.com
 ---
 
-# Getting started with the Vue 3D chart component in Vue 3
+# Getting Started with the Vue 3D Chart Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to setting up a [Vite](https://vite.dev/) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The Composition API, introduced in Vue 3, organizes related logic into reusable composition functions and is recommended for larger or composition-oriented code bases. The Options API organizes component logic with `data`, `methods`, and life cycle hooks and may be preferable for smaller components or teams familiar with Vue 2 patterns.
+The **Composition API** groups related logic into reusable functions and is suitable for larger code bases. The **Options API** organizes component logic with options such as `data`, `methods`, and life cycle hooks. Choose the API that best fits the application's structure and maintainability requirements.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+Ensure that the development environment meets the [system requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
-## Set up the Vite project
+## Set Up the Vite Project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Create a Vite project using either npm or yarn.
+
+**npm**
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+**yarn**
 
 ```bash
-yarn create vite
+yarn create vite my-app --template vue
 ```
 
+If Vite prompts you to install dependencies and start the project immediately, select **No**. The Syncfusion package is installed in a later step.
 
-Using one of the above commands starts an interactive setup. Follow these steps:
-
-1. Define the project name. For this article use `my-project`.
+Navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2. Select `Vue` as the framework to create a Vue 3 project.
+Install the project dependencies using either npm or yarn.
+
+**npm**
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3. Choose `JavaScript` as the project variant.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-
-4. After creating the project, install dependencies by running:
-
-```bash
-cd my-project
 npm install
 ```
 
-or
+**yarn**
 
 ```bash
-cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready with default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
+Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+> **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
 
-This article uses the Vue 3D Chart component as an example. Install the `@syncfusion/ej2-vue-charts` package with:
+Syncfusion Vue packages are available on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the `@syncfusion/ej2-vue-charts` package. Use a package release that supports Vue 3 and the Node.js version used by the project.
+
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts
 ```
 
-or
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
@@ -99,37 +80,33 @@ yarn add @syncfusion/ej2-vue-charts
 
 > Note: npm v5+ saves packages to `dependencies` by default; `--save` is not required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart Component
 
-Follow the steps below to add the Vue 3D Chart component using the Composition API or Options API.
+Follow these steps to add the Vue 3D Chart component using the Composition API or Options API.
 
-1. Import and register the 3D Chart component, its child directives, and required modules in the `script` section of **src/App.vue**.  
-   **Important:** When using Composition API, also import `provide` from 'vue' and inject the modules — this is required or the series will not render.
+**Step 1:** Import and Register the Component
+
+Import the 3D Chart component, its child directives, and the modules required by the example in the `script` section of **src/App.vue**.
+
+The example uses these modules:
+
+- `ColumnSeries3D` renders the 3D column series.
+- `Category3D` supports category values on the horizontal axis.
+
+When using the Composition API, alias the imported component and directive names so they match the custom elements used in the template. Components imported in `<script setup>` are available directly in the template.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
 import { provide } from 'vue';
-import { 
-  Chart3DComponent, 
-  Chart3DSeriesCollectionDirective, 
-  Chart3DSeriesDirective, 
-  ColumnSeries3D, 
-  Category3D 
-} from "@syncfusion/ej2-vue-charts";
-
-let seriesData = [
-    { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-    { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-    { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-    { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-    { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-    { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-];
-
-let title = 'Sales Analysis';
-let primaryXAxis = { valueType: 'Category' };
+import {
+  Chart3DComponent as EjsChart3d,
+  Chart3DSeriesCollectionDirective as EChart3dSeriesCollection,
+  Chart3DSeriesDirective as EChart3dSeries,
+  ColumnSeries3D,
+  Category3D
+} from '@syncfusion/ej2-vue-charts';
 
 provide('chart3d', [ColumnSeries3D, Category3D]);
 </script>
@@ -138,34 +115,20 @@ provide('chart3d', [ColumnSeries3D, Category3D]);
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { 
-  Chart3DComponent, 
-  Chart3DSeriesCollectionDirective, 
-  Chart3DSeriesDirective, 
-  ColumnSeries3D, 
-  Category3D 
+import {
+  Chart3DComponent,
+  Chart3DSeriesCollectionDirective,
+  Chart3DSeriesDirective,
+  ColumnSeries3D,
+  Category3D
 } from '@syncfusion/ej2-vue-charts';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    'ejs-chart3d'               : Chart3DComponent,
+    'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series'          : Chart3DSeriesDirective
-  },
-  data() {
-    return {
-      seriesData: [
-        { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-        { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-        { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-        { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-        { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-        { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-      ],
-      title: 'Sales Analysis',
-      primaryXAxis: { valueType: 'Category' }
-    };
+    'e-chart3d-series': Chart3DSeriesDirective
   },
   provide: {
     chart3d: [ColumnSeries3D, Category3D]
@@ -176,47 +139,270 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> **Critical – Do not skip this step**  
-> You **must** provide the required modules (`ColumnSeries3D`, `Category3D`, etc.) using `provide`.  
-> If you forget → the chart container appears **empty** (no bars/series visible), usually with **no console error**.  
-> This is the most common reason the 3D Chart fails to display data in Vue 3 projects.
-## Run the project
+> **Note:** The module injection key must be `chart3d`. Register only the modules required by the features used in the application.
 
-To run the project, use the following command:
+**Step 2:** Define the Data and Chart Configuration
+
+Define the chart data and horizontal-axis configuration in the `script` section.
+
+Because the `month` field contains category values, set `primaryXAxis.valueType` to `Category` and register the `Category3D` module.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const seriesData = [
+  { month: 'Jan', sales: 35 },
+  { month: 'Feb', sales: 28 },
+  { month: 'Mar', sales: 34 },
+  { month: 'Apr', sales: 32 },
+  { month: 'May', sales: 40 },
+  { month: 'Jun', sales: 32 },
+  { month: 'Jul', sales: 35 },
+  { month: 'Aug', sales: 55 },
+  { month: 'Sep', sales: 38 },
+  { month: 'Oct', sales: 30 },
+  { month: 'Nov', sales: 25 },
+  { month: 'Dec', sales: 32 }
+];
+
+const title = 'Sales Analysis';
+const primaryXAxis = {
+  valueType: 'Category'
+};
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+export default {
+  data() {
+    return {
+      seriesData: [
+        { month: 'Jan', sales: 35 },
+        { month: 'Feb', sales: 28 },
+        { month: 'Mar', sales: 34 },
+        { month: 'Apr', sales: 32 },
+        { month: 'May', sales: 40 },
+        { month: 'Jun', sales: 32 },
+        { month: 'Jul', sales: 35 },
+        { month: 'Aug', sales: 55 },
+        { month: 'Sep', sales: 38 },
+        { month: 'Oct', sales: 30 },
+        { month: 'Nov', sales: 25 },
+        { month: 'Dec', sales: 32 }
+      ],
+      title: 'Sales Analysis',
+      primaryXAxis: {
+        valueType: 'Category'
+      }
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3:** Define the 3D Chart in the Template
+
+Add the 3D Chart and its series directives to the `template` section of **src/App.vue**.
+
+The series uses the following properties:
+
+- [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#datasource) specifies the array of data objects.
+- [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#xname) maps the category field.
+- [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#yname) maps the numeric field.
+- [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3dseriesmodel#type) specifies the series type.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+    <ejs-chart3d
+      id="container"
+      :title="title"
+      :primaryXAxis="primaryXAxis"
+    >
+      <e-chart3d-series-collection>
+        <e-chart3d-series
+          :dataSource="seriesData"
+          type="Column"
+          xName="month"
+          yName="sales"
+        ></e-chart3d-series>
+      </e-chart3d-series-collection>
+    </ejs-chart3d>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+The following examples combine component registration, module injection, data configuration, and template markup.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-chart3d
+      id="container"
+      :title="title"
+      :primaryXAxis="primaryXAxis"
+    >
+      <e-chart3d-series-collection>
+        <e-chart3d-series
+          :dataSource="seriesData"
+          type="Column"
+          xName="month"
+          yName="sales"
+        ></e-chart3d-series>
+      </e-chart3d-series-collection>
+    </ejs-chart3d>
+  </div>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import {
+  Chart3DComponent as EjsChart3d,
+  Chart3DSeriesCollectionDirective as EChart3dSeriesCollection,
+  Chart3DSeriesDirective as EChart3dSeries,
+  ColumnSeries3D,
+  Category3D
+} from '@syncfusion/ej2-vue-charts';
+
+const seriesData = [
+  { month: 'Jan', sales: 35 },
+  { month: 'Feb', sales: 28 },
+  { month: 'Mar', sales: 34 },
+  { month: 'Apr', sales: 32 },
+  { month: 'May', sales: 40 },
+  { month: 'Jun', sales: 32 },
+  { month: 'Jul', sales: 35 },
+  { month: 'Aug', sales: 55 },
+  { month: 'Sep', sales: 38 },
+  { month: 'Oct', sales: 30 },
+  { month: 'Nov', sales: 25 },
+  { month: 'Dec', sales: 32 }
+];
+
+const title = 'Sales Analysis';
+const primaryXAxis = {
+  valueType: 'Category'
+};
+
+provide('chart3d', [ColumnSeries3D, Category3D]);
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-chart3d
+      id="container"
+      :title="title"
+      :primaryXAxis="primaryXAxis"
+    >
+      <e-chart3d-series-collection>
+        <e-chart3d-series
+          :dataSource="seriesData"
+          type="Column"
+          xName="month"
+          yName="sales"
+        ></e-chart3d-series>
+      </e-chart3d-series-collection>
+    </ejs-chart3d>
+  </div>
+</template>
+
+<script>
+import {
+  Chart3DComponent,
+  Chart3DSeriesCollectionDirective,
+  Chart3DSeriesDirective,
+  ColumnSeries3D,
+  Category3D
+} from '@syncfusion/ej2-vue-charts';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-chart3d': Chart3DComponent,
+    'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
+    'e-chart3d-series': Chart3DSeriesDirective
+  },
+  provide: {
+    chart3d: [ColumnSeries3D, Category3D]
+  },
+  data() {
+    return {
+      seriesData: [
+        { month: 'Jan', sales: 35 },
+        { month: 'Feb', sales: 28 },
+        { month: 'Mar', sales: 34 },
+        { month: 'Apr', sales: 32 },
+        { month: 'May', sales: 40 },
+        { month: 'Jun', sales: 32 },
+        { month: 'Jul', sales: 35 },
+        { month: 'Aug', sales: 55 },
+        { month: 'Sep', sales: 38 },
+        { month: 'Oct', sales: 30 },
+        { month: 'Nov', sales: 25 },
+        { month: 'Dec', sales: 32 }
+      ],
+      title: 'Sales Analysis',
+      primaryXAxis: {
+        valueType: 'Category'
+      }
+    };
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the Project
+
+Save **src/App.vue**, and then start the development server.
+
+**npm**
 
 ```bash
 npm run dev
 ```
 
-or
+**yarn**
 
 ```bash
 yarn run dev
 ```
 
-The output will appear as follows:
+Open the local URL displayed in the terminal, commonly `http://localhost:5173`, and verify that a 3D column chart titled **Sales Analysis** displays monthly sales values from January through December.
 
 ![Vue 3 3D Chart sample showing a column chart titled Sales Analysis](./images/vue3-3d-chart-demo.png)
 
-## Verify the chart
+> **Sample:** Explore the [Vue 3D Chart getting-started project](https://github.com/SyncfusionExamples/getting-started-with-the-vue-3d-chart-component).
 
-After starting the development server, confirm the chart renders correctly:
+For information about migrating an application from Vue 2 to Vue 3, see the [Vue 3 Migration Guide](https://v3-migration.vuejs.org/).
 
-- Start the development server with `npm run dev` or `yarn run dev`.
-- Open the project URL shown in the terminal (commonly `http://localhost:5173`) and verify the chart displays.
-- If the chart does not render, open the browser console and check for errors related to missing modules, incorrect imports, or incompatible Vue versions.
+## Troubleshooting
 
-## Troubleshooting (common issues)
+- **The 3D Chart is not rendered.** Verify that the component and both child directives are imported. In the Options API, also verify that they are registered in `components`. Check the browser console for component, module, data, or licensing errors.
+- **The column series is not displayed.** Import `ColumnSeries3D` and add it to the array provided with the exact `chart3d` key.
+- **Category values are not displayed correctly.** Set `primaryXAxis.valueType` to `Category`, import `Category3D`, and provide it with the `chart3d` key.
+- **No data is displayed.** Verify that `dataSource` contains records, `xName` and `yName` match fields in each data object, and the field mapped by `yName` contains numeric values.
+- **An import or runtime error is displayed.** Verify that `@syncfusion/ej2-vue-charts` is installed and that its version supports the project's Vue and Node.js versions.
 
-- Chart not rendering: ensure chart modules (for example, `ColumnSeries3D`, `Category3D`, `Legend3D`, `Tooltip`) are provided via `provide` (Composition API) or `provide`/`provide:` (Options API).
-- Wrong package version: confirm `@syncfusion/ej2-vue-charts` matches the project's Vue version.
-- Missing child directives: ensure `Chart3DSeriesCollectionDirective` and `Chart3DSeriesDirective` are registered when using directives.
-- Console errors: inspect import paths and verify dependencies are installed.
+For additional assistance, refer to the [Vue 3D Chart API documentation](https://ej2.syncfusion.com/vue/documentation/api/chart3d).
 
-> **Sample**: `vue-3-3d-chart-getting-started`.
-For migrating from Vue 2 to Vue 3, refer to the `migration` documentation.
+## See Also
 
-## See also
-
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+- [Vue 3D Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-chart/column.html)
+- [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
+- [Getting Started with Vue UI Components using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
