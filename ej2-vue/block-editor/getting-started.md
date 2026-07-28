@@ -43,7 +43,7 @@ Navigate to the project directory:
 cd quickstart
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Block Editor packages
 
 All Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published on [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). Install the Vue Block Editor package by running the following command:
 
@@ -80,45 +80,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 ## Adding Block Editor component
 
-Follow the steps below to add the Vue Block Editor component using `Composition API` or `Options API`:
-
-1\. First, import and register the Block Editor component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-import { BlockEditorComponent as EjsBlockeditor  } from "@syncfusion/ej2-vue-blockeditor";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { BlockEditorComponent  } from "@syncfusion/ej2-vue-blockeditor";
-export default {
-  components: {
-    'ejs-blockeditor': BlockEditorComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section define the Block Editor component.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <ejs-blockeditor></ejs-blockeditor>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-The complete example below combines the previous steps into a single **src/App.vue** file.
+The Block Editor code should be added in the **src/App.vue** file, using either the Composition API or the Options API.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started vue three with Vue Card component | Syncfusion
-description:  Checkout and learn about Getting started vue three with Vue Card component of Syncfusion Essential JS 2 and more details.
-control: Getting started vue three 
+title: Vue 3 getting started with the Card component | Syncfusion
+description:  Check out and learn about Vue 3 getting started with the Vue Card component of Syncfusion Essential JS 2 and more details.
+control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,97 +10,57 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Card Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Card component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Card component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Setup the Vite project
+## Setup for local development
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
+
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
+
+***Vue with JavaScript***
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+***Vue with TypeScript***
 
 ```bash
-yarn create vite
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-1.Define the project name: The name of the project can be specified directly. For this article, the project name is set as `my-project`.
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+## Add Vue Card packages
+
+To install the Card packages, use the following command:
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Roll down is Vite's new experimental faster bundler (rust-based, replacing roll up). Choose `No` uses the stable, proven roll up-based Vite (recommended for most users)
-
-```bash
-Use rolldown-vite (Experimental)? No
-```
-
-5.Install dependencies and start the Dev server.
-
-```bash
-Install with npm and start now?: Yes
-```
-
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
-
-```bash
-cd my-project
-npm install
-```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue Card component](https://www.syncfusion.com/vue-components/vue-card) as an example. To use the Vue Card component in the project, the `@syncfusion/ej2-vue-layouts` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-layouts --save
+npm install @syncfusion/ej2-vue-layouts
 ```
 
 or
@@ -109,50 +69,35 @@ or
 yarn add @syncfusion/ej2-vue-layouts
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Card component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/card/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+## Adding Vue Card component
 
-## Adding a header and content
-
-You can create Card with a header in a specific structure. For adding header you need to create a `div` element with `e-card-header` class added.
-
-* You can include heading inside the Card header by adding a `div` element with `e-card-header-caption` class, and also content will be added
- by adding element with `e-card-content`. For detailed information, refer to the [Header and Content](./header-content).
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<div class = "e-card">                    --> Root Element
-    <div class="e-card-header">           --> Root Header Element
-        <div class="e-card-header-caption">    --> Root Heading Element
-            <div class="e-card-header-title"></div>   --> Heading Title Element
-        </div>
-        <div class="e-card-content"></div>         --> Card content Element
-    </div>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Card component in the application
-
-You have completed all the necessary configurations needed for rendering the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. Add the HTML div element with **e-card** class into the `<template>` section of the `App.vue` file in src directory.
+The Card code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -175,8 +120,7 @@ You have completed all the necessary configurations needed for rendering the Syn
     </div>
 </template>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/card/index.css";
 </style>
 
 {% endhighlight %}
@@ -211,8 +155,7 @@ export default {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/card/index.css";
 </style>
 
 {% endhighlight %}
@@ -232,6 +175,11 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
-
 ![Output](./images/card.png)
+
+## See also
+
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

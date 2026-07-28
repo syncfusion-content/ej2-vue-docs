@@ -1,160 +1,145 @@
 ---
 layout: post
-title: Getting started with Vue Timepicker component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Timepicker component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with Vue Timepicker component | Syncfusion
+description:  Checkout and learn about Getting Started with Vue Timepicker component of Syncfusion Essential JS 2 and more details.
+control: Getting Started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Timepicker Component in Vue 2
+# Getting Started with the Vue TimePicker Component in Vue 3
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TimePicker component.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TimePicker component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Setting up the Vue 2 project
+## Setup for local development
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-```bash
-npm install -g @vue/cli
-vue create quickstart
-cd quickstart
-npm run serve
-```
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
 
-or
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
+
+***Vue with JavaScript***
 
 ```bash
-yarn global add @vue/cli
-vue create quickstart
-cd quickstart
-yarn run serve
+npm create vite@latest my-app -- --template vue
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
-
-![Vue 2 project](./images/vue2-terminal.png)
-
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
-
-This article uses the [Vue Timepicker component](https://www.syncfusion.com/vue-components/vue-timepicker) as an example. Install the `@syncfusion/ej2-vue-calendars` package by running the following command:
+***Vue with TypeScript***
 
 ```bash
-npm install @syncfusion/ej2-vue-calendars --save
+npm create vite@latest my-app -- --template vue-ts
 ```
+
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```bash
+cd my-app
+```
+
+## Add Vue TimePicker packages
+
+To install the TimePicker packages, use the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-calendars
+```
+
 or
 
 ```bash
 yarn add @syncfusion/ej2-vue-calendars
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the TimePicker component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/timepicker/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+## Adding Vue TimePicker component
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-Follow the below steps to add the Vue TimePicker component:
-
-1\. First, import and register the TimePicker component in the `script` section of the **src/App.vue** file.
+The TimePicker code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-<script setup>
-import { TimePickerComponent as EjsTimepicker } from '@syncfusion/ej2-vue-calendars';
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { TimePickerComponent } from '@syncfusion/ej2-vue-calendars';
-
-export default {
-  components: {
-    'ejs-timepicker': TimePickerComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section, define the TimePicker component with the [placeholder](https://ej2.syncfusion.com/vue/documentation/api/timepicker#placeholder) property.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
 <template>
-    <div id="app">
-      <div class='wrapper'>
-        <ejs-timepicker :placeholder="waterMark"></ejs-timepicker>
-      </div>
+    <div class="control_wrapper">
+        <ejs-timepicker></ejs-timepicker>
     </div>
 </template>
 
-{% endhighlight %}
-{% endtabs %}
-
-3\. Declare the value for the `placeholder` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
 <script setup>
-import { TimePickerComponent as EjsTimepicker } from '@syncfusion/ej2-vue-calendars';
+  import { TimePickerComponent as EjsTimePicker } from '@syncfusion/ej2-vue-calendars';
 </script>
+
+<style>
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/timepicker/index.css";
+</style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+    <div class="control_wrapper">
+        <ejs-timepicker></ejs-timepicker>
+    </div>
+</template>
 
 <script>
-data () {
-    return {
-      waterMark : 'Select a time'
+import { TimePickerComponent } from "@syncfusion/ej2-vue-calendars";
+//Component registeration
+export default {
+    name: 'App',
+    components: {
+        "ejs-timepicker": TimePickerComponent
     }
-  }
+}
 </script>
 
-{% endhighlight %}
-{% endtabs %}
+<style>
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/timepicker/index.css";
+</style>
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/timepicker/getting-started-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/timepicker/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,29 +148,83 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 To run the project, use the following command:
 
 ```bash
-npm run serve
+npm run dev
 ```
 
 or
 
 ```bash
-yarn run serve
+yarn run dev
 ```
-        
+
+![TimePicker initial rendering](./images/time.png)
+
+## Setting the value, min and max dates
+
+The following example demonstrates how to set the value, min and max dates on initializing the TimePicker. Here the TimePicker allows you to select a date within the range from 9th to 15th in the month of May 2017. To know more about range restriction in TimePicker, please refer this [page](./date-range).
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+    <div id="app">
+        <div class='wrapper'>
+            <ejs-timepicker :min="data[0].minDate" :max="data[0].maxDate" :value="data[0].dateVal" ></ejs-timepicker>
+        </div>
+  </div>
+</template>
+
+<script setup>
+import { TimePickerComponent as EjsTimePicker } from "@syncfusion/ej2-vue-calendars";
+    const data = [{minDate: new Date("05/04/2017"), 
+                  maxDate: new Date("05/16/2017"), 
+                  dateVal: new Date("05/10/2017")}];
+</script>
+
+<style>
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/timepicker/index.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+    <div id="app">
+        <div class='wrapper'>
+            <ejs-timepicker :min="minDate" :max="maxDate" :value="dateVal" ></ejs-timepicker>
+        </div>
+  </div>
+</template>
+
+<script>
+import { TimePickerComponent } from "@syncfusion/ej2-vue-calendars";
+//Component registeration
+export default {
+    name: 'App',
+    components: {
+        "ejs-timepicker": TimePickerComponent
+    },
+    data () {
+        return {
+            minDate : new Date("05/09/2017"),
+            maxDate : new Date("05/15/2017"),
+            dateVal : new Date("05/11/2017")
+        }
+    }
+}
+</script>
+<style>
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/timepicker/index.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "page.domainurl/code-snippet/timepicker/getting-started-cs1" %}
 
 ## Setting the value, min, and max time
 
 The following example demonstrates how to set the value, min, and max time when initializing the TimePicker. The Vue TimePicker allows you to select a time value within a range from `7:00 AM` to `4:00 PM`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/timepicker/min-max-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/timepicker/min-max-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/timepicker/min-max-cs1" %}
 
@@ -194,15 +233,6 @@ The following example demonstrates how to set the value, min, and max time when 
 Time format is a way of representing the time value in a different string format in the textbox and popup list. By default, the TimePicker format is based on the culture. You can also customize the format by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/timepicker#format) property. For more information about time format standards, refer to the [Date and Time Format](../common/internationalization#custom-formats) section.
 
 The following example demonstrates the TimePicker component in 24-hour format with a 60-minute interval. The time interval is set to 60 minutes by using the [`step`](https://ej2.syncfusion.com/vue/documentation/api/timepicker#step) property.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/timepicker/format-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/timepicker/format-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/timepicker/format-cs1" %}
 
