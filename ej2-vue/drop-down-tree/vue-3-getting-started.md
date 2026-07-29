@@ -18,32 +18,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-| Requirement | Version |
-|-------------|---------|
-| Vue | 3.0 or higher |
-| Node.js | 16.0.0 or above |
-
-### Vue supported versions
-
-| Vue version | Minimum Syncfusion Vue Dropdown Tree version |
-| ------------- | ------------------------------------------- |
-|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
-
-### Browser support
-
-| Browser | Supported versions |
-|---|---|
-| Chrome | Latest |
-| Firefox | Latest |
-| Opera | Latest |
-| Edge | 13+ |
-| Internet Explorer (IE) | 11+ |
-| Safari | 9+ |
-| iOS Safari | 9+ |
-| Android Browser / Chrome for Android | 4.4+ |
-| Windows Mobile | IE 11+ |
-
-> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setup for local development
 
@@ -80,7 +55,7 @@ Then, navigate to the project directory:
 cd my-app
 ```
 
-## Add Vue Dropdowns package
+## Adding Vue Dropdowns package
 
 To install the Dropdowns package, use the following command:
 
@@ -122,7 +97,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Dropdown Tree component
+## Adding Dropdown Tree component
 
 Now, you can add the Vue Dropdown Tree component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#fields) property. Use the following code:
 
@@ -221,9 +196,9 @@ Now, you can add the Vue Dropdown Tree component to your **src/App.vue** file by
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the application
 
-To run the project, use the following command:
+To run the application, use the following command:
 
 ```bash
 npm run dev

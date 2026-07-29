@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started in Vue Rich text editor component | Syncfusion
-description: Learn here all about Getting started in Syncfusion Vue Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Getting started in Vue Rich Text Editor component | Syncfusion
+description: Learn here all about Getting started in Syncfusion Vue Rich Text Editor component of Syncfusion Essential JS 2 and more.
 canonical_url: "https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor"
 control: Get started 
 platform: ej2-vue
@@ -72,7 +72,7 @@ I> To apply the application-specific styles correctly remove all the default sty
 
 The following modules provide the basic features of the Rich Text Editor.
 
-* **HtmlEditor** - Inject this module to use Rich Text Editor as HTML editor.
+* **HtmlEditor** - Inject this module to use the Rich Text Editor as HTML editor.
 * **Image** - Inject this module to use the image feature in Rich Text Editor.
 * **Link** - Inject this module to use the link feature in Rich Text Editor.
 * **QuickToolbar** - Inject this module to use the quick toolbar feature for the target element.
@@ -122,8 +122,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Rich Text Editor is dis
 
 ## See also
 
-* [Accessibility in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility)
-* [Keyboard support in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/keyboard-support)
-* [Globalization in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/globalization)
+* [Accessibility in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility)
+* [Keyboard support in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/keyboard-support)
+* [Globalization in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/globalization)
 
 For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.

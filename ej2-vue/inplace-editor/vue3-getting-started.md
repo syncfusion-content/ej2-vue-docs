@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started vue3 with Vue Inplace editor component | Syncfusion
-description:  Checkout and learn about Getting started vue3 with Vue Inplace editor component of Syncfusion Essential JS 2 and more details.
-control: Getting started vue3 
+title: Getting started vue3 with Vue In-place Editor component | Syncfusion
+description:  Checkout and learn about Getting started vue3 with Vue In-place Editor component of Syncfusion Essential JS 2 and more details.
+control: In-place Editor
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -18,198 +18,143 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 3.0 or higher |
+| Node.js | 16.0.0 or above |
 
-## Set up the Vite project
+### Vue supported versions
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+| Vue version | Minimum Syncfusion Vue In-place Editor version |
+| ------------- | ------------------------------------------- |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
-```bash
-npm create vite@latest
-```
+### Browser support
 
-or
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
-```bash
-yarn create vite
-```
+> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+## Setup for local development
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-```bash
-? Project name: » my-project
-```
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
 
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+***Vue with JavaScript***
 
 ```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
+npm create vite@latest my-app -- --template vue
 ```
 
-4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
+***Vue with TypeScript***
 
 ```bash
-Use rolldown-vite (Experimental)? No
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-5.Install dependencies and start the dev server.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-Install with npm and start now?: Yes
+cd my-app
 ```
 
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
+## Adding Vue In-Place Editor package
+
+To install the In-Place Editor package, use the following command:
 
 ```bash
-cd my-project
-npm install
+npm install @syncfusion/ej2-vue-inplace-editor
 ```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue In-place Editor component](https://www.syncfusion.com/vue-components/vue-in-place-editor) as an example. To use the Vue In-place Editor component in the project, the `@syncfusion/ej2-vue-inplace-editor` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-inplace-editor --save
-```
-
 or
 
 ```bash
 yarn add @syncfusion/ej2-vue-inplace-editor
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the In-Place Editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> In-Place Editor component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/inplace-editor/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding the In-Place Editor with TextBox
 
-Follow the below steps to add the Vue In-place Editor component using `Composition API` or `Options API`:
+Now, you can add the Vue In-Place Editor component to your **src/App.vue** file by importing it and configuring the `type` property. The [type](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputtype) property specifies the component integrated with the In-Place Editor for editing and is set to `Text` by default. When the type is **Text**, the In-Place Editor renders a **TextBox** component. 
 
-  1.First, import and register the In-place Editor component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { InPlaceEditorComponent as EjsInplaceeditor } from "@syncfusion/ej2-vue-inplace-editor";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { InPlaceEditorComponent } from "@syncfusion/ej2-vue-inplace-editor";
-//Component registeration
-export default {
-  name: "App",
-  components: {
-    "ejs-inplaceeditor": InPlaceEditorComponent,
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-   
-2.In the `template` section, define the In-place Editor component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#datasource) property and column definitions.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <div id="app">
-    <ejs-inplaceeditor id="inplace_editor" type="Text" value="Andrew" :model="model">
-    </ejs-inplaceeditor>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Use the following code:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <ejs-inplaceeditor id="inplace_editor" type="Text" value="Andrew" :model="data[0].model">
-    </ejs-inplaceeditor>
+    <div class="control-group">
+      <h3>Modify Basic Details</h3>
+      <ejs-inplaceeditor
+        id="element"
+        type="Text"
+        mode="Inline"
+        value="Andrew"
+        :model="textModel"
+      ></ejs-inplaceeditor>
+    </div>
   </div>
 </template>
+
 <script setup>
-import { InPlaceEditorComponent as EjsInplaceeditor } from "@syncfusion/ej2-vue-inplace-editor";
-  const data = [{ model: {
-                  placeholder: 'Enter employee name'}}]
+  import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
+
+  const textModel = {
+    placeholder: 'Enter your name'
+  };
 </script>
+
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css"; 
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/inplace-editor/index.css";
 </style>
 
 {% endhighlight %}
@@ -217,236 +162,69 @@ import { InPlaceEditorComponent as EjsInplaceeditor } from "@syncfusion/ej2-vue-
 
 <template>
   <div id="app">
-    <ejs-inplaceeditor id="inplace_editor" type="Text" value="Andrew" :model="model">
-    </ejs-inplaceeditor>
+    <div class="control-group">
+      <h3>Modify Basic Details</h3>
+      <ejs-inplaceeditor
+        id="element"
+        type="Text"
+        mode="Inline"
+        value="Andrew"
+        :model="textModel"
+      ></ejs-inplaceeditor>
+    </div>
   </div>
 </template>
+
 <script>
-import { InPlaceEditorComponent } from "@syncfusion/ej2-vue-inplace-editor";
-export default {
-  name: "App",
-  components: {
-    "ejs-inplaceeditor": InPlaceEditorComponent
-  },
-  data: function () {
-    return {
-      model: {
-      placeholder: 'Enter employee name'
-      },
-    };
-  }
-};
+  import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
+  
+  export default {
+    name: 'App',
+    components: {
+      'ejs-inplaceeditor': InPlaceEditorComponent,
+    },
+    data() {
+      return {
+        textModel: {
+          placeholder: 'Enter your name',
+        },
+      };
+    },
+  };
 </script>
+
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css"; 
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/inplace-editor/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+> You can further customize the In-Place Editor by using the [model](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#model) property, which specifies the model object configuration for the integrated components like AutoComplete, DatePicker,NumericTextBox. 
 
-To run the project, use the following command:
+## Run the application
+
+To run the application, use the following command:
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 or
 
 ```bash
-yarn run dev
+yarn run serve
 ```
-
+        
 The output will appear as follows:
 
-![Output](./images/inline.png)
+{% previewsample "page.domainurl/code-snippet/in-place-editor/getting-started-cs11" %}
 
-## Configure DropDownList in Vue3
+> You can refer to our [Vue In-Place Editor](https://www.syncfusion.com/vue-components/vue-in-place-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue In-Place Editor example](https://ej2.syncfusion.com/vue/demos/#/material/inplace-editor/default.html) that shows how to render the In-Place Editor in Vue.
 
-You can render DropDownList by changing the type property as DropDownList and configure its properties and methods using the model property.
+## See also
 
-In the following sample, type and model values are configured to render the DropDownList component.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <ejs-inplaceeditor
-      id="gender"
-      type="DropDownList"
-      mode="Inline"
-      value="Male"
-      :model="data[0].dropdownModel"
-    ></ejs-inplaceeditor>
-  </div>
-</template>
-<script setup>
-import { InPlaceEditorComponent as EjsInplaceeditor } from "@syncfusion/ej2-vue-inplace-editor";
-  const data = [{ dropdownModel: {
-                    dataSource: ["Male", "Female"],
-                    placeholder: "Select gender",}}]
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material3.css";
-</style>
-
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <ejs-inplaceeditor
-      id="gender"
-      type="DropDownList"
-      mode="Inline"
-      value="Male"
-      :model="dropdownModel"
-    ></ejs-inplaceeditor>
-  </div>
-</template>
-<script>
-import { InPlaceEditorComponent } from "@syncfusion/ej2-vue-inplace-editor";
-export default {
-  name: "App",
-  components: {
-    "ejs-inplaceeditor": InPlaceEditorComponent,
-  },
-  data: function () {
-    return {
-      dropdownModel: {
-        dataSource: ["Male", "Female"],
-        placeholder: "Select gender",
-      },
-    };
-  },
-};
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material3.css";
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Integrate DatePicker in Vue3
-
-You can render DatePicker by changing the type property as Date and also configure its properties and methods using model property.
-
-In the below sample, type and model values are configured to render the DatePicker component.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <ejs-inplaceeditor
-      id="inplace_editor"
-      type="Date"
-      :model="data[0].model"
-      :value="data[0].value"
-    >
-    </ejs-inplaceeditor>
-  </div>
-</template>
-<script setup>
-import { InPlaceEditorComponent as EjsInplaceeditor } from "@syncfusion/ej2-vue-inplace-editor";
-  const data = [{ value: new Date("04/12/2018"),
-                  model: {
-                    showTodayButton: true}
-                }]
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material3.css";
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <ejs-inplaceeditor
-      id="inplace_editor"
-      type="Date"
-      :model="model"
-      :value="value"
-    >
-    </ejs-inplaceeditor>
-  </div>
-</template>
-<script>
-import { InPlaceEditorComponent } from "@syncfusion/ej2-vue-inplace-editor";
-export default {
-  name: "App",
-  components: {
-    "ejs-inplaceeditor": InPlaceEditorComponent,
-  },
-  data: function () {
-    return {
-      value: new Date("04/12/2018"),
-      model: {
-        showTodayButton: true,
-      },
-    };
-  },
-};
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material3.css";
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

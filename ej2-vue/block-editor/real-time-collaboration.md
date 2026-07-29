@@ -294,7 +294,8 @@ Make Storage Room-Specific by importing roomName from collaboration.ts to make e
 Create a `versionHistoryService.ts` file in the src folder, replace the `App.vue` file to configure the BlockEditorComponent, and replace the `App.css` file with the styles required for the version history panel.
 
 {% tabs %}
-{% highlight vue tabtitle="App.vue" %}
+{% highlight html tabtitle="App.vue" %}
+{% raw %}
 <template>
   <div class="app-container">
     <div class="editor-section">
@@ -361,6 +362,7 @@ onBeforeUnmount(() => {
   clearInterval(intervalId);
 });
 </script>
+{% endraw %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="versionHistoryService.ts" %}

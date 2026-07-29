@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Vue 3 getting started with the Breadcrumb component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Breadcrumb component of Syncfusion Essential JS 2 and more details.
-control: Vue 3 getting started
+title: Getting Started Vue 3 with Vue Breadcrumb component | Syncfusion
+description: Checkout and learn about Getting Started Vue 3 with Vue Breadcrumb component of Syncfusion Essential JS 2 and more details.
+control: Getting Started Vue 3
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -18,77 +18,49 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Set up the Vite project
+## Setup for local development
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
+
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
+
+***Vue with JavaScript***
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+***Vue with TypeScript***
 
 ```bash
-yarn create vite
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+## Add Vue Breadcrumb packages
+
+To install the Breadcrumb packages, use the following command:
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
-
-```bash
-cd my-project
-npm install
-```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue Breadcrumb component](https://www.syncfusion.com/vue-components/vue-breadcrumb) as an example. To use the Vue Breadcrumb component in the project, the `@syncfusion/ej2-vue-navigations` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-navigations --save
+npm install @syncfusion/ej2-vue-navigations
 ```
 
 or
@@ -97,106 +69,42 @@ or
 yarn add @syncfusion/ej2-vue-navigations
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Breadcrumb component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/breadcrumb/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding Vue Breadcrumb component
 
-Follow the below steps to add the Vue Breadcrumb component using `Composition API` or `Options API`:
-
-  1.First, import and register the Breadcrumb component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { BreadcrumbComponent as EjsBreadcrumb } from "@syncfusion/ej2-vue-navigations";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { BreadcrumbComponent } from "@syncfusion/ej2-vue-navigations";
-//Component registration
-export default {
-  name: "App",
-  components: {
-    'ejs-breadcrumb': BreadcrumbComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2.In the `template` section, define the Breadcrumb component with the [enableRtl](https://helpej2.syncfusion.com/vue/documentation/api/breadcrumb#enablertl) property and item definitions.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-<div>
-<ejs-breadcrumb :enableRtl='enableRtl'>
-    <e-breadcrumb-items>
-        <e-breadcrumb-item iconCss= 'e-icons e-home' url= 'https://ej2.syncfusion.com/vue/demos/'></e-breadcrumb-item>
-        <e-breadcrumb-item text= 'Components' url= 'https://ej2.syncfusion.com/vue/demos/datagrid/overview'></e-breadcrumb-item>
-        <e-breadcrumb-item text= 'Navigations' url= 'https://ej2.syncfusion.com/vue/demos/menu/default'></e-breadcrumb-item>
-        <e-breadcrumb-item text= 'Breadcrumb' url= 'https://ej2.syncfusion.com/vue/demos/breadcrumb/default'></e-breadcrumb-item>
-    </e-breadcrumb-items>
-</ejs-breadcrumb>
-</div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3.Declare the values for the `enableNavigation` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-const enableRtl = 'true';
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-  return {
-    enableRtl: 'true',
-  };
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+The Breadcrumb code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
 <div>
-<ejs-breadcrumb :enableRtl='enableRtl'>
+<ejs-breadcrumb >
     <e-breadcrumb-items>
         <e-breadcrumb-item iconCss= 'e-icons e-home' url= 'https://ej2.syncfusion.com/vue/demos/'></e-breadcrumb-item>
         <e-breadcrumb-item text= 'Components' url= 'https://ej2.syncfusion.com/vue/demos/datagrid/overview'></e-breadcrumb-item>
@@ -209,12 +117,10 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <script setup>
 import { BreadcrumbComponent as EjsBreadcrumb, ItemsDirective as EBreadcrumbItems, ItemDirective as EBreadcrumbItem } from "@syncfusion/ej2-vue-navigations";
-const enableRtl='true'
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/breadcrumb/index.css";
 </style>
 
 {% endhighlight %}
@@ -222,7 +128,7 @@ const enableRtl='true'
 
 <template>
 <div>
-<ejs-breadcrumb :enableRtl='enableRtl'>
+<ejs-breadcrumb >
     <e-breadcrumb-items>
         <e-breadcrumb-item iconCss= 'e-icons e-home' url= 'https://ej2.syncfusion.com/vue/demos/'></e-breadcrumb-item>
         <e-breadcrumb-item text= 'Components' url= 'https://ej2.syncfusion.com/vue/demos/datagrid/overview'></e-breadcrumb-item>
@@ -247,15 +153,14 @@ import { BreadcrumbComponent, ItemsDirective, ItemDirective } from "@syncfusion/
     // Bound properties declarations
     data() {
       return {
-        enableRtl: 'true',
+
       };
     }
   };
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/breadcrumb/index.css";
 </style>
 
 {% endhighlight %}
@@ -275,13 +180,11 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
-
 ![vue-3-js-breadcrumb](images/vue-3-js-breadcrumb.PNG)
-
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

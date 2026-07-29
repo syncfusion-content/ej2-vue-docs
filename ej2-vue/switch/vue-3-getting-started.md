@@ -18,252 +18,192 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 3.0 or higher |
+| Node.js | 16.0.0 or above |
 
-## Set up the Vite project
+### Vue supported versions
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+| Vue version | Minimum Syncfusion Vue Switch version |
+| ------------- | ------------------------------------------- |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
 
-```bash
-npm create vite@latest
-```
+### Browser support
 
-or
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
-```bash
-yarn create vite
-```
+> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+## Setup for local development
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-```bash
-? Project name: » my-project
-```
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
 
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+***Vue with JavaScript***
 
 ```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
+npm create vite@latest my-app -- --template vue
 ```
 
-4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
+***Vue with TypeScript***
 
 ```bash
-Use rolldown-vite (Experimental)? No
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-5.Install dependencies and start the dev server.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-Install with npm and start now?: Yes
+cd my-app
 ```
 
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
+## Adding Vue Buttons package
+
+To install the Buttons package, use the following command:
 
 ```bash
-cd my-project
-npm install
+npm install @syncfusion/ej2-vue-buttons
 ```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue Switch component](https://www.syncfusion.com/vue-components/vue-toggle-switch-button) as an example. To use the Vue Switch component in the project, the `@syncfusion/ej2-vue-buttons` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-buttons --save
-```
-
 or
 
 ```bash
 yarn add @syncfusion/ej2-vue-buttons
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Switch component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Button components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/switch/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding Switch component
 
-Follow the below steps to add the Vue Switch component using `Composition API` or `Options API`:
-
-  1. First, import and register the Switch component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+You can add the Vue Switch component to your application by importing it into the `src/App.vue` file and defining it with the [checked](https://ej2.syncfusion.com/vue/documentation/api/switch/index-default#checked) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
+<template>
+  <ejs-switch checked=true></ejs-switch>
+</template>
+
 <script setup>
-  import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
+  import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
+  import { enableRipple } from '@syncfusion/ej2-base';
+
+  enableRipple(true);
 </script>
 
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/switch/index.css";
 
-<script>
-import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
-//Component registration
-export default {
-  name: "App",
-  components: {
-    "ejs-switch": SwitchComponent
+  .e-switch-wrapper {
+    margin: 18px;
   }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2.In the `template` section, define the Switch component with the [checked](https://helpej2.syncfusion.com/vue/documentation/api/switch/#checked) property.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
- <template>
-     <ejs-switch checked="isChecked"></ejs-switch>
- </template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3.Declare the values for the `checked` property in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-bool isChecked = true;
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-data() {
-  return {
-    isChecked: true,
-  };
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
- <template>
-     <ejs-switch checked="isChecked"></ejs-switch>
- </template>
-
-<script setup>
-import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
-bool isChecked = true;
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
 </style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
- <template>
-     <ejs-switch checked="isChecked"></ejs-switch>
- </template>
+<template>
+  <ejs-switch checked=true></ejs-switch>
+</template>
 
 <script>
   import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
-  // Component registration
+  import { enableRipple } from '@syncfusion/ej2-base';
+
+  enableRipple(true);
+
   export default {
     name: "App",
-    // Declaring component and its directives
     components: {
-      "ejs-switch": SwitchComponent
-    },
-    // Bound properties declarations
-    data() {
-      return {
-        isChecked: true,
-      };
+      'ejs-switch': SwitchComponent
     }
-  };
+  }
 </script>
 
 <style>
- @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
- @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/switch/index.css";
+
+  .e-switch-wrapper {
+    margin: 18px;
+  }
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+> The Vue Switch component supports custom text labels for its ON and OFF states through the [onLabel](https://ej2.syncfusion.com/vue/documentation/api/switch/index-default#onlabel) and [offLabel](https://ej2.syncfusion.com/vue/documentation/api/switch/index-default#offlabel) properties. This helps users easily identify the current state of the switch. Note that text labels are not supported in Material themes, and lengthy custom text is not recommended.
 
-To run the project, use the following command:
+## Run the application
+
+To run the application, use the following command:
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 or
 
 ```bash
-yarn run dev
+yarn run serve
 ```
-
+        
 The output will appear as follows:
 
-![vue-3-js-switch](./images/vue3-switch.PNG)
+{% previewsample "page.domainurl/code-snippet/switch/getting-started-cs2" %}
+
+> You can refer to our [Vue Switch](https://www.syncfusion.com/vue-components/vue-toggle-switch-button) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Switch example](https://ej2.syncfusion.com/vue/demos/#/material/button/switch.html) that shows how to render the Switch in Vue.
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)
