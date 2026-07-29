@@ -20,201 +20,117 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Setup the Vite project
+## Setup for local development
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
+
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
+
+***Vue with JavaScript***
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
+```
+
+***Vue with TypeScript***
+
+```bash
+npm create vite@latest my-app -- --template vue-ts
+```
+
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```bash
+cd my-app
+```
+
+## Add Vue ButtonGroup packages
+
+To install the ButtonGroup packages, use the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-buttons
 ```
 
 or
 
 ```bash
-yarn create vite
+yarn add @syncfusion/ej2-vue-buttons
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+## Adding CSS reference
 
-1.Define the project name: The name of the project can be specified directly. For this article, the project name is set as `my-project`.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
-```bash
-? Project name: » my-project
-```
-
-2.Select `Vue` as the framework. It will create a Vue 3 project.
-
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
-
-```bash
-Use rolldown-vite (Experimental)? No
-```
-
-5.Install dependencies and start the dev server.
-
-```bash
-Install with npm and start now?: Yes
-```
-
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
-
-```bash
-cd my-project
-npm install
-```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue ButtonGroup component](https://www.syncfusion.com/vue-components/vue-button-group) as an example. To use the Vue ButtonGroup component in the project, the `SplitButton` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-splitbuttons --save
-```
-
-or
-
-```bash
-yarn add @syncfusion/ej2-vue-splitbuttons
-```
-
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the ButtonGroup component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button-group/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+## Adding Vue ButtonGroup component
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-Follow the below steps to add the Vue ButtonGroup component using `Composition API` or `Options API`:
-
-1.First, import and register the ButtonGroup component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+The ButtonGroup code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
-<script setup>
- import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
-//Component registration
-export default {
-    name: "App",
-    components: {
-      "ejs-button": ButtonComponent
-    }        
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2.In the `template` section, define the ButtonGroup component.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
- <template>
-     <div id='app'>
-         <div class="e-btn-group">
-             <ejs-button>HTML</ejs-button>
-             <ejs-button>CSS</ejs-button>
-             <ejs-button>Javascript</ejs-button>
-         </div>
-     </div>
- </template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3.Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
- <template>
-     <div id='app'>
-         <div class="e-btn-group">
-             <ejs-button>HTML</ejs-button>
-             <ejs-button>CSS</ejs-button>
-             <ejs-button>Javascript</ejs-button>
-         </div>
-     </div>
+<template>
+  <div class="e-btn-group">
+    <ejs-button>HTML</ejs-button>
+    <ejs-button>CSS</ejs-button>
+    <ejs-button>Javascript</ejs-button>
+  </div>
  </template>
 
 <script setup>
-  import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
-
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button-group/index.css";
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-     <div id='app'>
-         <div class="e-btn-group">
-             <ejs-button>HTML</ejs-button>
-             <ejs-button>CSS</ejs-button>
-             <ejs-button>Javascript</ejs-button>
-         </div>
-     </div>
+  <div class="e-btn-group">
+    <ejs-button>HTML</ejs-button>
+    <ejs-button>CSS</ejs-button>
+    <ejs-button>Javascript</ejs-button>
+  </div>
  </template>
+
 <script>
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 //Component registration
@@ -230,6 +146,10 @@ export default {
   }
 }
 </script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button-group/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -248,11 +168,11 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
-
 ![vue-3-js-ButtonGroup](images/vue-3-js-buttonGroup.PNG)
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition)
-* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options)
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

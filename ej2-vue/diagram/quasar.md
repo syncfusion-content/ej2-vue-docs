@@ -166,7 +166,7 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 Replace the entire contents of **src/App.vue** with the following code:
 
-```vue
+```
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
