@@ -18,32 +18,7 @@ To get started quickly with Vue Dropdown List, check this video:
 
 ## Prerequisites
 
-| Requirement | Version |
-|-------------|---------|
-| Vue | 2.6 or higher |
-| Node.js | 16.0.0 or above |
-
-### Vue supported versions
-
-| Vue version | Minimum Syncfusion Vue Dropdown List version |
-| ------------- | ------------------------------------------- |
-|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
-
-### Browser support
-
-| Browser | Supported versions |
-|---|---|
-| Chrome | Latest |
-| Firefox | Latest |
-| Opera | Latest |
-| Edge | 13+ |
-| Internet Explorer (IE) | 11+ |
-| Safari | 9+ |
-| iOS Safari | 9+ |
-| Android Browser / Chrome for Android | 4.4+ |
-| Windows Mobile | IE 11+ |
-
-> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setup the Vue 2 project
 
@@ -127,27 +102,6 @@ Then add the following CSS reference to the **src/App.vue** file:
 Now, you can add the Vue Dropdown List component to your **src/App.vue** file by importing and defining it within your application. Then, populate the data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <div id='container' style="margin:50px auto 0; width:250px;">
-        <br>
-        <ejs-dropdownlist id='dropdownlist' :dataSource='sportsData' placeholder='Select a game'></ejs-dropdownlist>
-    </div>
-  </div>
-</template>
-
-<script setup>
-  import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
-  const sportsData = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
-</script>
-
-<style>
-  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-list/index.css";
-</style>
-
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
@@ -185,7 +139,7 @@ Now, you can add the Vue Dropdown List component to your **src/App.vue** file by
 To run the application, use the following command:
 
 ```bash
-npm run serve
+npm run dev
 ```
 
 or

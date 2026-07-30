@@ -14,6 +14,7 @@ new Vue({
       <ejs-dropdownlist
         ref="dropdownList"
         id="filterType"
+        width="100px"
         :dataSource="filterTypeData"
         :fields="fields"
         :value="filterOptions.type"
@@ -53,3 +54,22 @@ new Vue({
     },
 
 });
+
+const style = document.createElement('style');
+style.textContent = `
+.filter-dropdown-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-dropdown-container label {
+    font-weight: 600;
+}
+
+.filter-dropdown-container .e-ddl {
+    width: 150px;
+    margin: 10px;
+}
+`;
+document.head.appendChild(style);

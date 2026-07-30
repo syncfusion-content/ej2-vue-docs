@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Vue Checkbox component | Syncfusion
 description:  Checkout and learn about Getting started with Vue Checkbox component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,17 +14,45 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+| Requirement | Version |
+|-------------|---------|
+| Vue | 2.6 or higher |
+| Node.js | 16.0.0 or above |
 
-## Setting up the Vue 2 project
+### Vue supported versions
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+| Vue version | Minimum Syncfusion Vue Checkbox version |
+| ------------- | ------------------------------------------- |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+
+### Browser support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
+
+> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+
+## Setup the Vue 2 project
+
+Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
+
+> **Note:** To create a Vue 2 application using Vue CLI, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-2-vue-cli) for more details.
+
+To create a new Vue 2 application, run the following commands based on your preferred package manager:
+
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 or
@@ -32,24 +60,29 @@ or
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-![Vue 2 project](./images/vue2-terminal.png)
+- **Which linter to use?** → **Default ([Vue 2] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
-
-This article uses the [Vue Checkbox component](https://www.syncfusion.com/vue-components/vue-checkbox) as an example. Install the `@syncfusion/ej2-vue-buttons` package by running the following command:
+Navigate to the project directory:
 
 ```bash
-npm install @syncfusion/ej2-vue-buttons --save
+cd quickstart
+```
+
+## Adding Vue Buttons package
+
+To install the Buttons package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-buttons
 ```
 or
 
@@ -57,79 +90,115 @@ or
 yarn add @syncfusion/ej2-vue-buttons
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the CheckBox component and its dependents were imported into the `<style>` section of the **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Button components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/check-box/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding Checkbox component
 
-Follow the below steps to add the Vue CheckBox component:
+You can add the Vue Checkbox component to your application by importing it into the `src/App.vue` file and defining the component with the [label](https://ej2.syncfusion.com/vue/documentation/api/check-box/checkboxmodel#label) property. 
 
-1\. First, import and register the CheckBox component in the `script` section of the **src/App.vue** file.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Checkbox supports three visual states: **Checked**, **Unchecked**, and **Indeterminate**. The [checked](https://ej2.syncfusion.com/vue/documentation/api/check-box/index-default#checked) property is used to control the checked and unchecked states, where a tick mark is displayed when the Checkbox is selected.
+
+Additionally, the [indeterminate](https://ej2.syncfusion.com/vue/documentation/api/check-box/index-default#indeterminate) property can be used to display the Checkbox in an indeterminate state, which visually masks the actual value of the Checkbox. This state cannot be set or changed by user interaction and can only be applied programmatically through the component property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-import { CheckBoxComponent as EjsCheckbox } from "@syncfusion/ej2-vue-buttons";
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
-export default {
-  components: {
-    'ejs-checkbox': CheckBoxComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section define the Checkbox component with the [label](https://ej2.syncfusion.com/vue/documentation/api/check-box/checkboxmodel#label)
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-<ejs-checkbox label='Default'></ejs-checkbox>
+  <ul>
+    <li><ejs-checkbox label='Checked State' checked=true></ejs-checkbox></li>
+    <li><ejs-checkbox label='Unchecked State'></ejs-checkbox></li>
+    <li><ejs-checkbox label='Indeterminate State' indeterminate=true></ejs-checkbox></li>
+  </ul>
 </template>
 
-{% endhighlight %}
-{% endtabs %}
+<script setup>
+  import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
+  import { enableRipple } from '@syncfusion/ej2-base';
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+  enableRipple(true);
+</script>
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/check-box/default-cs2/app-composition.vue %}
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/check-box/index.css";
+
+  .e-checkbox-wrapper {
+    margin-top: 18px;
+  }
+
+  li {
+    list-style: none;
+  }
+</style>
+
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/check-box/default-cs2/app.vue %}
+
+<template>
+  <ul>
+    <li><ejs-checkbox label='Checked State' checked=true></ejs-checkbox></li>
+    <li><ejs-checkbox label='Unchecked State'></ejs-checkbox></li>
+    <li><ejs-checkbox label='Indeterminate State' indeterminate=true></ejs-checkbox></li>
+  </ul>
+</template>
+
+<script>
+  import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
+  import { enableRipple } from '@syncfusion/ej2-base';
+
+  enableRipple(true);
+
+  export default {
+    name: "App",
+    components: {
+      'ejs-checkbox': CheckBoxComponent
+    }
+  }
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/check-box/index.css";
+  
+  .e-checkbox-wrapper {
+    margin-top: 18px;
+  }
+
+  li {
+    list-style: none;
+  }
+</style>
+
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Run the application
 
-To run the project, use the following command:
+To run the application, use the following command:
 
 ```bash
 npm run serve
@@ -141,28 +210,15 @@ or
 yarn run serve
 ```
         
-{% previewsample "page.domainurl/code-snippet/check-box/default-cs2" %}
+The output will appear as follows:
 
-## Change the Checkbox state
-
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Checkbox contains 3 different states visually, they are:
-* Checked
-* Unchecked
-* Indeterminate
-
-The Checkbox [`checked`](https://ej2.syncfusion.com/vue/documentation/api/check-box#checked) property is used to handle the checked and unchecked state. In checked state a tick mark will be added to the visualization of Checkbox.
-
-### Indeterminate
-
-The Checkbox indeterminate state can be set through [`indeterminate`](https://ej2.syncfusion.com/vue/documentation/api/check-box#indeterminate) property. Checkbox indeterminate state masks the real value of Checkbox visually. The Checkbox cannot be changed to indeterminate state through the user interface, this state can be achieved only through the property.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/check-box/default-cs3/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/check-box/default-cs3/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
 {% previewsample "page.domainurl/code-snippet/check-box/default-cs3" %}
+
+> You can refer to our [Vue Checkbox](https://www.syncfusion.com/vue-components/vue-checkbox) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Checkbox example](https://ej2.syncfusion.com/vue/demos/#/material/button/checkbox.html) that shows how to render the Checkbox in Vue.
+
+## See also
+
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)
