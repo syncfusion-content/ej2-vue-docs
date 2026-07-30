@@ -18,32 +18,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-| Requirement | Version |
-|-------------|---------|
-| Vue | 3.0 or higher |
-| Node.js | 16.0.0 or above |
-
-### Vue supported versions
-
-| Vue version | Minimum Syncfusion Vue MultiSelect version |
-| ------------- | ------------------------------------------- |
-|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
-
-### Browser support
-
-| Browser | Supported versions |
-|---|---|
-| Chrome | Latest |
-| Firefox | Latest |
-| Opera | Latest |
-| Edge | 13+ |
-| Internet Explorer (IE) | 11+ |
-| Safari | 9+ |
-| iOS Safari | 9+ |
-| Android Browser / Chrome for Android | 4.4+ |
-| Windows Mobile | IE 11+ |
-
-> **Note:** Ensure that your development environment satisfies the required Vue, Node.js, and browser compatibility prerequisites before using Syncfusion® Vue UI components. For more information, see the [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setup for local development
 

@@ -5,6 +5,7 @@
       <ejs-dropdownlist
         ref="dropdownList"
         id="filterType"
+        width="100px"
         :dataSource="filterTypeData"
         :fields="fields"
         :value="filterOptions.type"
@@ -41,8 +42,8 @@ components: {
       data: ordersTrackData,
       fields: { text: 'text', value: 'value' },
       filterTypeData: [
-        { text: 'Excel', value: 'Excel' },
-        { text: 'CheckBox', value: 'CheckBox' }
+        { text: 'CheckBox', value: 'CheckBox' },
+        { text: 'Excel', value: 'Excel' }
       ],
       filterOptions: { type: "CheckBox", mode: "Immediate" },
     };
@@ -69,26 +70,18 @@ components: {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
 
-  .filter-dropdown-container {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 4px;
+ .filter-dropdown-container {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
+}
 
-  .filter-dropdown-container label {
+.filter-dropdown-container label {
     font-weight: 600;
-    color: #333;
-    white-space: nowrap;
-  }
+}
 
-  .filter-dropdown-container .e-ddl {
+.filter-dropdown-container .e-ddl {
     width: 150px;
-  }
-
-  .e-grid .e-excelfilter .e-contextmenu-wrapper {
-    display: none;
-  }
+    margin: 10px;
+}
 </style>

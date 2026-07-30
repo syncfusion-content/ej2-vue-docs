@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Vue 3 getting started with the Signature component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Signature component of Syncfusion Essential JS 2 and more details.
-control: Vue 3 getting started
+title: Vue 3 getting Started with the Signature component | Syncfusion
+description: Check out and learn about Vue 3 getting Started with the Vue Signature component of Syncfusion Essential JS 2 and more details.
+control: Vue 3 getting Started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,93 +14,53 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
-The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life-cycle hooks, and more.
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Set up the Vite project
+## Setup for local development
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
+
+To create a new Vue 3 application, run one of the following commands based on your preferred language:
+
+***Vue with JavaScript***
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template vue
 ```
 
-or
+***Vue with TypeScript***
 
 ```bash
-yarn create vite
+npm create vite@latest my-app -- --template vue-ts
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
 
 ```bash
-? Project name: » my-project
+cd my-app
 ```
 
-2.Select `Vue` as the framework. It will create a Vue 3 project.
+## Add Vue Signature packages
+
+To install the Signature packages, use the following command:
 
 ```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-Vanilla
-> Vue
-  React
-  Preact
-  Lit
-  Svelte
-  Others
-```
-
-3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
-  TypeScript
-  Customize with create-vue ↗
-  Nuxt ↗
-```
-
-4.Roll-down is Vite's new experimental faster bundler (rust-based, replacing roll-up). Choose `No` uses the stable, proven roll-up-based Vite (recommended for most users)
-
-```bash
-Use rolldown-vite (Experimental)? No
-```
-
-5.Install dependencies and start the dev server.
-
-```bash
-Install with npm and start now?: Yes
-```
-
-Since you selected `Yes`, the development server should start automatically. If you selected `No`, please follow these steps to set up and start the project manually:
-
-```bash
-cd my-project
-npm install
-```
-
-or
-
-```bash
-cd my-project
-yarn install
-```
-
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
-
-This article uses the [Vue Signature component](https://www.syncfusion.com/vue-components/vue-signature) as an example. To use the Vue Signature component in the project, the `@syncfusion/ej2-vue-inputs` package needs to be installed using the following command:
-
-```bash
-npm install @syncfusion/ej2-vue-inputs --save
+npm install @syncfusion/ej2-vue-inputs
 ```
 
 or
@@ -109,40 +69,63 @@ or
 yarn add @syncfusion/ej2-vue-inputs
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components require CSS stylesheets to display correctly. You can import themes in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to reference themes in a Vue project.
-
-In this article, `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the Signature component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API ~/src/App.vue" %}
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/signature/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of CSS imports matters. Import base styles first, then component-specific styles. Missing CSS imports can result in misaligned layouts, buttons without styling, or missing visual elements in popups and dialogs.
+## Adding Vue Signature component
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-Follow the below steps to add the Vue Signature component using `Composition API` or `Options API`:
-
-  1.First, import and register the Signature component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+The Signature code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
+<template>
+<div class='wrap'>
+    <h4>Sign here</h4>
+    <ejs-signature id="signature"></ejs-signature>
+</div>
+</template>
+
 <script setup>
-    import { SignatureComponent as EjsSignature} from '@syncfusion/ej2-vue-inputs';
+  import { SignatureComponent as EjsSignature } from '@syncfusion/ej2-vue-inputs';
 </script>
+
+<style>
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/signature/index.css";
+</style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+<div class='wrap'>
+    <h4>Sign here</h4>
+    <ejs-signature id="signature"></ejs-signature>
+</div>
+</template>
 
 <script>
 import { SignatureComponent } from '@syncfusion/ej2-vue-inputs';
@@ -155,81 +138,8 @@ export default {
 }
 </script>
 
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-<div class='wrap'>
-    <h4>Sign here</h4>
-    <ejs-signature id="signature"></ejs-signature>
-</div>
-</template>
-
-<script setup>
-import { SignatureComponent as EjsSignature} from '@syncfusion/ej2-vue-inputs';
-</script>
-
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-
-#signature {
-    border: 1px solid lightgray;
-    height: 100%;
-    width: 100%;
-}
-
-.wrap {
-    height: 300px;
-    width: 550px;
-}
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-<div class='wrap'>
-    <h4>Sign here</h4>
-    <ejs-signature id="signature"></ejs-signature>
-</div>
-</template>
-
-<script>
-  import { SignatureComponent } from '@syncfusion/ej2-vue-inputs';
-  // Component registration
-  export default {
-    name: "App",
-    // Declaring component and its directives
-    components: {
-      'ejs-signature': SignatureComponent
-    },
-    // Bound properties declarations
-    data() {
-      return {
-      };
-    }
-  };
-</script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-#signature {
-    border: 1px solid lightgray;
-    height: 100%;
-    width: 100%;
-}
-
-.wrap {
-    height: 300px;
-    width: 550px;
-}
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/signature/index.css";
 </style>
 
 {% endhighlight %}
@@ -248,8 +158,6 @@ or
 ```bash
 yarn run dev
 ```
-
-The output will appear as follows:
 
 ![vue-3-js-signature](images/vue-3-js-signature.PNG)
 
