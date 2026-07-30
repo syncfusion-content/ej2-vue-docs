@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started with Vue ListView component | Syncfusion
-description:  Checkout and learn about Getting started with Vue ListView component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with Vue ListView component | Syncfusion
+description:  Checkout and learn about Getting Started with Vue ListView component of Syncfusion Essential JS 2 and more details.
+control: Getting Started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue ListView Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue ListView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue ListView component.
 
 To get start quickly with Vue ListView, you can check on this video:
 
@@ -20,15 +20,18 @@ To get start quickly with Vue ListView, you can check on this video:
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Setting up the Vue 2 project
+## Setup the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
+
+> **Note:** To create a Vue 2 application using Vue CLI, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-2-vue-cli) for more details.
+
+To create a new Vue 2 application, run the following commands based on your preferred package manager:
+
 
 ```bash
 npm install -g @vue/cli
 vue create quickstart
-cd quickstart
-npm run serve
 ```
 
 or
@@ -36,21 +39,26 @@ or
 ```bash
 yarn global add @vue/cli
 vue create quickstart
-cd quickstart
-yarn run serve
 ```
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-![Vue 2 project](../listview/images/vue2-terminal.png)
+- **Which linter to use?** → **Default ([Vue 2] babel, eslint)**
+- **Install with npm and start now?** → **Yes**
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Navigate to the project directory:
 
-This article uses the [Vue ListView component](https://www.syncfusion.com/vue-components/vue-listview) as an example. Install the `@syncfusion/ej2-vue-lists` package by running the following command:
+```bash
+cd quickstart
+```
+
+## Adding Vue ListView packages
+
+To install the ListView package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-lists --save
@@ -61,113 +69,54 @@ or
 yarn add @syncfusion/ej2-vue-lists
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, the `Material3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material3` CSS styles for the ListView component and its dependencies are imported into the `<style>` section of **src/App.vue** file.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+Then add the following CSS reference to the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/list-view/index.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Adding ListView component
 
-Follow the below steps to add the Vue ListView component using `Composition API` or `Options API`:
-
-1\. First, import and register the ListView component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+The ListView code should be added in the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-import { ListViewComponent as EjsListview } from '@syncfusion/ej2-vue-lists';
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { ListViewComponent } from '@syncfusion/ej2-vue-lists';
-
-export default {
-  components: {
-    'ejs-listview': ListViewComponent
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section, define the ListView component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/list-view#datasource) property.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-    <div id="app">
-    <ejs-listview id='flat-list' :dataSource='dataSource' width="330px"></ejs-listview>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Bind data source
-
-Populate the data in the ListView by using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/list-view#datasource) property. Here, an array of JSON values are passed to the ListView component as `dataSource` in data option inside the `<script>` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-    <ejs-listview id='flat-list' :dataSource='dataSource' width="330px"></ejs-listview>
-  </div>
-</template>
-<script setup>
-import { ListViewComponent as EjsListview } from '@syncfusion/ej2-vue-lists';
-const dataSource = [
-        { text: 'Hennessey Venom', id: 'list-01' },
-        { text: 'Bugatti Chiron', id: 'list-02' },
-        { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
-        { text: 'SSC Ultimate Aero', id: 'list-04' },
-        { text: 'Koenigsegg CCR', id: 'list-05' },
-        { text: 'McLaren F1', id: 'list-06' },
-        { text: 'Aston Martin One- 77', id: 'list-07' },
-        { text: 'Jaguar XJ220', id: 'list-08' },
-        { text: 'McLaren P1', id: 'list-09' },
-        { text: 'Ferrari LaFerrari', id: 'list-10' },
-      ];
-</script>
-
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-    <ejs-listview id='flat-list' :dataSource='dataSource' width="330px"></ejs-listview>
-  </div>
+  <ejs-listview id='sample-list-flat' :dataSource='data' ></ejs-listview>
 </template>
+
 <script>
 import { ListViewComponent } from '@syncfusion/ej2-vue-lists';
+//Component registration
 export default {
+  name: "App",
   components: {
-    'ejs-listview': ListViewComponent
+    "ejs-listview": ListViewComponent  
   },
-  name: 'app',
-   data () {
+  data() {
     return {
-       dataSource : [
+      data: [
         { text: 'Hennessey Venom', id: 'list-01' },
         { text: 'Bugatti Chiron', id: 'list-02' },
         { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
@@ -178,29 +127,22 @@ export default {
         { text: 'Jaguar XJ220', id: 'list-08' },
         { text: 'McLaren P1', id: 'list-09' },
         { text: 'Ferrari LaFerrari', id: 'list-10' },
-      ]
-    }
+      ],
+    };
   }
 }
 </script>
 
+<style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/list-view/index.css";
+</style>
+
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+{% previewsample "page.domainurl/code-snippet/listview/getting-started-cs1" %}
 
-{% tabs %}
-{% highlight html tabtitle="Compostion API (~/src/App.vue)" %}
-{% include code-snippet/listview/getting-started-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/listview/getting-started-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-
-## Run the project
-
-To run the project, use the following command:
+## Run the application
 
 ```bash
 npm run serve
@@ -211,13 +153,10 @@ or
 ```bash
 yarn run serve
 ```
-        
-{% previewsample "page.domainurl/code-snippet/listview/getting-started-cs1" %}
 
-## See Also
+## See also
 
-[Data Binding Types](./data-binding)
-
-[ListView customization](./customizing-templates)
-
-[Virtualization](./virtualization)
+* [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
+* [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
+* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)
