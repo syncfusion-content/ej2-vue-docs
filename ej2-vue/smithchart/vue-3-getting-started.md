@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Smith Chart Component in Vue 3
 
-This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup>®</sup> Vue Smith Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smith Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The **Composition API** groups related logic into reusable functions. The **Options API** organizes component logic with options such as `data`, `methods`, and life cycle hooks. Choose the API that best fits the application's structure.
 
@@ -67,7 +67,7 @@ Install the `@syncfusion/ej2-vue-charts` package. Use a package release compatib
 **npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
 **yarn**
@@ -122,8 +122,6 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
-
-> **Note:** The module injection key must be `smithchart`. Register only the modules required by the features used in the application.
 
 **Step 2:** Declare the Data and Configuration
 
@@ -241,7 +239,7 @@ The example uses the following properties:
 
 Each `dataSource` object must contain numeric fields mapped by `resistance` and `reactance`. Each object supplied through `points` must contain numeric `resistance` and `reactance` properties.
 
-Here is the summarized code for the above steps.Replace the contents of **src/App.vue** with either the Composition API or Options API example.
+Here is the summarized code for the above steps. Replace the contents of **src/App.vue** with either the Composition API or Options API example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -393,7 +391,7 @@ npm run dev
 yarn run dev
 ```
 
-Open the local URL displayed in the terminal, commonly `http://localhost:5173`, and verify that the Smith Chart displays two transmission-line series, and a title.
+Open the local URL displayed in the terminal, commonly `http://localhost:5173`, and verify that the Smith Chart displays two transmission-line series and a title.
 
 ![Vue 3 Smith Chart showing two series](./images/vue3-smith-chart-demo.png)
 
@@ -415,6 +413,5 @@ For additional assistance, refer to the [Vue Smith Chart API documentation](http
 - [Vue 3 Smith Chart getting-started documentation](https://ej2.syncfusion.com/vue/documentation/smithchart/vue-3-getting-started)
 - [Vue Smith Chart series](https://ej2.syncfusion.com/vue/documentation/smithchart/smithchart-series)
 - [Vue Smith Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/smith-chart/default.html)
-- [Vue Smith Chart video tutorials](https://www.syncfusion.com/tutorial-videos/vue/smith-chart)
 - [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
 - [Getting Started with Vue UI Components using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

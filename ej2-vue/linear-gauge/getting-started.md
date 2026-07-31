@@ -31,6 +31,7 @@ The following packages are used by the Vue Linear Gauge package:
     |-- @syncfusion/ej2-vue-base
     |-- @syncfusion/ej2-svg-base
     |-- @syncfusion/ej2-lineargauge
+    |-- @syncfusion/ej2-pdf-export
 ```
 
 Use a package release that supports Vue 2. Before upgrading, check the [Vue system requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements) and package release notes.
@@ -72,7 +73,7 @@ Install the package using either npm or yarn.
 **npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-lineargauge --save
+npm install @syncfusion/ej2-vue-lineargauge
 ```
 
 **yarn**
@@ -198,7 +199,5 @@ For additional assistance, refer to the [Vue Linear Gauge API documentation](htt
 
 - [Vue Linear Gauge overview](https://www.syncfusion.com/vue-components/vue-linear-gauge)
 - [Vue Linear Gauge annotations](https://ej2.syncfusion.com/vue/documentation/linear-gauge/annotations)
-- [Vue Linear Gauge examples](https://ej2.syncfusion.com/vue/demos/#/material3/linear-gauge/default-functionalities.html)
+- [Vue Linear Gauge Demos](https://ej2.syncfusion.com/vue/demos/#/material3/linear-gauge/default-functionalities.html)
 - [Vue Linear Gauge getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-linear-gauge-component)
-- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

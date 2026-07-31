@@ -288,7 +288,7 @@ export default {
       ],
       weightValuePath: 'count',
       leafItemSettings: {
-        labelPath: 'state',
+        labelPath: 'state'
       }
     };
   }
@@ -318,7 +318,7 @@ Open the URL displayed in the terminal, commonly `http://localhost:5173`, and ve
 
 ![vue-3-js-TreeMap](./images/vue3-treemap-demo.png)
 
-> **Sample:** The older [vue3-treemap-getting-started sample](https://github.com/SyncfusionExamples/vue3-treemap-getting-started) uses Vue CLI. Use the code in this guide for the Vite-based setup.
+> **Sample:** The [vue3-treemap-getting-started sample](https://github.com/SyncfusionExamples/vue3-treemap-getting-started) uses Vue CLI. Use the code in this guide for the Vite-based setup.
 
 ## Troubleshooting
 

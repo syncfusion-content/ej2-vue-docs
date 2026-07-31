@@ -326,7 +326,7 @@ For additional assistance, refer to the [Vue Bullet Chart API documentation](htt
 ## See Also
 
 - [Vue Bullet Chart overview](https://www.syncfusion.com/vue-components/vue-bullet-chart)
-- [Vue Bullet Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/bullet-chart/default.html)
+- [Vue Bullet Chart Demos](https://ej2.syncfusion.com/vue/demos/#/material3/bullet-chart/default.html)
 - [Vue Bullet Chart customization](https://ej2.syncfusion.com/vue/documentation/bullet-chart/customization)
 - [Vue 3 Migration Guide](https://v3-migration.vuejs.org/)
 - [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)

@@ -18,13 +18,17 @@ Ensure your development environment meets the following requirements as listed i
 
 ## Dependencies
 
-The following minimum dependencies are required to use the Accumulation Chart:
+The Accumulation Chart component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 |-- @syncfusion/ej2-vue-charts
-    |-- @syncfusion/ej2-charts
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
+    |-- @syncfusion/ej2-pdf-export
+    |-- @syncfusion/ej2-file-utils
+    |-- @syncfusion/ej2-compression
+    |-- @syncfusion/ej2-charts
+    |-- @syncfusion/ej2-vue-base
     |-- @syncfusion/ej2-svg-base
 ```
 
@@ -112,17 +116,19 @@ Define `seriesData` as an array of objects containing the category values (`x`) 
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
-data() {
-  return {
-    seriesData: [
-        { x: 'Jan', y: 3 }, { x: 'Feb', y: 3.5 },
-        { x: 'Mar', y: 7 }, { x: 'Apr', y: 13.5 },
-        { x: 'May', y: 19 }, { x: 'Jun', y: 23.5 },
-        { x: 'Jul', y: 26 }, { x: 'Aug', y: 25 },
-        { x: 'Sep', y: 21 }, { x: 'Oct', y: 15 },
-        { x: 'Nov', y: 9 }, { x: 'Dec', y: 3.5 }
-    ],
-  };
+export default {
+  data() {
+    return {
+      seriesData: [
+          { x: 'Jan', y: 3 }, { x: 'Feb', y: 3.5 },
+          { x: 'Mar', y: 7 }, { x: 'Apr', y: 13.5 },
+          { x: 'May', y: 19 }, { x: 'Jun', y: 23.5 },
+          { x: 'Jul', y: 26 }, { x: 'Aug', y: 25 },
+          { x: 'Sep', y: 21 }, { x: 'Oct', y: 15 },
+          { x: 'Nov', y: 9 }, { x: 'Dec', y: 3.5 }
+      ],
+    };
+  }
 }
 </script>
 

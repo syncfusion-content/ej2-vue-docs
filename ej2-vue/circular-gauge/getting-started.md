@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Circular Gauge Component in Vue 2
 
-This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue Circular Gauge component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Circular Gauge component.
 
 The Circular Gauge visualizes numeric values on a circular scale. It can be used to create speedometers, meter gauges, clocks, and other radial indicators by configuring axes, ranges, ticks, labels, and pointers.
 
@@ -27,8 +27,8 @@ The following packages are used by the Vue Circular Gauge package:
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-buttons
     |-- @syncfusion/ej2-popups
-       |-- @syncfusion/ej2-splitbuttons
-       |-- @syncfusion/ej2-vue-base
+    |-- @syncfusion/ej2-splitbuttons
+    |-- @syncfusion/ej2-vue-base
     |-- @syncfusion/ej2-svg-base
     |-- @syncfusion/ej2-circulargauge
 ```
@@ -87,7 +87,7 @@ yarn add @syncfusion/ej2-vue-circulargauge
 
 Follow these steps to add the Vue Circular Gauge component.
 
-**Step 1:** Import and locally register the Circular Gauge component and its axis and pointer directives in the `script` section of **src/App.vue**.
+**Step 1:** Import and locally register the Circular Gauge component in the `script` section of **src/App.vue**.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -107,7 +107,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Define the Circular Gauge with one axis and one pointer in the `template` section.
+**Step 2:** Define the Circular Gauge Component in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -132,7 +132,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 ## Run the Project
 
-Save **src/main.js** and **src/App.vue**, and then start the development server using either npm or yarn.
+Save **src/App.vue**, and then start the development server using either npm or yarn.
 
 **npm**
 

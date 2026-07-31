@@ -24,7 +24,7 @@ Ensure that the development environment meets the [system requirements for Syncf
 
 ## Dependencies
 
-The following are the minimum dependencies required to use the Vue 3D Circular Chart component:
+The Vue 3D Circular Chart component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -92,53 +92,7 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Circular Chart Component
 
-Follow these steps to add the Vue 3D Circular Chart component.
-
-**Step 1:** Import and locally register the 3D Circular Chart component and its series directives in the `script` section of **src/App.vue**.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<script>
-import {
-  CircularChart3DComponent,
-  CircularChart3DSeriesCollectionDirective,
-  CircularChart3DSeriesDirective
-} from '@syncfusion/ej2-vue-charts';
-
-export default {
-  components: {
-    'ejs-circularchart3d': CircularChart3DComponent,
-    'e-circularchart3d-series-collection': CircularChart3DSeriesCollectionDirective,
-    'e-circularchart3d-series': CircularChart3DSeriesDirective
-  }
-};
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 2:** Define the 3D Circular Chart component and its series collection in the `template` section.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <div id="app">
-    <ejs-circularchart3d id="container">
-      <e-circularchart3d-series-collection>
-        <e-circularchart3d-series></e-circularchart3d-series>
-      </e-circularchart3d-series-collection>
-    </ejs-circularchart3d>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-At this stage, the component and directives are registered, but the chart does not display data until the series data and required feature module are configured.
-
-## Module Registration
+**Module Registration**
 
 The 3D Circular Chart component uses feature-specific modules. Register the modules required by the application with the component's `provide` option.
 
@@ -167,8 +121,6 @@ export default {
 Register `PieSeries3D` when the application uses a 3D pie or doughnut series.
 
 > **Note:** The module injection key must be `circularchart3d`. Register only the modules used by the application to keep the bundle size smaller.
-
-## Populate the 3D Circular Chart with Data
 
 The 3D Circular Chart series uses the following properties to bind data:
 
@@ -259,6 +211,8 @@ yarn run serve
 
 Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that a 3D pie chart titled **Fruit Distribution** displays five fruit categories.
 
+{% previewsample "page.domainurl/code-snippet/circular-chart/getting-started" %}
+
 ## Troubleshooting
 
 - **The 3D Circular Chart is not rendered.** Verify that `CircularChart3DComponent`, `CircularChart3DSeriesCollectionDirective`, and `CircularChart3DSeriesDirective` are imported and registered. Check the browser console for component, module, data, or licensing errors.
@@ -271,8 +225,6 @@ For additional assistance, refer to the [Vue 3D Circular Chart API documentation
 ## See Also
 
 - [Getting Started with the Vue 3D Circular Charts Component video](https://www.youtube.com/watch?v=hGpINPEOi1E)
-- [Vue 3D Circular Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-circular-chart/pie)
+- [Vue 3D Circular Chart Demos](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-circular-chart/pie)
 - [Vue 3D Circular Chart overview](https://www.syncfusion.com/vue-components/vue-3d-circular-chart)
 - [Getting Started with the Vue 3D Circular Chart Component in Vue 3](vue-3-getting-started)
-- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

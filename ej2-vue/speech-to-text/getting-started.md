@@ -143,17 +143,11 @@ yarn run serve
 
 Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 2 application:
 
-{% tabs %}
-{% highlight html tabtitle="main.js" %}
-
 ```javascript
 import { registerLicense } from '@syncfusion/ej2-base';
 
 registerLicense('YOUR_LICENSE_KEY');
 ```
-
-{% endhighlight %}
-{% endtabs %}
 
 > **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 

@@ -14,7 +14,7 @@ This section provides a step-by-step guide to creating a Vue 2 application using
 
 ## Prerequisites
 
-Ensure that the development environment meets the requirements listed in https://ej2.syncfusion.com/vue/documentation/system-requirements.
+Ensure that the development environment meets the requirements listed in [system requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 This guide uses the Vue 2 Options API. Use a supported Node.js version and a Vue CLI version that allows creating Vue 2 projects.
 
@@ -23,10 +23,10 @@ This guide uses the Vue 2 Options API. Use a supported Node.js version and a Vue
 The following are the minimum dependencies required to use the Vue Progress Bar component:
 
 ```
-  |-- @syncfusion/ej2-vue-progressbar
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-svg-base
+|-- @syncfusion/ej2-vue-progressbar
+  |-- @syncfusion/ej2-base
+  |-- @syncfusion/ej2-data
+  |-- @syncfusion/ej2-svg-base
 ```
 
 Only the `@syncfusion/ej2-vue-progressbar` package must be installed directly. Its required dependencies are installed automatically.
@@ -70,7 +70,7 @@ Install the `@syncfusion/ej2-vue-progressbar` package using either npm or Yarn.
 **npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-progressbar --save
+npm install @syncfusion/ej2-vue-progressbar
 ```
 
 **Yarn**
@@ -85,7 +85,7 @@ yarn add @syncfusion/ej2-vue-progressbar
 
 Import and register the Progress Bar component, and then define it in the template of the **src/App.vue** file.
 
-The following example renders a circular Progress Bar with a value of `100`.
+The following example renders a circular Progress Bar with a value of `75`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -110,7 +110,7 @@ export default {
   },
   data() {
     return {
-      value: 100
+      value: 75
     };
   }
 };
@@ -141,32 +141,34 @@ npm run serve
 yarn run serve
 ```
 
-Open the local URL displayed in the terminal, such as http://localhost:8080, in a browser. The application displays an animated circular Progress Bar with a value of `100`.
+Open the local URL displayed in the terminal, such as http://localhost:8080, in a browser. The application displays an circular Progress Bar with a value of `75`.
+
+![Vue 3 circular Progress Bar](./images/vue2-progressbar-demo.png)
 
 ## Module Injection
 
 The Progress Bar component is divided into feature-specific modules. Register only the modules required by the application using the component's `provide` option.
 
-The `ProgressAnnotationService` module enables annotation support in the Progress Bar.
+The `ProgressAnnotation` module enables annotation support in the Progress Bar.
 
 The following example registers the annotation service:
 
 ```javascript
 
-import { ProgressBarComponent, ProgressAnnotationService } from "@syncfusion/ej2-vue-progressbar";
+import { ProgressBarComponent, ProgressAnnotation } from "@syncfusion/ej2-vue-progressbar";
 
 export default {
   components: {
     'ejs-progressbar': ProgressBarComponent
   },
   provide: {
-    progressbar: [ProgressAnnotationService]
+    progressbar: [ProgressAnnotation]
   }
 };
 
 ```
 
-Register `ProgressAnnotationService` only when annotations are used.
+Register `ProgressAnnotation` only when annotations are used.
 
 > **Note:** Register only the modules required by the application to keep the bundle size smaller.
 
@@ -181,5 +183,3 @@ Register `ProgressAnnotationService` only when annotations are used.
 ## See Also
 
 * [Getting Started with Vue 3 Progress Bar](vue-3-getting-started)
-* [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-* [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

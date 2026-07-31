@@ -56,7 +56,7 @@ npm install
 yarn install
 ```
 
-Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
+Now that `my-app` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
 
 > **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
@@ -69,7 +69,7 @@ This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-com
 **npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
 **yarn**
@@ -133,18 +133,20 @@ let primaryXAxis = { valueType: 'Category' };
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-data() {
-  return {
-    seriesData: [
-        { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-        { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-        { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-        { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-        { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-        { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-    ],
-    primaryXAxis : { valueType: 'Category' }
-  };
+export default {
+  data() {
+    return {
+      seriesData: [
+          { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
+          { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
+          { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
+          { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
+          { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
+          { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
+      ],
+      primaryXAxis : { valueType: 'Category' }
+    };
+  }
 }
 </script>
 
@@ -257,7 +259,7 @@ npm run dev
 yarn run dev
 ```
 
-- Open the project URL shown in the terminal (usually `http://localhost:5173`) and verify the chart displays.
+- Open the project URL shown in the terminal (usually `http://localhost:5173`) and verify that the chart is displayed.
 
 The output will appear as follows:
 
@@ -269,27 +271,9 @@ For migration information from Vue 2 to Vue 3, refer to the [Vue 3 Migration Gui
 
 ## Troubleshooting
 
-**Chart not rendering:**
-- Ensure that the required chart modules (for example, `LineSeries`, `Category`) are injected using `provide()` in the Composition API or the `provide` option in the Options API
-- Verify the `dataSource` is correctly assigned with proper field mappings
-- Check the browser console for any error messages
-
-**Module not found error:**
-- Confirm that the module is imported from `@syncfusion/ej2-vue-charts`
-- Verify the module name is spelled correctly in the import statement and `provide` option
-
-**Incorrect package version:**
-- Verify that the installed `@syncfusion/ej2-vue-charts` package is compatible with Vue 3.0 or later
-- Run `npm list @syncfusion/ej2-vue-charts` to check the installed version
-
-**Missing child directives:**
-- When using series directives, ensure that `SeriesCollectionDirective` and `SeriesDirective` are imported and registered as shown in the examples
-- The component names must match the registration names in the template (e.g., `e-series-collection`, `e-series`)
-
-**Console errors:**
-- Check the browser console (F12 → Console tab) for import or runtime errors
-- Verify that file paths and package installations are correct
-- Ensure the development server is still running with `npm run dev`
+* **Chart is not rendering** — Ensure the required chart modules, such as `LineSeries` and `Category`, are provided using `provide()` in the Composition API or the `provide` option in the Options API.
+* **Module not found error** — Confirm that the module is imported from `@syncfusion/ej2-vue-charts` and that the package is installed.
+* **No data is displayed** — Verify that `xName` and `yName` match the field names in the data source and that `primaryXAxis.valueType` is set to `Category`.
 
 For additional assistance, refer to the [`Vue Charts API Documentation`](https://ej2.syncfusion.com/vue/documentation/api/chart) and the [Feature Modules](./feature-modules) page.
 

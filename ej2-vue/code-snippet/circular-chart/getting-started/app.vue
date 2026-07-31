@@ -1,15 +1,14 @@
 <template>
   <div id="app">
-    <ejs-circularchart3d id="container" :title='title' :tilt='tilt' :legendSettings='legendSettings'>
+    <ejs-circularchart3d id="container" :title='title' :tilt='tilt'>
       <e-circularchart3d-series-collection>
-        <e-circularchart3d-series :dataSource='seriesData' xName='x' yName='y'
-          :dataLabel='dataLabel'></e-circularchart3d-series>
+        <e-circularchart3d-series :dataSource='seriesData' xName='fruit' yName='share'></e-circularchart3d-series>
       </e-circularchart3d-series-collection>
     </ejs-circularchart3d>
   </div>
 </template>
 <script>
-import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D } from "@syncfusion/ej2-vue-charts";
+import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D } from "@syncfusion/ej2-vue-charts";
 
 export default {
   name: "App",
@@ -21,37 +20,17 @@ export default {
   data() {
     return {
       seriesData: [
-        { x: 'Chrome', y: 62.92 },
-        { x: 'Internet Explorer', y: 6.12 },
-        { x: 'Opera', y: 3.15 },
-        { x: 'Edge', y: 5.5 },
-        { x: 'Safari', y: 19.97 },
-        { x: 'Others', y: 2.34 }
+        { fruit: 'Apple', share: 25 },
+        { fruit: 'Mango', share: 20 },
+        { fruit: 'Orange', share: 18 },
+        { fruit: 'Banana', share: 17 },
+        { fruit: 'Grapes', share: 20 }
       ],
-      title: "Browser Market Shares in November 2023",
-      tilt: -45,
-      legendSettings: {
-        visible: true,
-        position: 'Right'
-      },
-      dataLabel: {
-        visible: true,
-        name: 'x',
-        position: 'Outside',
-        font: {
-          fontWeight: '600'
-        },
-        connectorStyle: { length: '40px' }
-      }
+      title: "Fruit Distribution",
+      tilt: -45
     };
   },
   provide: {
-    circularchart3d: [PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D]
+    circularchart3d: [PieSeries3D]
   }
 };
-</script>
-<style>
-#container {
-  height: 350px;
-}
-</style>

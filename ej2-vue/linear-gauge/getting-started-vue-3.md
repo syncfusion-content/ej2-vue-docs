@@ -59,7 +59,9 @@ yarn install
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Linear Gauge Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages are published on [npm](https://www.npmjs.com/search?q=ej2-vue).
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are published on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the package using either npm or yarn.
 
 **npm**
 

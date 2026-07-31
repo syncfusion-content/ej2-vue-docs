@@ -58,10 +58,10 @@ npm install @syncfusion/ej2-vue-charts
 
 Follow the steps below to add the Vue Chart component:
 
-**Step 1:** First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`, and import the Chart component in the `script` section of **src/app.vue**.
+**Step 1:** First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`, and import the Chart component in the `script` section of **src/App.vue**.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script setup>
 import { provide } from 'vue';
@@ -74,7 +74,7 @@ import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollect
 **Step 2:** Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script setup>
 const seriesData = [
@@ -94,7 +94,7 @@ const primaryXAxis = { valueType: 'Category' };
 **Step 3:** Register the required chart modules using the `provide()` method.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/pages/App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script setup>
 // Module injection
@@ -107,7 +107,7 @@ provide('chart', [LineSeries, Category]);
 **Step 4:** In the `template` section, define the Chart component with the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series#datasource) property.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
     <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
@@ -122,10 +122,10 @@ provide('chart', [LineSeries, Category]);
 
 
 
-Here is the summarized code for the above steps in the **src/app.vue** file:
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
     <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
@@ -171,22 +171,12 @@ Open the generated local URL (for example, `http://localhost:9000`) from termina
 
 ![Quasar CLI chart output showing a line chart](./images/quasar-output.png)
 
-**Chart not rendering:**
-- Ensure that the required chart modules (`LineSeries`, `Category`) are registered using `provide()` in the script section
-- Verify the `dataSource` is correctly assigned with proper field mappings
-- Check the browser console (F12 → Console tab) for any error messages
+## Troubleshooting
 
-**Module not found error:**
-- Confirm that the module is imported from `@syncfusion/ej2-vue-charts`
-- Verify the module name is spelled correctly in the import statement and `provide()` call
-
-**Incorrect package version:**
-- Verify that `@syncfusion/ej2-vue-charts` is compatible with your Quasar and Vue versions
-- Run `npm list @syncfusion/ej2-vue-charts` to check the installed version
-
-**Components not rendering in Quasar layout:**
-- Ensure the component is placed in a Quasar page file (e.g., `src/pages/IndexPage.vue`)
-- Check that the component has proper container sizing (add CSS for `#container` height)
+* **Chart is not rendering** — Ensure that the required chart modules, such as `LineSeries` and `Category`, are registered using `provide()` in the script section.
+* **Module not found error** — Confirm that the module is imported from `@syncfusion/ej2-vue-charts` and that the module name is spelled correctly.
+* **Incorrect package version** — Verify that `@syncfusion/ej2-vue-charts` is compatible with your Quasar and Vue versions.
+* **Components are not rendering in the Quasar layout** — Ensure the component is placed in a Quasar page file, such as `src/App.vue`, and that the chart container has appropriate height.
 
 For additional assistance, refer to the [`Vue Charts API Documentation`](https://ej2.syncfusion.com/vue/documentation/api/chart) and the [Feature Modules](./feature-modules) page.
 

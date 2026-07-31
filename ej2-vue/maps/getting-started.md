@@ -12,9 +12,7 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Maps component. By the end of this guide, you'll have a working Maps component rendering the world map from a local shape data file.
 
-> **Note**: If you're using Vue 3, refer to the [Vue 3 Getting Started guide](./getting-started-vue-3.md).
->
-> **Note**: Vue 2 reached end-of-life on December 31, 2023. For new projects, we strongly recommend using [Vue 3](./getting-started-vue-3.md).
+> **Note**: If you're using Vue 3, refer to the [Vue 3 Getting Started guide](./getting-started-vue-3).
 
 You can explore the Maps component's capabilities using the following video:
 
@@ -26,7 +24,7 @@ Ensure that the development environment meets the required criteria listed in [S
 
 ## Dependencies
 
-The following are the minimum dependencies required to use the Maps component.
+The Vue Maps component is available in the `@syncfusion/ej2-vue-maps` package. The following dependencies are used by the package.
 
 ```
 |-- @syncfusion/ej2-vue-maps
@@ -123,6 +121,8 @@ export default {
 
 **Step 2:** In the `template` section, define the Maps component.
 
+Map shapes are rendered within layers. Add a layer collection to the Maps by using the [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps#layers) property, then bind the GeoJSON data to the layer's [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapedata) property.
+
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
@@ -210,38 +210,6 @@ export default {
 </script>
 ```
 
-## Render Shapes from GeoJSON Data
-
-This section explains how to bind GeoJSON data to the map.
-
-The following snippet defines a `FeatureCollection` containing a single state (Massachusetts):
-
-```js
-const usMap = {
-    "type": "FeatureCollection",
-    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-    "features": [
-        {
-            "type": "Feature",
-            "properties": { "iso_3166_2": "MA", "name": "Massachusetts", "admin": "United States of America" },
-            "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -70.801756294617277, 41.248076234530558 ] ] ] ] }
-        }
-    ]
-};
-```
-
-Map shapes are rendered within layers. Add a layer collection to the Maps by using the [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps#layers) property, then bind the GeoJSON data to the layer's [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel#shapedata) property.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/maps/getting-started-cs34/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/maps/getting-started-cs34" %}
-
->**Note**: For the full set of world map shape data used in the basic example, download the [`world_map` sample data (ZIP archive)](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-1580932177), extract it, and place the resulting `world-map.js` file in the `src` folder of your project.
-
 ## Troubleshooting
 
 The following are common issues you may encounter when getting started with the Maps component:
@@ -249,6 +217,5 @@ The following are common issues you may encounter when getting started with the 
 * **Blank map is displayed** — Ensure that the shape data is correctly imported and that the file path in the import statement matches the file's location in your project.
 * **`world_map is not defined` error** — Verify that `world-map.js` exists in the `src` folder.
 * **Module features do not render (tooltips, legend, data labels)** — Confirm the corresponding module is added to the `provide.maps` array in the Vue component.
-* **Shape renders off-canvas or is invisible** — The shape's CRS does not match the map's default projection. Set [`projectionType`](https://ej2.syncfusion.com/vue/documentation/api/maps/projectionType) on the `MapsComponent` (for example, `Equirectangular`, `Mercator`, or `Miller`) or transform the GeoJSON to the expected CRS.
 
 
