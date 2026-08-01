@@ -21,7 +21,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue Data Grid version |
+| Vue version | Minimum Syncfusion Vue SpeechToText version |
 | ------------- | ------------------------------------------- |
 |[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
 |[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
@@ -143,17 +143,11 @@ yarn run serve
 
 Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your Vue 2 application:
 
-{% tabs %}
-{% highlight html tabtitle="main.js" %}
-
 ```javascript
 import { registerLicense } from '@syncfusion/ej2-base';
 
 registerLicense('YOUR_LICENSE_KEY');
 ```
-
-{% endhighlight %}
-{% endtabs %}
 
 > **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 

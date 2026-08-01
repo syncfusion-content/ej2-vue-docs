@@ -168,7 +168,7 @@ The following modules provide the basic features of the Rich Text Editor.
 These modules can be injected as `services` using Vue's `provide` function as demonstrated in the following example.
 
 {% tabs %}
-{% highlight html  hl_lines="9" tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html hl_lines="9" tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs21/app-composition.vue %}
 {% endhighlight %}
 {% highlight html hl_lines="13 14 15" tabtitle="Options API (~/src/App.vue)" %}

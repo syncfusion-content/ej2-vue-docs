@@ -71,5 +71,5 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/inline-ai-assist/index.css";
 </style>
