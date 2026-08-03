@@ -134,7 +134,9 @@ If you do not want telemetry to be collected during development, disable it befo
 
 If you are using npm packages and ES module imports, call `Telemetry` from `@syncfusion/ej2-base` before creating any EJ2 component.
 
-```Vue
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
   <ejs-grid :dataSource='data'>
     <e-columns>
@@ -165,7 +167,9 @@ const data = [
   }
 ];
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Note: Call `Telemetry.disable();` before creating or using any Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component.
 

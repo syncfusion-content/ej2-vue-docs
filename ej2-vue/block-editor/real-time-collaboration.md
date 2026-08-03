@@ -286,10 +286,10 @@ const users = blockEditorRef.value?.users;
 - After the Block Editor initializes, retrieve the version history instance and wait for snapshot data to load before calling any version history methods.
 
 Before that need to create a storage service for snapshots.
-- Create versionHistoryService.ts with IndexedDBVersionStorage class
-- This class implements IVersionStorage interface (required by Syncfusion)
+- Create `versionHistoryService.ts` with `IndexedDBVersionStorage` class
+- This class implements `IVersionStorage` interface (required by Syncfusion)
 
-Make Storage Room-Specific by importing roomName from collaboration.ts to make each room gets its own isolated snapshot database.
+Make Storage Room-Specific by importing `roomName` from `collaboration.ts` to make each room gets its own isolated snapshot database.
 
 Create a `versionHistoryService.ts` file in the src folder, replace the `App.vue` file to configure the BlockEditorComponent, and replace the `App.css` file with the styles required for the version history panel.
 
