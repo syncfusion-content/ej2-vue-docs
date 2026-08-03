@@ -56,7 +56,7 @@ npm install
 yarn install
 ```
 
-Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project. Remove the default `HelloWorld`/`App.vue` boilerplate before continuing, so that the file only contains the code shown in the next steps.
+Now that `my-app` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project. Remove the default `HelloWorld`/`App.vue` boilerplate before continuing, so that the file only contains the code shown in the next steps.
 
 > **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
@@ -69,7 +69,7 @@ This article uses the [`Vue Sankey Chart component`](https://www.syncfusion.com/
 **npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
 **yarn**
@@ -104,11 +104,11 @@ import {
 
 <script>
 import {
-  SankeyComponent as EjsSankey,
-  SankeyNodesCollectionDirective as ESankeyNodesCollection,
-  SankeyNodeDirective as ESankeyNode,
-  SankeyLinksCollectionDirective as ESankeyLinksCollection,
-  SankeyLinkDirective as ESankeyLink,
+  SankeyComponent,
+  SankeyNodesCollectionDirective,
+  SankeyNodeDirective,
+  SankeyLinksCollectionDirective,
+  SankeyLinkDirective
 } from "@syncfusion/ej2-vue-charts";
 
 export default {
@@ -273,7 +273,7 @@ The output will appear as follows:
 
 The following are common issues and solutions when integrating the Sankey Chart component:
 
-- **Chart not rendering**: Ensure that all required modules are registered in the `provide` option. Verify that both nodes and links are defined with proper structure.
+- **Chart not rendering**: Ensure that `SankeyComponent` and the node/link directives are imported and registered correctly. Verify that both nodes and links are defined with matching `id`, `sourceId`, and `targetId` values.
 
 - **Module import errors**: Confirm that all required modules are imported from `@syncfusion/ej2-vue-charts` and that the component is registered correctly with proper directive naming.
 

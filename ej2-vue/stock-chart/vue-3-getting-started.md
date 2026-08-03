@@ -58,7 +58,7 @@ npm install
 yarn install
 ```
 
-Now that `my-project` is set up, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-app` is set up, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 > **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
@@ -91,12 +91,12 @@ This example uses the `Material 3` theme for the Stock Chart component. To insta
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-material3-theme --save
+npm install @syncfusion/ej2-material3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
 
-yarn add @syncfusion/@syncfusion/ej2-material3-theme
+yarn add @syncfusion/ej2-material3-theme
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,29 +147,27 @@ export default {
 
 **Step 2:** Declare the values for the `dataSource` property in the `script` section.
 
+To hide the period selector and display only the Stock Chart, set [`enablePeriodSelector`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/index-default#enableperiodselector) to `false`.
+
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
 const seriesData = [
-        {
-            date: new Date('2012-04-02'),
-            open: 85.9757,
-            high: 90.6657,
-            low: 85.7685,
-            close: 90.5257,
-            volume: 660187068
-        },
-        {
-            date: new Date('2012-04-09'),
-            open: 89.4471,
-            high: 92,
-            low: 86.2157,
-            close: 86.4614,
-            volume: 912634864
-        },
-        // Additional data points...
+        { date: new Date('2012-04-02'), open: 320.71, high: 324.07, low: 317.74, close: 323.78, volume: 45638000 },
+        { date: new Date('2012-04-03'), open: 323.03, high: 324.30, low: 319.64, close: 321.63, volume: 40857000 },
+        { date: new Date('2012-04-04'), open: 319.54, high: 319.82, low: 315.87, close: 317.89, volume: 32519000 },
+        { date: new Date('2012-04-05'), open: 316.44, high: 318.53, low: 314.60, close: 316.48, volume: 46327000 },
+        { date: new Date('2012-04-06'), open: 317.20, high: 320.50, low: 315.30, close: 319.80, volume: 38200000 },
+        { date: new Date('2012-04-07'), open: 320.00, high: 322.90, low: 318.50, close: 321.10, volume: 35500000 },
+        { date: new Date('2012-04-08'), open: 321.50, high: 325.20, low: 320.80, close: 324.70, volume: 41200000 },
+        { date: new Date('2012-04-09'), open: 325.00, high: 326.80, low: 322.40, close: 323.90, volume: 39800000 },
+        { date: new Date('2012-04-10'), open: 324.20, high: 327.00, low: 323.10, close: 326.10, volume: 42100000 },
+        { date: new Date('2012-04-11'), open: 326.30, high: 329.20, low: 325.50, close: 328.70, volume: 44500000 },
+        { date: new Date('2012-04-12'), open: 328.90, high: 330.50, low: 326.70, close: 327.80, volume: 36700000 }
 ];
+
+const enablePeriodSelector = false;
 </script>
 
 {% endhighlight %}
@@ -180,24 +178,19 @@ export default {
   data() {
     return {
         seriesData: [
-            {
-                date: new Date('2012-04-02'),
-                open: 85.9757,
-                high: 90.6657,
-                low: 85.7685,
-                close: 90.5257,
-                volume: 660187068
-            },
-            {
-                date: new Date('2012-04-09'),
-                open: 89.4471,
-                high: 92,
-                low: 86.2157,
-                close: 86.4614,
-                volume: 912634864
-            },
-            // Additional data points...
+            { date: new Date('2012-04-02'), open: 320.71, high: 324.07, low: 317.74, close: 323.78, volume: 45638000 },
+            { date: new Date('2012-04-03'), open: 323.03, high: 324.30, low: 319.64, close: 321.63, volume: 40857000 },
+            { date: new Date('2012-04-04'), open: 319.54, high: 319.82, low: 315.87, close: 317.89, volume: 32519000 },
+            { date: new Date('2012-04-05'), open: 316.44, high: 318.53, low: 314.60, close: 316.48, volume: 46327000 },
+            { date: new Date('2012-04-06'), open: 317.20, high: 320.50, low: 315.30, close: 319.80, volume: 38200000 },
+            { date: new Date('2012-04-07'), open: 320.00, high: 322.90, low: 318.50, close: 321.10, volume: 35500000 },
+            { date: new Date('2012-04-08'), open: 321.50, high: 325.20, low: 320.80, close: 324.70, volume: 41200000 },
+            { date: new Date('2012-04-09'), open: 325.00, high: 326.80, low: 322.40, close: 323.90, volume: 39800000 },
+            { date: new Date('2012-04-10'), open: 324.20, high: 327.00, low: 323.10, close: 326.10, volume: 42100000 },
+            { date: new Date('2012-04-11'), open: 326.30, high: 329.20, low: 325.50, close: 328.70, volume: 44500000 },
+            { date: new Date('2012-04-12'), open: 328.90, high: 330.50, low: 326.70, close: 327.80, volume: 36700000 }
         ],
+        enablePeriodSelector: false
     };
   }
 };
@@ -210,18 +203,18 @@ export default {
 
 > **Note:** If you skip module registration, the chart will not render correctly and you may encounter errors like "Module is not injected" in the browser console.
 
-**Step 3:** In the `template` section, define the Stock Chart component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/stock-chart#datasource) property.
+**Step 3:** In the `template` section, define the Stock Chart component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockseriesmodel#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-        <ejs-stockchart>
+        <ejs-stockchart :enablePeriodSelector="enablePeriodSelector">
             <e-stockchart-series-collection>
                 <e-stockchart-series :dataSource="seriesData" type="Candle" volume="volume" xName="date" low="low" high="high" open="open" close="close">
                 </e-stockchart-series>
             </e-stockchart-series-collection>
-        <ejs-stockchart>
+        </ejs-stockchart>
 </template>
 
 {% endhighlight %}
@@ -233,12 +226,12 @@ Here is the complete summarized code for the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-        <ejs-stockchart>
+        <ejs-stockchart :enablePeriodSelector="enablePeriodSelector">
             <e-stockchart-series-collection>
                 <e-stockchart-series :dataSource="seriesData" type="Candle" volume="volume" xName="date" low="low" high="high" open="open" close="close">
                 </e-stockchart-series>
             </e-stockchart-series-collection>
-        <ejs-stockchart>
+        </ejs-stockchart>
 </template>
 
 <script setup>
@@ -246,33 +239,32 @@ import { provide } from 'vue';
 import { StockChartComponent as EjsStockchart, StockChartSeriesCollectionDirective as EStockchartSeriesCollection, StockChartSeriesDirective as EStockchartSeries, DateTime, CandleSeries } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [
-        {
-            date: new Date('2012-04-02'),
-            open: 85.9757,
-            high: 90.6657,
-            low: 85.7685,
-            close: 90.5257,
-            volume: 660187068
-        },
-        {
-            date: new Date('2012-04-09'),
-            open: 89.4471,
-            high: 92,
-            low: 86.2157,
-            close: 86.4614,
-            volume: 912634864
-        },
-        // Additional data points...
+        { date: new Date('2012-04-02'), open: 320.71, high: 324.07, low: 317.74, close: 323.78, volume: 45638000 },
+        { date: new Date('2012-04-03'), open: 323.03, high: 324.30, low: 319.64, close: 321.63, volume: 40857000 },
+        { date: new Date('2012-04-04'), open: 319.54, high: 319.82, low: 315.87, close: 317.89, volume: 32519000 },
+        { date: new Date('2012-04-05'), open: 316.44, high: 318.53, low: 314.60, close: 316.48, volume: 46327000 },
+        { date: new Date('2012-04-06'), open: 317.20, high: 320.50, low: 315.30, close: 319.80, volume: 38200000 },
+        { date: new Date('2012-04-07'), open: 320.00, high: 322.90, low: 318.50, close: 321.10, volume: 35500000 },
+        { date: new Date('2012-04-08'), open: 321.50, high: 325.20, low: 320.80, close: 324.70, volume: 41200000 },
+        { date: new Date('2012-04-09'), open: 325.00, high: 326.80, low: 322.40, close: 323.90, volume: 39800000 },
+        { date: new Date('2012-04-10'), open: 324.20, high: 327.00, low: 323.10, close: 326.10, volume: 42100000 },
+        { date: new Date('2012-04-11'), open: 326.30, high: 329.20, low: 325.50, close: 328.70, volume: 44500000 },
+        { date: new Date('2012-04-12'), open: 328.90, high: 330.50, low: 326.70, close: 327.80, volume: 36700000 }
 ];
 const stockChart = [ DateTime, CandleSeries ];
+const enablePeriodSelector = false;
 provide('stockChart', stockChart);
 </script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/stock-chart/index.css";
+</style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-        <ejs-stockchart>
+        <ejs-stockchart :enablePeriodSelector="enablePeriodSelector">
             <e-stockchart-series-collection>
                 <e-stockchart-series :dataSource="seriesData" type="Candle" volume="volume" xName="date" low="low" high="high" open="open" close="close">
                 </e-stockchart-series>
@@ -293,24 +285,19 @@ export default {
   data() {
     return {
         seriesData: [
-            {
-                date: new Date('2012-04-02'),
-                open: 85.9757,
-                high: 90.6657,
-                low: 85.7685,
-                close: 90.5257,
-                volume: 660187068
-            },
-            {
-                date: new Date('2012-04-09'),
-                open: 89.4471,
-                high: 92,
-                low: 86.2157,
-                close: 86.4614,
-                volume: 912634864
-            },
-            // Additional data points...
+            { date: new Date('2012-04-02'), open: 320.71, high: 324.07, low: 317.74, close: 323.78, volume: 45638000 },
+            { date: new Date('2012-04-03'), open: 323.03, high: 324.30, low: 319.64, close: 321.63, volume: 40857000 },
+            { date: new Date('2012-04-04'), open: 319.54, high: 319.82, low: 315.87, close: 317.89, volume: 32519000 },
+            { date: new Date('2012-04-05'), open: 316.44, high: 318.53, low: 314.60, close: 316.48, volume: 46327000 },
+            { date: new Date('2012-04-06'), open: 317.20, high: 320.50, low: 315.30, close: 319.80, volume: 38200000 },
+            { date: new Date('2012-04-07'), open: 320.00, high: 322.90, low: 318.50, close: 321.10, volume: 35500000 },
+            { date: new Date('2012-04-08'), open: 321.50, high: 325.20, low: 320.80, close: 324.70, volume: 41200000 },
+            { date: new Date('2012-04-09'), open: 325.00, high: 326.80, low: 322.40, close: 323.90, volume: 39800000 },
+            { date: new Date('2012-04-10'), open: 324.20, high: 327.00, low: 323.10, close: 326.10, volume: 42100000 },
+            { date: new Date('2012-04-11'), open: 326.30, high: 329.20, low: 325.50, close: 328.70, volume: 44500000 },
+            { date: new Date('2012-04-12'), open: 328.90, high: 330.50, low: 326.70, close: 327.80, volume: 36700000 }
         ],
+        enablePeriodSelector: false
     };
   },
   provide: {
@@ -318,6 +305,10 @@ export default {
   }
 };
 </script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/stock-chart/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}

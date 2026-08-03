@@ -18,7 +18,7 @@ Ensure that the development environment meets the requirements listed in [System
 
 ## Dependencies
 
-The following are the minimum dependencies required to use the Vue Range Navigator component:
+The Vue Range Navigator component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -213,7 +213,7 @@ Each data object must contain the fields assigned to [`xName`](https://ej2.syncf
 
 - **The series type is not registered.** Import the module required by the configured series type and add it to the `rangeNavigator` array in the `provide` option. When `type` is set to `Area`, register the `AreaSeries` module.
 
-- **No data is displayed.** Verify that [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#datasource) contains data, [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname) match the fields in each data object, and the field assigned to `yName` contains numeric values. When [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorModel#valuetype) is set to `DateTime`, provide valid JavaScript `Date` objects.
+- **No data is displayed.** Verify that [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#datasource) contains data, [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#yname) match the fields in each data object, and the field assigned to `yName` contains numeric values. When [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorModel#valuetype) is set to `DateTime`, provide valid JavaScript `Date` objects.
 
 - **Date-time values are not displayed correctly.** Set the Range Navigator's `valueType` property to `DateTime`, import and register the `DateTime` module, and ensure that the data contains valid JavaScript `Date` objects.
 
@@ -222,5 +222,3 @@ Each data object must contain the fields assigned to [`xName`](https://ej2.syncf
 ## See Also
 
 * [Getting Started with Vue 3 Range Navigator](vue-3-getting-started)
-* [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-* [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

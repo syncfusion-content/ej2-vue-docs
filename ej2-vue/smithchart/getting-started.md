@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Smith Chart Component in Vue 2
 
-This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue Smith Chart component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smith Chart component.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Ensure that the development environment meets the [system requirements for Syncf
 
 ## Dependencies
 
-The following are the minimum dependencies required to use the Vue Smith Chart component:
+The Vue Smith Chart component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -160,7 +160,7 @@ npm run serve
 yarn run serve
 ```
 
-Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that the Smith Chart displays with the transmission-line series.
+Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that the Smith Chart component is rendered. At this stage, no transmission line is displayed because the series data has not been configured yet.
 
 ## Module Registration
 

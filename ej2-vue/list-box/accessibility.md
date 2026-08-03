@@ -31,11 +31,11 @@ The web accessibility makes web content and web applications more accessible for
 <tr>
 <td>
 <kbd>Up arrow</kbd></td><td>
-Moves focus to the previous option.</td></tr>
+Moves focus to and selects the previous item.</td></tr>
 <tr>
 <td>
 <kbd>Down arrow</kbd></td><td>
-Moves focus to the next option.</td></tr>
+Moves focus to and selects the next item.</td></tr>
 <tr>
 <td>
 <kbd>Home</kbd></td><td>
@@ -62,8 +62,12 @@ Selects the focused option and all options up to the first option.</td></tr>
 Selects the focused option and all options down to the last option.</td></tr>
 <tr>
 <td>
-<kbd>Ctrl + (Up or Down)</kbd></td><td>
-Press Ctrl key with up / down arrow or mouse to select multiple items.</td></tr>
+<kbd>Ctrl + Up</kbd></td><td>
+Moves focus to the previous item.</td></tr>
+<tr>
+<td>
+<kbd>Ctrl + Down</kbd></td><td>
+Moves focus to the next item.</td></tr>
 </table>
 
 {% tabs %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Sparkline Component in Vue 2
 
-This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue Sparkline component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sparkline component.
 
 To get started quickly with Vue Sparkline, watch this video:
 
@@ -24,7 +24,7 @@ Ensure that the development environment meets the [system requirements for Syncf
 
 ## Dependencies
 
-The following are the minimum dependencies required to use the Vue Sparkline component:
+The Vue Sparkline component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -149,16 +149,18 @@ When the x-values are category strings, set `valueType` to `Category`. Each data
 ```
 
 ```javascript
-data() {
-  return {
-    dataSource: [
-      { day: 'Mon', value: 3 },
-      { day: 'Tue', value: 5 },
-      { day: 'Wed', value: 2 },
-      { day: 'Thu', value: 4 },
-      { day: 'Fri', value: 6 }
-    ]
-  };
+export default {
+  data() {
+    return {
+      dataSource: [
+        { day: 'Mon', value: 3 },
+        { day: 'Tue', value: 5 },
+        { day: 'Wed', value: 2 },
+        { day: 'Thu', value: 4 },
+        { day: 'Fri', value: 6 }
+      ]
+    };
+  }
 }
 ```
 The following is the complete code for the **src/App.vue** file. Replace the contents of **src/App.vue** with the following complete example:
@@ -169,8 +171,6 @@ The following is the complete code for the **src/App.vue** file. Replace the con
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs14" %}
-
 ## Run the Project
 
 Save **src/App.vue**, and then start the development server using either npm or yarn.
@@ -188,6 +188,8 @@ yarn run serve
 ```
 
 Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that an area Sparkline displays.
+
+{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs14" %}
 
 ## Module Injection
 
@@ -223,10 +225,7 @@ For additional assistance, refer to the [Vue Sparkline API documentation](https:
 
 ## See Also
 
-- [Getting Started with the Vue Sparkline Chart video](https://www.youtube.com/watch?v=XdDcvJ0ZJrE)
 - [Vue Sparkline user interaction](https://ej2.syncfusion.com/vue/documentation/sparkline/user-interaction)
 - [Vue Sparkline examples](https://ej2.syncfusion.com/vue/demos/#/material3/sparkline/default.html)
 - [Vue Sparkline getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-sparkline-chart-component)
 - [Getting Started with the Vue 3 Sparkline Component](vue-3-getting-started)
-- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

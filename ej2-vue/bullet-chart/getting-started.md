@@ -20,7 +20,7 @@ Ensure that the development environment meets the [system requirements for Syncf
 
 ## Dependencies
 
-The following are the minimum dependencies required to use the Vue Bullet Chart component:
+The Vue Bullet Chart component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -75,7 +75,7 @@ Install the `@syncfusion/ej2-vue-charts` package using either npm or yarn.
 **npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
 **yarn**
@@ -146,7 +146,7 @@ npm run serve
 yarn run serve
 ```
 
-Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that the Bullet Chart displays.
+Open the local URL displayed in the terminal, commonly `http://localhost:8080`, and verify that the Bullet Chart displayed.
 
 {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/initialize-cs1" %}
 
@@ -203,15 +203,17 @@ The following template binds the `value` and `target` fields and configures a sc
 ```
 
 ```javascript
-data() {
-  return {
-    data: [
-      { value: 75, target: 85 }
-    ],
-    minimum: 0,
-    maximum: 100,
-    interval: 20
-  };
+export default {
+  data() {
+    return {
+      data: [
+        { value: 75, target: 85 }
+      ],
+      minimum: 0,
+      maximum: 100,
+      interval: 20
+    };
+  }
 }
 ```
 {% tabs %}
@@ -234,9 +236,7 @@ For additional assistance, refer to the [Vue Bullet Chart API documentation](htt
 ## See Also
 
 - [Vue Bullet Chart overview](https://www.syncfusion.com/vue-components/vue-bullet-chart)
-- [Vue Bullet Chart examples](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/bullet-chart/default.html)
+- [Vue Bullet Chart Demos](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/bullet-chart/default.html)
 - [Vue Bullet Chart customization](https://ej2.syncfusion.com/vue/documentation/bullet-chart/customization)
 - [Vue Bullet Chart getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-bullet-chart-component)
 - [Getting Started with the Vue 3 Bullet Chart](vue-3-getting-started)
-- [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-- [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

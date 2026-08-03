@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Sparkline Component in Vue 3
 
-This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup>®</sup> Vue Sparkline component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sparkline component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The **Composition API** groups related logic into reusable functions. The **Options API** organizes component logic with options such as `data`, `methods`, and life cycle hooks. Choose the API that best fits the application's structure.
 
@@ -142,6 +142,7 @@ const dataSource = [
 const type = 'Area';
 const valueType = 'Category';
 const xName = 'year';
+const yName = 'population';
 const height = '200px';
 </script>
 
@@ -167,7 +168,8 @@ export default {
       type: 'Area',
       valueType: 'Category',
       xName: 'year',
-      height:'200px',
+      yName: 'population',
+      height: '200px',
     };
   }
 };
@@ -345,7 +347,6 @@ For additional assistance, refer to the [Vue Sparkline API documentation](https:
 
 ## See Also
 
-- [Vue 3 Sparkline getting-started documentation](https://ej2.syncfusion.com/vue/documentation/sparkline/vue-3-getting-started)
 - [Vue Sparkline user interaction](https://ej2.syncfusion.com/vue/documentation/sparkline/user-interaction)
 - [Vue Sparkline examples](https://ej2.syncfusion.com/vue/demos/#/material3/sparkline/default.html)
 - [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)

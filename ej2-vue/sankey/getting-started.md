@@ -20,7 +20,7 @@ Ensure your development environment meets the following requirements as listed i
 
 ## Dependencies
 
-The following list shows the minimum dependencies required to use the Sankey Chart component:
+The Vue Sankey component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 
@@ -40,12 +40,14 @@ The following list shows the minimum dependencies required to use the Sankey Cha
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
+**npm**
+
 ```bash
 npm install -g @vue/cli
 vue create quickstart
 ```
 
-or
+**yarn**
 
 ```bash
 yarn global add @vue/cli
@@ -68,12 +70,15 @@ Now, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> packages to
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the `Vue Sankey Chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running:
+This article uses the `Vue Sankey Chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package using either npm or yarn.
+
+**npm**
 
 ```bash
 npm install @syncfusion/ej2-vue-charts
 ```
-or
+
+**yarn**
 
 ```bash
 yarn add @syncfusion/ej2-vue-charts
@@ -85,19 +90,21 @@ yarn add @syncfusion/ej2-vue-charts
 
 Follow the steps below to add the Sankey Chart component:
 
-**Step 1:** Import and register the Sankey Chart component in the `script` section of the **src/App.vue** file.
+**Step 1:** Import and register the Sankey Chart component and its child directives in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
-import {
-  SankeyComponent
-} from '@syncfusion/ej2-vue-charts';
+import { SankeyComponent, SankeyNodesCollectionDirective, SankeyNodeDirective, SankeyLinksCollectionDirective, SankeyLinkDirective } from "@syncfusion/ej2-vue-charts";
 
 export default {
   components: {
-    'ejs-sankey': SankeyComponent
+    "ejs-sankey": SankeyComponent,
+    "e-sankey-nodes-collection": SankeyNodesCollectionDirective,
+    "e-sankey-node": SankeyNodeDirective,
+    "e-sankey-links-collection": SankeyLinksCollectionDirective,
+    "e-sankey-link": SankeyLinkDirective
   }
 };
 </script>
@@ -105,14 +112,34 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** In the `template` section, define the Sankey Chart component:
+**Step 2:** In the `template` section, define the Sankey Chart component with nodes and links:
+
+This section explains how to bind JSON data to the Sankey Chart. The data structure requires three properties:
+
+- **sourceId** — The starting node name for the link
+- **targetId** — The ending node name for the link
+- **value** — The value that determines the width of the link
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-  <div id="app">
-    <ejs-sankey id="container"></ejs-sankey>
+  <div class="control-pane">
+    <div class="control-section"  id="sankey-container">
+      <ejs-sankey width="90%" height="420px">
+        <e-sankey-nodes-collection>
+          <e-sankey-node id="Energy Input" :label="{ text: 'Energy Input' }" />
+          <e-sankey-node id="Generation" :label="{ text: 'Generation' }" />
+          <e-sankey-node id="Distribution" :label="{ text: 'Distribution' }" />
+          <e-sankey-node id="Consumption" :label="{ text: 'Consumption' }" />
+        </e-sankey-nodes-collection>
+        <e-sankey-links-collection>
+          <e-sankey-link sourceId="Energy Input" targetId="Generation" :value="500" />
+          <e-sankey-link sourceId="Generation" targetId="Distribution" :value="450" />
+          <e-sankey-link sourceId="Distribution" targetId="Consumption" :value="400" />
+        </e-sankey-links-collection>
+      </ejs-sankey>
+    </div>
   </div>
 </template>
 
@@ -123,7 +150,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/sankey/getting-started/initialize-cs1/app.vue %}
+{% include code-snippet/sankey/getting-started/data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -145,7 +172,7 @@ yarn run serve
 
 Open your browser and navigate to `http://localhost:8080` to view the Sankey Chart.
 
-{% previewsample "page.domainurl/code-snippet/sankey/getting-started/initialize-cs1" %}
+{% previewsample "page.domainurl/code-snippet/sankey/getting-started/data-cs1" %}
 
 ## Module Registration
 
@@ -173,48 +200,17 @@ export default {
   }
 };
 ```
-
-## Populate Sankey Chart with Data
-
-This section explains how to bind JSON data to the Sankey Chart. The data structure requires three properties:
-
-- **source** — The starting node name for the link
-- **target** — The ending node name for the link
-- **weight** — The value that determines the width of the link
-
-Here is an example data structure:
-
-```javascript
-export default {
-  data() {
-    return {
-      sankeyLinks: [
-        { source: 'A', target: 'B', weight: 5 },
-        { source: 'A', target: 'C', weight: 3 },
-        { source: 'B', target: 'D', weight: 2 },
-        { source: 'C', target: 'D', weight: 4 }
-      ]
-    };
-  }
-};
-```
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/sankey/getting-started/data-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-{% previewsample "page.domainurl/code-snippet/sankey/getting-started/data-cs1" %}
+The Sankey Chart component supports optional feature modules. Register these modules only when the corresponding features are used.
 
 ## Troubleshooting
 
 The following are common issues and solutions when integrating the Sankey Chart component:
 
-- **Chart not rendering**: Ensure that all required modules (`SankeyLegend`, `SankeyTooltip`) are registered in the `provide` option. Verify that the `dataSource` property contains valid data with `source`, `target`, and `weight` properties.
+- **Chart not rendering**: Ensure that `SankeyComponent` and the required child directives are imported and registered. Verify that the nodes and links are configured with matching `id`, `sourceId`, and `targetId` values.
 
 - **Module import errors**: Confirm that all required modules are imported from `@syncfusion/ej2-vue-charts` and that the component is registered correctly using the corresponding component-name directive.
 
-- **Data not displaying**: Verify that the data structure matches the expected format. Each link object must have `source`, `target`, and `weight` properties. Check the browser console for any data-related errors.
+- **Data not displaying**: Verify that each link object or directive has valid `sourceId`, `targetId`, and `value` properties. Ensure that every `sourceId` and `targetId` matches an existing node `id`.
 
 - **Version mismatch**: Confirm that the `@syncfusion/ej2-vue-charts` package version is compatible with Vue 2.6+ used in your project. Install the latest compatible version if needed.
 

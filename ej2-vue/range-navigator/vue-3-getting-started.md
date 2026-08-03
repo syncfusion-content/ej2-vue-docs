@@ -60,14 +60,14 @@ yarn install
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at https://www.npmjs.com/search?q=ej2-vue. To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npm](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the https://www.syncfusion.com/vue-components/vue-range-selector as an example. To use the Vue Range Navigator component in the project, install the `@syncfusion/ej2-vue-charts` package using either npm or yarn. The package is compatible with Vue 3.0 and later versions.
+ To use the Vue Range Navigator component in the project, install the `@syncfusion/ej2-vue-charts` package using either npm or yarn. The package is compatible with Vue 3.0 and later versions.
 
 **npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
 **yarn**
@@ -76,7 +76,7 @@ npm install @syncfusion/ej2-vue-charts --save
 yarn add @syncfusion/ej2-vue-charts
 ```
 
-> **Note:** For TypeScript support, refer to https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition or https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options.
+> **Note:** For TypeScript projects, refer to [Vue 3 with the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition) or [Vue 3 with the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options).
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator Component
 
@@ -276,7 +276,7 @@ npm run dev
 yarn run dev
 ```
 
-- Open the project URL shown in the terminal (usually `http://localhost:5173`) and verify the Range Navigator displays.
+- Open the project URL shown in the terminal (usually `http://localhost:5173`) and verify that the Range Navigator displays.
 
 The output will appear as follows:
 
@@ -292,13 +292,13 @@ For migration information from Vue 2 to Vue 3, refer to the https://v3-migration
 
 - **The series type is not registered.** Confirm that the required series module, such as `StepLineSeries`, is imported from `@syncfusion/ej2-vue-charts` and added to the `rangeNavigator` collection in the `provide` configuration.
 
-- **No data is displayed.** Verify that [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#datasource) contains records, ensure that [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname)and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname) match the field names in the data source, and confirm that the field specified in `yName` contains numeric values.
+- **No data is displayed.** Verify that [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#datasource) contains records, ensure that [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#xname)and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries#yname) match the field names in the data source, and confirm that the field specified in `yName` contains numeric values.
 
 - **Date-time values are not displayed correctly.** Set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorModel#valuetype) property to `DateTime`, import and inject the `DateTime` module, and ensure that the data source contains valid JavaScript `Date` objects.
 
 - **Console errors are displayed.** Verify that the `@syncfusion/ej2-vue-charts` package is installed correctly, ensure that the development server is running, and review the browser developer tools for import or runtime errors.
 
-For additional assistance, refer to the [Vue Range Navigator API Documentation](https://ej2.syncfusion.com/vue/documentation/api/range-navigator) and the ./feature-modules page.
+For additional assistance, refer to the [Vue Range Navigator API Documentation](https://ej2.syncfusion.com/vue/documentation/api/range-navigator).
 
 ## See Also
 

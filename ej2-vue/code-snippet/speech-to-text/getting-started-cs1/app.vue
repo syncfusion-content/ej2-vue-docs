@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/speech-to-text/index.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/speech-to-text/index.css";
 
   #container {
     margin: 50px auto;

@@ -10,7 +10,6 @@ new Vue({
 
   data() {
     return {
-      title: "Energy Flow Diagram"
     };
   },
 
@@ -20,7 +19,6 @@ new Vue({
         <ejs-sankey
           width="90%"
           height="420px"
-          :title="title"
         >
           <e-sankey-nodes>
             <e-sankey-node id="Energy Input" :label="{ text: 'Energy Input' }" />

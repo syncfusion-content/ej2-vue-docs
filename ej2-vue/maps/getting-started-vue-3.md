@@ -61,7 +61,7 @@ npm install
 yarn install
 ```
 
-Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
+Now that `my-app` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
 
 > **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
@@ -282,7 +282,7 @@ export default {
 
 The following are common issues you may encounter when getting started with the Maps component in Vue 3:
 
-* **Blank map is displayed** — Confirm that `MapAjax` is constructed and passed to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layersettingsmodel#shapedata) property on `<e-layer>`, and that the template is wrapped in a single root element if Vite reports a multi-root warning.
+* **Blank map is displayed** — Confirm that `MapAjax` is constructed correctly and passed to the `shapeData` property on `<e-layer>`.
 * **CORS errors when loading the remote GeoJSON** — Self-host the `world-map.json` file in your `public/` folder and replace the URL with a relative path, or configure CORS on the host serving the JSON.
 * **Module features do not render (tooltips, legend, data labels)** — Confirm the corresponding module is added to the `provide.maps` array (Options API) or passed to `provide('maps', [...])` (Composition API).
 
