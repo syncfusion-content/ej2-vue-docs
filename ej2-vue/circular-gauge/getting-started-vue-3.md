@@ -125,7 +125,7 @@ Add the Circular Gauge to the `template` section of **src/App.vue**.
 
 <template>
   <div id="app">
-    <ejs-circulargauge id="circulargauge" :title="title">
+    <ejs-circulargauge id="circulargauge">
     </ejs-circulargauge>
   </div>
 </template>
@@ -140,7 +140,7 @@ Here is the summarized code for the above steps. Replace the contents of **src/A
 
 <template>
   <div id="app">
-    <ejs-circulargauge id="circulargauge" :title="title">
+    <ejs-circulargauge id="circulargauge">
     </ejs-circulargauge>
   </div>
 </template>
@@ -156,7 +156,7 @@ import {
 
 <template>
   <div id="app">
-    <ejs-circulargauge id="circulargauge" :title="title">
+    <ejs-circulargauge id="circulargauge">
     </ejs-circulargauge>
   </div>
 </template>
@@ -202,7 +202,6 @@ Open the URL displayed in the terminal, commonly `http://localhost:5173`, and ve
 ## Troubleshooting
 
 - **The Circular Gauge is not rendered.** Verify that the component and all child directives are imported or registered correctly and check the browser console for component, package, or licensing errors.
-- **The gauge is blank.** Ensure that at least one `e-axis` is declared inside `e-axes` and that the axis contains a pointer or other visible elements.
 - **A module-not-found error occurs.** Ensure that the required Circular Gauge package is installed, and then restart the development server.
 - **A package or Vue version error occurs.** Confirm that the installed package release supports Vue 3 and the project's Node.js version.
 
@@ -213,6 +212,6 @@ For additional assistance, refer to the [Vue Circular Gauge API documentation](h
 - [Vue Circular Gauge axes](https://ej2.syncfusion.com/vue/documentation/circular-gauge/gauge-axes)
 - [Vue Circular Gauge ranges](https://ej2.syncfusion.com/vue/documentation/circular-gauge/gauge-ranges)
 - [Vue Circular Gauge user interaction](https://ej2.syncfusion.com/vue/documentation/circular-gauge/gauge-user-interaction)
-- [Vue Circular Gauge examples](https://ej2.syncfusion.com/vue/demos/#/material3/circular-gauge/default-functionalities.html)
+- [Vue Circular Gauge Demos](https://ej2.syncfusion.com/vue/demos/#/material3/circular-gauge/default-functionalities.html)
 - [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
 - [Getting Started with Vue UI Components using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

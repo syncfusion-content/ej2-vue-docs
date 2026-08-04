@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Vue 3 Chart Component | Syncfusion
+title: Getting Started with Vue 3 Accumulation Chart Component | Syncfusion
 description: Scaffold a Vite Vue 3 project and add Syncfusion EJ2 Accumulation Charts with setup steps, module registration, and examples using Composition and Options APIs.
 control: Vue 3 getting started
 platform: ej2-vue
@@ -56,7 +56,7 @@ npm install
 yarn install
 ```
 
-Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
+Now that `my-app` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
 
 > **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
@@ -142,18 +142,20 @@ let chartData = [
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-data() {
-  return {
-    chartData: [
-        { x: 'Argentina', y: 505370 },
-        { x: 'Belgium', y: 551500 },
-        { x: 'Cuba', y: 312685 },
-        { x: 'Dominican Republic', y: 350000 },
-        { x: 'Egypt', y: 301000 },
-        { x: 'Kazakhstan', y: 300000 },
-        { x: 'Somalia', y: 357022 }
-    ]
-  };
+export default {
+  data() {
+    return {
+      chartData: [
+          { x: 'Argentina', y: 505370 },
+          { x: 'Belgium', y: 551500 },
+          { x: 'Cuba', y: 312685 },
+          { x: 'Dominican Republic', y: 350000 },
+          { x: 'Egypt', y: 301000 },
+          { x: 'Kazakhstan', y: 300000 },
+          { x: 'Somalia', y: 357022 }
+      ]
+    };
+  }
 }
 </script>
 

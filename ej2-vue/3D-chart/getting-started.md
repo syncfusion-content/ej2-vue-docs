@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue 3D Chart Component in Vue 2
 
-This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>�</sup> Vue 3D Chart component.
+This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Ensure that the development environment meets the [system requirements for Syncf
 
 ## Dependencies
 
-The following are the minimum dependencies required to use the Vue 3D Chart component:
+The Vue 3D Chart component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -144,7 +144,7 @@ npm run serve
 yarn run serve
 ```
 
-Open the local URL displayed in the terminal, such as `http://localhost:8080`, and verify that the 3D Chart displays the monthly sales data.
+Open the local URL displayed in the terminal, such as `http://localhost:8080`, and verify that the 3D Chart component is rendered.
 
 {% previewsample "page.domainurl/code-snippet/chart3d/getting-started/sample-cs1" %}
 
@@ -158,8 +158,9 @@ The following modules are used in this guide:
 - `Category3D` enables category values on the horizontal axis.
 - `DataLabel3D` enables data labels.
 - `Tooltip3D` enables tooltips.
+- `Legend3D` enables legend
 
-Register `ColumnSeries3D` when the series `type` is `Column`. Register `Category3D` when `primaryXAxis.valueType` is `Category`. Register `DataLabel3D` and `Tooltip3D` only when their corresponding features are enabled.
+Register `ColumnSeries3D` when the series `type` is `Column`. Register `Category3D` when `primaryXAxis.valueType` is `Category`. Register `DataLabel3D`, `Legend3D` and `Tooltip3D` only when their corresponding features are enabled.
 
 ```javascript
 import {
@@ -210,7 +211,7 @@ export default {
 
 Because the `month` field in this example contains category values, set `primaryXAxis.valueType` to `Category` and register the `Category3D` module. The default axis value type is `Numeric`.
 
-The sales values are expressed in thousands. Set `primaryYAxis.labelFormat` to `${value}K` to add a dollar-sign prefix and a `K` suffix to each vertical-axis label.
+The sales values are expressed in thousands. Set `primaryYAxis.labelFormat` to `'${value}K'` to display values with a dollar-sign prefix and a `K` suffix.
 
 Each data object must contain the fields assigned to `xName` and `yName`. The field assigned to `yName` must contain a numeric value.
 
@@ -233,9 +234,6 @@ Each data object must contain the fields assigned to `xName` and `yName`. The fi
 
 ## See Also
 
-- [Vue 3D Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-chart/column.html)
 - [Vue 3D Chart API reference](https://ej2.syncfusion.com/vue/documentation/api/chart3d)
-- [Getting Started with Vue 3 using Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
-- [Getting Started with Vue 3 using Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)
 
 > You can refer to our `Vue 3D Charts` feature tour page for its groundbreaking feature representations. You can also explore our [Vue 3D Charts example](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-chart/column.html) that shows various 3D Chart types and how to represent time-dependent data, showing trends in data at equal intervals.

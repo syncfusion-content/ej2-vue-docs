@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue HeatMap Component in Vue 2
 
-This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue HeatMap component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component.
 
 > **Note:** This guide covers Vue 2. Vue CLI is in maintenance mode, so use Node.js, Vue CLI, and Syncfusion package releases that remain compatible with the Vue 2 project.
 
@@ -20,8 +20,6 @@ The HeatMap represents two-dimensional data through color variations. Each matri
 ## Prerequisites
 
 Ensure that the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
-
-This guide requires a compatible Node.js version, npm or yarn, Vue CLI with Vue 2 support, and a Syncfusion license key for licensed use. See [license key registration](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration).
 
 ## Dependencies
 
@@ -69,6 +67,8 @@ cd quickstart
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap Package
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are published on [npm](https://www.npmjs.com/search?q=ej2-vue).
+
+Install the package using either npm or yarn.
 
 **npm**
 
@@ -150,7 +150,7 @@ Bind it in the template:
 <ejs-heatmap :dataSource="dataSource"></ejs-heatmap>
 ```
 
-Here is the  for the above steps. Replace **src/App.vue** with the following complete example:
+Here is the complete code for the above steps. Replace **src/App.vue** with the following complete example:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -206,7 +206,6 @@ Registration makes a feature available. The related properties must also be conf
 
 - **The HeatMap is not rendered.** Verify that `HeatMapComponent` is imported and registered and that the browser console contains no component, package, or licensing errors.
 - **The HeatMap is blank.** Verify that `dataSource` is a nonempty two-dimensional array containing numeric values.
-- **Palette colors are incorrect.** Define palette values in ascending order and cover the data range.
 - **A module-not-found error occurs.** Verify that `@syncfusion/ej2-vue-heatmap` is installed and restart the development server.
 - **A package or Vue version error occurs.** Confirm that the package release supports Vue 2 and that all Syncfusion packages use compatible versions.
 
@@ -219,4 +218,4 @@ For additional assistance, refer to the [Vue HeatMap API documentation](https://
 - [Vue HeatMap legend](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/legend)
 - [Vue HeatMap palette](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/palette)
 - [Vue HeatMap tooltip](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/tooltip)
-- [Vue HeatMap examples](https://ej2.syncfusion.com/vue/demos/#/material3/heat-map-chart/default-functionalities.html)
+- [Vue HeatMap Demos](https://ej2.syncfusion.com/vue/demos/#/material3/heatmap/default-functionalities.html)

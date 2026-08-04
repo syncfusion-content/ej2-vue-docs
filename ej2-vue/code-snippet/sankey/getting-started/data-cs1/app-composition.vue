@@ -4,7 +4,6 @@
       <EjsSankey
         width="90%"
         height="420px"
-        :title="title"
       >
         <ESankeyNodesCollection>
           <ESankeyNode id="Energy Input" :label="{ text: 'Energy Input' }" />
@@ -33,8 +32,6 @@ import {
   SankeyLinksCollectionDirective as ESankeyLinksCollection,
   SankeyLinkDirective as ESankeyLink
 } from "@syncfusion/ej2-vue-charts";
-
-const title = ref("Energy Flow Diagram");
 
 </script>
 

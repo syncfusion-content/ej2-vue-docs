@@ -26,7 +26,7 @@ Ensure your development environment meets the following requirements as listed i
 
 ## Dependencies
 
-The following are the minimum required dependencies to use the Vue Chart component:
+The Vue Chart component is available in the `@syncfusion/ej2-vue-charts` package. The following dependencies are used by the package:
 
 ```
 |-- @syncfusion/ej2-vue-charts
@@ -255,22 +255,12 @@ export default {
 
 ## Troubleshooting
 
-**Chart is not rendering:**
-- Ensure all required modules are registered in the `provide` option
-- Verify the `dataSource` is correctly assigned with proper field mappings
-- Check the browser console for any error messages
+## Troubleshooting
 
-**Module not found error:**
-- Confirm that the module is imported from `@syncfusion/ej2-vue-charts`
-- Verify the module name is spelled correctly in the import statement and `provide` option
-
-**No data is displayed:**
-- Check that `xName` and `yName` properties match the field names in your data
-- Verify the `valueType` is set to `Category` if using category axis
-- Ensure the `dataSource` array contains data
+* **Chart is not rendering** — Ensure all required modules are registered in the `provide` option, verify that the `dataSource` is assigned correctly, and check the browser console for errors.
+* **Module not found error** — Confirm that the module is imported from `@syncfusion/ej2-vue-charts` and that the module name is spelled correctly in both the import statement and the `provide` option.
+* **No data is displayed** — Check that `xName` and `yName` match the field names in your data, verify that `primaryXAxis.valueType` is set to `Category` for category data, and ensure that the `dataSource` array contains records.
 
 For more assistance, refer to the [`Vue Charts API Documentation`](https://ej2.syncfusion.com/vue/documentation/api/chart) and the [Feature Modules](./feature-modules) page.
-
-## Next Steps
 
 > You can refer to our [`Vue Charts`](https://www.syncfusion.com/vue-ui-components/vue-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Vue Charts example`](https://ej2.syncfusion.com/vue/demos/#/material/chart/line.html) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

@@ -368,7 +368,7 @@ For additional assistance, refer to the [Vue 3D Circular Chart API documentation
 
 - [Vue 3D Circular Chart data labels](https://ej2.syncfusion.com/vue/documentation/circular-chart-3d/data-label)
 - [Vue 3D Circular Chart legend](https://ej2.syncfusion.com/vue/documentation/circular-chart-3d/legend)
-- [Vue 3D Circular Chart examples](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-circular-chart/pie)
+- [Vue 3D Circular Chart Demos](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-circular-chart/pie)
 - [Vue 3D Circular Chart getting-started sample](https://github.com/SyncfusionExamples/getting-started-with-the-vue-3d-circular-charts-component)
 - [Vue 3 Migration Guide](https://v3-migration.vuejs.org/)
 - [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)

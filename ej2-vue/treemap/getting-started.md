@@ -11,13 +11,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue TreeMap Component in Vue 2
 
-This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue TreeMap component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component.
 
 You can explore some useful features of the TreeMap component in the following video.
 
 {% youtube "https://www.youtube.com/watch?v=fFSUhC9SAoQ" %}
-
-The [Vue TreeMap customization video](https://www.youtube.com/watch?v=fFSUhC9SAoQ) demonstrates data binding, item customization, color mapping, and related visualization features.
 
 ## Prerequisites
 
@@ -28,13 +26,15 @@ Ensure that the development environment meets the [system requirements for Syncf
 The following packages are used by the Vue TreeMap package:
 
 ```
-|-- @syncfusion/ej2-treemap
+|-- @syncfusion/ej2-vue-treemap
+    |-- @syncfusion/ej2-treemap
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
     |-- @syncfusion/ej2-pdf-export
     |-- @syncfusion/ej2-file-utils
     |-- @syncfusion/ej2-compression
     |-- @syncfusion/ej2-svg-base
+    |-- @syncfusion/ej2-vue-base
 ```
 
 Only the `@syncfusion/ej2-vue-treemap` package must be installed directly. Its required dependencies are installed automatically.
@@ -70,6 +70,7 @@ After the project is created, navigate to its directory:
 ```bash
 cd quickstart
 ```
+
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap Package
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> packages are published on [npm](https://www.npmjs.com/search?q=ej2-vue).
@@ -212,6 +213,6 @@ For additional assistance, refer to the [Vue TreeMap API documentation](https://
 
 - [Vue TreeMap color mapping](https://ej2.syncfusion.com/vue/documentation/treemap/color-mapping)
 - [Vue TreeMap legend](https://ej2.syncfusion.com/vue/documentation/treemap/legend)
-- [Vue TreeMap examples](https://ej2.syncfusion.com/vue/demos/#/material3/treemap/default.html)
+- [Vue TreeMap Demos](https://ej2.syncfusion.com/vue/demos/#/material3/treemap/default.html)
 - [Getting Started with Vue 3 using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
 - [Getting Started with Vue 3 using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

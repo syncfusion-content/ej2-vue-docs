@@ -4,7 +4,6 @@
       <ejs-sankey
         width="90%"
         height="420px"
-        :title="title"
       >
         <e-sankey-nodes-collection>
           <e-sankey-node id="Energy Input" :label="{ text: 'Energy Input' }" />
@@ -37,7 +36,6 @@ export default {
   name: "App",
   data() {
     return {
-      title: "Energy Flow Diagram"
     };
   },
   components: {

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-chart3d id="container" :primaryXAxis='primaryXAxis'>
+    <ejs-chart3d id="container" :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-chart3d-series-collection>
         <e-chart3d-series :dataSource='seriesData' type='Column' xName='month' yName='sales' name='Sales'>
         </e-chart3d-series>
@@ -22,6 +22,9 @@ const seriesData = [
 ];
 const primaryXAxis = {
   valueType: 'Category'
+};
+const primaryYAxis = {
+  labelFormat: '${value}K'
 };
 
 provide('chart3d', [ColumnSeries3D, Category3D]);

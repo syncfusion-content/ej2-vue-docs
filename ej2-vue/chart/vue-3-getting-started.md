@@ -14,91 +14,6 @@ This article provides a step-by-step guide to setting up a [`Vite`](https://vite
 
 The **Composition API** groups related logic into reusable functions and is recommended for larger, composition-friendly code bases. The **Options API** uses `data`, `methods`, and life cycle options and may be preferable for smaller components or teams familiar with Vue 2 patterns. Choose the API that best fits your project’s structure and long-term maintainability.
 
-{% tabcontents %}
-{% tabcontent Syncfusion CLI %}
-
-## Prerequisites
-
-- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
-- Syncfusion CLI.
-
-## Install the Syncfusion CLI 
-
-Install the Syncfusion CLI globally using the following command:
-
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
-npm install -g @syncfusion/syncfusion-cli
-{% endhighlight %}
-{% endtabs %}
-
-## Set up the Vite project using Syncfusion CLI
-
-You can create a Vue application with [Vite](https://vite.dev/) using the Syncfusion CLI. The CLI provides two ways to create a project:
-
-### Non-interactive mode
-
-Non-interactive mode allows you to create a project directly using a single command with the required command-line arguments.
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-sf new my-project --framework vue --template chart
-{% endhighlight %}
-{% endtabs %}
-
-In this mode, the project configuration is passed directly in the command. The above command creates a `Vue` application with Vite and configured it with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Chart` component. The generated project uses the TypeScript and the Composition API.
-
-### Interactive mode
-
-Interactive mode guides you through the project creation process with step-by-step prompts.
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-sf
-{% endhighlight %}
-{% endtabs %}
-
-When you run the `sf` command, the CLI prompts you to select the required project configuration options. To create a Vue application with Vite and the Syncfusion<sup style="font-size:70%">&reg;</sup> `Chart` component, select the following options:
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-
-√ Project name? ... my-project
-√ Choose Framework: » Vue
-√ Choose Language: » JavaScript
-√ Choose Template: » Chart
-√ Choose Theme: » Material3
-√ Choose Style Format: » CSS
-√ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
-√ Would you like to install Syncfusion Component Skills for AI-powered development? ... no      
-√ Install dependencies and start app now? ... no
-
-{% endhighlight %}
-{% endtabs %}
-
-The above selections generate a `Vue` application with Vite and configure it with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Chart` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
-
-## Run the project
-
-Once the project is created, navigate to the project directory and run the following commands in your terminal.
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-cd my-project
-npm install
-npm run dev
-{% endhighlight %}
-{% endtabs %}
-
-The output will appear as follows:
-
-![Chart Component](./images/cli-chart.png)
-
-{% endtabcontent %}
-
-{% tabcontent Using Vite CLI %}
 ## Prerequisites
 
 Ensure your development environment meets the following requirements as listed in [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
@@ -141,7 +56,7 @@ npm install
 yarn install
 ```
 
-Now that `my-project` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
+Now that `my-app` is ready, add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components to the project.
 
 > **Note:** To create a TypeScript project, use `npm create vite@latest my-app -- --template vue-ts` or `yarn create vite my-app --template vue-ts`.
 
@@ -154,7 +69,7 @@ This article uses the [`Vue Chart component`](https://www.syncfusion.com/vue-com
 **npm**
 
 ```bash
-npm install @syncfusion/ej2-vue-charts --save
+npm install @syncfusion/ej2-vue-charts
 ```
 
 **yarn**
@@ -218,18 +133,20 @@ let primaryXAxis = { valueType: 'Category' };
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-data() {
-  return {
-    seriesData: [
-        { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-        { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-        { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-        { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-        { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-        { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-    ],
-    primaryXAxis : { valueType: 'Category' }
-  };
+export default {
+  data() {
+    return {
+      seriesData: [
+          { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
+          { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
+          { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
+          { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
+          { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
+          { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
+      ],
+      primaryXAxis : { valueType: 'Category' }
+    };
+  }
 }
 </script>
 
@@ -342,14 +259,11 @@ npm run dev
 yarn run dev
 ```
 
-- Open the project URL shown in the terminal (usually `http://localhost:5173`) and verify the chart displays.
+- Open the project URL shown in the terminal (usually `http://localhost:5173`) and verify that the chart is displayed.
 
 The output will appear as follows:
 
 ![Vue 3 Chart sample showing a line chart titled Sales Analysis](./images/vue3-chart-demo.png)
-
-{% endtabcontent %}
-{% endtabcontents %}
 
 > **Sample**: You can explore the complete sample project in the [`vue-3-chart-getting-started`](https://github.com/SyncfusionExamples/vue3-chart-getting-started) repository.
 
@@ -357,27 +271,9 @@ For migration information from Vue 2 to Vue 3, refer to the [Vue 3 Migration Gui
 
 ## Troubleshooting
 
-**Chart not rendering:**
-- Ensure that the required chart modules (for example, `LineSeries`, `Category`) are injected using `provide()` in the Composition API or the `provide` option in the Options API
-- Verify the `dataSource` is correctly assigned with proper field mappings
-- Check the browser console for any error messages
-
-**Module not found error:**
-- Confirm that the module is imported from `@syncfusion/ej2-vue-charts`
-- Verify the module name is spelled correctly in the import statement and `provide` option
-
-**Incorrect package version:**
-- Verify that the installed `@syncfusion/ej2-vue-charts` package is compatible with Vue 3.0 or later
-- Run `npm list @syncfusion/ej2-vue-charts` to check the installed version
-
-**Missing child directives:**
-- When using series directives, ensure that `SeriesCollectionDirective` and `SeriesDirective` are imported and registered as shown in the examples
-- The component names must match the registration names in the template (e.g., `e-series-collection`, `e-series`)
-
-**Console errors:**
-- Check the browser console (F12 → Console tab) for import or runtime errors
-- Verify that file paths and package installations are correct
-- Ensure the development server is still running with `npm run dev`
+* **Chart is not rendering** — Ensure the required chart modules, such as `LineSeries` and `Category`, are provided using `provide()` in the Composition API or the `provide` option in the Options API.
+* **Module not found error** — Confirm that the module is imported from `@syncfusion/ej2-vue-charts` and that the package is installed.
+* **No data is displayed** — Verify that `xName` and `yName` match the field names in the data source and that `primaryXAxis.valueType` is set to `Category`.
 
 For additional assistance, refer to the [`Vue Charts API Documentation`](https://ej2.syncfusion.com/vue/documentation/api/chart) and the [Feature Modules](./feature-modules) page.
 

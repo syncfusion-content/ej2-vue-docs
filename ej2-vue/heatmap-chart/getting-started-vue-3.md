@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue HeatMap Component in Vue 3
 
-This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup>®</sup> Vue HeatMap component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The HeatMap represents two-dimensional data through color variations. Each matrix value is rendered as a cell whose color indicates its magnitude.
 
@@ -44,7 +44,7 @@ Navigate to the project directory:
 cd my-app
 ```
 
-Install the project dependencies.
+Install the project dependencies using the selected package manager:
 
 **npm**
 
@@ -161,7 +161,7 @@ export default {
         [25, 25, 10, 12, 78, 14],
         [25, 56, 55, 58, 12, 82],
         [74, 33, 88, 23, 86, 59]
-      ],
+      ]
     };
   }
 };
@@ -195,8 +195,7 @@ Here is the summarized code for the above steps. Replace the contents of **src/A
 
 <template>
   <div id="app">
-    <ejs-heatmap id="heatmap" :dataSource="dataSource"
-    ></ejs-heatmap>
+    <ejs-heatmap id="heatmap" :dataSource="dataSource"></ejs-heatmap>
   </div>
 </template>
 
@@ -292,7 +291,6 @@ For additional assistance, refer to the [Vue HeatMap API documentation](https://
 
 ## See Also
 
-- [Vue 3 HeatMap getting-started documentation](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/getting-started-vue-3)
 - [Vue HeatMap axis](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/axis)
 - [Vue HeatMap legend](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/legend)
 - [Vue HeatMap palette](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/palette)
