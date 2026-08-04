@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Vue3 tutorial with Vue Getting started component | Syncfusion
-description:  Checkout and learn about Vue3 tutorial with Vue Getting started component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 with Vue CLI Getting Started | Syncfusion
+description: Checkout and learn about the Vue 3 with Vue CLI getting started guide for Syncfusion Essential JS 2 components.
 control: Vue3 tutorial 
 platform: ej2-vue
 documentation: ug

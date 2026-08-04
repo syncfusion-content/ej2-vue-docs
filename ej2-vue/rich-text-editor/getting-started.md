@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started in Vue Rich Text Editor component | Syncfusion
+title: Getting started with Vue Rich Text Editor component | Syncfusion
 description: Learn here all about Getting started in Syncfusion Vue Rich Text Editor component of Syncfusion Essential JS 2 and more.
 canonical_url: "https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor"
 control: Get started 
@@ -11,15 +11,102 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue Rich Text Editor
 
-The [Vue Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor) is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Vue Rich Text Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+The [Vue Rich Text Editor](https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor) is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Vue Rich Text Editor component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 To get started quickly with the Vue Rich Text Editor, refer to this video tutorial:
 
 {% youtube "https://www.youtube.com/watch?v=UfzKsdkxGpM" %}
 
+{% tabcontents %}
+
+{% tabcontent Syncfusion CLI %}
+
 ## Prerequisites
 
-This guide uses Vite as the bundler and development environment. Install Node.js `24.13.0` or `higher` before proceeding. For detailed information about Vite’s capabilities and configuration options, refer to the [Vite documentation](https://vitejs.dev/).
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- Syncfusion CLI.
+
+## Install the Syncfusion CLI 
+
+Install the Syncfusion CLI globally using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm install -g @syncfusion/syncfusion-cli
+{% endhighlight %}
+{% endtabs %}
+
+## Set up the Vite project using Syncfusion CLI
+
+You can create a Vue application with [Vite](https://vite.dev/) using the Syncfusion CLI. The CLI provides two ways to create a project:
+
+### Non-interactive mode
+
+Non-interactive mode allows you to create a project directly using a single command with the required command-line arguments.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf new my-app --framework vue --type ts --template rte --theme tailwind3
+{% endhighlight %}
+{% endtabs %}
+
+In this mode, the project configuration is passed directly in the command. The above command creates a `Vue` application with Vite and configured it with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Rich Text Editor` component. The generated project uses the TypeScript and the Composition API.
+
+### Interactive mode
+
+Interactive mode guides you through the project creation process with step-by-step prompts.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf
+{% endhighlight %}
+{% endtabs %}
+
+When you run the `sf` command, the CLI prompts you to select the required project configuration options. To create a Vue application with Vite and the Syncfusion<sup style="font-size:70%">&reg;</sup> `Rich Text Editor` component, select the following options:
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+√ Project name? ... my-app
+√ Choose Framework: » Vue
+√ Choose Language: » TypeScript
+√ Choose Template: » RTE
+√ Choose Theme: » Tailwind3
+√ Choose Style Format: » CSS
+√ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
+√ Would you like to install Syncfusion Component Skills for AI-powered development? ... no      
+√ Install dependencies and start app now? ... no
+
+{% endhighlight %}
+{% endtabs %}
+
+The above selections generate a `Vue` application with Vite and configure it with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Rich Text Editor` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
+
+## Run the project
+
+Once the project is created, navigate to the project directory and run the following commands in your terminal.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+cd my-app
+npm install
+npm run dev
+{% endhighlight %}
+{% endtabs %}
+
+The output will appear as follows:
+
+![Grid Component](./images/cli-rte.png)
+
+{% endtabcontent %}
+
+{% tabcontent Vite CLI %}
+
+## Prerequisites
+
+This guide uses Vite as the bundler and development environment. Install Node.js `24.13.0` or `higher` before proceeding. For detailed information about Vite’s capabilities and configuration options, refer to the [Vite documentation](https://vite.dev/).
 
 N> For information about supported Vue versions and Syncfusion package compatibility, refer to the [Version Compatibility](https://ej2.syncfusion.com/vue/documentation/upgrade/version-compatibility) documentation.
 
@@ -66,7 +153,7 @@ The installed theme package includes an `index.css` file that automatically impo
 @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/rich-text-editor/index.css';
 ```
 
-I> To apply the application-specific styles correctly remove all the default styles from **src/style.css**. 
+I> To apply the application-specific styles correctly remove all the default styles from **src/style.css**.
 
 ## Module Injection
 
@@ -102,28 +189,33 @@ Now, you can start adding the Vue Rich Text Editor component in the application.
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs21/app.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="index.css" %}
+{% highlight css tabtitle="style.css" %}
 {% include code-snippet/rich-text-editor/toolbar-cs21/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs21" %}
 
-## Run the application
+## Run the Application
 
 Use the following command to run the application in the browser.
 
 ```bash
 npm run dev
 ```
+
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Rich Text Editor is displayed in the browser as shown below.
 
 ![Syncfusion Vue Rich Text Editor output](images/getting-started.png)
 
-## See also
+{% endtabcontent %}
 
-* [Accessibility in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility)
-* [Keyboard support in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/keyboard-support)
-* [Globalization in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/globalization)
+{% endtabcontents %}
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
+## See Also
+
+* [Accessibility in Rich Text Editor](./accessibility)
+* [Keyboard support in Rich Text Editor](./keyboard-support)
+* [Globalization in Rich Text Editor](./globalization)
+
+N> Looking for the full Vue Rich Text Editor component overview, features, pricing, and documentation? Visit the [Vue Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor) page.

@@ -25,7 +25,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ### Vue supported versions
 
-| Vue version | Minimum Syncfusion Vue SpeechToText version |
+| Vue version | Minimum Syncfusion Vue Data SpeechToText version |
 | ------------- | ------------------------------------------- |
 |[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
 |[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |

@@ -24,9 +24,13 @@ You must define a fixed height using the [height](../../api/grid#height) propert
 
 - Virtualization calculations depend on a defined viewport height to determine how many rows are visible
 
-## DOM virtualization settings
+## Virtualization types and configuration
 
-The `domVirtualizationSettings` property allows you to configure various aspects of Dom virtualization behavior. All settings are optional with sensible defaults.
+The Grid supports DOM row virtualization configured via the [domVirtualizationSettings](../../api/grid/domVirtualizationSettings) property. The virtualization type determines how the grid manages rendering during scrolling.
+
+The `domVirtualizationSettings` property allows you to configure various aspects of DOM virtualization behavior. All settings are optional with sensible defaults.
+
+### Configuration properties
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
@@ -206,7 +210,7 @@ When datasets exceed these browser limits, virtualization alone is insufficient.
 
 Massive row count handling is a core DOM virtualization capability. The grid uses row offset calculations to map logical row positions to physical screen positions, enabling support for 100,000+ rows while remaining within browser DOM height constraints.
 
-Configuration approach: Enable DOM row virtualization with minimal buffer size using the [rowBuffer](../../api/grid/domVirtualizationSettings#rowbuffer) property to reduce DOM node count while maintaining smooth scrolling performance.
+Configuration approach: Enable DOM row virtualization with minimal buffer size (rows: 2) to reduce DOM node count while maintaining smooth scrolling performance.
 
 ### Constraints with massive datasets
 
@@ -239,7 +243,7 @@ This section provides solutions to common issues encountered when using DOM virt
 
 **Cause**: Buffer size configured too small for current scroll pattern.
 
-**Solution**: Increase [rowBuffer](../../api/grid/domVirtualizationSettings#rowbuffer) property to 8-10 rows.
+**Solution**: Increase buffer size to 8-10 rows.
 
 ### Grid freezes or becomes unresponsive
 
@@ -247,7 +251,7 @@ This section provides solutions to common issues encountered when using DOM virt
 
 **Cause**: Too many DOM nodes being rendered due to buffer being too large.
 
-**Solution**: For datasets exceeding 100,000 rows, reduce [rowBuffer](../../api/grid/domVirtualizationSettings#rowbuffer) property to 2-3.
+**Solution**: For datasets exceeding 100,000 rows, reduce buffer to 2-3.
 
 ### Scrollbar position appears incorrect
 
@@ -255,15 +259,15 @@ This section provides solutions to common issues encountered when using DOM virt
 
 **Cause**: Row heights are inconsistent or dynamic height calculations conflict with virtualization.
 
-**Solution**: Use consistent row heights with fixed [rowHeight](../../api/grid#rowheight) property or implement [setRowHeight](../../api/grid#setrowheight) callback that returns consistent values based on row data.
+**Solution**: Use consistent row heights with fixed `rowHeight` property or implement `setRowHeight` callback that returns consistent values based on row data.
 
 ### Memory usage increases during extended scrolling
 
 **Symptoms**: Browser memory increases over time during prolonged grid usage.
 
-**Cause**: Buffer size too large.
+**Cause**: DOM pooling not functioning efficiently or buffer size too large.
 
-**Solution**: Reduce [rowBuffer](../../api/grid/domVirtualizationSettings#rowbuffer) property to 2-3 for very large datasets.
+**Solution**: Reduce buffer size and verify maxPoolSize is set appropriately.
 
 ### Data misalignment after sorting or filtering
 
@@ -271,4 +275,4 @@ This section provides solutions to common issues encountered when using DOM virt
 
 **Cause**: Virtualization state not synchronized with data changes.
 
-**Solution**: Force grid re-render by calling the [refresh](../../api/grid#refresh) method when data changes.
+**Solution**: Force grid re-render by calling the refresh method when data changes.

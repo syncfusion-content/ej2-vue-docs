@@ -139,7 +139,7 @@ Add the styles of Grid component to the `<style>` section of the `App.vue` file 
 {% highlight html tabtitle="App.vue" %}
 
 <style lang="scss">
-  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.scss";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.scss"
 </style>
 
 {% endhighlight %}

@@ -66,7 +66,7 @@ Selects the focused option and all options down to the last option.</td></tr>
 Moves focus to the previous item.</td></tr>
 <tr>
 <td>
-<kbd>Ctrl + Down</kbd></td><td>
+<kbd>Ctrl + Down)</kbd></td><td>
 Moves focus to the next item.</td></tr>
 </table>
 

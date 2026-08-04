@@ -35,7 +35,7 @@ Required CSS file of code mirror
  @import "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css";
 ```
 
-Add a custom icon for HTML source editor in the toolbar of Rich Text Editor using the template option of ToolbarSettings, define the code mirror plugin, and then pass the Rich Text Editor content as argument in the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#actioncomplete) event.
+Add a custom icon for HTML source editor in the toolbar of Rich Text Editor using the template option of ToolbarSettings, define the code mirror plugin, and then pass the Rich Text Editor content as argument in the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#actioncomplete) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

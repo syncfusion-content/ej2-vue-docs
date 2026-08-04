@@ -66,3 +66,5 @@ The following example demonstrates how to import and inject modules.
 | `AIAssistant` | Injecting this module provides AI Assistant functionalities to the Rich Text Editor. |
 
 These modules should be injected into the `provide` section and use `richtexteditor` as a key of the object.
+
+N> Looking for the full Vue Rich Text Editor component overview, features, pricing, and documentation? Visit the [Vue Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor) page.

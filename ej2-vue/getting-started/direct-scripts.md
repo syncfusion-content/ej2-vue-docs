@@ -38,7 +38,7 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 {% highlight html tabtitle="~/index.html" %}
 
 <head>
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/33.2.3/material3.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/34.1.33/material3.css" rel="stylesheet" type="text/css" />
 </head>
 
 {% endhighlight %}
@@ -52,7 +52,7 @@ To integrate Syncfusion<sup style="font-size:70%">&reg;</sup> components into yo
 {% highlight html tabtitle="~/index.html" %}
 
 <head>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-vue-es5/dist/ej2-vue.min.js"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.1.33/ej2-vue-es5/dist/ej2-vue.min.js"></script>
 </head>
 
 {% endhighlight %}
@@ -114,7 +114,6 @@ To integrate Syncfusion<sup style="font-size:70%">&reg;</sup> components into yo
 {% tabs %}
 {% highlight html tabtitle="Vue 3 (~/index.html)" %}
 
-<body>
 <div id="app">
     <ejs-grid :data-source="data" :allow-paging="true" :page-settings='pageSettings'>
         <e-columns>
@@ -124,8 +123,6 @@ To integrate Syncfusion<sup style="font-size:70%">&reg;</sup> components into yo
         </e-columns>
     </ejs-grid>
 </div>
-
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Vue 2 (~/index.html)" %}
@@ -139,8 +136,6 @@ To integrate Syncfusion<sup style="font-size:70%">&reg;</sup> components into yo
         </e-columns>
     </ejs-grid>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}

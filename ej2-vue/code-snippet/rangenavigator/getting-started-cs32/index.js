@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { RangeNavigatorPlugin, LineSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
+import { RangeNavigatorPlugin, SplineAreaSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
 import { bitCoinData } from "./default_data.js";
 
 Vue.use(RangeNavigatorPlugin);
@@ -12,7 +12,7 @@ new Vue({
     <div id="app">
         <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat' :tooltip='tooltip'>
             <e-rangenavigator-series-collection>
-                <e-rangenavigator-series :dataSource='data' type='Line' xName='x' yName='y' width=2>
+                <e-rangenavigator-series :dataSource='data' type='SplineArea' xName='x' yName='y' width=2>
                 </e-rangenavigator-series>
             </e-rangenavigator-series-collection>
         </ejs-rangenavigator>
@@ -29,7 +29,7 @@ new Vue({
     };
   },
   provide: {
-    rangeNavigator: [DateTime, LineSeries, RangeTooltip]
+    rangeNavigator: [DateTime, SplineAreaSeries, RangeTooltip]
   }
 
 });

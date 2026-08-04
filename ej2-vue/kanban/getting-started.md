@@ -56,14 +56,14 @@ npm install @syncfusion/ej2-vue-kanban --save
 
 ## Adding CSS Reference
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Kanban component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Kanban component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) documentation.
 
 Install the **Tailwind 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme
+npm install @syncfusion/ej2-tailwind-theme
 
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +73,7 @@ Add these imports to the `<style>` section of the **src/App.vue** file, or inclu
 {% tabs %}
 {% highlight css tabtitle="App.vue" %}
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/kanban/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind-theme/styles/kanban/index.css";
 
 {% endhighlight %}
 {% endtabs %}

@@ -117,7 +117,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Markdown Editor is disp
 
 * [How to change the editor type](rich-text-editor/editor-types/editor-modes)
 * [How to render the iframe](rich-text-editor/editor-types/iframe)
-* [How to render the toolbar in inline mode](rich-text-editor/editor-types/inline-mode)
+* [How to render the toolbar in inline mode](rich-text-editor//editor-types/inline-mode)
 * [Accessibility in Markdown Editor](accessibility)
 * [Keyboard support in Markdown Editor](keyboard-support)
 * [Globalization in Rich Text Editor](rich-text-editor/globalization)
