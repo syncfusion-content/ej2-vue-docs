@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Swim lane in Vue Diagram component | Syncfusion®
-description: Learn here all about Swim lane in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Swim lane in Vue Diagram | Syncfusion®
+description: Add a swimlane to the Syncfusion® Vue Diagram to visualize business processes and the departments responsible for each activity, horizontally or vertically.
 control: Swim lane 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Swim lane in Vue Diagram component
+# Swim lane in Vue Diagram
 
 A swimlane is a type of diagram node commonly used to visualize the relationship between a business process and the department responsible for it. It focuses on illustrating the logical connections between activities, making it simpler to grasp the dynamics of the process and the corresponding departmental responsibilities.
 

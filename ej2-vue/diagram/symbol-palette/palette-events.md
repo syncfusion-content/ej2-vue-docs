@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Symbol Palette Events in EJ2 Vue Diagram component | Syncfusion®
-description: Learn here all about Symbol palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Symbol palette events in Vue Diagram | Syncfusion®
+description: Handle symbol palette events in the Syncfusion® Vue Diagram to customize the style of shapes as they are dragged into the diagram.
 platform: ej2-vue
 control: Symbol palette 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symbol Palette Events in EJ2 Vue Diagram component
+# Symbol palette events in Vue Diagram
 
 There are some events which will get triggered while interacting with the symbol palette. They are explained below.
 

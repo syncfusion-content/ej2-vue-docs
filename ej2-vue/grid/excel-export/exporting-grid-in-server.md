@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Exporting grid in server in Vue Grid component | Syncfusion
-description: Learn here all about Exporting grid in server in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Server-Side Excel Export | Syncfusion
+description: Learn how to export Vue Data Grid data on the server, generate Excel workbooks in the backend, and handle large-scale exports efficiently.
 control: Exporting grid in server 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting grid in server in Vue Grid component
+# Server-Side Excel Export in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component in Vue provides a powerful option to export data to Excel on the server side using the Grid server export library. This allows you to perform Excel export operations on the server, providing additional security and flexibility. To enable server-side Excel exporting, you need to configure the server dependencies and implement the necessary server configuration.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ruler in Vue Diagram component | Syncfusion®
-description: Learn here all about Ruler in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Ruler in Vue Diagram | Syncfusion®
+description: Show horizontal and vertical rulers in the Syncfusion® Vue Diagram to measure, align, and position diagram objects with a live cursor indicator.
 control: Ruler 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ruler in Vue Diagram component
+# Ruler in Vue Diagram
 
 The ruler provides horizontal and vertical guides for measuring in the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control. It can be used to measure diagram objects, indicate positions, and align diagram elements, making it especially useful for creating scale models.The ruler also includes a position indicator that displays the precise location of the mouse cursor on the diagram canvas, with the default color of the position indicator marker being red.
 

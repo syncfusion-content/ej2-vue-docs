@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Connectors in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connectors in Vue Diagram | Syncfusion®
+description: Create connectors in the Syncfusion® Vue Diagram to link nodes, points, or ports and show relationships with custom paths and segments.
 control: Connectors 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connectors in Vue Diagram component
+# Connectors in Vue Diagram
 
 Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.
 

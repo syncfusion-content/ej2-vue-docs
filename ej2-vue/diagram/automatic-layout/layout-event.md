@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Layout events in Vue Diagram component | Syncfusion®
-description: Learn here all about Layout events in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Layout events in Vue Diagram | Syncfusion®
+description: Handle layout events in the Syncfusion® Vue Diagram to run code after the diagram finishes loading data and arranging the nodes.
 platform: ej2-vue
 control: Layout events
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Layout events in Vue Diagram control
+# Layout events in Vue Diagram
 
 ## DataLoaded event
 

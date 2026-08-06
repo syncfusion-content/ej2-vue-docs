@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Diagram component | Syncfusion®
-description: Learn here all about localization support in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Localization in Vue Diagram | Syncfusion®
+description: Localize the Syncfusion® Vue Diagram symbol palette search box and context menu by setting the culture to translate labels into any language.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in EJ2 vue Diagram control
+# Localization in Vue Diagram
 
 The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component supports `localization`. In the Diagram component, the symbol palette search box and context menu items can be localized based on the selected culture. By using the locale property of the diagram, you can change the culture.
 

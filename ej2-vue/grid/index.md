@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Grid component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Overview | Syncfusion
+description: Learn how to use Vue Data Grid to display and manage tabular data with data binding, paging, sorting, filtering, searching, grouping, editing, and templates.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Grid component
+# Overview of Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component is used to display and manipulate tabular data with configuration options to control the way the data is presented.
 It can pull data from data sources such as array of JavaScript objects, `OData web services`, or `DataManager` and binding data

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue Diagram | Syncfusion®
-description: Check out and learn about getting started with the Quasar Framework and Vue Diagram component of Syncfusion Essential® JS 2 and more details.
+title: Getting Started with Vue Diagram | Syncfusion®
+description: Learn how to get started with the Syncfusion® Vue Diagram inside a Quasar Framework app, with project setup, dependency installation, and a working sample.
 control: Quasar
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Diagram Component in the Quasar Framework
+# Getting Started with Vue Diagram
 
 This section explains how to create a [Quasar](https://quasar.dev/) application from scratch and build a simple diagram using the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component with the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 

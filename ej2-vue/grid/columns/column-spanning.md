@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column spanning in Vue Grid component | Syncfusion
-description: Learn here all about Column spanning in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Column Spanning | Syncfusion
+description: Learn how to merge cells using column spanning in Vue Data Grid, configure colspan behavior, and build complex multi-column layouts.
 control: Column spanning 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column spanning in Vue Grid component
+# Column Spanning in Vue Data Grid
 
 The column spanning feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows you to merge adjacent cells horizontally, creating a visually appealing and informative layout. By defining the [colSpan](https://ej2.syncfusion.com/vue/documentation/api/grid/querycellinfoeventargs#colspan) attribute in the [QueryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#queryCellInfoEventArgs) event, you can easily span cells and customize the appearance of the grid.
 

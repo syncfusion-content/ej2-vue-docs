@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Headers in Vue Grid component | Syncfusion
-description: Learn here all about Headers in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Column Headers | Syncfusion
+description: Learn how to customize column headers in Vue Data Grid with header text, templates, tooltips, and multi-line layouts using Syncfusion.
 control: Column headers 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
   
-# Headers in Vue Grid component
+# Column Headers in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides a comprehensive set of options to customize and manage headers efficiently. Headers play a crucial role in organizing and presenting data effectively in the grid.
 

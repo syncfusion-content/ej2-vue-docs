@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in Syncfusion Vue Diagram | Syncfusion
-description: Checkout and learn to set up real-time collaborative editing in Syncfusion Vue Diagram using WebSocket and Redis.
+title: Collaborative editing in Vue Diagram | Syncfusion®
+description: Enable real-time collaborative editing in the Syncfusion® Vue Diagram so multiple users can edit and review the same diagram together.
 control: Diagram
 documentation: ug
 platform: ej2-vue
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in Vue diagram control
+# Collaborative editing in Vue Diagram
 
 Collaborative editing enables multiple users to edit diagrams simultaneously in real-time, providing a seamless collaborative experience in Vue applications.
 

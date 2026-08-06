@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bpmn Activity in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn Activity shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN Activity in Vue Diagram | Syncfusion®
+description: Model tasks and subprocesses in the Syncfusion® Vue Diagram using BPMN activity shapes with custom types, loops, and multi-instance markers.
 control: Bpmn Activity
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Activity in Vue Diagram component
+# BPMN Activity in Vue Diagram
 
 ## Activity
 

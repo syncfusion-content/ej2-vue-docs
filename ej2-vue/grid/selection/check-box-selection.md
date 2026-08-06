@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check box selection in Vue Grid component | Syncfusion
-description: Learn here all about Check box selection in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Checkbox Selection | Syncfusion
+description: Learn how to enable checkbox selection in Vue Data Grid with checkbox columns, select-all functionality, selection APIs, and multiple selection support.
 control: Check box selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check box Selection in Vue Grid component
+# Checkbox Selection in Vue Data Grid
 
 Checkbox selection in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to provide an option to select multiple records by using a checkbox in each row. This feature is particularly useful when you need to perform bulk actions or operations on selected records within the Grid.
 

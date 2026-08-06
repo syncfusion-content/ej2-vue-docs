@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events of nodes in Vue Diagram component | Syncfusion®
-description: Learn here all about Nodes Events in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Nodes events in Vue Diagram | Syncfusion®
+description: Handle click, drag, select, and change events for nodes in the Syncfusion® Vue Diagram to respond to user interactions in real time.
 control: Nodes interaction
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node Interaction Events
+# Nodes events in Vue Diagram
 
 [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides some events support for node that triggers when interacting with the node.
 

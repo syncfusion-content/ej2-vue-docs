@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header in Vue Grid component | Syncfusion
-description: Learn here all about Header in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Header Customization | Syncfusion
+description: Learn how to customize header styles in Vue Data Grid with header templates, icons, and interactive header elements.
 control: Header 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header in Vue Grid component
+# Header Style in Vue Data Grid
 
 You can customize the appearance of the header elements in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using CSS. Here are examples of how to customize the Grid header, header cell, and header cell div element.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bpmn DataObject in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn DataObject shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN Data Object in Vue Diagram | Syncfusion®
+description: Add BPMN data object shapes to the Syncfusion® Vue Diagram to represent data flowing in, out, or stored during a business process.
 control: Bpmn DataObject
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Data Object in Vue Diagram component
+# BPMN Data Object in Vue Diagram
 
 ## Data Object
 

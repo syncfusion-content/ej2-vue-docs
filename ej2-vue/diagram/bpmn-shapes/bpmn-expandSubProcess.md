@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bpmn Expanded subProcess in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn Expanded subProcess in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN Expanded SubProcess in Vue Diagram | Syncfusion®
+description: Add an expanded BPMN subprocess to the Syncfusion® Vue Diagram to contain and visualize child processes inside the parent shape.
 control: Bpmn Expanded subProcess
 platform: ej2-vue
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# BPMN Expanded SubProcess
+# BPMN Expanded SubProcess in Vue Diagram
 An expanded subProcess can contain certain child processes within it.
 
 ### Create BPMN Expanded subProcess

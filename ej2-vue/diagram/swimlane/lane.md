@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Lane in Vue Diagram component | Syncfusion®
-description: Learn here all about Swim lane in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Lane in Vue Diagram | Syncfusion®
+description: Add lanes to a swimlane in the Syncfusion® Vue Diagram to represent functional units or departments within a business process flow.
 control: Lane 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
+# Lane in Vue Diagram
 
 ## Lanes
 

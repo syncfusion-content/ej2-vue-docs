@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in Vue Grid component | Syncfusion
-description: Learn here all about Global local in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Globalization and Localization | Syncfusion
+description: Learn how to use globalization in Vue Data Grid with localization, internationalization, culture switching, RTL support, and locale-specific formatting.
 control: Global local 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in Vue Grid component
+# Globalization in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Connector Labels in Vue Diagram component | Syncfusion®
-description: Learn here all about Connector Labels in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connectors labels in Vue Diagram | Syncfusion®
+description: Position connector annotations along the path in the Syncfusion® Vue Diagram using offset, displacement, and segment angle for precise labeling.
 control: Connector Labels 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connector annotations in Vue Diagram component
+# Connectors labels in Vue Diagram
 
 Annotations of a connector can be positioned using the following properties of Annotation class.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Connector Events in Vue Diagram component | Syncfusion®
-description: Learn here all about Connector Events in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connectors events in Vue Diagram | Syncfusion®
+description: Handle click, drag, and change events for connectors in the Syncfusion® Vue Diagram to react when users interact with the links between nodes.
 control: Connector Events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Connector Events in Vue Diagram
+# Connectors events in Vue Diagram
 
 [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides some events support for connectors that triggers when interacting with the connector.
 

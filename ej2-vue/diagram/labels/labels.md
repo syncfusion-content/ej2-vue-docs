@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Labels in Vue Diagram component | Syncfusion®
-description: Learn here all about Labels in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Labels in Vue Diagram | Syncfusion®
+description: Add editable text annotations to nodes and connectors in the Syncfusion® Vue Diagram to label, describe, and caption every diagram element.
 control: Labels 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Labels in Vue Diagram component
+# Labels in Vue Diagram
 
 [`Annotation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel) is a block of text that can be displayed over a node or connector. Annotation is used to textually represent an object with a string that can be edited at runtime. Multiple annotations can be added to a node/connector.
 

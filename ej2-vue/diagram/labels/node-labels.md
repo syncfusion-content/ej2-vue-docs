@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Node Labels in Vue Diagram component | Syncfusion®
-description: Learn here all about Node Labels in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Nodes labels in Vue Diagram | Syncfusion®
+description: Position node annotations in the Syncfusion® Vue Diagram with offset, margin, and alignment controls relative to the node boundary.
 control: Node Labels 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node annotations in Vue Diagram component
+# Nodes labels in Vue Diagram
 
 [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) allows you to customize the position and appearance of the annotation efficiently. Annotation can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment properties. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the ShapeAnnotation class. Annotations of a node can be positioned using the following properties of ShapeAnnotation.
 

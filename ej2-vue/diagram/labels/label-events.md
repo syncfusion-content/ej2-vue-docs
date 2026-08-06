@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label Events in Vue Diagram component | Syncfusion®
-description: Learn here all about Label Events in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Labels events in Vue Diagram | Syncfusion®
+description: Capture key, click, double-click, and text-edit events on annotations in the Syncfusion® Vue Diagram to react as users edit labels.
 control: Label Events
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation events in Vue Diagram component
+# Labels events in Vue Diagram
 
 There are some events which will trigger while interacting with annotation.
 * KeyDown.

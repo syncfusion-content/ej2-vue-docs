@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Orthogonal connector in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Orthogonal Connector in Vue Diagram | Syncfusion®
+description: Draw orthogonal connectors in the Syncfusion® Vue Diagram to create right-angled links that route cleanly through flowcharts and process diagrams.
 control: Orthogonal 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orthogonal Connectors in ej2-vue Diagram control
+# Orthogonal Connector in Vue Diagram
 
 Orthogonal segments is used to create segments that are perpendicular to each other.
 

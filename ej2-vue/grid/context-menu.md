@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Context menu in Vue Grid component | Syncfusion
-description: Learn here all about Context menu in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Context Menu | Syncfusion
+description: Learn how to use Context Menu in Vue Data Grid with default items, custom actions, event handling, and options to prevent menu items.
 control: Context menu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in Vue Grid component
+# Context Menu in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component comes equipped with a context menu feature, which is triggered when a user right-clicks anywhere within the grid. This feature serves to enrich the user experience by offering immediate access to a variety of supplementary actions and operations that can be executed on the data displayed in the grid.
 

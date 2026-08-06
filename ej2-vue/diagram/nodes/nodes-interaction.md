@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Interaction of nodes in Vue Diagram component | Syncfusion®
-description: Learn here all about Nodes Interactions in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Nodes interaction in Vue Diagram | Syncfusion®
+description: Select, drag, resize, and rotate nodes interactively in the Syncfusion® Vue Diagram, or trigger these actions programmatically from your app.
 control: Nodes interaction
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node Interaction in Vue Diagram control
+# Nodes interaction in Vue Diagram
 
 The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support for selecting, dragging, resizing, and rotating nodes interactively. A node can be selected by simply clicking on it, dragged by dragging it on diagram canvas, resized using the resize handle, and rotated using the rotate handle. Additionally, interactions can be performed using some public methods, which are explained below:
 

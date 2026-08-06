@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Layers in Vue Diagram component | Syncfusion®
-description: Learn here all about Layers in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Layers in Vue Diagram | Syncfusion®
+description: Organize shapes into named layers in the Syncfusion® Vue Diagram to selectively show, hide, or lock categories of nodes and connectors.
 control: Layers 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Layers in Vue Diagram component
+# Layers in Vue Diagram
 
 **Layer** organizes related shapes within a [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control as named categories. Assigning shapes to different layers enables selective viewing, removal, and locking of distinct shape categories.
 

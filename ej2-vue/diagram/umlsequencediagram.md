@@ -1,14 +1,14 @@
 ---
 layout: post
-title: UmlSequenceDiagram in Vue Diagram component | Syncfusion®
-description: Learn here all about UmlSequenceDiagram in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: UML Sequence Diagram in Vue Diagram | Syncfusion®
+description: Build UML sequence diagrams in the Syncfusion® Vue Diagram to show participants, lifelines, messages, activation boxes, and interaction fragments.
 control: UmlSequenceDiagram 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UML Sequence Diagram in Vue Diagram component
+# UML Sequence Diagram in Vue Diagram
 
 A UML sequence diagram is an interaction diagram that demonstrates how objects interact with each other and the order of these interactions. The [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) control provides comprehensive support for creating and visualizing UML sequence diagrams through the [UmlSequenceDiagramModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/umlSequenceDiagramModel). To enable this functionality, assign the `UmlSequenceDiagramModel` to the [model](https://ej2.syncfusion.com/vue/documentation/api/diagram#model) property of the diagram control.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Diagram component | Syncfusion®
-description: Check out and learn about Getting started with Vue Diagram component of Syncfusion Essential® JS 2 and more details.
+title: Getting Started with Vue 2 Diagram | Syncfusion®
+description: Learn how to get started with the Syncfusion® Vue Diagram in a Vue 2 app, with project setup, dependency installation, and a working sample.
 control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue 2 Diagram Component
+# Getting Started with Vue 2 Diagram
 
 This section explains how to create a Vue 2 application from scratch and build a simple diagram using the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component.
 

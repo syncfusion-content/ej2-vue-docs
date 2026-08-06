@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column selection in Vue Grid component | Syncfusion
-description: Learn here all about Column selection in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Column Selection | Syncfusion
+description: Learn how to select columns in Vue Data Grid with selection APIs, column-level selection, keyboard interactions, and advanced column selection options.
 control: Column selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Selection in Vue Grid component
+# Column Selection in Vue Data Grid
 
 Column selection in [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to select one or more columns using mouse interactions or arrow keys. This feature is useful when you want to highlight, manipulate, or perform actions on specific columns within the Grid.
 

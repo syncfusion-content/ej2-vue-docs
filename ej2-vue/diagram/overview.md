@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview in Vue Diagram component | Syncfusion®
-description: Learn here all about Overview in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Overview in Vue Diagram | Syncfusion®
+description: Add an overview panel to the Syncfusion® Vue Diagram so users can preview, pan, and zoom across the entire diagram from a thumbnail view.
 control: Overview 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview in Vue Diagram component
+# Overview in Vue Diagram
 
 The Overview control allows you to see a preview or an overall view of the entire content of a [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram). This helps you to grasp the overall picture of a large diagram and navigate, pan, or zoom to a specific position on the page.
 

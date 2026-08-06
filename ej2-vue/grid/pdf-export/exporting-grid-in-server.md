@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Exporting grid in server in Vue Grid component | Syncfusion
-description: Learn here all about Exporting grid in server in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Server-Side PDF Export | Syncfusion
+description: Learn how to export Vue Data Grid data using server-side PDF generation, API endpoints, and efficient export processing for large datasets.
 control: Exporting grid in server 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting grid in server in Vue Grid component
+# Server dependencies in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides an option to export grid data to a PDF document on the server side using the Grid server export library. This allows you to perform PDF export operations on the server, providing additional security and flexibility. To enable server-side PDF exporting, you need to configure the server dependencies and implement the necessary server configuration.
 

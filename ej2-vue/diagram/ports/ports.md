@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ports in Vue Diagram component | Syncfusion®
-description: Learn here all about Ports in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Ports in Vue Diagram | Syncfusion®
+description: Use ports in the Syncfusion® Vue Diagram as fixed connection points so connectors stay glued to specific positions on a node when moved.
 control: Ports 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ports in Vue Diagram component
+# Ports in Vue Diagram
 
 Port is a special connection point in a Node where you can glue the connectors. When you glue a connector to a node or port, they remain connected even if one of the nodes is moved.
 

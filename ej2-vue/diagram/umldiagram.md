@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Umldiagram in Vue Diagram component | Syncfusion®
-description: Learn here all about Umldiagram in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: UML diagram in Vue Diagram | Syncfusion®
+description: Create UML class diagrams in the Syncfusion® Vue Diagram to model classes, attributes, methods, and object-oriented relationships visually.
 control: Umldiagram 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UML diagram in Vue Diagram component
+# UML diagram in Vue Diagram
 
 ## UML Class Diagram
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import and Export Visio Files in Vue | Syncfusion®
-description: Learn how to import and export Microsoft Visio (.vsdx) files using the Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Import and Export Visio Files in Vue Diagram | Syncfusion®
+description: Import and export Microsoft Visio files in the Syncfusion® Vue Diagram to reuse existing flowcharts and org charts in your web application.
 platform: ej2-vue
 control: Diagram
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import and Export Visio files
+# Import and Export Visio Files in Vue Diagram
 
 N> Visio import and export support is currently **experimental**. Certain features may be limited or may not function as expected.
 

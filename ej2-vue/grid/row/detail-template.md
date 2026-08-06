@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Detail template in Vue Grid component | Syncfusion
-description: Learn here all about Detail template in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Detail Template | Syncfusion
+description: Learn how to use detail templates in Vue Data Grid with Syncfusion. Display expandable row details, embed custom components, and create rich data layouts.
 control: Detail template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
  
-# Detail template in Vue Grid component
+# Detail Template in Vue Data Grid
 
 The detail template in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to display additional information about a specific row in the grid by expanding or collapsing detail content. This feature is useful when you need to show additional data or custom content that is specific to each row in the grid. You can use the [detailTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid#detailtemplate) property to define an HTML template for the detail row. This template can include any HTML element or Vue component that you want to display as detail content.
 

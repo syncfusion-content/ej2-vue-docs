@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Context menu in Vue Diagram component | Syncfusion®
-description: Learn here all about Context menu in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Context menu in Vue Diagram | Syncfusion®
+description: Show a right-click context menu in the Syncfusion® Vue Diagram with built-in actions, custom items, nested menus, and icon-based shortcuts for nodes.
 control: Context menu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in Vue Diagram component
+# Context menu in Vue Diagram
 
 <!-- markdownlint-disable MD010 -->
 

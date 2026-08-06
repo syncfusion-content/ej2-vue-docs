@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Page settings in Vue Diagram component | Syncfusion®
-description: Learn here all about Page settings in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Page settings in Vue Diagram | Syncfusion®
+description: Customize the page size, orientation, background, margins, and image of the Syncfusion® Vue Diagram canvas to fit any layout.
 control: Page settings 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page settings in Vue Diagram component
+# Page settings in Vue Diagram
 
 Page settings allow customization of the appearance, size, and orientation of the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) page.
 

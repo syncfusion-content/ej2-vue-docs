@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bpmn shapes in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN shapes in Vue Diagram | Syncfusion®
+description: Add BPMN shapes to the Syncfusion® Vue Diagram to model business processes with standardized notation for events, activities, gateways, and flows.
 control: Bpmn shapes 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN shapes in Vue Diagram component
+# BPMN shapes in Vue Diagram
 
 BPMN shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, in the node property shape, type should be set as “bpmn” and its shape should be set as any one of the built-in shapes. The following code example illustrates how to create a simple business process.
 

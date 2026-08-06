@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue Grid - Caption Template | Syncfusion
-description: Vue Grid caption template explains customizing group captions, templates for group headers, and formatting group display with examples.
+title: Vue Grid Caption Template | Syncfusion
+description: Learn how to customize group captions in Vue Data Grid using Caption Template, apply custom content, formatting, and display group information effectively.
 control: Caption template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group Row Title Customization in Vue Grid
+# Caption Template in Vue Data Grid
 
 The Vue Data Grid provides the [captionTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/groupsettings#captiontemplate) property to customize the text shown in group row titles.  This feature enhances the visual presentation of grouped data by allowing the display of grouped values, record counts, and custom HTML elements such as icons or images.
 

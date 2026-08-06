@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Commands in Vue Diagram component | Syncfusion®
-description: Learn here all about Commands in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Commands in Vue Diagram | Syncfusion®
+description: Use commands in the Syncfusion® Vue Diagram to align, distribute, size, group, copy, paste, and reorder selected nodes and connectors with one call.
 control: Commands 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Commands in Vue Diagram component
+# Commands in Vue Diagram
 
 <!-- markdownlint-disable MD010 -->
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Batch editing in Vue Grid component | Syncfusion
-description: Learn here all about Batch editing in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Batch Editing | Syncfusion
+description: Learn how to perform batch editing in Vue Data Grid, update multiple records efficiently, customize edit workflows, and save changes in bulk.
 control: Batch editing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Batch editing in Vue Grid component
+# Batch Editing in Vue Data Grid
 
 Batch editing is a powerful feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component that allows you to edit multiple cells simultaneously. It provides a convenient way to make changes to multiple cells and save them in a single request to the data source. This feature is particularly useful when dealing with large datasets or when you need to update multiple cells at once.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column menu in Vue Grid component | Syncfusion
-description: Learn here all about Column menu in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Column Menu | Syncfusion
+description: Learn how to configure and customize the column menu in Vue Data Grid, including sorting, filtering, menu items, and column-specific actions.
 control: Column menu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column menu in Vue Grid component
+# Column Menu in Vue Data Grid
 
 The column menu in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header's menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [showColumnMenu](https://ej2.syncfusion.com/vue/documentation/api/grid#showcolumnmenu) property to **true** in the Grid configuration.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Editing in Vue Grid component | Syncfusion
-description: Learn here all about Editing in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Editing Customization | Syncfusion
+description: Learn how to customize editing styles in Vue Data Grid with editor appearance, edit layouts, form elements, and editing UI customization.
 control: Editing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editing in Vue Grid component
+# Editing Style in Vue Data Grid
 
 You can customize the appearance of editing-related elements in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using CSS. Below are examples of how to customize various editing-related elements.
 

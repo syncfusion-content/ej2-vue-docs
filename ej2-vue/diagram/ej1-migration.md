@@ -1,14 +1,14 @@
 ---
 layout: post
-title: EJ1 migration in React Diagram component | Syncfusion®
-description: Learn here all about EJ1 migration in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: EJ1 migration in Vue Diagram | Syncfusion®
+description: Migrate diagrams from Essential® JS 1 to the Syncfusion® Vue Diagram by loading legacy JSON data and rendering it with current diagram features.
 control: EJ1 Migration 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to load EJ1 diagram in EJ2 diagram
+# EJ1 migration in Vue Diagram
 
 To load EJ1 JSON data in an [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram), follow these steps.
 
