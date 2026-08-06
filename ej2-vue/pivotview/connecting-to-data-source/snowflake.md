@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Snowflake Data Binding in Vue Pivotview component | Syncfusion"
+title: "Snowflake in Vue Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a Snowflake database in the Syncfusion Vue Pivot Table of Syncfusion Essential JS 2 and more."
+description: "Learn how the Vue Pivot Table binds Snowflake data via the Snowflake.Data library and a Web API controller."
 platform: ej2-vue
 documentation: ug
 ---
 
-# Snowflake in EJ2 Vue Pivot Table Component
+# Snowflake in Vue Pivot Table
 
 This guide explains how to retrieve data from a Snowflake database using the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data) library and bind it to the Pivot Table through a Web API controller.
 

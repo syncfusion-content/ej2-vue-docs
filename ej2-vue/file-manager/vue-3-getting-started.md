@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the File Manager component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue File Manager component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue File Manager in Vue 3 | Syncfusion
+description: Learn how to get started with the Vue File Manager in Vue 3 and explore setup, configuration, and core feature examples.
 control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue File Manager Component in Vue 3
+# Getting Started with the Vue File Manager in Vue 3
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

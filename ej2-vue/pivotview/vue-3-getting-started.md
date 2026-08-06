@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the Pivotview component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Pivotview component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue 3 Pivot Table | Syncfusion
+description: Learn how to get started with the Syncfusion Vue 3 Pivot Table control. Set up a Vite project and render your first pivot report with the Composition or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Pivot Table component in Vue 3
+# Getting Started with Vue 3 Pivot Table
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Pivot Table component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

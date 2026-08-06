@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization and localization in Vue Pivotview component | Syncfusion
-description: Learn here all about Globalization and localization in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Globalization in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table supports internationalization with CLDR data for number, date, and time formatting and culture-specific localization.
 control: Globalization and localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization and localization in Vue Pivotview component
+# Globalization in Vue Pivot Table
 
 Globalization is the combination of Internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number ([`Internationalization`](https://ej2.syncfusion.com/documentation/common/intl.html?lang=typescript)) & adding culture specific customization and translation to the text ([`Localization`](https://ej2.syncfusion.com/documentation/common/localization.html?lang=typescript)).
 
@@ -113,7 +113,7 @@ The Internationalization library is used to globalize number, date, and time val
 
 ### Decimal separators 
 
-The decimal separators of pivot table values varies based on the culture applied to the component. The culture can be set by calling the method [`setCulture`](https://ej2.syncfusion.com/vue/documentation/common/internationalization/#setting-global-culture) with appropriate culture string as its parameter. 
+The decimal separators of pivot table values varies based on the culture applied to the component. The culture can be set by calling the method [`setCulture`](https://ej2.syncfusion.com/vue/documentation/common/internationalization#setting-global-culture) with appropriate culture string as its parameter. 
 
 The following example demonstrates the decimal separators in `Deutsch` culture.
 

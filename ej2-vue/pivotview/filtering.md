@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Vue Pivot Table component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table applies member, label, and value filtering through the field list and grouping bar with custom operators.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD012 -->
 
-# Filtering in Vue Pivot Table component
+# Filtering in Vue Pivot Table
 
 Filtering helps you focus on specific data by showing only the records you need in the Pivot Table. This allows you to analyze relevant information more effectively by including or excluding specific members through the user interface or programmatically.
 

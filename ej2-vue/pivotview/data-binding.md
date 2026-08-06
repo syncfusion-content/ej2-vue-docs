@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data binding in Vue Pivot Table component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table binds JSON, CSV, OData, and Web API sources via DataManager, and configures field mapping for display and aggregation.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Data binding in Vue Pivot Table component
+# Data Binding in Vue Pivot Table
 
 ## JSON
 

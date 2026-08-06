@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in Vue Pivot Table component | Syncfusion
-description: Learn here all about Grouping in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Grouping in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table groups date, number, and string fields into year, quarter, range, or custom categories through the right-click Group action.
 control: Grouping 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in Vue Pivot Table component
+# Grouping in Vue Pivot Table
 
 > This feature is applicable only for the relational data source.
 

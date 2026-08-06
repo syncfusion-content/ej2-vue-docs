@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Flat Data in Vue File Manager component | Syncfusion
-description: Learn how to render flat JSON data in the Vue File Manager by configuring key settings and mapping fields for efficient visualization.
+title: Flat Data in Vue File Manager | Syncfusion
+description: Learn how to load flat JSON data in the Vue File Manager without a service provider, using local data structures to render folders and files.
+control: File Manager
 platform: ej2-vue
-control: File Manager 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rendering Flat JSON Data in the Vue File Manager Component
+# Flat Data in Vue File Manager
 
 The File Manager uses a flat data JSON as an array of objects for rendering, eliminating the need to define [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) url. To load a folder data as an array of objects, use the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component [fileSystemData](https://ej2.syncfusion.com/vue/documentation/api/file-manager#filesystemdata) property with a type of [fileData](https://ej2.syncfusion.com/vue/documentation/api/file-manager/fileData) interface. This means you no longer need to use a separate service provider, as you can integrate services like Google, Amazon, Azure, and others directly into your code using the FileManager's action events.
 

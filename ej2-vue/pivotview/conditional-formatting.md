@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Conditional formatting in Vue Pivot Table component | Syncfusion
-description: Learn here all about Conditional formatting in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Conditional Formatting in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table applies conditional formatting to value cells via the dialog or conditionalFormatSettings for all or specific fields.
 control: Conditional formatting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Conditional formatting in Vue Pivot Table component
+# Conditional Formatting in Vue Pivot Table
 
 The conditional formatting feature enables users to customize the appearance of Pivot Table value cells by modifying background color, font color, font family, and font size based on specific conditions. This powerful visualization feature helps highlight important value cells and makes them stand out in the Pivot Table.
 

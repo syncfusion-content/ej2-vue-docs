@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue File Manager component | Syncfusion
-description: Learn about accessibility support and features in the Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: File Manager 
+title: Accessibility in Vue File Manager | Syncfusion
+description: Learn about the accessibility support in the Vue File Manager, including WCAG 2.2, Section 508, ADA, and WAI-ARIA role compliance.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue File Manager component
+# Accessibility in Vue File Manager
 
 The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It implements WAI-ARIA roles and attributes commonly used to evaluate accessibility.
 

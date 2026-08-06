@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style Customize in Vue File Manager control | Syncfusion
-description: Learn how to customize style and appearance for the Vue File Manager control using CSS selectors and examples.
-platform:  ej2-vue
+title: Style and Appearance in Vue File Manager | Syncfusion
+description: Learn how to customize the appearance of the Vue File Manager by overriding CSS selectors for the navigation pane, layout, and toolbar.
 control: File Manager
+platform:  ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to customize style and appearance in Vue File Manager
+# Style and Appearance in Vue File Manager
 
 This article shows CSS selectors and examples that can be used to modify the File Manager control's appearance to match user preferences.
 

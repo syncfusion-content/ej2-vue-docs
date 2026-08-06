@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping bar in Vue Pivot Table component | Syncfusion
-description: Learn here all about Grouping bar in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Grouping Bar in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table shows a grouping bar for drag-and-drop field rearrangement across axes, with runtime sort, filter, and remove operations.
 control: Grouping bar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping bar in Vue Pivot Table component
+# Grouping Bar in Vue Pivot Table
 
 To have a quick glance on how to enable grouping bar in the Vue Pivot Table, watch this video:
 

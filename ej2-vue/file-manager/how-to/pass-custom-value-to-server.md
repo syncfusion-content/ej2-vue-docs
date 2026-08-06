@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom value to server in Vue File Manager component | Syncfusion
-description: Learn here all about How to pass custom value to server in Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: File Manager 
+title: Pass a custom value to the server in Vue File Manager | Syncfusion
+description: Learn how to pass a custom value to the server in the Vue File Manager for authentication, logging, or role-based access on each request.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pass custom value to server in Vue File Manager component
+# How to pass a custom value to the server in Vue File Manager
 
 The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component allows seamless back-end server interaction by passing custom values. This enhances the functionality and security of file operations, particularly helpful for tasks like authentication, logging, or user role-based processing. In multi-user systems, it ensures file access permissions and actions are user-specific and secure. You can manage user-specific operations such as **Read**, **Delete**, **Rename**, **Create**, **Move**, **Copy**, **Details**, **Search**, **Upload**, **Download**, and **GetImage** using custom headers or query parameters. This guide demonstrates implementing these features using the [`beforeSend`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforesend), [`beforeDownload`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforedownload) and [`beforeImageLoad`](https://ej2.syncfusion.com/vue/documentation/api/file-manager#beforeimageload) events. Let's explore how to achieve this in [`Physical file system provider`](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider).
 

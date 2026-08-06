@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool tip in Vue Pivot Table component | Syncfusion
-description: Learn here all about Tool tip in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Tooltip in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table shows hover tooltips on value cells with row, column, and measure context, and supports custom tooltip templates per cell.
 control: Tool tip 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in Vue Pivot Table Component
+# Tooltip in Vue Pivot Table
 
 The tooltip displays contextual information when users hover over value cells in the pivot table. It can be enabled or disabled by setting the [`showTooltip`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#showtooltip) property to **true** or **false**. By default, tooltip is enabled in the pivot table and shows the cell value along with row and column header information.
 

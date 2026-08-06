@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perform custom sorting in Vue FileManager component | Syncfusion
-description: Learn here all about How to perform custom sorting in Vue FileManager component of Syncfusion Essential JS 2 and more.
-control: File Manager 
+title: Perform custom sorting in Vue File Manager | Syncfusion
+description: Learn how to perform custom sorting in the Vue File Manager for the Large Icons view and Details view columns, with examples for natural sorting.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform custom sorting in Vue FileManager component
+# How to perform custom sorting in Vue File Manager
 
 The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component provides a way to customize the default sort action for the LargeIconsView by defining the [sortComparer](https://ej2.syncfusion.com/vue/documentation/api/file-manager#sortcomparer) property and for sorting individual columns in the DetailsView by defining the [sortComparer](https://ej2.syncfusion.com/vue/documentation/api/file-manager/column#sortcomparer) property in the [columns](https://ej2.syncfusion.com/vue/documentation/api/file-manager/column) property.
 

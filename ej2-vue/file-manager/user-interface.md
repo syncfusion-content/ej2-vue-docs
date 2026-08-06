@@ -1,14 +1,14 @@
 ---
 layout: post
-title: User Interface in Vue File Manager component | Syncfusion
-description: Learn about the UI sections and key features of the Vue File Manager component, including navigation, file views, and operations.
-control: File Manager 
+title: User Interface in Vue File Manager | Syncfusion
+description: Learn how to use the Vue File Manager UI with view, toolbar, breadcrumb, context menu, and navigation pane modules for file browsing.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User Interface in Vue File Manager component
+# User Interface in Vue File Manager
 
 The File Manager UI is comprised of several sections like view, toolbar, breadcrumb, context menu, and so on. The UI of the File Manager is enhanced with injectable modules like `Details View` for browsing files and folders in a grid, `Navigation Pane` for folder navigation, and `Toolbar` for file operations. The File Manager with all feature modules have the following sections in its UI.
 

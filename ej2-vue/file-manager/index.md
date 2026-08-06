@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue File Manager component | Syncfusion
-description: Learn all about the Vue File Manager component, including its features, configuration options, and file management capabilities.
-control: Index 
+title: About Syncfusion Vue File Manager Component | Syncfusion
+description: Learn about the Vue File Manager, its key capabilities, and the common scenarios it supports for building modern file management apps.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue File Manager component
+# About Syncfusion Vue File Manager Component.
 
 The **File Manager** is a graphical user interface component for managing the file system that allows the users to perform most common file operation like accessing, editing, and sorting the files and folders. Also, this component has easy navigation functionality for browsing the folders to select a file or folder from the file system.
 

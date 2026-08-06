@@ -1,14 +1,14 @@
 ---
 layout: post
-title: File Operations in Vue File Manager component | Syncfusion
-description: Learn how to perform, manage, and customize file operations in the Vue File Manager component for efficient file and folder handling.
-control: File Manager 
+title: File Operations in Vue File Manager | Syncfusion
+description: Learn how to perform file operations in the Vue File Manager, including read, create, delete, rename, copy, move, upload, and download.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File Operations in Vue File Manager component
+# File Operations in Vue File Manager
 
 The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component enables browsing, managing, and organizing files and folders in a file system from a web application. Common file operations—creating folders, uploading and downloading files, deleting and renaming items, and previewing images—are supported by the component.
 

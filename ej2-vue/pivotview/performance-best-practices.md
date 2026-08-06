@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Performance tips for Vue Pivot Table component | Syncfusion
-description: Checkout and learn here all about best practices to improve the performance of the Syncfusion Vue Pivot Table component and much more.
+title: Performance Best Practices in Vue Pivot Table | Syncfusion
+description: Learn performance best practices for the Vue Pivot Table with large datasets, including virtual scrolling, paging, data compression, and efficient field-list usage.
 platform: ej2-vue
 control: Performance best practices
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Best practices to improve the performance of the Pivot Table
+# Performance Best Practices in Vue Pivot Table
 
 Performance optimization is crucial when working with large datasets in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Pivot Table](https://www.syncfusion.com/vue-components/vue-pivot-table). This documentation provides some best practices to empower your data analysis and enhance the user experience.
 

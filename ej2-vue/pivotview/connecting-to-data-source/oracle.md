@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Oracle Data Binding in Vue Pivotview component | Syncfusion"
+title: "Oracle in Vue Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a Oracle database in the Syncfusion Vue Pivot Table of Syncfusion Essential JS 2 and more."
+description: "Learn how the Vue Pivot Table binds Oracle data via the Oracle Managed Data Access library and a Web API controller."
 platform: ej2-vue
 documentation: ug
 ---
 
-# Oracle in EJ2 Vue Pivot Table Component
+# Oracle in Vue Pivot Table
 
 This guide explains how to retrieve data from an Oracle database using the [Oracle Managed Data Access](https://www.nuget.org/packages/Oracle.ManagedDataAccess) library and bind it to the Pivot Table through a Web API controller.
 

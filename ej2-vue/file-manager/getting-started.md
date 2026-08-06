@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue File Manager component | Syncfusion
-description: Check out and learn about getting started with the Vue File Manager component of Syncfusion Essential JS 2 and more details.
-control: File Manager 
+title: Getting Started with Vue File Manager | Syncfusion
+description: Learn how to get started with the Vue File Manager and explore setup, configuration, and core feature examples.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue File Manager Component in Vue 2
+# Getting Started with Vue File Manager
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component.
 

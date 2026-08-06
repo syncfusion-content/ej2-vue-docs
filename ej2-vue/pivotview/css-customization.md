@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Css customization in Vue Pivot Table component | Syncfusion
-description: Learn here all about Css customization in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table customizes its appearance with CSS, including hiding axis areas in the field list and grouping bar using theme-aligned selectors.
 control: Css customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# CSS customization in Vue Pivot Table component
+# Style and Appearance in Vue Pivot Table
 
 The Vue Pivot Table component provides extensive CSS customization options, allowing users to modify the visual appearance and layout of various pivot table elements. This includes styling row headers, column headers, value cells, summary cells, Field List components, and Grouping Bar areas to match application themes and design requirements.
 

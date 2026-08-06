@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "MongoDB Data Binding in Vue Pivotview component | Syncfusion"
+title: "MongoDB in Vue Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a MongoDB Database in the Syncfusion Vue Pivot Table of Syncfusion Essential JS 2 and more."
+description: "Learn how the Vue Pivot Table binds MongoDB data using MongoDB.Driver and MongoDB.Bson libraries and a Web API controller."
 platform: ej2-vue
 documentation: ug
 ---
 
-# MongoDB in EJ2 Vue Pivot Table Component
+# MongoDB in Vue Pivot Table
 
 This guide explains how to retrieve data from a MongoDB database using the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) and [MongoDB.Bson](https://www.nuget.org/packages/MongoDB.Bson) libraries and bind it to the Pivot Table through a Web API controller.
 

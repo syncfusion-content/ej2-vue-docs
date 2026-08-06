@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide specific columns in pivot table in Vue | Syncfusion
-description: Learn here all about Hide specific columns in pivot table in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: How to hide specific columns in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to hide specific columns in the Vue Pivot Table using the columnRender event inside gridSettings to set the column's visible property to false.
 platform: ej2-vue
 control: Hide specific columns in pivot table 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide specific columns in the Vue Pivot Table component
+# How to hide specific columns in Vue Pivot Table
 
 By using the [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings#columnrender) event in the [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings), you can hide specific column(s) in the pivot table. In the example below, the **"Units Sold"** column under **"FY 2016"** is hidden by setting its **visible** property to **false** via the [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings#columnrender) event.
 

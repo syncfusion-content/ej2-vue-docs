@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Navigation Pane in Vue File Manager component | Syncfusion
-description: Learn here all about Customize the Navigation Pane in Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: File Manager 
+title: Customize the navigation pane in Vue File Manager | Syncfusion
+description: Learn how to customize the navigation pane in the Vue File Manager by templating each folder node to show extra metadata or custom icons.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Navigation Pane in Vue File Manager Component
+# How to customize the navigation pane in Vue File Manager
 
 The navigation pane in the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component displays the folder hierarchy in a tree-like structure. You can customize the layout of each folder node in the navigation pane using the `navigationPaneTemplate` property. This allows you to modify the appearance of folders based on your application's requirements.
 
