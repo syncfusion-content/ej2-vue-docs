@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Excel export in Vue Pivot Table component | Syncfusion
-description: Learn here all about Excel export in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Excel Export in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table exports data to Excel and CSV, exports multiple tables to one workbook, and applies custom cell styles and aggregates.
 control: Excel export 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel export in Vue Pivot Table component
+# Excel Export in Vue Pivot Table
 
 The Pivot Table component supports exporting pivot data to **Excel** and **CSV** file formats. This enables data sharing and analysis in spreadsheet applications such as Microsoft Excel, Google Sheets, and more. To enable the export functionality, inject the `ExcelExport` module into the Pivot Table and set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#allowexcelexport) property to **true**.
 

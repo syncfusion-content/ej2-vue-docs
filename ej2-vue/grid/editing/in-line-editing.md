@@ -1,14 +1,14 @@
 ---
 layout: post
-title: In line editing in Vue Grid component | Syncfusion
-description: Learn here all about In line editing in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Inline Editing | Syncfusion
+description: Learn how to perform inline editing in Vue Data Grid, update records directly, customize editing behavior, and manage CRUD operations efficiently
 control: In line editing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Inline editing in Vue Grid component
+# Inline Editing in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides a powerful in-line editing feature that allows you to edit cell values of row directly within the grid. This feature is especially useful when you want to quickly modify data without the need for a separate edit form. In normal edit mode, the selected record is changed to an edit state, and you can modify the cell values and save the edited data to the data source.
 

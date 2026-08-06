@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column pinning (Frozen) in Vue Grid component | Syncfusion
-description: Learn here all about Column pinning (Frozen) in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Column Pinning | Syncfusion
+description: Learn how to freeze and pin columns in Vue Data Grid to keep important fields visible while scrolling and synchronize frozen content.
 control: Column pinning (Frozen) 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Pinning (Frozen) in Vue Grid component
+# Column Pinning in Vue Data Grid
 
 In the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the grid.
 

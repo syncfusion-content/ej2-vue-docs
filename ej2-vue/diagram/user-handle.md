@@ -1,14 +1,14 @@
 ---
 layout: post
-title: User handle in Vue Diagram component | Syncfusion®
-description: Learn here all about User handle in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: User handle in Vue Diagram | Syncfusion®
+description: Add user handles around selected elements in the Syncfusion® Vue Diagram to surface frequently used commands with custom icons and click actions.
 control: User handle 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User handle in Vue Diagram component
+# User handle in Vue Diagram
 
 User handles are used to add frequently used commands around the selector.
 

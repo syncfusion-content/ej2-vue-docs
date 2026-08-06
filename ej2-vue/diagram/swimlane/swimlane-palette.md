@@ -1,16 +1,18 @@
 ---
 layout: post
-title:  Swim lane in symbol palette Vue Diagram component | Syncfusion®
-description: Learn here all about Swim lane in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Swim lane palette in Vue Diagram | Syncfusion®
+description: Add swimlanes and phases to the symbol palette in the Syncfusion® Vue Diagram so users can drag them onto the canvas as reusable shapes.
 control: Swim lane in symbol palette 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
+# Swim lane palette in Vue Diagram
+
 ## Add swimlane to palette
 
-[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) provides support to add swimlane and phases to symbol palette. The following code sample illustrate how to add swimlane and phases to palette.
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support to add swimlane and phases to symbol palette. The following code sample illustrate how to add swimlane and phases to palette.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

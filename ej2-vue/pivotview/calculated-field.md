@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Calculated field in Vue Pivot Table component | Syncfusion
-description: Learn here all about Calculated field in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Calculated Field in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table adds calculated fields via the Field List dialog or programmatically with arithmetic formulas and formatting.
 control: Calculated field 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Calculated field in Vue Pivot Table component
+# Calculated Field in Vue Pivot Table
 
 The calculated field feature enables users to create custom value fields using mathematical formulas and existing fields from their data source. Users can perform complex calculations with basic arithmetic operators and seamlessly integrate these custom fields into their pivot table for enhanced data visualization and reporting.
 

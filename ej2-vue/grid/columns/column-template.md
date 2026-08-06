@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column template in Vue Grid component | Syncfusion
-description: Learn here all about Column template in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Column Template| Syncfusion
+description: Learn how to create custom column templates in Vue Data Grid to render rich cell content, editors, formatting, and interactive UI elements.
 control: Column template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column template in Vue Grid component
+# Column Template in Vue Data Grid
 
 [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides a [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column#template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
 

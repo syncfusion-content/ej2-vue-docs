@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Views in Vue File Manager component | Syncfusion
-description: Learn about the available views and how to customize them in the Vue File Manager component for a tailored file browsing experience.
-control: File Manager 
+title: Views in Vue File Manager | Syncfusion
+description: Learn how to switch between Large Icons and Details views in the Vue File Manager for flexible file browsing.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Views in Vue File Manager component
+# Views in Vue File Manager
 
 View is the section where the files and folders are displayed for the user to browse. The [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/index-default#view) API can also be used to change the initial view of the File Manager.
 

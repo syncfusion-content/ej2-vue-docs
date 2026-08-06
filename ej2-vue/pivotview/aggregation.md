@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Aggregation in Vue Pivot Table component | Syncfusion
-description: Learn here all about Aggregation in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Aggregation in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table aggregates value fields with built-in types like Sum, Count, Average, Min, Max, and running totals at runtime.
 control: Aggregation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregation in Vue Pivot Table component
+# Aggregation in Vue Pivot Table
 
 > This feature is applicable only for the relational data source.
 

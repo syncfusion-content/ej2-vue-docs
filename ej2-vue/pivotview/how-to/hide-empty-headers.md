@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide empty headers in Vue Pivotview component | Syncfusion
-description: Learn here all about Hide empty headers in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: How to hide empty headers in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to hide empty (Undefined) headers in the Vue Pivot Table by setting the showHeaderWhenEmpty property to false in dataSourceSettings.
 control: Hide empty headers 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide empty headers in the Vue Pivot Table component
+# How to hide empty headers in Vue Pivot Table
 
 When the raw data for a particular field is not defined, it will be shown as 'Undefined' in the pivot table headers. You can hide those headers by setting the [`showHeaderWhenEmpty`](https://ej2.syncfusion.com/documentation/api/pivotview/dataSourceSettingsModel#showheaderwhenempty) property to **false** in the pivot table.
 

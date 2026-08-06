@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column Rendering in Vue Grid component | Syncfusion
-description: Learn here all about Column rendering in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Column Rendering | Syncfusion
+description: Learn how to customize column rendering in Vue Data Grid using cell templates, header templates, and flexible layouts for rich data presentation.
 control: Column rendering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column rendering in Vue Grid component
+# Column Rendering in Vue Data Grid
 
 In [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid), column rendering provides you with the ability to finely control how data is presented. This allows you to manually define columns, automatically generate them, and dynamically customize data presentation. With column rendering, you can ensure that your data is displayed exactly as needed, offering a wide range of possibilities for organizing and showcasing information within the grid.
 

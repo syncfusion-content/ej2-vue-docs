@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind and perform CRUD action with GraphQLAdaptor in Syncfusion Grid
-description: Learn here all about how to bind data and perform CRUD action using GraphQLAdaptor in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Bind Data with GraphQLAdaptor | Syncfusion
+description: Learn how to use GraphQLAdaptor in Vue Data Grid to bind GraphQL data, execute queries and mutations, and perform CRUD operations.
 platform: ej2-vue
 control: grid
 keywords: Adaptors, graphqladaptor, graphql adaptor, remotedata 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting GraphQL Service with Vue Grid Component
+# GraphQL Data Binding in Vue Data Grid
 
 GraphQL is a powerful query language for APIs, designed to provide a more efficient alternative to traditional REST APIs. It allows you to precisely fetch the data you need, reducing over-fetching and under-fetching of data. GraphQL provides a flexible and expressive syntax for querying, enabling clients to request only the specific data they require.
 

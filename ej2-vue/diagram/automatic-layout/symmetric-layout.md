@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Symmetric layout in Vue Diagram component | Syncfusion®
-description: Learn here all about Symmetric layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Symmetric layout in Vue Diagram | Syncfusion®
+description: Apply symmetric layout to nodes in the Syncfusion® Vue Diagram to balance positions using spring forces until the diagram reaches equilibrium.
 platform: ej2-vue
 control: Symmetric layout 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symmetric layout in Vue Diagram control
+# Symmetric layout in Vue Diagram
 
 The symmetric layout has been formed using nodes position by closer together or pushing them further apart. This is repeated iteratively until the system comes to an equilibrium state.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering customization in Vue Grid component | Syncfusion
-description: Learn here all about Filtering customization in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Filtering Customization | Syncfusion
+description: Learn how to customize filtering styles in Vue Data Grid with filter bars, filter menus, Excel-like filtering, templates, and filter UI appearance.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering customization in Vue Grid component
+# Filtering Style in Vue Data Grid
 
 You can customize the appearance of filtering elements in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using CSS. Below are examples of how to customize various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and Excel filter dialog number filters.
 

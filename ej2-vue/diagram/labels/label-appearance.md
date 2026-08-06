@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label Appearance in Vue Diagram component | Syncfusion®
-description: Learn here all about Label Appearance in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Labels appearance in Vue Diagram | Syncfusion®
+description: Style annotations in the Syncfusion® Vue Diagram with custom font, color, background, border, and opacity to match your diagram theme.
 control: Label Appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue Diagram component
+# Labels appearance in Vue Diagram
 
 You can change the font style of the annotations with the font specific properties [`fontSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textstylemodel#fontsize), [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textstylemodel#fontfamily), [`color`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textstylemodel#color).
 The label’s [`bold`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textstylemodel#bold), [`italic`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textstylemodel#italic), and [`textDecoration`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textstylemodel#textdecoration) properties are used to style the label’s text.

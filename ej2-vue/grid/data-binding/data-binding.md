@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue Grid - Data Binding | Syncfusion
-description: Data binding in Vue Grid connects component state, local arrays, or remote sources to grid rows, enabling dynamic updates and controlled data flow.
+title: Vue Grid Data Binding | Syncfusion
+description: Learn how to bind local and remote data sources in Vue Data Grid, enable dynamic updates, and manage data flow efficiently.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Grid component
+# Data Binding in Vue Data Grid
 
 Data binding is a fundamental technique that empowers the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component to integrate data into its interface, enabling the creation of dynamic and interactive grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
 

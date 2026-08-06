@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in Vue Pivot Table component | Syncfusion
-description: Learn here all about Sorting in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Sorting in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table sorts field members and value axes in ascending or descending order via the enableSorting and valueSortSettings properties and runtime sort icons.
 control: Sorting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in Vue Pivot Table Component
+# Sorting in Vue Pivot Table
 
 To have a quick glance on how to sort data in the Vue Pivot Table, watch this video:
 

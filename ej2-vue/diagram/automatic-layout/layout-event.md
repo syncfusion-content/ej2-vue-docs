@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Layout events in Vue Diagram component | Syncfusion®
-description: Learn here all about Layout events in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Layout events in Vue Diagram | Syncfusion®
+description: Handle layout events in the Syncfusion® Vue Diagram to run code after the diagram finishes loading data and arranging the nodes.
 platform: ej2-vue
 control: Layout events
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Layout events in Vue Diagram control
+# Layout events in Vue Diagram
 
 ## DataLoaded event
 
 The [`dataLoaded`](https://ej2.syncfusion.com/vue/documentation/api/diagram/idataloadedeventargs) event is triggered after the diagram is populated from the external data source.
 
-The following code example explains the data loaded event in the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram).
+The following code example explains the data loaded event in the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram).
 
 ```javascript
 

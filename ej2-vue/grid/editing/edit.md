@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Edit in Vue Grid component | Syncfusion
-description: Learn here all about Edit Topic in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Editing | Syncfusion
+description: Learn how to configure editing in Vue Data Grid, customize edit modes, apply validation rules, use templates, and manage CRUD workflows efficiently.
 control: Edit 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit in Vue Grid component
+# Editing in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides powerful options for dynamically inserting, deleting, and updating records, enabling you to modify data directly within the grid. This feature is useful when you want to enable you to perform CRUD (Create, Read, Update, Delete) operations seamlessly.
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Appearance of a nodes in Vue Diagram component | Syncfusion®
-description: Learn here all about Nodes Appearance in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Nodes customization in Vue Diagram | Syncfusion®
+description: Customize the default appearance and behavior of nodes in the Syncfusion® Vue Diagram with shared styles, shapes, and settings applied at load time.
 control: Appearance of nodes
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance of a nodes in Vue Diagram control
+# Nodes customization in Vue Diagram
 
 ## Common values to the node.
 
-The [`getNodeDefaults`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#getnodedefaults) property in the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) control allows you to define default settings for nodes based on specific conditions or requirements.
+The [`getNodeDefaults`](https://ej2.syncfusion.com/vue/documentation/api/diagram/index-default#getnodedefaults) property in the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control allows you to define default settings for nodes based on specific conditions or requirements.
 
 The following code example shows how to use getNodeDefaults function.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Elasticsearch Data Binding in Vue Pivotview component | Syncfusion"
+title: "Elasticsearch in Vue Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind Elasticsearch Database data in the Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more."
+description: "Learn how the Vue Pivot Table binds Elasticsearch data using the NEST library and a Web API controller."
 platform: ej2-vue
 documentation: ug
 ---
 
-# Elasticsearch in EJ2 Vue Pivot Table Component
+# Elasticsearch in Vue Pivot Table
 
 This guide explains how to connect an Elasticsearch database to the Pivot Table component using the [NEST](https://www.nuget.org/packages/Nest) library and a Web API controller to fetch and bind data to the Pivot Table.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add custom aggregation type to the menu in Vue | Syncfusion
-description: Learn here all about how to add custom aggregation type to menu in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: How to add a custom aggregation type in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to add a custom aggregation type to the Vue Pivot Table menu via dataBound, with logic in aggregateCellInfo.
 platform: ej2-vue
 control: Add custom aggregation type to the menu 
 publishingplatform: ##Platform_Name##
@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD009 -->
 
-# Add custom aggregation type to the menu in Vue Pivot Table component
+# How to add a custom aggregation type in Vue Pivot Table
 
 The Vue Pivot Table component allows you to extend its functionality by adding custom aggregation types to the built-in aggregation menu. This enables you to implement specific calculation methods beyond the standard options like Sum, Average, Min, and Max.
 

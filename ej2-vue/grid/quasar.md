@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Quasar and Vue Data Grid Component | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue Data Grid Component of Syncfusion Essential JS 2 and more details.
+title: Vue Grid Quasar Integration | Syncfusion
+description: Learn how to integrate Vue Data Grid with the Quasar Framework, including project setup, and grid implementation.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue Data Grid Component in Quasar Framework
+# Getting Started with Vue Data Grid in Quasar Framework
 
 A step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 

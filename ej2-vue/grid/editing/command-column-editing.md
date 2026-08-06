@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Command column editing in Vue Grid component | Syncfusion
-description: Learn here all about Command column editing in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Command Column Editing | Syncfusion
+description: Learn how to enable command column editing in Vue Data Grid with built-in edit, save, and delete actions, customizable buttons, and event handling.
 control: Command column editing 
 platform: ej2-vue
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Command column editing in Vue Grid component
+# Command Column Editing in Vue Data Grid
 
 The command column editing feature allows you to add CRUD (Create, Read, Update, Delete) action buttons in a column for performing operations on individual rows.This feature is commonly used when you need to enable inline editing, deletion, or saving of row changes directly within the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid). 
 

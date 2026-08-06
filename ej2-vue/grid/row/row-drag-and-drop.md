@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row drag and drop in Vue Grid component | Syncfusion
-description: Learn here all about Row drag and drop in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Row Drag and Drop | Syncfusion
+description: Learn how to implement row drag and drop in Vue Data Grid using Syncfusion. Reorder rows, configure drop targets, and handle drag events efficiently..
 control: Row drag and drop 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row drag and drop in Vue Grid component
+# Row Drag and Drop in Vue Data Grid
 
 The Vue Data Grid component provides built-in support for row drag and drop functionality. This feature allows you to easily rearrange rows within the grid by dragging and dropping them to new positions. Additionally, you can also drag and drop rows from one grid to another grid, as well as drag and drop rows to custom components.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtual scroll in Vue Grid component | Syncfusion
-description: Learn here all about Virtual scroll in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Virtual Scrolling | Syncfusion
+description: Learn how to use virtual scrolling and row virtualization in Vue Data Grid to efficiently render large datasets and improve scrolling performance.
 control: Virtual scroll 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Virtual scrolling in Vue Grid component
+# Virtual Scrolling in Vue Data Grid
 
 The virtual scrolling feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows you to efficiently handle and display a large amount of data without experiencing any performance degradation. It optimizes the rendering process by loading only the visible rows in the Grid viewport, rather than rendering the entire dataset at once. This is particularly useful when dealing with datasets that contain thousands of records.
 

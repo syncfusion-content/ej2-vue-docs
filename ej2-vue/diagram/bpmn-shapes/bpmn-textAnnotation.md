@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bpmn Text annotation in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn Text annotation in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN Text annotation in Vue Diagram | Syncfusion®
+description: Add BPMN text annotations to the Syncfusion® Vue Diagram to attach descriptive notes to flow objects without changing the process behavior.
 control: Bpmn Text annotation
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN text annotation in Vue Diagram component
+# BPMN Text annotation in Vue Diagram
 
 ## Text Annotation
 

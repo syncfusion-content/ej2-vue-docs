@@ -1,14 +1,14 @@
 ---
 layout: post
-title: State management in Vue Grid component | Syncfusion
-description: Learn here all about State management in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid State Management | Syncfusion
+description: Learn how to manage and persist Vue Data Grid state using local storage, state restoration, version-based persistence, and custom state handling.
 platform: ej2-vue
 control: State management 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State Management in Vue Grid component
+# State Management in Vue Data Grid
 
 State management in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to maintain the grid's state even after a browser refresh or when navigating to a different page within the same browser session. This feature is particularly useful for retaining the grid's configuration and data even after a page reload.
 

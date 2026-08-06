@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Complex hierarchical tree layout in Vue Diagram | Syncfusion®
-description: Learn here all about Automatic layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+description: Render complex hierarchical tree layouts in the Syncfusion® Vue Diagram to show child nodes that connect to multiple parents at once.
 platform: ej2-vue
 control: Complex hierarchical tree layout
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Complex hierarchical tree layout in Vue Diagram control
+# Complex hierarchical tree layout in Vue Diagram
 
 Complex hierarchical tree layout arranges nodes in a tree-like structure, where the child node can have more than one parent. This layout is an extended version of the hierarchical tree layout. To create a complex hierarchical tree, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout/#type) property of layout should be set as `ComplexHierarchicalTree`.
 

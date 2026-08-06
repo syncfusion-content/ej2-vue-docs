@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Scrolling in Vue Grid component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Scrolling | Syncfusion
+description: Learn how to configure scrolling in Vue Data Grid, including scroll behavior, responsive layouts, sticky headers, auto-scrolling, and scrollbar settings.
 control: Scrolling 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
-# Scrolling in Vue Grid component
+# Scrolling in Vue Data Grid
 
 The scrolling feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to navigate through the content that extends beyond the visible area of the grid . It provides scrollbars that are automatically displayed when the content exceeds the specified `width` or `height` of the grid element. This feature is useful when you have a large amount of data or when the content needs to be displayed within a limited space. The vertical and horizontal scrollbars will be displayed based on the following criteria:
 

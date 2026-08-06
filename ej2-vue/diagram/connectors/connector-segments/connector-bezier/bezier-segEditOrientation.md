@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bezier Segment edit orientation in Vue Diagram component | Syncfusion®
-description: Learn here all about Bezier Segment edit orientation in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Bezier Segment Edit Orientation in Vue Diagram | Syncfusion®
+description: Set the edit orientation of bezier segments in the Syncfusion® Vue Diagram to allow freeform or bidirectional dragging of intermediate control points.
 control: Bezier Segment edit orientation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bezier Connector Settings
+# Bezier Segment Edit Orientation in Vue Diagram
 
 ## How to edit bezier segments based on bezier connector settings
 

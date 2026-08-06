@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Performance tips for Vue Grid Component | Syncfusion
-description: Checkout and learn here all about how to improve the loading performance of Vue DataGrid even binding large data set.
+title: Vue Grid Performance | Syncfusion
+description: Learn how to optimize Vue Data Grid performance with virtualization, paging, efficient data operations, and best practices for large datasets.
 control: Performance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Performance tips for Vue DataGrid Component
+# Performance Tips for Vue Data Grid
 
 This article is a comprehensive guide on improving the loading performance of the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid), especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the Vue DataGrid during data binding, ensuring a smooth and efficient user experience.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Interaction in Vue Diagram component | Syncfusion®
-description: Learn here all about Interaction in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Interaction in Vue Diagram | Syncfusion®
+description: Select, drag, resize, and rotate diagram elements in the Syncfusion® Vue Diagram with single, multiple, and rubber-band selection modes.
 control: Interaction 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction in Vue Diagram component
+# Interaction in Vue Diagram
 
 ## Selection
 

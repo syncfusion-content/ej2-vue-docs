@@ -1,14 +1,14 @@
 ---
 layout: post
-title: SignalR Hub for Real-Time Collaboration in Vue Diagram | Syncfusion
-description: Checkout and learn to implement SignalR hub services with Redis for real-time collaborative editing in Syncfusion Vue Diagram.
+title: Collaborative editing hub in Vue Diagram | Syncfusion®
+description: Build a real-time backend service for the Syncfusion® Vue Diagram using a hub pattern and an in-memory store to sync edits across users.
 control: Diagram
 documentation: ug
 platform: ej2-vue
 domainurl: ##DomainURL##
 ---
 
-# SignalR hub configuration for collaborative editing
+# Collaborative editing hub in Vue Diagram
 
 ## Overview
 

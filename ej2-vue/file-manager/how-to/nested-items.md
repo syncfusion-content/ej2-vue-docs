@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Nested items in Vue File Manager component | Syncfusion
-description: Learn here all about Nested items in Vue File Manager component of Syncfusion Essential JS 2 and more.
-control: File Manager 
+title: Use nested File Manager in Vue | Syncfusion
+description: Learn how to integrate the Vue File Manager within components such as Tab and Dialog to build flexible and interactive application layouts.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

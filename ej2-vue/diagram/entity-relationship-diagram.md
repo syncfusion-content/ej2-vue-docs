@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Entity Relationship Diagram in Vue Diagram control | Syncfusion®
-description: Learn how to create and customize Entity Relationship Diagrams in the Syncfusion® Vue Diagram control.
+title: Entity Relationship Diagram in Vue Diagram | Syncfusion®
+description: Design entity relationship diagrams in the Syncfusion® Vue Diagram to model database tables, fields, and relationships with customizable entity nodes and ER connectors.
 platform: ej2-vue
 control: ERDiagram
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Entity Relationship Diagram Model in Vue Diagram Control
+# Entity Relationship Diagram in Vue Diagram
 
 An Entity Relationship (ER) diagram is a visual representation of a database structure. It displays entities (such as tables), their attributes (such as columns), and the relationships between those entities. In the Syncfusion® Diagram control, ER diagrams can be created by configuring nodes with [ErShapeModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/erShapeModel) and connectors with [ErConnectorShapeModel](https://ej2.syncfusion.com/vue/documentation/api/diagram/erConnectorShapeModel).
 

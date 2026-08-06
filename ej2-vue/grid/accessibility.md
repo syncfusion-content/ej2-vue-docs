@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Grid component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Accessibility | Syncfusion
+description: Learn how to use accessibility features in Vue Data Grid with keyboard navigation, ARIA attributes, screen reader support, and accessibility standards.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Grid component
+# Accessibility in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

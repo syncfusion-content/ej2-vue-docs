@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Searching in Vue Grid component | Syncfusion
-description: Learn here all about Searching in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Searching | Syncfusion
+description: Learn how to search data in Vue Data Grid with built-in search functionality, search configuration options, case sensitivity, and result highlighting.
 control: Searching 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Searching in Vue Grid component
+# Searching in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) includes a powerful built-in searching feature that allows users to search for specific data within the grid. This feature enables efficient filtering of grid records based on user-defined search criteria, making it easier to locate and display relevant information. Whether you have a large dataset or simply need to find specific records quickly, the search feature provides a convenient solution.
 

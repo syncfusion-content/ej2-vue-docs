@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drill through in Vue Pivot Table component | Syncfusion
-description: Learn here all about Drill through in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Drill Through in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table shows raw rows behind any aggregated cell with drill-through and caps OLAP results with maxRowsInDrillThrough.
 control: Drill through 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drill through in Vue Pivot Table component
+# Drill Through in Vue Pivot Table
 
 The drill-through feature in the Pivot Table component allows users to view the raw, unaggregated data behind any aggregated cell in the Pivot Table. To enable this feature, set the [`allowDrillThrough`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#allowdrillthrough) property to **true**. By double-clicking an aggregated cell, users can view its detailed raw data in a data grid displayed in a new window. The new window shows the row header, column header, and measure name of the selected cell at the top. Additionally, users can include or exclude fields available in the data grid using the column chooser option.
 

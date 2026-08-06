@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Tools in Vue Diagram component | Syncfusion®
-description: Learn here all about Tools in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Tools in Vue Diagram | Syncfusion®
+description: Use select, pan, and draw tools in the Syncfusion® Vue Diagram to choose elements, navigate large diagrams, and create new shapes at runtime.
 control: Tools 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tools in Vue Diagram component
+# Tools in Vue Diagram
 
-The tools in the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) control can perform various actions such as selecting, panning, and drawing. These tools are explained below.
+The tools in the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control can perform various actions such as selecting, panning, and drawing. These tools are explained below.
 
 - `Select`: Allows you to choose specific elements within the diagram.
 - `Pan`: Enables you to move the view of the diagram to different areas without altering the elements.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Serialization in Vue Diagram component | Syncfusion®
-description: Learn here all about Serialization in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Serialization in Vue Diagram | Syncfusion®
+description: Save the Syncfusion® Vue Diagram state as a JSON string and reload it later to persist nodes, connectors, and settings across sessions.
 control: Serialization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Serialization in Vue Diagram component
+# Serialization in Vue Diagram
 
 **Serialization** is the process of converting the state of the [Vue Diagram](https://ej2.syncfusion.com/vue/documentation/api/diagram) into a format that can be saved and later restored. This ensures that the diagram's current state, including its nodes, connectors, and configurations, can be persisted across sessions.
 

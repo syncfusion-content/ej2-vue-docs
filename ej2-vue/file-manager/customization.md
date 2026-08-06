@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue File Manager component | Syncfusion
-description: Learn how to customize the File Manager component's behavior and appearance in Vue using available APIs.
-control: File Manager 
+title: Customization in Vue File Manager | Syncfusion
+description: Learn how to customize the Vue File Manager context menu, toolbar, navigation pane, upload, and tooltip using built-in APIs.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue File Manager component
+# Customization in Vue File Manager
 
 The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component allows customization of its functionality and UI—such as the context menu, searching, uploading, and toolbar—using public APIs. The following topics describe customization options:
 

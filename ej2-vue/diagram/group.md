@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Group in Vue Diagram component | Syncfusion®
-description: Learn here all about Group in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Group in Vue Diagram | Syncfusion®
+description: Cluster multiple nodes and connectors into a group in the Syncfusion® Vue Diagram so the children move, copy, and style as one element.
 control: Group 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group in Vue Diagram component
+# Group in Vue Diagram
 
 ## Create group
 

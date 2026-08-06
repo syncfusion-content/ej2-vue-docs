@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bezier connector in Vue Diagram component | Syncfusion®
-description: Learn here all about Bezier Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Bezier Connector in Vue Diagram | Syncfusion®
+description: Draw curved bezier connectors in the Syncfusion® Vue Diagram with configurable control points and vectors for smooth, natural flow lines.
 control: Connectors 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bezier Connectors in ej2-vue Diagram control
+# Bezier Connector in Vue Diagram
 
 Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors.
 

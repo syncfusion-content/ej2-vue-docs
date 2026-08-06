@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Diagram component | Syncfusion®
-description: Learn here all about Style in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Style in Vue Diagram | Syncfusion®
+description: Style the Syncfusion® Vue Diagram with custom CSS for handles, selection, and diagram elements to match your application theme.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Diagram component
+# Style in Vue Diagram
 
 ## Customizing the connector end point handle
 

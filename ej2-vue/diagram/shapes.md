@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Shapes in Vue Diagram component | Syncfusion®
-description: Learn here all about Shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Shapes in Vue Diagram | Syncfusion®
+description: Add text, image, HTML, native, basic, and flow shapes to the Syncfusion® Vue Diagram to represent any visual element in your diagram.
 control: Shapes 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in Vue Diagram component
+# Shapes in Vue Diagram
 
-[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) provides support to add different kind of nodes. They are as follows:
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support to add different kind of nodes. They are as follows:
 
 * Text node
 * Image node

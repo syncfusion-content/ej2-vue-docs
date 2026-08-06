@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Apply custom style to pivot cells in Vue  | Syncfusion
-description: Learn here all about Apply custom style to pivot cells in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: How to apply custom styles to pivot cells in Vue Pivot | Syncfusion
+description: Step-by-step example showing how to apply custom styles to pivot cells in the Vue Pivot Table via the queryCellInfo and headerCellInfo events in gridSettings.
 platform: ej2-vue
 control: Apply custom style to pivot cells 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Apply custom style to pivot cells in Vue Pivot Table component
+# How to apply custom styles to pivot cells in Vue Pivot
 
 The Vue Pivot Table component allows you to alter the appearance of pivot cells using event handlers. This guide demonstrates how to apply custom styling to specific cells in your pivot table.
 

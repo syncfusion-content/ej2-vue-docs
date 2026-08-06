@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dialog editing in Vue Grid component | Syncfusion
-description: Learn here all about Dialog editing in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Dialog Editing | Syncfusion
+description: Vue Grid dialog editing opens record editors in modal dialogs, supports templates, enforces validation, and manages single-record save workflows.
 control: Dialog editing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Dialog editing in Vue Grid component
+# Dialog Editing in Vue Grid Component
 
 Dialog editing is a feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component that allows you to edit the data of the currently selected row using a dialog window. With dialog editing, you can easily modify cell values and save the changes back to the data source.This feature is particularly beneficial in scenarios where you need to quickly modify data without navigating to a separate page or view, and it streamlines the process of editing multiple cells.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Symbol palette in Vue Diagram component | Syncfusion®
-description: Learn here all about Symbol palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Symbol palette in Vue Diagram | Syncfusion®
+description: Display a drag-and-drop symbol palette beside the Syncfusion® Vue Diagram so users can quickly add reusable shapes and connectors to the canvas.
 control: Symbol palette 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symbol palette in Vue Diagram component
+# Symbol palette in Vue Diagram
 
 The [`symbolPalette`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#symbolpalettecomponent)  is a gallery of reusable symbols and diagram elements that can be dragged and dropped on the diagram surface multiple times.
 

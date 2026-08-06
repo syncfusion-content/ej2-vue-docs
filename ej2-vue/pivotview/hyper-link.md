@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hyper link in Vue Pivot Table component | Syncfusion
-description: Learn here all about Hyper link in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Hyperlink in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table displays hyperlinks in row, column, value, and summary cells via the hyperlinkSettings property with per-cell-type visibility controls.
 control: Hyper link 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyper link in Vue Pivot Table component
+# Hyperlink in Vue Pivot Table
 
 The Pivot Table component provides built-in support for displaying hyperlinks within individual cells. This feature allows users to link data in specific cells, enhancing interactivity and navigation.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "MySQL Data Binding in Vue Pivotview component | Syncfusion"
-description: "Learn how to bind data from a MySQL database in the Syncfusion Vue Pivot Table of Syncfusion Essential JS 2 and more."
+title: "MySQL in Vue Pivot Table | Syncfusion"
+description: "Learn how the Vue Pivot Table binds MySQL data via the MySqlClient library and a Web API controller."
 component: "Pivot Table"
 platform: ej2-vue
 documentation: ug
 ---
 
-# MySQL in EJ2 Vue Pivot Table Component
+# MySQL in Vue Pivot Table
 
 This guide explains how to retrieve data from a MySQL database using the [MySqlClient](https://mysqlclient.readthedocs.io) library and bind it to the Pivot Table through a Web API controller.
 

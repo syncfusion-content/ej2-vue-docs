@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Connector ports in Vue Diagram component | Syncfusion®
-description: Learn here all about Ports in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connector port in Vue Diagram | Syncfusion®
+description: Add ports to connectors in the Syncfusion® Vue Diagram so links between nodes can also expose fixed, glueable connection points.
 control: Ports 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
+# Connector port in Vue Diagram
 
 ## Create connector port
 

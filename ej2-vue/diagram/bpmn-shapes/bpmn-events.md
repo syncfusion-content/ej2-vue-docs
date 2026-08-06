@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bpmn Events in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn Events shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN Events in Vue Diagram | Syncfusion®
+description: Add BPMN event shapes to the Syncfusion® Vue Diagram to mark the start, intermediate, and end points of a business process flow.
 control: Bpmn Events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Event in Vue Diagram component
+# BPMN Events in Vue Diagram
 
 ## Event
 

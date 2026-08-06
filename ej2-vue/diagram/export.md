@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Export in Vue Diagram component | Syncfusion®
-description: Learn here all about Export in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Export in Vue Diagram | Syncfusion®
+description: Export the Syncfusion® Vue Diagram as an image, SVG, or multi-page PDF with custom bounds, page size, margin, and orientation options.
 control: Export 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in Vue Diagram component
+# Export in Vue Diagram
 
-[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) provides support to export its content as image/svg files. The  [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram#exportdiagram) method of diagrams helps to export the diagram. The following code illustrates how to export the diagram as image.
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides support to export its content as image/svg files. The  [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram#exportdiagram) method of diagrams helps to export the diagram. The following code illustrates how to export the diagram as image.
 
 N> To use Print and Export, you need to inject `PrintAndExport` in the diagram.
 

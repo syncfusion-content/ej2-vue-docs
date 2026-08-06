@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Automatic layout in Vue Diagram component | Syncfusion®
-description: Learn here all about Automatic layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Automatic layout in Vue Diagram | Syncfusion®
+description: Auto-arrange nodes in the Syncfusion® Vue Diagram using hierarchical, organizational, flowchart, mind map, radial, and symmetric layout modes.
 control: Automatic layout 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Automatic layout in Vue Diagram component
+# Automatic layout in Vue Diagram
 
 Diagram provides support to auto-arrange the nodes in the diagram area that is referred as `Layout`. It includes the following layout modes:
 

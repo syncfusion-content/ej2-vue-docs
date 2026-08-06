@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paging in Vue Grid component | Syncfusion
-description: Learn here all about Paging in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Paging Customization | Syncfusion
+description: Learn how to customize paging styles in Vue Data Grid with pager templates, page size controls, layout options, and pager UI customization.
 control: Paging 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paging in Vue Grid component
+# Paging Style in Vue Data Grid
 
 You can customize the appearance of the paging elements in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element.
 

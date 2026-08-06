@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple selection in Vue File Manager component | Syncfusion
-description: Learn how to use multiple and range selection in the Vue File Manager component to efficiently select, manage, and organize files.
-control: File Manager 
+title: Multiple Selection in Vue File Manager | Syncfusion
+description: Learn how to enable multiple selection in the Vue File Manager using Ctrl/Shift keys and checkboxes to select many files at once.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple selection in Vue File Manager component
+# Multiple Selection in Vue File Manager
 
 The File Manager allows you to select multiple files by enabling the [allowMultiSelection](https://ej2.syncfusion.com/vue/documentation/api/file-manager#allowmultiselection) property (enabled by default). The multiple selection can be done by pressing the `Ctrl` key or `Shift` key and selecting the files. The check box can also be used to do multiple selection. `Ctrl + A` can be used to select all files and folders in the current directory. The [fileSelect](https://ej2.syncfusion.com/vue/documentation/api/file-manager#fileselect) event is triggered when the items of [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component is selected or unselected.
 
@@ -59,3 +59,4 @@ Setting the [`allowMultiSelection`](https://ej2.syncfusion.com/vue/documentation
 
 {% previewsample "page.domainurl/code-snippet/file-manager/disablemultiselection" %}
 
+N> Looking for the full Vue File Manager component overview, features, pricing, and documentation? Visit the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) page.

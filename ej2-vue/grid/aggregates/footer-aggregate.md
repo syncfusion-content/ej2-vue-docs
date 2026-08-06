@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Footer aggregate in Vue Grid component | Syncfusion
-description: Learn here all about Footer aggregate in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Footer Aggregate | Syncfusion
+description: Learn how to display and format footer aggregate values in Vue Data Grid, apply summary calculations, and combine multiple aggregates.
 control: Footer aggregate 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Footer aggregate in Vue Grid component
+# Footer Aggregate in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#footertemplate) property to render the aggregate value in the footer cells.
 

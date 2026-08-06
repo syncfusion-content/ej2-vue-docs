@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started with Vue Diagram component | Syncfusion®
-description: Check out and learn about Getting started with Vue Diagram component of Syncfusion Essential® JS 2 and more details.
+title: Getting Started with Vue 2 Diagram | Syncfusion®
+description: Learn how to get started with the Syncfusion® Vue Diagram in a Vue 2 app, with project setup, dependency installation, and a working sample.
 control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue 2 Diagram Component
+# Getting Started with Vue 2 Diagram
 
-This section explains how to create a Vue 2 application from scratch and build a simple diagram using the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) component.
+This section explains how to create a Vue 2 application from scratch and build a simple diagram using the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) component.
 
 N> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Vue development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/vue/documentation/mcp-server/ai-coding-assistant/getting-started).
 

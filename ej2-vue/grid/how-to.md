@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to in Vue Grid component | Syncfusion
-description: Learn here all about How to in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid How-To Guide | Syncfusion
+description: Learn how to customize and extend Vue Data Grid with practical examples for editing, sorting, exporting, data binding, column customization, and more.
 control: How to 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to in Vue Grid component
+# How-To Examples in Vue Data Grid
 
 <!--markdownlint-disable MD009-->
 

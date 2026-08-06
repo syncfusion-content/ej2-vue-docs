@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adaptive in Vue Grid component | Syncfusion
-description: Learn here all about Adaptive in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Adaptive UI Customization | Syncfusion
+description: Learn how to customize adaptive UI in Vue Data Grid with responsive dialogs, vertical row rendering, mobile-friendly layouts, and small-screen optimization.
 control: Adaptive 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in Vue Grid component
+# Adaptive UI in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adding header and footer in Vue Grid component | Syncfusion
-description: Learn here all about Adding header and footer in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Adding Header and Footer | Syncfusion
+description: Learn how to add custom headers and footers in Vue Data Grid PDF export, customize content, apply templates, and format exported documents.
 control: Adding header and footer 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding header and footer in Vue Grid component
+# Adding Header and Footer in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows you to add customized header and footer sections in the exported PDF document. This feature enables you to include custom text, page numbers, lines, page size, and even change the orientation of the header and footer.
 

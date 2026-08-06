@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mind-map layout in Vue Diagram component | Syncfusion®
-description: Learn here all about Mind-map layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Mind Map layout in Vue Diagram | Syncfusion®
+description: Create mind maps in the Syncfusion® Vue Diagram to organize ideas around a central concept with branches extending in any direction.
 platform: ej2-vue
-control: Mind-map layout 
+control: Mind Map layout
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mind Map layout in Vue Diagram control
+# Mind Map layout in Vue Diagram
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout/#type) of layout should be set as `MindMap`.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bpmn Gateway in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn Gateway shapes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN Gateway in Vue Diagram | Syncfusion®
+description: Add BPMN gateway shapes to the Syncfusion® Vue Diagram to control the flow direction and decision points of a business process.
 control: Bpmn Gateway 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Gateway in Vue Diagram component
+# BPMN Gateway in Vue Diagram
 
 ## Gateway
 

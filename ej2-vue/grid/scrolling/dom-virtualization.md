@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue Grid - DOM virtualization | Syncfusion
-description: Vue Grid DOM virtualization explains viewport rendering, row virtualization techniques, and configuration to handle very large datasets efficiently.
+title: Vue Grid DOM Virtualization | Syncfusion
+description: Learn how DOM virtualization in Vue Data Grid improves large dataset performance through viewport rendering, row virtualization, and efficient scrolling.
 platform: ej2-vue
 control: DOM virtualization 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# DOM Virtualization in Vue Grid Component
+# DOM Virtualization in Vue Data Grid
 
 DOM virtualization is a rendering technique that improves performance by displaying only the visible portion of data in the viewport, plus a configurable buffer zone. The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Grid implements DOM virtualization to handle datasets ranging from thousands to millions of rows while maintaining smooth grid interactions.
 

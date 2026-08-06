@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row template in Vue Grid component | Syncfusion
-description: Learn here all about Row template in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Row Template | Syncfusion
+description: Customize row layouts in Vue Data Grid with Syncfusion row templates. Create rich row designs, display custom content, and enhance data presentation.
 control: Row template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row template in Vue Grid component
+# Row Template in Vue Data Grid
 
 The row template feature in [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows you to customize the appearance and layout of rows in the grid. This feature is useful when you want to display custom content, such as images, buttons, or other controls, within the rows.
 

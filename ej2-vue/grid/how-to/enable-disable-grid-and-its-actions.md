@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable disable grid and its actions in Vue Grid component | Syncfusion
-description: Learn here all about Enable disable grid and its actions in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Enable or Disable Actions | Syncfusion
+description: Learn how to enable or disable Vue Data Grid and its actions using CSS and event handling to control user interaction dynamically.
 control: Enable disable grid and its actions 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable disable grid and its actions in Vue Grid component
+# Enable or Disable Grid Actions in Vue Data Grid
 
 You can enable or disable the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) and its actions by applying or removing specific CSS styles. This functionality is particularly useful in scenarios where interactions need to be restricted. Follow the steps below to implement this feature.
 
