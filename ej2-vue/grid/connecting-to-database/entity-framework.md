@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind SQL Server Data in Syncfusion Vue Grid using Entity Framework
-description: Learn about consume data using Entity Framework from Microsoft SQL Server, bind it to Syncfusion Vue Grid, and performing CRUD operations.
+title: Vue Grid Bind Data with Entity Framework Core | Syncfusion
+description: Learn how to bind SQL Server data to Vue Data Grid using Entity Framework Core, perform CRUD operations, and implement adaptor patterns.
 platform: ej2-vue
 control: grid
 keywords: adaptors, customadaptor, urladaptor, entityframework, remotedata 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting SQL Server data to Vue Data Grid using Entity Framework
+# SQL Server Entity Framework Core Integration in Vue Data Grid
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) and bind it to the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid).
 

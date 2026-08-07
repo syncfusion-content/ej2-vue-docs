@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate Chart in Vue Grid | Syncfusion
-description: Learn how to integrate charts into Syncfusion Vue Grid using Essential JS 2 for interactive and insightful data visualization.
+title: Vue Grid Integrate Chart in Grid | Syncfusion
+description: Learn how to integrate charts in Vue Data Grid by embedding charts in cells or detail views to visualize and analyze data effectively.
 control: Integrate Chart 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Chart in Syncfusion Vue Grid
+# Integrate Chart in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) and Chart Integration feature in Syncfusion allows users to visualize tabular data in a graphical format by linking the Grid with the Chart.This feature allows seamless integration with Charts to visualize selected data interactively. You can generate various Chart types such as bar, line, or pie directly from Grid data using the [ContextMenu](https://ej2.syncfusion.com/vue/documentation/grid/context-menu) feature. This feature is particularly useful in scenarios where tabular data can be better understood through graphical representation.
 

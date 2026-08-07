@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation in Vue Grid component | Syncfusion
-description: Learn here all about Validation in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Validation | Syncfusion
+description: Learn how to configure validation in Vue Data Grid using built-in and custom rules, display error messages, and prevent invalid data entry.
 control: Validation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in Vue Grid component
+# Validation in Vue Data Grid
 
 Validation is a crucial aspect of data integrity in any application. The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides built-in support for easy and effective data validation. This feature ensures that the data entered or modified adheres to predefined rules, preventing errors and guaranteeing the accuracy of the displayed information.
 

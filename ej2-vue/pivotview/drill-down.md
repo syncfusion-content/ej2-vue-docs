@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drill down in Vue Pivot Table component | Syncfusion
-description: Learn here all about Drill down in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Drill Down in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table drills down and up through hierarchical row and column members, expands all headers for fields, and selectively drills.
 control: Drill down 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drill down in Vue Pivot Table component
+# Drill Down in Vue Pivot Table
 
 ## Drill down and drill up
 

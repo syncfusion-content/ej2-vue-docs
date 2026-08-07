@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Group and caption aggregate in Vue Grid component | Syncfusion
-description: Learn here all about Group and caption aggregate in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Group and Caption Aggregates | Syncfusion
+description: Learn how to compute and display group and caption aggregates in Vue Data Grid, including group summaries, captions, and aggregate formatting.
 control: Group and caption aggregate 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group and caption aggregate in Vue Grid component
+# Group and Caption Aggregates in Vue Data Grid
 
 Group footer and caption aggregates in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allow you to calculate aggregate values based on the current group items. These aggregate values can be displayed in the group footer cells and group caption cells, respectively. To achieve this, you can use the [groupFooterTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective#groupfootertemplate) and [groupCaptionTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective#groupcaptiontemplate) properties of the [AggregateColumnDirective](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective).
 

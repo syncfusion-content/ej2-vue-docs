@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in Vue Grid component | Syncfusion
-description: Learn here all about Sorting in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Sorting Customization | Syncfusion
+description: Learn how to customize sorting icons and multi-sort indicators in Vue Data Grid using CSS and built-in Syncfusion icons for different themes.
 control: Sorting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in Vue Grid component
+# Sorting Style in Vue Data Grid
 
 You can customize the appearance of the sorting icons and multi sorting icons in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using CSS.You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/documentation/appearance/icons/#material) based on your theme. Here's how to do it:
 

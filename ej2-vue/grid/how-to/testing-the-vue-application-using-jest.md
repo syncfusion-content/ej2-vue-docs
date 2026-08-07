@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Testing the Vue application using Jest | Syncfusion
-description: Learn here all about Testing the Vue application using Jest in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Jest Unit Testing | Syncfusion
+description: Learn how to perform Jest unit testing in Vue Data Grid using snapshot tests, DOM testing, mocks, and validation techniques for grid behavior.
 control: Testing the Vue application using Jest 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Testing the Vue application using Jest
+# Jest Unit Testing in Vue Data Grid
 
 Vue [Jest](https://v2.vuejs.org/v2/guide/testing.html) testing is a popular approach to test Vue applications using the Jest testing framework. This approach involves the creation and execution of unit tests specifically designed for Vue components. By conducting unit testing, which focuses on testing isolated units of code like functions, methods, and components to ensure that they behave as expected. This approach validates the individual units of your Vue components, catch potential bugs early in the development process, and maintains the reliability and stability of your Vue application. To create a Jest test case for the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component, follow the below steps:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool bar in Vue Pivot Table component | Syncfusion
-description: Learn here all about Tool bar in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Toolbar in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table shows a built-in toolbar with actions like New, Save, Load, Grid, Chart, Export, and toggles for grand totals and sub-totals at runtime.
 control: Tool bar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool bar in Vue Pivot Table component
+# Toolbar in Vue Pivot Table
 
 The toolbar in the Vue Pivot Table component provides easy access to commonly used features, such as switching between a pivot table and a pivot chart, changing chart types, applying conditional formatting, exporting data, and more. To enable the toolbar, set the [`showToolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#showtoolbar) property to **true**. Additionally, the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#toolbar) property accepts a collection of built-in toolbar options, allowing users to interact with the Pivot Table efficiently at runtime.
 

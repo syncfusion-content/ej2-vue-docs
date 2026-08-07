@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind data & perform CRUD action with ODataV4Adaptor in Syncfusion Grid
-description: Learn here all about how to bind data and perform CRUD action using ODataV4Adaptor in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Bind Data with ODataV4Adaptor | Syncfusion
+description: Learn how to use ODataV4Adaptor in Vue Data Grid to bind OData services, perform CRUD operations, and manage remote data efficiently.
 platform: ej2-vue
 control: grid
 keywords: Adaptors, ODataV4Adaptor, ODataV4 adaptor, remotedata 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# ODataV4Adaptor in Vue Data Grid Component
+# Connect Vue Data Grid to OData V4 Services
 
 The `ODataV4Adaptor` in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) Component allows seamless integration of the Vue Grid with ODataV4 v4 services, enabling efficient data fetching and manipulation. This guide provides detailed instructions on binding data and performing CRUD (Create, Read, Update, Delete) actions using the `ODataV4Adaptor` in your Vue Data Grid Component.
 

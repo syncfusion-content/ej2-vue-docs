@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Undo redo in Vue Diagram component | Syncfusion®
-description: Learn here all about Undo redo in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Undo redo in Vue Diagram | Syncfusion®
+description: Track changes in the Syncfusion® Vue Diagram and undo or redo edits using shortcut keys or runtime actions to revert diagram history.
 control: Undo redo 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Undo redo in Vue Diagram component
+# Undo redo in Vue Diagram
 
-[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) tracks the history of actions that are performed after initializing the diagram and provides support to reverse and restore those changes.
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) tracks the history of actions that are performed after initializing the diagram and provides support to reverse and restore those changes.
 
 ## Undo and redo
 

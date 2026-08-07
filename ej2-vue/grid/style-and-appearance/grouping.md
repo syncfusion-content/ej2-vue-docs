@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in Vue Grid component | Syncfusion
-description: Learn here all about Grouping in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Grouping Customization | Syncfusion
+description: Learn how to customize grouping styles in Vue Data Grid with group headers, captions, aggregates, and group area appearance.
 control: Grouping 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in Vue Grid component
+# Grouping Style in Vue Data Grid
 
 You can customize the appearance of grouping elements in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 

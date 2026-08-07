@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Org-chart layout in Vue Diagram component | Syncfusion®
-description: Learn here all about Org-chart layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Organizational chart layout in Vue Diagram | Syncfusion®
+description: Build organizational charts in the Syncfusion® Vue Diagram to display reporting structures and relationships across a company hierarchy.
 platform: ej2-vue
 control: Org-chart layout 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organizational Chart layout in Vue Diagram control
+# Organizational chart layout in Vue Diagram
 
 An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout/#type) of layout should be set as an `OrganizationalChart`.
 

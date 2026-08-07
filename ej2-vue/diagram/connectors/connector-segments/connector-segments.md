@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Segments in Vue Diagram component | Syncfusion®
-description: Learn here all about Connector segments in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connectors segments in Vue Diagram | Syncfusion®
+description: Build connector paths in the Syncfusion® Vue Diagram with straight, orthogonal, and bezier segments to define how links flow between shapes.
 control: Segments 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Segments in ej2-Vue Connector
+# Connectors segments in Vue Diagram
 
 The path of the connector is defined with a collection of segments. There are three types of segments.
 

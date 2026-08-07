@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Member filtering in Vue Pivot Table component | Syncfusion
-description: Learn here all about Member filtering in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Member Filtering in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table filters members in row, column, and filter axes by include or exclude, with on-demand OLAP member loading and level-count control.
 control: Member filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Member filtering in Vue Pivot Table component
+# Member Filtering in Vue Pivot Table
 
 Member filtering allows you to view pivot table with particular records based on filter criteria. You can disable the member filter by setting the [`allowMemberFilter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowmemberfilter) property to **false**. By default, this property is set as **true**.
 

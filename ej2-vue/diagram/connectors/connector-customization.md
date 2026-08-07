@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Connector customization in Vue Diagram component | Syncfusion®
-description: Learn here all about customizing Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connectors customization in Vue Diagram | Syncfusion®
+description: Customize connector appearance in the Syncfusion® Vue Diagram with arrowheads, circle, diamond, and path-based end decorators and styling.
 control: Connector customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connector customization
+# Connectors customization in Vue Diagram
 
-[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
 
 ## Decorator
 

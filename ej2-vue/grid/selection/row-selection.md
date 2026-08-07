@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row selection in Vue Grid component | Syncfusion
-description: Learn here all about Row selection in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Row Selection | Syncfusion
+description: Learn how to select single or multiple rows in Vue Data Grid with selection modes, keyboard interactions, selection APIs, and row selection events.
 control: Row selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row selection in Vue Grid component
+# Row Selection in Vue Data Grid
 
 Row selection in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to interactively select specific rows or ranges of rows within the grid. This selection can be done effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when you want to highlight, manipulate, or perform actions on specific row within the Grid.
 

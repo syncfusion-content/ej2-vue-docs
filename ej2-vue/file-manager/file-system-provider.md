@@ -1,14 +1,14 @@
 ---
 layout: post
-title: File system provider in Vue File Manager component | Syncfusion
-description: Learn how to configure and integrate various file system providers in the Vue File Manager component.
-control: File Manager 
+title: File System Provider in Vue File Manager | Syncfusion
+description: Learn how to connect the Vue File Manager to physical, Azure, Amazon S3, Google Drive, Firebase, and other file system providers.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File system provider in Vue File Manager component
+# File System Provider in Vue File Manager
 
 The file system provider enables the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component to manage files and folders in physical or cloud-based storage. It exposes server-side methods for common file actions such as creating folders, copying and moving items, deleting, uploading, and downloading.
 

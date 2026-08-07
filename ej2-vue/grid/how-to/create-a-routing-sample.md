@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  Create a routing sample in Vue Grid component | Syncfusion
-description: Learn here all about  Create a routing sample in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Routing Integration | Syncfusion
+description: Learn how to integrate Vue Data Grid with Vue routing using navigation, route configuration, and component-based grid views.
 control:  Create a routing sample
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to create a routing sample in Vue Grid component
+# Routing Integration in Vue Data Grid
 
 [Vue Router](https://router.vuejs.org/introduction.html) is the official routing library for Vue.js which is widely used for building single-page applications (SPA's). It provides a way to handle navigation and routing within an application. In Vue routing, you can able to configure the different routes for different URL's or paths to navigate between different sections or pages of the application. This approach is particularly advantageous for SPA's since it permits the loading of content dynamically without requiring a complete page refresh.
 

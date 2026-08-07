@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection in Vue Grid component | Syncfusion
-description: Learn here all about Selection in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Selection | Syncfusion
+description: Learn how to use selection in Vue Data Grid with row, cell, and column selection modes, selection APIs, keyboard interactions, and selection events.
 control: Selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in Vue Grid component
+# Selection in Vue Data Gri
 
 Selection in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to interactively select specific cells, rows, or columns within the grid. This selection can be done through mouse clicks or arrow keys (up, down, left, and right) or touch. This feature is useful when you want to highlight, manipulate, or perform actions on specific  cells, rows, or columns within the Grid.
 
@@ -130,7 +130,7 @@ In the following example, it demonstrates how to clear all selection by calling 
 {% previewsample "page.domainurl/code-snippet/grid/select/selection-clear" %}
 
 >* In **Both** mode, if you call `clearCellSelection` first, it will clear cell selections, and then if you call `clearRowSelection`, it will clear row selections. The order of method calls determines which type of selection is cleared first.
->* To remove a specific selection in a row, cell, or column, utilize the following methods: [clearRowSelection](https://ej2.syncfusion.com/angular/documentation/api/grid/selection/#clearrowselection) for clearing row selections, [clearCellSelection](https://ej2.syncfusion.com/angular/documentation/api/grid/selection/#clearcellselection) for clearing cell selections, and [clearColumnSelection](https://ej2.syncfusion.com/angular/documentation/api/grid/selection/#clearcolumnselection) for clearing column selections.
+>* To remove a specific selection in a row, cell, or column, utilize the following methods: [clearRowSelection](https://ej2.syncfusion.com/Vue/documentation/api/grid/selection/#clearrowselection) for clearing row selections, [clearCellSelection](https://ej2.syncfusion.com/Vue/documentation/api/grid/selection/#clearcellselection) for clearing cell selections, and [clearColumnSelection](https://ej2.syncfusion.com/Vue/documentation/api/grid/selection/#clearcolumnselection) for clearing column selections.
 
 ## Persist selection 
 

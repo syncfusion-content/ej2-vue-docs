@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template editing in Vue Grid component | Syncfusion
-description: Learn here all about Template editing in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Custom Template Editing | Syncfusion
+description: Learn how to use inline and dialog template editing in Vue Data Grid to customize edit forms, capture user input, and manage CRUD operations efficiently.
 control: Template editing 
 platform: ej2-vue
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Template editing in Vue Grid component
+# Custom Template Editing in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. This feature allows you to use Vue templates to define the structure and content of the cells within the grid.
 

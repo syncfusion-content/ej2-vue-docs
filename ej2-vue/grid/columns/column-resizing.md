@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column resizing in Vue Grid component | Syncfusion
-description: Learn here all about Column resizing in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Column Resizing | Syncfusion
+description: Learn how to resize columns in Vue Data Grid with manual and automatic width adjustments, resize modes, and programmatic resizing options.
 control: Column resizing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column resizing in Vue Grid component
+# Column Resizing in Vue Data Grid
 
 [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component provides an intuitive user interface for resizing columns to fit their content. This feature allows users to easily adjust the width of the columns to improve readability and aesthetics of the data presented. To enable column resizing, set the [allowResizing](https://ej2.syncfusion.com/vue/documentation/api/grid#allowresizing) property of the grid to **true**.
 

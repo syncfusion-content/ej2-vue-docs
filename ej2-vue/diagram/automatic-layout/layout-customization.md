@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customizing layout in Vue Diagram component | Syncfusion®
-description: Learn here all about Customizing layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Layout customization in Vue Diagram | Syncfusion®
+description: Customize automatic layout in the Syncfusion® Vue Diagram with custom orientation, spacing, alignment, and rectangular bounds to fit any canvas.
 platform: ej2-vue
 control: Customizing layout 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing layout in Vue Diagram control
+# Layout customization in Vue Diagram
 
 Orientation, spacings, and alignment of the layout can be customized with a set of properties.
 

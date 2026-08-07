@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Nodes in Vue Diagram component | Syncfusion®
-description: Learn here all about Nodes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Nodes in Vue Diagram | Syncfusion®
+description: Use nodes in the Syncfusion® Vue Diagram to represent any visual element, from process flow to business entities, with full size and position control.
 control: Nodes 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Nodes in Vue Diagram component
+# Nodes in Vue Diagram
 
 Nodes are graphical objects used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data, and it represents the functions of a complete system regarding to how it interacts with external entities.
 

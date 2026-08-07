@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Connector Interaction in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors Interaction in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connectors interaction in Vue Diagram | Syncfusion®
+description: Select, drag, and route connectors interactively in the Syncfusion® Vue Diagram to refine the flow between nodes on the canvas.
 control: Connector Interaction 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connector interaction in ##Platform_Name## Diagram
+# Connectors interaction in Vue Diagram
 
-Connectors can be selected, dragged, and routed over the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) page.
+Connectors can be selected, dragged, and routed over the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) page.
 
 ## Select and unSelect connector.
 

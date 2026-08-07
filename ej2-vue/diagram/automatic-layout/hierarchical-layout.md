@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hierarchical tree layout in Vue Diagram component | Syncfusion®
-description: Learn here all about Hierarchical tree layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Hierarchical tree layout in Vue Diagram | Syncfusion®
+description: Arrange nodes in a tree-like hierarchical structure in the Syncfusion® Vue Diagram to show parent-child relationships from top to bottom.
 platform: ej2-vue
 control: Hierarchical tree layout 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hierarchical tree layout in Vue Diagram control
+# Hierarchical tree layout in Vue Diagram
 
 The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root.
 

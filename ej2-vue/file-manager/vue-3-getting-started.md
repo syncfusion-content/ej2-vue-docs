@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the File Manager component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue File Manager component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue File Manager in Vue 3 | Syncfusion
+description: Learn how to get started with the Vue File Manager in Vue 3 and explore setup, configuration, and core feature examples.
 control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue File Manager Component in Vue 3
+# Getting Started with the Vue File Manager in Vue 3
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -301,25 +301,7 @@ yarn run dev
 
 For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#migration-from-vue-2-to-vue-3) documentation.
 
-## Production build
-
-To create an optimized production build:
-
-```bash
-npm run build
-```
-
-Preview the production build locally by serving the generated `dist` folder with a static server:
-
-```bash
-npx serve dist
-```
-
-## Troubleshooting
-
-- **File Manager not rendering styles:** Ensure the theme CSS is imported in `src/App.vue` and that you removed any default Vue CLI starter styles that may override the File Manager styles.
-- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
-- **Port 8080 already in use:** Stop the conflicting process or run the Vue CLI dev server on a different port with `npm run serve -- --port 3000`.
+N> Looking for the full Vue File Manager component overview, features, pricing, and documentation? Visit the [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) page.
 
 ## Production build
 

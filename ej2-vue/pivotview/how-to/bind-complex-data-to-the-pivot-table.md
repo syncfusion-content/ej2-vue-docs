@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Complex JSON to flat JSON in Vue | Syncfusion
-description: Learn here all about how to convert complex JSON to flat JSON and assign it to the pivot table in Syncfusion Vue of Syncfusion Essential JS 2 and more.
+title: How to bind complex data in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to bind complex nested JSON to the Vue Pivot Table by converting it to flat JSON in the load event.
 platform: ej2-vue
 control: Convert complex JSON to flat JSON and assign it to the pivot table 
 publishingplatform: ##Platform_Name##
@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD009 -->
 
-# Complex JSON to flat JSON in Vue Pivot Table component
+# How to bind complex data in Vue Pivot Table
 
 ## Overview
 

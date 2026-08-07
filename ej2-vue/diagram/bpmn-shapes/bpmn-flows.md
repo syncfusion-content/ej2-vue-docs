@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bpmn Flows in Vue Diagram component | Syncfusion®
-description: Learn here all about Bpmn Flows in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN flows in Vue Diagram | Syncfusion®
+description: Connect BPMN flow objects in the Syncfusion® Vue Diagram using association, sequence, and message flows to define process order and communication.
 control: Bpmn Flows
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN flows in Vue Diagram component
+# BPMN flows in Vue Diagram
 
 
 [`BPMN Flows`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnflow) are lines that connects BPMN flow objects.

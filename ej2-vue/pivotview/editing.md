@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Editing in Vue Pivot Table component | Syncfusion
-description: Learn here all about Editing in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Editing in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table enables cell editing in normal, dialog, batch, and command-column modes, with editSettings for CRUD.
 control: Editing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editing in Vue Pivot Table component
+# Editing in Vue Pivot Table
 
 > This feature is applicable only for the relational data source.
 

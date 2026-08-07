@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Container in Vue Diagram component | Syncfusion®
-description: Learn here all about Container in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Container in Vue Diagram | Syncfusion®
+description: Group logically related shapes inside a container in the Syncfusion® Vue Diagram, add or remove child nodes at runtime, and customize headers and boundaries.
 control: Container 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Container in Vue Diagram component
+# Container in Vue Diagram
 
 A Container is a group of logically related shapes surrounded by a visible boundary. Shapes can be added or removed from the container at runtime. Changes made to the container do not affect its child elements, which can be individually selected, moved, or edited.
 

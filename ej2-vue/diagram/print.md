@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Print in Vue Diagram component | Syncfusion®
-description: Learn here all about Print in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Print in Vue Diagram | Syncfusion®
+description: Print the Syncfusion® Vue Diagram with custom region, page size, margin, and multiple-page layout directly from the browser.
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in Vue Diagram component
+# Print in Vue Diagram
 
-The [`print`](https://ej2.syncfusion.com/vue/documentation/api/diagram#print) method helps to print the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) as image.
+The [`print`](https://ej2.syncfusion.com/vue/documentation/api/diagram#print) method helps to print the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) as image.
 
 ```javascript
 

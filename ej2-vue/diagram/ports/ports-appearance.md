@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ports appearance in Vue Diagram component | Syncfusion®
-description: Learn here all about Ports in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Ports appearance in Vue Diagram | Syncfusion®
+description: Style the port shapes in the Syncfusion® Vue Diagram with custom size, fill, stroke, and visibility for both default and hover states.
 control: Ports 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ports appearance in Vue Diagram component
+# Ports appearance in Vue Diagram
 
 ## Appearance
 

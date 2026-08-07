@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Field list in Vue Pivot Table component | Syncfusion
-description: Learn here all about Field list in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Field List in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table shows a field list for runtime report editing in popup or stand-alone mode, with search and sort.
 control: Field list 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Field list in Vue Pivot Table component
+# Field List in Vue Pivot Table
 
 The Field List makes it easy to organize and analyze data in your Pivot Table. It provides a user-friendly interface similar to Microsoft Excel that allows you to add or remove fields and move them between different axes like columns, rows, values, and filters. You can also apply sorting and filtering options while working with your data.
 

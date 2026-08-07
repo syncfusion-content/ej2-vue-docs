@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Accessibility in Vue Diagram component | Syncfusion®
-description: Learn here all about Accessibility in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Accessibility in Vue Diagram | Syncfusion®
+description: Build accessible Vue diagrams that follow WAI-ARIA standards, support screen readers, keyboard navigation, and WCAG 2.2 compliance with the Syncfusion® Diagram.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Diagram component
+# Accessibility in Vue Diagram
 
-[Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA Accessibility supports are achieved through the attributes like `aria-label`. It helps to provides information about elements in a document for assistive technology.
+[Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA Accessibility supports are achieved through the attributes like `aria-label`. It helps to provides information about elements in a document for assistive technology.
 
 The accessibility compliance for the diagram component is outlined below.
 

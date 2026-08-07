@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Constraints in Vue Diagram component | Syncfusion®
-description: Learn here all about Constraints in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Constraints in Vue Diagram | Syncfusion®
+description: Enable or disable diagram behaviors like zoom, pan, undo-redo, tooltip, and page editing in the Syncfusion® Vue Diagram using constraint flags.
 control: Constraints 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Constraints in Vue Diagram component
+# Constraints in Vue Diagram
 
-Constraints are used to enable/disable certain behaviors of the [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram), nodes and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled/disabled using Bitwise operators (&, |, ~, <<, etc.).
+Constraints are used to enable/disable certain behaviors of the [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram), nodes and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled/disabled using Bitwise operators (&, |, ~, <<, etc.).
 
 To know more about Bitwise operators, refer to [`Bitwise Operations`](#bitwise-operations).
 

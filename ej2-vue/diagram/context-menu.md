@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Context menu in Vue Diagram component | Syncfusion®
-description: Learn here all about Context menu in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Context menu in Vue Diagram | Syncfusion®
+description: Show a right-click context menu in the Syncfusion® Vue Diagram with built-in actions, custom items, nested menus, and icon-based shortcuts for nodes.
 control: Context menu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in Vue Diagram component
+# Context menu in Vue Diagram
 
 <!-- markdownlint-disable MD010 -->
 
 <!-- markdownlint-disable MD010 -->
-In a graphical user interface (GUI), a context menu is a type of menu that appears when you perform a right-click operation. It offers users a set of actions relevant to the current context. In diagrams, context menus can be customized extensively. The [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) control provides built-in context menu items while also allowing users to define custom menu items through the [`contextMenuSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/contextmenusettingsmodel) property. This flexibility enables tailoring menus to specific application needs, including creating nested levels of menu items for more intricate user interactions.To ensure the context menu is rendered correctly, make sure to include the necessary CSS references from the Syncfusion<sup style="font-size:70%">&reg;</sup> `ej2-navigations` package. This can be achieved by adding the following line in the `<style>` section of your `src/App.vue` file.
+In a graphical user interface (GUI), a context menu is a type of menu that appears when you perform a right-click operation. It offers users a set of actions relevant to the current context. In diagrams, context menus can be customized extensively. The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control provides built-in context menu items while also allowing users to define custom menu items through the [`contextMenuSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/contextmenusettingsmodel) property. This flexibility enables tailoring menus to specific application needs, including creating nested levels of menu items for more intricate user interactions.To ensure the context menu is rendered correctly, make sure to include the necessary CSS references from the Syncfusion<sup style="font-size:70%">&reg;</sup> `ej2-navigations` package. This can be achieved by adding the following line in the `<style>` section of your `src/App.vue` file.
 
 `@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";`
 

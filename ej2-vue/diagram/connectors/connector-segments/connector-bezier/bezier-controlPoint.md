@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bezier control points in Vue Diagram component | Syncfusion®
-description: Learn here all about Bezier control points in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Bezier Control Point Interaction in Vue Diagram | Syncfusion®
+description: Edit bezier control points interactively in the Syncfusion® Vue Diagram to keep adjacent curve segments aligned by angle, distance, or both.
 control: Bezier control points interaction 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bezier Control points 
+# Bezier Control Point Interaction in Vue Diagram
 
 ## How to interact with the bezier segments efficiently
 

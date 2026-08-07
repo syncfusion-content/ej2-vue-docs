@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue Grid - Lazy Load Grouping | Syncfusion
-description: Vue Grid lazy load grouping optimizes large datasets by loading grouped records on demand, improving performance with infinite or virtual scrolling.
+title: Vue Grid Lazy Load Grouping | Syncfusion
+description: Learn how to use Lazy Load Grouping in Vue Data Grid to load grouped records on demand, improve performance, and efficiently handle large datasets.
 control: Lazy load grouping 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Lazy load grouping in Vue Grid component
+# Lazy Load Grouping in Vue Data Grid
 
 Lazy loading in Vue refers to dynamically loading data as needed, rather than all at once, to enhance application performance by minimizing initial load time.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row Pinning in Vue Grid component | Syncfusion
-description: Learn here all about Row Pinning in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Row Pinning | Syncfusion
+description: Learn how to pin rows in Vue Data Grid using Syncfusion. Keep important rows fixed at the top while supporting data operations.
 control: Row Pinning 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row Pinning in EJ2 Vue Grid Control
+# Row Pinning in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) control provides option to pin specific rows at the top, ensuring important information remains visible while scrolling vertically. This feature is useful when you want to keep specific rows always visible for quick reference or priority viewing, regardless of user interactions.
 

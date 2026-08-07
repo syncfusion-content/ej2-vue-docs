@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Configure minimum width in Vue | Syncfusion
-description: Learn how to configure the minimum width in the Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: How to configure the minimum width in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to configure the Vue Pivot Table's minWidth property, including default values of 400px with the grouping bar and 310px without it.
 control: Configuring the minimum width in the Pivot Table component 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configuring the minimum width in the Vue Pivot Table component
+# How to configure the minimum width in Vue Pivot Table
 
 The Vue Pivot Table component provides the `minWidth` property to define the minimum width threshold for the component. This configuration ensures the pivot table maintains optimal usability and prevents layout issues when the container size decreases below the specified minimum width value.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Edit types in Vue Grid component | Syncfusion
-description: Learn here all about Edit types in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Edit Types | Syncfusion
+description: Learn how to configure edit types in Vue Data Grid, choose appropriate cell editors, customize editing behavior, and manage column editing efficiently.
 control: Edit types 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit types in Vue Grid component
+# Edit Types in Vue Data Grid
 
 The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides various edit types that allow you to customize the editing behavior for different types of columns. These edit types enhance the editing experience and provide flexibility in handling different data types. 
 

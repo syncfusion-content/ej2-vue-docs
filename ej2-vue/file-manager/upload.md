@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Upload in Vue File Manager component | Syncfusion
-description: Explore the upload options and advanced capabilities of the Vue File Manager, empowering smoother file handling and a more efficient user experience.
-control: File Manager 
+title: Upload in Vue File Manager | Syncfusion
+description: Learn how to upload files in the Vue File Manager with chunk uploads, directory uploads, and drag-and-drop support.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Upload in Vue File Manager component
+# Upload in Vue File Manager
 
 The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager) component provides a [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
 

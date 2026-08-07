@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue Grid - Remote Data | Syncfusion
-description: Vue Grid provides remote data binding options, adaptor configuration, server operations, and guidance for reliable server-side data handling.
+title: Vue Grid Remote Data Binding | Syncfusion
+description: Learn how to bind remote data sources in Vue Data Grid using adaptors, configure server-side operations, and manage data efficiently.
 control: Remote data 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote data in Vue Grid component
+# Remote Data Binding in Vue Data Grid
 
 In [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component, binding remote data is a fundamental aspect that enhances the efficiency of data interaction. This process involves assigning the service data, represented as an instance of [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started), to the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#datasource) property of the Vue Grid component.  By doing so, seamless interaction with a remote data source is enabled, achieved by specifying the endpoint URL where the data is hosted.
 

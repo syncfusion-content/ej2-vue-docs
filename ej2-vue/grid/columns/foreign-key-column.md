@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Foreign key column in Vue Grid component | Syncfusion
-description: Learn here all about Foreign key column in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Foreign Key Column | Syncfusion
+description: Learn how to use foreign key columns in Vue Data Grid to map related data, display associated values, and bind local or remote data sources.
 control: Foreign key column 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Foreign key column in Vue Grid component
+# Foreign Key Column in Vue Data Grid
 
 The Foreign key column in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) control allows you to display related data from a foreign key data source in a column within the grid. This feature is particularly useful when you have a column in the grid that represents a foreign key relationship with another data source.
 

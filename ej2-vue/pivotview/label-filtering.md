@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label filtering in Vue Pivotview component | Syncfusion
-description: Learn here all about Label filtering in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Label Filtering in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table applies label filtering to keep specific text, date, or number header values, available in the UI and via the filterSettings code-behind option.
 control: Label filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Label filtering in Vue Pivotview component
+# Label Filtering in Vue Pivot Table
 
 Label filtering allows you to view the pivot table with particular records of a field based on headers. Label filtering can be enabled by setting the `allowLabelFilter` property to **true**. The following are the three different types of available label filtering:
 

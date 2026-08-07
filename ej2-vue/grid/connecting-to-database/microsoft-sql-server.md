@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Microsoft SQL Server Data Binding in Syncfusion Grid
-description: Learn how to consume data from SQL Server using Microsoft SQL Client, bind it to Syncfusion Grid, and perform CRUD operations.
+title: Vue Grid Microsoft SQL Server Integration | Syncfusion
+description: Learn how to connect Vue Data Grid to Microsoft SQL Server using ASP.NET Core Web API, execute SQL queries, and manage data efficiently.
 platform: ej2-vue
 control: Grid
 keywords: adaptors, customadaptor, urladaptor, mssql, remotedata 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting Microsoft SQL Server data to Vue Data Grid
+# Microsoft SQL Server Integration in Vue Data Grid
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) and bind it to the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid).
 

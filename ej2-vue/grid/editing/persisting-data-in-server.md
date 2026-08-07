@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Persisting data in server in Vue Grid component | Syncfusion
-description: Learn here all about Persisting data in server in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Server Data Persistence | Syncfusion
+description: Learn how to persist Vue Data Grid changes to a server, send CRUD requests, handle server responses, and synchronize data using adaptors.
 control: Persisting data in server 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Persisting data in server in Vue Grid component
+# Server Data Persistence in Vue Data Grid
 
 The Vue Data Grid component allows data edited within the grid to be persisted in a database using RESTful web services. All CRUD (Create, Read, Update, Delete) operations within the grid are handled by the [`DataManager`](../../data), which can bind server-side data and send updates to the server. This capability is Essential<sup style="font-size:70%">&reg;</sup> for maintaining data integrity and ensuring that changes made in the UI are reflected in the backend.
 

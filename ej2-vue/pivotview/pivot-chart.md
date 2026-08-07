@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pivot chart in Vue Pivot Table component | Syncfusion
-description: Learn here all about Pivot chart in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Pivot Chart in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table renders an integrated Pivot Chart with 15+ chart types, drill down and up, dynamic legend, axis, and tooltip settings, and view-mode control via displayOption.
 control: Pivot chart 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pivot Chart in Vue Pivot Table Component
+# Pivot Chart in Vue Pivot Table
 
 The Pivot Chart in the Syncfusion Vue Pivot Table component helps users visualize aggregated values in a clear and graphical format. It provides essential options like drill down and drill up operations, over 15 chart types, and various display settings for series, axes, legends, export, print, and tooltips. The main purpose of the Pivot Chart is to present Pivot Table data in a way that is easy to understand and interact with.
 

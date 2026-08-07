@@ -1,14 +1,14 @@
 ---
 layout: post
-title: State persistence in Vue Pivot Table component | Syncfusion
-description: Learn here all about State persistence in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
+title: State Persistence in Vue Pivot Table | Syncfusion
+description: Learn how the Vue Pivot Table saves the current layout to cookies with enablePersistence, and lets you save and load a serialized report string with getPersistData and loadPersistData.
 control: State persistence 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State persistence in Vue Pivot Table component
+# State Persistence in Vue Pivot Table
 
 State persistence enables users to automatically retain the entire configuration of the Pivot Table component in the browser's local storage (cookies). This includes the current layout, field arrangements, sorting, applied filters, and the expanded or collapsed states of fields. By enabling the [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#enablepersistence) property in the Pivot Table component, all these interactive states and settings are saved automatically. As a result, users can refresh the browser or navigate to different pages and return at any time, knowing that all modified report settings will be retained—ensuring a seamless and uninterrupted data analysis experience.
 

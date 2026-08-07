@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Phase in Vue Diagram component | Syncfusion®
-description: Learn here all about Swim lane in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Phase in Vue Diagram | Syncfusion®
+description: Add phases to a swimlane in the Syncfusion® Vue Diagram to split each lane horizontally or vertically based on the swimlane orientation.
 control: Phase 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
+# Phase in Vue Diagram
 
 ## Phase
 

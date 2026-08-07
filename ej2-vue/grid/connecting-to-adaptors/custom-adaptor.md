@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind data & perform CRUD action with CustomAdaptor in Syncfusion Grid
-description: Learn here all about how to bind data and perform CRUD action using CustomAdaptor in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Bind Data with Custom Remote Data Binding | Syncfusion
+description: Learn how to bind remote data with custom rules in Vue Data Grid, customize data operations, and manage CRUD actions.
 platform: ej2-vue
 control: grid
 keywords: Adaptors, customadaptor, custom adaptor, remotedata 
@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# CustomAdaptor in Syncfusion Vue Grid
+# Custom Remote Data Binding in Vue Data Grid
 
-The `CustomAdaptor` in the Syncfusion [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows to create their own custom adaptors by extending the built-in adaptors. The custom adaptor involves handling the query process, requests, and responses of the built-in adaptor. The `CustomAdaptor` can be used to extend OData V4 services, enabling efficient data fetching and manipulation. By default, there are three built-in methods available for `CustomAdaptor`.
+The custom adaptor in the Syncfusion [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows to create their own custom adaptors by extending the built-in adaptors. The custom adaptor involves handling the query process, requests, and responses of the built-in adaptor. The custom adaptor can be used to extend OData V4 services, enabling efficient data fetching and manipulation. By default, there are three built-in methods available for custom adaptor.
 
 ## Types of CustomAdaptor methods
 
@@ -85,7 +85,7 @@ The `processResponse` method handles the response received from the server after
     return original;
 }
 ```
-This guide provides detailed instructions on binding data and performing CRUD (Create, Read, Update and Delete) actions using the `CustomAdaptor` by extending the `ODataV4Adaptor` in your Grid.
+This guide provides detailed instructions on binding data and performing CRUD (Create, Read, Update and Delete) actions using the custom adaptor by extending the `ODataV4Adaptor` in your Grid.
 
 ## Creating an Custom service
 

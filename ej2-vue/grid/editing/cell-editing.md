@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell editing in Vue Grid component | Syncfusion
-description: Learn here all about Cell editing in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Cell Editing | Syncfusion
+description: Learn how to edit grid cells in Vue Data Grid, customize editing workflows, validate input, manage updates, and control editing behavior.
 control: Cell editing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell editing in Vue Grid component
+# Cell Editing in Vue Data Grid
 
 Cell editing provides a streamlined way to update individual cell values directly within the grid. Cell editing is designed for quick, inline modifications, making data entry and corrections more efficient. This approach ensures that changes are applied seamlessly to large datasets while maintaining consistency with the Grid’s overall editing experience.
  

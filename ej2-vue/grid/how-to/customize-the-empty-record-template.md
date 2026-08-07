@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the Empty Record Template in Vue Grid component | Syncfusion
-description: Learn here all about Customize the Empty Record Template in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Empty Record Template | Syncfusion
+description: Learn how to customize the empty record template in Vue Data Grid to display custom messages, images, or actions when no data is available.
 control: Customize the Empty Record Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the Empty Record Template in Vue Grid component
+# Empty Record Template in Vue Data Grid
 
 The empty record template feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows you to use custom content such as images, text, or other components, when the grid doesn't contain any records to display. This feature replaces the default message of 'No records to display' typically shown in the grid.
 

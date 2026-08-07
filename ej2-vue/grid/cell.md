@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell in Vue Grid component | Syncfusion
-description: Learn here all about Cell and its customization in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Cells | Syncfusion
+description: Learn how to customize Vue Data Grid cells with HTML content, text wrapping, cell styling, clip modes, tooltips, and grid line configuration.
 control: Cell 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell in Vue Grid component
+# Cells in Vue Data Grid
 
 In the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid), a **cell** refers to an individual data point or a unit within a grid column that displays data. It represents the intersection of a row and a column, and it contains specific information associated with that row and column. Each cell can display text, numbers, or other content related to the data it represents. 
 

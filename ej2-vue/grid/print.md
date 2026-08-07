@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in Vue Grid component | Syncfusion
-description: Learn here all about Print in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Print | Syncfusion
+description: Learn how to print Vue Data Grid content with print customization options, formatted layouts, and print-ready output for grid data.
 control: Print 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in Vue Grid component
+# Print in Vue Data Grid
 
 The printing feature in [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) allows you to easily generate and print a representation of the grid's content for better offline accessibility and documentation. You can enable this feature using either the grid's toolbar or the programmatically available `print` method.
 

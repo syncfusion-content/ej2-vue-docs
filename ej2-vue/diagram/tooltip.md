@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Tooltip in Vue Diagram component | Syncfusion®
-description: Learn here all about Tooltip in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Tooltip in Vue Diagram | Syncfusion®
+description: Display tooltips in the Syncfusion® Vue Diagram during drag, resize, and rotate, or when hovering over nodes, to show live measurements and labels.
 control: Tooltip 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in Vue Diagram component
+# Tooltip in Vue Diagram
 
 <!-- markdownlint-disable MD010 -->
 
-In a Graphical User Interface (GUI), a tooltip is a message that appears when the mouse hovers over an element. The [Vue Diagram](https://www.syncfusion.com/diagram-sdk/vue-diagram) control provides tooltip support while dragging, resizing, rotating a node, and when the mouse hovers over any diagram element.
+In a Graphical User Interface (GUI), a tooltip is a message that appears when the mouse hovers over an element. The [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) control provides tooltip support while dragging, resizing, rotating a node, and when the mouse hovers over any diagram element.
 
 ## Default tooltip
 

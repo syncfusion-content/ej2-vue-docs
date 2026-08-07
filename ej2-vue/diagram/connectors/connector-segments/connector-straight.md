@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Straight connector in Vue Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Straight Connector in Vue Diagram | Syncfusion®
+description: Draw straight-line connectors in the Syncfusion® Vue Diagram to link two nodes with a direct, point-to-point line.
 control: Straight 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Straight Connector Segments
+# Straight Connector in Vue Diagram
 
 To create a straight line, specify the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments) of the segment as **straight** and add a straight segment to [`segments`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#segments) collection and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#type) for the connector. 
 

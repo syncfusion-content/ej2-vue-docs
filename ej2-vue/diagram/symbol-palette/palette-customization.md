@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Palette customization in Vue Diagram component | Syncfusion®
-description: Learn here how to customize symbol palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Symbol palette customization in Vue Diagram | Syncfusion®
+description: Customize the symbol palette in the Syncfusion® Vue Diagram with headers, expand and collapse groups, custom heights, and icon-based group titles.
 platform: ej2-vue
 control: Symbol palette 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symbol Palette customization in Vue Diagram component
+# Symbol palette customization in Vue Diagram
 
 ## Customize the palette header
 

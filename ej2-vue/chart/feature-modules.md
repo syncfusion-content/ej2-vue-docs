@@ -80,3 +80,5 @@ The available chart modules are
 | [`MultiLevelLabel`](https://helpej2.syncfusion.com/vue/documentation/api/chart/multiLevelLabels)| Inject this module to use the multi level label feature.|
 
 These modules should be injected into the `provide` section and use `chart` as a key of the object.
+
+N> Looking for the full Vue Charts component overview, features, pricing, and documentation? Visit the [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) page.

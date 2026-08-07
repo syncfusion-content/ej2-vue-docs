@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind and perform CRUD action with WebApiAdaptor in Syncfusion Grid
-description: Learn here all about how to bind data and perform CRUD action using WebApiAdaptor in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Bind Data with WebApiAdaptor | Syncfusion
+description: Learn how to use WebApiAdaptor in Vue Data Grid to connect Web APIs, bind remote data, and perform CRUD operations efficiently.
 platform: ej2-vue
 control: grid
 keywords: Adaptors, webapiadaptor, webapi adaptor, remotedata, webapi 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# WebApiAdaptor in Vue Data Grid Component
+# Connect Vue Data Grid to Web API Services
 
 The `WebApiAdaptor` is an extension of the `ODataAdaptor`, designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) and OData-endpoint based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
 

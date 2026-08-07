@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Pivotview component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Vue Pivot Table Component | Syncfusion
+description: Learn what the Vue Pivot Table is, see how it binds JSON or CSV data, perform aggregation, filtering, and sorting, and render reports with the field list and grouping bar.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Pivotview component
+# About Syncfusion Vue Pivot Table Component.
 
 The pivot table is a multi-dimensional data visualization component built on top of the relational data sources. The pivot report can be managed dynamically at runtime along with other capabilities like aggregation, filtering and sorting (field and value based).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Excel exporting in Vue Grid component | Syncfusion
-description: Learn here all about Excel exporting in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Excel Export | Syncfusion
+description: Learn how to export Vue Data Grid data to Excel, create downloadable workbooks, and customize export settings for spreadsheets.
 control: Excel exporting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel exporting in Vue Grid component
+# Excel Export in Vue Data Grid
 
 The Excel or CSV exporting feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to export the Grid data to an Excel or CSV document. This can be useful when you need to share or analyze the data in a spreadsheet format.
 

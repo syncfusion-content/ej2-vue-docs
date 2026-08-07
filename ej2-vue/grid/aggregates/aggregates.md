@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Aggregates in Vue Grid component | Syncfusion
-description: Learn here all about Aggregates in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Aggregates | Syncfusion
+description: Learn how to use aggregates in Vue Data Grid to display column summaries, footer and group aggregates, and create custom aggregate calculations.
 control: Aggregates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregates in Vue Grid component
+# Aggregates in Vue Data Grid
 
 The Aggregates feature in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component allows you to display aggregate values in the footer, group footer, and group caption of the grid. With this feature, you can easily perform calculations on specific columns and show summary information. This feature can be configured using the **e-aggregates** directive. To represent an aggregate column, you need to specify the minimum required properties, such as [field](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#field) and [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregatecolumn#type).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customizing loading indicator in Vue | Syncfusion
-description: Learn here all about Customizing loading indicator in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: How to customize the loading indicator in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to customize or disable the loading indicator in the Vue Pivot Table through the spinnerTemplate property with a custom HTML string.
 control: Customizing loading indicator 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing the loading indicator in the Vue Pivot Table component
+# How to customize the loading indicator in Vue Pivot Table
 
 The Pivot Table displays a loading indicator during data processing operations such as filtering, sorting, and aggregation calculations. The default loading spinner can be customized to match application design requirements using the [`spinnerTemplate`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#spinnertemplate) property.
 

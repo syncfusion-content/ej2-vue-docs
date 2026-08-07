@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "PostgreSQL Data Binding in Vue Pivotview component | Syncfusion"
+title: "PostgreSQL in Vue Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a PostgreSQL database in the Syncfusion Vue Pivot Table of Syncfusion Essential JS 2 and more."
+description: "Learn how the Vue Pivot Table binds PostgreSQL data via the Microsoft Npgsql library and a Web API controller."
 platform: ej2-vue
 documentation: ug
 ---
 
-# PostgreSQL in EJ2 Vue Pivot Table Component
+# PostgreSQL in Vue Pivot Table
 
 This guide explains how to retrieve data from a PostgreSQL database using the [Microsoft Npgsql](https://www.npgsql.org/doc/index.html) library and bind it to the Pivot Table through a Web API controller.
 

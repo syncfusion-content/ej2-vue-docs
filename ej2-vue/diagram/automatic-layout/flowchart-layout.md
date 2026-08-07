@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Flowchart layout in Vue Diagram component | Syncfusion®
-description: Learn here all about Flowchart layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
+title: Flowchart layout in Vue Diagram | Syncfusion®
+description: Auto-arrange flowcharts in the Syncfusion® Vue Diagram with standard symbols for processes, decisions, terminators, and documents, connected by arrows.
 platform: ej2-vue
 control: Flowchart layout 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Flowchart layout in Vue Diagram control
+# Flowchart layout in Vue Diagram
 
 The flowchart layout provides a visual representation of processes, workflows, systems, or algorithms in a diagrammatic format. It uses various symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts are Essential<sup style="font-size:70%">&reg;</sup> tools for illustrating step-by-step sequences, making complex processes easier to understand and communicate.
 

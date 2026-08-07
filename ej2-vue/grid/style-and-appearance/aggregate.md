@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Aggregate in Vue Grid component | Syncfusion
-description: Learn here all about Aggregate in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Vue Grid Aggregate Customization | Syncfusion
+description: Learn how to customize aggregate styles in Vue Data Grid with aggregate rows, cells, templates, and visual formatting options.
 control: Aggregate 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregate in Vue Grid component
+# Aggregate Style in Vue Data Grid
 
 You can customize the appearance of aggregate elements in the [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) component using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
 

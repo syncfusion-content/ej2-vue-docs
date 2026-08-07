@@ -223,10 +223,10 @@ In the following example, you can see the appointment defined with default field
           selectedDate: new Date(2018, 1, 15),
           eventSettings: {
             dataSource: [{
-              Id: 1,
-              Subject: 'Meeting',
-              StartTime: new Date(2018, 1, 15, 10, 0),
-              EndTime: new Date(2018, 1, 15, 12, 30)
+              Id: 1,
+              Subject: 'Meeting',
+              StartTime: new Date(2018, 1, 15, 10, 0),
+              EndTime: new Date(2018, 1, 15, 12, 30)
             }]
           }
         }
@@ -252,11 +252,11 @@ If your data uses different field names, map the custom field names using the `f
   import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
   
   let data = [{
-    Id: 2,
-    EventName: 'Meeting',
-    StartTime: new Date(2018, 1, 15, 10, 0),
-    EndTime: new Date(2018, 1, 15, 12, 30),
-    IsAllDay: false
+    Id: 2,
+    EventName: 'Meeting',
+    StartTime: new Date(2018, 1, 15, 10, 0),
+    EndTime: new Date(2018, 1, 15, 12, 30),
+    IsAllDay: false
   }];
 
   export default {

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drill through grid cell edit type in Vue | Syncfusion
-description: Learn here all about Drill through grid cell edit type in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: How to set the edit type of drill-through grid cells in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to set the edit type of drill-through grid cells in the Vue Pivot Table via the drillThrough event and gridColumns.editType (NumericTextBox, DropDownList, etc.).
 control: Drill through grid cell edit type 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drill-through grid cell edit type in the Vue Pivot Table component
+# How to set the edit type of drill-through grid cells in Vue Pivot Table
 
 The drill-through feature in the Pivot Table allows users to view the raw data behind aggregated values by opening a detailed grid dialog. When this dialog appears, you can customize the edit behavior of specific columns to provide appropriate input controls based on their data types.
 

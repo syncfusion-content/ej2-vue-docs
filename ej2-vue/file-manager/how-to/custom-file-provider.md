@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Setup own service provider in Vue File Manager component | Syncfusion
-description: Learn here all about implementation own service provider in Vue File Manager component of Syncfusion Essential JS 2 and more.
+title: Implement a custom file provider in Vue File Manager | Syncfusion
+description: Learn how to implement a custom file provider in the Vue File Manager using Node.js with Azure Blob Storage as the data source.
 control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create the custom file provider using Node JS
+# How to implement a custom file provider in Vue File Manager
 
 Here we manipulate the Azure Blob Storage to supply the necessary data for the File Manager. We achieve this by utilizing Node JS to fetch the required data from the Azure blob storage.
 
