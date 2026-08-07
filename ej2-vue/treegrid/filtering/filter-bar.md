@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filter bar in Vue Treegrid component | Syncfusion
-description: Learn here all about Filter bar in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Filter Bar | Syncfusion
+description: Learn how to use the filter bar in Vue TreeGrid, including column filtering, filter operators, and custom filter behavior.
 control: Filter bar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter bar in Vue Treegrid component
+# Filter Bar in Vue TreeGrid
 
 By setting the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowfiltering) to true, the filter bar row will render next to the header, which allows you to filter data. You can filter the records with different expressions depending upon the column type.
 

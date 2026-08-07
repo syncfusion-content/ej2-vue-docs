@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pdf export in Vue Treegrid component | Syncfusion
-description: Learn here all about Pdf export in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid PDF Export | Syncfusion
+description: Learn how to enable and use PDF export in the Vue TreeGrid, including showing a spinner and providing a custom data source.
 control: Pdf export 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF export in Vue Treegrid component
+# PDF Export in Vue TreeGrid
 
 PDF export allows exporting TreeGrid data to PDF document. You need to use the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#pdfexport) method for exporting. To enable PDF export in the treegrid, set the [`allowPdfExport`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowpdfexport) as true.
 

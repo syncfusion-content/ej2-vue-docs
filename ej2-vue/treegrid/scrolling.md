@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrolling in Vue Treegrid component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Scrolling | Syncfusion
+description: Learn how to configure scrolling in Vue TreeGrid, including responsive sizing, sticky headers, scroll-to-row, and scrollbar options.
 control: Scrolling 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling in Vue Treegrid component
+# Scrolling in Vue TreeGrid
 
 The scrollbar will be displayed in the treegrid when content exceeds the element [`width`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#width) or [`height`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
 

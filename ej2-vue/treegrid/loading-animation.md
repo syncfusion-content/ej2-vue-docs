@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Loading animation in Vue Treegrid component | Syncfusion
-description: Learn here all about Loading animation in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Loading Animation | Syncfusion
+description: Learn how to use loading animations in Vue TreeGrid, including spinner and shimmer indicators for improved loading experiences.
 control: Loading animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Loading animation in Vue Treegrid component
+# Loading Animation in Vue TreeGrid
 
 The Tree Grid displays a loading indicator while the data is being fetched and bound to the tree grid during initial rendering, refreshing, and after performing any tree grid actions like sorting, filtering, and more.
 

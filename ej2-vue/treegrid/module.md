@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Module in Vue Treegrid component | Syncfusion
-description: Learn here all about Module in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Modules | Syncfusion
+description: Learn about module injection in Vue TreeGrid, including available feature modules, dependencies, and their purposes.
 control: Module 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Modules in Vue TreeGrid component
+# Modules in Vue TreeGrid
 
 Syncfusion Vue TreeGrid modules help optimize your application's bundle size by including only the features you need. To enable a specific TreeGrid feature, import and inject the corresponding Feature Module into your TreeGrid configuration. The available TreeGrid Feature Modules include:
 

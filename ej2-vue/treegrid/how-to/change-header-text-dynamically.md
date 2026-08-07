@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change header text dynamically in Vue Treegrid component | Syncfusion
-description: Learn here all about Change header text dynamically in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Dynamic Header Text | Syncfusion
+description: Learn how to dynamically change column header text in Vue TreeGrid and refresh columns to update header labels at runtime.
 control: Change header text dynamically 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change header text dynamically in Vue Treegrid component
+# Change Header Text Dynamically in Vue TreeGrid
 
 You can change the column [`headerText`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#headertext) dynamically through an external button.
 

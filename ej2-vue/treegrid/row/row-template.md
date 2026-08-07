@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row template in Vue Treegrid component | Syncfusion
-description: Learn here all about Row template in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Row Template | Syncfusion
+description: Learn how to use row templates in Vue TreeGrid to customize row layouts, display custom content, and enhance data presentation.
 control: Row template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row template in Vue Treegrid component
+# Row Template in Vue TreeGrid
 
 The [`rowTemplate`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#rowtemplate) has an option to customise the look and behavior of the treegrid rows. The [`rowTemplate`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#rowtemplate) property accepts either the template string or HTML element ID.
 

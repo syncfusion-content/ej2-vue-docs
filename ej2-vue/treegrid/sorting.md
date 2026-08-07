@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in Vue Treegrid component | Syncfusion
-description: Learn here all about Sorting in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Sorting | Syncfusion
+description: Learn how to sort data in Vue TreeGrid, including single and multi-column sorting, custom sorting, and sort order configuration.
 control: Sorting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in Vue Treegrid component
+# Sorting in Vue TreeGrid
 
 Sorting enables you to sort data in the `Ascending` or `Descending` order.
 To sort a column, click the column header.

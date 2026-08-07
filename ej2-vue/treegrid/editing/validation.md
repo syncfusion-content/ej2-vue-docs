@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation in Vue Treegrid component | Syncfusion
-description: Learn here all about Validation in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Validation | Syncfusion
+description: Learn how to configure validation in Vue TreeGrid, including required fields, custom rules, and error handling during editing.
 control: Validation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in Vue Treegrid component
+# Validation in Vue TreeGrid
 
 ## Column validation
 

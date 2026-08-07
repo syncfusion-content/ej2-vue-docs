@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in Vue Treegrid component | Syncfusion
-description: Learn here all about Global local in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Global Localization | Syncfusion
+description: Learn how to implement global localization in Vue TreeGrid, including internationalization, localization, and RTL language support.
 control: Global local 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in Vue Treegrid component
+# Global Localization in Vue TreeGrid
 
 ## Localization
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scheduler interactions in Vue Schedule component | Syncfusion
-description: Learn here all about Scheduler interactions in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler interactions 
+title: Scheduler Interactions in Vue Scheduler | Syncfusion
+description: Learn about mouse and touch interactions in the Syncfusion Vue Scheduler, including cell selection, event selection, and date navigation.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scheduler interactions in Vue Schedule component
+# Scheduler Interactions in Vue Scheduler
 
 The Vue Schedule component supports rich **mouse**, **keyboard**, and **touch** interactions to create, view, and manage appointments efficiently across desktop and mobile environments. These interactions enable intuitive actions such as cell selection, event manipulation, navigation, and editing.
 

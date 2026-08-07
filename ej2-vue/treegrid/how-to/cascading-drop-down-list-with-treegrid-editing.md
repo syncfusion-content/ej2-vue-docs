@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cascading drop down list with treegrid editing in Vue Treegrid component | Syncfusion
-description: Learn here all about Cascading drop down list with treegrid editing in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Cascading Drop-Down Editing | Syncfusion
+description: Learn how to implement cascading drop down lists with editing in the Vue TreeGrid of Essential JS 2 using cell edit templates.
 control: Cascading drop down list with treegrid editing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cascading drop down list with treegrid editing in Vue Treegrid component
+# Cascading Drop-Down Lists with Editing in Vue TreeGrid
 
 You can achieve the Cascading DropDownList with Tree Grid Editing by using the Cell Edit Template feature.
 

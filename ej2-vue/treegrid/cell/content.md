@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Content in Vue Treegrid component | Syncfusion
-description: Learn here all about Content in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Cell Content | Syncfusion
+description: Learn how to display HTML content in Vue TreeGrid headers and cells using disableHtmlEncode to render formatted content and custom markup.
 control: Content 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content in Vue Treegrid component
+# HTML Content in Vue TreeGrid
 
-The HTML tags can be displayed in the TreeGrid header and content by enabling the [`disableHtmlEncode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#disablehtmlencode) property.
+The HTML tags can be displayed in the TreeGrid header and content by enabling the [`disableHtmlEncode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#disablehtmlencode) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

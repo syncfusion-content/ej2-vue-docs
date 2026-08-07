@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Excel export in Vue Treegrid component | Syncfusion
-description: Learn here all about Excel export in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Excel Export | Syncfusion
+description: Learn how to export data from Vue TreeGrid to Excel, including export customization, selected records, and advanced export options.
 control: Excel export 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel export in Vue Treegrid component
+# Excel Export in Vue TreeGrid
 
 The excel export allows exporting TreeGrid data to Excel document. You need to use the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#excelexport) method for exporting. To enable Excel export in the treegrid, set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowexcelexport-boolean) as true.
 

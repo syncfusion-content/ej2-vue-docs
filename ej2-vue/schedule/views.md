@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Views in Vue Schedule component | Syncfusion
-description: Learn here all about Views in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Views 
+title: Views in Vue Scheduler | Syncfusion
+description: Learn about the available views in the Syncfusion Vue Scheduler, including day, week, month, agenda, and timeline view modes and customizations.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Views in Vue Schedule component
+# Views in Vue Scheduler
 
 The Scheduler includes wide variety of view modes with unique configuration options for each view. The available view modes are Day, Week, Work Week, Month, Year, Agenda, Month Agenda, Timeline Day, Timeline Week, Timeline Work Week and Timeline Month, Timeline Year, out of which the `Week` view is set as active.
 

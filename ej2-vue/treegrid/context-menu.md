@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Context menu in Vue Treegrid component | Syncfusion
-description: Learn here all about Context menu in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Context Menu | Syncfusion
+description: Learn how to customize the context menu in Vue TreeGrid, including custom items, dynamic enable/disable options, and API integration.
 control: Context menu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in Vue Treegrid component
+# Context Menu in Vue TreeGrid
 
-The TreeGrid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#contextmenuitems).
+The TreeGrid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#contextmenuitems).
 
 To use the context menu, inject the `ContextMenu` module in the treegrid.
 
@@ -50,9 +50,9 @@ Items| Description
 
 ## Custom context menu items
 
-The custom context menu items can be added by defining the [`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#contextmenuitems) as a collection of
+The custom context menu items can be added by defining the [`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#contextmenuitems) as a collection of
 [`contextMenuItemModel`](https://ej2.syncfusion.com/vue/documentation/api/grid/contextMenuItemModel).
-Actions for this customized items can be defined in the [`contextMenuClick`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#contextmenuclick) event.
+Actions for this customized items can be defined in the [`contextMenuClick`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#contextmenuclick) event.
 
 In the below sample, we have shown context menu item for parent rows to expand or collapse child rows.
 
@@ -69,7 +69,7 @@ In the below sample, we have shown context menu item for parent rows to expand o
 
 ## Enable and disable context menu items dynamically
 
-You can enable and disable the context menu items using the [`enableItems`](https://ej2.syncfusion.com/documentation/api/menu/#enableitems) method in [`contextMenuOpen`](https://ej2.syncfusion.com/documentation/api/treegrid/#contextmenuopen) event.
+You can enable and disable the context menu items using the [`enableItems`](https://ej2.syncfusion.com/documentation/api/menu#enableitems) method in [`contextMenuOpen`](https://ej2.syncfusion.com/documentation/api/treegrid#contextmenuopen) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -82,4 +82,4 @@ You can enable and disable the context menu items using the [`enableItems`](http
         
 {% previewsample "page.domainurl/code-snippet/treegrid/contextMenu/default-cs3" %}
 
-> You can hide or show an item in context menu for specific area inside of treegrid by defining the [`target`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/cellSaveEventArgs/#target) property.
+> You can hide or show an item in context menu for specific area inside of treegrid by defining the [`target`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/cellSaveEventArgs#target) property.

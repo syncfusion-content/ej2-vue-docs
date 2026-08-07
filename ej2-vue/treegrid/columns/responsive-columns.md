@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Responsive columns in Vue Treegrid component | Syncfusion
-description: Learn here all about Responsive columns in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Responsive Columns | Syncfusion
+description: Learn how to create responsive columns in Vue TreeGrid using media queries to control column visibility and optimize layouts across devices.
 control: Responsive columns 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Responsive columns in Vue Treegrid component
+# Responsive Columns in Vue TreeGrid
 
 You can toggle column visibility based on media queries which are defined
-at the [`hideAtMedia`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#hideatmedia).
-The [`hideAtMedia`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#hideatmedia) accepts valid
+at the [`hideAtMedia`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#hideatmedia).
+The [`hideAtMedia`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#hideatmedia) accepts valid
 [Media Queries]( http://cssmediaqueries.com/what-are-css-media-queries.html ).
 
 {% tabs %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pdf export options in Vue Treegrid component | Syncfusion
-description: Learn here all about Pdf export options in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid PDF Export Options | Syncfusion
+description: Learn about PDF export options in Vue TreeGrid, including exporting selected records, hidden columns, custom fonts, and advanced settings.
 control: Pdf export options 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf export options in Vue Treegrid component
+# PDF Export Options in Vue TreeGrid
 
 ## Export hidden columns
 

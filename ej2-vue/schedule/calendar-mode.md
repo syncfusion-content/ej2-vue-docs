@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Calendar mode in Vue Schedule component | Syncfusion
-description: Learn here all about Calendar mode in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Calendar mode 
+title: Calendar Mode in Vue Scheduler | Syncfusion
+description: Learn how to render the Syncfusion Vue Scheduler in Gregorian and Islamic calendar modes to support different regional date formats.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Calendar mode in Vue Schedule component
+# Calendar Mode in Vue Scheduler
 
 The Scheduler supports the following two types of calendar mode.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell customization in Vue Schedule component | Syncfusion
-description: Learn here all about Cell customization in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Cell customization 
+title: Cell Customization in Vue Scheduler | Syncfusion
+description: Learn how to customize work cells in the Syncfusion Vue Scheduler for vertical, timeline, and month views with custom content and styling.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell Customization in Vue Schedule Component
+# Cell Customization in Vue Scheduler
 
 Cells in the Vue Schedule component can be customized using either the `cellTemplate` option or the [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule#rendercell) event. These options allow modifying cell appearance, content, and behavior based on specific requirements across all views..
 

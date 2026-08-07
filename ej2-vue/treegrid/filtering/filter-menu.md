@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filter menu in Vue Treegrid component | Syncfusion
-description: Learn here all about Filter menu in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Filter Menu | Syncfusion
+description: Learn how to use the filter menu in Vue TreeGrid, including column filtering, filter operators, and custom filter options.
 control: Filter menu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter menu in Vue Treegrid component
+# Filter Menu in Vue TreeGrid
 
 You can enable filter menu by setting the [`filterSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterSettingsModel/#type) as `Menu`. The filter menu UI will be rendered based on its column type, which allows you to filter data.
 

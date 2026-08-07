@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clipboard in Vue Treegrid component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Clipboard | Syncfusion
+description: Learn how to use clipboard operations in Vue TreeGrid, including copy, paste, hierarchy modes, and autofill for rows and cells.
 control: Clipboard 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in Vue Treegrid component
+# Clipboard in Vue TreeGrid
 
 The clipboard provides an option to copy selected rows or cells data into the clipboard.
 
@@ -32,7 +32,7 @@ Interaction keys |Description
 
 ## Copy to clipboard by external buttons
 
-To copy selected rows or cells data into clipboard with help of external buttons, you need to invoke the [`copy`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#copy) method.
+To copy selected rows or cells data into clipboard with help of external buttons, you need to invoke the [`copy`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#copy) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -47,7 +47,7 @@ To copy selected rows or cells data into clipboard with help of external buttons
 
 ## Copy Hierarchy Modes
 
-Tree Grid provides support for a set of copy modes with [`copyHierarchyMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#copyhierarchymode) property. The below are the type of filter mode available in TreeGrid.
+Tree Grid provides support for a set of copy modes with [`copyHierarchyMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#copyhierarchymode) property. The below are the type of filter mode available in TreeGrid.
 
 * **Parent** : This is the default copy hierarchy mode in Tree Grid. Clipboard value have the selected records with its parent records. If the selected records not have any parent record then the selected record will be in clipboard.
 
@@ -74,7 +74,7 @@ Tree Grid provides support for a set of copy modes with [`copyHierarchyMode`](ht
 
 ## AutoFill
 
-AutoFill Feature allows you to copy the data of selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to required cells. This feature is enabled by defining [`enableAutoFill`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enableautofill) property as true.
+AutoFill Feature allows you to copy the data of selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to required cells. This feature is enabled by defining [`enableAutoFill`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#enableautofill) property as true.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -87,8 +87,8 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
         
 {% previewsample "page.domainurl/code-snippet/treegrid/clipboard/default-cs4" %}
 
-> * If [`enableAutoFill`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enableautofill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.
-> * It requires the selection [`mode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings/#mode) to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings/#cellselectionmode) to be **Box** and also Batch Editing should be enabled.
+> * If [`enableAutoFill`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#enableautofill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.
+> * It requires the selection [`mode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings#mode) to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings#cellselectionmode) to be **Box** and also Batch Editing should be enabled.
 
 ### Limitations of AutoFill
 
@@ -110,7 +110,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
         
 {% previewsample "page.domainurl/code-snippet/treegrid/clipboard/default-cs5" %}
 
-> To perform paste functionality, it requires the selection [`mode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionMode/) to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/cellSelectionMode/) to be **Box** and also Batch Editing should be enabled.
+> To perform paste functionality, it requires the selection [`mode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionMode) to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/cellSelectionMode) to be **Box** and also Batch Editing should be enabled.
 
 ### Limitations of Paste Functionality
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row spanning in Vue TreeGrid | Syncfusion
-description: Learn here all about Row Spanning in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Row Spanning | Syncfusion
+description: Learn how to use row spanning in Vue TreeGrid to merge cells across rows and create customized data layouts and presentations.
 control: Row spanning 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row spanning in Vue TreeGrid 
+# Row Spanning in Vue TreeGrid
 
 The row spanning feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid allows merging cells in the same column vertically, creating a visually appealing and informative layout. By defining the `rowSpan` attribute in the [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/treegrid/index-default#querycellinfo) event, cells can be easily spanned and the appearance of the TreeGrid can be customized.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Tree Grid component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Tree Grid component of Syncfusion Essential JS 2 and more details.
+title: Vue TreeGrid Getting Started | Syncfusion
+description: Learn how to get started with Vue TreeGrid, including installation, configuration, data binding, and basic setup.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Tree Grid component in Vue 2
+# Getting Started with Vue TreeGrid in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Tree Grid component
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue 3 Scheduler component | Syncfusion
-description: Checkout and learn about Getting started Vue 3 with Vue Scheduler component of Syncfusion Essential JS 2 and more details.
-control: Getting started Vue 3
+title: Getting Started with Vue 3 Scheduler | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Scheduler in Vue 3, exploring setup, initialization, and basic customization in a Vue 3 app.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Schedule Component in Vue 3
+# Getting Started with Vue 3 Scheduler
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Vue Scheduler component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

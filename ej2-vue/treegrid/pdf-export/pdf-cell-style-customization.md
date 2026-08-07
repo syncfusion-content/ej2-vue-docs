@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pdf cell style customization in Vue Treegrid component | Syncfusion
-description: Learn here all about Pdf cell style customization in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid PDF Cell Style Customization | Syncfusion
+description: Learn how to customize PDF cell styles in the Vue TreeGrid, including conditional formatting and theme options for PDF export.
 control: Pdf cell style customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf cell style customization in Vue Treegrid component
+# PDF Cell Style Customization in Vue TreeGrid
 
 ## Conditional cell formatting
 

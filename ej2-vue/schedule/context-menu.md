@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Context menu in Vue Schedule component | Syncfusion
-description: Learn here all about Context menu in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Context menu 
+title: Context Menu in Vue Scheduler | Syncfusion
+description: Learn how to integrate the Context Menu in the Syncfusion Vue Scheduler to perform actions on cells, resource cells, and appointments.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context Menu in Vue Schedule Component
+# Context Menu in Vue Scheduler
 
 A context menu can be displayed on work cells and appointments in the Vue Schedule component by manually integrating the [`ContextMenu`](https://ej2.syncfusion.com/vue/documentation/context-menu/getting-started) ContextMenu control. In this approach, the ContextMenu component is added at the application level and its `target` property is set to the Schedule component’s DOM element.
 

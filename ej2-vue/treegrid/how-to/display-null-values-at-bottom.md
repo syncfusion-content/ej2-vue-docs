@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Display null values at bottom in Vue Treegrid component | Syncfusion
-description: Learn here all about Display null values at bottom in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Null Values Sorting | Syncfusion
+description: Learn how to keep null values at the bottom in Vue TreeGrid sorting by customizing sort behavior for consistent ascending and descending results.
 control: Display null values at bottom 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display null values at bottom in Vue Treegrid component
+# Display Null Values at Bottom in Vue TreeGrid
 
 By default the null values are displayed at bottom of the Tree Grid row while perform sorting in ascending order. As well as this values are displayed at top of the Tree Grid row while perform sorting with descending order. But you can customize this default order to display the null values at always bottom row of the Tree Grid by using [`column.sortComparer`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#sortcomparer) method.
 

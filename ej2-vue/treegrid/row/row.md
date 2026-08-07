@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row in Vue Treegrid component | Syncfusion
-description: Learn here all about Row in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Rows | Syncfusion
+description: Learn how to work with rows in Vue TreeGrid, including row customization, selection, styling, rendering, and row-level operations.
 control: Row 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row in Vue Treegrid component
+# Rows in Vue TreeGrid
 
 The row represents record details fetched from data source.
 

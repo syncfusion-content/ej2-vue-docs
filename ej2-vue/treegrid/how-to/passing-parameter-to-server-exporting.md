@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Passing parameter to server exporting in Vue Treegrid component | Syncfusion
-description: Learn here all about Passing parameter to server exporting in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Server Export Parameters | Syncfusion
+description: Learn how to pass additional parameters during Vue TreeGrid export operations to send custom data and query values to the server.
 control: Passing parameter to server exporting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Passing parameter to server exporting in Vue Treegrid component
+# Pass Parameters to Server Exporting in Vue TreeGrid
 
 You can pass the additional parameter in the [`query`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#query) property by invoking [`addParams`](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method. In the [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#toolbarclick) event, you can define params as key and value pair so it will receive at the server side when exporting.
 

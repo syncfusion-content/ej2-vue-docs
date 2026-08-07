@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appointments in Vue Schedule component | Syncfusion
-description: Learn here all about Appointments in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Appointments 
+title: Appointments in Vue Scheduler | Syncfusion
+description: Learn how to create and manage appointments in the Syncfusion Vue Scheduler, including normal, all-day, spanned, and recurring events.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appointments In Vue Schedule Component
+# Appointments in Vue Scheduler
 
 Appointments represent items scheduled for a specific time period. Appointments can span varied time ranges, and each appointment is categorized based on this range. Scheduler events can be categorized as:
 * Normal events

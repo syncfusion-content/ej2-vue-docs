@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adding header and footer in Vue Treegrid component | Syncfusion
-description: Learn here all about Adding header and footer in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid PDF Headers and Footers | Syncfusion
+description: Learn how to add and customize headers and footers in PDF exports for the Vue TreeGrid, including text, page numbers, lines, and images.
 control: Adding header and footer 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding header and footer in Vue Treegrid component
+# Adding Headers and Footers in Vue TreeGrid
 
 You can customize text, page number, line, page size and changing orientation in header and footer.
 

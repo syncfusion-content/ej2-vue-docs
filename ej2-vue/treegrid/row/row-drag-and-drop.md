@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row drag and drop in Vue Treegrid component | Syncfusion
-description: Learn here all about Row drag and drop in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Row drag and drop in Vue TreeGrid component | Syncfusion
+description: Learn here all about Row drag and drop in Vue TreeGrid of Essential JS 2 and more.
 control: Row drag and drop 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row drag and drop in Vue Treegrid component
+# Row Drag and Drop in Vue TreeGrid
 
 The TreeGrid rows can be reordered, dropped to another TreeGrid or custom control by enabling the [`allowRowDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowrowdraganddrop) to true.
 

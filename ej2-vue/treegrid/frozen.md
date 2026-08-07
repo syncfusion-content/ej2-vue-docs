@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Frozen in Vue Treegrid component | Syncfusion
-description: Learn here all about Frozen in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Frozen Rows and Columns | Syncfusion
+description: Learn how to freeze rows and columns in Vue TreeGrid, configure freeze direction, and keep important data visible while scrolling.
 control: Frozen 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frozen in Vue Treegrid component
+# Frozen Rows and Columns in Vue TreeGrid
 
 ## Frozen rows and columns
 
