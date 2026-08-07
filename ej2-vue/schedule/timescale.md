@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timescale in Vue Schedule component | Syncfusion
-description: Learn here all about Timescale in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Timescale 
+title: Timescale Customization in Vue Scheduler | Syncfusion
+description: Learn how to customize time slots in the Syncfusion Vue Scheduler to set the interval and slot count per row.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timescale in Vue Schedule component
+# Timescale Customization in Vue Scheduler
 
 The time slots are usually the time cells that are displayed on the Day, Week and Work Week views of both the calendar (to the left most position) and timeline views (at the top position). The [`timeScale`](../api/schedule/timeScale) property allows you to control and set the required time slot duration for the work cells displayed on Scheduler. It includes the following sub-options such as,
 

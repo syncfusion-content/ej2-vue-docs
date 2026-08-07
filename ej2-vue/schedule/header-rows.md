@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header rows in Vue Schedule component | Syncfusion
-description: Learn here all about Header rows in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Header rows 
+title: Timeline Header Rows in Vue Scheduler | Syncfusion
+description: Learn how to add additional header rows in timeline views of the Syncfusion Vue Scheduler, including year, month, week, and date rows.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header rows in Vue Schedule component
+# Timeline Header Rows in Vue Scheduler
 
 Timeline views in the Vue Schedule component support additional header rows beyond the default date and time headers. Using the [`headerRows`](../api/schedule/headerRows) property, multiple header rows can be displayed to represent different calendar units such as year, month, week, and date. This feature is applicable only to **timeline views**.
 

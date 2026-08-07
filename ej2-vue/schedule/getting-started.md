@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Schedule component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Schedule component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with Vue Scheduler | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Scheduler in Vue 2, exploring setup, initialization, and basic customization in a Vue app.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Schedule Component in Vue 2
+# Getting Started with Vue Scheduler
 
 This article provides a step-by-step guide to creating a Vue 2 application using [Vue-CLI](https://cli.vuejs.org) and integrating the Vue Schedule component. It covers project setup, component installation, module injection, data binding, and basic customization.
 

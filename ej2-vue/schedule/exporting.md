@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Exporting in Vue Schedule component | Syncfusion
-description: Learn here all about Exporting in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Exporting 
+title: Exporting in Vue Scheduler | Syncfusion
+description: Learn how to export and import events in the Syncfusion Vue Scheduler to Excel and ICS files, and print appointments with custom options.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting in Vue Schedule Component
+# Exporting in Vue Scheduler
 
 The Schedule component supports exporting its appointments to Excel (`.xlsx`/`.csv`) and ICS (`.ics`) file formats on the client side. Several client‑side methods are available to export appointment data in Excel and iCalendar formats. The following sections describe the exporting and printing capabilities of the Schedule component.
 

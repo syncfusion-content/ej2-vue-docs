@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Frequently asked questions in Vue Schedule component | Syncfusion
-description: Learn here all about Frequently asked questions in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Frequently asked questions 
+title: Frequently Asked Questions in Vue Scheduler | Syncfusion
+description: Find answers to common questions and solutions to frequent issues when working with the Syncfusion Vue Scheduler control.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently Asked Questions in Vue Schedule Component
+# Frequently Asked Questions in Vue Scheduler
 
 This section provides solutions to common issues encountered while working with the [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) component.
 

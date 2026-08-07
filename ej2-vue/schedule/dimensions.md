@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dimensions in Vue Schedule component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Dimensions 
+title: Scheduler Dimensions in Vue Scheduler | Syncfusion
+description: Learn how to set the height and width of the Syncfusion Vue Scheduler using pixel, percentage, or auto values for responsive layouts.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in Vue Schedule Component
+# Dimensions in Vue Scheduler
 
 The dimensions of the Schedule component refer to its overall height and width. These properties accept the following value types:
 

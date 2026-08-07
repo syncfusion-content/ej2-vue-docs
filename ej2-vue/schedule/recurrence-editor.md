@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Recurrence editor in Vue Schedule component | Syncfusion
-description: Learn here all about Recurrence editor in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Recurrence editor 
+title: Recurrence Editor in Vue Scheduler | Syncfusion
+description: Learn how to use the Recurrence Editor in the Syncfusion Vue Scheduler to configure daily, weekly, monthly, and yearly recurrence rules.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Recurrence editor in Vue Schedule component
+# Recurrence Editor in Vue Scheduler
 
 The **Recurrence Editor** is a built-in component integrated into the Scheduler editor window. It enables the creation and management of recurring events by generating recurrence rule strings. The Recurrence Editor can also be used as a standalone component to handle recurrence-related operations independently.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Schedule component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in Vue Scheduler | Syncfusion
+description: Learn how the Syncfusion Vue Scheduler meets WAI-ARIA, WCAG 2.2, and Section 508 accessibility standards with screen reader and keyboard support.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Schedule Component
+# Accessibility in Vue Scheduler
 
 The Schedule component is designed in accordance with WAI‑ARIA specifications, applying appropriate ARIA roles, states, and properties to all relevant elements. Built‑in keyboard navigation support is provided to ensure effective interaction for individuals relying on assistive technologies or keyboard input. According to accessibility standards, navigated dates, views, and interactive actions performed on the component are announced by screen reader software. The component uses essential ARIA attributes such as `aria-label` and `role` to ensure accessibility compliance. For accurate interpretation, an ARIA‑compliant browser running with an active screen reader is required.
 
