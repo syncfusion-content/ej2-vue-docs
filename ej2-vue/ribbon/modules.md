@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Modules in Vue Ribbon Component | Syncfusion
-description: Check out and learn about Modules in Syncfusion Ribbon Vue Component of Syncfusion Essential JS 2 and more.
+title: Feature Modules in Vue Ribbon | Syncfusion
+description: Learn about the feature-based modules in the Vue Ribbon that must be injected to enable functionalities like the file menu, backstage, and keytips.
 control: Ribbon
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Modules in Ribbon component
+# Feature Modules in Vue Ribbon
 
 The Vue Ribbon component contains several feature-based modules that must be injected to enable their respective functionalities.
 

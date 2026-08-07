@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Ribbon Items in Vue Ribbon Component | Syncfusion
-description: Check out and learn about Items in Syncfusion Vue Ribbon Component of Syncfusion Essential JS 2 and more.
+title: Items in Vue Ribbon | Syncfusion
+description: Learn how to add and configure built-in and custom items in the Vue Ribbon using item types like button, split button, drop-down, and more.
 control: Ribbon
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Items in Vue Ribbon component
+# Items in a Vue Ribbon
 
-The Ribbon component renders various built-in items based on the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItemType/) property of a ribbon-item. By default, this property is set to `Button`, which renders a standard Button item.
+The Ribbon component renders various built-in items based on the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItemType) property of a ribbon-item. By default, this property is set to `Button`, which renders a standard Button item.
 
 ## Built-in Items
 
-Render the built-in Ribbon items using the `<e-ribbon-item>` tag. Specify the desired item by setting its [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property.
+Render the built-in Ribbon items using the `<e-ribbon-item>` tag. Specify the desired item by setting its [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property.
 
 The following table describes the available built-in items and their functions:
 
@@ -30,11 +30,11 @@ The following table describes the available built-in items and their functions:
 
 ### Button items
 
-To render a `Button` item, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `Button`. You can customize its appearance and behavior using the [RibbonButtonSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettingsModel/), which includes options like `iconCss`, `content`, and `isToggle`.
+To render a `Button` item, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property to `Button`. You can customize its appearance and behavior using the [RibbonButtonSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettingsModel), which includes options like `iconCss`, `content`, and `isToggle`.
 
 #### Toggle button
 
-The [isToggle](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettingsModel/#istoggle) property can be used to define whether the button act as a toggle button or not. By default, the value is `false`.
+The [isToggle](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettingsModel#istoggle) property can be used to define whether the button act as a toggle button or not. By default, the value is `false`.
 
 ```html
 
@@ -89,11 +89,11 @@ The [isToggle](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonBut
 
 ### CheckBox Items
 
-To render a `CheckBox`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `CheckBox`. Customize it using the [RibbonCheckBoxSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettingsModel/), which provides options for `label`, `labelPosition`, and `checked` state.
+To render a `CheckBox`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property to `CheckBox`. Customize it using the [RibbonCheckBoxSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettingsModel), which provides options for `label`, `labelPosition`, and `checked` state.
 
 #### Checkbox state
 
-You can use the [checked](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettingsModel/#checked) property to handle the checked or unchecked state. By default, the value is `false`.
+You can use the [checked](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettingsModel#checked) property to handle the checked or unchecked state. By default, the value is `false`.
 
 ```html
 
@@ -151,7 +151,7 @@ You can use the [checked](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 
 #### Defining label
 
-You can use the [label](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettingsModel/#label) property to add a caption for the CheckBox. The label position can be set `Before` or `After`, by using the [labelPosition](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettingsModel/#labelposition) property. By default, the labelPosition is `After`.
+You can use the [label](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettingsModel#label) property to add a caption for the CheckBox. The label position can be set `Before` or `After`, by using the [labelPosition](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettingsModel#labelposition) property. By default, the labelPosition is `After`.
 
 ```html
 
@@ -210,11 +210,11 @@ You can use the [label](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 
 ### DropDown button items
 
-To render a `DropDownButton`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `DropDown`. Customize it using the [RibbonDropDownSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettingsModel/), which includes `items`, `iconCss`, `content`, and a `target` for the popup content.
+To render a `DropDownButton`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property to `DropDown`. Customize it using the [RibbonDropDownSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettingsModel), which includes `items`, `iconCss`, `content`, and a `target` for the popup content.
 
 #### Target
 
-The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettingsModel/#target) property specifies the element selector for the content to be displayed in the DropDownButton popup.
+The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettingsModel#target) property specifies the element selector for the content to be displayed in the DropDownButton popup.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -229,7 +229,7 @@ The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropD
 
 #### Customize Dropdown button item
 
-Apply a custom CSS class to style dropdown items using the [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeitemrender) event.
+Apply a custom CSS class to style dropdown items using the [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings#beforeitemrender) event.
 
 The following sample showcases how to customize a specific dropdown item.
 
@@ -246,7 +246,7 @@ The following sample showcases how to customize a specific dropdown item.
 
 #### Create dropdown popup on demand
 
-Set the [createPopupOnClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#createpopuponclick) property to `true` to create the popup only when the dropdown is opened, optimizing performance.
+Set the [createPopupOnClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings#createpopuponclick) property to `true` to create the popup only when the dropdown is opened, optimizing performance.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -261,11 +261,11 @@ Set the [createPopupOnClick](https://ej2.syncfusion.com/vue/documentation/api/ri
 
 ### Split button items
 
-To render a `SplitButton`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `SplitButton`. Customize it with the [RibbonSplitButtonSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettingsModel/), which provides options like `iconCss`, `items`, and `target`.
+To render a `SplitButton`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property to `SplitButton`. Customize it with the [RibbonSplitButtonSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettingsModel), which provides options like `iconCss`, `items`, and `target`.
 
 #### Target
 
-The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettingsModel/#target) property specifies the element selector to be displayed in the SplitButton popup.
+The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettingsModel#target) property specifies the element selector to be displayed in the SplitButton popup.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -280,11 +280,11 @@ The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplit
 
 ### ComboBox Items
 
-To render a `ComboBox` item, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `ComboBox`. You can configure it using the [RibbonComboBoxSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettingsModel/), which provides options such as `allowFiltering`, `autoFill`, `index`, `sortOrder` and more.
+To render a `ComboBox` item, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property to `ComboBox`. You can configure it using the [RibbonComboBoxSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettingsModel), which provides options such as `allowFiltering`, `autoFill`, `index`, `sortOrder` and more.
 
 #### Filtering
 
-You can use the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettingsModel/#allowfiltering) property to filter the data items. The filtering operation is initiated automatically, as soon as you start typing characters. If no match is found the value of the `noRecordsTemplate` property will be displayed. By default, the value is `false`.
+You can use the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettingsModel#allowfiltering) property to filter the data items. The filtering operation is initiated automatically, as soon as you start typing characters. If no match is found the value of the `noRecordsTemplate` property will be displayed. By default, the value is `false`.
 
 ```html
 
@@ -342,7 +342,7 @@ You can use the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/ap
 
 #### Index
 
-You can use the [index](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettingsModel/#index) property to get or set the selected item in the combobox.
+You can use the [index](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettingsModel#index) property to get or set the selected item in the combobox.
 
 ```html
 
@@ -400,7 +400,7 @@ You can use the [index](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 
 #### SortOrder
 
-You can use the [sortOrder](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettingsModel/#sortorder) property to specify the order in which the DataSource should be sorted.
+You can use the [sortOrder](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettingsModel#sortorder) property to specify the order in which the DataSource should be sorted.
 
 <table>
   <tr>
@@ -430,11 +430,11 @@ You can use the [sortOrder](https://ej2.syncfusion.com/vue/documentation/api/rib
 
 ### Colorpicker items
 
-To render a `ColorPicker`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `ColorPicker`. Customize it using the [RibbonColorPickerSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettingsModel/), which includes properties like `value`, `columns`, and `showButtons`.
+To render a `ColorPicker`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property to `ColorPicker`. Customize it using the [RibbonColorPickerSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettingsModel), which includes properties like `value`, `columns`, and `showButtons`.
 
 #### Value
 
-You can use the [value](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettingsModel/#value) property to specify the color value. The value should be specified as Hex code.
+You can use the [value](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettingsModel#value) property to specify the color value. The value should be specified as Hex code.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -449,15 +449,15 @@ You can use the [value](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 
 ### GroupButton Items
 
-To render a `GroupButton`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `GroupButton`. Configure its items and selection behavior using the [RibbonGroupButtonSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSettingsModel/).
+To render a `GroupButton`, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property to `GroupButton`. Configure its items and selection behavior using the [RibbonGroupButtonSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSettingsModel).
 
 #### Items
 
-You can render the groupbutton items by using the `<e-ribbon-item>` tag directive. You can also customize the groupbutton items through [RibbonGroupButtonItemModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/), which provides options such as `content`, `iconCss`, `selected` and more.
+You can render the groupbutton items by using the `<e-ribbon-item>` tag directive. You can also customize the groupbutton items through [RibbonGroupButtonItemModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel), which provides options such as `content`, `iconCss`, `selected` and more.
 
 #### Item content
 
-You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#content) property to define the text content for the groupbutton.
+You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel#content) property to define the text content for the groupbutton.
 
 ```html
 
@@ -519,7 +519,7 @@ You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 
 #### Icon only
 
-You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#iconcss) property to customize the groupbutton icon. If the `iconCss` property is not defined, the groupbutton will not be rendered.
+You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel#iconcss) property to customize the groupbutton icon. If the `iconCss` property is not defined, the groupbutton will not be rendered.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -534,7 +534,7 @@ You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 
 #### Selection
 
-You can use the [selected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#selected) property to select the groupbutton item initally. When set to `true`, the button will be selected. By default the `selected` property is false.
+You can use the [selected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel#selected) property to select the groupbutton item initally. When set to `true`, the button will be selected. By default the `selected` property is false.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -549,7 +549,7 @@ You can use the [selected](https://ej2.syncfusion.com/vue/documentation/api/ribb
 
 #### Single selection
 
-You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSelection/) property value as `RibbonGroupButtonSelection.Single` to make one selection at a time. It automatically deselects the previous choice when a different item is clicked.
+You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSelection) property value as `RibbonGroupButtonSelection.Single` to make one selection at a time. It automatically deselects the previous choice when a different item is clicked.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -564,7 +564,7 @@ You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/rib
 
 #### Multiple selection
 
-You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSelection/) property value as `RibbonGroupButtonSelection.Multiple` to select more than one button at a time. Users can select a button one by one to select multiple buttons.
+You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSelection) property value as `RibbonGroupButtonSelection.Multiple` to select more than one button at a time. Users can select a button one by one to select multiple buttons.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -595,7 +595,7 @@ In simplified mode, the groupbutton will be rendered as a dropdownbutton. The dr
 
 ## Custom items
 
-To create custom Ribbon items, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `Template`. This allows you to render any HTML content or non-built-in components, offering maximum flexibility.
+To create custom Ribbon items, set the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#type) property to `Template`. This allows you to render any HTML content or non-built-in components, offering maximum flexibility.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -610,7 +610,7 @@ To create custom Ribbon items, set the [type](https://ej2.syncfusion.com/vue/doc
 
 ## Item Display Options
 
-Use the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#displayoptions) property to control in which Ribbon layouts an item appears.
+Use the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#displayoptions) property to control in which Ribbon layouts an item appears.
 
 | Option | Description |
 |------------|----------------------------------------------------------------------|
@@ -621,7 +621,7 @@ Use the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon
 
 ### Display items in Classic only
 
-To display the items only in the classic layout group, set the mode as `DisplayMode.Classic` in the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#displayoptions) property.
+To display the items only in the classic layout group, set the mode as `DisplayMode.Classic` in the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#displayoptions) property.
 
 ```html
 <template>
@@ -676,7 +676,7 @@ To display the items only in the classic layout group, set the mode as `DisplayM
 
 ### Display items in Simplified only
 
-To display the items only in the simplified layout group, set the mode as `DisplayMode.Simplified` in the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#displayoptions) property.
+To display the items only in the simplified layout group, set the mode as `DisplayMode.Simplified` in the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#displayoptions) property.
 
 ```html
 <template>
@@ -731,7 +731,7 @@ To display the items only in the simplified layout group, set the mode as `Displ
 
 ### Display items in Overflow popup only
 
-To display the items only in the overflow, set the mode as `DisplayMode.Overflow` in the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#displayoptions) property.
+To display the items only in the overflow, set the mode as `DisplayMode.Overflow` in the [displayOptions](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#displayoptions) property.
 
 ```html
 <template>
@@ -786,7 +786,7 @@ To display the items only in the overflow, set the mode as `DisplayMode.Overflow
 
 ## Enable or Disable Items
 
-Use the [disabled](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#disabled) property to enable or disable a Ribbon item. When set to `true`, the item becomes non-interactive.
+Use the [disabled](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem#disabled) property to enable or disable a Ribbon item. When set to `true`, the item becomes non-interactive.
 
 ```html
   <template>

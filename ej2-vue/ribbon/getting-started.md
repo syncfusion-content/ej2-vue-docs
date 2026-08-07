@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Ribbon component | Syncfusion
-description:  Checkout and learn about Getting started with Syncfusion Vue Ribbon component of Syncfusion Essential JS 2 and more.
+title: Getting Started with Vue Ribbon | Syncfusion
+description: Learn how to get started with the Vue Ribbon and explore setup, configuration, and core feature examples for building ribbon interfaces.
 control: Ribbon
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Ribbon Component in Vue 2
+# Getting Started with Vue Ribbon
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Ribbon component.
 

@@ -2,7 +2,7 @@
 layout: post
 title: Methods in Vue Maps component | Syncfusion
 description: Learn here all about the methods in the Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: Maps 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

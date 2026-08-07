@@ -2,7 +2,7 @@
 layout: post
 title: Bing maps in Vue Maps component | Syncfusion
 description: Learn here all about Bing maps in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: Bing maps 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
