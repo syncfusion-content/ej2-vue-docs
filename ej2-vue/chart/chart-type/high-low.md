@@ -1,14 +1,14 @@
 ---
 layout: post
-title: High Low Chart in Vue Charts | Syncfusion
-description: Learn here all about Hilo Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: High Low Chart in Vue Chart | Syncfusion
+description: Learn here all about Hilo Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: High Low Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# High Low Chart in Vue Charts
+# High Low Chart in Vue Chart
 
 ## High Low
 

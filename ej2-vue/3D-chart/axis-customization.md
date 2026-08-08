@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis customization in Vue 3D Chart component | Syncfusion
+title: Axis Customization in Vue 3D Chart | Syncfusion
 description: Learn here all about axis customization in Syncfusion 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-vue
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis customization in Vue 3D Chart component
+# Axis Customization in Vue 3D Chart
 
 ## Title
 
-The title for the axis can be added by using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#title) property. It helps to provide quick information to the user about the data plotted in the axis. Title style can be customized using [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#titlestyle) property of the axis.
+The title for the axis can be added by using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#title) property. It helps to provide quick information to the user about the data plotted in the axis. Title style can be customized using [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#titlestyle) property of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The title for the axis can be added by using the [`title`](https://ej2.syncfusio
 
 ## Title rotation
 
-The title can be rotated from 0 to 360 degree by using the [`titleRotation`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#titlerotation) property.
+The title can be rotated from 0 to 360 degree by using the [`titleRotation`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#titlerotation) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ The title can be rotated from 0 to 360 degree by using the [`titleRotation`](htt
 
 ## Tick lines customization
 
-The [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorTickModel/#width), [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorTickModel/#color) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorTickModel/#height) of the minor and major tick lines can be customized by using the [`majorTickLines`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#majorticklines) and [`minorTickLines`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#minorticklines) properties in the axis.
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorTickModel#width), [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorTickModel#color) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorTickModel#height) of the minor and major tick lines can be customized by using the [`majorTickLines`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#majorticklines) and [`minorTickLines`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#minorticklines) properties in the axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ The [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorTick
 
 ## Grid lines customization
 
-The [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorGridModel/#width), and [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorGridModel/#color) of the minor and major grid lines can be customized by using the [`majorGridLines`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#majorgridlines) and [`minorGridLines`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#minorgridlines) properties in the axis.
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorGridModel#width), and [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/minorGridModel#color) of the minor and major grid lines can be customized by using the [`majorGridLines`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#majorgridlines) and [`minorGridLines`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#minorgridlines) properties in the axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -89,7 +89,7 @@ In addition to primary X and Y axis, n number of axis can be added to the chart.
 
 <!-- markdownlint-disable MD033 -->
 
-When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner, set the [`isInversed`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#isinversed) property to **true**.
+When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner, set the [`isInversed`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#isinversed) property to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,7 +104,7 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 
 ## Opposed position
 
-To place an axis opposite from its original position, set the [`opposedPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#opposedposition) property to **true**.
+To place an axis opposite from its original position, set the [`opposedPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#opposedposition) property to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

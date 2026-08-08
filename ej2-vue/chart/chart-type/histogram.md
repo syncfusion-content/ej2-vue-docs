@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Histogram Chart in Vue Charts | Syncfusion
-description: Learn here all about Histogram Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Histogram Chart in Vue Chart | Syncfusion
+description: Learn here all about Histogram Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Histogram Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Histogram Chart in Vue Charts
+# Histogram Chart in Vue Chart
 
 ## Histogram
 

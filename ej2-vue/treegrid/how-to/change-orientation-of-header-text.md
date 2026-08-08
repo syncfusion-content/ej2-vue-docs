@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change orientation of header text in Vue Treegrid component | Syncfusion
-description: Learn here all about Change orientation of header text in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Header Text Orientation | Syncfusion
+description: Learn how to change header text orientation in Vue TreeGrid using custom CSS and rotated column headers to optimize space and improve readability.
 control: Change orientation of header text 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change orientation of header text in Vue Treegrid component
+# Change Header Text Orientation in Vue TreeGrid
 
 You can change the orientation of the header text by using the [`customAttributes`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#customattributes) property.
 

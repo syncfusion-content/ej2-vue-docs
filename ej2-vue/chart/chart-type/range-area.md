@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range Area Chart in Vue Charts | Syncfusion
-description: Learn here all about Range Area in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Range Area Chart in Vue Chart | Syncfusion
+description: Learn here all about Range Area in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Range Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range Area Chart in Vue Charts
+# Range Area Chart in Vue Chart
 
 ## Range Area
 

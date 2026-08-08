@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotation in Vue Accumulation chart component | Syncfusion
+title: Annotation in Vue Accumulation Chart | Syncfusion
 description: Learn here all about Annotation in Syncfusion Vue Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Annotation 
+control: Annotation
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation in Vue Accumulation chart component
+# Annotation in Vue Accumulation Chart
 
 The annotations are used to mark the specific area of interest in the chart area with texts, shapes or images.
 

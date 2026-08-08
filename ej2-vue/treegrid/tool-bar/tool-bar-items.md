@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool bar items in Vue Treegrid component | Syncfusion
-description: Learn here all about Tool bar items in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Angular TreeGrid Toolbar Items | Syncfusion
+description: Learn about configuring built-in and custom toolbar items in the Angular TreeGrid, including actions, alignment, and best practices.
 control: Tool bar items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool bar items in Vue Treegrid component
+# Toolbar Items in Angular TreeGrid
 
 ## Built-in toolbar items
 

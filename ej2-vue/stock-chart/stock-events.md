@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Stock events in Vue Stock chart component | Syncfusion
+title: Stock Events in Vue Stock Chart | Syncfusion
 description: Learn here all about Stock events in Syncfusion Vue Stock chart component of Syncfusion Essential JS 2 and more.
-control: Stock events 
+control: Stock events
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Stock events in Vue Stock chart component
+# Stock Events in Vue Stock Chart
 
 Stock Events visualizes stock events in stock chart. 'SplineSeries' is used to represent selected data value. You can customize the specific data value using `stockEvents` event.
 

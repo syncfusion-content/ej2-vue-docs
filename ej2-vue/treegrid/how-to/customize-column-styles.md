@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize column styles in Vue Treegrid component | Syncfusion
-description: Learn here all about Customize column styles in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Column Style Customization | Syncfusion
+description: Learn how to customize column styles in Vue TreeGrid using customAttributes, including applying custom CSS to header and content cells.
 control: Customize column styles 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize column styles in Vue Treegrid component
+# Customize Column Styles in Vue TreeGrid
 
 You can customise the appearance of header and content of the particular column using the [`customAttributes`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#customattributes) property.
 

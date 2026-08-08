@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection in Vue Treegrid component | Syncfusion
-description: Learn here all about Selection in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Selection | Syncfusion
+description: Learn all about selection in the Vue TreeGrid, including single/multiple selection, selection modes, toggle selection, and touch interactions.
 control: Selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in Vue Treegrid component
+# Selection in Vue TreeGrid
 
 Selection provides an option to highlight a row or cell.
 

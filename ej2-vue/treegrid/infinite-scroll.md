@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Infinite scroll in Vue Treegrid component | Syncfusion
-description: Learn here all about Infinite scroll in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Infinite Scroll | Syncfusion
+description: Learn how to enable and configure infinite scroll in the Vue TreeGrid for efficient large data handling, cache management, and best practices.
 control: Infinite scroll 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Infinite scroll in Vue Treegrid component
+# Infinite Scroll in Vue TreeGrid
 
 Infinite scrolling is used to load a huge amount of data without degrading the TreeGrid performance. This feature works like the lazy loading concept, which means the buffer data is loaded only when the scrollbar reaches the end of the scroller.
 

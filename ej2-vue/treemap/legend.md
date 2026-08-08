@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Legend in Vue Treemap component | Syncfusion
-description: Learn here all about Legend in Syncfusion Vue Treemap component of Syncfusion Essential JS 2 and more.
+title: Legend in Vue TreeMap | Syncfusion
+description: Learn here all about Legend in Syncfusion Vue TreeMap component of Syncfusion Essential JS 2 and more.
 control: Legend 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend in Vue Treemap component
+# Legend in Vue TreeMap
 
 <!-- markdownlint-disable MD010 -->
 Legend is used to provide valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.

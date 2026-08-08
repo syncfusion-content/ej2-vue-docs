@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict decimal points with treegrid editing in Vue Treegrid component | Syncfusion
-description: Learn here all about Restrict decimal points with treegrid editing in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Decimal Point Restriction | Syncfusion
+description: Learn how to restrict decimal points while editing in the Vue TreeGrid using NumericTextBox configuration.
 control: Restrict decimal points with treegrid editing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict decimal points with treegrid editing in Vue Treegrid component
+# Restrict Decimal Points While Editing in Vue TreeGrid
 
 By default, the number of decimal places will be restricted to two in the NumericTextBox while editing the numeric column. We can restrict to type the decimal points in a NumericTextBox by using the **validateDecimalOnType** and **decimals** properties of NumericTextBox.
 

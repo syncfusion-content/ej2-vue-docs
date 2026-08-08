@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Category axis in Vue Chart component | Syncfusion
+title: Category axis in Vue Chart | Syncfusion
 description: Learn here all about Category axis in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Category axis 
+control: Category axis
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Category axis in Vue Chart component
+# Category axis in Vue Chart
 
 <!-- markdownlint-disable MD036 -->
 

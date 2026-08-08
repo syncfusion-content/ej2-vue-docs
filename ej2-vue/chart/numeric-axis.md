@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Numeric axis in Vue Chart component | Syncfusion
+title: Numeric Axis in Vue Chart | Syncfusion
 description: Learn here all about Numeric axis in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Numeric axis 
+control: Numeric axis
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Numeric axis in Vue Chart component
+# Numeric Axis in Vue Chart
 
 The numeric axis is used to represent numeric values in a chart. By default, the `valueType` of an axis is set to `Double`, which is suitable for displaying continuous numerical data.
 
@@ -27,7 +27,7 @@ The numeric axis is used to represent numeric values in a chart. By default, the
 
 ## Range
 
-The range of the axis is calculated automatically based on the provided data. You can also customize the visible range by using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#maximum), and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#interval) properties of the axis.
+The range of the axis is calculated automatically based on the provided data. You can also customize the visible range by using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#maximum), and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#interval) properties of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ The range of the axis is calculated automatically based on the provided data. Yo
 
 ## Range Padding
 
-Padding can be applied to the minimum and maximum values of the axis range by using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property. The numeric axis supports the following padding options:
+Padding can be applied to the minimum and maximum values of the axis range by using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property. The numeric axis supports the following padding options:
 
 * Round
 * Normal
@@ -50,7 +50,7 @@ Padding can be applied to the minimum and maximum values of the axis range by us
 
 **Numeric – None**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property is set to `None`, the minimum and maximum values of the axis are derived directly from the data.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property is set to `None`, the minimum and maximum values of the axis are derived directly from the data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -65,7 +65,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric – Round**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property is set to `Round`, the minimum and maximum values are rounded to the nearest values divisible by the interval. For example, if the minimum value is 3.5 and the interval is 1, the minimum value is rounded to 3.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property is set to `Round`, the minimum and maximum values are rounded to the nearest values divisible by the interval. For example, if the minimum value is 3.5 and the interval is 1, the minimum value is rounded to 3.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -80,7 +80,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric – Additional**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property is set to `Additional`, one interval is added to both the minimum and maximum values of the axis range.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property is set to `Additional`, one interval is added to both the minimum and maximum values of the axis range.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -95,7 +95,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric – Normal**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property is set to `Normal`, padding is applied to the axis based on the default range calculation.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property is set to `Normal`, padding is applied to the axis based on the default range calculation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -110,7 +110,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric – Auto**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property is set to `Auto`, the horizontal numeric axis uses `None` as padding, while the vertical numeric axis uses `Normal` padding.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property is set to `Auto`, the horizontal numeric axis uses `None` as padding, while the vertical numeric axis uses `Normal` padding.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -127,7 +127,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric label format**
 
-Numeric axis labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#labelformat) property. This property supports all Globalize numeric formats.
+Numeric axis labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#labelformat) property. This property supports all Globalize numeric formats.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -203,7 +203,7 @@ The following table shows examples of commonly used numeric label formats and th
 
 ## GroupingSeperator
 
-To separate groups of thousands in numeric labels, enable the [`useGroupingSeparator`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#usegroupingseparator) property in the chart.
+To separate groups of thousands in numeric labels, enable the [`useGroupingSeparator`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#usegroupingseparator) property in the chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

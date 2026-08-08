@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Exporting tree grid in server in Vue Tree Grid component | Syncfusion
-description: Learn here all about Exporting tree grid in server in Syncfusion Vue Tree Grid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid PDF Server-Side Export | Syncfusion
+description: Learn how to export the Vue TreeGrid to PDF on the server side using server export libraries and configuration with Essential JS 2.
 platform: ej2-vue
 control: Exporting tree grid in server 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting tree grid in server in Vue Tree Grid component
+# PDF Server-Side Export in Vue TreeGrid
 
 The Tree Grid have an option to export the data to PDF in server side using tree grid server export library.
 

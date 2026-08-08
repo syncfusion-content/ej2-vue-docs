@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell selection in Vue Treegrid component | Syncfusion
-description: Learn here all about Cell selection in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Cell Selection | Syncfusion
+description: Learn how to perform cell selection in the Vue TreeGrid, including selection modes, programmatic APIs, and retrieving selected cell indexes.
 control: Cell selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell selection in Vue Treegrid component
+# Cell Selection in Vue TreeGrid
 
 Cell Selection can be done through simple Mouse down or Arrow keys(up, down, left and right).
 

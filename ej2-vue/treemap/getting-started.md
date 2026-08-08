@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with the Vue TreeMap Component in Vue 2 | Syncfusion
+title: Getting Started with Vue TreeMap | Syncfusion
 description: Set up a Vue 2 application and integrate the Syncfusion Vue TreeMap component with data binding, and a working example.
 control: TreeMap
 platform: ej2-vue
@@ -9,9 +9,9 @@ framework-version: 2
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue TreeMap Component in Vue 2
+# Getting Started with Vue TreeMap
 
-This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org#) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component.
 
 You can explore some useful features of the TreeMap component in the following video.
 
@@ -45,7 +45,7 @@ Use a package release that supports Vue 2. Before upgrading, check the [Vue syst
 
 ## Set Up the Vue 2 Project
 
-Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org#getting-started) command.
 
 **npm**
 

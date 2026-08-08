@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pie dough nut in Vue Accumulation chart component | Syncfusion
+title: Pie and Donut in Vue Accumulation Chart | Syncfusion
 description: Learn here all about Pie dough nut in Syncfusion Vue Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Pie dough nut 
+control: Pie dough nut
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pie dough nut in Vue Accumulation chart component
+# Pie and Donut in Vue Accumulation Chart
 
 ## Pie Chart
 

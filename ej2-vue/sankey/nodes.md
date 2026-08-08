@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nodes in Vue Sankey Chart component | Syncfusion
+title: Nodes in Vue Sankey | Syncfusion
 description: Learn here all about Nodes in Syncfusion Vue Sankey Chart component of Syncfusion Essential JS 2 and more.
 control: Nodes
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Nodes in Vue Sankey Chart component
+# Nodes in Vue Sankey
 
 Nodes are the fundamental building blocks of a Sankey Chart, representing sources, targets, and intermediate entities in flow diagrams. The Sankey Chart provides extensive customization options for node appearance, enabling you to create visually meaningful and interactive flow diagrams.
 

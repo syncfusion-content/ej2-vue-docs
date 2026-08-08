@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column Chart in Vue 3D Chart component | Syncfusion
+title: Column Chart in Vue 3D Chart | Syncfusion
 description: Learn here all about column chart in Syncfusion 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-vue
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Chart in Vue 3D Chart component
+# Column Chart in Vue 3D Chart
 
 ## Column chart
 
-To render a [column series](https://www.syncfusion.com/vue-components/vue-charts/chart-types/column-chart), use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#type) as `Column` and inject `ColumnSeries3D` into the `provide`.
+To render a [column series](https://www.syncfusion.com/vue-components/vue-charts/chart-types/column-chart), use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel#type) as `Column` and inject `ColumnSeries3D` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ To render a [column series](https://www.syncfusion.com/vue-components/vue-charts
 
 ## Column space and width
 
-The [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#columnspacing) and [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#columnwidth) properties are used to customize the space between columns.
+The [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel#columnspacing) and [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel#columnwidth) properties are used to customize the space between columns.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ The [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/s
 
 ## Grouped column
 
-The data points can be grouped in the column type charts by using the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#groupname) property. Data points with same group name are grouped together.
+The data points can be grouped in the column type charts by using the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel#groupname) property. Data points with same group name are grouped together.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ The data points can be grouped in the column type charts by using the [`groupNam
 
 ## Cylindrical column chart
 
-To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#columnfacet) property to `Cylinder` in the chart series.
+To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel#columnfacet) property to `Cylinder` in the chart series.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -74,8 +74,8 @@ To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfu
 
 The following properties can be used to customize the `column` series.
 
-* [fill](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#fill) – Specifies the color of the series.
-* [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of the [fill](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#fill) color.
+* [fill](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel#fill) – Specifies the color of the series.
+* [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel#opacity) – Specifies the opacity of the [fill](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel#fill) color.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

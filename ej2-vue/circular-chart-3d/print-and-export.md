@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print and Export in Vue 3D Circular Chart component
+# Print and Export in Vue 3D Circular Chart
 
 ## Print
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip in Vue Chart component | Syncfusion
+title: Tooltip in Vue Chart | Syncfusion
 description: Learn here all about Tooltip in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Tooltip 
+control: Tooltip
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in Vue Chart component
+# Tooltip in Vue Chart
 
 <!-- markdownlint-disable MD036 -->
 

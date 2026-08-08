@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Stacked Column Chart in Vue Charts | Syncfusion
-description: Learn here all about Stacked Column in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Stacked Column Chart in Vue Chart | Syncfusion
+description: Learn here all about Stacked Column in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Stacked Column Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacked Column Chart in Vue Charts
+# Stacked Column Chart in Vue Chart
 
 ## Stacked Column
 

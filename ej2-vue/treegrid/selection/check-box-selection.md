@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check box selection in Vue Treegrid component | Syncfusion
-description: Learn here all about Check box selection in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Checkbox Selection | Syncfusion
+description: Learn how to enable and configure checkbox selection in Vue TreeGrid, including selection modes, persist selection, and checkbox behavior.
 control: Check box selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check box selection in Vue Treegrid component
+# Checkbox Selection in Vue TreeGrid
 
 Checkbox Selection provides an option to select multiple TreeGrid records with help of checkbox in each row.
 

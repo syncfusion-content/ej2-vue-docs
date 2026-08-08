@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool tip in Vue Range navigator component | Syncfusion
+title: Tooltip in Vue Range Navigator | Syncfusion
 description: Learn here all about Tool tip in Syncfusion Vue Range navigator component of Syncfusion Essential JS 2 and more.
-control: Tool tip 
+control: Tool tip
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool tip in Vue Range navigator component
+# Tooltip in Vue Range Navigator
 
 <!-- markdownlint-disable MD036 -->
 

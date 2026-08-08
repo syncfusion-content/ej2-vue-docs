@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Title subtitle in Vue Smithchart component | Syncfusion
+title: Title and Subtitle in Vue Smith Chart | Syncfusion
 description: Learn here all about Title subtitle in Syncfusion Vue Smithchart component of Syncfusion Essential JS 2 and more.
-control: Title subtitle 
+control: Smith Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Title subtitle in Vue Smithchart component
+# Title and Subtitle in Vue Smith Chart
 
 ## Enable title
 

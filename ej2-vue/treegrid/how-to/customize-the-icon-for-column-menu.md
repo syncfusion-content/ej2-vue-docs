@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the icon for column menu in Vue Treegrid component | Syncfusion
-description: Learn here all about Customize the icon for column menu in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Column Menu Icon Customization | Syncfusion
+description: Learn how to customize the column menu icon in Vue TreeGrid using CSS overrides to apply custom icons and enhance the grid interface.
 control: Customize the icon for column menu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the icon for column menu in Vue Treegrid component
+# Customize the Column Menu Icon in Vue TreeGrid
 
 You can customize the column menu icon by overriding the default Tree Grid class **.e-icons.e-columnmenu** with a custom property **content** as mentioned below,
 

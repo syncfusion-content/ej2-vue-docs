@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Appearance in Vue Stock chart component | Syncfusion
+title: Appearance in Vue Stock Chart | Syncfusion
 description: Learn here all about Appearance in Syncfusion Vue Stock chart component of Syncfusion Essential JS 2 and more.
-control: Appearance 
+control: Appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue Stock chart component
+# Appearance in Vue Stock Chart
 
 ## Stock Chart Title
 
-Chart can be given a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/#title-string) property, to show the information about the data plotted.
+Chart can be given a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart#title-string) property, to show the information about the data plotted.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -44,7 +44,7 @@ The `textStyle` property of chart title provides options to customize the `size`
 
 Changing theme will affect background color,gridlines,tooltip colors and appearance.
 
-[`theme`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartModel/#theme) property of Stock chart is shipped with several built-in themes such as `Material`, `Fabric`, `Bootstrap` , `HighContrastLight`, `MaterialDark`, `FabricDark`, `FabricDark`, `HighContrast` and `BootstrapDark`.
+[`theme`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartModel#theme) property of Stock chart is shipped with several built-in themes such as `Material`, `Fabric`, `Bootstrap` , `HighContrastLight`, `MaterialDark`, `FabricDark`, `FabricDark`, `HighContrast` and `BootstrapDark`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

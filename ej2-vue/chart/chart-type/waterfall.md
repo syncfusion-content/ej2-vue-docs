@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Watterfall Chart in Vue Charts | Syncfusion
-description: Learn here all about Watterfall Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Watterfall Chart in Vue Chart | Syncfusion
+description: Learn here all about Watterfall Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Watterfall Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Waterfall Chart in Vue Charts
+# Waterfall Chart in Vue Chart
 
 ## Waterfall Chart
 

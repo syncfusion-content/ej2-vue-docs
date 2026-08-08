@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue 3 getting started with the Chart Component | Syncfusion
+title: Getting Started with Vue Chart in Vue 3 | Syncfusion
 description: Scaffold a Vue 3 project with Vite and integrate Syncfusion EJ2 Vue Chart, featuring examples using both the Composition and Options APIs.
 control: Vue 3 getting started
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Chart Component in Vue 3
+# Getting Started with Vue Chart
 
 This article provides a step-by-step guide to setting up a [`Vite`](https://vitejs.dev) project using JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chart component with either the [`Composition API`](https://vuejs.org/guide/introduction.html#composition-api) or the [`Options API`](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -34,7 +34,7 @@ npm install -g @syncfusion/syncfusion-cli
 
 ## Set up the Vite project using Syncfusion CLI
 
-You can create a Vue application with [Vite](https://vite.dev/) using the Syncfusion CLI. The CLI provides two ways to create a project:
+You can create a Vue application with [Vite](https://vite.dev) using the Syncfusion CLI. The CLI provides two ways to create a project:
 
 ### Non-interactive mode
 
@@ -356,7 +356,7 @@ The output will appear as follows:
 
 > **Sample**: You can explore the complete sample project in the [`vue-3-chart-getting-started`](https://github.com/SyncfusionExamples/vue3-chart-getting-started) repository.
 
-For migration information from Vue 2 to Vue 3, refer to the [Vue 3 Migration Guide](https://v3-migration.vuejs.org/).
+For migration information from Vue 2 to Vue 3, refer to the [Vue 3 Migration Guide](https://v3-migration.vuejs.org).
 
 ## Troubleshooting
 

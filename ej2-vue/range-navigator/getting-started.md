@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Vue Range Navigator Component | Syncfusion
+title: Getting Started with Vue Range Navigator | Syncfusion
 description: Set up a Vue 2 app and integrate the Syncfusion EJ2 Vue Range Navigator with setup steps, module registration, data binding and a full working example.
 control: Getting started
 platform: ej2-vue
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Range Navigator Component in Vue 2
+# Getting Started with Vue Range Navigator
 
-This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component. It helps users quickly configure a project and render a Range Navigator.
+This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component. It helps users quickly configure a project and render a Range Navigator.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ Only the `@syncfusion/ej2-vue-charts` package must be installed directly. Its re
 
 ## Setting Up the Vue 2 Project
 
-Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/) command.
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org) command.
 
 **npm**
 

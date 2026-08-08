@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Excel export options in Vue Treegrid component | Syncfusion
-description: Learn here all about Excel export options in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Excel Export Options | Syncfusion
+description: Learn about Excel export options in Vue TreeGrid, including export customization, hidden columns, selected records, and advanced export settings.
 control: Excel export options 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel export options in Vue Treegrid component
+# Excel Export Options in Vue TreeGrid
 
 ## To customize excel export
 

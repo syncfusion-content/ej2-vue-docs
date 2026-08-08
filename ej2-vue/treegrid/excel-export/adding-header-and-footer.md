@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adding header and footer in Vue Treegrid component | Syncfusion
-description: Learn here all about Adding header and footer in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Add Headers and Footers to Excel Export | Syncfusion
+description: Learn how to add headers and footers to Excel exports in Vue TreeGrid, including configuration, customization, and export options.
 control: Adding header and footer 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding header and footer in Vue Treegrid component
+# Adding Headers and Footers in Vue TreeGrid
 
 The excel export provides an option to include header and footer content for exported excel document.
 

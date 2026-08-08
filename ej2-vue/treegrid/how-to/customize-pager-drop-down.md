@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize pager drop down in Vue Treegrid component | Syncfusion
-description: Learn here all about Customize pager drop down in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Pager Dropdown Customization | Syncfusion
+description: Learn how to customize the pager dropdown in Vue TreeGrid of Essential JS 2, including setting page size values using pageSettings.
 control: Customize pager drop down 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize pager drop down in Vue Treegrid component
+# Customize Pager Dropdown in Vue TreeGrid
 
 To customize default values of pager dropdown, you need to define [`pageSizes`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettings/#pagesizes) as array of strings.
 

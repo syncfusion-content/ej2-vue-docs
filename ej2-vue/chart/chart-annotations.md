@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart annotations in Vue Chart component | Syncfusion
+title: Annotations in Vue Chart | Syncfusion
 description: Learn here all about Chart annotations in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Chart annotations 
+control: Chart annotations
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart annotations in Vue Chart component
+# Annotations in Vue Chart
 
 Chart annotations allow highlighting specific areas of the chart using text, shapes, images, or custom HTML elements. Annotations can be used to emphasize trends, mark thresholds, show custom notes, or display additional information directly inside the chart area.
 

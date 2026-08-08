@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Smithchart marker in Vue Smithchart component | Syncfusion
+title: Marker and Datalabels in Vue Smith Chart | Syncfusion
 description: Learn here all about Smithchart marker in Syncfusion Vue Smithchart component of Syncfusion Essential JS 2 and more.
-control: Smithchart marker 
+control: Smith Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Smithchart marker in Vue Smithchart component
+# Marker and Data labels in Vue Smith Chart
 
-Markers and Datalabels are used to provide information about the data points in the series. You can add a shape to adorn each data point. By default marker and datalabel both are disabled in smithchart. You can enable both of them by setting visible property as true in marker and datalabel settings
+Markers and Data labels are used to provide information about the data points in the series. You can add a shape to adorn each data point. By default marker and datalabel both are disabled in smithchart. You can enable both of them by setting visible property as true in marker and datalabel settings
 
 ## Marker
 
@@ -51,7 +51,7 @@ Using marker settings in series, you can customize the marker for each series di
         
 {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs21" %}
 
-## Datalabels
+## Data labels
 
 By default, datalabel is disabled. You can enable the datalabel by setting property visible as true in datalabel settings. For each point in series, data label is created. Datalabel for each series can be customized differently using datalabel settings.
 

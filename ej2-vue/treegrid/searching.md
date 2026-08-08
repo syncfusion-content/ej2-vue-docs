@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Searching in Vue Treegrid component | Syncfusion
-description: Learn here all about Searching in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Searching | Syncfusion
+description: Learn how to enable and customize searching in Vue TreeGrid, including search settings, operators, column-specific search, and advanced options.
 control: Searching 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Searching in Vue Treegrid component
+# Searching in Vue TreeGrid
 
 You can search records in a TreeGrid, by using the [`search`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#search) method with search key as a parameter. This also provides an option to integrate search text box in treegrid's toolbar by adding `search` item to the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#toolbar).
 

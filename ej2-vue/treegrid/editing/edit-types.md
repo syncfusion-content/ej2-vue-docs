@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Edit types in Vue Treegrid component | Syncfusion
-description: Learn here all about Edit types in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Edit Types | Syncfusion
+description: Learn how to use different edit types in Vue TreeGrid, including cell, row, batch, and dialog editing modes for managing data.
 control: Edit types 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit types in Vue Treegrid component
+# Edit Types in Vue TreeGrid
 
 ## Cell edit type and its params
 
-The [`columns.editType`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#edittype) is used to customize the edit type of the particular column.
-You can set the [`columns.editType`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#edittype) based on data type of the column.
+The [`columns.editType`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#edittype) is used to customize the edit type of the particular column.
+You can set the [`columns.editType`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#edittype) based on data type of the column.
 
 * `numericedit` - [`NumericTextBox`](../../numerictextbox) component for integers, double, and decimal data types.
 
@@ -27,7 +27,7 @@ You can set the [`columns.editType`](https://ej2.syncfusion.com/vue/documentatio
 
 * `datetimepickeredit` - [`DateTimePicker`](../../datetimepicker) component for date time data type.
 
-Also, you can customize model of the [`columns.editType`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#edittype) component through the [`columns.edit.params`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#edit).
+Also, you can customize model of the [`columns.editType`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#edittype) component through the [`columns.edit.params`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#edit).
 
 The following table describes cell edit type component and their corresponding edit params of the column.
 

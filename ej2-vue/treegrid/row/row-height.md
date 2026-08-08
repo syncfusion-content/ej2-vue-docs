@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row height in Vue Treegrid component | Syncfusion
-description: Learn here all about Row height in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Row Height | Syncfusion
+description: Learn how to customize row height in Vue TreeGrid for all rows or specific records to improve layout, readability, and data presentation.
 control: Row height 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row height in Vue Treegrid component
+# Row Height in Vue TreeGrid
 
 You can customize the row height of treegrid rows through the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#rowheight) property. The `rowHeight` property is used to change the row height of entire treegrid rows.
 

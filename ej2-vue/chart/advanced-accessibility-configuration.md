@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility customization in Vue Chart component | Syncfusion
+title: Accessibility customization in Vue Chart | Syncfusion
 description: Learn here all about Accessibility customization in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Accessibility customization
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility customization in Vue Chart component
+# Accessibility customization in Vue Chart
 
 The [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) component visualizes data graphically and provides accessibility customization options to improve usability for people with disabilities. The primary accessibility attributes are described in this section.
 

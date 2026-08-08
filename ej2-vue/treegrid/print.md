@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in Vue Treegrid component | Syncfusion
-description: Learn here all about Print in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Print | Syncfusion
+description: Learn how to print Vue TreeGrid, including toolbar integration, page setup, column visibility settings, and print customization options.
 control: Print 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in Vue Treegrid component
+# Print in Vue TreeGrid
 
 To print the TreeGrid, use the [`print`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#print) method from treegrid instance. The print option can be displayed on the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#toolbar) by adding the `print` toolbar item.
 

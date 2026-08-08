@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Local data in Vue Treegrid component | Syncfusion
-description: Learn here all about Local data in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Local Data | Syncfusion
+description: Learn to bind local data to Vue TreeGrid with support for hierarchical and self-referential (flat) data structures.
 control: Local data 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Local data in Vue Treegrid component
+# Local Data in Vue TreeGrid
 
 In Local Data binding, data source for rendering the TreeGrid control is retrieved from the same application locally.
 

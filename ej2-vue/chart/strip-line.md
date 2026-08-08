@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Strip line in Vue Chart component | Syncfusion
+title: Stripline in Vue Chart | Syncfusion
 description: Learn here all about Strip line in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Strip line 
+control: Strip line
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Strip line in Vue Chart component
+# Stripline in Vue Chart
 
 The [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) component supports horizontal and vertical strip lines, providing visual guides to highlight specific ranges in the chart area. Strip lines can be added to both axes and fully customized based on visual and functional requirements. To use strip line features, inject the `StripLine` module into the `provide`.
 

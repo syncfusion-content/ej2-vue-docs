@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientation and RTL in Vue Sankey Chart component | Syncfusion
+title: Orientation and RTL in Vue Sankey | Syncfusion
 description: Learn here all about Orientation and RTL in Syncfusion Vue Sankey Chart component of Syncfusion Essential JS 2 and more.
 control: Orientation and RTL
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orientation and RTL in Vue Sankey Chart component
+# Orientation and RTL in Vue Sankey
 
 The Sankey Chart supports flexible layout options including horizontal and vertical orientations, as well as right-to-left (RTL) rendering for international applications. These features enable you to create localized and directionally appropriate visualizations.
 

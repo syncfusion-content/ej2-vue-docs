@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Export print in Vue Range navigator component | Syncfusion
+title: Export and Print in Vue Range Navigator | Syncfusion
 description: Learn here all about Export print in Syncfusion Vue Range navigator component of Syncfusion Essential JS 2 and more.
-control: Export print 
+control: Export print
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export print in Vue Range navigator component
+# Export and Print in Vue Range Navigator
 
 ## Export
 
-The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the [`export`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#export) method in the Range Selector. This method contains the following parameters:
+The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the [`export`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#export) method in the Range Selector. This method contains the following parameters:
 
 * **Type** - To specify the export type. The component can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format.
 * **File name** - To specify the file name to export.
@@ -31,7 +31,7 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **
 
 ## Print
 
-The rendered Range Selector can be printed directly from the browser by calling the public method [`print`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#print).
+The rendered Range Selector can be printed directly from the browser by calling the public method [`print`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#print).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

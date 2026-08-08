@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drilldown in Vue Treemap component | Syncfusion
-description: Learn here all about Drilldown in Syncfusion Vue Treemap component of Syncfusion Essential JS 2 and more.
+title: How to perform drilldown in Vue TreeMap | Syncfusion
+description: Learn here all about Drilldown in Syncfusion Vue TreeMap component of Syncfusion Essential JS 2 and more.
 control: Drilldown 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drilldown in Vue Treemap component
+# How to perform drilldown in Vue TreeMap
 
 <!-- markdownlint-disable MD033 -->
 
