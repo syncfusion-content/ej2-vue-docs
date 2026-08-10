@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styling the Vue Schedule Component | Syncfusion
-description: Learn here all about Scheduler styling in Syncfusion Vue Schedule component of Syncfusion Essential JS 2.
-control: Scheduler styling 
+title: Style and Appearance in Vue Scheduler | Syncfusion
+description: Learn how to style the Syncfusion Vue Scheduler by overriding default CSS classes and creating custom themes with Theme Studio.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scheduler styling in Vue Schedule component
+# Style and Appearance in Vue Scheduler
 
 The appearance of the Vue Schedule component can be customized by overriding its default CSS classes or by creating and applying a custom theme. Syncfusion provides **Theme Studio** to help generate custom themes visually, which can then be applied to the Schedule component.
 

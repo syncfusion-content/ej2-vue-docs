@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Exporting selected data in Vue Treegrid component | Syncfusion
-description: Learn here all about Exporting selected data in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Selected Data Export | Syncfusion
+description: Learn how to export selected data in the Vue TreeGrid, including specifying selected results using PdfExportProperties for exporting.
 control: Exporting selected data 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting selected data in Vue Treegrid component
+# Exporting Selected Data in Vue TreeGrid
 
 You can export the selected records data by passing it to [`PdfExportProperties.dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties/) or [`ExcelExportProperties.dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties/) property in the [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event.
 

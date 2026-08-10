@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Display foreign key column in treegrid in Vue Treegrid component | Syncfusion
-description: Learn here all about Display foreign key column in treegrid in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Foreign Key Columns | Syncfusion
+description: Learn how to display foreign key columns in Vue TreeGrid using external data sources, custom cell rendering, and dropdown editing support.
 control: Display foreign key column in treegrid 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display foreign key column in treegrid in Vue Treegrid component
+# Foreign Key Columns in Vue TreeGrid
 
 Since Tree Grid Databinding concept is of hierarchy relationship, we do not provide in-built support for foreignkey datasource.
 

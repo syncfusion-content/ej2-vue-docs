@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Half yearly view in Vue Schedule component | Syncfusion
-description: Learn here all about Half yearly view in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Half yearly view 
+title: Show Half-Yearly View in Vue Scheduler | Syncfusion
+description: Learn how to show a half-yearly view in the Syncfusion Vue Scheduler by customizing the year view to render a specific range of consecutive months.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Half Yearly View in Vue Schedule Component
+# Half-Yearly View in Vue Scheduler
 
 The year view of our scheduler displays all the 365 days and their related appointments of a particular year. You can customize the year view by using the following properties.
 

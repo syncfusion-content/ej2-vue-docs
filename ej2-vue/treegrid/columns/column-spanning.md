@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column spanning in Vue TreeGrid | Syncfusion
-description: Learn here all about Column spanning in Syncfusion Vue TreeGrid of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Column Spanning | Syncfusion
+description: Learn how to configure column spanning in Vue TreeGrid, including merging cells and customizing column layouts.
 control: Column spanning 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column spanning in Vue TreeGrid
+# Column Spanning in Vue TreeGrid
 
 The column spanning feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeGrid allows merging adjacent cells horizontally, creating a visually appealing and informative layout. By defining the `colSpan` attribute in the [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/treegrid/index-default#querycellinfo) event, cells can be easily spanned and the appearance of the TreeGrid can be customized.
 

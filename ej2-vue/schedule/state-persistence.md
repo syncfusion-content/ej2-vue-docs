@@ -1,14 +1,14 @@
 ---
 layout: post
-title: State persistence in Vue Schedule component | Syncfusion
-description: Learn here all about State persistence in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: State persistence 
+title: State Persistence in Vue Scheduler | Syncfusion
+description: Learn how to enable state persistence in the Syncfusion Vue Scheduler to retain current view, selected date, and scroll position.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State persistence in Vue Schedule component
+# State Persistence in Vue Scheduler
 
 State persistence allowed Scheduler to retain the [`currentView`](https://ej2.syncfusion.com/vue/documentation/api/schedule#currentview), [`selectedDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule#selecteddate) and Scroll position values in the [`localStorage`](https://www.w3schools.com/html/html5_webstorage.asp#) for state maintenance even if the browser is refreshed or if you move to the next page within the browser. This action is handled through the [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/schedule#enablepersistence) property which is set to false by default. When it is set to true, `currentView`, `selectedDate` and Scroll position values of the scheduler component will be retained even after refreshing the page.
 

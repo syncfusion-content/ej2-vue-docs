@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Persisting data in server in Vue Treegrid component | Syncfusion
-description: Learn here all about Persisting data in server in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Persisting Data in Server | Syncfusion
+description: Learn how to persist edited data in a database using RESTful services and DataManager in the Vue TreeGrid.
 control: Persisting data in server 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Persisting data in server in Vue Treegrid component
+# Persisting data in Server in Vue TreeGrid
 
 Edited data can be persisted in the database using the RESTful web services.
 

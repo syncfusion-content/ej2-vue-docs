@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add edit and remove events in Vue Schedule component | Syncfusion
-description: Learn here all about Add edit and remove events in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Add edit and remove events 
+title: Add, Edit, and Remove Events in Vue Scheduler | Syncfusion
+description: Learn how to add, edit, and remove events dynamically in the Syncfusion Vue Scheduler component with easy-to-follow examples and code snippets.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add, Edit, and Remove Events in Vue Schedule Component
+# Add, Edit, and Remove Events in Vue Scheduler
 
 CRUD actions can be manually performed on events using [`addEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#addevent), [`saveEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#saveevent) and [`deleteEvent`](https://ej2.syncfusion.com/vue/documentation/api/schedule#deleteevent) methods. These methods allow creating new events, updating existing ones, and removing events from the Schedule.
 

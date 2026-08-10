@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue Schedule | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue Schedule Component of Syncfusion Essential JS 2 and more details.
-control: Quasar 
+title: Getting Started with Vue Scheduler and Quasar | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Scheduler in a Quasar Framework app, exploring setup, configuration, and basic usage.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue Schedule Component in the Quasar Framework
+# Getting Started with Vue Scheduler and Quasar
 
 This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the Vue Schedule component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 

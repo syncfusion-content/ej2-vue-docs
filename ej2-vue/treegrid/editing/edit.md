@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Edit in Vue Treegrid component | Syncfusion
-description: Learn here all about Edit in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Edit | Syncfusion
+description: Learn how to edit data in Vue TreeGrid, including CRUD operations, editing modes, validation, and data update workflows.
 control: Edit 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit in Vue Treegrid component
+# Edit in Vue TreeGrid
 
-The TreeGrid component has options to dynamically insert, delete and update records. Editing feature is enabled by using [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#editsettings) property and it requires a primary key column for CRUD operations.
+The TreeGrid component has options to dynamically insert, delete and update records. Editing feature is enabled by using [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#editsettings) property and it requires a primary key column for CRUD operations.
 
-To define the primary key, set [`columns.isPrimaryKey`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#isprimarykey) to `true` in particular column.
+To define the primary key, set [`columns.isPrimaryKey`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#isprimarykey) to `true` in particular column.
 
-To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#editmodule) module in treegrid.
+To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#editmodule) module in treegrid.
 
 To get start quickly with Edit Options, you can check on this video:
 
@@ -32,12 +32,12 @@ To get start quickly with Edit Options, you can check on this video:
 {% previewsample "page.domainurl/code-snippet/treegrid/editing/default-cs7" %}
 
 > * You can disable editing for a particular column, by specifying
-[`columns.allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#allowediting) to `false`.
+[`columns.allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#allowediting) to `false`.
 
 ## Toolbar with edit option
 
 The treegrid toolbar has the built-in items to execute Editing actions.
-You can define this by using the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#toolbar) property.
+You can define this by using the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#toolbar) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -89,7 +89,7 @@ ${/if}
 
  Render editors as components
 
-You can convert the form editors to EJ2 controls in the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actioncomplete) event based on the `requestType` as `beginEdit` or `add`.
+You can convert the form editors to EJ2 controls in the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actioncomplete) event based on the `requestType` as `beginEdit` or `add`.
 
 The following code example illustrates rendering the drop-down list control in the `actionComplete` event.
 
@@ -108,7 +108,7 @@ The following code example illustrates rendering the drop-down list control in t
 
  Get value from editor
 
-You can read, format, and update the current editor value in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actionbegin) event at the time of setting `requestType` to `save`.
+You can read, format, and update the current editor value in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionbegin) event at the time of setting `requestType` to `save`.
 
 In the following code example, the `progress` value has been formatted and updated.
 
@@ -128,7 +128,7 @@ In the following code example, the `progress` value has been formatted and updat
 
 By default, the first input element in the dialog will be focused while opening the dialog.
 If the first input element is in disabled or hidden state, focus the valid input element in the
-[`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actioncomplete)
+[`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actioncomplete)
 event based on `requestType` as `beginEdit`.
 
 ```
@@ -145,7 +145,7 @@ event based on `requestType` as `beginEdit`.
 
  Adding validation rules for custom editors
 
-If you have used additional fields that are not present in the column model, then add the validation rules to the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actioncomplete) event.
+If you have used additional fields that are not present in the column model, then add the validation rules to the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actioncomplete) event.
 
 ```
 <script setup>
@@ -164,7 +164,7 @@ If you have used additional fields that are not present in the column model, the
 
 ## Adding row position
 
-The TreeGrid control provides the support to add the new row in the top, bottom, above selected row, below selected row and child position of tree grid content using [`editSettings.newRowPosition`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/editSettingsModel/#newrowposition) property. By default, a new row will be added at the top of the treegrid.
+The TreeGrid control provides the support to add the new row in the top, bottom, above selected row, below selected row and child position of tree grid content using [`editSettings.newRowPosition`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/editSettingsModel#newrowposition) property. By default, a new row will be added at the top of the treegrid.
 
 The following examples shows how to set new row position as `Child` in tree grid.
 
@@ -183,7 +183,7 @@ The following examples shows how to set new row position as `Child` in tree grid
 
 ### Delete confirmation
 
-The delete confirm dialog can be shown when deleting a record by defining the [`showDeleteConfirmDialog`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/editSettingsModel/#showdeleteconfirmdialog) as `true`
+The delete confirm dialog can be shown when deleting a record by defining the [`showDeleteConfirmDialog`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/editSettingsModel#showdeleteconfirmdialog) as `true`
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -201,7 +201,7 @@ The delete confirm dialog can be shown when deleting a record by defining the [`
 ## Default column values on add new
 
 The treegrid provides an option to set the default value for the columns when adding a new record in it.
-To set a default value for the particular column by defining the [`columns.defaultValue`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#defaultvalue).
+To set a default value for the particular column by defining the [`columns.defaultValue`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#defaultvalue).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -216,7 +216,7 @@ To set a default value for the particular column by defining the [`columns.defau
 
 ## Disable editing for particular column
 
-You can disable editing for particular columns by using the [`columns.allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#allowediting).
+You can disable editing for particular columns by using the [`columns.allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#allowediting).
 
 In the following demo, editing is disabled for the `Start Date` column.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Excel cell style customization in Vue Treegrid component | Syncfusion
-description: Learn here all about Excel cell style customization in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Excel Cell Style Customization | Syncfusion
+description: Learn how to customize Excel cell styles in the Vue TreeGrid of Essential JS 2, including conditional formatting and theming options.
 control: Excel cell style customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel cell style customization in Vue Treegrid component
+# Excel Cell Style Customization in Vue TreeGrid
 
 ## Conditional cell formatting
 

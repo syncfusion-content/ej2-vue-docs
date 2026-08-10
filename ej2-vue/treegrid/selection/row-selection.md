@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row selection in Vue Treegrid component | Syncfusion
-description: Learn here all about Row selection in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Row Selection | Syncfusion
+description: Learn how to use row selection in Vue TreeGrid, including programmatic selection, selected records, row indexes, and persistent selection.
 control: Row selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row selection in Vue Treegrid component
+# Row Selection in Vue TreeGrid
 
 ## Toggle selection
 

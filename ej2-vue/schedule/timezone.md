@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timezone in Vue Schedule component | Syncfusion
-description: Learn here all about Timezone in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Timezone 
+title: Timezone in Vue Scheduler | Syncfusion
+description: Learn how to render appointments in different time zones in the Syncfusion Vue Scheduler for global users and cross-region scheduling.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timezone in Vue Schedule component
+# Timezone in Vue Scheduler
 
 The Scheduler makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the [`timezone`](../api/schedule#timezone) property needs to be used. Apart from the default action of applying specific timezone to the Scheduler, it is also possible to set different time zone values for each appointments through the properties [`startTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field#starttimezone) and [`endTimezone`](https://helpej2.syncfusion.com/vue/documentation/api/schedule/field#endtimezone) which can be defined as separate fields within the event fields collection.
 

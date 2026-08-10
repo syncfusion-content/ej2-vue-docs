@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Editor template in Vue Schedule component | Syncfusion
-description: Learn here all about Editor template in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Editor template 
+title: Editor Window Customization in Vue Scheduler | Syncfusion
+description: Learn how to customize the editor window and quick pop-up in the Syncfusion Vue Scheduler to match your data and design needs.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editor Template in Vue Schedule Component
+# Editor Window Customization in Vue Scheduler
 
 The Schedule component uses popups and dialog windows to display notifications and includes an editor window containing event fields that simplify appointment creation and modification. The editor window and its fields can be customized, and validation rules can be applied where necessary.
 

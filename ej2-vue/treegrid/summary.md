@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Summary in Vue Treegrid component | Syncfusion
-description: Learn here all about Summary in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Summary | Syncfusion
+description: Explore Vue TreeGrid documentation covering data binding, editing, filtering, sorting, exporting, virtualization, customization, and more.
 control: Summary 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
+# Vue TreeGrid Documentation
 
 * [Getting Started](../treegrid/getting-started)
 * [Getting Started with Vue 3](../treegrid/getting-started-vue-3)

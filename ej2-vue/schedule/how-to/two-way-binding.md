@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Two way binding in Vue Schedule component | Syncfusion
-description: Learn here all about Two way binding in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Two way binding 
+title: Two-Way Binding in Vue Scheduler | Syncfusion
+description: Learn how to use two-way binding in the Syncfusion Vue Scheduler to bind and sync data fields seamlessly with the component.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Two‑Way Binding in Vue Schedule Component
+# Two-Way Binding in Vue Scheduler
 
 Two‑way binding in the Vue Schedule component can be configured by using the `v-model` directive. The Schedule properties that support two‑way binding are:
 

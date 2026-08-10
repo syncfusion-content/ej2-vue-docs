@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue Treegrid component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue TreeGrid
+description: Learn how to use filtering in Vue TreeGrid, including filter bar, menu, Excel-like filtering, operators, and custom filter options.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Treegrid component
+# Filtering in Vue TreeGrid
 
 Filtering allows you to view specific or related records based on filter criteria. To enable filtering in the TreeGrid, set the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#filtersettings).
 

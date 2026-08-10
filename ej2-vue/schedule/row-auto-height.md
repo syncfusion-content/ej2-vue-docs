@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row auto height in Vue Schedule component | Syncfusion
-description: Learn here all about Row auto height in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Row auto height 
+title: Row Auto Height in Vue Scheduler | Syncfusion
+description: Learn how to auto-adjust row height in the Syncfusion Vue Scheduler timeline and month views to display all overlapping appointments.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row auto height in Vue Schedule component
+# Row Auto Height in Vue Scheduler
 
 By default, row heights in **Timeline views** of the Vue Schedule component are fixed. When multiple appointments overlap within the same time range, the component displays a **“+n more”** indicator instead of rendering all appointments.
 

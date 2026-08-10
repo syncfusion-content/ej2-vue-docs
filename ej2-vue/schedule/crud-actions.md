@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Crud actions in Vue Schedule component | Syncfusion
-description: Learn here all about Crud actions in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Crud actions 
+title: CRUD Actions in Vue Scheduler | Syncfusion
+description: Learn how to add, edit, and delete appointments in the Syncfusion Vue Scheduler using the editor window and drag actions.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Crud actions in Vue Schedule component
+# CRUD Actions in Vue Scheduler
 
 Events, a.k.a. Appointments, play an important role in Scheduler with which the users mostly interact. Appointments can be manipulated (add, edit, delete) through the editor window or by using drag and resize actions.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the Vue Ribbon component | Syncfusion
-description:  Checkout and learn about Vue 3 getting started with Vue Ribbon component of Syncfusion Essential JS 2 and more.
+title: Getting Started with Vue Ribbon in Vue 3 | Syncfusion
+description: Learn how to get started with the Vue Ribbon in Vue 3 and explore setup, configuration, and core feature examples for building ribbon interfaces.
 control: Ribbon
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Ribbon Component in Vue 3
+# Getting Started with Vue Ribbon in Vue 3
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Ribbon component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

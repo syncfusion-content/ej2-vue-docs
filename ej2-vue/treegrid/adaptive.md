@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Adaptive in Vue Treegrid component | Syncfusion
-description: Learn here all about Adaptive in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Adaptive UI | Syncfusion
+description: Learn how to enable adaptive UI in Vue TreeGrid for optimized mobile, tablet, and small-screen user experiences.
 control: Adaptive 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in Vue Treegrid component
+# Adaptive UI in Vue TreeGrid
 
 The TreeGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively.
 
 ## Render adaptive dialogs
 
-When you enable the [`enableAdaptiveUI`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enableadaptiveui) property, the tree grid will render the filter, sort, and edit dialogs in full screen for a better user experience. The following demo demonstrates this behaviour.
+When you enable the [`enableAdaptiveUI`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#enableadaptiveui) property, the tree grid will render the filter, sort, and edit dialogs in full screen for a better user experience. The following demo demonstrates this behavior.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

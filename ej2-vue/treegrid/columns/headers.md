@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Headers in Vue Treegrid component | Syncfusion
-description: Learn here all about Headers in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Headers | Syncfusion
+description: Learn how to configure and customize column headers in Vue TreeGrid, including header text and template options.
 control: Headers 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Headers in Vue Treegrid component
+# Headers in Vue TreeGrid
 
 ## Header text
 

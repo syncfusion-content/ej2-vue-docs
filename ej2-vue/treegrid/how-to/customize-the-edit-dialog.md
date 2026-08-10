@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the edit dialog in Vue Treegrid component | Syncfusion
-description: Learn here all about Customize the edit dialog in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Edit Dialog Customization | Syncfusion
+description: Learn how to customize the Vue TreeGrid edit dialog by modifying dialog headers and appearance for add and edit record operations.
 control: Customize the edit dialog 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the edit dialog in Vue Treegrid component
+# Customize the Edit Dialog in Vue TreeGrid
 
 You can customize the appearance of the edit dialog in the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actioncomplete) event based on **requestType** as **beginEdit** or **add**.
 

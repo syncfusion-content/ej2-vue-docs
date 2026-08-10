@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Tooltip in Vue Ribbon component | Syncfusion
-description:  Learn here all about Tooltip in Syncfusion Vue Ribbon component of Syncfusion Essential JS 2 and more.
-platform: ej2-vue
+title: Tooltip in Vue Ribbon | Syncfusion
+description: Learn how to show additional information in the Vue Ribbon by adding tooltips that appear when the user hovers over a Ribbon item.
 control: Ribbon
+platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Tooltip
+# Tooltip in Vue Ribbon
 
 The Ribbon component supports tooltips to show additional information on Ribbon items. The tooltip appears when the user hovers over a Ribbon item.
 
 ## Adding title
 
-The [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#title) property can be used to set the tooltip title for each Ribbon item.
+The [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip#title) property can be used to set the tooltip title for each Ribbon item.
 
 ```html
 <template>
@@ -90,7 +90,7 @@ The [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonToolti
 
 ## Adding content
 
-The [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#content) property is used to set the tooltip content for each Ribbon item.
+The [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip#content) property is used to set the tooltip content for each Ribbon item.
 
 ```html
 <template>
@@ -166,7 +166,7 @@ The [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTool
 
 ## Adding icon
 
-The [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#iconcss) property is used to specify an icon for the tooltip.
+The [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip#iconcss) property is used to specify an icon for the tooltip.
 
 ```html
 <template>
@@ -243,7 +243,7 @@ The [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTool
 
 ## Customization
 
-The [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#cssclass) property allows for customizing the appearance of the tooltip by applying custom CSS styles.
+The [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip#cssclass) property allows for customizing the appearance of the tooltip by applying custom CSS styles.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

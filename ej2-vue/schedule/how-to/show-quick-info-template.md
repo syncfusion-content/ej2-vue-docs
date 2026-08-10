@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show quick info template in Vue Schedule component | Syncfusion
-description: Learn here all about Show quick info template in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Show quick info template 
+title: Show Quick Info Template in Vue Scheduler | Syncfusion
+description: Learn how to show a custom quick info template in the Syncfusion Vue Scheduler to change its appearance and content.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show Quick Info Template in Vue Schedule Component
+# Quick Info Template in Vue Scheduler
 
 Quick info popups for cells and appointments can be customized through templates to display tailored information. The following example demonstrates the usage of customized quick info templates rendered through the built‑in popup behavior.
 

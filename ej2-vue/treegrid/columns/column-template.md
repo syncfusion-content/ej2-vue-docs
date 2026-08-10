@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Column template in Vue Treegrid component | Syncfusion
-description: Learn here all about Column template in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Column Template | Syncfusion
+description: Learn how to use column templates in Vue TreeGrid to display custom content, images, buttons, and formatted data in cells.
 control: Column template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column template in Vue Treegrid component
+# Column Template in Vue TreeGrid
 
-The column [`template`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#template) has options to display custom element instead of a field value in the column.
+The column [`template`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#template) has options to display custom element instead of a field value in the column.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -23,7 +23,7 @@ The column [`template`](https://ej2.syncfusion.com/vue/documentation/api/treegri
         
 {% previewsample "page.domainurl/code-snippet/treegrid/column-template/default-cs1" %}
 
-> TreeGrid actions such as editing, filtering and sorting etc. will depend upon the column [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#field). If the [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#field) is not specified in the template column, the treegrid actions cannot be performed.
+> TreeGrid actions such as editing, filtering and sorting etc. will depend upon the column [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#field). If the [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#field) is not specified in the template column, the treegrid actions cannot be performed.
 
 ## Using condition template
 

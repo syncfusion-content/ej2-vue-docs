@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Columns in Vue Treegrid component | Syncfusion
-description: Learn here all about Columns in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Columns | Syncfusion
+description: Learn how to configure and customize columns in Vue TreeGrid, including column types, visibility, templates, and formatting options.
 control: Columns 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in Vue Treegrid component
+# Columns in Vue TreeGrid
 
 The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#dataSource) schema in the TreeGrid. This plays a vital role in rendering column values in the required format.
 The treegrid operations such as sorting, filtering and searching etc. are performed based on column definitions. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#field) property of the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#column)

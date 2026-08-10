@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header bar in Vue Schedule component | Syncfusion
-description: Learn here all about Header bar in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Header bar 
+title: Header Customization in Vue Scheduler | Syncfusion
+description: Learn how to show or hide the header bar and customize date and view navigation in the Syncfusion Vue Scheduler.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header bar in Vue Schedule component
+# Header Customization in Vue Scheduler
 
 The header bar of the Vue Schedule component provides navigation controls such as date navigation, view switching, and action buttons. It can be customized extensively using built-in properties, templates, and events.
 

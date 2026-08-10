@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Provide custom data source and enabling filtering to drop down list in Vue Treegrid component | Syncfusion
-description: Learn here all about Provide custom data source and enabling filtering to drop down list in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid DropDownList Data & Filtering | Syncfusion
+description: Learn how to provide a custom data source and enable filtering for DropDownList in the Vue TreeGrid with column edit parameters.
 control: Provide custom data source and enabling filtering to drop down list 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Provide custom data source and enabling filtering to drop down list in Vue Treegrid component
+# Custom Data Source and Filtering for DropDownList in Vue TreeGrid
 
 You can provide data source to the DropDownList by using the **params** of [`columns.edit`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#edit) property.
 

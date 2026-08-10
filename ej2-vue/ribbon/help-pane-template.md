@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Help Pane template in Vue Ribbon component | Syncfusion
-description:  Learn here all about Help Pane template in Syncfusion Vue Ribbon component of Syncfusion Essential JS 2 and more.
-platform: ej2-vue
+title: Help Pane Template in Vue Ribbon | Syncfusion
+description: Learn how to customize the help pane in the Vue Ribbon to display custom content such as document permissions, sharing options, or user information.
 control: Ribbon
+platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Help Pane
+# Help Pane Template in Vue Ribbon
 
-The Ribbon component includes a help pane, a dedicated area on the right side for displaying custom content. The [helpPaneTemplate](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#helppanetemplate) property allows for the definition of this content, or other useful information like document permissions or sharing features.
+The Ribbon component includes a help pane, a dedicated area on the right side for displaying custom content. The [helpPaneTemplate](https://ej2.syncfusion.com/vue/documentation/api/ribbon#helppanetemplate) property allows for the definition of this content, or other useful information like document permissions or sharing features.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

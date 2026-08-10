@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Immutable mode in Vue Treegrid component | Syncfusion
-description: Learn here all about Immutable mode in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Immutable Mode | Syncfusion
+description: Learn how to use immutable mode in Vue TreeGrid to optimize rendering performance by updating only modified rows and reducing re-rendering.
 control: Immutable mode 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Immutable mode in Vue Treegrid component
+# Immutable Mode in Vue TreeGrid
 
 The immutable mode optimizes the TreeGrid re-rendering performance by using the object reference and [`deep compare`](https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#4-deep-equality) concept. When performing the TreeGrid actions, it will only re-render the modified or newly added rows and prevent the re-rendering of the unchanged rows.
 

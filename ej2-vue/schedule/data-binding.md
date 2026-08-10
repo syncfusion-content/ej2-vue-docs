@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Vue Schedule component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Schedule component of Syncfusion Essential JS 2 and more.
-control: Data binding 
+title: Data Binding in Vue Scheduler | Syncfusion
+description: Learn how to bind data to the Syncfusion Vue Scheduler from local collections and remote REST services for flexible data loading.
+control: Scheduler
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Schedule component
+# Data Binding in Vue Scheduler
 
 The Schedule component supports data binding through `DataManager`, which provides both RESTful data-service binding and JavaScript object array binding. The [`dataSource`](../api/schedule/eventSettings#datasource) property can be assigned either a `DataManager` instance or a JavaScript object array. The component supports the following types of data binding:
 

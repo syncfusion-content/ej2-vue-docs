@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtual scroll in Vue Treegrid component | Syncfusion
-description: Learn here all about Virtual scroll in Syncfusion Vue Treegrid component of Syncfusion Essential JS 2 and more.
+title: Vue TreeGrid Virtual Scrolling | Syncfusion
+description: Learn how to use virtual scrolling in Vue TreeGrid for large datasets, including row and column virtualization and performance optimization.
 control: Virtual scroll 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtual scroll in Vue Treegrid component
+# Virtual Scrolling in Vue TreeGrid
 
 TreeGrid allows you to load large amount of data without performance degradation.
 
