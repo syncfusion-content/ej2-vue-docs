@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Events in Vue Linear gauge component | Syncfusion
-description: Learn here all about Events in Syncfusion Vue Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Events in Vue Linear Gauge | Syncfusion
+description: Use the Syncfusion Vue Linear Gauge events, such as animationComplete, load, drag, tooltipRender, and valueChange, to hook into the component lifecycle.
 control: Events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Linear gauge component
+# Events in Vue Linear Gauge
 
 This section describes the Linear Gauge component's event that gets triggered when corresponding operations are performed.
 
 ## animationComplete
 
-When the pointer animation is completed, the [`animationComplete`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#animationcomplete) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iAnimationCompleteEventArgs/).
+When the pointer animation is completed, the [`animationComplete`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#animationcomplete) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iAnimationCompleteEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ When the pointer animation is completed, the [`animationComplete`](https://ej2.s
 
 ## annotationRender
 
-Before the annotation is rendered in the Linear Gauge, the [`annotationRender`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#annotationrender) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iAnnotationRenderEventArgs/).
+Before the annotation is rendered in the Linear Gauge, the [`annotationRender`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#annotationrender) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iAnnotationRenderEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -44,7 +44,7 @@ Before the annotation is rendered in the Linear Gauge, the [`annotationRender`](
 
 ## axisLabelRender
 
-Before each axis label is rendered in the Linear Gauge, the [`axisLabelRender`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#axislabelrender) event is fired. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iAxisLabelRenderEventArgs/).
+Before each axis label is rendered in the Linear Gauge, the [`axisLabelRender`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#axislabelrender) event is fired. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iAxisLabelRenderEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -59,7 +59,7 @@ Before each axis label is rendered in the Linear Gauge, the [`axisLabelRender`](
 
 ## beforePrint
 
-The [`beforePrint`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#beforeprint) event is fired before the print begins. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iPrintEventArgs/).
+The [`beforePrint`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#beforeprint) event is fired before the print begins. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iPrintEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -74,7 +74,7 @@ The [`beforePrint`](https://ej2.syncfusion.com/vue/documentation/api/linear-gaug
 
 ## dragEnd
 
-The [`dragEnd`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#dragend) event will be fired before the pointer drag is completed. To know more about the argument of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iPointerDragEventArgs/).
+The [`dragEnd`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#dragend) event will be fired before the pointer drag is completed. To know more about the argument of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iPointerDragEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -89,7 +89,7 @@ The [`dragEnd`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#d
 
 ## dragMove
 
-The [`dragMove`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#dragmove) event will be fired when the pointer is dragged. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iPointerDragEventArgs/).
+The [`dragMove`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#dragmove) event will be fired when the pointer is dragged. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iPointerDragEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,7 +104,7 @@ The [`dragMove`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#
 
 ## dragStart
 
-When the pointer drag begins, the [`dragStart`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#dragstart) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iPointerDragEventArgs/).
+When the pointer drag begins, the [`dragStart`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#dragstart) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iPointerDragEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -119,7 +119,7 @@ When the pointer drag begins, the [`dragStart`](https://ej2.syncfusion.com/vue/d
 
 ## gaugeMouseDown
 
-When mouse is pressed down on the gauge, the [`gaugeMouseDown`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#gaugemousedown) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iMouseEventArgs/).
+When mouse is pressed down on the gauge, the [`gaugeMouseDown`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#gaugemousedown) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iMouseEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -134,7 +134,7 @@ When mouse is pressed down on the gauge, the [`gaugeMouseDown`](https://ej2.sync
 
 ## gaugeMouseLeave
 
-When mouse pointer moves over the gauge, the [`gaugemouseleave`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#gaugemouseleave) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iMouseEventArgs/).
+When mouse pointer moves over the gauge, the [`gaugeMouseLeave`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#gaugemouseleave) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iMouseEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -149,7 +149,7 @@ When mouse pointer moves over the gauge, the [`gaugemouseleave`](https://ej2.syn
 
 ## gaugeMouseMove
 
-When mouse pointer leaves the gauge, the [`gaugeMouseMove`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#gaugemousemove) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iMouseEventArgs/).
+When mouse pointer leaves the gauge, the [`gaugeMouseMove`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#gaugemousemove) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iMouseEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -164,7 +164,7 @@ When mouse pointer leaves the gauge, the [`gaugeMouseMove`](https://ej2.syncfusi
 
 ## gaugeMouseUp
 
-When the mouse pointer is released over the Linear Gauge, the [`gaugeMouseUp`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#gaugemouseup) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iMouseEventArgs/).
+When the mouse pointer is released over the Linear Gauge, the [`gaugeMouseUp`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#gaugemouseup) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iMouseEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -179,7 +179,7 @@ When the mouse pointer is released over the Linear Gauge, the [`gaugeMouseUp`](h
 
 ## load
 
-Before the Linear Gauge is loaded, the [`load`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#load) event is fired. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iLoadEventArgs/).
+Before the Linear Gauge is loaded, the [`load`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#load) event is fired. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iLoadEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -194,7 +194,7 @@ Before the Linear Gauge is loaded, the [`load`](https://ej2.syncfusion.com/vue/d
 
 ## loaded
 
-After the Linear Gauge has been loaded, the [`loaded`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#loaded) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iLoadedEventArgs/).
+After the Linear Gauge has been loaded, the [`loaded`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#loaded) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iLoadedEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -209,7 +209,7 @@ After the Linear Gauge has been loaded, the [`loaded`](https://ej2.syncfusion.co
 
 ## resized
 
-After the window resizing, the [`resized`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#resized) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iResizeEventArgs/).
+After the window resizing, the [`resized`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#resized) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iResizeEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -224,7 +224,7 @@ After the window resizing, the [`resized`](https://ej2.syncfusion.com/vue/docume
 
 ## tooltipRender
 
-The [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#tooltiprender) event is fired before the tooltip is rendered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iTooltipRenderEventArgs/).
+The [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#tooltiprender) event is fired before the tooltip is rendered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iTooltipRenderEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -239,7 +239,7 @@ The [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/linear-ga
 
 ## valueChange
 
-The [`valueChange`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#valuechange) event is triggered when the pointer is dragged from one value to another. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iValueChangeEventArgs/).
+The [`valueChange`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#valuechange) event is triggered when the pointer is dragged from one value to another. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/iValueChangeEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data labels in Vue Sparkline component | Syncfusion
-description: Learn here all about Data labels in Syncfusion Vue Sparkline component of Syncfusion Essential JS 2 and more.
+title: Data Labels in Vue Sparkline | Syncfusion
+description: Learn here all about the Data labels in Syncfusion Vue Sparkline of Syncfusion Essential JS 2 and more.
 control: Data labels 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data labels in Vue Sparkline component
+# Data Labels in Vue Sparkline
 
 Data labels are used to display values of data points to improve the readability.
 

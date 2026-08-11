@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with the Vue Linear Gauge in Vue 2 | Syncfusion
-description: Set up a Vue 2 application and integrate the Syncfusion Vue Linear Gauge component with a working example.
+title: Getting Started with Vue 2 Linear Gauge | Syncfusion
+description: Learn how to get started with the Syncfusion Vue 2 Linear Gauge control. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: ej2-vue
 documentation: ug
@@ -9,7 +9,7 @@ framework-version: 2
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Linear Gauge Component in Vue 2
+# Getting Started with Vue 2 Linear Gauge
 
 This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup>®</sup> Vue Linear Gauge component.
 

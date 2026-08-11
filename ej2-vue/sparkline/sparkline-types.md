@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sparkline types in Vue Sparkline component | Syncfusion
-description: Learn here all about Sparkline types in Syncfusion Vue Sparkline component of Syncfusion Essential JS 2 and more.
+title: Sparkline Types in Vue Sparkline | Syncfusion
+description: Learn here all about Sparkline types in Syncfusion Vue Sparkline of Syncfusion Essential JS 2 and more.
 control: Sparkline types 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sparkline types in Vue Sparkline component
+# Sparkline Types in Vue Sparkline
 
 Different types of shapes can be used to represent the sparkline. You can change the sparkline type by setting the type property. Sparkline supports the following types:
 
