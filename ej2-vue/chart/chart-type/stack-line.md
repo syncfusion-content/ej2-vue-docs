@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Stacked Line Chart in Vue Charts | Syncfusion
-description: Learn here all about Stacked Line in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Stacked Line Chart in Vue Chart | Syncfusion
+description: Learn here all about Stacked Line in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Stacked Line Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacked Line Chart in Vue Charts
+# Stacked Line Chart in Vue Chart
 
 ## Stacked Line
 

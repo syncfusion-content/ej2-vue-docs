@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Events in Vue HeatMap chart component | Syncfusion
-description: Learn here all about Events in Syncfusion Vue HeatMap chart component of Syncfusion Essential JS 2 and more.
-control: Events 
+title: Events in Vue HeatMap Chart | Syncfusion
+description: Handle cell interactions in the Syncfusion Vue HeatMap Chart control using events like cellClick, cellRender, cellSelected, loaded, resized, and tooltipRender.
+control: Events
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue HeatMap chart component
+# Events in Vue HeatMap Chart
 
 This section describes the HeatMap chart event, which occurs when the required actions are performed.
 
 ## cellClick
 
-When you click on a HeatMap cell, the [cellClick](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellclick) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iCellClickEventArgs/).
+When you click on a HeatMap cell, the [cellClick](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellclick) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iCellClickEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ When you click on a HeatMap cell, the [cellClick](https://ej2.syncfusion.com/vue
 
 ## cellDoubleClick
 
-When you double click on a HeatMap cell, the [cellDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#celldoubleclick) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iCellClickEventArgs/).
+When you double click on a HeatMap cell, the [cellDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/heatmap#celldoubleclick) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iCellClickEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -44,7 +44,7 @@ When you double click on a HeatMap cell, the [cellDoubleClick](https://ej2.syncf
 
 ## cellRender
 
-The [cellRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellrender) event will be triggered before each HeatMap cell is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iCellEventArgs/).
+The [cellRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellrender) event will be triggered before each HeatMap cell is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iCellEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -59,7 +59,7 @@ The [cellRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellr
 
 ## cellSelected
 
-When single or multiple cells in the HeatMap are selected, the [cellSelected](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellselected) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iSelectedEventArgs/).
+When single or multiple cells in the HeatMap are selected, the [cellSelected](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellselected) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iSelectedEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -74,7 +74,7 @@ When single or multiple cells in the HeatMap are selected, the [cellSelected](ht
 
 ## created
 
-Once HeatMap has been completely rendered, the [created](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#created) event is triggered.
+Once HeatMap has been completely rendered, the [created](https://ej2.syncfusion.com/vue/documentation/api/heatmap#created) event is triggered.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -89,7 +89,7 @@ Once HeatMap has been completely rendered, the [created](https://ej2.syncfusion.
 
 ## legendRender
 
-The [legendRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#legendrender) event is triggered before the legend is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iLegendRenderEventArgs/).
+The [legendRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap#legendrender) event is triggered before the legend is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iLegendRenderEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,7 +104,7 @@ The [legendRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#leg
 
 ## load
 
-The [load](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#load) event is triggered before the HeatMap is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iLoadedEventArgs/).
+The [load](https://ej2.syncfusion.com/vue/documentation/api/heatmap#load) event is triggered before the HeatMap is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iLoadedEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -119,7 +119,7 @@ The [load](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#load) event
 
 ## loaded
 
-Once HeatMap is loaded, the [loaded](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#loaded) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iLoadedEventArgs/).
+Once HeatMap is loaded, the [loaded](https://ej2.syncfusion.com/vue/documentation/api/heatmap#loaded) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iLoadedEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -134,7 +134,7 @@ Once HeatMap is loaded, the [loaded](https://ej2.syncfusion.com/vue/documentatio
 
 ## resized
 
-When the window is resized, the [resized](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#resized) event is triggered to notify the resize of the HeatMap. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iResizeEventArgs/).
+When the window is resized, the [resized](https://ej2.syncfusion.com/vue/documentation/api/heatmap#resized) event is triggered to notify the resize of the HeatMap. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iResizeEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -149,7 +149,7 @@ When the window is resized, the [resized](https://ej2.syncfusion.com/vue/documen
 
 ## tooltipRender
 
-The [tooltipRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#tooltiprender) event is triggered before the tooltip is rendered on the HeatMap cell. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iTooltipEventArgs/).
+The [tooltipRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap#tooltiprender) event is triggered before the tooltip is rendered on the HeatMap cell. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/vue/documentation/api/heatmap/iTooltipEventArgs).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Response actions in Vue Inline AI Assist component | Syncfusion
-description: Checkout and learn about response items with Vue Inline AI Assist component of Syncfusion Essential JS 2 and more.
+title: Response Actions in Vue Inline AI Assist | Syncfusion®
+description: Configure response action items in the Vue Inline AI Assist, including built-in accept and discard buttons and custom actions on AI responses.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Response actions in Vue Inline AI Assist component
+# Response Actions in Vue Inline AI Assist
 
 You can render response action popup by using the `items` property in the [responseSettings](../api/inline-ai-assist#responsesettings) property. This feature enables users to accept, discard, or perform custom actions on AI-generated responses.
 

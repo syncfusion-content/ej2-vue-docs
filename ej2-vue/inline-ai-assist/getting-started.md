@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with the Vue Inline AI Assist component | Syncfusion
-description: Checkout and learn about getting started with the Vue Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Inline AI Assist | Syncfusion®
+description: Learn how to get started with the Syncfusion Vue Inline AI Assist control. Explore setup, features, examples, and customization options.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Inline AI Assist Component in Vue 2
+# Getting Started with Vue Inline AI Assist
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Inline AI Assist component.
 

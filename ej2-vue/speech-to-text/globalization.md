@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in Vue SpeechToText Component | Syncfusion
-description: Learn here all about globalization in Syncfusion Essential Vue SpeechToText component, its elements, and more.
+title: Globalization in Vue Speech To Text | Syncfusion®
+description: Localize the Vue Speech To Text component for any culture with L10n.load, default locale strings, and enable RTL for right-to-left languages.
 platform: ej2-vue
 control: SpeechToText
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue SpeechToText component
+# Globalization in Vue Speech To Text
 
 ## Localization
 
@@ -44,7 +44,7 @@ The following table outlines the default text identifiers and their `en-US` valu
 
 ## RTL
 
-The Right-to-Left (RTL) feature provides support for languages that are read from right to left, such as Arabic, Hebrew, or Persian. Set the [enableRtl](../api/speech-to-text/#enableRtl) property to `true` to reverse the component's layout and text direction, ensuring proper alignment and readability for RTL cultures.
+The Right-to-Left (RTL) feature provides support for languages that are read from right to left, such as Arabic, Hebrew, or Persian. Set the [enableRtl](../api/speech-to-text#enableRtl) property to `true` to reverse the component's layout and text direction, ensuring proper alignment and readability for RTL cultures.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

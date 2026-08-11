@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Vue Progressbar component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Progressbar component of Syncfusion Essential JS 2 and more.
+title: Customization in Vue Progress Bar | Syncfusion
+description: Learn here all about Customization in Syncfusion Vue Progress Bar component of Syncfusion Essential JS 2 and more.
 control: Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Customization in Vue Progressbar component
+# Customization in Vue Progress Bar
 
 ## Segments
 
@@ -64,7 +64,7 @@ s
 
 ## Thickness
 
- Customize the thickness of the track using [`trackThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#trackthickness), progress using [`progressThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#progressthickness) and secondary progress using [`secondaryProgressThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#secondaryprogressthickness) to render the progress bar with different appearances.
+ Customize the thickness of the track using [`trackThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel#trackthickness), progress using [`progressThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel#progressthickness) and secondary progress using [`secondaryProgressThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel#secondaryprogressthickness) to render the progress bar with different appearances.
 
 `App.vue`
 
@@ -244,7 +244,7 @@ const value = 60;
 
 ## Progress color and track color
 
-Customize the color of progress, secondary progress, and track by using the [`progressColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#progresscolor), [`secondaryProgressColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#secondaryprogresscolor), and [`trackColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#trackcolor) properties.
+Customize the color of progress, secondary progress, and track by using the [`progressColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel#progresscolor), [`secondaryProgressColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel#secondaryprogresscolor), and [`trackColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel#trackcolor) properties.
 
 `App.vue`
 

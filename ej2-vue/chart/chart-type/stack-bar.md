@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Stacked Bar Chart in Vue Charts | Syncfusion
-description: Learn here all about Stacked Bar Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Stacked Bar Chart in Vue Chart | Syncfusion
+description: Learn here all about Stacked Bar Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Stacked Bar chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacked Bar Chart in Vue Charts
+# Stacked Bar Chart in Vue Chart
 
 ## Stacked Bar
 

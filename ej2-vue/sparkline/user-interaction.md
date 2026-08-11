@@ -1,14 +1,14 @@
 ---
 layout: post
-title: User interaction in Vue Sparkline component | Syncfusion
-description: Learn here all about User interaction in Syncfusion Vue Sparkline component of Syncfusion Essential JS 2 and more.
+title: User Interaction in Vue Sparkline | Syncfusion
+description: Learn here all about User interaction in Syncfusion Vue Sparkline of Syncfusion Essential JS 2 and more.
 control: User interaction 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interaction in Vue Sparkline component
+# User Interaction in Vue Sparkline
 
 Sparkline has two user interaction features: tooltip and tracker line.
 

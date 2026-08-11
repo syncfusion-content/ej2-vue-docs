@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue HeatMap chart component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue HeatMap chart component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in Vue HeatMap Chart | Syncfusion
+description: Explore the accessibility features of the Syncfusion Vue HeatMap Chart control, including WAI-ARIA attributes, screen reader support, and keyboard navigation.
+control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue HeatMap chart component
+# Accessibility in Vue HeatMap Chart
 
 The HeatMap component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

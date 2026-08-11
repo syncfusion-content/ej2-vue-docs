@@ -1,14 +1,14 @@
 ---
 layout: post
-title: High Low Open Close Chart in Vue Charts | Syncfusion
-description: Learn here all about High Low Open Close Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: High Low Open Close Chart in Vue Chart | Syncfusion
+description: Learn here all about High Low Open Close Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: High Low Open Close Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# High Low Open Close Chart in Vue Charts
+# High Low Open Close Chart in Vue Chart
 
 ## High Low Open Close
 

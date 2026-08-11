@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 Getting Started with the HeatMap Component | Syncfusion
-description: Create a Vite-based Vue 3 project and integrate the Syncfusion Vue HeatMap component using the Composition API or Options API.
-control: HeatMap
+title: Getting Started with Vue 3 HeatMap Chart | Syncfusion
+description: Learn how to get started with the Syncfusion Vue HeatMap Chart control. Explore setup, features, examples, and customization options.
+control: HeatMap Chart
 documentation: ug
 platform: ej2-vue
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue HeatMap Component in Vue 3
+# Getting Started with Vue 3 HeatMap Chart
 
 This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

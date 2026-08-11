@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in Vue Inline AI Assist component | Syncfusion
-description: Checkout and learn about Globalization with Vue Inline AI Assist component of Syncfusion Essential JS 2 and more.
+title: Globalization in Vue Inline AI Assist | Syncfusion®
+description: Localize the Vue Inline AI Assist for any culture and enable RTL text direction by setting the enableRtl property for right-to-left languages.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Inline AI Assist component
+# Globalization in Vue Inline AI Assist
 
 ## Localization
 

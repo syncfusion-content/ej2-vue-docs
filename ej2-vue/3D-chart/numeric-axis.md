@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Numeric axis in Vue 3D Chart component | Syncfusion
+title: Numeric Axis in Vue 3D Chart | Syncfusion
 description: Learn here all about numeric axis in Syncfusion 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-vue
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Numeric axis in Vue 3D Chart component
+# Numeric Axis in Vue 3D Chart
 
-The [numeric axis](https://www.syncfusion.com/vue-components/vue-charts/chart-axis) can be used to represent the numeric values of data in 3D chart. By default, the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#valuetype) of an axis is **Double**.
+The [numeric axis](https://www.syncfusion.com/vue-components/vue-charts/chart-axis) can be used to represent the numeric values of data in 3D chart. By default, the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#valuetype) of an axis is **Double**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The [numeric axis](https://www.syncfusion.com/vue-components/vue-charts/chart-ax
 
 ## Range
 
-The range of an axis will be calculated automatically based on the provided data, and it can also be customized by using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#maximum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#interval) properties of the axis.
+The range of an axis will be calculated automatically based on the provided data, and it can also be customized by using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#maximum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#interval) properties of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ The range of an axis will be calculated automatically based on the provided data
 
 ## Range padding
 
-Padding can be applied to the minimum and maximum extremes of an axis range by using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) property. Numeric axis supports the following types of padding.
+Padding can be applied to the minimum and maximum extremes of an axis range by using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) property. Numeric axis supports the following types of padding.
 
 * None
 * Round
@@ -52,7 +52,7 @@ Padding can be applied to the minimum and maximum extremes of an axis range by u
 
 **Numeric - None**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to **None**, minimum and maximum of the axis is based on the data.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) is set to **None**, minimum and maximum of the axis is based on the data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -67,7 +67,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric - Round**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to **Round**, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **3.5** and the [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#interval) is **1**, then the minimum will be rounded to **3**.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) is set to **Round**, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **3.5** and the [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#interval) is **1**, then the minimum will be rounded to **3**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -82,7 +82,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric - Additional**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to **Additional**, interval of an axis will be added to the minimum and maximum of the axis.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) is set to **Additional**, interval of an axis will be added to the minimum and maximum of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -97,7 +97,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric - Normal**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to **Normal**, padding is applied to the axis based on default range calculation.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) is set to **Normal**, padding is applied to the axis based on default range calculation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -112,7 +112,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric - Auto**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -129,7 +129,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **Numeric label format**
 
-Numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#labelformat) property. Also, it supports all globalize format.
+Numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#labelformat) property. Also, it supports all globalize format.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -204,7 +204,7 @@ The following table describes the result of applying some commonly used label fo
 
 ## Grouping separator
 
-To separate the y-axis labels to groups of thousands, set the [`useGroupingSeparator`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#usegroupingseparator) property to **true** in the 3D chart.
+To separate the y-axis labels to groups of thousands, set the [`useGroupingSeparator`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#usegroupingseparator) property to **true** in the 3D chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Azure OpenAI With Vue Inline AI Assist component | Syncfusion
-description:  Checkout and learn about Integration of Azure OpenAI With Vue Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Integrate Azure OpenAI with Vue Inline AI Assist | Syncfusion®
+description: Wire the Vue Inline AI Assist to Azure OpenAI for context-aware AI features by sending user prompts through API calls and rendering smart responses.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Azure OpenAI with Vue Inline AI Assist component
+# Integrate Azure OpenAI with Vue Inline AI Assist
 
 The Inline AI Assist component integrates with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 

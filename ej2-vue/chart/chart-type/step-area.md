@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Step Area Chart in Vue Charts | Syncfusion
-description: Learn here all about Step Area in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Step Area Chart in Vue Chart | Syncfusion
+description: Learn here all about Step Area in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Step Area Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Step Area Chart in Vue Charts
+# Step Area Chart in Vue Chart
 
 ## Step Area
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue Inline AI Assist component | Syncfusion
-description: Checkout and learn about events with Vue Inline AI Assist component of Syncfusion Essential JS 2 and more.
+title: Events in Vue Inline AI Assist | Syncfusion®
+description: Handle Vue Inline AI Assist events like created and promptRequest to react when the component finishes rendering or when a user submits a prompt.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Inline AI Assist component
+# Events in Vue Inline AI Assist
 
 This section describes the Inline AI Assist events that will be triggered when appropriate actions are performed. The following events are available in the Inline AI Assist control.
 

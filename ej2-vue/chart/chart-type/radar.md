@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Radar Chart in Vue Charts | Syncfusion
-description: Learn here all about Radar Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Radar Chart in Vue Chart | Syncfusion
+description: Learn here all about Radar Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Radar Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radar Chart in Vue Charts
+# Radar Chart in Vue Chart
 
 ## Radar Chart
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mention Integration in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Mention Integration with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Mention Integration in Vue Chat UI | Syncfusion®
+description: Enable @mentions in the Vue Chat UI to suggest users as users type, with configurable mention users and a customizable trigger character.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mention Integration in Vue Chat UI component
+# Mention Integration in Vue Chat UI
 
 The Syncfusion ChatUI allows users to mention others in messages using the `@` character, with an dropdown for selecting users. The following sections explain how to configure mentions
 

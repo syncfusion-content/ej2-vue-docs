@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue SpeechToText component | Syncfusion
-description: Checkout and learn about getting started with the Syncfusion Vue SpeechToText component, its elements, and more details.
+title: Getting Started with Vue Speech To Text | Syncfusion®
+description: Learn how to set up the Syncfusion Vue Speech To Text component in a Vue 2 project, including prerequisites, package install, theming, and license registration.
 platform: ej2-vue
 control: SpeechToText
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue SpeechToText Component in Vue 2
+# Getting Started with Vue Speech To Text
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue SpeechToText component.
 

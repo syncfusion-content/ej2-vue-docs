@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data labels in Vue 3D Chart component | Syncfusion
+title: Data Labels in Vue 3D Chart | Syncfusion
 description: Learn here all about data labels in Syncfusion 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-vue
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data labels in Vue 3D Chart component
+# Data Labels in Vue 3D Chart
 
-Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#visible) property in the [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D/#datalabel). By default, the labels will arrange smartly without overlapping.
+Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel#visible) property in the [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D#datalabel). By default, the labels will arrange smartly without overlapping.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ Data labels are fields that includes information about the sample point connecte
 
 ## Position
 
-The [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#position) property is used to place the label either on `Top`, `Middle`, or `Bottom`.
+The [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel#position) property is used to place the label either on `Top`, `Middle`, or `Bottom`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ The [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLa
 
 ## Template
 
-Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#template) property, the data label template can be set.
+Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel#template) property, the data label template can be set.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ Label content can be formatted by using the template option. Inside the template
 
 ## Text mapping
 
-Text from the data source can be mapped using the [`name`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#name) property.
+Text from the data source can be mapped using the [`name`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel#name) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -72,7 +72,7 @@ Text from the data source can be mapped using the [`name`](https://ej2.syncfusio
 
 ## Format
 
-Data label for the chart can be formatted using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#format) property. The global formatting options can be used as 'n', 'p', and 'c'.
+Data label for the chart can be formatted using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel#format) property. The global formatting options can be used as 'n', 'p', and 'c'.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -144,7 +144,7 @@ Data label for the chart can be formatted using the [`format`](https://ej2.syncf
 
 ## Margin
 
-The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#margin) for data label can be applied by using [`left`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel/#left), [`right`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel/#right), [`bottom`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel/#bottom) and [`top`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel/#top) properties.
+The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel#margin) for data label can be applied by using [`left`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel#left), [`right`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel#right), [`bottom`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel#bottom) and [`top`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel#top) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -159,7 +159,7 @@ The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabe
 
 ## Customization
 
-The `stroke` and `border` of data label can be customized using [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyle/#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyle/#border) properties.
+The `stroke` and `border` of data label can be customized using [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyle#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyle#border) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -174,7 +174,7 @@ The `stroke` and `border` of data label can be customized using [`fill`](https:/
 
 ## Customizing specific label
 
-A specific label can be customized by using the [`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/i3DTextRenderEventArgs/) event.  The `textRender` event allows you to change the label text for the point.
+A specific label can be customized by using the [`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/i3DTextRenderEventArgs) event.  The `textRender` event allows you to change the label text for the point.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

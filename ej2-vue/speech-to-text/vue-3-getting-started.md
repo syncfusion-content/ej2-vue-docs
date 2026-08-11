@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the SpeechToText component | Syncfusion
-description:  Checkout and learn about Vue 3 getting started with Vue SpeechToText component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue 3 Speech To Text | Syncfusion®
+description: Learn how to integrate the Syncfusion Vue Speech To Text component into a Vite-based Vue 3 app using the Composition or Options API.
 control: SpeechToText
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion SpeechToText component in Vue 3
+# Getting Started with Vue 3 Speech To Text
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue SpeechToText component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

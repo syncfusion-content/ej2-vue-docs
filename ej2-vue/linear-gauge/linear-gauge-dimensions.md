@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Linear gauge dimensions in Vue Linear gauge component | Syncfusion
-description: Learn here all about Linear gauge dimensions in Syncfusion Vue Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Dimensions in Vue Linear Gauge | Syncfusion
+description: Set the width and height of the Syncfusion Vue Linear Gauge in pixels or as a percentage to make the component responsive in Vue apps.
 control: Linear gauge dimensions 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Linear gauge dimensions in Vue Linear gauge component
+# Dimensions in Vue Linear Gauge
 
 ## Size for Linear Gauge
 
-The height and width of the Linear Gauge can be set using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#height) properties in [`ejs-lineargauge`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/).
+The height and width of the Linear Gauge can be set using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#height) properties in Linear Gauge.
 
 ### In Pixel
 

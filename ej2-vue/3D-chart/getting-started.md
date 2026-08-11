@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Vue 3D Chart Component | Syncfusion
+title: Getting Started with Vue 3D Chart | Syncfusion
 description: Set up a Vue 2 application and integrate the Syncfusion EJ2 Vue 3D Chart component with module registration, and data binding.
 control: Getting started
 platform: ej2-vue
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue 3D Chart Component in Vue 2
+# Getting Started with Vue 3D Chart
 
-This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component.
+This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ Use a package release that supports Vue 2. Before upgrading, check the [Vue syst
 
 ## Setting Up the Vue 2 Project
 
-Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org#getting-started) command.
 
 **npm**
 
@@ -236,4 +236,4 @@ Each data object must contain the fields assigned to `xName` and `yName`. The fi
 
 - [Vue 3D Chart API reference](https://ej2.syncfusion.com/vue/documentation/api/chart3d)
 
-> You can refer to our `Vue 3D Charts` feature tour page for its groundbreaking feature representations. You can also explore our [Vue 3D Charts example](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-chart/column.html) that shows various 3D Chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our `Vue 3D Chart` feature tour page for its groundbreaking feature representations. You can also explore our [Vue 3D Chart example](https://ej2.syncfusion.com/vue/demos/#/material3/three-dimension-chart/column.html) that shows various 3D Chart types and how to represent time-dependent data, showing trends in data at equal intervals.

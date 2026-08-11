@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue AI AssistView component | Syncfusion
-description:  Checkout and learn about Accessibility with Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Accessibility in Vue AI AssistView | Syncfusion®
+description: Learn how the Vue AI AssistView meets WCAG 2.2, Section 508, and ADA accessibility standards with full screen reader and keyboard navigation support.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue AI AssistView component
+# Accessibility in Vue AI AssistView
 
 The AI AssistView component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

@@ -2,7 +2,7 @@
 layout: post
 title: Azure maps in Vue Maps component | Syncfusion
 description: Learn here all about Azure maps in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: Azure maps 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

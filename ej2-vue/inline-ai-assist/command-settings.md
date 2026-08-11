@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Commands configuration in Vue Inline AI Assist component | Syncfusion
-description: Checkout and learn about command items with Vue Inline AI Assist component of Syncfusion Essential JS 2 and more.
+title: Commands Configuration in Vue Inline AI Assist | Syncfusion®
+description: Configure command items in the Vue Inline AI Assist command popup with custom labels, prompts, icons, and grouping for quick AI actions.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Commands configuration in Vue Inline AI Assist component
+# Commands Configuration in Vue Inline AI Assist
 
 You can render and use the command action popup by using the `commands` property in the [commandSettings](../api/inline-ai-assist#commandsettings) property. This property helps to supply commands, control popup dimensions, and customize behavior.
 

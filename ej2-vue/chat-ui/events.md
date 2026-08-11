@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Events with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Events in Vue Chat UI | Syncfusion®
+description: Handle Vue Chat UI events like created and messageSend to react when the component finishes rendering or before a user message is sent.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Chat UI component component
+# Events in Vue Chat UI
 
 This section describes the events that the Chat UI component triggers when specific actions are performed. The following events are available:
 

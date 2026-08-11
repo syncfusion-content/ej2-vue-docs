@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Messages in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Messages with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Messages in Vue Chat UI | Syncfusion®
+description: Add and configure messages in the Vue Chat UI using the e-message selector with options for author, timestamp, text, and pinning.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Messages in Vue Chat UI component
+# Messages in Vue Chat UI
 
 The Chat UI allows to add messages using the `e-message` selector. The message collection stores all the messages being sent and received.
 

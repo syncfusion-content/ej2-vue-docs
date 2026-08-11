@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Smithchart component | Syncfusion
+title: Accessibility in Vue Smith Chart | Syncfusion
 description: Learn here all about Accessibility in Syncfusion Vue Smithchart component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Smith Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Smithchart component
+# Accessibility in Vue Smith Chart
 
 The Smith chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

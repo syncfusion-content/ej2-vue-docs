@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue Stock Chart Component | Syncfusion
+title: Getting Started with Vue Stock Chart | Syncfusion
 description: Set up a Vue 2 project and integrate Syncfusion EJ2 Vue Stock Chart with install steps, module injection, data binding, and feature examples.
-control: Getting started 
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Getting Started with the Vue Stock Chart Component in Vue 2
+
+# Getting Started with Vue Stock Chart
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart component.
 

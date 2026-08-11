@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range Column Chart in Vue Charts | Syncfusion
-description: Learn here all about Range Column in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Range Column Chart in Vue Chart | Syncfusion
+description: Learn here all about Range Column in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Range Column Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range Column Chart in Vue Charts
+# Range Column Chart in Vue Chart
 
 ## Range Column
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Methods in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Methods with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Methods in Vue Chat UI | Syncfusion®
+description: Use Vue Chat UI methods like addMessage to programmatically append new chat messages as a string or a MessageModel object.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in Vue Chat UI component
+# Methods in Vue Chat UI
 
 ## Add message
 

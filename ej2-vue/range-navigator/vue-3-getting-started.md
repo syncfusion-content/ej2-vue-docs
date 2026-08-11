@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue 3 getting started with the Range Navigator component | Syncfusion
+title: Getting Started with Vue 3 Range Navigator | Syncfusion
 description: Quickstart to create a Vite-based Vue 3 project and integrate the Syncfusion Essential JS 2 Range Navigator using Composition or Options API with examples.
 control: Vue 3 getting started
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Range Navigator Component in Vue 3
+# Getting Started with Vue 3 Range Navigator
 
 This article provides a step-by-step guide to setting up a [Vite](https://vitejs.dev) project using JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Range Navigator component with either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -284,7 +284,7 @@ The output will appear as follows:
 
 > **Sample:** You can explore the complete sample project in the https://github.com/SyncfusionExamples/vue3-range-navigator-getting-started repository.
 
-For migration information from Vue 2 to Vue 3, refer to the https://v3-migration.vuejs.org/.
+For migration information from Vue 2 to Vue 3, refer to the https://v3-migration.vuejs.org.
 
 ## Troubleshooting
 

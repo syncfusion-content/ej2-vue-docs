@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis in Vue HeatMap chart component | Syncfusion
-description: Learn here all about axis in Syncfusion Vue HeatMap chart component of Syncfusion Essential JS 2 and more.
-control: Axis 
+title: Axis in Vue HeatMap Chart | Syncfusion
+description: Configure X and Y axes in the Syncfusion Vue HeatMap Chart with categorical, numeric, and date-time types, including labels, intervals, and multilevel features.
+control: Axis
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis in Vue HeatMap chart component
+# Axis in Vue HeatMap Chart
 
 HeatMap consists of two axes namely, X-axis and Y-axis that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the HeatMap.
 

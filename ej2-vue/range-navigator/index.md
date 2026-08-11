@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Range navigator component | Syncfusion
+title: About Syncfusion Vue Range Navigator Component | Syncfusion
 description: Learn here all about Index in Syncfusion Vue Range navigator component of Syncfusion Essential JS 2 and more.
-control: Index 
+control: Index
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Range navigator component
+# About Syncfusion Vue Range Navigator Component.
 
 RangeNavigator is a data visualization control. It allows you to scroll and navigate through the data. This control easily combines with other controls such as Chart,
 Data Grid, etc., to create rich and powerful dashboards.

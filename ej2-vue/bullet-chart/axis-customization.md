@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Axis customization in Vue Bullet chart component | Syncfusion
+title: Axis Customization in Vue Bullet Chart | Syncfusion
 description: Learn here all about Axis customization in Syncfusion Vue Bullet chart component of Syncfusion Essential JS 2 and more.
-control: Axis customization 
+control: Axis customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis customization in Vue Bullet chart component
+# Axis Customization in Vue Bullet Chart
 
 ## MajorTickLines and MinorTickLines Customization
 
-The following properties can be used to customize [`majorTicklines`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#majorticklines) and [`minorTicklines`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#minorticklines).
+The following properties can be used to customize [`majorTicklines`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#majorticklines) and [`minorTicklines`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#minorticklines).
 
 * **width** - Specifies the width of ticklines.
 * **height** - Specifies the height of ticklines.
@@ -32,7 +32,7 @@ The following properties can be used to customize [`majorTicklines`](https://ej2
 
 ## Tick Placement
 
-The major and the minor ticks can be placed **inside** or **outside** the ranges using the [`tickPosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#tickposition) property.
+The major and the minor ticks can be placed **inside** or **outside** the ranges using the [`tickPosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#tickposition) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -47,7 +47,7 @@ The major and the minor ticks can be placed **inside** or **outside** the ranges
 
 ## Label Format
 
-Axis numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#labelformat) property. Axis labels support all globalize formats.
+Axis numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#labelformat) property. Axis labels support all globalize formats.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -122,7 +122,7 @@ The following table describes the result of applying some commonly used formats 
 
 ## GroupingSeparator
 
-To separate the groups of thousands, set the [`enableGroupSeparator`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#enablegroupseparator) property to **true**.
+To separate the groups of thousands, set the [`enableGroupSeparator`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#enablegroupseparator) property to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -137,7 +137,7 @@ To separate the groups of thousands, set the [`enableGroupSeparator`](https://ej
 
 ## Custom Label Format
 
-Using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#labelformat) property, axis labels can be specified with a custom defined format in addition to the axis value. The label format uses a placeholder such as **${value}K**, which represents the axis label.
+Using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#labelformat) property, axis labels can be specified with a custom defined format in addition to the axis value. The label format uses a placeholder such as **${value}K**, which represents the axis label.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -152,7 +152,7 @@ Using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/bulle
 
 ## Label Placement
 
-Label can be placed **Inside** or **Outside** of the ranges using the [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#labelposition) property.
+Label can be placed **Inside** or **Outside** of the ranges using the [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#labelposition) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -167,7 +167,7 @@ Label can be placed **Inside** or **Outside** of the ranges using the [`labelPos
 
 ## Opposed Position
 
-To place an axis opposite to its original position, set the [`opposedPosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#opposedposition) property to **true**.
+To place an axis opposite to its original position, set the [`opposedPosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#opposedposition) property to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -182,7 +182,7 @@ To place an axis opposite to its original position, set the [`opposedPosition`](
 
 ## Category Label
 
-The Bullet Chart supports X-axis label by specifying the property from the data source to the [`categoryField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#categoryfield). It helps to understand the input data in a more efficient way.
+The Bullet Chart supports X-axis label by specifying the property from the data source to the [`categoryField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#categoryfield). It helps to understand the input data in a more efficient way.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -197,7 +197,7 @@ The Bullet Chart supports X-axis label by specifying the property from the data 
 
 ## Category Label Customization
 
-The label color, opacity, font size, font family, font weight, and font style can be customized by using the [`categoryLabelStyle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#categorylabelstyle) setting for category and the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#labelstyle) setting for axis label. The [`useRangeColor`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/bulletLabelStyleModel/#userangecolor) property specifies the color of the axis label and represents the color from the corresponding range colors.
+The label color, opacity, font size, font family, font weight, and font style can be customized by using the [`categoryLabelStyle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#categorylabelstyle) setting for category and the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#labelstyle) setting for axis label. The [`useRangeColor`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/bulletLabelStyleModel#userangecolor) property specifies the color of the axis label and represents the color from the corresponding range colors.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

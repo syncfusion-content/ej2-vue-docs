@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Appearance in Vue Accumulation chart component | Syncfusion
+title: Appearance in Vue Accumulation Chart | Syncfusion
 description: Learn here all about Appearance in Syncfusion Vue Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Appearance 
+control: Appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue Accumulation chart component
+# Appearance in Vue Accumulation Chart
 
 ## Custom Color Palette
 
-You can customize the default color of series or points by providing a custom color palette of your choice by using the [`palettes`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#palettes) property.
+You can customize the default color of series or points by providing a custom color palette of your choice by using the [`palettes`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries#palettes) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

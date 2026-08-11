@@ -2,7 +2,7 @@
 layout: post
 title: Custom path in Vue Maps component | Syncfusion
 description: Learn here all about Custom path in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: Custom path 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

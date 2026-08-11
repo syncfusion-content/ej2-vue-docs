@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in Vue Progressbar component | Syncfusion
-description: Learn here all about Annotation in Syncfusion Vue Progressbar component of Syncfusion Essential JS 2 and more.
+title: Annotation in Vue Progress Bar | Syncfusion
+description: Learn here all about Annotation in Syncfusion Vue Progress Bar component of Syncfusion Essential JS 2 and more.
 control: Annotation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Annotation in Vue Progressbar component
+# Annotation in Vue Progress Bar
 
 ## Annotation
 
@@ -70,7 +70,7 @@ provide('progressbar',  [ProgressAnnotation]);
 
 ## Label
 
-You can show the progress value in both linear and cicular progress bar using **showProgressValue** property.
+You can show the progress value in both linear and circular progress bar using **showProgressValue** property.
 
 `App.vue`
 

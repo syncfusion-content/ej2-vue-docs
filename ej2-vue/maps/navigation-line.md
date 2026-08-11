@@ -2,7 +2,7 @@
 layout: post
 title: Navigation line in Vue Maps component | Syncfusion
 description: Learn here all about Navigation line in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: Navigation line 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

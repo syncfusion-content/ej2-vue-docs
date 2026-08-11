@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in Vue Maps component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

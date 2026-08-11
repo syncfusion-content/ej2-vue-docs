@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 Getting Started with the Circular Gauge Component | Syncfusion
+title: Getting Started with Vue 3 Circular Gauge | Syncfusion
 description: Create a Vite-based Vue 3 project and integrate the Syncfusion Vue Circular Gauge component using the Composition API or Options API.
-control: Vue 3 getting started
+control: Circular Gauge
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Circular Gauge Component in Vue 3
+# Getting Started with Vue 3 Circular Gauge
 
 This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Circular Gauge component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

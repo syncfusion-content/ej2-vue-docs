@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting Started with the Vue Smith Chart Component | Syncfusion
+title: Getting Started with Vue Smith Chart | Syncfusion
 description: Set up a Vue 2 application and integrate the Syncfusion Essential JS 2 Vue Smith Chart with module registration, and data binding.
-control: Getting started
+control: Smith Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Smith Chart Component in Vue 2
+# Getting Started with Vue Smith Chart in Vue 2
 
-This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smith Chart component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smith Chart component.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Use a package release that supports Vue 2. Before upgrading, check the [Vue syst
 
 ## Setting Up the Vue 2 Project
 
-Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org#getting-started) command.
 
 **npm**
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue Progress Bar Component | Syncfusion
-description: Check out and learn about Getting Started with Vue Progressbar component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Progress Bar | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Progress Bar control. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Progress Bar Component in Vue 2
+# Getting Started with Vue Progress Bar
 
 This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progress Bar component. It explains how to configure a project and render an animated circular Progress Bar.
 
@@ -33,7 +33,7 @@ Only the `@syncfusion/ej2-vue-progressbar` package must be installed directly. I
 
 ## Set Up the Vue 2 Project
 
-Install Vue CLI globally using either npm or Yarn, and create a project with the [`vue create`](https://cli.vuejs.org/) command.
+Install Vue CLI globally using either npm or Yarn, and create a project with the [`vue create`](https://cli.vuejs.org) command.
 
 **npm**
 

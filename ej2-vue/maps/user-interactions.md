@@ -2,7 +2,7 @@
 layout: post
 title: User interactions in Vue Maps component | Syncfusion
 description: Learn here all about User interactions in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: User interactions 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

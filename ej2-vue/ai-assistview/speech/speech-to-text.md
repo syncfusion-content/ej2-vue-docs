@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Speech-to-Text With Vue AI AssistView component | Syncfusion
-description:  Checkout and learn about configuration of Speech-to-Text with Azure OpenAI in Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Speech-to-Text in Vue AI AssistView | Syncfusion®
+description: Enable Speech-to-Text in the Vue AI AssistView using the browser Web Speech API to convert microphone voice input into prompt text.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug

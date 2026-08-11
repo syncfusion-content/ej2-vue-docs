@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Footer in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Footer with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Footer in Vue Chat UI | Syncfusion®
+description: Show or hide the Vue Chat UI footer containing the message input and send button using the showFooter property to control the chat input area.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Footer in Vue Chat UI component
+# Footer in Vue Chat UI
 
 The footer of the Syncfusion Vue Chat UI component is the area at the bottom that typically contains the message input field and the send button. It is enabled by default to provide a standard chat interface where users can type and send messages.
 

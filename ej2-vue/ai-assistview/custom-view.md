@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom View with Vue AI AssistView component | Syncfusion
-description: Checkout and learn about Custom View with Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Custom View in Vue AI AssistView | Syncfusion®
+description: Add custom views in the Vue AI AssistView to organize different content types using the e-views selector with Assist and Custom view types.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom views in Vue AI AssistView component
+# Custom View in Vue AI AssistView
 
 The AI AssistView component supports multiple views that allow you to organize different types of content within the same component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smithchart axis in Vue Smithchart component | Syncfusion
+title: Axis in Vue Smith Chart | Syncfusion
 description: Learn here all about Smithchart axis in Syncfusion Vue Smithchart component of Syncfusion Essential JS 2 and more.
-control: Smithchart axis 
+control: Smith Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smithchart axis in Vue Smithchart component
+# Axis in Vue Smith Chart
 
 Like chart, Smithchart is having support for two types of axis.
 * Horizontal axis - axis drawn as straight line in the horizontal direction of the chart.
@@ -57,7 +57,7 @@ We can customize following things, in major as well as minor gridlines.
         
 {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs8" %}
 
-## Axisline
+## Axis Line
 
 As name suggests that, it is a line in smithchart that can be configured to denotes the axis. By default, visibility of the axis line is true. You can customize its visibility by using visible property in axis Line. Other than visibility of the axis line, you can customize the  following properties of the axis line.
 

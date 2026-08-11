@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timestamp in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Timestamp with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Timestamp in Vue Chat UI | Syncfusion®
+description: Show or hide message timestamps in the Vue Chat UI and customize the display format with the timeStampFormat property for each message.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timestamp in Vue Chat UI component
+# Timestamp in Vue Chat UI
 
 ## Show or Hide Timestamps
 

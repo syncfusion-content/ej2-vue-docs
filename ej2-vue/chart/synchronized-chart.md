@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Synchronized Charts in Vue Chart component | Syncfusion
+title: Synchronized Charts in Vue Chart | Syncfusion
 description: Learn here all about Synchronized Charts in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Synchronized charts
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Synchronized Charts in Vue Chart component
+# Synchronized Charts in Vue Chart
 
 Synchronized charts allow multiple chart instances to share common interactions so that actions performed on one chart are reflected across the others. This approach is useful for comparing related datasets and analyzing trends consistently across multiple visualizations.
 
@@ -54,7 +54,7 @@ In the `showCrosshair` method, specify the following parameters to render the cr
 
 ## Zooming synchronization
 
-Zoom levels can be synchronized across multiple charts by using the [`zoomComplete`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs/) event. In the `zoomComplete` event, retrieve the [`zoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs/#currentzoomfactor) and [`zoomPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs/#currentzoomposition) values from the zoomed chart.
+Zoom levels can be synchronized across multiple charts by using the [`zoomComplete`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs) event. In the `zoomComplete` event, retrieve the [`zoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs#currentzoomfactor) and [`zoomPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs#currentzoomposition) values from the zoomed chart.
 
 These values can then be applied to the other charts to ensure that all synchronized charts maintain the same zoom state during user interaction.
 
@@ -71,7 +71,7 @@ These values can then be applied to the other charts to ensure that all synchron
 
 ## Selection synchronization
 
-Selection can be synchronized across multiple charts by using the [`selectionComplete`](https://ej2.syncfusion.com/vue/documentation/api/chart/iSelectionCompleteEventArgs/) event. In the `selectionComplete` event, retrieve the selected data values or region from the active chart and apply the same selection state to the other charts.
+Selection can be synchronized across multiple charts by using the [`selectionComplete`](https://ej2.syncfusion.com/vue/documentation/api/chart/iSelectionCompleteEventArgs) event. In the `selectionComplete` event, retrieve the selected data values or region from the active chart and apply the same selection state to the other charts.
 
 This ensures consistent selection behavior across all connected charts and helps maintain a unified analysis experience.
 

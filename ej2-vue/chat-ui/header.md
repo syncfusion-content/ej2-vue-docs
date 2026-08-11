@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header in Vue Chat UI component | Syncfusion
-description: Checkout and learn about Header with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Header in Vue Chat UI | Syncfusion®
+description: Configure the Vue Chat UI header with showHeader, headerText, and headerIconCss to display a title and icon that match your conversation context.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header in Vue Chat UI component 
+# Header in Vue Chat UI
 
 ## Header visibility
 

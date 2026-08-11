@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue AI AssistView component | Syncfusion
-description: Checkout and learn about templates with Vue AI AssistView component of Syncfusion Essential JS 2 and more.
+title: Templates in Vue AI AssistView | Syncfusion®
+description: Customize the Vue AI AssistView banner, prompt items, response items, suggestions, and footer using dedicated template properties.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue AI AssistView component
+# Templates in Vue AI AssistView
 
 The AI AssistView component offers several template options to customize the banner, prompt items, response items, suggestions, and footer.
 

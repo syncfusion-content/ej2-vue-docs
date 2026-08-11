@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integration of Microsoft Bot in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Integration of Microsoft Bot with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Integrate Microsoft Bot Framework with Vue Chat UI | Syncfusion®
+description: Connect the Vue Chat UI to a Microsoft Bot Framework bot on Azure with a Direct Line token server for secure conversational interfaces.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Microsoft Bot Framework with Vue Chat UI component
+# Integrate Microsoft Bot Framework with Vue Chat UI
 
 The Chat UI component integrates with a [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0) bot hosted on Azure, enabling a custom chat interface for seamless user interaction. The process involves setting up a secure backend token server, configuring Direct Line in Azure, and integrating the Chat UI in the application.
 

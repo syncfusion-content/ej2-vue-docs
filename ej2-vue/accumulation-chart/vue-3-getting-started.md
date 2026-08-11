@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue 3 Accumulation Chart Component | Syncfusion
-description: Scaffold a Vite Vue 3 project and add Syncfusion EJ2 Accumulation Charts with setup steps, module registration, and examples using Composition and Options APIs.
+title: Getting Started with Vue 3 Accumulation Chart | Syncfusion
+description: Scaffold a Vite Vue 3 project and add Syncfusion EJ2 Accumulation Chart with setup steps, module registration, and examples using Composition and Options APIs.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Accumulation Chart Component in Vue 3
+# Getting Started with Vue Accumulation Chart
 
 This article provides a step-by-step guide to setting up a [`Vite`](https://vitejs.dev) project using JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accumulation Chart component with either the [`Composition API`](https://vuejs.org/guide/introduction.html#composition-api) or the [`Options API`](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -289,7 +289,7 @@ The following are common issues and solutions when integrating the Accumulation 
 
 > **Sample**: You can explore the complete sample project in the [`vue-3-accumulation-chart-getting-started`](https://github.com/SyncfusionExamples/vue3-accumulation-chart-getting-started).
 
-For migrating from Vue 2 to Vue 3, refer to the [Vue 3 Migration Guide](https://v3-migration.vuejs.org/).
+For migrating from Vue 2 to Vue 3, refer to the [Vue 3 Migration Guide](https://v3-migration.vuejs.org).
 
 ## See Also
 

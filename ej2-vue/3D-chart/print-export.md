@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Print and Export in Vue 3D Chart component | Syncfusion
+title: Print and Export in Vue 3D Chart | Syncfusion
 description: Learn here all about print and export in Syncfusion 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print and Export in Vue 3D Chart component
+# Print and Export in Vue 3D Chart
 
 ## Print
 

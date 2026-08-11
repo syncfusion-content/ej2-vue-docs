@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip template in Vue Heatmap chart component | Syncfusion
-description: Learn here all about Tooltip template in Syncfusion Vue Heatmap chart component of Syncfusion Essential JS 2 and more.
-control: Tooltip template 
+title: How to create a table in tooltip in Vue HeatMap Chart | Syncfusion
+description: Display a table inside the tooltip of the Syncfusion Vue HeatMap Chart control by initializing a template element and assigning its id to the template property.
+control: Tooltip template
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip template in Vue Heatmap chart component
+# How to create a table in tooltip in Vue HeatMap Chart
 
 You can show a tooltip as a table using the `template` property in `tooltipSettings`.
 

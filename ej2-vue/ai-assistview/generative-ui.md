@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Generative UI in Vue AI AssistView component | Syncfusion
-description: Checkout and learn about generative UI with Vue AI AssistView control of Syncfusion Essential JS 2 and more.
+title: Generative UI in Vue AI AssistView | Syncfusion®
+description: Render dynamic tools and interactive UI elements in the Vue AI AssistView using registerToolUI and addPromptResponse to display tool blocks.
 platform: ej2-vue
 control: AI AssistView 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Generative UI in Vue AI AssistView component
+# Generative UI in Vue AI AssistView
 
 The `Generative UI` feature in AI AssistView allows you to render dynamic tools and UI elements within the AI AssistView. This enables seamless integration of interactive components based on AI-generated responses.
 
