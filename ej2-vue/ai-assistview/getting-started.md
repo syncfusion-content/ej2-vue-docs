@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue AI AssistView component | Syncfusion
-description:  Checkout and learn about Getting started with Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue AI AssistView | Syncfusion®
+description: Learn how to get started with the Syncfusion Vue AI AssistView control. Explore setup, features, examples, and customization options.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue AI AssistView Component in Vue 2
+# Getting Started with Vue AI AssistView
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue AI AssistView component.
 

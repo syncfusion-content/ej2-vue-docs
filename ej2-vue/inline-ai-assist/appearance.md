@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance and styling in Vue Inline AI Assist component | Syncfusion
-description:  Checkout and learn about Appearance and styling with Vue Inline AI Assist component of Syncfusion Essential JS 2 and more.
+title: Appearance and Styling in Vue Inline AI Assist | Syncfusion®
+description: Style the Vue Inline AI Assist popup by setting popupWidth, popupHeight, zIndex, and a custom cssClass to match your application theme.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance and styling in Vue Inline AI Assist component
+# Appearance and Styling in Vue Inline AI Assist
 
 ## Component Dimensions
 

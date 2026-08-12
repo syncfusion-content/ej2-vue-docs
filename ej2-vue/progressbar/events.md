@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue Progressbar component | Syncfusion
-description: Learn here all about Events in Syncfusion Vue Progressbar component of Syncfusion Essential JS 2 and more.
+title: Events in Vue Progress Bar | Syncfusion
+description: Learn here all about Events in Syncfusion Vue Progress Bar component of Syncfusion Essential JS 2 and more.
 control: Events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Progressbar component
+# Events in Vue Progress Bar
 
 ## Value Change
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: LLM Model With Vue Inline AI Assist component | Syncfusion
-description:  Checkout and learn about Integration of LLM Model With Vue Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Integrate LLM via Ollama with Vue Inline AI Assist | Syncfusion®
+description: Connect the Vue Inline AI Assist to a local Ollama-hosted LLM to power inline AI features with natural language understanding and context-aware responses.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate LLM via Ollama with Vue Inline AI Assist component
+# Integrate LLM via Ollama with Vue Inline AI Assist
 
 The Inline AI Assist component integrates with [LLM via Ollama](https://ollama.com) to enable advanced conversational AI features in your Vue application. The component acts as a user interface where user prompts are sent to the selected LLM model via API calls, providing natural language understanding and context-aware responses.
 

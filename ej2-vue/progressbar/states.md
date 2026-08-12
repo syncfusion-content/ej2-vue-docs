@@ -1,13 +1,13 @@
 ---
 layout: post
-title: States in Vue Progressbar component | Syncfusion
-description: Learn here all about States in Syncfusion Vue Progressbar component of Syncfusion Essential JS 2 and more.
+title: States in Vue Progress Bar | Syncfusion
+description: Learn here all about States in Syncfusion Vue Progress Bar component of Syncfusion Essential JS 2 and more.
 control: States 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# States in Vue Progressbar component
+# States in Vue Progress Bar
 
 Visualize progress in different modes.
 

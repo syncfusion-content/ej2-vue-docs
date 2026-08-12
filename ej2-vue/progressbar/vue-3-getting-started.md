@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Vue 3 Getting Started with the Progress Bar Component | Syncfusion
-description: Create a Vite-based Vue 3 project and integrate the Syncfusion Essential JS 2 Vue Progress Bar component using the Composition API or Options API.
+title: Getting Started with Vue Progress Bar | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Progress Bar control. Explore setup, features, examples, and customization options.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Progress Bar Component in Vue 3
+# Getting Started with Vue Progress Bar
 
-This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progress Bar component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Progress Bar component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The **Composition API** groups related logic into reusable functions. The **Options API** organizes component logic with options such as `data`, `methods`, and lifecycle hooks. Choose the API that best fits the application's structure.
 

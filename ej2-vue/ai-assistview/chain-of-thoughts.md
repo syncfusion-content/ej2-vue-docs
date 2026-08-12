@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chain of Thoughts in Vue AI AssistView control | Syncfusion
-description: Checkout and learn about Chain of Thoughts with Vue AI AssistView control of Syncfusion Essential JS 2 and more.
+title: Chain of Thoughts in Vue AI AssistView | Syncfusion®
+description: Visualize model reasoning step by step in the Vue AI AssistView by injecting the AssistThinking module to render Thinking, Text, and tool blocks.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
     
-# Chain of Thoughts in Vue AI AssistView control
+# Chain of Thoughts in Vue AI AssistView
  
 The AI AssistView supports rendering **Chain of Thoughts** (also called `Thinking`) blocks, allowing you to visualize the model's reasoning process step by step before the final response is generated. The injectable module is ideal for extended reasoning models (such as Claude 3.5, GPT‑o1, and similar), which expose intermediate reasoning stages.
 

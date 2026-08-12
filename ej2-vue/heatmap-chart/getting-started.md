@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with the Vue HeatMap Component in Vue 2 | Syncfusion
-description: Set up a Vue 2 application and integrate the Syncfusion Vue HeatMap Component with data binding and module registration.
-control: HeatMap
+title: Getting Started with Vue HeatMap Chart | Syncfusion
+description: Learn how to get started with the Syncfusion Vue HeatMap Chart control. Explore setup, features, examples, and customization options.
+control: HeatMap Chart
 platform: ej2-vue
 documentation: ug
 framework-version: 2
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue HeatMap Component in Vue 2
+# Getting Started with Vue HeatMap Chart
 
 This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue HeatMap component.
 

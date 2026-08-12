@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue AI AssistView component | Syncfusion
-description: Checkout and learn about events with Vue AI AssistView component of Syncfusion Essential JS 2 and more.
+title: Events in Vue AI AssistView | Syncfusion®
+description: Handle Vue AI AssistView events like promptRequest, promptChanged, and beforeAttachmentUpload to customize behavior and respond to user actions.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue AI AssistView component
+# Events in Vue AI AssistView
 
 The Vue AI AssistView component provides a comprehensive set of events that enable developers to customize behavior and handle user interactions effectively. The following events are available in the AI AssistView component.
 

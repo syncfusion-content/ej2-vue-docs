@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Chat UI component | Syncfusion
-description: Checkout and learn about getting started with the Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Chat UI | Syncfusion®
+description: Learn how to get started with the Syncfusion Vue Chat UI control. Explore setup, features, examples, and customization options.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Chat UI Component in Vue 2
+# Getting Started with Vue Chat UI
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chat UI component.
 

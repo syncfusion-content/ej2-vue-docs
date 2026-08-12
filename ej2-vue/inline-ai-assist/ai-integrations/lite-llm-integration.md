@@ -1,14 +1,14 @@
 ---
 layout: post
-title: LiteLLM With Vue Inline AI Assist component | Syncfusion
-description:  Checkout and learn about Integration of LiteLLM With Vue Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Integrate LiteLLM with Vue Inline AI Assist | Syncfusion®
+description: Route Vue Inline AI Assist prompts through a LiteLLM proxy to reach multiple LLM providers using a single OpenAI-compatible API endpoint.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Inline AI Assist with LiteLLM
+# Integrate LiteLLM with Vue Inline AI Assist
 
 The **Inline AI Assist** component can also be integrated with [LiteLLM](https://docs.litellm.ai/docs), an open-source proxy that provides a unified, OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
 

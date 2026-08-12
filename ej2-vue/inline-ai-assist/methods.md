@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Methods in Vue Inline AI Assist component | Syncfusion
-description: Checkout and learn about methods with Vue Inline AI Assist component of Syncfusion Essential JS 2 and more.
+title: Methods in Vue Inline AI Assist | Syncfusion®
+description: Use Vue Inline AI Assist public methods to programmatically add responses and execute prompts dynamically via the promptRequest event.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in Vue Inline AI Assist component
+# Methods in Vue Inline AI Assist
 
 ## Adding response
 

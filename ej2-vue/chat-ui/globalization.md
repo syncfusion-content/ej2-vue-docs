@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Globalization with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Globalization in Vue Chat UI | Syncfusion®
+description: Localize the Vue Chat UI for any culture by translating keys like oneUserTyping and multipleUsersTyping to display text in the user language.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Chat UI component
+# Globalization in Vue Chat UI
 
 The Syncfusion Chat UI component is designed with globalization in mind, allowing it to serve users in various regions and languages.
 

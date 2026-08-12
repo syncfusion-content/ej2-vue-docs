@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in Vue AI AssistView component | Syncfusion
-description: Checkout and learn about templates with Vue AI AssistView component of Syncfusion Essential JS 2 and more.
+title: Appearance in Vue AI AssistView | Syncfusion®
+description: Customize the Vue AI AssistView dimensions and visual styling by setting width, height, and applying custom CSS to the container.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue AI AssistView component
+# Appearance in Vue AI AssistView
 
 The Syncfusion AI AssistView for Vue allows for customization of its dimensions and overall look and feel. This can be achieved by setting the component's width and height or by applying custom CSS styles.
 

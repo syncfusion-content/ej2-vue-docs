@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Templates with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Templates in Vue Chat UI | Syncfusion®
+description: Customize the Vue Chat UI with templates for the empty chat state, message items, and typing indicators to match your application design.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue Chat UI component
+# Templates in Vue Chat UI
 
 Elevate the user experience by fully customizing the Syncfusion Vue Chat UI component. With templating support for key areas like the conversation window, messages, and typing indicators, you can create a unique and personalized chat interface that aligns perfectly with your application's design.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in Vue Progressbar component | Syncfusion
-description: Learn here all about Animation in Syncfusion Vue Progressbar component of Syncfusion Essential JS 2 and more.
+title: Animation in Vue Progress Bar | Syncfusion
+description: Learn here all about Animation in Syncfusion Vue Progress Bar component of Syncfusion Essential JS 2 and more.
 control: Animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Animation in Vue Progressbar component
+# Animation in Vue Progress Bar
 
 <!-- markdownlint-disable MD033 -->
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dimensions in Vue Heatmap chart component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion Vue Heatmap chart component of Syncfusion Essential JS 2 and more.
-control: Dimensions 
+title: Dimensions in Vue HeatMap Chart | Syncfusion
+description: Set the size of the Syncfusion Vue HeatMap Chart control in pixels or percentage using width and height properties for responsive container-based layouts.
+control: Dimensions
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in Vue Heatmap chart component
+# Dimensions in Vue HeatMap Chart
 
 ## Size for container
 
@@ -22,7 +22,7 @@ Heat map can be rendered to its container size. You can set the size through inl
 
 ## Size for heat map
 
-You can  set the size of heat map directly by using the [width](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#width) and [height](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#height) properties.
+You can  set the size of heat map directly by using the [width](https://ej2.syncfusion.com/vue/documentation/api/heatmap#width) and [height](https://ej2.syncfusion.com/vue/documentation/api/heatmap#height) properties.
 
 ## In pixel
 

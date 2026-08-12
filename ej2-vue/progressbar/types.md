@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types in Vue Progressbar component | Syncfusion
-description: Learn here all about Types in Syncfusion Vue Progressbar component of Syncfusion Essential JS 2 and more.
+title: Types in Vue Progress Bar | Syncfusion
+description: Learn here all about Types in Syncfusion Vue Progress Bar component of Syncfusion Essential JS 2 and more.
 control: Types 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Types in Vue Progressbar component
+# Types in Vue Progress Bar
 
 Visualize progress in different shapes (rectangle, circle, and semi-circle) to give a unique appearance to your app design.
 

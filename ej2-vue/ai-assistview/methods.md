@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Methods in Vue AI AssistView component | Syncfusion
-description: Checkout and learn about templates with Vue AI AssistView component of Syncfusion Essential JS 2 and more.
+title: Methods in Vue AI AssistView | Syncfusion®
+description: Use Vue AI AssistView public methods to programmatically add prompt and response pairs as strings or objects and execute prompts dynamically.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in Vue AI AssistView component
+# Methods in Vue AI AssistView
 
 ## Adding prompt response
 

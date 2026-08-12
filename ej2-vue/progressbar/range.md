@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range in Vue Progressbar component | Syncfusion
-description: Learn here all about Range in Syncfusion Vue Progressbar component of Syncfusion Essential JS 2 and more.
+title: Range in Vue Progress Bar | Syncfusion
+description: Learn here all about Range in Syncfusion Vue Progress Bar component of Syncfusion Essential JS 2 and more.
 control: Range 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range in Vue Progressbar component
+# Range in Vue Progress Bar
 
 <!-- markdownlint-disable MD033 -->
 Range represents the entire span of the ProgressBar and can be defined using the `minimum` and `maximum` properties.
