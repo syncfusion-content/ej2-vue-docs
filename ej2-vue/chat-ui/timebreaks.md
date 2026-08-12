@@ -1,14 +1,14 @@
 ---
 layout: post
-title: TimeBreaks in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Timebreaks with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Time Break in Vue Chat UI | Syncfusion®
+description: Display date separators in the Vue Chat UI using the showTimeBreak property to insert a new date marker when conversations cross midnight.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# TimeBreaks in Vue Chat UI component
+# Time Break in Vue Chat UI
 
 ## Show or hide time break
 

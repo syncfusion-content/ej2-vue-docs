@@ -2,7 +2,7 @@
 layout: post
 title: State persistence in Vue Maps component | Syncfusion
 description: Learn here all about State persistence in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: State persistence 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

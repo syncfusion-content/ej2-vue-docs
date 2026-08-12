@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drilldown with label in Vue Treemap component | Syncfusion
-description: Learn here all about Drilldown with label in Syncfusion Vue Treemap component of Syncfusion Essential JS 2 and more.
+title: How to add a label template with drilldown in Vue TreeMap | Syncfusion
+description: Learn here all about Drilldown with label in Syncfusion Vue TreeMap component of Syncfusion Essential JS 2 and more.
 control: Drilldown with label 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drilldown with label in Vue Treemap component
+# How to add a label template with drilldown in Vue TreeMap
 
 ## Add label template with drill down
 

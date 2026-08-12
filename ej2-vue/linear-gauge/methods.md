@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Methods in Vue Linear gauge component | Syncfusion
-description: Learn here all about Methods in Syncfusion Vue Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Methods in Vue Linear Gauge | Syncfusion
+description: Use the Syncfusion Vue Linear Gauge methods, such as setPointerValue, setAnnotationValue, and refresh, to update the component at runtime.
 control: Methods 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Methods in Vue Linear gauge component
+# Methods in Vue Linear Gauge
 
 The following methods are available in the Linear Gauge component.
 
 ## setPointerValue
 
-To change the pointer value dynamically, use the [`setPointerValue`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#setpointervalue) method in the Linear Gauge component. The following are the arguments for this method.
+To change the pointer value dynamically, use the [`setPointerValue`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#setpointervalue) method in the Linear Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -34,7 +34,7 @@ To change the pointer value dynamically, use the [`setPointerValue`](https://ej2
 
 ## setAnnotationValue
 
-To change the annotation content dynamically, use the [`setAnnotationValue`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#setannotationvalue) method in the Linear Gauge component. The following are the arguments for this method.
+To change the annotation content dynamically, use the [`setAnnotationValue`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#setannotationvalue) method in the Linear Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -55,7 +55,7 @@ To change the annotation content dynamically, use the [`setAnnotationValue`](htt
 
 ## refresh
 
-The [`refresh`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#refresh) method can be used to change the state of the component and render it again.
+The [`refresh`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge#refresh) method can be used to change the state of the component and render it again.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

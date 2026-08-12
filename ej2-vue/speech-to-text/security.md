@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Security concerns in Vue SpeechToText Component | Syncfusion
-description: Learn here all about security concerns in Syncfusion Essential Vue SpeechToText component, its elements, and more.
+title: Security in Vue Speech To Text | Syncfusion®
+description: Security concerns for the Syncfusion Vue Speech To Text component, including online dependency, third-party data transmission, MITM risks, and mitigation.
 platform: ej2-vue
 control: SpeechToText
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Security concerns in Vue SpeechToText component
+# Security concerns in Vue Speech To Text
 
 ## Online dependency
 

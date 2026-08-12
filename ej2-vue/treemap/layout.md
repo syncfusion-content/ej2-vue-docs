@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Layout in Vue Treemap component | Syncfusion
-description: Learn here all about Layout in Syncfusion Vue Treemap component of Syncfusion Essential JS 2 and more.
+title: Layout in Vue TreeMap | Syncfusion
+description: Learn here all about Layout in Syncfusion Vue TreeMap component of Syncfusion Essential JS 2 and more.
 control: Layout 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Layout in Vue Treemap component
+# Layout in Vue TreeMap
 
-Determine the visual representation of nodes belonging to all the TreeMap levels using the [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/treemap/#layouttype) property.
+Determine the visual representation of nodes belonging to all the TreeMap levels using the [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/treemap#layouttype) property.
 
 ## Types of layout
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Circular gauge component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Circular gauge component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in Vue Circular Gauge | Syncfusion
+description: Learn how the Vue Circular Gauge component follows WCAG 2.2, Section 508, and WAI-ARIA accessibility standards.
+control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Circular gauge component
+# Accessibility in Vue Circular Gauge
 
 The Circular Gauge component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

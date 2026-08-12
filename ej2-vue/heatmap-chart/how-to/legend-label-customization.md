@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Legend label customization in Vue Heatmap chart component | Syncfusion
-description: Learn here all about Legend label customization in Syncfusion Vue Heatmap chart component of Syncfusion Essential JS 2 and more.
-control: Legend label customization 
+title: How to customize legend label in Vue HeatMap Chart | Syncfusion
+description: Customize or hide legend labels in the Syncfusion Vue HeatMap Chart control by handling the legendRender client-side event in your Vue application.
+control: Legend label customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend label customization in Vue Heatmap chart component
+# How to customize legend label in Vue HeatMap Chart
 
 You can change the legend label using the ‘legendRender’ client-side event. You can also hide the legend label using this client-side event.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gradient in #Vue Chart component | Syncfusion
+title: Gradient in Vue Chart | Syncfusion
 description: Learn here all about Gradient in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Gradient
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Gradient in ##Platform_Name## Chart control
+# Gradient in Vue Chart
 
 <!-- markdownlint-disable MD036 -->
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis labels in Vue Chart component | Syncfusion
+title: Axis labels in Vue Chart | Syncfusion
 description: Learn here all about Axis labels in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Axis labels 
+control: Axis labels
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis labels in Vue Chart component
+# Axis labels in Vue Chart
 
 ## Smart Axis Labels
 

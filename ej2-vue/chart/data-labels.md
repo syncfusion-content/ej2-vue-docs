@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data labels in Vue Chart component | Syncfusion
+title: Data labels in Vue Chart | Syncfusion
 description: Learn here all about Data labels in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Data labels 
+control: Data labels
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data labels in Vue Chart component
+# Data labels in Vue Chart
 
 Data labels display the values of data points directly on the chart, reducing the need to reference axes for exact values. Enable data labels by setting the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/dataLabelSettings#visible) option to `true` in the `dataLabel` configuration. Labels automatically adjust to avoid overlapping and maintain readability.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue SpeechToText Component | Syncfusion
-description: Learn here all about events in Syncfusion Essential Vue SpeechToText component, its elements, and more.
+title: Events in Vue Speech To Text | Syncfusion®
+description: Handle Syncfusion Vue Speech To Text lifecycle events like created, onStart, onStop, onError, and transcriptChanged during speech recognition.
 platform: ej2-vue
 control: SpeechToText
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in ##Platform_Name## SpeechToText Component
+# Events in Vue Speech To Text
 
 This section describes the events that are triggered when performing actions with the SpeechToText component. The following events are available:
  

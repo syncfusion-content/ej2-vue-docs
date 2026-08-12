@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in Vue Sparkline component | Syncfusion
-description: Learn here all about Appearance in Syncfusion Vue Sparkline component of Syncfusion Essential JS 2 and more.
+title: Appearance in Vue Sparkline | Syncfusion
+description: Learn here all about the Appearance in Syncfusion Vue Sparkline of Syncfusion Essential JS 2 and more.
 control: Appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue Sparkline component
+# Appearance in Vue Sparkline
 
 The appearance of the sparkline can be customized using margin, container Area border, and container Area background.
 
@@ -54,9 +54,9 @@ The background color of the sparkline area can be customized using the `containe
 
 ## Sparkline theme
 
-Datalabel and track line colors of the sparkline will be changed based on theme. For example, for dark theme, the color of datalabel and track line should be white; for light theme, their value should be black. The possible values for sparkline theme are `Material`, `Fabric`, `Bootstrap`, and `Highcontrast`.
+Data label and track line colors of the sparkline will be changed based on theme. For example, for dark theme, the color of data label and track line should be white; for light theme, their value should be black. The possible values for sparkline theme are `Material`, `Fabric`, `Bootstrap`, and `High contrast`.
 
-The following code example shows the color for datalabel and track line is set to white for dark theme.
+The following code example shows the color for data label and track line is set to white for dark theme.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

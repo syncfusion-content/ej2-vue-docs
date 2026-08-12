@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dimensions in Vue 3D Chart component | Syncfusion
+title: Chart Dimensions in Vue 3D Chart | Syncfusion
 description: Learn here all about dimensions in Syncfusion 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in Vue 3D Chart component
+# Chart Dimensions in Vue 3D Chart
 
 ## Size for container
 
@@ -43,7 +43,7 @@ The 3D chart can be rendered to its container size and it can be set via inline 
 
 <!-- markdownlint-disable MD036 -->
 
-The size of the 3D chart can be set directly through [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#height) properties.
+The size of the 3D chart can be set directly through [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel#height) properties.
 
 **In Pixel**
 

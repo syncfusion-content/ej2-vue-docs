@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smithchart dimensions in Vue Smithchart component | Syncfusion
+title: Smith Chart Dimensions in Vue Smith Chart | Syncfusion
 description: Learn here all about Smithchart dimensions in Syncfusion Vue Smithchart component of Syncfusion Essential JS 2 and more.
-control: Smithchart dimensions 
+control: Smith Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smithchart dimensions in Vue Smithchart component
+# Smith Chart Dimensions in Vue Smith Chart
 
 You can render the smithchart either corresponding to its container size or you can set the size of the  smithchart as per your requirement. To render the smithchart corresponding to its container size, you need to set the size for the smithchart container. Else to set the size for the smithchart as per your requirement, you can use the width and height properties in the smithchart.
 

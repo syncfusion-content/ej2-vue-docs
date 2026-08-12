@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DateTime axis in Vue 3D Chart component | Syncfusion
+title: DateTime Axis in Vue 3D Chart | Syncfusion
 description: Learn here all about datetime axis in Syncfusion 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# DateTime axis in Vue 3D Chart component
+# DateTime Axis in Vue 3D Chart
 
 ## DateTime axis
 
@@ -27,7 +27,7 @@ DateTime axis uses date time scale and displays the date time values as axis lab
         
 {% previewsample "page.domainurl/code-snippet/chart3d/axis/date-time/dateTime" %}
 
->Note: To use datetime axis, we need to inject `DateTime3D` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#valuetype) of axis to **DateTime**.
+>Note: To use datetime axis, we need to inject `DateTime3D` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#valuetype) of axis to **DateTime**.
 
 ## DateTime category axis
 
@@ -44,11 +44,11 @@ DateTime category axis is used to display the date time values with non-linear i
         
 {% previewsample "page.domainurl/code-snippet/chart3d/axis/date-time/datetime-category" %}
 
->Note: To use datetime category axis, we need to inject `DateTimeCategory3D` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#valuetype) of axis to **DateTimeCategory**.
+>Note: To use datetime category axis, we need to inject `DateTimeCategory3D` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#valuetype) of axis to **DateTimeCategory**.
 
 ### Range
 
-Range of an axis will be calculated automatically based on the provided data. You can also customize the range of an axis using [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#interval) properties.
+Range of an axis will be calculated automatically based on the provided data. You can also customize the range of an axis using [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#interval) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -63,7 +63,7 @@ Range of an axis will be calculated automatically based on the provided data. Yo
 
 ### Interval customization
 
-Date time intervals can be customized by using the [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#interval) and [`intervalType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#intervaltype) properties of the axis. For example, when you set `interval` as **2** and `intervalType` as **Years**, it considers 2 years as interval. DateTime axis supports following interval types,
+Date time intervals can be customized by using the [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#interval) and [`intervalType`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#intervaltype) properties of the axis. For example, when you set `interval` as **2** and `intervalType` as **Years**, it considers 2 years as interval. DateTime axis supports following interval types,
 
 * Auto
 * Years
@@ -86,7 +86,7 @@ Date time intervals can be customized by using the [`interval`](https://ej2.sync
 
 **Applying padding to the range**
 
-Padding can be applied to the minimum and maximum extremes of the range by using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) property. DateTime axis supports the following types of padding,
+Padding can be applied to the minimum and maximum extremes of the range by using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) property. DateTime axis supports the following types of padding,
 
 * None
 * Round
@@ -94,7 +94,7 @@ Padding can be applied to the minimum and maximum extremes of the range by using
 
 **Datetime - None**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to `None`, minimum and maximum of an axis is based on the data.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) is set to `None`, minimum and maximum of an axis is based on the data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -109,7 +109,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **DateTime - Round**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to `Round`, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **15th Jan**, interval is **1** and interval type is **Month**, then the axis minimum will be **Jan 1st**.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) is set to `Round`, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **15th Jan**, interval is **1** and interval type is **Month**, then the axis minimum will be **Jan 1st**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -124,7 +124,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **DateTime - Additional**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to `Additional`, interval of an axis will be padded to the minimum and maximum of the axis.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#rangepadding) is set to `Additional`, interval of an axis will be padded to the minimum and maximum of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -139,7 +139,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 ## Label format
 
-The date can be formatted and parsed to all globalize format using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#labelformat) property in an axis.
+The date can be formatted and parsed to all globalize format using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D#labelformat) property in an axis.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

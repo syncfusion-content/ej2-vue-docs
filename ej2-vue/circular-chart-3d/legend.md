@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in Vue 3D Circular Chart component | Syncfusion
+title: Legend in Vue 3D Circular Chart | Syncfusion
 description: Learn here all about legend in Syncfusion Vue 3D Circular Chart component of Syncfusion Essential JS 2 and more.
 control: Legend 
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend in Vue 3D Circular Chart component
+# Legend in Vue 3D Circular Chart
 
 The legend provides information about the data points rendered in the 3D Circular Chart. It can be added by enabling the `visible` option in the `legendSettings` property.
 

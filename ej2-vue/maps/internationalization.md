@@ -2,7 +2,7 @@
 layout: post
 title: Internationalization in Vue Maps component | Syncfusion
 description: Learn here all about Internationalization in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: Internationalization 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

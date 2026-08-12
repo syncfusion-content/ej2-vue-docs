@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar items in Vue AI AssistView component | Syncfusion
-description: Checkout and learn about Toolbar items with Vue AI AssistView component of Syncfusion Essential JS 2 and more.
+title: Toolbar items in Vue AI AssistView | Syncfusion®
+description: Configure Vue AI AssistView toolbar items across prompt, response, and footer toolbars, including send and attachment actions and positioning.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar items in Vue AI AssistView component
+# Toolbar items in Vue AI AssistView
 
 You can render the AI AssistView toolbar items by using the `items` property in the [toolbarSettings](../api/ai-assistview#toolbarsettings), [responseToolbarSettings](../api/ai-assistview#responsetoolbarsettings), [promptToolbarSettings](../api/ai-assistview#prompttoolbarsettings) & [footerToolbarSettings](../api/ai-assistview#footertoolbarsettings) properties.
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Gauge user interaction in Vue Circular gauge component | Syncfusion
-description: Learn here all about Gauge user interaction in Syncfusion Vue Circular gauge component of Syncfusion Essential JS 2 and more.
-control: Gauge user interaction 
+title: Gauge User Interaction in Vue Circular Gauge | Syncfusion
+description: Learn how to add tooltips for pointers, ranges, and annotations in the Vue Circular Gauge with template support and drag.
+control: Gauge User Interaction
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge user interaction in Vue Circular gauge component
+# Gauge User Interaction in Vue Circular Gauge
 
 ## Tooltip for pointer
 
-Circular gauge will displays the pointer details through [tooltip](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/tooltipSettings/),
+Circular gauge will displays the pointer details through [tooltip](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/tooltipSettings),
 when the mouse is moved over the pointer.
 
 <!-- markdownlint-disable MD036 -->
@@ -75,7 +75,7 @@ The following code example shows the tooltip for the pointer, ranges and annotat
 ### Template
 
 Any HTML elements can be displayed in the tooltip by using the
-[`template`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/tooltipSettings/#template-string) property of the tooltip.
+[`template`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/tooltipSettings#template-string) property of the tooltip.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,7 +91,7 @@ Any HTML elements can be displayed in the tooltip by using the
 ## Pointer Drag
 
 Pointers can be dragged over the axis value. This can be achieved by clicking and dragging the pointer. To enable or disable the pointer drag, you can use
-[`enablePointerDrag`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#enablepointerdrag-boolean) property.
+[`enablePointerDrag`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#enablepointerdrag-boolean) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

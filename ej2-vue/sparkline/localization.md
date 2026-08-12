@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Sparkline component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Sparkline component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue Sparkline | Syncfusion
+description: Learn here all about Localization in Syncfusion Vue Sparkline of Syncfusion Essential JS 2 and more.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Sparkline component
+# Localization in Vue Sparkline
 
 The sparkline control supports localization. The default culture for localization is `en-US`. You can change the culture using the `setCulture` method.
 
@@ -26,7 +26,7 @@ Sparkline tooltip supports localization. The following code sample shows tooltip
 
 ## Rtl
 
-If you set the `enableRtl` property to true, then the sparkline will be rendered from rigt-to-left direction.
+If you set the `enableRtl` property to true, then the sparkline will be rendered from right-to-left direction.
 
 The following example shows the sparkline is render from "Right-to-left".
 

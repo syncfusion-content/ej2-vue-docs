@@ -1,14 +1,14 @@
 ---
 layout: post
-title: File Attachment in Vue AI AssistView component | Syncfusion
-description: Checkout and learn about file attachment with Vue AI AssistView component of Syncfusion Essential JS 2 and more.
+title: File Attachments in Vue AI AssistView | Syncfusion®
+description: Enable file attachments in the Vue AI AssistView so users can upload documents and images alongside prompts using saveUrl and removeUrl settings.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Attachments in Vue AI AssistView control
+# File Attachments in Vue AI AssistView
 
 
 The AI AssistView component supports file attachments, allowing users to include files along with their prompts to provide additional context and enhance interactions. Users can upload documents, images, and other file types to supplement their queries. Enable this functionality using the `enableAttachments` property and customize the behavior through the `attachmentSettings` configuration.

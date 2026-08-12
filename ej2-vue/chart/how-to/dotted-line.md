@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Dotted line in Vue Chart component | Syncfusion
+title: How to add a dotted line in Vue Chart | Syncfusion
 description: Learn here all about Dotted line in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Dotted line 
+control: Dotted line
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Dotted line in Vue Chart component
+# How to add a dotted line in Vue Chart
 
 Dotted lines can be added to a chart by using the `annotation` feature. This approach is commonly used to highlight thresholds, reference values, or specific data points without modifying the series itself.
 

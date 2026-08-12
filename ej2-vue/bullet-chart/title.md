@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Title in Vue Bullet chart component | Syncfusion
+title: Title and Subtitle in Vue Bullet Chart | Syncfusion
 description: Learn here all about Title in Syncfusion Vue Bullet chart component of Syncfusion Essential JS 2 and more.
-control: Title 
+control: Title
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Title in Vue Bullet chart component
+# Title and Subtitle in Vue Bullet Chart
 
 ## Title
 
-The title of the Bullet Chart displays the information about the data plotted by specifying it in the [`title`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#title) property.
+The title of the Bullet Chart displays the information about the data plotted by specifying it in the [`title`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#title) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The title of the Bullet Chart displays the information about the data plotted by
 
 ## Subtitle
 
-To show additional information about the data plotted, the Bullet Chart can also be given a subtitle using the [`subtitle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#subtitle) property.
+To show additional information about the data plotted, the Bullet Chart can also be given a subtitle using the [`subtitle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#subtitle) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,11 +42,11 @@ To show additional information about the data plotted, the Bullet Chart can also
 
 ## Title and SubTitle Position
 
-The title and the subtitle positions can be customized using the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#titleposition) property. Possible positions are **Left**, **Right**, **Top**, and **Bottom**.
+The title and the subtitle positions can be customized using the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#titleposition) property. Possible positions are **Left**, **Right**, **Top**, and **Bottom**.
 
 ### Position as Left
 
-By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#titleposition) to **Left**, you can display the title and subtitle at the left side of the Bullet Chart.
+By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#titleposition) to **Left**, you can display the title and subtitle at the left side of the Bullet Chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/ap
 
 ### Position as Right
 
-By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#titleposition) to **Right**, you can display the title and subtitle at the right side of the Bullet Chart.
+By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#titleposition) to **Right**, you can display the title and subtitle at the right side of the Bullet Chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,7 +76,7 @@ By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/ap
 
 ### Position as Top
 
-By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#titleposition) to **Top**, you can display the title and subtitle at the top of the Bullet Chart. The default title and subtitle positions of the Bullet Chart is **Top**.
+By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#titleposition) to **Top**, you can display the title and subtitle at the top of the Bullet Chart. The default title and subtitle positions of the Bullet Chart is **Top**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,7 +91,7 @@ By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/ap
 
 ### Position as Bottom
 
-By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#titleposition) to **Bottom**, you can display the title and subtitle at the bottom of the Bullet Chart.
+By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#titleposition) to **Bottom**, you can display the title and subtitle at the bottom of the Bullet Chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -106,7 +106,7 @@ By setting the [`titlePosition`](https://ej2.syncfusion.com/vue/documentation/ap
 
 ## Title Customization
 
-The title color, opacity, font size, font family, font weight, and font style can be customized using the [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#titlestyle) property.
+The title color, opacity, font size, font family, font weight, and font style can be customized using the [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#titlestyle) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -121,7 +121,7 @@ The title color, opacity, font size, font family, font weight, and font style ca
 
 ## SubTitle Customization
 
-The sub-title color, opacity, font size, font family, font weight, and font style can be customized using the [`subtitleStyle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#subtitlestyle) property.
+The sub-title color, opacity, font size, font family, font weight, and font style can be customized using the [`subtitleStyle`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#subtitlestyle) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

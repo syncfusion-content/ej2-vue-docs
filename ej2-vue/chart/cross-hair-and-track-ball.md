@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Cross hair and track ball in Vue Chart component | Syncfusion
+title: Crosshair and Trackball in Vue Chart | Syncfusion
 description: Learn here all about Cross hair and track ball in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Cross hair and track ball 
+control: Cross hair and track ball
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cross hair and track ball in Vue Chart component
+# Crosshair and Trackball in Vue Chart
 
 The crosshair feature displays vertical and horizontal guide lines that intersect at the mouse or touch position, helping to identify the corresponding axis values precisely.
 
-Crosshair lines can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#enable) property in the `crosshair` settings.
+Crosshair lines can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings#enable) property in the `crosshair` settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ Crosshair lines can be enabled by setting the [`enable`](https://ej2.syncfusion.
 
 ## Tooltip for axis
 
-Axis tooltip labels can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property of `crosshairTooltip` in the corresponding axis. This tooltip displays the current axis value at the crosshair position.
+Axis tooltip labels can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip#enable) property of `crosshairTooltip` in the corresponding axis. This tooltip displays the current axis value at the crosshair position.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,9 +42,9 @@ Axis tooltip labels can be enabled by setting the [`enable`](https://ej2.syncfus
 
 ## Customization
 
-The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#fill) and [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#textstyle) properties of `crosshairTooltip` are used to customize the background color and font style of the crosshair label.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip#fill) and [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip#textstyle) properties of `crosshairTooltip` are used to customize the background color and font style of the crosshair label.
 
-The color and width of the crosshair lines can be customized by using the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#line) property in the crosshair settings.
+The color and width of the crosshair lines can be customized by using the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#line) property in the crosshair settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ The color and width of the crosshair lines can be customized by using the [`line
 
 ## Crosshair label customization
 
-The [`crosshairLabelRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#crosshairlabelrender) event fires before each crosshair axis label is rendered, allowing you to customize the label's appearance or content, or to prevent it from being displayed.
+The [`crosshairLabelRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel#crosshairlabelrender) event fires before each crosshair axis label is rendered, allowing you to customize the label's appearance or content, or to prevent it from being displayed.
 
 Event arguments:
 
@@ -86,7 +86,7 @@ Event arguments:
 
 ## Snap to data
 
-By enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#snaptodata) property, the crosshair snaps to the nearest data point instead of following the exact mouse position. This improves accuracy when inspecting values.
+By enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel#snaptodata) property, the crosshair snaps to the nearest data point instead of following the exact mouse position. This improves accuracy when inspecting values.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -105,7 +105,7 @@ The trackball feature tracks the data point closest to the mouse or touch positi
 
 To use the trackball feature, inject both `Crosshair` and `Tooltip` into the `provide`.
 
-Trackball functionality can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#enable) property of the crosshair to **true** and the [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings/#shared) property of the tooltip to **true**.
+Trackball functionality can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings#enable) property of the crosshair to **true** and the [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings#shared) property of the tooltip to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -120,9 +120,9 @@ Trackball functionality can be enabled by setting the [`enable`](https://ej2.syn
 
 ## Crosshair highlight
 
-The [`highlightCategory`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#highlightcategory) property highlights the background of the entire category when the crosshair is moved over the chart.
+The [`highlightCategory`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings#highlightcategory) property highlights the background of the entire category when the crosshair is moved over the chart.
 
-The crosshair line color can be customized using the [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#color) property within the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/) configuration.
+The crosshair line color can be customized using the [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel#color) property within the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel) configuration.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

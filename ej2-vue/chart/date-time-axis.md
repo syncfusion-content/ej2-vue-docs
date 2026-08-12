@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date time axis in Vue Chart component | Syncfusion
+title: DateTime Axis in Vue Chart | Syncfusion
 description: Learn here all about Date time axis in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Date time axis 
+control: Date time axis
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date time axis in Vue Chart component
+# DateTime Axis in Vue Chart
 
 ## DateTime Axis
 
@@ -25,7 +25,7 @@ The DateTime axis uses a date-time scale and displays date-time values as axis l
         
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs2" %}
 
-> Note: To use the DateTime axis, inject `DateTime` into the `provide` option and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#valuetype) property of the axis to `DateTime`.
+> Note: To use the DateTime axis, inject `DateTime` into the `provide` option and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#valuetype) property of the axis to `DateTime`.
 
 ## DateTimeCategory Axis
 
@@ -42,7 +42,7 @@ The DateTimeCategory axis is used to render date-time values with non-linear int
         
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs3" %}
 
-> Note: To use the DateTimeCategory axis, inject `DateTimeCategory` into the `provide` option and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#valuetype) property of the axis to `DateTimeCategory`. The axis range can be controlled using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#maximum), and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#interval) properties.
+> Note: To use the DateTimeCategory axis, inject `DateTimeCategory` into the `provide` option and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#valuetype) property of the axis to `DateTimeCategory`. The axis range can be controlled using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#maximum), and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#interval) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ The DateTimeCategory axis is used to render date-time values with non-linear int
 
 ### Interval customization
 
-Date-time intervals can be customized using the [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#interval) and [`intervalType`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#intervaltype) properties of the axis. For example, when the interval is set to `2` and the interval type is set to `Years`, the axis displays labels at two-year intervals.
+Date-time intervals can be customized using the [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#interval) and [`intervalType`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#intervaltype) properties of the axis. For example, when the interval is set to `2` and the interval type is set to `Years`, the axis displays labels at two-year intervals.
 
 The DateTime axis supports the following interval types:
 
@@ -82,14 +82,14 @@ The DateTime axis supports the following interval types:
 
 **Applying padding to the range**
 
-Padding can be applied to the minimum and maximum values of the axis range using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property. The DateTime axis supports the following range padding types:
+Padding can be applied to the minimum and maximum values of the axis range using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property. The DateTime axis supports the following range padding types:
 
 - None
 - Additional
 
 **DateTime – None**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property is set to `None`, the minimum and maximum values of the axis are calculated directly from the data values.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property is set to `None`, the minimum and maximum values of the axis are calculated directly from the data values.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,7 +104,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **DateTime – Round**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property is set to `Round`, the minimum and maximum values are rounded to the nearest interval boundary. For example, if the minimum value is January 15 and the interval type is set to `Months` with an interval of `1`, the axis minimum is adjusted to January 1.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property is set to `Round`, the minimum and maximum values are rounded to the nearest interval boundary. For example, if the minimum value is January 15 and the interval type is set to `Months` with an interval of `1`, the axis minimum is adjusted to January 1.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -119,7 +119,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 **DateTime – Additional**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property is set to `Additional`, an additional interval is added before the minimum and after the maximum values of the axis range to provide extra spacing.
+When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#rangepadding) property is set to `Additional`, an additional interval is added before the minimum and after the maximum values of the axis range to provide extra spacing.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -134,7 +134,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 
 ## Label format
 
-Date values displayed on the DateTime axis can be formatted using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#labelformat) property. This property supports globalized date and time formats for clear and localized label rendering.
+Date values displayed on the DateTime axis can be formatted using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis#labelformat) property. This property supports globalized date and time formats for clear and localized label rendering.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

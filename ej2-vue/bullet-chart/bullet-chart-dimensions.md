@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bullet chart dimensions in Vue Bullet chart component | Syncfusion
+title: Dimensions in Vue Bullet Chart | Syncfusion
 description: Learn here all about Bullet chart dimensions in Syncfusion Vue Bullet chart component of Syncfusion Essential JS 2 and more.
-control: Bullet chart dimensions 
+control: Bullet chart dimensions
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bullet chart dimensions in Vue Bullet chart component
+# Dimensions in Vue Bullet Chart
 
 ## Size for Container
 
@@ -51,7 +51,7 @@ export default {
 
 ## Size for Bullet Chart
 
-The [`width`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#height) properties are used to adjust the size of the Bullet Chart.
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart#height) properties are used to adjust the size of the Bullet Chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

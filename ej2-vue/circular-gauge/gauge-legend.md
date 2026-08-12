@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gauge legend in Vue Circular gauge component | Syncfusion
-description: Learn here all about Gauge legend in Syncfusion Vue Circular gauge component of Syncfusion Essential JS 2 and more.
-control: Gauge legend 
+title: Gauge Legend in Vue Circular Gauge | Syncfusion
+description: Learn how to enable and customize the legend in the Vue Circular Gauge, including position, shape, paging, and toggle options.
+control: Gauge Legend
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge legend in Vue Circular gauge component
+# Gauge Legend in Vue Circular Gauge
 
 Legend provides valuable information for interpreting what the circular gauge axis range displays, and they can be represented in various colors, shapes, and other identifiers based on the data. It gives a breakdown of what each symbol represents in the axis range of circular gauge.
 

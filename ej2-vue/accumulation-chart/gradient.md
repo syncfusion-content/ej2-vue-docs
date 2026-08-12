@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gradient in Vue Accumulation chart component | Syncfusion
-description: Learn here all about Grouping in Syncfusion Vue Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Gradient in Vue Accumulation Chart | Syncfusion
+description: Learn here all about Gradient in Syncfusion Vue Accumulation chart component of Syncfusion Essential JS 2 and more.
 control: Gradient
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gradient in Vue Accumulation chart control
+# Gradient in Vue Accumulation Chart
 
 Gradients add depth and modern styling to charts by smoothly blending multiple colors. The Charts component supports two gradient types:
 
@@ -17,7 +17,7 @@ Gradients add depth and modern styling to charts by smoothly blending multiple c
 
 ## Linear gradient
 
-A linear gradient blends colors along a straight path from a defined start point to an end point. In accumulation charts, a linear gradient can be applied either to the whole series or to each point via the pointRender event. An `linearGradient` is configured with one or more color stops.
+A linear gradient blends colors along a straight path from a defined start point to an end point. In Accumulation Chart, a linear gradient can be applied either to the whole series or to each point via the pointRender event. An `linearGradient` is configured with one or more color stops.
 
 The linear gradient properties are:
 

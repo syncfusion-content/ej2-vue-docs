@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integration of Dialogflow in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Integration of Dialogflow with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Integrate Google Dialogflow with Vue Chat UI | Syncfusion®
+description: Connect the Vue Chat UI to Google Dialogflow for natural language support bot conversations by routing user prompts to the Dialogflow API.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Google Dialogflow With Vue Chat UI component
+# Integrate Google Dialogflow with Vue Chat UI
 
 The Chat UI component integrates with [Google Dialogflow](https://cloud.google.com/dialogflow/docs) to enable advanced conversational AI features in your vue applications. The component acts as a user interface for a support bot, where user prompts are sent to the Dialogflow service via API calls, providing natural language understanding and context-aware responses.
 

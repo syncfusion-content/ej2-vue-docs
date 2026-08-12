@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Assist view in Vue AI AssistView component | Syncfusion
-description: Checkout and learn about Assist view with Vue AI AssistView component of Syncfusion Essential JS 2 and more.
+title: Assist view in Vue AI AssistView | Syncfusion®
+description: Configure the Vue AI AssistView prompt area by setting default prompt text, placeholder text, and the initial conversation view.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Assist view in Vue AI AssistView component
+# Assist view in Vue AI AssistView
 
 ## Setting prompt text
 

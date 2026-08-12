@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Legend in Vue Heatmap chart component | Syncfusion
-description: Learn here all about Legend in Syncfusion Vue Heatmap chart component of Syncfusion Essential JS 2 and more.
-control: Legend 
+title: Legend in Vue HeatMap Chart | Syncfusion
+description: Display a legend in the Syncfusion Vue HeatMap Chart control with gradient or list types, custom placement, alignment, dimensions, paging, and titles.
+control: Legend
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend in Vue Heatmap chart component
+# Legend in Vue HeatMap Chart
 
-The legend is used to provide the information about the heat map cell. You can enable the legend by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#visible) property to **true** and injecting the `Legend` module into the `provide`.
+The legend is used to provide the information about the heat map cell. You can enable the legend by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#visible) property to **true** and injecting the `Legend` module into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -30,7 +30,7 @@ Heat map supports two legend types: Gradient and list type.
 * Gradient - This is a continuous color legend with smooth color transition between palette color values.
 * List - List is a fixed color legend. Each palette color information is shown separately in the list item.
 
-You can change the legend type by using the [type](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings/#type) property in the `paletteSettings` property.
+You can change the legend type by using the [type](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings#type) property in the `paletteSettings` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -45,7 +45,7 @@ You can change the legend type by using the [type](https://ej2.syncfusion.com/vu
 
 ## Placement
 
-You can place the legend at left, right, top, or bottom to the heat map layout by using the [position](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#position) property. The legend is positioned at the right to the heat map by default.
+You can place the legend at left, right, top, or bottom to the heat map layout by using the [position](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#position) property. The legend is positioned at the right to the heat map by default.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -60,7 +60,7 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 
 ## Alignment
 
-You can align the legend as center, far, or near to the heat map using the [alignment](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#alignment) property.
+You can align the legend as center, far, or near to the heat map using the [alignment](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#alignment) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -75,7 +75,7 @@ You can align the legend as center, far, or near to the heat map using the [alig
 
 ## Legend dimensions
 
-You can change the legend dimensions with values in pixels or percentage by using the[width](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#width) and [height](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#height) properties.
+You can change the legend dimensions with values in pixels or percentage by using the[width](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#width) and [height](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#height) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -105,9 +105,9 @@ Paging is available only for the list type legend in the heat map, and it can be
 
 ## Smart Legend
 
-Smart legend is another way of showing list type legend with responsiveness and readability, when the palette has more number of items. You can enable this smart legend by using the [enableSmartLegend](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#enablesmartlegend) property when the palette type is set to **Fixed**.
+Smart legend is another way of showing list type legend with responsiveness and readability, when the palette has more number of items. You can enable this smart legend by using the [enableSmartLegend](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#enablesmartlegend) property when the palette type is set to **Fixed**.
 
-In smart legend, you can change the display type of legend labels by using the [labelDisplayType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#labeldisplaytype) property.
+In smart legend, you can change the display type of legend labels by using the [labelDisplayType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#labeldisplaytype) property.
 
 The following are the legend label display types:
 * All: Displays all labels in the legend.
@@ -127,7 +127,7 @@ The following are the legend label display types:
 
 ## Legend Selection
 
-In the HeatMap, the legend selection is used to toggle the visibility of cell for viewing the specific range value. You can enable the legend selection using the [toggleVisibility](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#togglevisibility) property.
+In the HeatMap, the legend selection is used to toggle the visibility of cell for viewing the specific range value. You can enable the legend selection using the [toggleVisibility](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#togglevisibility) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -141,7 +141,7 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/legend-cs8" %}
 
 ## Legend Title
-The legend title displays a specific information about the legend. You can enable the legend title by setting the [title](../api/heatmap/legendSettings/#title) property by providing the text and customizing the legend title text style using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#textstyle) property.
+The legend title displays a specific information about the legend. You can enable the legend title by setting the [title](../api/heatmap/legendSettings#title) property by providing the text and customizing the legend title text style using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings#textstyle) property.
 
 
 {% tabs %}

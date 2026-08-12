@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Speech-to-Text With Vue Chat UI component | Syncfusion
-description:  Checkout and learn about configuration of Speech-to-Text with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Speech-to-Text in Vue Chat UI | Syncfusion®
+description: Enable Speech-to-Text in the Vue Chat UI using the Web Speech API to transcribe microphone audio into the chat input via a footer template.
 platform: ej2-vue
 control: Chat UI
 documentation: ug

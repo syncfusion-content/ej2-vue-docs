@@ -1,16 +1,16 @@
 ---
 layout: post
-title: MCP With Vue AI AssistView component | Syncfusion
-description:  Checkout and learn about Integration of MCP With Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Integrate MCP with Vue AI AssistView | Syncfusion®
+description: Connect the Vue AI AssistView to an MCP backend for OpenAI-powered chat with local tool capabilities and file-aware analysis via @mentions.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate MCP With Vue AI AssistView component
+# Integrate MCP with Vue AI AssistView
 
-The AI AssistView component can be integrated with an [MCP](https://modelcontextprotocol.io/docs/getting-started/intro) backend to enable conversational AI features powered by OpenAI, along with [local tool](https://modelcontextprotocol.io/docs/develop/connect-local-servers) capabilities such as file-aware analysis via `@mentions`. This integration allows the component to reference files in prompts using `@filename`, inject their contents into the model context, and enables analysis of those files alongside the user’s prompt.
+The AI AssistView component can be integrated with an [MCP](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) backend to enable conversational AI features powered by OpenAI, along with [local tool](https://modelcontextprotocol.io/docs/2026-07-28/develop/connect-local-servers) capabilities such as file-aware analysis via `@mentions`. This integration allows the component to reference files in prompts using `@filename`, inject their contents into the model context, and enables analysis of those files alongside the user’s prompt.
 
 ## Prerequisites
 

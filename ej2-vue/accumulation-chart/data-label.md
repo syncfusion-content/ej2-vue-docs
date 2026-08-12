@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data label in Vue Accumulation chart component | Syncfusion
+title: Data Label in Vue Accumulation Chart | Syncfusion
 description: Learn here all about Data label in Syncfusion Vue Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Data label 
+control: Data label
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data label in Vue Accumulation chart component
+# Data Label in Vue Accumulation Chart
 
-Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings/#visible) option in the dataLabel property.
+Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings#visible) option in the dataLabel property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ Using `angle` property, you can rotate the data label by its given angle.
 
 ## Smart labels
 
-Data labels will be arranged smartly without overlapping with each other. You can enable or disable this feature using the [`enableSmartLabels`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#enablesmartlabels) property.
+Data labels will be arranged smartly without overlapping with each other. You can enable or disable this feature using the [`enableSmartLabels`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel#enablesmartlabels) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -72,7 +72,7 @@ Data labels will be arranged smartly without overlapping with each other. You ca
 
 ## Datalabel template
 
-Label content can be formatted by using the template option. Inside the template, you can add the placeholder text `${point.x}` and `${point.y}` to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings/#template) property, you can set data label
+Label content can be formatted by using the template option. Inside the template, you can add the placeholder text `${point.x}` and `${point.y}` to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings#template) property, you can set data label
 template in chart.
 
 {% tabs %}
@@ -118,7 +118,7 @@ The fill color and the text in the data source can be mapped to the chart using 
 
 ## Format
 
-Data label for the accumulation chart can be formatted using [`format`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
+Data label for the accumulation chart can be formatted using [`format`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel#format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -204,7 +204,7 @@ Individual text can be customized using the `textRender` event.
 
 ## Text wrap
 
-When the data label text exceeds the container, the text can be wrapped by using [`textWrap`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings/#textwrap) property. End user can also wrap the data label text based on [`maxWidth`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings/#maxwidth) property.
+When the data label text exceeds the container, the text can be wrapped by using [`textWrap`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings#textwrap) property. End user can also wrap the data label text based on [`maxWidth`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings#maxwidth) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

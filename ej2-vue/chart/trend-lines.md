@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Trend lines in Vue Chart component | Syncfusion
+title: Trendlines in Vue Chart | Syncfusion
 description: Learn here all about Trend lines in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Trend lines 
+control: Trend lines
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Trend lines in Vue Chart component
+# Trendlines in Vue Chart
 
 Trendlines help identify patterns, direction, and overall trends in numerical data. They project the general movement of data values and are widely used in analytics, forecasting, and financial charts. Trendlines can be added to Cartesian series types such as Line, Column, Scatter, Area, Candle, and Hilo (excluding bar series). Multiple trendlines can be added to a single series based on the analysis needs.
 
@@ -16,7 +16,7 @@ Charts support six types of trendlines: **Linear**, **Exponential**, **Logarithm
 
 ## Linear
 
-A linear trendline is a straight, best‑fit line used to describe data with a constant rate of increase or decrease. Set the trendline [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) to `Linear` and inject the `TrendLines` module using `provide`.
+A linear trendline is a straight, best‑fit line used to describe data with a constant rate of increase or decrease. Set the trendline [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#type) to `Linear` and inject the `TrendLines` module using `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -33,7 +33,7 @@ A linear trendline is a straight, best‑fit line used to describe data with a c
 
 An exponential trendline displays a curved pattern useful when data rises or falls at increasing rates. Exponential trendlines cannot be generated if the dataset includes zero or negative values.
 
-Set the trendline [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) to `Exponential` and inject the `TrendLines` module using `provide`.
+Set the trendline [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#type) to `Exponential` and inject the `TrendLines` module using `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -52,7 +52,7 @@ A logarithmic trendline is a best‑fit curved line suitable when the data incre
 
 A logarithmic trendline can use negative and/or positive values.
 
-Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) to `Logarithmic` and inject the `TrendLines` module using `provide`.
+Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#type) to `Logarithmic` and inject the `TrendLines` module using `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -69,7 +69,7 @@ Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineMod
 
 A polynomial trendline is useful when data fluctuates. It uses a curved line that can model more complex datasets.
 
-Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) to `Polynomial` and inject the `TrendLines` module using `provide`. Use [`polynomialOrder`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#polynomialorder) to define the degree of the polynomial.
+Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#type) to `Polynomial` and inject the `TrendLines` module using `provide`. Use [`polynomialOrder`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#polynomialorder) to define the degree of the polynomial.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -86,7 +86,7 @@ Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineMod
 
 A power trendline is ideal for datasets where measurements increase at a constant rate. It displays a curved line that best fits exponential growth or decay patterns.
 
-Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) to `Power` and inject the `TrendLines` module.
+Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#type) to `Power` and inject the `TrendLines` module.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -101,9 +101,9 @@ Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineMod
 
 ## Moving Average
 
-A moving average trendline smooths fluctuations to reveal overall trends more clearly. The [`period`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#period) property specifies the number of data points used to calculate each average.
+A moving average trendline smooths fluctuations to reveal overall trends more clearly. The [`period`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#period) property specifies the number of data points used to calculate each average.
 
-Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) to `MovingAverage` and inject the `TrendLines` module using `provide`.
+Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#type) to `MovingAverage` and inject the `TrendLines` module using `provide`.
 
 `period` property defines the period to find the moving average.
 
@@ -120,7 +120,7 @@ Set [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineMod
 
 ## Customization of trendline
 
-Customize trendline appearance using the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#fill) property for color and the [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#width) property for line thickness.
+Customize trendline appearance using the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#fill) property for color and the [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel#width) property for line thickness.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

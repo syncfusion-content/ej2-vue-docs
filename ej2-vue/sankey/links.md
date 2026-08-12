@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Links in Vue Sankey Chart component | Syncfusion
+title: Links in Vue Sankey | Syncfusion
 description: Learn here all about Links in Syncfusion Vue Sankey Chart component of Syncfusion Essential JS 2 and more.
 control: Links
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Links in Vue Sankey Chart component
+# Links in Vue Sankey
 
 Links are the connecting paths that visualize flow between nodes in a Sankey Chart. Each link connects a source node to a target node and carries a quantitative value that determines its visual thickness. The Sankey Chart provides comprehensive customization options for link styling, colors, curvature, and interactions.
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Smithchart legend in Vue Smithchart component | Syncfusion
+title: Legend in Vue Smith Chart | Syncfusion
 description: Learn here all about Smithchart legend in Syncfusion Vue Smithchart component of Syncfusion Essential JS 2 and more.
-control: Smithchart legend 
+control: Smith Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Smithchart legend in Vue Smithchart component
+# Legend in Vue Smith Chart
 
 Legend is a key used in smithchart, that contains symbol and descriptions. It provides valuable information for interpreting what the smithchart is displaying and can be represented in various colors, shapes or other identifiers based on the data. In simple words, we can define that legend is used to denote the series rendered in the smithchart.
 

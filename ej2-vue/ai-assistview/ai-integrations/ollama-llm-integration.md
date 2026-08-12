@@ -1,14 +1,14 @@
 ---
 layout: post
-title: LLM Model With Vue AI AssistView component | Syncfusion
-description:  Checkout and learn about Integration of LLM Model With Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Integrate LLM via Ollama with Vue AI AssistView | Syncfusion®
+description: Connect the Vue AI AssistView to a local Ollama-hosted LLM to run AI conversations with natural language understanding and context-aware responses.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate LLM via Ollama with Vue AI AssistView component
+# Integrate LLM via Ollama with Vue AI AssistView
 
 The AI AssistView component integrates with [LLM via Ollama](https://ollama.com) to enable advanced conversational AI features in your Vue application. The component acts as a user interface where user prompts are sent to the selected LLM model via API calls, providing natural language understanding and context-aware responses.
 

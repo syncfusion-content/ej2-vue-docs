@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Labels in Vue Range navigator component | Syncfusion
+title: Labels in Vue Range Navigator | Syncfusion
 description: Learn here all about Labels in Syncfusion Vue Range navigator component of Syncfusion Essential JS 2 and more.
-control: Labels 
+control: Labels
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Labels in Vue Range navigator component
+# Labels in Vue Range Navigator
 
 ## Multilevel labels
 
-The multi-level labels for the Range Selector can be enabled by setting the [`enableGrouping`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#enablegrouping) property to **true**. This is restricted to the DateTime axis alone.
+The multi-level labels for the Range Selector can be enabled by setting the [`enableGrouping`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#enablegrouping) property to **true**. This is restricted to the DateTime axis alone.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The multi-level labels for the Range Selector can be enabled by setting the [`en
 
 ## Grouping
 
-The multi-level labels can be grouped using the [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#groupby) property with the following interval types:
+The multi-level labels can be grouped using the [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#groupby) property with the following interval types:
 
 * Auto
 * Years
@@ -52,7 +52,7 @@ The multi-level labels can be grouped using the [`groupBy`](https://ej2.syncfusi
 
 ## Smart labels
 
-The [`labelIntersectAction`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#labelintersectaction) property is used to avoid overlapping of labels. The following code sample shows the setting of [`labelIntersectAction`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#labelintersectaction) property to **Hide**.
+The [`labelIntersectAction`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#labelintersectaction) property is used to avoid overlapping of labels. The following code sample shows the setting of [`labelIntersectAction`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#labelintersectaction) property to **Hide**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -67,7 +67,7 @@ The [`labelIntersectAction`](https://ej2.syncfusion.com/vue/documentation/api/ra
 
 ## Label positioning
 
-By default, the labels can be placed outside the Range Selector. It can also be placed inside the Range Selector using the [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#labelposition) property.
+By default, the labels can be placed outside the Range Selector. It can also be placed inside the Range Selector using the [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#labelposition) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -82,7 +82,7 @@ By default, the labels can be placed outside the Range Selector. It can also be 
 
 ## Labels customization
 
-The font size, color, family, etc. can be customized using the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#labelstyle) setting.
+The font size, color, family, etc. can be customized using the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator#labelstyle) setting.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

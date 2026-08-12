@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range band in Vue Sparkline component | Syncfusion
-description: Learn here all about Range band in Syncfusion Vue Sparkline component of Syncfusion Essential JS 2 and more.
+title: Range Band in Vue Sparkline | Syncfusion
+description: Learn here all about the Range band in Syncfusion Vue Sparkline of Syncfusion Essential JS 2 and more.
 control: Range band 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range band in Vue Sparkline component
+# Range Band in Vue Sparkline
 
 This section explains how to customize the sparkline with multiple range bands.
 

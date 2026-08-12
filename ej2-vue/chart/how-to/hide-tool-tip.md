@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Hide tool tip in Vue Chart component | Syncfusion
+title: How to hide tooltip in Vue Chart | Syncfusion
 description: Learn here all about Hide tool tip in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Hide tool tip 
+control: Hide tool tip
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Hide tool tip in Vue Chart component
+# How to hide tooltip in Vue Chart
 
 The tooltip displayed for a chart series can be conditionally hidden by using the [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#tooltiprender) event. This is useful when tooltips should be shown only for selected series or specific data points.
 

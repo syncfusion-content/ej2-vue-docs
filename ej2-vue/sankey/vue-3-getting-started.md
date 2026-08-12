@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Vue Sankey Chart Component in Vue 3 | Syncfusion
+title: Getting Started with Vue 3 Sankey Diagram | Syncfusion
 description: Scaffold a Vue 3 project with Vite and integrate Syncfusion EJ2 Vue Sankey Chart, featuring examples using both the Composition and Options APIs.
 control: Vue 3 Getting Started
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Sankey Chart Component in Vue 3
+# Getting Started with Vue Sankey
 
 This article provides a step-by-step guide to setting up a [`Vite`](https://vitejs.dev) project using JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Sankey Chart component with either the [`Composition API`](https://vuejs.org/guide/introduction.html#composition-api) or the [`Options API`](https://vuejs.org/guide/introduction.html#options-api). The Sankey Chart visualizes the flow of values between source and target nodes, which is useful for representing energy, budget, or material transfers.
 

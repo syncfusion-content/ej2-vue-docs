@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Axis types in Vue Stock chart component | Syncfusion
+title: Axis Types in Vue Stock Chart | Syncfusion
 description: Learn here all about Axis types in Syncfusion Vue Stock chart component of Syncfusion Essential JS 2 and more.
-control: Axis types 
+control: Axis types
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis types in Vue Stock chart component
+# Axis Types in Vue Stock Chart
 
 ## DateTime axis
 
-DateTime axis uses date time scale and displays the date time values as axis labels in the specified format. To use DateTime axis, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel/#valuetype) of axis to `DateTime`.
+DateTime axis uses date time scale and displays the date time values as axis labels in the specified format. To use DateTime axis, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel#valuetype) of axis to `DateTime`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,11 +25,11 @@ DateTime axis uses date time scale and displays the date time values as axis lab
         
 {% previewsample "page.domainurl/code-snippet/stockchart/axis-types-cs1" %}
 
->Note: To use this axis, we need to inject `DateTimeService` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel/#valuetype) of axis to `DateTime`.
+>Note: To use this axis, we need to inject `DateTimeService` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel#valuetype) of axis to `DateTime`.
 
 ## DateTimeCategory axis
 
-DateTimeCategory axis in the stock chart is used to display only business days. To use DateTimeCategory axis, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel/#valuetype) of axis to `DateTimeCategory`.
+DateTimeCategory axis in the stock chart is used to display only business days. To use DateTimeCategory axis, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel#valuetype) of axis to `DateTimeCategory`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,13 +42,13 @@ DateTimeCategory axis in the stock chart is used to display only business days. 
         
 {% previewsample "page.domainurl/code-snippet/stockchart/axis-types-cs3" %}
 
->Note: To use this axis, we need to inject `DateTimeCategoryService` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel/#valuetype) of axis to `DateTimeCategory`.
+>Note: To use this axis, we need to inject `DateTimeCategoryService` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel#valuetype) of axis to `DateTimeCategory`.
 
 ## Logarithmic axis
 
 <!-- markdownlint-disable MD033 -->
 
-Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>). To use Logarithmic axis, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel/#valuetype) of axis to `Logarithmic`.
+Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>). To use Logarithmic axis, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel#valuetype) of axis to `Logarithmic`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
         
 {% previewsample "page.domainurl/code-snippet/stockchart/axis-types-cs2" %}
 
->Note: To use this axis, we need to inject `LogarithmicService` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel/#valuetype) of axis to `Logarithmic`.
+>Note: To use this axis, we need to inject `LogarithmicService` into the `provide` and set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel#valuetype) of axis to `Logarithmic`.
 
 ## See also
 

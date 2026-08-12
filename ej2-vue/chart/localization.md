@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Chart component | Syncfusion
+title: Localization in Vue Chart | Syncfusion
 description: Learn here all about Localization in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Localization 
+control: Localization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Chart component
+# Localization in Vue Chart
 
 The localization library localizes the Chart's default text content. Static text used by chart features (for example, zoom toolbar labels) can be translated by providing a locale value and a translation object.
 
@@ -48,7 +48,7 @@ The localization library localizes the Chart's default text content. Static text
 To load translations in an application, load function of L10n class.
 
 For more information about localization, see the localization guide:
-[`localization`](https://ej2.syncfusion.com/vue/documentation/common/localization/)
+[`localization`](https://ej2.syncfusion.com/vue/documentation/common/localization)
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

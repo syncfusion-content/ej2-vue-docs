@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Series label in Vue Chart component | Syncfusion
+title: Series Labels in Vue Chart | Syncfusion
 description: Learn here all about Series label in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Series label 
+control: Series label
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Series label in Vue Chart component
+# Series Labels in Vue Chart
 
 The series label displays the name of each series inline, positioned near the end of the series path or the last visible data point. This helps identify each series without referring to the legend.
 

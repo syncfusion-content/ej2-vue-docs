@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Speech recognition in Vue SpeechToText Component | Syncfusion
-description: Learn here all about speech recognition in Syncfusion Essential Vue SpeechToText component, its elements, and more.
+title: Speech Recognition in Vue Speech To Text | Syncfusion®
+description: Configure Vue Speech To Text recognition with transcripts, language, interim results, listening state, tooltips, custom button content, and error handling.
 platform: ej2-vue
 control: SpeechToText
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Speech recognition in ##Platform_Name## SpeechToText component
+# Speech Recognition in Vue Speech To Text
 
 ## Retrieving Transcripts
 
-The [transcript](../api/speech-to-text/#transcript) property allows you to retrieve the transcribed text generated from the spoken input.
+The [transcript](../api/speech-to-text#transcript) property allows you to retrieve the transcribed text generated from the spoken input.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The [transcript](../api/speech-to-text/#transcript) property allows you to retri
 
 ## Setting Language
 
-The [lang](../api/speech-to-text/#lang) property specifies the language for speech recognition, ensuring the engine correctly interprets spoken words for a given locale (e.g., `en-US` for American English or `fr-FR` for French).
+The [`Lang`](../api/speech-to-text#lang) property specifies the language for speech recognition, ensuring the engine correctly interprets spoken words for a given locale (e.g., `en-US` for American English or `fr-FR` for French).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ The [lang](../api/speech-to-text/#lang) property specifies the language for spee
 
 ## Allowing Interim Results
 
-The [allowInterimResults](../api/speech-to-text/#allowInterimResults) property controls whether interim (real-time) or final speech recognition results are provided. When `true`, results are displayed as the user speaks; otherwise, only the final transcript is shown. This property is `true` by default.
+The [allowInterimResults](../api/speech-to-text#allowInterimResults) property controls whether interim (real-time) or final speech recognition results are provided. When `true`, results are displayed as the user speaks; otherwise, only the final transcript is shown. This property is `true` by default.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ The [allowInterimResults](../api/speech-to-text/#allowInterimResults) property c
 
 ## Managing Listening State
 
-The [listeningState](../api/speech-to-text/#listeningState) property manages and indicates the component's current status. It can be `Inactive` (idle), `Listening` (actively capturing audio), or `Stopped` (recognition complete). The default state is `Inactive`.
+The [listeningState](../api/speech-to-text#listeningState) property manages and indicates the component's current status. It can be `Inactive` (idle), `Listening` (actively capturing audio), or `Stopped` (recognition complete). The default state is `Inactive`.
 
 ### Inactive
 
@@ -71,7 +71,7 @@ The component is actively listening, capturing, and transcribing speech, indicat
 
 Denotes that speech recognition has ended, and no further speech is being processed.
 
-The following sample demonstrates the usage of the [listeningState](../api/speech-to-text/#listeningState) property.
+The following sample demonstrates the usage of the [listeningState](../api/speech-to-text#listeningState) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -86,7 +86,7 @@ The following sample demonstrates the usage of the [listeningState](../api/speec
 
 ## Show or Hide Tooltip
 
-The [showTooltip](../api/speech-to-text/#showTooltip) property determines whether to display a tooltip when hovering over the SpeechToText button. It is enabled by default.
+The [showTooltip](../api/speech-to-text#showTooltip) property determines whether to display a tooltip when hovering over the SpeechToText button. It is enabled by default.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -118,7 +118,7 @@ The following example shows how to configure `buttonSettings` in the SpeechToTex
 
 ## Setting Disabled
 
-The [disabled](../api/speech-to-text/#disabled) property, when set to `true`, disables the SpeechToText component and prevents user interaction. By default, it is `false`.
+The [disabled](../api/speech-to-text#disabled) property, when set to `true`, disables the SpeechToText component and prevents user interaction. By default, it is `false`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -133,7 +133,7 @@ The [disabled](../api/speech-to-text/#disabled) property, when set to `true`, di
 
 ## Setting HTML Attributes
 
-You can use the [htmlAttributes](../api/speech-to-text/#htmlAttributes) property to assign custom attributes to the SpeechToText component for the button element.
+You can use the [htmlAttributes](../api/speech-to-text#htmlAttributes) property to assign custom attributes to the SpeechToText component for the button element.
 
 ## Error Handling
 

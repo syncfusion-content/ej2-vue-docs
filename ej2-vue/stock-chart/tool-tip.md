@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool tip in Vue Stock chart component | Syncfusion
+title: Tooltip in Vue Stock Chart | Syncfusion
 description: Learn here all about Tool tip in Syncfusion Vue Stock chart component of Syncfusion Essential JS 2 and more.
-control: Tool tip 
+control: Tool tip
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool tip in Vue Stock chart component
+# Tooltip in Vue Stock Chart
 
 <!-- markdownlint-disable MD036 -->
 
@@ -16,7 +16,7 @@ StockChart will display details about the points through tooltip, when the mouse
 
 ## Default tooltip
 
-By default, tooltip is not visible. Enable the tooltip by setting [`enable`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettings/#enable) property to true and by injecting [`Tooltip`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettings/)
+By default, tooltip is not visible. Enable the tooltip by setting [`enable`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettings#enable) property to true and by injecting [`Tooltip`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettings)
 into the `provide`.
 
 {% tabs %}
@@ -51,7 +51,7 @@ value.
 
 ## Position the tooltip
 
-By default, the tooltip is positioned at the left side of the stock chart. You can move the tooltip along with the mouse by setting **Nearest** to the [`position`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockTooltipSettings/#position) property.
+By default, the tooltip is positioned at the left side of the stock chart. You can move the tooltip along with the mouse by setting **Nearest** to the [`position`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockTooltipSettings#position) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -66,7 +66,7 @@ By default, the tooltip is positioned at the left side of the stock chart. You c
 
 ## Customize the appearance of the tooltip
 
-The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettingsModel/#fill-string) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettingsModel/#border-bordermodel) properties are used to customize the background color and border of the tooltip respectively. The [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettingsModel/#textstyle-fontmodel) property in the tooltip is used to customize the font of the tooltip text.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettingsModel#fill-string) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettingsModel#border-bordermodel) properties are used to customize the background color and border of the tooltip respectively. The [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/tooltipSettingsModel#textstyle-fontmodel) property in the tooltip is used to customize the font of the tooltip text.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

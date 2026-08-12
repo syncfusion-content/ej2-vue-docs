@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in Vue 3D Chart component | Syncfusion
+title: Legend in Vue 3D Chart | Syncfusion
 description: Learn here all about chart legend in Syncfusion 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Legend in Vue 3D Chart component
+# Legend in Vue 3D Chart
 
 <!-- markdownlint-disable MD036 -->
 

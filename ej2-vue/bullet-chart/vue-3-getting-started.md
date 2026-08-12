@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue 3 Getting Started with the Bullet Chart Component | Syncfusion
+title: Getting Started with Vue 3 Bullet Chart | Syncfusion
 description: Create a Vite-based Vue 3 project and integrate the Syncfusion Bullet Chart component using the Composition API or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Bullet Chart Component in Vue 3
+# Getting Started with Vue Bullet Chart
 
-This article provides a step-by-step guide to setting up a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to setting up a [Vite](https://vite.dev) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The **Composition API** groups related logic into reusable functions. The **Options API** organizes component logic with options such as `data`, `methods`, and life cycle hooks. Choose the API that best fits the application's structure.
 
@@ -328,6 +328,6 @@ For additional assistance, refer to the [Vue Bullet Chart API documentation](htt
 - [Vue Bullet Chart overview](https://www.syncfusion.com/vue-components/vue-bullet-chart)
 - [Vue Bullet Chart Demos](https://ej2.syncfusion.com/vue/demos/#/material3/bullet-chart/default.html)
 - [Vue Bullet Chart customization](https://ej2.syncfusion.com/vue/documentation/bullet-chart/customization)
-- [Vue 3 Migration Guide](https://v3-migration.vuejs.org/)
+- [Vue 3 Migration Guide](https://v3-migration.vuejs.org)
 - [Getting Started with Vue UI Components using the Composition API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-composition)
 - [Getting Started with Vue UI Components using the Options API and TypeScript](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-ts-options)

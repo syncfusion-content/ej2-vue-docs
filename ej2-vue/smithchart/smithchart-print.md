@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smithchart print in Vue Smithchart component | Syncfusion
+title: Print and Export in Vue Smith Chart | Syncfusion
 description: Learn here all about Smithchart print in Syncfusion Vue Smithchart component of Syncfusion Essential JS 2 and more.
-control: Smithchart print 
+control: Smith Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smithchart print in Vue Smithchart component
+# Print and Export in Vue Smith Chart
 
 ## Print
 

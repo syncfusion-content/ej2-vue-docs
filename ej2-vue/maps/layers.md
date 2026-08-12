@@ -2,7 +2,7 @@
 layout: post
 title: Layers in Vue Maps component | Syncfusion
 description: Explore here all about Layers in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
-control: Layers 
+control: Maps
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

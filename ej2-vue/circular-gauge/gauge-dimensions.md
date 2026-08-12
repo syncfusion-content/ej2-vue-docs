@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gauge dimensions in Vue Circular gauge component | Syncfusion
-description: Learn here all about Gauge dimensions in Syncfusion Vue Circular gauge component of Syncfusion Essential JS 2 and more.
-control: Gauge dimensions 
+title: Gauge Dimensions in Vue Circular Gauge | Syncfusion
+description: Learn how to set the width and height of the Vue Circular Gauge using pixel or percentage values to fit its container.
+control: Gauge Dimensions
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge dimensions in Vue Circular gauge component
+# Gauge Dimensions in Vue Circular Gauge
 
 ## Size for Container
 
@@ -29,7 +29,7 @@ Circular gauge can render to its container size. You can set the size via inline
 
 <!-- markdownlint-disable MD036 -->
 
-You can also set size for the gauge directly through [`width`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#width-string) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#height-string) properties.
+You can also set size for the gauge directly through [`width`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#width-string) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#height-string) properties.
 
 ### In Pixel
 

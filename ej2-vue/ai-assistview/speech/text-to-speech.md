@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text-to-Speech With Vue AI AssistView component | Syncfusion
-description:  Checkout and learn about configuration of Text-to-Speech with Azure OpenAI in Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Text-to-Speech in Vue AI AssistView | Syncfusion®
+description: Enable Text-to-Speech in the Vue AI AssistView using the browser SpeechSynthesis API to read AI responses aloud for accessible voice output.
 platform: ej2-vue
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text to Speech in AI AssistView
+# Text-to-Speech in Vue AI AssistView
 
 The Syncfusion Vue AI AssistView component provides built-in `Text-to-Speech` (TTS) support using the browser's Web Speech API, specifically the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface. This allows AI-generated responses into spoken audio, enhancing accessibility and user interaction.
 

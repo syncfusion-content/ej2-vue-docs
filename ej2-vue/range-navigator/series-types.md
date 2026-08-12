@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Series types in Vue Range navigator component | Syncfusion
+title: Series Types in Vue Range Navigator | Syncfusion
 description: Learn here all about Series types in Syncfusion Vue Range navigator component of Syncfusion Essential JS 2 and more.
-control: Series types 
+control: Series types
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Series types in Vue Range navigator component
+# Series Types in Vue Range Navigator
 
 To render the data, the Range Selector supports three types of series.
 

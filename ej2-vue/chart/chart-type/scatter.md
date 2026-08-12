@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scatter Chart in Vue Charts | Syncfusion
-description: Learn here all about Scatter Chart in Syncfusion Vue Charts component of Syncfusion Essential JS 2 and more.
+title: Scatter Chart in Vue Chart | Syncfusion
+description: Learn here all about Scatter Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
 control: Scatter Chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scatter Chart in Vue Charts
+# Scatter Chart in Vue Chart
 
 ## Scatter Chart
 

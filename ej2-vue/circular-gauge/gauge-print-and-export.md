@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Print and export in Vue Circular Gauge component | Syncfusion
-description: Learn here all about print and export in Syncfusion Vue Circular Gauge component of Syncfusion Essential JS 2 and more.
-control: Gauge print and export 
+title: Print and Export in Vue Circular Gauge | Syncfusion
+description: Learn how to print the Vue Circular Gauge and export it as image (JPEG, PNG, SVG) or PDF using the built-in methods.
+control: Print and Export
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print and export in Vue Circular Gauge component
+# Print and Export in Vue Circular Gauge
 
 ## Print
 
-The Circular Gauge can be printed directly from the browser by calling the [print](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#print) method. More information on the arguments for this method can be found [here](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#print).
+The Circular Gauge can be printed directly from the browser by calling the [print](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#print) method. More information on the arguments for this method can be found [here](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#print).
 
 >To use the print functionality, inject the `Print` module using the `provide` option and set the property `allowPrint` in the Circular Gauge to **true**.
 
@@ -31,7 +31,7 @@ The Circular Gauge can be printed directly from the browser by calling the [pri
 
 ### Image Export
 
-The Circular Gauge can be exported as an image in **JPEG**, **PNG** and **SVG** formats. To use the image export functionality, inject the `ImageExport` module using the `provide` option and set the Circular Gauge's [allowImageExport](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#allowimageexport) property to **true**. When the [export](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#export) method is used, the Circular Gauge will be exported as an image. The `export` method requires the following parameters for image export.
+The Circular Gauge can be exported as an image in **JPEG**, **PNG** and **SVG** formats. To use the image export functionality, inject the `ImageExport` module using the `provide` option and set the Circular Gauge's [allowImageExport](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#allowimageexport) property to **true**. When the [export](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#export) method is used, the Circular Gauge will be exported as an image. The `export` method requires the following parameters for image export.
 
 |   Parameter          |   Description                               |
 |----------------------| --------------------------------------------|
@@ -66,7 +66,7 @@ The base64 string of the exported image files can only be received using the `ex
 
 ### PDF Export
 
-The Circular Gauge can be exported as a PDF document using [export](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#export) method. To use the PDF export functionality, inject the `PdfExport` module using the `provide` option and set the Circular Gauge's [allowPdfExport](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#allowpdfexport) property to **true**. The `export` method requires the following parameters for PDF export.
+The Circular Gauge can be exported as a PDF document using [export](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#export) method. To use the PDF export functionality, inject the `PdfExport` module using the `provide` option and set the Circular Gauge's [allowPdfExport](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge#allowpdfexport) property to **true**. The `export` method requires the following parameters for PDF export.
 
 |   Parameter          |   Description                               |
 |----------------------| --------------------------------------------|

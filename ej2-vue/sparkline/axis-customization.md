@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis customization in Vue Sparkline component | Syncfusion
-description: Learn here all about Axis customization in Syncfusion Vue Sparkline component of Syncfusion Essential JS 2 and more.
+title: Axis Customization in Vue Sparkline | Syncfusion
+description: Learn here all about Axis customization in Syncfusion Vue Sparkline of Syncfusion Essential JS 2 and more.
 control: Axis customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis customization in Vue Sparkline component
+# Axis Customization in Vue Sparkline
 
 You can customize axis value types and min and max values of the sparkline.
 

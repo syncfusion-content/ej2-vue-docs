@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template customization in Vue Inline AI Assist component | Syncfusion
-description: Checkout and learn about templates with Vue Inline AI Assist component of Syncfusion Essential JS 2 and more.
+title: Template Customization in Vue Inline AI Assist | Syncfusion®
+description: Customize the Vue Inline AI Assist with editor and response templates to control the footer area and the appearance of each response item.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template customization in Vue Inline AI Assist component
+# Template Customization in Vue Inline AI Assist
 
 The Inline AI Assist provides the template options to customize the response and footer items.
 

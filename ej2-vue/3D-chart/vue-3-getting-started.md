@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Vue 3 Getting Started with the 3D Chart Component | Syncfusion
+title: Getting Started with Vue 3 3D Chart | Syncfusion
 description: Create a Vite-based Vue 3 project and integrate the Syncfusion Essential JS 2 3D Chart component using the Composition API or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
-domainurl: https://ej2.syncfusion.com
+domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue 3D Chart Component in Vue 3
+# Getting Started with Vue 3D Chart
 
-This article provides a step-by-step guide to setting up a [Vite](https://vite.dev/) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to setting up a [Vite](https://vite.dev) project with JavaScript and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Chart component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The **Composition API** groups related logic into reusable functions and is suitable for larger code bases. The **Options API** organizes component logic with options such as `data`, `methods`, and life cycle hooks. Choose the API that best fits the application's structure and maintainability requirements.
 
@@ -389,7 +389,7 @@ Open the local URL displayed in the terminal, commonly `http://localhost:5173`, 
 
 > **Sample:** Explore the [Vue 3D Chart getting-started project](https://github.com/SyncfusionExamples/getting-started-with-the-vue-3d-chart-component).
 
-For information about migrating an application from Vue 2 to Vue 3, see the [Vue 3 Migration Guide](https://v3-migration.vuejs.org/).
+For information about migrating an application from Vue 2 to Vue 3, see the [Vue 3 Migration Guide](https://v3-migration.vuejs.org).
 
 ## Troubleshooting
 

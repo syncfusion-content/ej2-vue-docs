@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Inline toolbar in Vue Inline AI Assist component | Syncfusion
-description: Checkout and learn about inline toolbar with Vue Inline AI Assist component of Syncfusion Essential JS 2 and more.
+title: Inline Toolbar Configuration in Vue Inline AI Assist | Syncfusion®
+description: Configure the Vue Inline AI Assist inline toolbar with custom items and choose between Inline and Bottom positioning for the prompt controls.
 platform: ej2-vue
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar configuration in Vue Inline AI Assist component
+# Inline Toolbar Configuration in Vue Inline AI Assist
 
 The inline toolbar provides a customizable interface for users to interact with the Inline AI Assist component. You can render inline toolbar items by using the `items` property in the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property.
 

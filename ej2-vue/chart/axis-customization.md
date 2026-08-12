@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis customization in Vue Chart component | Syncfusion
+title: Axis customization in Vue Chart | Syncfusion
 description: Learn here all about Axis customization in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Axis customization 
+control: Axis customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis customization in Vue Chart component
+# Axis customization in Vue Chart
 
 ## Axis Crossing
 

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Appearance in Vue HeatMap chart component | Syncfusion
-description: Learn here all about Appearance in Syncfusion Vue HeatMap chart component of Syncfusion Essential JS 2 and more.
-control: Appearance 
+title: Appearance in Vue HeatMap Chart | Syncfusion
+description: Customize the appearance of the Syncfusion Vue HeatMap Chart control with options for cell border, background color, margin, title, and data label templates.
+control: Appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue HeatMap chart component
+# Appearance in Vue HeatMap Chart
 
 ## Cell customization
 
-You can customize the cell by using the [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellsettings) property.
+You can customize the cell by using the [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellsettings) property.
 
 ### Border
 
-Change the width, color, and radius of the heat map cells by using the [border](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#border) property.
+Change the width, color, and radius of the heat map cells by using the [border](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings#border) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,7 +31,7 @@ Change the width, color, and radius of the heat map cells by using the [border](
 
 ### Cell highlighting
 
-Enable or disable the cell highlighting while hovering over the heat map cells by using the [enableCellHighlighting](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#enablecellhighlighting) property.
+Enable or disable the cell highlighting while hovering over the heat map cells by using the [enableCellHighlighting](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings#enablecellhighlighting) property.
 
 >Note: The cell highlighting only works in a SVG rendering mode.
 
@@ -48,7 +48,7 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
 
 ### Color gradient mode
 
-The [colorGradientMode](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettingsModel/#colorgradientmode) property can be used to set the minimum and maximum values for colors based on row and column.
+The [colorGradientMode](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettingsModel#colorgradientmode) property can be used to set the minimum and maximum values for colors based on row and column.
 
 Three types of color gradient modes are available.
 
@@ -71,7 +71,7 @@ Three types of color gradient modes are available.
 
 ## Background color
 
-The background color of the HeatMap can be customized using the [backgroundColor](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#backgroundcolor) property.
+The background color of the HeatMap can be customized using the [backgroundColor](https://ej2.syncfusion.com/vue/documentation/api/heatmap#backgroundcolor) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -86,7 +86,7 @@ The background color of the HeatMap can be customized using the [backgroundColor
 
 ## Margin
 
-Set the margin for the HeatMap from its container by using the [margin](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#margin) property.
+Set the margin for the HeatMap from its container by using the [margin](https://ej2.syncfusion.com/vue/documentation/api/heatmap#margin) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -101,7 +101,7 @@ Set the margin for the HeatMap from its container by using the [margin](https://
 
 ## Title
 
-The title is used to provide a quick information about the data plotted in heatmap. The [text](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title/#text) property is used to set the title for the heatmap. The text style of the title can be customized by using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title/#textstyle) property.
+The title is used to provide a quick information about the data plotted in heatmap. The [text](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title#text) property is used to set the title for the heatmap. The text style of the title can be customized by using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title#textstyle) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -116,7 +116,7 @@ The title is used to provide a quick information about the data plotted in heatm
 
 ## Data label
 
-The visibility of data labels can be toggled using the [showLabel](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#showlabel) property. By default, the data labels will be visible.
+The visibility of data labels can be toggled using the [showLabel](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings#showlabel) property. By default, the data labels will be visible.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -131,7 +131,7 @@ The visibility of data labels can be toggled using the [showLabel](https://ej2.s
 
 ### Customize the data label
 
-The label displayed in the HeatMap cell can be changed using the [cellRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellrender) event.
+The label displayed in the HeatMap cell can be changed using the [cellRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellrender) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -146,7 +146,7 @@ The label displayed in the HeatMap cell can be changed using the [cellRender](ht
 
 ### Text style
 
-The text attributes of the data label such as font-family, font-size, and color can be customized using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#textstyle) in the [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellsettings) property.
+The text attributes of the data label such as font-family, font-size, and color can be customized using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings#textstyle) in the [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -161,7 +161,7 @@ The text attributes of the data label such as font-family, font-size, and color 
 
 ### Format
 
-The format of the data label, such as currency, decimal, percent etc. can be changed using [format](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#format) property.
+The format of the data label, such as currency, decimal, percent etc. can be changed using [format](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings#format) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -176,7 +176,7 @@ The format of the data label, such as currency, decimal, percent etc. can be cha
 
 ### Template
 
-Any HTML elements can be added as a template in the data labels by using the [labelTemplate](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#labeltemplate) property of [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings) in the HeatMap.
+Any HTML elements can be added as a template in the data labels by using the [labelTemplate](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings#labeltemplate) property of [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings) in the HeatMap.
 
 The following examples show various data binding methods in the HeatMap using the `labelTemplate` property.
 
@@ -250,4 +250,4 @@ The following example demonstrates how to add a data label template for JSON cel
 
 ## See Also
 
-* [To customize the appearance of tool tip](./tooltip/#customize-the-appearance-of-tooltip)
+* [To customize the appearance of tool tip](./tooltip#customize-the-appearance-of-tooltip)

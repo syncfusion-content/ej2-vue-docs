@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data editing in Vue Chart component | Syncfusion
+title: Data editing in Vue Chart | Syncfusion
 description: Learn here all about Data editing in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Data editing 
+control: Data editing
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data editing in Vue Chart component
+# Data editing in Vue Chart
 
 ## Enable Data Editing
 

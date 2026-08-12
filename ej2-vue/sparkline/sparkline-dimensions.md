@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sparkline dimensions in Vue Sparkline component | Syncfusion
-description: Learn here all about Sparkline dimensions in Syncfusion Vue Sparkline component of Syncfusion Essential JS 2 and more.
+title: Sparkline Dimensions in Vue Sparkline | Syncfusion
+description: Learn here all about Sparkline dimensions in Syncfusion Vue Sparkline of Syncfusion Essential JS 2 and more.
 control: Sparkline dimensions 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sparkline dimensions in Vue Sparkline component
+# Sparkline Dimensions in Vue Sparkline
 
 ## Size for container
 
@@ -27,7 +27,7 @@ Sparkline can be rendered to its container size. You can set the size through in
 
 <!-- markdownlint-disable MD036 -->
 
-You can also set the size for sparkline directly using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/sparkline/#width-string) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/sparkline/#height-string) properties.
+You can also set the size for sparkline directly using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/sparkline#width-string) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/sparkline#height-string) properties.
 
 ### In pixel
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue 3 Getting Started with the TreeMap Component | Syncfusion
+title: Getting Started with Vue 3 TreeMap | Syncfusion
 description: Create a Vite-based Vue 3 project and integrate the Syncfusion Vue TreeMap component with data binding using the Composition API or Options API.
 control: TreeMap
 platform: ej2-vue
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue TreeMap Component in Vue 3
+# Getting Started with Vue 3 TreeMap
 
-This article provides a step-by-step guide to creating a [Vite](https://vite.dev/) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide to creating a [Vite](https://vite.dev#) JavaScript project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeMap component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The TreeMap visualizes flat or hierarchical data as nested rectangles. Each rectangle is sized by a numeric weight and can be colored by a category or numeric range. The example in this guide binds airport-count data, applies equal color mapping, and displays a legend.
 

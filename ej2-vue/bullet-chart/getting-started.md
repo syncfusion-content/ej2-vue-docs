@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with the Vue Bullet Chart Component | Syncfusion
+title: Getting Started with Vue Bullet Chart | Syncfusion
 description: Set up a Vue 2 application and integrate the Syncfusion Essential JS 2 Vue Bullet Chart component with module registration, and data binding.
 control: Getting started
 platform: ej2-vue
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Bullet Chart Component in Vue 2
+# Getting Started with Vue Bullet Chart
 
-This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component.
+This article provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Bullet Chart component.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Use a package release that supports Vue 2. Before upgrading, check the [Vue syst
 
 ## Setting Up the Vue 2 Project
 
-Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org/#getting-started) command.
+Install Vue CLI globally using either npm or yarn, and create a project with the [`vue create`](https://cli.vuejs.org#getting-started) command.
 
 **npm**
 

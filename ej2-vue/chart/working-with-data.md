@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Working with data in Vue Chart component | Syncfusion
+title: Working with Data in Vue Chart | Syncfusion
 description: Learn here all about Working with data in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Working with data 
+control: Working with data
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Working with data in Vue Chart component
+# Working with Data in Vue Chart
 
 The [Vue Charts](https://www.syncfusion.com/vue-components/vue-charts) component supports multiple data binding approaches to suit different application scenarios. Data can be bound from local JSON arrays, dynamically loaded on demand with lazy loading, or fetched from remote services using various adaptor patterns. This guide covers all available data binding methods, helping you choose the right approach for your use case based on data size, performance requirements, and back-end architecture.
 ## Choosing a data binding approach
@@ -67,7 +67,7 @@ Bind remote data from a web service by using the `DataManager` class. The DataMa
 
 ## Binding data using ODataAdaptor
 
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data via REST APIs. Use the ODataAdaptor with DataManager to retrieve data from OData services. The adaptor automatically constructs the correct query syntax and handles standard OData conventions.
+[OData](https://www.odata.org/documentation/odata-version-3-0) is a standardized protocol for creating and consuming data via REST APIs. Use the ODataAdaptor with DataManager to retrieve data from OData services. The adaptor automatically constructs the correct query syntax and handles standard OData conventions.
 **Example use case:** Querying a product sales service that implements OData v3.0 filtering, sorting, and pagination.
 
 {% tabs %}

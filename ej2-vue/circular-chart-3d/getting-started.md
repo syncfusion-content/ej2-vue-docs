@@ -1,6 +1,6 @@
  ---
 layout: post
-title: Getting Started with the Vue 3D Circular Chart Component | Syncfusion
+title: Getting Started with Vue 3D Circular Chart | Syncfusion
 description: Set up a Vue 2 application and integrate the Syncfusion EJ2 Vue 3D Circular Chart with project setup, module registration, and data binding.
 control: Getting started
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue 3D Circular Chart Component in Vue 2
+# Getting Started with the Vue 3D Circular Chart in Vue 2
 
 This section provides a step-by-step guide to creating a Vue 2 application using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 3D Circular Chart component.
 

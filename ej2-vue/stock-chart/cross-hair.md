@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cross hair in Vue Stock chart component | Syncfusion
+title: Crosshair in Vue Stock Chart | Syncfusion
 description: Learn here all about Cross hair in Syncfusion Vue Stock chart component of Syncfusion Essential JS 2 and more.
-control: Cross hair 
+control: Cross hair
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cross hair in Vue Stock chart component
+# Crosshair in Vue Stock Chart
 
 Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.
 

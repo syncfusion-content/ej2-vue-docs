@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Typing Indicator in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Typing Indicator with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Typing Indicator in Vue Chat UI | Syncfusion®
+description: Show real-time typing indicators in the Vue Chat UI by populating the typingUsers array with UserModel objects representing active typers.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Typing Indicator in Vue Chat UI component
+# Typing Indicator in Vue Chat UI
 
 The typing indicator provides real-time visual feedback to show when other users are composing a message. This feature enhances the user experience by making conversations feel more interactive and responsive, indicating that a reply is in progress.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Selection in Vue HeatMap chart component | Syncfusion
-description: Learn here all about Selection in Syncfusion Vue HeatMap chart component of Syncfusion Essential JS 2 and more.
-control: Selection 
+title: Selection in Vue HeatMap Chart | Syncfusion
+description: Select single or multiple cells in the Syncfusion Vue HeatMap Chart control using mouse, touch, or keyboard interactions with the allowSelection property.
+control: Selection
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in Vue HeatMap chart component
+# Selection in Vue HeatMap Chart
 
-In the HeatMap, the cell selection is used to select single or multiple HeatMap cells at runtime and get the selected cell details using the [cellSelected](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellselected) event. You can enable the cell selection using the [allowSelection](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#allowselection) property.
+In the HeatMap, the cell selection is used to select single or multiple HeatMap cells at runtime and get the selected cell details using the [cellSelected](https://ej2.syncfusion.com/vue/documentation/api/heatmap#cellselected) event. You can enable the cell selection using the [allowSelection](https://ej2.syncfusion.com/vue/documentation/api/heatmap#allowselection) property.
 
 The HeatMap cells can be selected using the following interactions, as shown in the table below.
 
@@ -33,7 +33,7 @@ The HeatMap cells can be selected using the following interactions, as shown in 
 
 ## Enable single cell selection
 
-In the HeatMap, the [enableMultiSelect](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#enablemultiselect) property is used to allow single cell selection. When you set the `enableMultiSelect` property to **false**, only one cell is selected. By default, `enableMultiSelect` property is set to **true**.
+In the HeatMap, the [enableMultiSelect](https://ej2.syncfusion.com/vue/documentation/api/heatmap#enablemultiselect) property is used to allow single cell selection. When you set the `enableMultiSelect` property to **false**, only one cell is selected. By default, `enableMultiSelect` property is set to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -48,7 +48,7 @@ In the HeatMap, the [enableMultiSelect](https://ej2.syncfusion.com/vue/documenta
 
 ### Clearing cell selection
 
-The [clearSelection](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#clearselection) method can be used to clear all the selected cells. The below example illustrates the same.
+The [clearSelection](https://ej2.syncfusion.com/vue/documentation/api/heatmap#clearselection) method can be used to clear all the selected cells. The below example illustrates the same.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

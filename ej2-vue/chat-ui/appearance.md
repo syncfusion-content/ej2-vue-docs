@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Appearance with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Appearance in Vue Chat UI | Syncfusion®
+description: Customize the Vue Chat UI appearance by setting placeholder text, width, and other visual properties to fit your application layout.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue Chat UI component
+# Appearance in Vue Chat UI
 
 ## Setting placeholder
 

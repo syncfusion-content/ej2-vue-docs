@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue 3 Getting Started with the Stock Chart Component | Syncfusion
+title: Getting Started with Vue 3 Stock Charts | Syncfusion
 description: Quick guide to scaffold a Vite‑Vue 3 app and integrate Syncfusion Stock Chart with setup steps and examples for Composition and Options APIs.
 control: Vue 3 Getting Started
 platform: ej2-vue
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Stock Chart Component in Vue 3
+# Getting Started with Vue Stock Chart
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Stock Chart component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
