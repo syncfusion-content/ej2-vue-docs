@@ -1,14 +1,14 @@
 ---
 layout: post
-title: customization with Vue Smart TextArea component | Syncfusion
-description:  Checkout and learn about Suggestion Customization with Vue Smart TextArea component of Syncfusion Essential JS 2 and more details.
+title: Customization in Vue Smart TextArea | Syncfusion
+description: Control how AI suggestions appear in the Vue Smart TextArea by toggling the ShowSuggestionOnPopup property to display them in a popup or inline.
 control: Customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing Appearance of Suggestions 
+# Customization in Vue Smart TextArea
 
 The [ShowSuggestionOnPopup](https://ej2.syncfusion.com/vue/documentation/api/smart-textarea/#showsuggestiononpopup) property in Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Smart TextArea allows you to control how text suggestions are displayed to the users.
 
