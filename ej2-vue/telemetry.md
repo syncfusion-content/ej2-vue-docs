@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Telemetry in Vue Control | Syncfusion
-description: Learn here all about Telemetry in Syncfusion Vue Telemetry control, including telemetry collection, usage tracking, configuration, and troubleshooting.
+title: Telemetry in Vue Components | Syncfusion
+description: Learn about telemetry in Syncfusion Vue components, including data collection, usage tracking, configuration, and troubleshooting.
 platform: ej2-vue
 control: Telemetry
 documentation: ug

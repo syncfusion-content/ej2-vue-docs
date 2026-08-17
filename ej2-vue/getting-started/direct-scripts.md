@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Direct scripts with Vue Getting started component | Syncfusion
-description:  Checkout and learn about Direct scripts with Vue Getting started component of Syncfusion Essential JS 2 and more details.
-control: Direct scripts 
+title: Getting Started with Vue Direct Scripts | Syncfusion
+description: Learn how to add Syncfusion Vue UI components to a Vue app using direct script tags without a build process or bundler.
+control: Direct Scripts
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Syncfusion Vue UI Components using direct scripts
+# Getting Started with Syncfusion® Vue Components Using Direct Scripts
 
 Vue provides native script support, allowing developers to directly include Vue.js and Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in HTML files without the need for a build process or module bundler. This approach is useful for simpler projects or prototypes, enabling quick and easy implementation of Vue.js and Syncfusion components without setting up a complex build workflow.
 
 ## Prerequisites
 
-* Any IDE, such as [Visual Studio Code](https://code.visualstudio.com/)
+* Any IDE, such as Visual Studio Code
 
 ## Set up the Vue project
 

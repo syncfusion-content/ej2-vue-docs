@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue3 ts options with Vue Getting started component | Syncfusion
-description:  Checkout and learn about Vue3 ts options with Vue Getting started component of Syncfusion Essential JS 2 and more details.
-control: Vue3 ts options 
+title: Getting Started with Vue3 Ts Options | Syncfusion
+description: Learn how to set up a Vite project with TypeScript and integrate Syncfusion Vue UI components using the Options API.
+control: Vue3 Ts Options
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue using TypeScript and Options API
+# Getting Started: Syncfusion® Vue Components with TS & Options API
 
 This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/) project with a TypeScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using the [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

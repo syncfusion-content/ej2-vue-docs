@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Common control | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Common control of Syncfusion Essential JS 2 and more.
-control: common
+title: Localization in Vue Components | Syncfusion
+description: Learn how to localize and translate Syncfusion Vue components into different languages using the L10n library for multi-language UI support.
+control: Common
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Localization
+# Localization in Syncfusion® Vue Components
 
 The localization library allows you to localize the text content of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components. This is useful when you want to display the UI in a language other than English.
 

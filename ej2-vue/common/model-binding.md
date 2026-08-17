@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Model binding in Vue Common control | Syncfusion
-description: Learn here all about Model binding in Syncfusion Vue Common control of Syncfusion Essential JS 2 and more.
-control: common
+title: Model Binding in Vue Components | Syncfusion
+description: Learn how to enable two-way model binding on Syncfusion Vue form components using the v-model directive and modelchanged event.
+control: Common
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Model Binding
+# Model Binding in Syncfusion® Vue Components
 
 ## Integrating Vue model binding in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components
 

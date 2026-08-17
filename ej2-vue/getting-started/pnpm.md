@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with PNPM and Vue Component | Syncfusion
-description: Check out and learn about getting started with pnpm and the Vue component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue pnpm | Syncfusion
+description: Learn how to set up a Vite project with pnpm and integrate Syncfusion Vue UI components using the Composition API.
 control: pnpm
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue UI Components with Vite and PNPM
+# Getting Started with Syncfusion® Vue Components Using pnpm
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using [PNPM](https://pnpm.io/)
 

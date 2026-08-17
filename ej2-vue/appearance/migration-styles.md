@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating Styles to Theme Packages in Vue Components | Syncfusion
-description: Migrate Syncfusion Vue components to theme packages for centralized styling, single file reference, and automatic dependency management.
+title: Migrating Styles to Theme Packages in Vue | Syncfusion
+description: Learn how to migrate Syncfusion Vue component styles from component packages to theme packages with centralized SCSS and CSS references.
 control: Theme
 platform: ej2-vue
 documentation: ug

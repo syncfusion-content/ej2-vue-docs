@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tutorial with Vue Getting started component | Syncfusion
-description:  Checkout and learn about Tutorial with Vue Getting started component of Syncfusion Essential JS 2 and more details.
-control: Tutorial 
+title: Getting Started with Vue Tutorial | Syncfusion
+description: Learn how to set up a Vue 2 application with Vue CLI and add Syncfusion Vue UI components step by step.
+control: Tutorial
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion® Vue UI Components and Vue CLI
+# Getting Started with Vue 2 Using Vue CLI
 
 This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 2 application. To get started with Vue 3 application, refer to the [getting started with Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli) topic.
 

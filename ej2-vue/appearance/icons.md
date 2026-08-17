@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in Vue Appearance component | Syncfusion
-description: Learn here all about Icons in Syncfusion Vue Appearance component of Syncfusion Essential JS 2 and more.
-control: Icons 
+title: Icons in Vue | Syncfusion
+description: Learn how to reference, use, and customize Syncfusion Vue font-based icons from npm or CDN, including sizing and color overrides across themes.
+control: Icons
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Predefined Icons Library in Syncfusion® Vue Component
+# Icons in Syncfusion® Vue Components
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> icon library provides a collection of pre-designed icons to enhance application user interfaces. These icons are base64-formatted font icons that help create a cohesive, visually appealing design across applications.
 

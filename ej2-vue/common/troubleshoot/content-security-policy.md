@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content security policy in Vue Troubleshoot component | Syncfusion
-description: Learn here all about Content security policy in Syncfusion Vue Troubleshoot component of Syncfusion Essential JS 2 and more.
-control: Content security policy 
+title: Content Security Policy in Vue Content Security Policy | Syncfusion
+description: Learn how to enable strict Content Security Policy (CSP) in Syncfusion Vue apps with style-src, font-src, and img-src directives.
+control: Content Security Policy
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content Security Policy
+# Content Security Policy in Syncfusion® Vue Components
 
 Content Security Policy (CSP) is a browser security feature that helps protect against attacks such as cross-site scripting (XSS) and data injection. It restricts the sources from which content can be loaded on a web page.
 
@@ -46,7 +46,7 @@ The resulting meta tag (placed within `<head>`) resolves CSP violations when usi
 
 > Note: From the 2023 Vol 2 (22.1) release onwards, the CSP for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components has been improved—the use of the `unsafe-eval` directive has been removed from the recommended CSP meta tag.
 
-> [View the Vue sample enabled with strict CSP in Github](https://github.com/SyncfusionExamples/ej2-vue-csp-example)
+> [View the Vue sample enabled with strict CSP in GitHub](https://github.com/SyncfusionExamples/ej2-vue-csp-example)
 
 ## See also
 

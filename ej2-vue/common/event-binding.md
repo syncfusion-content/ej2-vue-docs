@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Event binding in Vue Common control | Syncfusion
-description: Learn here all about Event binding in Syncfusion Vue Common control of Syncfusion Essential JS 2 and more.
-control: common
+title: Event Binding in Vue Components | Syncfusion
+description: Learn how to bind custom component events and native DOM events to Syncfusion Vue components using the v-on directive.
+control: Common
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Event Binding
+# Event Binding in Syncfusion® Vue Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components support binding both custom component events and native DOM events. For general Vue guidance, see the official Vue documentation: https://vuejs.org/v2/guide/events.html
 

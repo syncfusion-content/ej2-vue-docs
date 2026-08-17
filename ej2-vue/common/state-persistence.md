@@ -1,14 +1,14 @@
 ---
 layout: post
-title: State persistence in Vue Common control | Syncfusion
-description: Learn here all about State persistence in Syncfusion Vue Common control of Syncfusion Essential JS 2 and more.
-control: common
+title: State Persistence in Vue Components | Syncfusion
+description: Learn how to enable state persistence in Syncfusion Vue components to preserve user settings, filters, sorting, layouts, and UI states across reloads.
+control: Common
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State Persistence in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components
+# State Persistence in Syncfusion® Vue Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components support persisting their state across page refreshes or navigation. To enable this feature, set the `enablePersistence` property to `true` for the desired component. This stores the component's state in the browser's `localStorage` on the page `unload` event. For example, the `enablePersistence` property can be set for the Grid component, as shown in the following code snippet.
 
@@ -260,7 +260,7 @@ The following table lists the Syncfusion<sup style="font-size:70%">&reg;</sup> V
 
 Check the following component documentation to learn more about state persistence:
 
-* [Grid](https://ej2.syncfusion.com/vue/documentation/grid/state-persistence/state-persistence)
+* [Grid](https://ej2.syncfusion.com/vue/documentation/grid/state-management)
 * [TreeGrid](https://ej2.syncfusion.com/vue/documentation/treegrid/state-persistence/state-persistence)
 * [Pivot Table](https://ej2.syncfusion.com/vue/documentation/pivotview/state-persistence)
 * [Gantt](https://ej2.syncfusion.com/vue/documentation/gantt/state-persistence)
