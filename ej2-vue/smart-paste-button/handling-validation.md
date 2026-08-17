@@ -1,14 +1,14 @@
 ---
 layout: post
-title: handling validation with the SmartPasteButton component | Syncfusion
-description: Check out and learn about Vue 3 Handling validation with the Vue SmartPasteButton component of Syncfusion Essential JS 2 and more details.
+title: Handling Validation in Vue Smart Paste Button | Syncfusion
+description: Learn how to validate required form fields after pasting data in the Vue Smart Paste Button with Syncfusion FormValidator.
 control: Handling validation
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handling Validation in Smart Paste Button
+# Handling Validation in Vue Smart Paste Button
 
 The `Smart Paste Button` can be configured to validate that all required input form fields have been pasted with content. If any form fields are empty, validation will be triggered to ensure that all necessary information is provided before proceeding.
 

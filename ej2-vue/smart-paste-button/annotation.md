@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 annotations with the Smart Paste button component | Syncfusion
-description: Check out and learn about Vue 3 annotations with the Vue SmartPasteButton component of Syncfusion Essential JS 2 and more details.
+title: Annotation in Vue Smart Paste Button | Syncfusion
+description: Customize Smart Paste behavior in Vue by defining formatting, validation, and content-type rules for each field.
 control: Annotations
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations (data-smartpaste-description)
+# Annotation in Vue Smart Paste Button
 
 The `data-smartpaste-description` attribute provides a way to customize the behavior of the Smart Paste Button. By using this attribute, pasted content is handled based on specific requirements. This customization can include setting content validation rules, formatting instructions, and defining acceptable content types.
 

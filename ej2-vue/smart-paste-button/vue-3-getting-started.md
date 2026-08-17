@@ -1,14 +1,14 @@
 ---
 layout: post
-title: getting started with the SmartPasteButton component | Syncfusion
-description: Check out and learn about getting started with the Vue 3 Smart Paste Button component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Smart Paste Button | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Smart Paste Button component. Explore setup, features, examples, and customization options.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Smart Paste Button Component in Vue 3
+# Getting Started with Vue Smart Paste Button
 
 The `Smart Paste Button` is a user interface component designed to simplify and improve the experience of pasting text into form fields. It comes with smart features such as automatic text formatting, validation, and integration with various form controls. It is especially useful in applications where users frequently paste text from other sources and where data consistency is important.
 
