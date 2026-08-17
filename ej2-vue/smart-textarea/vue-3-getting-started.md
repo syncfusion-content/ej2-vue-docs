@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started vue3 with Vue Smart TextArea component | Syncfusion
-description:  Checkout and learn about Getting started vue3 with Vue Smart TextArea component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Smart TextArea | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Smart TextArea component. Explore setup, features, examples, and customization options.
 control: Getting started vue3 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Smart TextArea Component in Vue 3
+# Getting Started with Vue Smart TextArea
 
 The **Smart TextArea** is an advanced Component designed to elevate the text input experience by providing intelligent autocomplete suggestions for entire sentences through text-generative AI functionality. This component enhances user productivity by predicting and offering relevant completions based on the context of what is being typed.
 

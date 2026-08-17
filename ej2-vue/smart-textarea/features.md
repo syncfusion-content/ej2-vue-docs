@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Features with Vue Smart TextArea component | Syncfusion
-description:  Checkout and learn about Features with Vue Smart TextArea component of Syncfusion Essential JS 2 and more details.
+title: Features in Vue Smart TextArea | Syncfusion
+description: Explore the Vue Smart TextArea features inherited from the TextArea component, including form support, floating labels, events, methods, and styling.
 control: Features
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Inherited Features from TextArea
+# Features in Vue Smart TextArea
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Smart TextArea component fully inherits all the properties, features, and styling options of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TextArea component. This means that you can leverage the existing features of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TextArea while benefiting from the enhanced functionality of the Smart TextArea.
 
