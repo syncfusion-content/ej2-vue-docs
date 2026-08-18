@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Syncfusion CLI | Syncfusion
+title: Syncfusion CLI in Vue | Syncfusion
 description: Learn to use Syncfusion CLI to create and manage Vue apps with Syncfusion components, templates, themes, and AI-powered tools.
 control: Syncfusion CLI
-platform: common
+platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> CLI
+# Syncfusion CLI in Vue Components
 
 The **Syncfusion<sup style="font-size:70%">&reg;</sup> CLI** is a command-line tool that helps developers create, configure, and manage Vue projects with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components. It simplifies project setup by enabling developers to scaffold Vue applications, add ready-to-use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components, configure themes, set up Syncfusion<sup style="font-size:70%">&reg;</sup> MCP assistants, and install Syncfusion<sup style="font-size:70%">&reg;</sup> component skills.
 

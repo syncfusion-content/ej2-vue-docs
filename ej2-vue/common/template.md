@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Common control | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Common control of Syncfusion Essential JS 2 and more.
-control: common
+title: Templates in Vue Components | Syncfusion
+description: Learn how to use templates in Syncfusion Vue components to customize layouts, render data, and optimize performance with stateless templates.
+control: Common
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components
+# Templates in Syncfusion® Vue Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components render with a predefined layout or structure that defines how the component appears in the UI. When you need to customize appearance or add application-specific functionality, Syncfusion<sup style="font-size:70%">&reg;</sup>  Vue components provide template support to achieve this.
 
@@ -22,7 +22,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support three ty
 
 ## Slot template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components do support [slots](https://vuejs.org/guide/components/slots.html), which can help reduce the number of properties that need to be defined and increase the readability of the component. This is because using slots allows defining the content or behaviour of the component in the parent component rather than in the component's own code. This can make it easier to understand the purpose and functionality of the component at a glance and make the component more modular and flexible.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components do support [slots](https://vuejs.org/guide/components/slots.html), which can help reduce the number of properties that need to be defined and increase the readability of the component. This is because using slots allows defining the content or behavior of the component in the parent component rather than in the component's own code. This can make it easier to understand the purpose and functionality of the component at a glance and make the component more modular and flexible.
 
 In a Vue component, use the `v-slot` directive to define a slot template where users can insert custom content. See the sample below.
 

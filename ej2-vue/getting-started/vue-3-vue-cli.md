@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 with Vue CLI Getting Started | Syncfusion
-description: Checkout and learn about the Vue 3 with Vue CLI getting started guide for Syncfusion Essential JS 2 components.
-control: Vue3 tutorial 
+title: Getting Started with Vue3 Tutorial | Syncfusion
+description: Learn how to set up a Vue 3 application with Vue CLI and add Syncfusion Vue UI components step by step.
+control: Vue3 Tutorial
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Vue 3 with Vue CLI - Getting Started
+# Getting Started with Vue 3 Using Vue CLI
 
 This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application using Vue CLI. For modern setup with Vite and Composition API, refer to the [Getting Started with Composition API](./vue-3-js-composition) section.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Introduction in Vue Introduction md component | Syncfusion
-description: Learn here all about Introduction in Syncfusion Vue Introduction md component of Syncfusion Essential JS 2 and more.
-control: Introduction 
+title: Introduction in Vue Components | Syncfusion
+description: Learn about Syncfusion Vue UI components—a modern, lightweight, responsive, and touch-friendly library of 145+ components.
+control: Introduction
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion® Vue UI Components (Essential® JS 2)
+# Introduction to Syncfusion® Vue UI Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue is a modern UI Components library that has been built from the ground up to be lightweight, responsive, modular and touch friendly. It also includes complete support for Angular, React, ASP.NET MVC and ASP.NET Core frameworks.
 

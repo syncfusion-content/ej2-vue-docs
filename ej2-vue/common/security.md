@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Security Considerations in Vue Common control | Syncfusion
-description: Learn here all about Security Considerations in Syncfusion Vue Common control of Syncfusion Essential JS 2 and more.
+title: Security in Vue Components | Syncfusion
+description: Learn about security considerations in Syncfusion Vue components, including CSP, XSS prevention, HTML sanitization, and secure data handling.
 platform: ej2-vue
-control: common
+control: Common
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-#  Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components - Security
+# Security in Syncfusion® Vue Components
 
 Security is a critical aspect of web applications. Using HTTPS for data encryption, validating and sanitizing user inputs, and implementing strong authentication measures (such as multi-factor authentication) are essential practices in web application development.
 

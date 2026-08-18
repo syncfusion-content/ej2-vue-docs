@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Themes using CSS Variables in Vue Appearance component | Syncfusion
-description: Learn here all about Themes using CSS Variables in Syncfusion Vue Appearance component of Syncfusion Essential JS 2 and more.
+title: Themes using CSS Variables in Vue | Syncfusion
+description: Customize Syncfusion Vue themes with CSS variables for Material 3, Fluent 2, Bootstrap 5.3, and Tailwind 3.4, including light/dark and color overrides.
 control: Themes using CSS Variables 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# About CSS variables in themes
+# Themes using CSS Variables in Vue
 
 [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), also known as custom properties, are author-defined entities that store values for reuse throughout a stylesheet. Variable names begin with two hyphens (--) followed by an identifier. Any valid CSS value can be assigned (colors, lengths, fonts, etc.). Retrieve a variable value using the var() function.
 

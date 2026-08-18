@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Vue sass with Vue Getting started component | Syncfusion
-description:  Checkout and learn about Vue sass with Vue Getting started component of Syncfusion Essential JS 2 and more details.
-control: Vue sass 
+title: Getting Started with Vue Sass | Syncfusion
+description: Learn how to set up a Vue 2 application with Vue CLI and add Syncfusion Vue UI components with SCSS styling.
+control: Vue Sass
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components and Vue CLI
+# Getting Started with Vue 2 Using Vue CLI and SCSS
 
-This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 2 application. To get started with Vue 3 application, refer to the [getting started with Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial) topic.
+This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 2 application. To get started with Vue 3 application, refer to the [getting started with Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-js-composition) topic.
 
 ## Prerequisites
 

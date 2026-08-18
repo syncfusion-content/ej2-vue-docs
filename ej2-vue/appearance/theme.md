@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Theme in Vue Appearance component | Syncfusion
-description: Learn here all about Theme in Syncfusion Vue Appearance component of Syncfusion Essential JS 2 and more.
+title: Themes in Vue | Syncfusion
+description: Explore Syncfusion Vue built-in themes including Tailwind 3.4, Material 3, Fluent 2, and Bootstrap 5.3, with optimized CSS and customization options
 control: Theme 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Theme in Vue Appearance component
+# Built-in Themes in Vue
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue library has provided the below list of in-built themes,
 

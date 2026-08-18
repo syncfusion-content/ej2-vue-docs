@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue getting started with Vitest | Syncfusion
-description: Learn how to test Syncfusion Essential JS 2 Vue UI components with Vitest. Our guide provides simple steps and useful tips to make testing easy and effective.
+title: Getting Started with Vue Vitest | Syncfusion
+description: Learn how to set up a Vitest project and test Syncfusion Vue UI components with practical examples and configuration tips.
 control: Vitest
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with testing Vue UI components in the Vitest project
+# Getting Started with Syncfusion® Vue Components Using Vitest
 
 This article provides a step-by-step guide for setting up a [Vitest](https://vitest.dev) project, integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components, and perform comprehensive testing of the components.
 

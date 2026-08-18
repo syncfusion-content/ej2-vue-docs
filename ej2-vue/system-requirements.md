@@ -1,8 +1,8 @@
 ---
 layout: post
-title: System requirements in Vue System requirements md component | Syncfusion
-description: Learn here all about System requirements in Syncfusion Vue System requirements md component of Syncfusion Essential JS 2 and more.
-control: System requirements 
+title: System Requirements in Vue Components | Syncfusion
+description: Learn the minimum Node.js, npm, and supported browser versions required to develop and run Syncfusion Vue UI components.
+control: System Requirements
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

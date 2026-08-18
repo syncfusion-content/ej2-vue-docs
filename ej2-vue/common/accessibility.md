@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue component of Syncfusion Essential JS 2 and more.
-control: common
+title: Accessibility in Vue components | Syncfusion
+description: Learn about accessibility standards, WCAG 2.2 compliance, Section 508, WAI-ARIA, keyboard navigation, and screen reader support in Syncfusion Vue components.
+control: Common
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components
+# Accessibility in Syncfusion® Vue Components
 
 ## Accessibility overview
 
@@ -129,504 +129,504 @@ vertical-align: top;
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/grid/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/grid/accessibility" aria-label="DataGrid accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Pivot Table</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pivotview/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pivotview/accessibility" aria-label="Pivot Table accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Tree Grid</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treegrid/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treegrid/accessibility" aria-label="Tree Grid accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Spreadsheet</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/spreadsheet/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/spreadsheet/accessibility" aria-label="Spreadsheet accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>In-place Editor</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/inplace-editor/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/inplace-editor/accessibility" aria-label="In-place Editor accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>PDF Viewer</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pdfviewer/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pdfviewer/accessibility" aria-label="PDF Viewer accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>RichTextEditor</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility" aria-label="RichTextEditor accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Word Processor</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/document-editor/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/document-editor/accessibility" aria-label="Word Processor accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Image Editor</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/image-editor/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/image-editor/accessibility" aria-label="Image Editor accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Dialog</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/dialog/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/dialog/accessibility" aria-label="Dialog accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>ListView</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/listview/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/listview/accessibility" aria-label="ListView accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Tooltip</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/tooltip/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/tooltip/accessibility" aria-label="Tooltip accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Splitter</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/splitter/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/splitter/accessibility" aria-label="Splitter accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Dashboard Layout</td>
         <td>Yes</td>
         <td>AA</td>
         <td>NA</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/dashboard-layout/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/dashboard-layout/accessibility" aria-label="Dashboard Layout accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Accumulation Chart</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/accumulation-chart/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/accumulation-chart/accessibility" aria-label="Accumulation Chart accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Charts</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/chart/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/chart/accessibility" aria-label="Charts accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Stock Chart</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/stock-chart/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/stock-chart/accessibility" aria-label="Stock Chart accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Circular Gauge</td>
         <td>Yes</td>
         <td>AA</td>
         <td>NA</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/circular-gauge/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/circular-gauge/accessibility" aria-label="Circular Gauge accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Diagram</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/diagram/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/diagram/accessibility" aria-label="Diagram accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>HeatMap Chart</td>
         <td>Yes</td>
         <td>AA</td>
         <td>NA</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/heatmap-chart/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/heatmap-chart/accessibility" aria-label="HeatMap Chart accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Linear Gauge</td>
         <td>Yes</td>
         <td>AA</td>
         <td>NA</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/linear-gauge/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/linear-gauge/accessibility" aria-label="Linear Gauge accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Maps</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maps/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maps/accessibility" aria-label="Maps accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Range Selector</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/range-navigator/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/range-navigator/accessibility" aria-label="Range Selector accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Smith Chart</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/smithchart/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/smithchart/accessibility" aria-label="Smith Chart accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Sparkline Charts</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/sparkline/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/sparkline/accessibility" aria-label="Sparkline Charts accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>TreeMap</td>
         <td>Yes</td>
         <td>AA</td>
         <td>NA</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treemap/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treemap/accessibility" aria-label="TreeMap accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Bullet Chart</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/bullet-chart/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/bullet-chart/accessibility" aria-label="Bullet Chart accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Kanban</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/kanban/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/kanban/accessibility" aria-label="Kanban accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Button</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/button/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/button/accessibility" aria-label="Button accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Button Group</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/button-group/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/button-group/accessibility" aria-label="Button Group accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Dropdown Menu</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/drop-down-button/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/drop-down-button/accessibility" aria-label="Dropdown Menu accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Progress Button</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/progress-button/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/progress-button/accessibility" aria-label="Progress Button accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Split Button</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/split-button/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/split-button/accessibility" aria-label="Split Button accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Chips</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/chips/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/chips/accessibility" aria-label="Chips accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>FAB</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/floating-action-button/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/floating-action-button/accessibility" aria-label="FAB accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Speed Dial</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/speed-dial/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/speed-dial/accessibility" aria-label="Speed Dial accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Calendar</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/calendar/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/calendar/accessibility" aria-label="Calendar accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>DatePicker</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/datepicker/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/datepicker/accessibility" aria-label="DatePicker accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>DateRangePicker</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/daterangepicker/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/daterangepicker/accessibility" aria-label="DateRangePicker accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>DateTime Picker</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/datetimepicker/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/datetimepicker/accessibility" aria-label="DateTime Picker accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>TimePicker</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/timepicker/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/timepicker/accessibility" aria-label="TimePicker accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Gantt Chart</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/gantt/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/gantt/accessibility" aria-label="Gantt Chart accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>TextBox</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/textbox/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/textbox/accessibility" aria-label="TextBox accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Input Mask</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maskedtextbox/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maskedtextbox/accessibility" aria-label="Input Mask accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Masked TextBox</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maskedtextbox/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maskedtextbox/accessibility" aria-label="Masked TextBox accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Numeric TextBox</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/numerictextbox/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/numerictextbox/accessibility" aria-label="Numeric TextBox accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Radio Button</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/radio-button/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/radio-button/accessibility" aria-label="Radio Button accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>CheckBox</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/check-box/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/check-box/accessibility" aria-label="CheckBox accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Color Picker</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/color-picker/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/color-picker/accessibility" aria-label="Color Picker accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>File Upload</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/uploader/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/uploader/accessibility" aria-label="File Upload accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Range Slider</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/range-slider/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/range-slider/accessibility" aria-label="Range Slider accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Toggle Switch Button</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/switch/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/switch/accessibility" aria-label="Toggle Switch Button accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Signature</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/signature/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/signature/accessibility" aria-label="Signature accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Rating</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rating/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rating/accessibility" aria-label="Rating accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Query Builder</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/query-builder/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/query-builder/accessibility" aria-label="Query Builder accessibility documentation">Documentation</a></td>
     </tr> 
     <tr>
         <td>Accordion</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/accordion/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/accordion/accessibility" aria-label="Accordion accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>AppBar</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/appbar/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/appbar/accessibility" aria-label="AppBar accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Breadcrumb</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/breadcrumb/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/breadcrumb/accessibility" aria-label="Breadcrumb accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Carousel</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/carousel/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/carousel/accessibility" aria-label="Carousel accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Context Menu</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/context-menu/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/context-menu/accessibility" aria-label="Context Menu accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Menu Bar</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/menu/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/menu/accessibility" aria-label="Menu Bar accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Sidebar</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/sidebar/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/sidebar/accessibility" aria-label="Sidebar accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Tabs</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/tab/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/tab/accessibility" aria-label="Tabs accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Toolbar</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/toolbar/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/toolbar/accessibility" aria-label="Toolbar accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Ribbon</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/ribbon/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/ribbon/accessibility" aria-label="Ribbon accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>TreeView</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treeview/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treeview/accessibility" aria-label="TreeView accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>File Manager</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/file-manager/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/file-manager/accessibility" aria-label="File Manager accessibility documentation">Documentation</a></td>
     </tr> 
     <tr>
         <td>Stepper</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/stepper/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/stepper/accessibility" aria-label="Stepper accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Message</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/message/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/message/accessibility" aria-label="Message accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Toast</td>
         <td>Yes</td>
         <td>AA</td>
         <td>NA</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/toast/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/toast/accessibility" aria-label="Toast accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Progress Bar</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/progress-bar/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/progress-bar/accessibility" aria-label="Progress Bar accessibility documentation">Documentation</a></td>
     </tr>
     <tr>
         <td>Skeleton</td>
         <td>Yes</td>
         <td>AA</td>
         <td>Yes</td>
-        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/skeleton/accessibility">Documentation</a></td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/skeleton/accessibility" aria-label="Skeleton accessibility documentation">Documentation</a></td>
     </tr>
 </tbody>
 </table>
