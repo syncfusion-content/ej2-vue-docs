@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paging in Vue Pivot Table | Syncfusion
-description: Learn how the Vue Pivot Table splits large data into row and column pages via enablePaging, customizes page sizes, and renders a built-in pager UI for navigation.
+description: Learn how the Vue Pivot Table splits large data into row and column pages via enablePaging, with custom page sizes and a built-in pager UI for navigation.
 control: Paging 
 platform: ej2-vue
 documentation: ug

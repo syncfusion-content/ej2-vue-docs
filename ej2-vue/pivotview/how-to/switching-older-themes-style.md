@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to switch to older themes style in Vue Pivot Table | Syncfusion
-description: Step-by-step example showing how to switch the Vue Pivot Table to the older theme style, with CSS overrides for cell backgrounds and a rowHeight reset to the pre-2020 layout.
+description: Step-by-step example showing how to switch the Vue Pivot Table to the older theme style with CSS overrides for cell backgrounds and rowHeight reset.
 control: Switching older themes style 
 platform: ej2-vue
 documentation: ug

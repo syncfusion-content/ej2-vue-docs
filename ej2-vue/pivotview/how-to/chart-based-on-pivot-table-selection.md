@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to render chart based on cell selection in Vue Pivot Table | Syncfusion
-description: Step-by-step example showing how to render a chart based on selected cells in the Vue Pivot Table, using the cellSelected event to pass row, column, and measure data to a chart control.
+title: Render a chart from selected cells in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to render a chart from selected cells in the Vue Pivot Table, using the cellSelected event to pass data to a Chart.
 control: Chart based on pivot table selection 
 platform: ej2-vue
 documentation: ug
