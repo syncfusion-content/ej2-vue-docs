@@ -31,16 +31,16 @@ npm install
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use Button component.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use Button component.
 
 To install Button component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-vue-buttons –save
+npm install @syncfusion/ej2-vue-buttons --save
 ```
 
 ## Registering Vue Component
@@ -121,10 +121,7 @@ Add Button component's styles as given below in `<style>` section of the `App.vu
 Now run the `npm run dev` command in the console, it will build your application and open in the browser.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/base/default-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="app.vue" %}
 {% include code-snippet/base/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
