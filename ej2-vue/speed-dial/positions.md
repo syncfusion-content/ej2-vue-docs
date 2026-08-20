@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Positions in Vue Speed dial component | Syncfusion
-description: Learn here all about Positions in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Positions in Vue Speed Dial | Syncfusion
+description: Learn how to position the Syncfusion Vue Speed Dial using the position property with values like TopLeft, MiddleCenter, and BottomRight, or open items on hover with opensOnHover.
 control: Positions 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Positions in Vue Speed dial component
+# Positions in Vue Speed Dial
 
 The Speed dial control can be positioned anywhere on the [`target`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#target) using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#position) property. If the `target` is not defined, then Speed Dial is positioned based on the browser viewport.
 

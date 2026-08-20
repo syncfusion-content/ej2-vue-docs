@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons and templates in Vue List box component | Syncfusion
-description: Learn here all about Icons and templates in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: Icons and Templates in Vue ListBox | Syncfusion
+description: Add icons to each Syncfusion Vue ListBox item via the iconCss field and customize item content with the itemTemplate property.
 control: Icons and templates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons and templates in Vue List box component
+# Icons and Templates in Vue ListBox
 
 ## Icons
 

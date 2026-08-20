@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue Multi select component | Syncfusion
-description: Learn here all about Templates in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Templates in Vue MultiSelect Dropdown | Syncfusion
+description: Customize Syncfusion Vue MultiSelect Dropdown list items, group title, selected value, header, and footer using itemTemplate, groupTemplate, and valueTemplate.
 control: Templates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue Multi select component
+# Templates in Vue MultiSelect Dropdown
 
 The MultiSelect has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 

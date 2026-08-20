@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Maximum Length in Vue TextBox component | Syncfusion
-description: Limiting the maximum number of characters in the Vue TextBox component of Syncfusion Essential JS 2 and more details.
+title: Maximum Length in Vue TextBox | Syncfusion
+description: Cap the input length of the Syncfusion Vue TextBox with the maxLength property to prevent users from exceeding a defined character limit.
 control: Maximum Length
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maximum Length in Vue TextBox Component
+# Maximum Length in Vue TextBox
 
 You can enforce a maximum length limit for the text input in the TextBox using the `maxLength` property. This property allows you to define the maximum number of characters that users can input into the TextBox.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Custom search in Vue Auto complete component | Syncfusion
-description: Learn here all about Custom search in Syncfusion Vue Auto complete component of Syncfusion Essential JS 2 and more.
+title: How to customize highlight search in Vue AutoComplete | Syncfusion
+description: Customize the highlight style for matched characters in the Syncfusion Vue AutoComplete suggestion list by overriding the e-highlight CSS class.
 control: Custom search 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom search in Vue Auto complete component
+# How to customize highlight search in Vue AutoComplete
 
-The AutoComplete has built-in support to [`highlight`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#highlight) the searched characters on suggested list items when enabled the highlight property.
+The AutoComplete has built-in support to [`highlight`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#highlight) the searched characters on suggested list items when enabled the highlight property.
 
 In the below sample, customized the matched character in suggestion list by `e-highlight` class.
 

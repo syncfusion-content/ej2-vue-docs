@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in Vue Dialog component | Syncfusion
-description: Learn here all about Animation in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: Animation in Vue Dialog | Syncfusion
+description: Animate Vue Dialog open and close actions with delay, duration, and effects like Fade, Zoom, Slide, and Flip for smooth transitions.
 control: Animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in Vue Dialog component
+# Animation in Vue Dialog
 
 The Dialog can be animated during the open and close actions. Also, user can customize animation's `delay`, `duration` and `effect`.
 

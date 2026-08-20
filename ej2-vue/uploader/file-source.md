@@ -1,14 +1,14 @@
 ---
 layout: post
-title: File source in Vue Uploader component | Syncfusion
-description: Learn here all about File source in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: File Source in Vue Uploader | Syncfusion
+description: Pick files for the Syncfusion Vue Uploader by selecting, dragging, dropping, pasting from the clipboard, or uploading a whole directory.
 control: File source 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File source in Vue Uploader component
+# File Source in Vue Uploader
 
 ## Paste to upload
 

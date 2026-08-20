@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip for multiple targets in Vue Tooltip component | Syncfusion
-description: Learn here all about Create and show tooltip on multiple targets in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: How to show tooltip on multiple targets in Vue Tooltip | Syncfusion
+description: Show Vue Tooltip on multiple targets within a container by defining target elements via the target property, with content derived from each target title attribute.
 control: Create and show tooltip on multiple targets 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create and show tooltip on multiple targets in Vue Tooltip component
+# How to show tooltip on multiple targets in Vue Tooltip
 
 Tooltip can be created and shown on multiple targets within a container by defining the specific target elements to the [`target`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#target) property. So, the tooltip is initialized only on matched targets within a container.
 

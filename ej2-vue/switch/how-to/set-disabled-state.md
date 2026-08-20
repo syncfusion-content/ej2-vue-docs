@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set disabled state in Vue Switch component | Syncfusion
-description: Learn here all about Set disabled state in Syncfusion Vue Switch component of Syncfusion Essential JS 2 and more.
+title: How to set disabled state in Vue Toggle Switch Button | Syncfusion
+description: Learn how to disable the Syncfusion Vue Toggle Switch Button by setting the disabled property to true so users cannot toggle or interact with the switch.
 control: Set disabled state 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set disabled state in Vue Switch component
+# How to set disabled state in Vue Toggle Switch Button
 
 Switch can be disabled by setting the [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/switch/#disabled) property to true.
 

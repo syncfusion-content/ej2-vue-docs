@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the TreeView component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue TreeView component of Syncfusion Essential JS 2 and more details.
+title: Getting Started Vue 3 with Vue TreeView | Syncfusion
+description: Learn how to get started with the Syncfusion Vue TreeView control. Explore setup, features, examples, and customization options.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue TreeView Component in Vue 3
+# Getting Started with Vue TreeView in Vue 3
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

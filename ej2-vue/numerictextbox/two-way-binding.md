@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Two way binding in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Two way binding in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Two Way Binding in Vue Numeric Textbox | Syncfusion
+description: Sync values between two Syncfusion Vue Numeric Textbox components with the v-model directive for live two-way data binding.
 control: Two way binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Two way binding in Vue Numerictextbox component
+# Two Way Binding in Vue Numeric Textbox
 
 Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one NumericTextBox component, v-model will automatically update the value in the other NumericTextBox.
 

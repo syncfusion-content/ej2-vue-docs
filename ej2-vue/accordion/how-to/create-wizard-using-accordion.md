@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create wizard using accordion in Vue Accordion component | Syncfusion
-description: Learn here all about Create wizard using accordion in Syncfusion Vue Accordion component of Syncfusion Essential JS 2 and more.
+title: How to create wizard using accordion in Vue Accordion | Syncfusion
+description: Build a multi-step Online Shopping wizard using the Vue Accordion and the enableItem method to validate fields and control item navigation.
 control: Create wizard using accordion 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create wizard using accordion in Vue Accordion component
+# How to create wizard using accordion in Vue Accordion
 
 Accordion items can be disabled dynamically by passing the index and boolean value with the [`enableItem`](https://ej2.syncfusion.com/vue/documentation/api/accordion#enableitem) method.
 

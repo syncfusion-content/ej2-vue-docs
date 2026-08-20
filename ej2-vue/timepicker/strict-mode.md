@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Strict mode in Vue Timepicker component | Syncfusion
-description: Learn here all about Strict mode in Syncfusion Vue Timepicker component of Syncfusion Essential JS 2 and more.
-control: Strict mode 
+title: Strict Mode in Vue TimePicker | Syncfusion
+description: Restrict the Syncfusion Vue TimePicker to accept only valid times within the configured min and max range by enabling strict mode.
+control: Strict mode
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Strict mode in Vue Timepicker component
+# Strict Mode in Vue TimePicker
 
 ## Enable Strict Mode
 

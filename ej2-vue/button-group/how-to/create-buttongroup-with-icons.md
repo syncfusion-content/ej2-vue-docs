@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Create buttongroup with icons in Vue Button group component | Syncfusion
-description: Learn here all about Create buttongroup with icons in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: How to create with icons in Vue Button Group | Syncfusion
+description: Learn how to add icons to a Syncfusion Vue Button Group by configuring the iconCss property on each button to display an icon alongside the button label.
 control: Create buttongroup with icons 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create buttongroup with icons in Vue Button group component
+# How to create with icons in Vue Button Group
 
-To create ButtonGroup with icons, [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/button/#iconcss) property of Button component can be used.
+To create ButtonGroup with icons, [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/button/index-default#iconcss) property of Button component can be used.
 
 The following example illustrates how to create ButtonGroup with icons,
 

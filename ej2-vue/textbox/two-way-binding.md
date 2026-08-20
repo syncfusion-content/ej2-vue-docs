@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Two way binding in Vue Textbox component | Syncfusion
-description: Learn here all about Two way binding in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: Two-Way Binding in Vue TextBox | Syncfusion
+description: Sync two Syncfusion Vue TextBox values in real time using the v-model directive for instant two-way binding across components.
 control: Two way binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Two way binding in Vue Textbox component
+# Two-Way Binding in Vue TextBox
 
 Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one Textbox component, v-model will automatically update the value in the other Textbox.
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Localization in Vue Image editor component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Image editor component of Syncfusion Essential JS 2 and more.
-control: Localization 
+title: Localization in Vue Image Editor component | Syncfusion
+description: Localize the static UI text of the Vue Image Editor to other cultures by setting a locale and supplying a translation object for the default strings.
+control: Localization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

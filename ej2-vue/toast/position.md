@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position in Vue Toast component | Syncfusion
-description: Learn here all about Position in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Position in Vue Toaster | Syncfusion
+description: Position the Vue Toaster at predefined or custom locations using the X and Y position properties for flexible placement.
 control: Position 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position in Vue Toast component
+# Position in Vue Toaster
 
 The toast position can be updated based on predefined positions or customizable positions. The predefined position combinations are updated in the [`X`](https://ej2.syncfusion.com/vue/documentation/api/toast/toastPositionModel/#x) and [`Y`](https://ej2.syncfusion.com/vue/documentation/api/toast/toastPositionModel/#y) position properties.
 

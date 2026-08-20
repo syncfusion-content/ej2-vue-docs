@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Prevent closing of modal dialog in Vue Dialog component | Syncfusion
-description: Learn here all about Prevent closing of modal dialog in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: How to prevent closing of modal in Vue Dialog | Syncfusion
+description: Prevent the Vue Dialog from closing by setting the beforeClose event argument cancel to true, useful for validation before dismissing the modal dialog.
 control: Prevent closing of modal dialog 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent closing of modal dialog in Vue Dialog component
+# How to prevent closing of modal in Vue Dialog
 
-You can prevent closing of modal dialog by setting the [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/dialog/#beforeclose) event argument cancel value to true.
+You can prevent closing of modal dialog by setting the [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/dialog#beforeclose) event argument cancel value to true.
 In the following sample, the dialog is closed when you enter the username value with minimum 4 characters. Otherwise, it will not be closed.
 
 {% tabs %}

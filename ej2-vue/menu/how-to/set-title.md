@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set title in Vue Menu component | Syncfusion
-description: Learn here all about Set title in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: How to set title for menu items in Vue Menu Bar | Syncfusion
+description: Set a tooltip title for Vue Menu Bar items dynamically by assigning the title attribute in the beforeItemRender client-side event of the component.
 control: Set title 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set title in Vue Menu component
+# How to set title for menu items in Vue Menu Bar
 
 In this sample , the title for menu item  can be achievable by using 'beforeItemRender' client-side event in Menu component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Error messages in Vue Form validator component | Syncfusion
-description: Learn here all about Error messages in Syncfusion Vue Form validator component of Syncfusion Essential JS 2 and more.
+title: Error Messages in Vue Form Validation | Syncfusion
+description: Override the default error messages for each rule in the Syncfusion Vue Form Validator with custom placeholders and text.
 control: Error messages 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Error messages in Vue Form validator component
+# Error Messages in Vue Form Validation
 
 The `FormValidator` provides default error messages for all default validation rules.
 It is tabulated as follows

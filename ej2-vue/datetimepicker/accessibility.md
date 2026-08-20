@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Datetimepicker component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Datetimepicker component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in Vue DateTimePicker | Syncfusion
+description: Learn WAI-ARIA support, keyboard navigation shortcuts, and accessibility compliance for the Syncfusion Vue DateTimePicker component.
+control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Datetimepicker component
+# Accessibility in Vue DateTimePicker
 
 The DateTimePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -52,7 +52,7 @@ It helps to provide information about the widget for assistive technology to the
 
 * **Aria-disabled**: attribute indicates the disabled state of this DateTimePicker component.
 
-* **Aria-activedescendent**: attribute helps in managing the current active child of the DateTimePicker component.
+* **Aria-activedescendant**: attribute helps in managing the current active child of the DateTimePicker component.
 
 ## Keyboard Interaction
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Display modes in Vue Speed dial component | Syncfusion
-description: Learn here all about Display modes in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Display Modes in Vue Speed Dial | Syncfusion
+description: Learn how to display Syncfusion Vue Speed Dial action items in Linear or Radial mode using the mode property, and control the open direction with the direction property.
 control: Display modes 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display modes in Vue Speed dial component
+# Display Modes in Vue Speed Dial
 
 The action items in Vue Speed Dial can be displayed in `Linear` and `Radial` display modes by setting [`mode`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#mode) property.
 

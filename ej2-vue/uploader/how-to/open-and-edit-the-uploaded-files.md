@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open and edit the uploaded files in Vue Uploader component | Syncfusion
-description: Learn here all about Open and edit the uploaded files in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to open and edit uploaded files in Vue Uploader | Syncfusion
+description: Open and edit Syncfusion Vue Uploader files after upload by saving the path from the success event and re-fetching the file on click.
 control: Open and edit the uploaded files 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open and edit the uploaded files in Vue Uploader component
+# How to open and edit uploaded files in Vue Uploader
 
 The uploader component allows you to modify the file after uploading to the server, which can be achieved using success event of the uploader.
 

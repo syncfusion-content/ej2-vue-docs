@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering data in Vue Mention component | Syncfusion
-description: Learn here all about Filtering data in Syncfusion Vue Mention component of Syncfusion Essential JS 2 and more.
+title: Filtering Data in Vue Mention | Syncfusion
+description: Filter Syncfusion Vue Mention suggestions with minLength and Contains, StartsWith, or EndsWith match modes via the filterType property.
 control: Filtering data 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering data in Vue Mention component
+# Filtering Data in Vue Mention
 
 The Mention component has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the mention element.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the Floating Action Button | Syncfusion
-description:  Check out and learn about Vue 3 getting started with the Vue Floating Action Button component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 Getting Started with Vue Floating Action Button | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Floating Action Button in a Vue 3 project using Vite, with setup, theme installation, and adding a FAB via Composition or Options API.
 control: Vue 3 getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Floating Action Button in Vue 3
+# Vue 3 Getting Started with Vue Floating Action Button
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Floating Action Button component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

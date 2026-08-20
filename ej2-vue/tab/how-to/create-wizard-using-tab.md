@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create wizard using tab in Vue Tab component | Syncfusion
-description: Learn here all about Create wizard using tab in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to create wizard using tab in Vue Tabs | Syncfusion
+description: Build a multi-step wizard using Vue Tabs with validation and conditional navigation to guide users through a sequence of form steps in the Tab.
 control: Create wizard using tab 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create wizard using tab in Vue Tab component
+# How to create wizard using tab in Vue Tabs
 
 Tab items can be disabled dynamically by passing the index and boolean value with the [`enableTab`](https://ej2.syncfusion.com/vue/documentation/api/tab#enabletab) method.
 

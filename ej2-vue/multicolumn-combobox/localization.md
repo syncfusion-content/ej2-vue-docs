@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Localization in Vue MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue MultiColumn ComboBox | Syncfusion
+description: Localize the Syncfusion Vue MultiColumn ComboBox noRecordsTemplate text by culture using the L10n class load function and locale tables.
 platform: ej2-vue
 control: MultiColumn ComboBox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue MultiColumn ComboBox component
+# Localization in Vue MultiColumn ComboBox
 
 The Localization library allows you to localize static text content of the [noRecordsTemplate](../api/multicolumn-combobox#norecordstemplate) property according to the culture currently assigned to the MultiColumn ComboBox.
 

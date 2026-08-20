@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sidebar with Treeview in Vue Sidebar component | Syncfusion
-description: Learn here all about Sidebar with treeview in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to render Sidebar with TreeView in Vue Sidebar | Syncfusion
+description: Embed a TreeView component inside the Vue Sidebar with dock state enabled to synchronize expand and collapse actions across both the sidebar and tree.
 control: Sidebar with treeview 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sidebar with Treeview in Vue Sidebar component
+# How to render Sidebar with TreeView in Vue Sidebar
 
 The following example demonstrates how to render a TreeView component inside the Sidebar with dock state and how to achieve expand and collapse functionalities simultaneously in the Sidebar and TreeView.
 

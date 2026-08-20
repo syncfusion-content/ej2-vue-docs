@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Design in Vue Appbar component | Syncfusion
-description: Learn here all about Design in Syncfusion Vue Appbar component of Syncfusion Essential JS 2 and more.
+title: Design in Vue AppBar | Syncfusion
+description: Use Vue AppBar Spacer and Separator elements to add flexible spacing and visual dividers between grouped content in the app bar layout.
 control: Design 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Design in Vue Appbar component
+# Design in Vue AppBar
 
 ## Spacer
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change menu items dynamically in Vue Context menu component | Syncfusion
-description: Learn here all about Change menu items dynamically in Syncfusion Vue Context menu component of Syncfusion Essential JS 2 and more.
+title: How to change menu items dynamically in Vue Context Menu | Syncfusion
+description: Show or hide Vue Context Menu items at runtime using the hideItems and showItems methods within the beforeOpen event based on the target element.
 control: Change menu items dynamically 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change menu items dynamically in Vue Context menu component
+# How to change menu items dynamically in Vue Context Menu
 
 The items visible in the ContextMenu can be changed dynamically based on the target in which you open the ContextMenu. To achieve this behavior, initialize ContextMenu with all items using [`items`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#items) property and then based on the context you open hide/show required items using [`hideItems`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#hideitems)/ [`showItems`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#showitems) method in [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#beforeopen) event.
 

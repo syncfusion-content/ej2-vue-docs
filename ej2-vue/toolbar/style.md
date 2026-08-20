@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Toolbar component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Toolbar | Syncfusion
+description: Override the default Vue Toolbar CSS classes to customize the wrapper, items, separators, and scroll buttons for a custom visual appearance.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Toolbar component
+# Style in Vue Toolbar
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 

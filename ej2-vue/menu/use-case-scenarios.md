@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Use case scenarios in Vue Menu component | Syncfusion
-description: Learn here all about Use case scenarios in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: Use Case Scenarios in Vue Menu Bar | Syncfusion
+description: Enable horizontal or vertical scrolling for large Vue Menu Bar items and submenus, or integrate the Menu Bar inside a Toolbar component for app navigation.
 control: Use case scenarios 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Use case scenarios in Vue Menu component
+# Use Case Scenarios in Vue Menu Bar
 
 ## Scrollable menu
 

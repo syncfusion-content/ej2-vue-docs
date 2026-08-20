@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resize in Vue Image editor component | Syncfusion
-description: Learn here all about Resize in Syncfusion Vue Image editor component of Syncfusion Essential JS 2 and more.
+title: Resize in Vue Image Editor component | Syncfusion
+description: Programmatically resize the image to a specific width and height in the Vue Image Editor, with an option to preserve the original aspect ratio.
 control: Resize
 platform: ej2-vue
 documentation: ug
@@ -14,7 +14,7 @@ The resize feature in an Image Editor is a valuable tool that empowers users to 
 
 ## Apply resize to the image 
 
-The Image Editor control includes a [`resize`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#resize) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
+The Image Editor control includes a [`resize`](https://ej2.syncfusion.com/vue/documentation/api/image-editor#resize) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
 
 * width: Specifies the resizing width of the image.
 
@@ -40,18 +40,18 @@ Here is an example of resizing the image using the `resize` method.
 
 ## Resizing event
 
-The [`resizing`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#resizing) event is triggered when resizing the image. This event provides information encapsulated within an object, which includes details about the previous and current height and width of an image.
+The [`resizing`](https://ej2.syncfusion.com/vue/documentation/api/image-editor#resizing) event is triggered when resizing the image. This event provides information encapsulated within an object, which includes details about the previous and current height and width of an image.
 
-The parameter available in [`ResizeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs/) is,
+The parameter available in [`ResizeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs) is,
 
-* [`ResizeEventArgs.previousWidth`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs/#previouswidth) - The width of the image before resizing is performed.
+* [`ResizeEventArgs.previousWidth`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs#previouswidth) - The width of the image before resizing is performed.
 
-* [`ResizeEventArgs.previousHeight`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs/#previousheight) - The height of the image before resizing is performed.
+* [`ResizeEventArgs.previousHeight`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs#previousheight) - The height of the image before resizing is performed.
 
-* [`ResizeEventArgs.width`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs/#width) - The width of the image after resizing is performed.
+* [`ResizeEventArgs.width`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs#width) - The width of the image after resizing is performed.
 
-* [`ResizeEventArgs.height`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs/#height) - The width of the image after resizing is performed.
+* [`ResizeEventArgs.height`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs#height) - The width of the image after resizing is performed.
 
-* [`ResizeEventArgs.isAspectRatio`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs/#isaspectratio) - The type of resizing performed such as aspect ratio or non-aspect ratio.
+* [`ResizeEventArgs.isAspectRatio`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs#isaspectratio) - The type of resizing performed such as aspect ratio or non-aspect ratio.
 
-* [`ResizeEventArgs.cancel`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs/#cancel) - Specifies a boolean value to cancel the resizing action.
+* [`ResizeEventArgs.cancel`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/resizeEventArgs#cancel) - Specifies a boolean value to cancel the resizing action.

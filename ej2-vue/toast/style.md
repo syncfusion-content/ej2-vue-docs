@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Toast component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Toaster | Syncfusion
+description: Customize the Vue Toaster appearance by overriding the exact CSS classes and styles used in the component's structure.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Toast component
+# Style in Vue Toaster
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

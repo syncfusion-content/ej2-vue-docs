@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Stepper component | Syncfusion
-description: Checkout and learn about Template with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Stepper | Syncfusion
+description: Customize Vue Stepper step content using the template property with step model and currentStep index context for a personalized visual layout per step.
 control: Stepper 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Stepper component
+# Template in Vue Stepper
 
 The Stepper component allows you to customize the default appearance and content of each step, creating a personalized experience for the user. You can use the [template](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#template) propety to set the template content for the steps.
 

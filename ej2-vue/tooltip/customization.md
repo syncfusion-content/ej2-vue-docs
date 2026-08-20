@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Tooltip component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Customization in Vue Tooltip | Syncfusion
+description: Customize the Vue Tooltip appearance and tip pointer using the cssClass property to apply user-defined styles, themes, background color, and border.
 control: Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Tooltip component
+# Customization in Vue Tooltip
 
 The Tooltip can be customized using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#cssclass) property, which accepts custom CSS class names that define specific user-defined styles and themes to be applied to the Tooltip element.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load dialog content using ajax in Vue Dialog component | Syncfusion
-description: Learn here all about Load dialog content using ajax in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: How to load content using AJAX in Vue Dialog | Syncfusion
+description: Load Vue Dialog content dynamically from an external source or file using the AJAX library and its success event to populate content on request.
 control: Load dialog content using ajax 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load dialog content using ajax in Vue Dialog component
+# How to load content using AJAX in Vue Dialog
 
 You can load dialog's content dynamically from external source like external file using AJAX library. The AJAX library can make the request and load dialog's content using its `success` event. Refer the following link to learn about how to load dialog content using AJAX.
 

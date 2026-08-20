@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Calendar component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in Vue Calendar | Syncfusion
+description: Learn WAI-ARIA support, keyboard navigation shortcuts, and accessibility compliance for the Syncfusion Vue Calendar component.
+control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Calendar component
+# Accessibility in Vue Calendar
 
 The Calendar component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -52,7 +52,7 @@ It helps disabled persons by providing information about the widget for assistiv
 
 * **Aria-disabled**: Indicates the disabled state of the Calendar component.
 
-* **Aria-activedescendent**: Helps in managing the current active child of the Calendar component.
+* **Aria-activedescendant**: Helps in managing the current active child of the Calendar component.
 
 * **Role**: Gives information to assistive technologies about how to handle each element in a widget.
 

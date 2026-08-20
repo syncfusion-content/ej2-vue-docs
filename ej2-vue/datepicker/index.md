@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Datepicker component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Index 
+title: About Syncfusion Vue DatePicker Component | Syncfusion
+description: Explore features of the Syncfusion Vue DatePicker component, including date range, format, globalization, strict mode, and customization options.
+control: Index
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Datepicker component
+# About Syncfusion Vue DatePicker Component.
 
 The **DatePicker** is a graphical user interface component that allows the user to select
 or enter a date value.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started vue3 with Vue Numerictextbox component | Syncfusion
-description:  Checkout and learn about Getting started vue3 with Vue Numerictextbox component of Syncfusion Essential JS 2 and more details.
+description: Learn how to get started with the Syncfusion Vue Numeric Textbox control. Explore setup, features, examples, and customization options.
 control: Getting started vue3 
 platform: ej2-vue
 documentation: ug

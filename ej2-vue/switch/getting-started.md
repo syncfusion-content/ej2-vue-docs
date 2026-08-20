@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Switch component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Switch component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Toggle Switch Button | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Toggle Switch Button control. Explore setup, project configuration, theme installation, and how to add a switch in a Vue 2 project.
 control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Switch Component in Vue 2
+# Getting Started with Vue Toggle Switch Button
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Switch component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Format in Vue Range Slider component | Syncfusion
-description: Learn here all about Format in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: Format in Vue Range Slider | Syncfusion
+description: Format Syncfusion Vue Range Slider ticks and tooltips with currency, percentage, and numeric styles, or customize via events.
 control: Format 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Format in Vue Range Slider component
+# Format in Vue Range Slider
 
 The [`format`](https://ej2.syncfusion.com/vue/documentation/api/slider/tooltipDataModel/#format) feature is used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the Slider. There are two ways of achieving formatting in Slider.
 

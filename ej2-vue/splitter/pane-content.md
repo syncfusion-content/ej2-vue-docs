@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pane content in Vue Splitter component | Syncfusion
-description: Learn here all about Pane content in Syncfusion Vue Splitter component of Syncfusion Essential JS 2 and more.
-control: Pane content 
+title: Pane Content in Vue Splitter | Syncfusion
+description: Provide plain text, HTML markup, or other JavaScript UI components as Vue Splitter pane content to populate each pane.
+control: Pane content
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pane content in Vue Splitter component
+# Pane Content in Vue Splitter
 
 This section explains how to provide plain text, HTML markup, or other JavaScript UI components as pane content in the Splitter.
 

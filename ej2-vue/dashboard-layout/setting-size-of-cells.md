@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Setting size of cells in Vue Dashboard Layout component | Syncfusion
-description: Learn here all about Setting size of cells in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
-control: Setting size of cells 
+title: Setting Size Of Cells in Vue Dashboard Layout | Syncfusion
+description: Configure Vue Dashboard Layout cell dimensions via parent element height and width to build responsive or static layouts that stack on mobile.
+control: Setting size of cells
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Setting size of cells in Vue Dashboard Layout component
+# Setting Size Of Cells in Vue Dashboard Layout
 
 The layout dimensions are determined by the height and width of the parent element. A responsive or static layout can be created by assigning percentage or fixed dimensions to the parent element. The layout adapts to mobile resolutions by transforming the entire layout into a stacked orientation, so that, the panels will be displayed in a vertical column.
 

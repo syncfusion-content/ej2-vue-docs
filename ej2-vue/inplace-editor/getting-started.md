@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue In-place Editor component | Syncfusion
-description:  Checkout and learn about Getting started with Vue In-place Editor component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue In-place Editor | Syncfusion
+description: Learn how to get started with the Syncfusion Vue In-place Editor control. Explore setup, features, examples, and customization options.
 control: In-place Editor
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue In-Place Editor Component in Vue 2
+# Getting Started with Vue In-place Editor
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue In-Place Editor component.
 

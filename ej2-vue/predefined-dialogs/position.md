@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position in Vue Predefined dialogs component | Syncfusion
-description: Learn here all about Position in Syncfusion Vue Predefined dialogs component of Syncfusion Essential JS 2 and more.
+title: Position in Vue Predefined Dialogs | Syncfusion
+description: Position Vue Predefined Dialogs at custom X and Y coordinates using the position property, with left, center, right, top, bottom, or offset values for placement.
 control: Position 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position in Vue Predefined dialogs component
+# Position in Vue Predefined Dialogs
 
 Customize the dialog position by using the [position](https://ej2.syncfusion.com/documentation/api/dialog/#position) property. The position can be represented with specific `X` and `Y` values.
 

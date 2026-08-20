@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Timepicker component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Timepicker component of Syncfusion Essential JS 2 and more.
-control: Style appearance 
+title: Style and Appearance in Vue TimePicker | Syncfusion
+description: Override Syncfusion Vue TimePicker styles with custom CSS for the wrapper, icon, popup, list items, and full-screen mode on mobile devices.
+control: Style appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Timepicker component
+# Style and Appearance in Vue TimePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

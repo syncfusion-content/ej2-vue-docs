@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Orientation in Vue Stepper component | Syncfusion
-description: Checkout and learn about Orientations with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Orientations in Vue Stepper | Syncfusion
+description: Display Vue Stepper steps in horizontal or vertical orientation using the orientation property to suit different layout requirements of your application.
 control: Stepper 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orientations in Vue Stepper component
+# Orientations in Vue Stepper
 
 The Stepper component supports the display of steps in both horizontal and vertical orientations by using the [orientation](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#orientation) property.
 

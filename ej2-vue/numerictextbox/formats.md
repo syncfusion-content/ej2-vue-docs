@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Formats in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Formats in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Formats in Vue Numeric Textbox | Syncfusion
+description: Format Syncfusion Vue Numeric Textbox values with MSDN standard and custom numeric specifiers for currency, percent, and decimals.
 control: Formats 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Formats in Vue Numerictextbox component
+# Formats in Vue Numeric Textbox
 
 You can format the value of NumericTextBox using [`format`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#format) property. The value will be displayed in the specified format when the component is in focused out state. The format string supports both the [standard numeric format](../common/internationalization#supported-format-string/) and [custom numeric format](../common/internationalization#custom-number-formatting-and-parsing/).
 

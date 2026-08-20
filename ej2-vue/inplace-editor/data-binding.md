@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Vue Inplace editor component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Inplace editor component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue In-place Editor | Syncfusion
+description: Bind local arrays or remote data services to the Vue In-place Editor using the dataSource property with DataManager OData V4 and Web API adaptors.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Inplace editor component
+# Data Binding in Vue In-place Editor
 
 The Essential<sup style="font-size:70%">&reg;</sup> JS 2 components load the data either from local data sources or remote data services using the `dataSource` property and it supports the data type of an array or `DataManager`. Also supports different kind of data services such as OData, OData V4, Web API, and data formats such as XML, JSON, JSONP with the help of `DataManager` adaptors.
 

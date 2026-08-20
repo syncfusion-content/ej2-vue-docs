@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Chips component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Chips component of Syncfusion Essential JS 2 and more.
+title: Customization in Vue Chips | Syncfusion
+description: Learn how to customize the Syncfusion Vue Chips appearance with predefined styles, leading and trailing icons, avatar, avatar content, outline chip, and template support.
 control: Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Chips component
+# Customization in Vue Chips
 
 This section explains the customization of styles, leading icons, avatar, and trailing icons in Chip control.
 

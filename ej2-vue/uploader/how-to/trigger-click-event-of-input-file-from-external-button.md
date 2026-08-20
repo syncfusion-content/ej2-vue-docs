@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Trigger click event of input file from external button in Vue Uploader component | Syncfusion
-description: Learn here all about Trigger click event of input file from external button in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to trigger file click externally in Vue Uploader | Syncfusion
+description: Open the Syncfusion Vue Uploader file picker by triggering the input file click from any external button in your Vue app.
 control: Trigger click event of input file from external button 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Trigger click event of input file from external button in Vue Uploader component
+# How to trigger file click externally in Vue Uploader
 
 You can trigger the input type file click event from external button. In the below sample, click event of input file was triggered from **Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Button**.
 

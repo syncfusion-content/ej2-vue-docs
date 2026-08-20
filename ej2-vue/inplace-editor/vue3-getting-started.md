@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started vue3 with Vue In-place Editor component | Syncfusion
-description:  Checkout and learn about Getting started vue3 with Vue In-place Editor component of Syncfusion Essential JS 2 and more details.
+title: Getting started vue3 with Vue In-place Editor | Syncfusion
+description: Learn how to get started with the Syncfusion Vue In-place Editor using Vite in Vue 3 with the Composition API and Options API integration steps.
 control: In-place Editor
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue In-place Editor Component in Vue 3
+# Getting started vue3 with Vue In-place Editor
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue In-place Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

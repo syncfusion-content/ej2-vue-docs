@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Localization in Vue Combo box component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Combo box component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue ComboBox | Syncfusion
+description: Localize the Syncfusion Vue ComboBox noRecordsTemplate and actionFailureTemplate text by culture using the included localization library.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Combo box component
+# Localization in Vue ComboBox
 
-The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#norecordstemplate-string) and [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#actionfailuretemplate-string) &nbsp;property according to the culture currently assigned to the ComboBox.
+The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/combo-box#norecordstemplate-string) and [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/combo-box#actionfailuretemplate-string) &nbsp;property according to the culture currently assigned to the ComboBox.
 
 | Locale key | en-US (default)  |
 |------------|------------------|
@@ -36,5 +36,5 @@ In the following sample, French culture is set to the ComboBox and no data is lo
 
 ## See Also
 
-* [Accessibility](./accessibility/)
-* [How to bind the data to the combobox](./data-binding/)
+* [Accessibility](./accessibility)
+* [How to bind the data to the combobox](./data-binding)

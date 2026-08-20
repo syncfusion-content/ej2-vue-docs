@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue DateTimePicker component | Syncfusion
-description: Checkout and learn about getting Started with Vue DateTimePicker component of Syncfusion Essential JS 2 and more details.
-control: Getting Started 
+title: Getting Started with Vue DateTimePicker | Syncfusion
+description: Step-by-step guide to install, configure, and render the Syncfusion Vue DateTimePicker component in a Vue 2 project with theme setup.
+control: Getting Started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue DateTimePicker Component in Vue 2
+# Getting Started with Vue DateTimePicker
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DateTimePicker component.
 

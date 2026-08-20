@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in Vue Tab component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: Drag and Drop in Vue Tabs | Syncfusion
+description: Enable drag and drop of Vue Tabs headers to reorder tab items within the same Tab component or across multiple Tab controls on a page.
 control: Drag and drop 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in Vue Tab component
+# Drag and Drop in Vue Tabs
 
 The Tab component allows you to drag and drop any item by setting [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/tab#allowdraganddrop)&nbsp;to **true**. Items can be reordered to any place by dragging and dropping them onto the desired location.
 

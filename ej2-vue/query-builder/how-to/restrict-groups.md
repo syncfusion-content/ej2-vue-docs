@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Restrict groups in Vue Query builder component | Syncfusion
-description: Learn here all about Restrict groups in Syncfusion Vue Query builder component of Syncfusion Essential JS 2 and more.
+title: How to Limit Group Count in Vue Query Builder | Syncfusion
+description: Limit the number of nested groups in the Vue Query Builder UI by setting maxGroupCount, useful on mobile to control nesting depth.
 control: Restrict groups 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict groups in Vue Query builder component
+# How to set the maximum group count in Vue Query Builder UI
 
-You can restrict the condition set by defining the [`maxGroupCount`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#maxgroupcount) property. By default, the value is 5. In the below demo, the `maxGroupCount` is set to 2 .
+You can restrict the condition set by defining the [`maxGroupCount`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#maxgroupcount) property. By default, the value is 5. In the below demo, the `maxGroupCount` is set to 2 .
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started Vue3 with Vue Splitter component | Syncfusion
-description:  Checkout and learn about Getting Started Vue3 three with Vue Splitter component of Syncfusion Essential JS 2 and more details.
+description: Set up a Vue 3 project with Vite and integrate the Syncfusion Vue Splitter component using the Composition API or Options API.
 control: Getting Started Vue3
 platform: ej2-vue
 documentation: ug

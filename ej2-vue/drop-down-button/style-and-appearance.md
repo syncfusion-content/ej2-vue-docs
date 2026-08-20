@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue Drop down button component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Dropdown Button | Syncfusion
+description: Override the default CSS classes of the Vue Dropdown Button to customize the button, hover, active, and popup item styles.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Drop down button component
+# Style and Appearance in Vue Dropdown Button
 
 To modify the DropDownButton appearance, you need to override the default CSS of DropDownButton component. Please find the list of CSS classes and its corresponding section in DropDownButton. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

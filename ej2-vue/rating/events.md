@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue Rating component | Syncfusion
-description: Learn here all about Events in Syncfusion Vue Rating component of Syncfusion Essential JS 2 and more.
+title: Events in Vue Rating | Syncfusion
+description: Handle beforeItemRender, created, onItemHover, and valueChanged events of the Syncfusion Vue Rating component.
 control: Events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Rating component
+# Events in Vue Rating
 
 This section describes the rating events that will be triggered when appropriate actions are performed. The following events are available in the rating component.
 

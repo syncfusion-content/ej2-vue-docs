@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Floating action button component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Floating action button component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Floating Action Button | Syncfusion
+description: Learn about the accessibility standards of the Syncfusion Vue Floating Action Button, including WCAG 2.2, Section 508, screen reader, keyboard navigation, and WAI-ARIA support.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Floating action button component
+# Accessibility in Vue Floating Action Button
 
 The Floating action button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

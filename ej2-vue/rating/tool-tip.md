@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool tip in Vue Rating component | Syncfusion
-description: Learn here all about Tool tip in Syncfusion Vue Rating component of Syncfusion Essential JS 2 and more.
+title: Tooltip in Vue Rating | Syncfusion
+description: Show a hover tooltip on each Syncfusion Vue Rating item with custom text, templates, or styled appearances.
 control: Tool tip 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool tip in Vue Rating component
+# Tooltip in Vue Rating
 
 The rating component supports tooltip to show additional information in rating items by setting the [`showTooltip`](https://ej2.syncfusion.com/vue/documentation/api/rating/#showtooltip) property. If enabled, the tooltip appears when the user hovers over a rating item.
 

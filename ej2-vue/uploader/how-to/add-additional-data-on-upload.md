@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add additional data on upload in Vue Uploader component | Syncfusion
-description: Learn here all about Add additional data on upload in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to add additional data on upload in Vue Uploader | Syncfusion
+description: Pass extra form fields to the server with each Syncfusion Vue Uploader upload by setting customFormData in the uploading event.
 control: Add additional data on upload 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add additional data on upload in Vue Uploader component
+# How to add additional data on upload in Vue Uploader
 
 The uploader component allows you to add the additional data on file upload which is used to get in the server end. By using [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/#uploading) event and its customFormData argument, you can achieve this behavior.
 

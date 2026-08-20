@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue OTP Input component | Syncfusion
-description:  Learn here all about Accessibility in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue OTP Input | Syncfusion
+description: Learn how the Syncfusion Vue OTP Input meets WCAG 2.2, Section 508, and ARIA group standards, plus HTML and ARIA label options.
 platform: ej2-vue
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue OTP Input component
+# Accessibility in Vue OTP Input
 
 The OTP Input component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

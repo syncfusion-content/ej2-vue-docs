@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in Vue Message component | Syncfusion
-description: Learn here all about Icons in Syncfusion Vue Message component of Syncfusion Essential JS 2 and more.
+title: Icons in Vue Message | Syncfusion
+description: Show or hide severity icons, render a custom severity icon through cssClass, and enable a close icon to dismiss Vue Message instances.
 control: Icons 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in Vue Message component
+# Icons in Vue Message
 
 This section explains the message with no icons, how to show or hide the close icon and add the custom severity icon to the message.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Time range in Vue Timepicker component | Syncfusion
-description: Learn here all about Time range in Syncfusion Vue Timepicker component of Syncfusion Essential JS 2 and more.
-control: Time range 
+title: Time Range in Vue TimePicker | Syncfusion
+description: Restrict the Syncfusion Vue TimePicker selection using min and max properties, with out-of-range values marked with an error class.
+control: Time range
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Time range in Vue Timepicker component
+# Time Range in Vue TimePicker
 
 TimePicker provides an option to select a time value within a specified range by using the [`min`](https://ej2.syncfusion.com/vue/documentation/api/timepicker#min) and [`max`](https://ej2.syncfusion.com/vue/documentation/api/timepicker#max) properties.  The min value should always be lesser than the max value.
 

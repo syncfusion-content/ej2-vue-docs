@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Remove item in Vue Drop down list component | Syncfusion
-description: Learn here all about Remove item in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to remove an item from Vue Dropdown List | Syncfusion
+description: Remove items from the Syncfusion Vue Dropdown List by calling removeItem with the item value to splice it out of the data source.
 control: Remove item 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove item in Vue Drop down list component
+# How to remove an item from Vue Dropdown List
 
 The following example demonstrate about how to remove an item from DropDownList.
 

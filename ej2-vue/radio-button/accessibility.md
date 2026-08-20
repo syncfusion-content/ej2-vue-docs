@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Radio button component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Radio button component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Radio Button | Syncfusion
+description: Learn about the accessibility standards of the Syncfusion Vue Radio Button, including WCAG 2.2, Section 508, screen reader, keyboard navigation, RTL, and WAI-ARIA support.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Radio button component
+# Accessibility in Vue Radio Button
 
 The Radio button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize tab content height in Vue Tab component | Syncfusion
-description: Learn here all about Customize tab content height in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to customize tab content height in Vue Tabs | Syncfusion
+description: Adjust Vue Tabs content panel height using the heightAdjustMode property or custom CSS to control how content area height scales with tab content.
 control: Customize tab content height 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize tab content height in Vue Tab component
+# How to customize tab content height in Vue Tabs
 
 You can change the Tab content height by using the [`heightAdjustMode`](https://ej2.syncfusion.com/vue/documentation/api/tab#heightadjustmode) property. By default, the Tab content [`heightAdjustMode`](https://ej2.syncfusion.com/vue/documentation/api/tab#heightadjustmode) property is set to `Content` value.
 

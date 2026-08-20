@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types in Vue Chips component | Syncfusion
-description: Learn here all about what are the Types in Syncfusion Vue Chips component of Syncfusion Essential JS 2 and more.
+title: Types in Vue Chips | Syncfusion
+description: Learn about the Syncfusion Vue Chips types, including Input, Choice, Filter, Action, and Deletable chips, and how to enable selection and delete behavior.
 control: Types 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types in Vue Chips component
+# Types in Vue Chips
 
 The ChipList control has the following types.
 

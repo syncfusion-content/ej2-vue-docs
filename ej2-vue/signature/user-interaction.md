@@ -1,14 +1,14 @@
 ---
 layout: post
-title: User interaction in Vue Signature component | Syncfusion
-description: Learn here all about User interaction in Syncfusion Vue Signature component of Syncfusion Essential JS 2 and more.
+title: User Interactions in Vue Signature | Syncfusion
+description: Undo, redo, clear, disable, or render the Syncfusion Vue Signature as read-only through its user-interaction APIs.
 control: User interaction 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interaction in Vue Signature component
+# User Interactions in Vue Signature
 
 The below interactions were available in Signature, and we can walk through one by one.
 

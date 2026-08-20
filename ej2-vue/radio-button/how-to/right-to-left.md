@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to left in Vue Radio button component | Syncfusion
-description: Learn here all about Right to left in Syncfusion Vue Radio button component of Syncfusion Essential JS 2 and more.
+title: How to enable RTL in Vue Radio Button | Syncfusion
+description: Learn how to enable right-to-left (RTL) support in the Syncfusion Vue Radio Button by setting the enableRtl property to true for RTL language rendering.
 control: Right to left 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to left in Vue Radio button component
+# How to enable RTL in Vue Radio Button
 
 RadioButton component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#enablertl) as `true`.
 

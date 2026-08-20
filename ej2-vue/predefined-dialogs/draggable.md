@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Draggable in Vue Predefined dialogs component | Syncfusion
-description: Learn here all about Draggable in Syncfusion Vue Predefined dialogs component of Syncfusion Essential JS 2 and more.
+title: Draggable in Vue Predefined Dialogs | Syncfusion
+description: Enable dragging for Vue Predefined Dialogs with the isDraggable property so users can grab the dialog header and reposition it within the target container.
 control: Draggable 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Draggable in Vue Predefined dialogs component
+# Draggable in Vue Predefined Dialogs
 
 The predefined dialogs supports dragging within its target container by grabbing the dialog header, which allows the user to reposition the dialog dynamically by using `isDraggable` property.
 

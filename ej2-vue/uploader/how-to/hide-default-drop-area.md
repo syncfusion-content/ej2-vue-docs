@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide default drop area in Vue Uploader component | Syncfusion
-description: Learn here all about Hide default drop area in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to hide default drop area in Vue Uploader | Syncfusion
+description: Hide the Syncfusion Vue Uploader default drop area by overriding the e-upload, e-file-select, and e-file-drop styles in your CSS.
 control: Hide default drop area 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide default drop area in Vue Uploader component
+# How to hide default drop area in Vue Uploader
 
 You can achieve this behavior by override the corresponding uploader styles. In the following example, override the below styles to hide the default drop area behavior.
 

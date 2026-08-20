@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Dashboard Layout component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in Vue Dashboard Layout | Syncfusion
+description: Verify Vue Dashboard Layout accessibility compliance with ADA, Section 508, and WCAG 2.2 standards supported by built-in ARIA roles.
+control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Dashboard Layout component
+# Accessibility in Vue Dashboard Layout
 
 The Dashboard Layout component follows widely adopted accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 

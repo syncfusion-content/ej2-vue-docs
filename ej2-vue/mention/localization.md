@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Mention component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Mention component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue Mention | Syncfusion
+description: Localize the Syncfusion Vue Mention noRecordsTemplate text by culture using the L10n class load function and culture-specific message tables.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Mention component
+# Localization in Vue Mention
 
 The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/mention/#norecordstemplate) &nbsp;properties according to the culture currently assigned to the Mention.
 

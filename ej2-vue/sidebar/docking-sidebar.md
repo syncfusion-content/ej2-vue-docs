@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Docking sidebar in Vue Sidebar component | Syncfusion
-description: Learn here all about Docking sidebar in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: Docking Sidebar in Vue Sidebar | Syncfusion
+description: Enable the Vue Sidebar dock mode with enableDock and dockSize to keep icons visible when collapsed, reserving space on the page without full closure.
 control: Docking sidebar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Docking sidebar in Vue Sidebar component
+# Docking Sidebar in Vue Sidebar
 
 The dock state of the Sidebar reserves some space on the page that always remains visible when the Sidebar is collapsed. It is used to show the short term of a content like icons alone instead of lengthy text. To achieve this , set [`enableDock`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#enabledock) to true and specify the required [`dockSize`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#docksize).
 

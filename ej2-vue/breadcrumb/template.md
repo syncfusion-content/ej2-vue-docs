@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Template in Vue Breadcrumb component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Breadcrumb component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Breadcrumb | Syncfusion
+description: Customize Vue Breadcrumb items and separators using the itemTemplate and separatorTemplate properties to render custom content per step.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Breadcrumb component
+# Template in Vue Breadcrumb
 
-The Breadcrumb component provides a way to customize the items using [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#itemtemplate) and the separators using [`separatorTemplate`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#separatortemplate) properties.
+The Breadcrumb component provides a way to customize the items using [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#itemtemplate) and the separators using [`separatorTemplate`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#separatortemplate) properties.
 
 ## Item Template
 
-In the following example, Shopping Cart details are used as breadcrumb Items and the items are customized by the chips component using [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#itemtemplate).
+In the following example, Shopping Cart details are used as breadcrumb Items and the items are customized by the chips component using [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#itemtemplate).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ In the following example, Shopping Cart details are used as breadcrumb Items and
 
 ## Separator Template
 
-In the  following example, the separators are customized with icons using [`separatorTemplate`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#separatortemplate).
+In the  following example, the separators are customized with icons using [`separatorTemplate`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#separatortemplate).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

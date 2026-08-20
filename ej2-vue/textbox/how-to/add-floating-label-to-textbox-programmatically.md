@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add floating label to textbox programmatically in Vue Textbox component | Syncfusion
-description: Learn here all about Add floating label to textbox programmatically in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: How to add floating label programmatically in Vue TextBox | Syncfusion
+description: Add a floating label to the Syncfusion Vue TextBox programmatically with Auto, Always, or Never float modes imported from ej2-inputs.
 control: Add floating label to textbox programmatically 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add floating label to textbox programmatically in Vue Textbox component
+# How to add floating label programmatically in Vue TextBox
 
 The `Floating Label TextBox` floats label above the TextBox after focusing, or entering a value in the TextBox.
 

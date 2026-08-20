@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fixed sidebar in Vue Sidebar component | Syncfusion
-description: Learn here all about Fixed sidebar in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to render fixed Sidebar in Vue Sidebar | Syncfusion
+description: Render the Vue Sidebar with a fixed position so it stays in place while the main content area scrolls, using the default position styling of the component.
 control: Fixed sidebar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fixed sidebar in Vue Sidebar component
+# How to render fixed Sidebar in Vue Sidebar
 
 The Sidebar does not require any specific style to make it fixed. By default, the Sidebar position is fixed. The following example demonstrates that the Sidebar is rendered with a fixed position. The Sidebar's position remains constant when scrolling the main content area.
 

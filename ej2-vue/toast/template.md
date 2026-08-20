@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Toast component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Toaster | Syncfusion
+description: Define the Vue Toaster content using a Template property that accepts an HTML element, string, or selector for custom layouts.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Toast component
+# Template in Vue Toaster
 
 The Template property in toast can be defined as `HTML element`, this can be either a `string` or `selector`.
 

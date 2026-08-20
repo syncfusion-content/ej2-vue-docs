@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add link to toolbar item in Vue Toolbar component | Syncfusion
-description: Learn here all about Add link to toolbar item in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to add link to toolbar item in Vue Toolbar | Syncfusion
+description: Add a hyperlink to a Vue Toolbar item using the htmlAttributes property to bind an anchor tag for navigation on item click.
 control: Add link to toolbar item 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add link to toolbar item in Vue Toolbar component
+# How to add link to toolbar item in Vue Toolbar
 
 You can add link inside Toolbar using Vue **template**. Follow the below guidelines for add link as template in Toolbar.
 

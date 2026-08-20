@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons and separator in Vue Split button component | Syncfusion
-description: Learn here all about Icons and separator in Syncfusion Vue Split button component of Syncfusion Essential JS 2 and more.
+title: Icons and Separator in Vue Split Button | Syncfusion
+description: Add font or sprite icons to the Vue Split Button with the iconCss property and render a vertical layout using the e-vertical CSS class.
 control: Icons and separator 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons and separator in Vue Split button component
+# Icons and Separator in Vue Split Button
 
 ## SplitButton icons
 

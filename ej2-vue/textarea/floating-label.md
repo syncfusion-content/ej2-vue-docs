@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Floating Label in Vue TextArea component | Syncfusion
-description: Checkout and learn about Floating Label in Vue TextArea component of Syncfusion Essential JS 2 and more.
+title: Floating Label in Vue TextArea | Syncfusion
+description: Float the placeholder label above the Syncfusion Vue TextArea with Auto, Always, or Never modes and localize it for any culture.
 control: Floating Label 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Floating Label in Vue TextArea Component
+# Floating Label in Vue TextArea
 
 The floating label functionality in the TextArea component allows the placeholder text to float above the TextArea while the user interacts with it, providing a more intuitive user experience. This feature can be achieved using the [floatLabelType](https://ej2.syncfusion.com/vue/documentation/api/textarea/#floatLabelType) API, which offers various options for defining the floating behavior:
 

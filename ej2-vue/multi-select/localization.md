@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Multi select component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue MultiSelect Dropdown | Syncfusion
+description: Localize the Syncfusion Vue MultiSelect Dropdown noRecordsTemplate and actionFailureTemplate text by culture using the L10n class load function.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Multi select component
+# Localization in Vue MultiSelect Dropdown
 
 The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the MultiSelect.
 

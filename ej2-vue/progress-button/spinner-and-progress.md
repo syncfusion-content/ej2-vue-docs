@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spinner and progress in Vue Progress button component | Syncfusion
-description: Learn here all about Spinner and progress in Syncfusion Vue Progress button component of Syncfusion Essential JS 2 and more.
+title: Spinner and Progress in Vue Progress Button | Syncfusion
+description: Customize the Vue Progress Button spinner position, size, and template, and animate content during progress using animationSettings.
 control: Spinner and progress 
 platform: ej2-vue
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 <!-- markdownlint-disable MD002 MD022 -->
-# Spinner and progress in Vue Progress button component
+# Spinner and Progress in Vue Progress Button
 
 ## Change spinner position
 

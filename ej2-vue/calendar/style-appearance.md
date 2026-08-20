@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Calendar component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Style appearance 
+title: Style and Appearance in Vue Calendar | Syncfusion
+description: Override Syncfusion Vue Calendar styles with custom CSS for the background, header, title, icons, footer button, and selected day cells.
+control: Style appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Calendar component
+# Style and Appearance in Vue Calendar
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

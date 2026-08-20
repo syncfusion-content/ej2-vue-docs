@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value change in Vue Drop down list component | Syncfusion
-description: Learn here all about Value change in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to detect value change source in Vue Dropdown List | Syncfusion
+description: Detect whether a Syncfusion Vue Dropdown List value change came from user interaction or code by reading the isInteracted flag on the change event.
 control: Value change 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value change in Vue Drop down list component
+# How to detect value change source in Vue Dropdown List
 
 You can check about whether value change happened by manual or programmatic by using [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event argument that argument name is `isInteracted`.
 

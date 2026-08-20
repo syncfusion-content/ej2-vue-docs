@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize the dialog appearance in Vue Dialog component | Syncfusion
-description: Learn here all about Customize the dialog appearance in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: How to customize appearance in Vue Dialog | Syncfusion
+description: Customize the Vue Dialog appearance by providing a template string or HTML element to the content property to render a custom-styled dialog window.
 control: Customize the dialog appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the dialog appearance in Vue Dialog component
+# How to customize appearance in Vue Dialog
 
-You can customize the dialog appearance by providing dialog template as string or HTML element to the [content](https://ej2.syncfusion.com/vue/documentation/api/dialog/#content) property. In the following sample, dialog is customized as  error window appearance.
+You can customize the dialog appearance by providing dialog template as string or HTML element to the [content](https://ej2.syncfusion.com/vue/documentation/api/dialog#content) property. In the following sample, dialog is customized as  error window appearance.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

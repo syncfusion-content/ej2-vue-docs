@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent toast close with mobile swipe in Vue Toast component | Syncfusion
-description: Learn here all about Prevent toast close with mobile swipe in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Prevent toast close with mobile swipe in Vue Toaster | Syncfusion
+description: Prevent the Vue Toaster from closing on a mobile swipe by setting the beforeClose event argument cancel value to true for swipe type.
 control: Prevent toast close with mobile swipe 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent toast close with mobile swipe in Vue Toast component
+# How to prevent toast close with mobile swipe in Vue Toaster
 
 You can prevent the toast close with mobile swipe action by setting [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/toast/#beforeClose) argument cancel value to true while argument type as a swipe. The following code shows how to prevent toast close with mobile swipe.
 

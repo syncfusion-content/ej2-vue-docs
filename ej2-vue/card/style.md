@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style in Vue Card component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Card component of Syncfusion Essential JS 2 and more.
+description: Customize the Vue Card appearance using the exact CSS structure classes to modify spacing, borders, colors, and other visual properties.
 control: Style 
 platform: ej2-vue
 documentation: ug

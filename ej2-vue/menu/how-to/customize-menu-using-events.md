@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize menu using events in Vue Menu component | Syncfusion
-description: Learn here all about Customize menu using events in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: How to customize menu using events in Vue Menu Bar | Syncfusion
+description: Customize the Vue Menu Bar at runtime using its built-in events such as beforeOpen, beforeItemRender, and select to handle item-level and menu-level actions.
 control: Customize menu using events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize menu using events in Vue Menu component
+# How to customize menu using events in Vue Menu Bar
 
 The Menu provides a set of [`events`](https://ej2.syncfusion.com/vue/documentation/api/menu#events) to enable users to customize it.
 

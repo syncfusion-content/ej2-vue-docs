@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started Vue 3 with Vue Accordion component | Syncfusion
-description: Checkout and learn about Getting Started Vue 3 with Vue Accordion component of Syncfusion Essential JS 2 and more details.
+title: Getting Started Vue 3 with Vue Accordion | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Accordion control. Explore setup, features, examples, and customization options.
 control: Getting Started Vue 3
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue Accordion Component in Vue 3
+# Getting Started with Vue Accordion in Vue 3
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Accordion component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

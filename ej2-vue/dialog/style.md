@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Dialog component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: Styling and Customizing Vue Dialog | Syncfusion
+description: Customize Vue Dialog appearance with CSS for header, content, modal overlay, and other element styling based on user preference.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Dialog component
+# Styling and Customizing Vue Dialog
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

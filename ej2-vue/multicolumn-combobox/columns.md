@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Columns in Vue MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about columns with Vue MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: Columns in Vue MultiColumn ComboBox | Syncfusion
+description: Define the data fields, header, width, format, and template for each Syncfusion Vue MultiColumn ComboBox column via the columns property.
 platform: ej2-vue
 control: MultiColumn ComboBox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in Vue MultiColumn ComboBox component
+# Columns in Vue MultiColumn ComboBox
 
 The [columns](../api/multicolumn-combobox#columns) property allow you to define the data fields to be displayed in the MultiColumn ComboBox.
 

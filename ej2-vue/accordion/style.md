@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Accordion component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Accordion component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Accordion | Syncfusion
+description: Override the default Vue Accordion appearance with custom CSS classes targeting the wrapper, list items, and header to match your app design.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Accordion component
+# Style in Vue Accordion
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 

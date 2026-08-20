@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Textbox component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue TextBox | Syncfusion
+description: Learn how the Syncfusion Vue TextBox meets WCAG 2.2, Section 508, ADA, and WAI-ARIA standards with full keyboard and screen-reader support.
 control: Accessibility 
 platform: ej2-Vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Textbox component
+# Accessibility in Vue TextBox
 
 The Textbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

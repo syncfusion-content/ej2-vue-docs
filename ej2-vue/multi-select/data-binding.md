@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Vue Multi select component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue MultiSelect Dropdown | Syncfusion
+description: Bind the Syncfusion Vue MultiSelect Dropdown to local arrays, OData, OData V4, or Web API via the dataSource property, mapping text, value, groupBy, and iconCss.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Multi select component
+# Data Binding in Vue MultiSelect Dropdown
 
 The MultiSelect loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#datasource) property. It supports the data type of `array` or `DataManager`.
 

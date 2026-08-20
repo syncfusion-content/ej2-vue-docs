@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set panel headers in Vue Dashboard Layout | Syncfusion
-description: Learn here all about Setting header of panels in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
+description: Add header and content to Vue Dashboard Layout panels using the header and content properties to label and populate each panel.
 control: Setting header of panels 
 platform: ej2-vue
 documentation: ug

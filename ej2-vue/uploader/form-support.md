@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form support in Vue Uploader component | Syncfusion
-description: Learn here all about Form support in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Form Support in Vue Uploader | Syncfusion
+description: Submit selected files with the Syncfusion Vue Uploader inside an HTML form by disabling auto upload and posting files to the form action.
 control: Form support 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form support in Vue Uploader component
+# Form Support in Vue Uploader
 
 The uploader component works with HTML form like default file input.
 The following configuration is must to make the uploader work inside the form.

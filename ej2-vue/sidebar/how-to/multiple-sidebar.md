@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple sidebar in Vue Sidebar component | Syncfusion
-description: Learn here all about Multiple sidebar in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to render multiple Sidebars in Vue Sidebar | Syncfusion
+description: Initialize two Vue Sidebar panels on the left and right of the same main content using the position property for dual-panel navigation layouts.
 control: Multiple sidebar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple sidebar in Vue Sidebar component
+# How to render multiple Sidebars in Vue Sidebar
 
 Two Sidebars can be initialized on a web page with the same main content. Sidebars can be initialized on the right side or left side of the main content using the [position](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#position) property.
 

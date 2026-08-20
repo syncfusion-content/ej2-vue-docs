@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue Context menu component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Context menu component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Context Menu | Syncfusion
+description: Override default Vue Context Menu CSS classes to customize the wrapper, items, caret icon, and menu icons, or create a custom theme via Theme Studio.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Context menu component
+# Style and Appearance in Vue Context Menu
 
 To modify the ContextMenu appearance, you need to override the default CSS of ContextMenu component. Please find the list of CSS classes and its corresponding section in ContextMenu component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

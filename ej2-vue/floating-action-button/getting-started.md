@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Floating Action Button component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Floating Action Button component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Floating Action Button | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Floating Action Button control. Explore setup, project config, theme installation, and how to add a FAB in a Vue 2 project.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Floating Action Button Component in Vue 2
+# Getting Started with Vue Floating Action Button
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Floating Action Button component.
 

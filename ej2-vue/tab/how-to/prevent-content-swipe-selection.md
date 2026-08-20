@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent content swipe selection in Vue Tab component | Syncfusion
-description: Learn here all about Prevent content swipe selection in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to prevent content swipe selection in Vue Tabs | Syncfusion
+description: Disable swipe gesture navigation in Vue Tabs by setting the swipeMode or related CSS properties to prevent accidental content changes on touch devices.
 control: Prevent content swipe selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent content swipe selection in ##Platform_Name## Tab component
+# How to prevent content swipe selection in Vue Tabs
 
 The [`swipeMode`](https://ej2.syncfusion.com/vue/documentation/api/tab#swipemode)  property in the Tab component allows users to navigate between tabs using swipe gestures, improving the overall navigation experience. It supports both touch and mouse inputs, enabling intuitive tab switching.
 

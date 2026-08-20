@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in Vue Timepicker component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Vue Timepicker component of Syncfusion Essential JS 2 and more.
-control: Globalization 
+title: Globalization in Vue TimePicker | Syncfusion
+description: Adapt the Syncfusion Vue TimePicker to different languages and cultures using CLDR data, locale-aware time formats, and right-to-left support.
+control: Globalization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Timepicker component
+# Globalization in Vue TimePicker
 
 Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [`internationalization`](../common/internationalization/), and also add culture specific customization and translation to the text [`localization`](../common/localization/).
 

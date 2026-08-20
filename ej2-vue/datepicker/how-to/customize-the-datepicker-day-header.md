@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the datepicker day header in Vue Datepicker component | Syncfusion
-description: Learn here all about Customize the datepicker day header in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Customize the datepicker day header 
+title: How to customize the day header in Vue DatePicker | Syncfusion
+description: Change the Syncfusion Vue DatePicker day header format using dayHeaderFormat, choosing Short, Narrow, Abbreviated, or Wide styles.
+control: Customize the datepicker day header
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the datepicker day header in Vue Datepicker component
+# How to customize the day header in Vue DatePicker
 
 You can change the format of the day that to be displayed in header using [`dayHeaderFormat`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#dayheaderformat) property. By default, the format is `Short`.
 

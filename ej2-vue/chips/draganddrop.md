@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in Vue Chips component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion Vue Chips component of Syncfusion Essential JS 2 and more.
+title: Drag and Drop in Vue Chips | Syncfusion
+description: Learn how to enable drag-and-drop for Syncfusion Vue Chips using allowDragAndDrop, and use the dragStart, dragging, dragStop, and dragArea APIs to control chip behavior.
 control: Drag and drop 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in Vue Chips component
+# Drag and Drop in Vue Chips
 
 The Chips component enables drag and drop functionality for any chip when [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/chips/#allowdraganddrop) is set to **true**. Chips can be dragged and dropped within the same or across external ChipList containers.
 

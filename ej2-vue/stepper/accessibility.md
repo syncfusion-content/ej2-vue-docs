@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Stepper component | Syncfusion
-description: Checkout and learn about Accessibility with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Stepper | Syncfusion
+description: The Vue Stepper meets ADA, Section 508, and WCAG 2.2 standards with screen reader support, keyboard navigation, RTL, and color contrast compliance built in.
 control: Stepper 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Stepper component
+# Accessibility in Vue Stepper
 
 The Stepper component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

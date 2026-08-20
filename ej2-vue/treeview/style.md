@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles and Appearance in Vue TreeView component | Syncfusion
-description: Checkout and learn here all about styles and appearance in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
+title: Style in Vue TreeView | Syncfusion
+description: Override default Vue TreeView CSS classes to customize node appearance, icons, text, and selection colors to match your application design.
 platform: ej2-vue
 control: TreeView 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles and Appearance in Vue TreeView Component
+# Style in Vue TreeView
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user preference.
 

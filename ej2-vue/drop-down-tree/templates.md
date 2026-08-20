@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue Dropdown Tree component | Syncfusion
-description: Learn here all about Templates in Syncfusion Vue Dropdown Tree component of Syncfusion Essential JS 2 and more.
+title: Templates in Vue Dropdown Tree | Syncfusion
+description: Customize Syncfusion Vue Dropdown Tree items, selected value, header, footer, and no records content using itemTemplate and valueTemplate.
 control: Templates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue Dropdown Tree component
+# Templates in Vue Dropdown Tree
 
 The Dropdown Tree provides support to customize each list item, header, and footer elements. It uses the Essential<sup style="font-size:70%">&reg;</sup> JS 2 Template engine to compile and render the elements properly.
 

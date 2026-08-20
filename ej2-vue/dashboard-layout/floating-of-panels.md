@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Floating of panels in Vue Dashboard Layout component | Syncfusion
-description: Learn here all about Floating of panels in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
-control: Floating of panels 
+title: Floating Of Panels in Vue Dashboard Layout | Syncfusion
+description: Enable floating in the Vue Dashboard Layout so panels automatically move up to fill empty cells in previous rows using the allowFloating property.
+control: Floating of panels
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Floating of panels in Vue Dashboard Layout component
+# Floating Of Panels in Vue Dashboard Layout
 
 The floating functionality of the component allows you to effectively use the entire layout for the panel's placement. If the floating functionality is enabled, the panels within the layout get floated upwards automatically to occupy the empty cells available in previous rows. Enable or disable this behavior using the [`allowFloating`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#allowfloating) property of the component.
 

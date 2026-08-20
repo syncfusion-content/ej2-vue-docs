@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Popup items in Vue Drop down button component | Syncfusion
-description: Learn here all about Popup items in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: Popup Items in Vue Dropdown Button | Syncfusion
+description: Add icons, URLs, separators, or custom templates to Vue Dropdown Button popup items via iconCss, url, separator, and beforeItemRender.
 control: Popup items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Popup items in Vue Drop down button component
+# Popup Items in Vue Dropdown Button
 
 ## Icons
 

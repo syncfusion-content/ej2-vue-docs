@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons and navigation in Vue Context menu component | Syncfusion
-description: Learn here all about Icons and navigation in Syncfusion Vue Context menu component of Syncfusion Essential JS 2 and more.
+title: Icons and Navigation in Vue Context Menu | Syncfusion
+description: Add font icons to Vue Context Menu items via the iconCss property and navigate to other pages by binding the url property to each menu item.
 control: Icons and navigation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons and navigation in Vue Context menu component
+# Icons and Navigation in Vue Context Menu
 
 ## Icons
 

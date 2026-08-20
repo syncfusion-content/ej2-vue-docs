@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Clear an Image in ##Platform_Name## Image editor control | Syncfusion
-description: Learn here all about Clear an Image in Syncfusion ##Platform_Name## Image editor control of Syncfusion Essential JS 2 and more.
+title: Clear an Image in Vue Image Editor component | Syncfusion
+description: Use the clearImage method to empty the canvas of the Vue Image Editor, typically before reopening it inside a dialog for a fresh session.
 platform: ej2-vue
-control: Clear an Image 
+control: Clear an Image
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##

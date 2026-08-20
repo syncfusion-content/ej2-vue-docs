@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Signature component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Signature component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Signature | Syncfusion
+description: Learn how the Syncfusion Vue Signature meets WCAG 2.2, Section 508 standards, and supports keyboard shortcuts for undo, redo, save, and clear.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Signature component
+# Accessibility in Vue Signature
 
 The Signature component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

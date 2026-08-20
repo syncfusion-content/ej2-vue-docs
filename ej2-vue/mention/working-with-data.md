@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Working with data in Vue Mention component | Syncfusion
-description: Learn here all about Working with data in Syncfusion Vue Mention component of Syncfusion Essential JS 2 and more.
+title: Working with Data in Vue Mention | Syncfusion
+description: Bind the Syncfusion Vue Mention to local arrays, OData V4, or Web API data via the dataSource property, mapping text, value, groupBy, and iconCss.
 control: Working with data 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Working with data in Vue Mention component
+# Working with Data in Vue Mention
 
 The Mention loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/mention/#datasource) property. It supports the data type of either `array` or `DataManager`.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change the floating label color of the textbox in Vue Textbox component | Syncfusion
-description: Learn here all about Change the floating label color of the textbox in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: How to change floating label color in Vue TextBox | Syncfusion
+description: Set the Syncfusion Vue TextBox floating label color for success and warning states by overriding the e-float-text CSS selectors.
 control: Change the floating label color of the textbox 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the floating label color of the textbox in Vue Textbox component
+# How to change floating label color in Vue TextBox
 
 You can change the floating label color of the TextBox for both `success` and `warning` validation states by applying the following CSS styles.
 

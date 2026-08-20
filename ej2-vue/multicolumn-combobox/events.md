@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about events with Vue MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: Events in Vue MultiColumn ComboBox | Syncfusion
+description: Handle Syncfusion Vue MultiColumn ComboBox events like actionBegin, actionFailure, filtering, and select for sorting, filtering, and grouping flows.
 platform: ej2-vue
 control: MultiColumn ComboBox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue MultiColumn ComboBox component
+# Events in Vue MultiColumn ComboBox
 
 This section describes the multicolumn combobox events that will be triggered when appropriate actions are performed. The following events are available in the multicolumn combobox component.
 

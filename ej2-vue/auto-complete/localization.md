@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Auto complete component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Auto complete component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue AutoComplete | Syncfusion
+description: Localize the Syncfusion Vue AutoComplete noRecordsTemplate and actionFailureTemplate text by culture using the included localization library.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Auto complete component
+# Localization in Vue AutoComplete
 
 The Localization library allows you to localize static text content of the noRecordsTemplate and actionFailureTemplate properties according to the culture currently assigned to the AutoComplete.
 
@@ -36,5 +36,5 @@ Hence, the noRecordsTemplate property displays its text in French culture initia
 
 ## See Also
 
-* [Accessibility](./accessibility/)
-* [How to bind the data to the autocomplete](./data-binding/)
+* [Accessibility](./accessibility)
+* [How to bind the data to the autocomplete](./data-binding)

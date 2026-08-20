@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide dropdown arrow in Vue Drop down button component | Syncfusion
-description: Learn here all about Hide dropdown arrow in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to hide dropdown arrow in Vue Dropdown Button | Syncfusion
+description: Hide the default caret arrow from a Vue Dropdown Button by adding the e-caret-hide class through the cssClass property.
 control: Hide dropdown arrow 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide dropdown arrow in Vue Drop down button component
+# How to hide dropdown arrow in Vue Dropdown Button
 
 You can hide the dropdown arrow from the DropDownButton by adding class `e-caret-hide` to DropDownButton element using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#cssclass) property.
 

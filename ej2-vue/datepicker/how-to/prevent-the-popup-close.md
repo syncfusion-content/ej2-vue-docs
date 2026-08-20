@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent the popup close in Vue Datepicker component | Syncfusion
-description: Learn here all about Prevent the popup close in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Prevent the popup close 
+title: How to prevent the popup close in Vue DatePicker | Syncfusion
+description: Prevent the Syncfusion Vue DatePicker popup from closing by calling preventDefault on the PreventableEventArgs from the close event.
+control: Prevent the popup close
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent the popup close in Vue Datepicker component
+# How to prevent the popup close in Vue DatePicker
 
 To prevent the DatePicker popup from closing, use the preventDefault method from the `PreventableEventArgs`.
 

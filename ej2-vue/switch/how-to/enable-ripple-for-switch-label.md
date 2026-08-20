@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable ripple for switch label in Vue Switch component | Syncfusion
-description: Learn here all about Enable ripple for switch label in Syncfusion Vue Switch component of Syncfusion Essential JS 2 and more.
+title: Enable ripple for label in Vue Toggle Switch Button | Syncfusion
+description: Learn how to enable a ripple effect on the Syncfusion Vue Toggle Switch Button label using the rippleMouseHandler method since labels have no ripple by default.
 control: Enable ripple for switch label 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable ripple for switch label in Vue Switch component
+# How to enable ripple for label in Vue Toggle Switch Button
 
 By default, label with ripple effect is not available in Switch. You can achieve this using `rippleMouseHandler` method.
 

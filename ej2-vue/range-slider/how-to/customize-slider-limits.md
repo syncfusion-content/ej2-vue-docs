@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Slider limits in Vue Range Slider component | Syncfusion
-description: Learn here all about Customize Slider limits in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to customize the Slider limits in Vue Range Slider | Syncfusion
+description: Restyle the Syncfusion Vue Range Slider limits bar by overriding the e-limits CSS class with your own background color.
 control: Customize Slider limits 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Slider limits in Vue Range Slider component
+# How to customize the Slider limits in Vue Range Slider
 
 The Slider's appearance can be customized via CSS. By overriding the Slider's CSS classes, the Slider limit bar can be customized. Here, the limit bar is customized with a different background color. By default, the Slider has a class `e-limits` for the limits bar. You can override this class with your own color values as shown in the following code snippet:
 

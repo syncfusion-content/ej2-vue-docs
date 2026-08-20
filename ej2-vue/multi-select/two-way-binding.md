@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Two way binding in Vue Multi select component | Syncfusion
-description: Learn here all about Two way binding in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Two Way Binding in Vue MultiSelect Dropdown | Syncfusion
+description: Bind a Syncfusion Vue MultiSelect Dropdown value two ways with the v-model directive so changes automatically sync to other components in Vue.
 control: Two way binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Two way binding in Vue Multi select component
+# Two Way Binding in Vue MultiSelect Dropdown
 
 Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one MultiSelect component, v-model will automatically update the value in the other MultiSelect.
 

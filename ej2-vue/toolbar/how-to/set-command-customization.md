@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set command customization in Vue Toolbar component | Syncfusion
-description: Learn here all about Set command customization in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to set command customization in Vue Toolbar | Syncfusion
+description: Attach click event handlers to Vue Toolbar items to execute custom commands when the user clicks a specific toolbar button or toggle item.
 control: Set command customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set command customization in Vue Toolbar component
+# How to set command customization in Vue Toolbar
 
 The `htmlAttributes` property of the Toolbar item is used to set the HTML attributes ('ID', 'class', 'style' ,'role') for the commands.
 

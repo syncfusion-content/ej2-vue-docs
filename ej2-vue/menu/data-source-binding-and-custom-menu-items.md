@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data source binding and custom menu items in Vue Menu component | Syncfusion
-description: Learn here all about Data source binding and custom menu items in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: Data Source Binding and Custom Menu Items in Vue Menu Bar | Syncfusion
+description: Bind hierarchical or self-referential data to the Vue Menu Bar using the items and fields properties, or connect remote data via DataManager service.
 control: Data source binding and custom menu items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data source binding and custom menu items in Vue Menu component
+# Data Source Binding and Custom Menu Items in Vue Menu Bar
 
 ## Data binding
 

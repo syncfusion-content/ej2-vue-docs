@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Card image in Vue Card component | Syncfusion
-description: Learn here all about Card image in Syncfusion Vue Card component of Syncfusion Essential JS 2 and more.
-control: Card image 
+title: Card Image in Vue Card | Syncfusion
+description: Add images and dividers to the Vue Card, including support for full-width images, image captions, and horizontal dividers between content.
+control: Card image
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Card image in Vue Card component
+# Card Image in Vue Card
 
 ## Images
 

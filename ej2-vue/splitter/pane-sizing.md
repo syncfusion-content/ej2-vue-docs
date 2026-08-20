@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pane sizing in Vue Splitter component | Syncfusion
-description: Learn here all about Pane sizing in Syncfusion Vue Splitter component of Syncfusion Essential JS 2 and more.
-control: Pane sizing 
+title: Pane Sizing in Vue Splitter | Syncfusion
+description: Configure Vue Splitter pane sizes in pixel or percentage formats to control how panes share available space within the layout.
+control: Pane sizing
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pane sizing in Vue Splitter component
+# Pane Sizing in Vue Splitter
 
 Splitter allows specifying pane sizes in `pixel` or `percentage` formats.
 

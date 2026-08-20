@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clear item in Vue Drop down list component | Syncfusion
-description: Learn here all about Clear item in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to clear selected item in Vue Dropdown List | Syncfusion
+description: Clear the selected Syncfusion Vue Dropdown List item via the clear icon by enabling showClearButton or by setting index, text, or value to null.
 control: Clear item 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear item in Vue Drop down list component
+# How to clear selected item in Vue Dropdown List
 
 You can clear the selected item in the below two different ways.
 

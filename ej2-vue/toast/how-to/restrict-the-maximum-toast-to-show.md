@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict the maximum toast to show in Vue Toast component | Syncfusion
-description: Learn here all about Restrict the maximum toast to show in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: How to restrict the maximum toast to show in Vue Toaster | Syncfusion
+description: Limit the number of toasts visible at once in the Vue Toaster by canceling the beforeOpen event when the max count is reached.
 control: Restrict the maximum toast to show 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict the maximum toast to show in Vue Toast component
+# How to restrict the maximum toast to show in Vue Toaster
 
 You can restrict the maximum toast count by using the event callback function and terminate the toast displaying process by setting the cancel event property in the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/toast/#beforeopen) event.
 

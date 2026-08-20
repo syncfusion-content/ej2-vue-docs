@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Adornments in ##Platform_Name## NumericTextBox control | Syncfusion
-description: Learn here all about Adornments in Syncfusion ##Platform_Name## NumericTextBox control of Syncfusion Essential JS 2 and more.
+title: Adornments in Vue Numeric Textbox | Syncfusion
+description: Add currency, unit, or icon adornments before and after the Syncfusion Vue Numeric Textbox using prependTemplate and appendTemplate.
 platform: ej2-vue
 control: Adornments
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in ##Platform_Name## NumericTextBox control
+# Adornments in Vue Numeric Textbox
 
 Adornments allow you to add custom elements before or after the numeric textbox using the `prependTemplate` and `appendTemplate` properties. These elements can include currency symbols, unit labels, or action icons to provide context and quick actions without affecting numeric behavior or float label functionality.
 

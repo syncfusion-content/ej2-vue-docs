@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show different types of toast in Vue Toast component | Syncfusion
-description: Learn here all about Show different types of toast in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: How to show different types of toast in Vue Toaster | Syncfusion
+description: Show different toast types in the Vue Toaster using the cssClass property to apply predefined styles for each scenario.
 control: Show different types of toast 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show different types of toast in Vue Toast component
+# How to show different types of toast in Vue Toaster
 
 The Essential<sup style="font-size:70%">&reg;</sup> JS 2 toast has the following predefined styles that can be defined using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/toast/#cssclass) property for achieving different types of toast:
 

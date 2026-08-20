@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show dates of other months in Vue Calendar component | Syncfusion
-description: Learn here all about Show dates of other months in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Show dates of other months 
+title: How to show other months in Vue Calendar | Syncfusion
+description: Show hidden previous and next month dates in the Syncfusion Vue Calendar by overriding e-month-hide and e-other-month CSS rules.
+control: Show dates of other months
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show dates of other months in Vue Calendar component
+# How to show other months in Vue Calendar
 
 The following example demonstrates how to show dates of other months.
 

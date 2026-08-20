@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Daterangepicker component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Daterangepicker component of Syncfusion Essential JS 2 and more.
-control: Style appearance 
+title: Style and Appearance in Vue DateRangePicker | Syncfusion
+description: Override Syncfusion Vue DateRangePicker styles with custom CSS for the wrapper, icons, popup header, content, and full-screen mode.
+control: Style appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Daterangepicker component
+# Style and Appearance in Vue DateRangePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

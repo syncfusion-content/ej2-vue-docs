@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting Started with the Vue Skeleton component | Syncfusion
-description:  Checkout and learn about Vue 3 getting Started with the Vue Skeleton component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Skeleton | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Skeleton control in a Vite Vue 3 project using the Composition API or Options API.
 control: Getting Started vue 3 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Skeleton Component in Vue 3
+# Getting Started with Vue Skeleton
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Skeleton component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

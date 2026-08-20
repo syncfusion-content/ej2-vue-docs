@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value binding in Vue Drop down list component | Syncfusion
-description: Learn here all about Value binding in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: Value Binding in Vue Dropdown List | Syncfusion
+description: Bind primitive strings, numbers, booleans, and complex objects to the Syncfusion Vue Dropdown List value field for efficient selection.
 control: Value binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value binding in DropDownList
+# Value Binding in Vue Dropdown List
 
 Value binding in the DropDown List control allows you to associate data values with each list item. This facilitates managing and retrieving selected values efficiently. The DropDown List component provides flexibility in binding both primitive data types and complex objects.
 

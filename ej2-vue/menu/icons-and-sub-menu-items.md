@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons and sub menu items in Vue Menu component | Syncfusion
-description: Learn here all about Icons and sub menu items in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: Icons and Sub Menu Items in Vue Menu Bar | Syncfusion
+description: Add font icons to Vue Menu Bar items via the iconCss property and enable navigation by binding the url property to sub menu items for page routing.
 control: Icons and sub menu items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons and sub menu items in Vue Menu component
+# Icons and Sub Menu Items in Vue Menu Bar
 
 ## Icons
 

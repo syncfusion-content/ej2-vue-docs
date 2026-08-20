@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Select items in Vue List box component | Syncfusion
-description: Learn here all about Select items in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: How to select items in Vue ListBox | Syncfusion
+description: Select items in the Syncfusion Vue ListBox at runtime by calling selectItems with a value or list of values to mark them as selected.
 control: Select items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select items in Vue List box component
+# How to select items in Vue ListBox
 
 In the following example, `Bugatti Chiron` is selected using [`selectItems`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#selectitems) method.
 

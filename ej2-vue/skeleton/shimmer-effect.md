@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Shimmer effect in Vue Skeleton component | Syncfusion
-description: Learn here all about Shimmer effect in Syncfusion Vue Skeleton component of Syncfusion Essential JS 2 and more.
+title: Shimmer Effect in Vue Skeleton | Syncfusion
+description: Apply Wave, Pulse, or Fade shimmer effects to Vue Skeleton using the shimmerEffect property to animate placeholder loading.
 control: Shimmer effect 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shimmer effect in Vue Skeleton component
+# Shimmer Effect in Vue Skeleton
 
-You can use the [`shimmerEffect`](https://ej2.syncfusion.com/vue/documentation/api/skeleton/#shimmereffect) property to change animation effect in the skeleton control. Skeleton supports `Wave`, `Pulse` and `Fade` effects and by default, the `shimmerEffect` is set to `Wave` effect.
+You can use the [`shimmerEffect`](https://ej2.syncfusion.com/vue/documentation/api/skeleton#shimmereffect) property to change animation effect in the skeleton control. Skeleton supports `Wave`, `Pulse` and `Fade` effects and by default, the `shimmerEffect` is set to `Wave` effect.
 
 ```
 <template>

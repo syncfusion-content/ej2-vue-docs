@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Item configuration in Vue Toolbar component | Syncfusion
-description: Learn here all about Item configuration in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: Item Configuration in Vue Toolbar | Syncfusion
+description: Configure Vue Toolbar items with properties like text, prefix/suffix icons, tooltip text, and alignment using the item directive and directives.
 control: Item configuration 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Item configuration in Vue Toolbar component
+# Item Configuration in Vue Toolbar
 
 The [Vue Toolbar](https://www.syncfusion.com/vue-ui-components/vue-toolbar) can be rendered by defining an array of items. Items can be constructed with the following built-in command types or item template.
 

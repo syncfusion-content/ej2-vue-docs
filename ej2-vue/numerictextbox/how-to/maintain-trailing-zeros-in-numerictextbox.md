@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Maintain trailing zeros in numerictextbox in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Maintain trailing zeros in numerictextbox in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: How to maintain trailing zeros in Vue Numeric Textbox | Syncfusion
+description: Keep trailing zeros visible in the Syncfusion Vue Numeric Textbox on focus instead of letting them disappear.
 control: Maintain trailing zeros in numerictextbox 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maintain trailing zeros in numerictextbox in Vue Numerictextbox component
+# How to maintain trailing zeros in Vue Numeric Textbox
 
 By default, trailing zeros disappear when the NumericTextBox gets focus. However, you can use the following sample to maintain the trailing zeros while focusing the NumericTextBox.
 

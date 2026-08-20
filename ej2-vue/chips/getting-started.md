@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Chips component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Chips component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Chips | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Chips control. Explore project setup, package installation, theme reference, and adding chips in a Vue 2 project.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Chips Component in Vue 2
+# Getting Started with Vue Chips
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chips component.
 

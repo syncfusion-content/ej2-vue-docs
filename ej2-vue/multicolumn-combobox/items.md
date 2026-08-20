@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Items in Vue Combobox component | Syncfusion
-description: Checkout and learn about items in Vue Combobox component of Syncfusion Essential JS 2 and more.
+title: Items in Vue MultiColumn ComboBox | Syncfusion
+description: Set the display text and value of a Syncfusion Vue MultiColumn ComboBox item via the text and value properties for selection state.
 platform: ej2-vue
 control: MultiColumn ComboBox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Items in Vue ComboBox component
+# Items in Vue MultiColumn ComboBox
 
 ## Setting text
 

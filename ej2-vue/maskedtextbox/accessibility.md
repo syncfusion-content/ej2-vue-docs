@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Maskedtextbox component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue MaskedTextBox | Syncfusion
+description: Discover how the Syncfusion Vue MaskedTextBox meets WCAG 2.2, Section 508, and ARIA standards with full keyboard and screen reader support.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Maskedtextbox component
+# Accessibility in Vue MaskedTextBox
 
 The Maskedtextbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

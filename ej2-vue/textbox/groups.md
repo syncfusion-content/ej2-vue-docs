@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Groups in Vue Textbox component | Syncfusion
-description: Learn here all about Groups in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: Groups in Vue TextBox | Syncfusion
+description: Group icons with the Syncfusion Vue TextBox input via the e-input-group class and enable floating labels through the e-float-input class.
 control: Groups 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Groups in Vue Textbox component
+# Groups in Vue TextBox
 
 The following section explains you the steps required to create TextBox with `icon` and `floating label`.
 

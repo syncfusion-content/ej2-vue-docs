@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Vue List box component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue ListBox | Syncfusion
+description: Explore WAI-ARIA listbox and option roles, multi-select support, and keyboard shortcuts for the Syncfusion Vue ListBox component.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Accessibility in Vue List box component
+# Accessibility in Vue ListBox
 
 ## ARIA Attributes
 

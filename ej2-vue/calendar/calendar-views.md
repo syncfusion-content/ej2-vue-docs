@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Calendar views in Vue Calendar component | Syncfusion
-description: Learn here all about Calendar views in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Calendar views 
+title: Calendar Views in Vue Calendar | Syncfusion
+description: Switch between month, year, and decade views in the Syncfusion Vue Calendar using the start and depth properties to control drill-down navigation.
+control: Calendar views
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Calendar views in Vue Calendar component
+# Calendar Views in Vue Calendar
 
 The Calendar has the following predefined views that provide a flexible way to navigate back and forth when selecting dates.
 

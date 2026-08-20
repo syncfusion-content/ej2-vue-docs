@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customized checkbox in Vue Check box component | Syncfusion
-description: Learn here all about Customized checkbox in Syncfusion Vue Check box component of Syncfusion Essential JS 2 and more.
+title: How to customize appearance in Vue Checkbox | Syncfusion
+description: Apply CSS rules via the cssClass property to style the Vue Checkbox frame, check icon, and frame border-radius.
 control: Customized checkbox 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customized checkbox in Vue Check box component
+# How to customize appearance in Vue Checkbox
 
 ## Customize CheckBox Appearance
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate toolbar in Vue Signature component | Syncfusion
-description: Learn here all about Integrate toolbar in Syncfusion Vue Signature component of Syncfusion Essential JS 2 and more.
+title: How to integrate toolbar in Vue Signature | Syncfusion
+description: Wire the Syncfusion Vue Signature to a toolbar by syncing the toolbar change event with canUndo, canRedo, and isEmpty.
 control: Integrate toolbar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate toolbar in Vue Signature component
+# How to integrate toolbar in Vue Signature
 
 The Signature component integrates with the toolbar and the interaction performed using the `change` event of the toolbar. In that, [`canUndo`](https://ej2.syncfusion.com/vue/documentation/api/signature/#canundo), [`canRedo`](https://ej2.syncfusion.com/vue/documentation/api/signature/#canredo) and [`isEmpty`](https://ej2.syncfusion.com/vue/documentation/api/signature/#isempty) methods were used to enable/disable undo, redo, and clear buttons.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in Vue OTP Input component | Syncfusion
-description:  Learn here all about Appearance in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
+title: Appearance in Vue OTP Input | Syncfusion
+description: Set the length, disable the Syncfusion Vue OTP Input, or apply success, warning, and error styles via the cssClass property.
 platform: ej2-vue
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue OTP Input component
+# Appearance in Vue OTP Input
 
 You can also customize the appearance of OTP Input control.
 

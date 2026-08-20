@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Dropdown Tree component | Syncfusion
-description: Checkout and learn about Getting started with Vue Dropdown Tree component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Dropdown Tree in Vue 2 | Syncfusion
+description: Set up a Vue 2 project with Vue-CLI and integrate the Syncfusion Vue Dropdown Tree component using the Composition or Options API.
 control: Dropdown Tree
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Dropdown Tree Component in Vue 2
+# Getting Started with Vue Dropdown Tree in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Dropdown Tree component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

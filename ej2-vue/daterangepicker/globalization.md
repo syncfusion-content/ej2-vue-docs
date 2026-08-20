@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in Vue Daterangepicker component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Vue Daterangepicker component of Syncfusion Essential JS 2 and more.
-control: Globalization 
+title: Globalization in Vue DateRangePicker | Syncfusion
+description: Adapt the Syncfusion Vue DateRangePicker to different languages and cultures using CLDR data, locale-aware formats, and right-to-left support.
+control: Globalization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Daterangepicker component
+# Globalization in Vue DateRangePicker
 
 Globalization is the combination of internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number (Internationalization), and also add culture specific customization and translation to the text (Localization).
 

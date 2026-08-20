@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Horizontal in Vue Card component | Syncfusion
-description: Learn here all about Horizontal in Syncfusion Vue Card component of Syncfusion Essential JS 2 and more.
-control: Horizontal 
+title: Horizontal in Vue Card | Syncfusion
+description: Lay out Vue Card elements side-by-side by adding the e-card-horizontal class to the root card element for a horizontal card layout.
+control: Horizontal
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Horizontal in Vue Card component
+# Horizontal in Vue Card
 
 By default, card elements are stacked vertically in DOM order. To lay out elements side-by-side, add the `e-card-horizontal` class to the root card element.
 

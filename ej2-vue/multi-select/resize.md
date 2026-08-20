@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resizing in Vue MultiSelect component | Syncfusion
-description: Learn here all about Popup Resizing in Syncfusion Vue MultiSelect component of Syncfusion Essential JS 2 and more.
+title: Resizing in Vue MultiSelect Dropdown | Syncfusion
+description: Enable the AllowResize property on the Syncfusion Vue MultiSelect Dropdown popup so users can dynamically resize it, with size persisted across sessions.
 control: Resizing
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing in Vue MultiSelect component
+# Resizing in Vue MultiSelect Dropdown
 
 You can dynamically adjust the size of the popup in the ComboBox component by using the [AllowResize](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#allowresize)  property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Skip a month in calendar in Vue Calendar component | Syncfusion
-description: Learn here all about Skip a month in calendar in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Skip a month in calendar 
+title: How to skip months in Vue Calendar | Syncfusion
+description: Skip a month in the Syncfusion Vue Calendar navigation by using the navigated event with the navigateTo method on prev and next clicks.
+control: Skip a month in calendar
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Skip a month in calendar in Vue Calendar component
+# How to skip months in Vue Calendar
 
 The following example demonstrates how to skip a month in the Calendar while clicking the previous and next icons. In the example below,  the [`navigated`](https://ej2.syncfusion.com/vue/documentation/api/calendar#navigated) event is used to skip a month with [`navigateTo`](https://ej2.syncfusion.com/vue/documentation/api/calendar#navigateto) method.
 

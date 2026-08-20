@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in Vue TreeView component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
+title: Drag and Drop in Vue TreeView | Syncfusion
+description: Enable drag and drop of Vue TreeView nodes within the same tree or across multiple TreeView controls to reorder items hierarchically.
 control: Drag and drop 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in Vue TreeView component
+# Drag and Drop in Vue TreeView
 
 The TreeView component allows you to drag and drop any node by setting [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/treeview/#allowdraganddrop) property to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
 

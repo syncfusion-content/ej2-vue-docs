@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create right to left dropdownbutton in Vue Drop down button component | Syncfusion
-description: Learn here all about Create right to left dropdownbutton in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to create right-to-left in Vue Dropdown Button | Syncfusion
+description: Render the Vue Dropdown Button in right-to-left mode by setting the enableRtl API property to true for RTL language support.
 control: Create right to left dropdownbutton 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create right to left dropdownbutton in Vue Drop down button component
+# How to create right-to-left in Vue Dropdown Button
 
 DropDownButton component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#enablertl) as true.
 

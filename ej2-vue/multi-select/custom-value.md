@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom value in Vue Multi select component | Syncfusion
-description: Learn here all about Custom value in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Custom Value in Vue MultiSelect Dropdown | Syncfusion
+description: Allow users to add a new custom value to the Syncfusion Vue MultiSelect Dropdown by enabling allowCustomValue, which fires customValueSelection.
 control: Custom value 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom value in Vue Multi select component
+# Custom Value in Vue MultiSelect Dropdown
 
 The MultiSelect allows user to add a new non-present option to the component value when [`allowCustomValue`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#allowcustomvalue) is enabled. while selecting the new custom value [`customValueSelection`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#customvalueselection) event will be triggered.
 

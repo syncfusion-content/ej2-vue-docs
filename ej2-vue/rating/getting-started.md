@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Rating component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Rating component of Syncfusion Essential JS 2 and more details.
+description: Learn how to get started with the Syncfusion Vue Rating control. Explore setup, features, examples, and customization options.
 control: Getting started 
 platform: ej2-vue
 documentation: ug

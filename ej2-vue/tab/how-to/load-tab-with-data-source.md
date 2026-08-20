@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load tab with data source in Vue Tab component | Syncfusion
-description: Learn here all about Load tab with data source in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to load tab with DataSource in Vue Tabs | Syncfusion
+description: Bind a remote data source to Vue Tabs using DataManager and map header and content fields from the returned JSON to the tab items property.
 control: Load tab with data source 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load tab with data source in Vue Tab component
+# How to load tab with DataSource in Vue Tabs
 
 You can bind any data object to Tab items, by mapping it to a [`header`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabItem/#header) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabItem/#content) property.
 

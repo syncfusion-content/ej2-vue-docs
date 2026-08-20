@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Date format in Vue Datepicker component | Syncfusion
-description: Learn here all about Date format in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Date format 
+title: Date Format in Vue DatePicker | Syncfusion
+description: Set custom date formats in the Syncfusion Vue DatePicker using the format property and accept multiple input formats with inputFormats.
+control: Date format
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date format in Vue Datepicker component
+# Date Format in Vue DatePicker
 
 Date format is a way of representing the date value in different string format in the textbox.
 
-By default, the DatePicker's format is based on the culture. You can also set the own custom format by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#format) property.
+By default, the DatePicker's format is based on the culture. You can also set the own custom format by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#format) property.
 
 > Once the date format property has been defined it will be common to all the cultures.
 
@@ -33,7 +33,7 @@ The following example demonstrates the DatePicker with the custom format (`yyyy-
 
 ## Input formats 
 
-The [`inputFormats`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#inputformats) property in the DatePicker control allows users to enter dates in various formats, providing flexibility in date entry. This property accepts an array of predefined formats that the control recognizes, enabling users to input dates in different ways while ensuring they are parsed correctly.
+The [`inputFormats`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#inputformats) property in the DatePicker control allows users to enter dates in various formats, providing flexibility in date entry. This property accepts an array of predefined formats that the control recognizes, enabling users to input dates in different ways while ensuring they are parsed correctly.
 
 When the user types the date in any of the specified input formats, it will be automatically converted to the display format after pressing Enter, the Tab key, or when the input loses focus. This enhances the user experience by allowing intuitive data entry through various custom input formats.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create dropdownbutton with rounded corner in Vue Drop down button component | Syncfusion
-description: Learn here all about Create dropdownbutton with rounded corner in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to create with rounded corner in Vue Dropdown Button | Syncfusion
+description: Add a rounded corner to a Vue Dropdown Button by applying a border-radius CSS rule via the cssClass property of the control.
 control: Create dropdownbutton with rounded corner 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create dropdownbutton with rounded corner in Vue Drop down button component
+# How to create with rounded corner in Vue Dropdown Button
 
 DropDownButton with rounded corner can be achieved by adding `border-radius` CSS property to button element.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue Tooltip component | Syncfusion
-description:  Checkout and learn about Getting Started with Vue Tooltip component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Tooltip | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Tooltip control. Explore setup, features, examples, and customization options.
 control: Getting Started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Tooltip Component in Vue 2
+# Getting Started with Vue Tooltip
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Tooltip component.
 

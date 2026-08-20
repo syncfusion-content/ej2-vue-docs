@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create buttongroup with rounded corner in Vue Button group component | Syncfusion
-description: Learn here all about Create buttongroup with rounded corner in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: How to create with rounded corner in Vue Button Group | Syncfusion
+description: Learn how to create a Syncfusion Vue Button Group with rounded corners by adding the e-round-corner class to the target element to give the buttons round edges.
 control: Create buttongroup with rounded corner 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create buttongroup with rounded corner in Vue Button group component
+# How to create with rounded corner in Vue Button Group
 
 The ButtonGroup with rounded corner has round edges on both sided. To ButtonGroup with rounded corner,`e-round-corner` class is to be added to the target element.
 
