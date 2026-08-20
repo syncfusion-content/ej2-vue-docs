@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue3 js composition with Vue Getting started component | Syncfusion
-description:  Checkout and learn about Vue3 js composition with Vue Getting started component of Syncfusion Essential JS 2 and more details.
-control: Vue3 js composition 
+title: Getting Started with Vue3 Js Composition | Syncfusion
+description: Learn how to set up a Vite project with JavaScript and integrate Syncfusion Vue UI components using the Composition API.
+control: Vue3 Js Composition
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue using JavaScript and Composition API
+# Getting Started: Syncfusion® Vue Components with JS & Composition API
 
 This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Nuxt Framework and Vue Component | Syncfusion
-description:  Check out and learn about getting started with the Nuxt Framework and Vue Component of Syncfusion Essential JS 2 and more details.
-control: Nuxt 3 
+title: Getting Started with Vue Nuxt 3 | Syncfusion
+description: Learn how to set up a Nuxt project and integrate Syncfusion Vue UI components using the Composition API.
+control: Nuxt 3
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue UI Components with the Nuxt Framework
+# Getting Started with Syncfusion® Vue Components in Nuxt 3
 
 This article provides a step-by-step guide for setting up a [Nuxt](https://nuxt.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 

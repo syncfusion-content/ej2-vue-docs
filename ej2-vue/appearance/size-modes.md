@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Size modes in Vue Appearance component | Syncfusion
-description: Learn here all about Size modes in Syncfusion Vue Appearance component of Syncfusion Essential JS 2 and more.
+title: Size modes in Vue | Syncfusion
+description: Learn how to enable and customize normal and touch size modes for Syncfusion Vue components to optimize UI sizing for different devices.
 control: Size modes 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Size modes in Vue Appearance component
+# Size Modes for Syncfusion® Vue component
 
 An application that is designed to be accessed through a web browser on various devices, including desktop computers and mobile devices, may have a distinct layout or user interface on a mobile device compared to a desktop computer to better suit the smaller screen size.
 

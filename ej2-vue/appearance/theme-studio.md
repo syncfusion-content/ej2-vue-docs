@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Theme studio in Vue Appearance component | Syncfusion
-description: Learn here all about Theme studio in Syncfusion Vue Appearance component of Syncfusion Essential JS 2 and more.
+title: Theme studio in Vue | Syncfusion
+description: Learn how to customize Syncfusion Vue themes using Theme Studio, export custom CSS, and import previously changed settings or Figma tokens.
 control: Theme studio 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Theme Studio in Vue Appearance component
+# Theme Studio Overview
 
 Theme Studio for Essential<sup style="font-size:70%">&reg;</sup> JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
 

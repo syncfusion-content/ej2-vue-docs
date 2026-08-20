@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to left in Vue Common control | Syncfusion
-description: Learn here all about Right to left in Syncfusion Vue Common control of Syncfusion Essential JS 2 and more.
-control: common
+title: Right to Left (RTL) in React Components | Syncfusion
+description: Learn how to enable Right-to-Left (RTL) support in Syncfusion Vue components for languages like Arabic and Hebrew.
+control: Common
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right-To-Left support in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components
+# Right to Left (RTL) in Syncfusion® Vue Components
 
 Right-to-left (RTL) support enables applications to properly display content for languages that are written from right to left, such as Arabic and Hebrew.
 

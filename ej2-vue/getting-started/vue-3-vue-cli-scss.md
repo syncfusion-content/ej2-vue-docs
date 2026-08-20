@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue3 tutorial with Vue Getting started component | Syncfusion
-description:  Checkout and learn about Vue3 tutorial with Vue Getting started component of Syncfusion Essential JS 2 and more details.
-control: Vue3 tutorial 
+title: Getting Started with Vue3 SCSS | Syncfusion
+description: Learn how to set up a Vue 3 application with Vue CLI and SCSS, and add Syncfusion Vue UI components.
+control: Vue3 Tutorial
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Vue 3 with Vue CLI and SCSS - Getting Started
+# Getting Started with Vue 3 Using Vue CLI and SCSS
 
 This section explains how to use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in Vue 3 application with SCSS styling. To get started with Vue 3 using Composition API and Vite, refer to the [getting started with Vue 3 Composition API](./vue-3-js-composition) section.
 

@@ -3,12 +3,12 @@ layout: post
 title: Resolving Content Security Policy in Syncfusion ##Platform_Name##
 description: Learn here all about Content Security Policy in Syncfusion  ##Platform_Name##  Common control of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
-control: common
+control: Common
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to resolve Content Security Policy (CSP) errors
+# How to Resolve CSP Errors in Syncfusion® Vue Components
 
 Enabling a strict Content Security Policy (CSP) can cause issues with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in your application.
 

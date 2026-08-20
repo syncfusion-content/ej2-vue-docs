@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Update npm package in Vue Common control | Syncfusion
-description: Learn here all about Update npm package in Syncfusion Vue Common control of Syncfusion Essential JS 2 and more.
-control: common
+title: How to Update NPM Package in Vue Components | Syncfusion
+description: Learn how to update Syncfusion Vue npm packages to the latest versions using the npm-check-updates tool and npm dedupe.
+control: Common
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Updating Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages
+# How to Update NPM Package for Syncfusion® Vue Components
 
 Keeping Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages up to date ensures you have access to the latest features and bug fixes. The npm package [`npm-check-updates`](https://www.npmjs.com/package/npm-check-updates) is a helpful tool to update Syncfusion<sup style="font-size:70%">&reg;</sup> packages to their latest versions.
 

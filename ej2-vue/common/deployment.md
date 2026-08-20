@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Deployment in Vue Deployment md component | Syncfusion
-description: Learn here all about Deployment in Syncfusion Vue Deployment md component of Syncfusion Essential JS 2 and more.
-control: Deployment 
+title: Deployment in Vue Components | Syncfusion
+description: Learn how to deploy Syncfusion Vue UI components using CDN links or by installing the published npm packages.
+control: Deployment
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deployment
+# Deployment in Syncfusion® Vue Components
 
 ## CDN
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Introduction to the Figma UI Kit | Syncfusion
-description: Check out and learn about the introduction to the Figma UI Kit of Syncfusion Essential JS 2 and more details.
+title: Figma UI Kits Vue | Syncfusion
+description:  Learn how to use Syncfusion Figma UI kits for Vue components to align design and code, customize tokens, and export CSS variables for your application.
 platform: ej2-vue
 control: Figma 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Figma UI Kits for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Components
+# Figma UI Kits for Syncfusion® Vue Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> offers [Figma UI kits](https://www.figma.com/@syncfusion) to facilitate effective collaboration between designers and developers. The Figma UI kits are available in four themes: [Material 3](https://www.figma.com/community/file/1385969023252455137), [Fluent](https://www.figma.com/community/file/1385969120047188707), [Tailwind](https://www.figma.com/community/file/1385969065626384098), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272). These kits match the themes used in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components.
 
