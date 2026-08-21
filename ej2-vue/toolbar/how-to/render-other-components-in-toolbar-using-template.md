@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Render other components in toolbar using template in Vue Toolbar component | Syncfusion
-description: Learn here all about Render other components in toolbar using template in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: Render other components in toolbar using template in Vue Toolbar | Syncfusion
+description: Embed other Vue components like Button or DropDownList inside Toolbar items using a template directive for richer toolbar content layout.
 control: Render other components in toolbar using template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render other components in toolbar using template in Vue Toolbar component
+# How to render other components in toolbar using template in Vue Toolbar
 
 You can render other components inside Toolbar using Vue **template**. Through this, we can add content as other components directly with all functionalities to our Toolbar. Follow the below guidelines for using the other components as template in Toolbar.
 

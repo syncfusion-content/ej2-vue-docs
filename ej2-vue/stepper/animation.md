@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in Vue Stepper component | Syncfusion
-description: Checkout and learn about Animation with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Animation in Vue Stepper | Syncfusion
+description: Animate Vue Stepper progress transitions with customizable duration and delay using the animation property, or disable animation by setting enable to false.
 control: Stepper 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in Vue Stepper component
+# Animation in Vue Stepper
 
 The Stepper progress state can be animated, smoothly transitioning from one step to another. You can customize the animation's `duration` and `delay` by using the [animation](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#animation) property.
 

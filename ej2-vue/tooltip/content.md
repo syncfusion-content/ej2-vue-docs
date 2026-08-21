@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content in Vue Tooltip component | Syncfusion
-description: Learn here all about Content in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Content in Vue Tooltip | Syncfusion
+description: Set Vue Tooltip content via the content property using strings, templates, the target element title attribute, or dynamic content loaded through Fetch.
 control: Content 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content in Vue Tooltip component
+# Content in Vue Tooltip
 
 Text or information assigned to the Tooltip's [`content`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#content) property will be displayed as the main content of the Tooltip. It can be a string or a template content. If the `content` property is not provided with any specific value, then it takes the value assigned to the `title` attribute of the target element on which the Tooltip was initialized. The content can also dynamically be assigned to the Tooltip via Fetch.
 

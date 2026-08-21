@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Uploader component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue Uploader | Syncfusion
+description: Localize every static string of the Syncfusion Vue Uploader such as Browse, Clear, Upload, and status text using the L10n load method.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Uploader component
+# Localization in Vue Uploader
 
 The Localization library allows you to localize static text content of the uploader. The static text contains default text content of action buttons, file status, clear icon title, tooltips, and text content of drag area. Define the [locale](https://ej2.syncfusion.com/vue/documentation/api/uploader/#locale) object for a culture and assign it to L10n load method.
 

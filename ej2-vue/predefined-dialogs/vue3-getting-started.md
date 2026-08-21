@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Predefined dialogs component | Syncfusion
-description:  Checkout and learn about Predefined dialogs getting started with Vue Predefined dialogs component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue 3 Predefined Dialogs | Syncfusion
+description: Learn how to get started with the Syncfusion Vue 3 Predefined Dialogs control. Explore setup, features, examples, and customization options.
 control: Predefined dialogs getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Predefined Dialogs Component in Vue 3
+# Getting Started with Vue 3 Predefined Dialogs
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Predefined Dialogs component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

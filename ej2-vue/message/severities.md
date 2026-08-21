@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Severities in Vue Message component | Syncfusion
-description: Learn here all about Severities in Syncfusion Vue Message component of Syncfusion Essential JS 2 and more.
+title: Severities in Vue Message | Syncfusion
+description: Display Vue Message content with severity types Normal, Success, Info, Warning, and Error to convey context and importance to users.
 control: Severities 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Severities in Vue Message component
+# Severities in Vue Message
 
 The severity denotes the importance and context of the message to the user. The message contains different severity types. Use the `severity` property to display the messages with different severity levels.
 

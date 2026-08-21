@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize icons in Vue TreeView Component | Syncfusion
-description: Learn here all about Customize the expand and collapse icons in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
+title: How to customize expand and collapse icons in Vue TreeView | Syncfusion
+description: Replace default Vue TreeView expand and collapse arrow icons with custom icons using the expandIcon and collapseIcon CSS class properties.
 control: Customize the expand and collapse icons 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the expand and collapse icons in Vue TreeView component
+# How to customize expand and collapse icons in Vue TreeView
 
 To learn how to customize the appearance of the Vue TreeView component, you can watch this video:
 

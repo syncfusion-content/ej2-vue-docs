@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Timepicker component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Timepicker component of Syncfusion Essential JS 2 and more.
-control: Index 
+title: About Syncfusion Vue TimePicker Component | Syncfusion
+description: Explore features of the Syncfusion Vue TimePicker component, including time range, globalization, strict mode, and accessibility options.
+control: Index
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Timepicker component
+# About Syncfusion Vue TimePicker Component.
 
 **TimePicker** is an intuitive interface component which provides an options to select a
 time value from popup list or to set a desired time value. test

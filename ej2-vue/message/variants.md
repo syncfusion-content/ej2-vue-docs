@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Variants in Vue Message component | Syncfusion
-description: Learn here all about Variants in Syncfusion Vue Message component of Syncfusion Essential JS 2 and more.
+title: Variants in Vue Message | Syncfusion
+description: Customize Vue Message appearance using Text, Outlined, and Filled variants to differentiate severity through color, border, or background.
 control: Variants 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Variants in Vue Message component
+# Variants in Vue Message
 
 The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the `variant` property.
 

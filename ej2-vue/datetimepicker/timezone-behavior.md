@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timezone Behavior in Vue Datetimepicker | Syncfusion
-description: Learn here all about Timezone Behavior in Syncfusion Vue Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: Timezone Behavior in Vue DateTimePicker | Syncfusion
+description: Control how the Syncfusion Vue DateTimePicker stores and renders values using the system time zone and the serverTimezoneOffset property.
 control: Timezone Behavior
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timezone Behavior in DateTimePicker Control
+# Timezone Behavior in Vue DateTimePicker
 
 The DateTimePicker component displays and maintains the selected date and time value based on the client system’s current time zone. When a user selects a value, it is stored and rendered using the local time zone of the system at the time of selection. This ensures that the value remains consistent and predictable during user interaction.
 

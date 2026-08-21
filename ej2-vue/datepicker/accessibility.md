@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Accessibility in Vue Datepicker component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in Vue DatePicker | Syncfusion
+description: Learn WAI-ARIA support, keyboard navigation shortcuts, and accessibility compliance for the Syncfusion Vue DatePicker component.
+control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Datepicker component
+# Accessibility in Vue DatePicker
 
-The DatePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The DatePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the DatePicker component is outlined below.
 
@@ -44,7 +44,7 @@ The Web accessibility defines a way to make web content and web applications mor
 
 DatePicker provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA supports is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
 
-To know about the accessibility of Calendar refer to the Calendar's [Accessibility](../calendar/accessibility/) section.
+To know about the accessibility of Calendar refer to the Calendar's [Accessibility](../calendar/accessibility) section.
 
 It helps to provide information about the widget for assistive technology to the disabled person in screen reader.
 
@@ -52,7 +52,7 @@ It helps to provide information about the widget for assistive technology to the
 
 * **Aria-disabled**: attribute indicates the disabled state of this DatePicker component.
 
-* **Aria-activedescendent**: attribute helps in managing the current active child of the DatePicker component.
+* **Aria-activedescendant**: attribute helps in managing the current active child of the DatePicker component.
 
 ## Keyboard Interaction
 

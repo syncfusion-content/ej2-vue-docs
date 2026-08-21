@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue Multi select component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue MultiSelect Dropdown | Syncfusion
+description: Filter Syncfusion Vue MultiSelect Dropdown items as you type by enabling allowFiltering and returning matched data through the filtering event.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Multi select component
+# Filtering in Vue MultiSelect Dropdown
 
 The MultiSelect has built-in support to filter data items when [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
 

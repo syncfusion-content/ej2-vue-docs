@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Items in Vue Timeline component | Syncfusion
-description: Learn here all about Items in Syncfusion Vue Timeline component of Syncfusion Essential JS 2 and more.
-control: Items 
+title: Items in Vue Timeline | Syncfusion
+description: Configure Vue Timeline items using the e-item tag directive with content, oppositeContent, dotCss, disabled, and cssClass properties.
+control: Items
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Items in Vue Timeline component
+# Items in Vue Timeline
 
 Timeline items are added using the `<e-item>` tag directive. Each item can be configured with properties such as `content`, `oppositeContent`, `dotCss`, `disabled` and `cssClass`.
 

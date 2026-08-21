@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate Badge into ListView in Vue Badge component | Syncfusion
-description: Learn here all about Integrate Badge into ListView in Syncfusion Vue Badge component of Syncfusion Essential JS 2 and more.
+title: How to integrate into ListView in Vue Badge | Syncfusion
+description: Integrate Vue Badge with the ListView component to display new-message notifications with colors based on priority.
 control: Integrate Badge into ListView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Badge into ListView in Vue Badge component
+# How to integrate into ListView in Vue Badge
 
 The badges can be integrated with the `ListView` component to indicate new notification with color based on priority.
 

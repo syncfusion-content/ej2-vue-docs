@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with Vue Image Editor component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Image Editor component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description: A step-by-step guide to set up a Vue 2 project with Vue CLI and integrate the Syncfusion Vue Image Editor component with theming and a quick-start sample.
+control: Getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Image Editor Component in Vue 2
+# Getting Started with the Vue Image Editor component
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue ImageEditor component.
 

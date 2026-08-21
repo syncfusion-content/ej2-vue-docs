@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation rules in Vue Form validator component | Syncfusion
-description: Learn here all about Validation rules in Syncfusion Vue Form validator component of Syncfusion Essential JS 2 and more.
+title: Validation Rules in Vue Form Validation | Syncfusion
+description: Apply built-in and custom rules in the Syncfusion Vue Form Validator, including required, email, range, and regex, with addRules support.
 control: Validation rules 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation rules in Vue Form validator component
+# Validation Rules in Vue Form Validation
 
 ## Default Rules
 
@@ -31,12 +31,12 @@ The `FormValidator` has following default validation rules, which are used to va
 | `min` | Input value must have greater than or equal to `min` number | if `min: 4`, **5** is valid and **2** is invalid |
 | `regex` | Input value must have valid `regex` format | if `regex: '^[A-z]+$'`, **a** is valid and **1** is invalid |
 
-> The [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator/#rules) option should map the input element's `name` attribute.
+> The [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator#rules) option should map the input element's `name` attribute.
 > The `FormValidator` library only validates the mapped input elements.
 
 ## Defining Custom Rules
 
-You can also define custom rules in the [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator/#rules) property and validate the form with custom logics.
+You can also define custom rules in the [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator#rules) property and validate the form with custom logics.
 
 The custom validation method need to return the boolean value for validating an input.
 
@@ -53,7 +53,7 @@ The custom validation method need to return the boolean value for validating an 
 
 ## Adding or Removing Rules
 
-After creating `FormValidator` object, you can add more rules to an input element by using [`addRules`](https://ej2.syncfusion.com/documentation/api/form-validator/#addrules) method and you can also remove an existing rule from the input element by using [`removeRules`](https://ej2.syncfusion.com/documentation/api/form-validator/#removerules) method.
+After creating `FormValidator` object, you can add more rules to an input element by using [`addRules`](https://ej2.syncfusion.com/documentation/api/form-validator#addrules) method and you can also remove an existing rule from the input element by using [`removeRules`](https://ej2.syncfusion.com/documentation/api/form-validator#removerules) method.
 
 ```ts
 
@@ -91,7 +91,7 @@ formObject.removeRules('age', ['number']);
 
 ## Validating a Single Element
 
-The [`validate`](https://ej2.syncfusion.com/documentation/api/form-validator/#validate) method have and optional argument, where you can pass an input element'sname attribute to validate its value against the defined rule.
+The [`validate`](https://ej2.syncfusion.com/documentation/api/form-validator#validate) method have and optional argument, where you can pass an input element'sname attribute to validate its value against the defined rule.
 
 ```ts
 import {FormValidator, FormValidatorModel} from '@syncfusion/ej2-vue-inputs';

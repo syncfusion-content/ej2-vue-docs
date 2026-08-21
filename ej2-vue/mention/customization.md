@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Mention component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Mention component of Syncfusion Essential JS 2 and more.
+title: Customization in Vue Mention | Syncfusion
+description: Customize the Syncfusion Vue Mention with the showMentionChar prefix, custom suffixText, and display template for selected items.
 control: Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Mention component
+# Customization in Vue Mention
 
 ## Show or hide mention character
 

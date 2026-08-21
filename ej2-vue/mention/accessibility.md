@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Mention component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Mention component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Mention | Syncfusion
+description: Explore WAI-ARIA support, screen reader, keyboard navigation, and accessibility compliance built into the Syncfusion Vue Mention.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Mention component
+# Accessibility in Vue Mention
 
 Web accessibility makes web content and web applications more accessible for people with disabilities. Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
 

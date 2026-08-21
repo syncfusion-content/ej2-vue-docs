@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Add dynamic template in Vue Toast component | Syncfusion
-description: Learn here all about Add dynamic template in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: How to add dynamic template in Vue Toaster | Syncfusion
+description: Change the Vue Toaster template dynamically for each toast by updating properties when calling the show method.
 control: Add dynamic template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add dynamic template in Vue Toast component
+# How to add dynamic template in Vue Toaster
 
-Toast supports to change templates dynamically with displaying in multiple toasts. You can change the toast properties while calling in the [`show`](https://ej2.syncfusion.com/vue/documentation/api/toast/#show) method.
+Toast supports to change templates dynamically with displaying in multiple toasts. You can change the toast properties while calling in the [`show`](https://ej2.syncfusion.com/vue/documentation/api/toast#show) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chunk upload in Vue Uploader component | Syncfusion
-description: Learn here all about Chunk upload in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Chunk Upload in Vue Uploader | Syncfusion
+description: Split large files into small chunks in the Syncfusion Vue Uploader and pause, resume, or retry failed chunks with the chunkSize option.
 control: Chunk upload 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chunk upload in Vue Uploader component
+# Chunk Upload in Vue Uploader
 
 The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Two way binding in Vue Maskedtextbox component | Syncfusion
-description: Learn here all about Two way binding in Syncfusion Vue Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Two Way Binding in Vue MaskedTextBox | Syncfusion
+description: Sync masked values between two Syncfusion Vue MaskedTextBox components using the v-model directive for two-way data binding.
 control: Two way binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Two way binding in Vue Maskedtextbox component
+# Two Way Binding in Vue MaskedTextBox
 
 Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one MaskedTextBox component, v-model will automatically update the value in the other MaskedTextBox.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Step Types in Vue Stepper component | Syncfusion
-description: Checkout and learn about Step Types with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Step Types in Vue Stepper | Syncfusion
+description: Set the Vue Stepper stepType to Default, Indicator, Label, or Process to control how indicators and labels are displayed for each step in the component.
 control: Stepper
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Step types in Vue Stepper component
+# Step Types in Vue Stepper
 
 The Stepper component provides support for displaying steps with the following step types.
 

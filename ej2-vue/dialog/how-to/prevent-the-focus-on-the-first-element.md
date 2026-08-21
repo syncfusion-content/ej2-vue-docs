@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Prevent the focus on first element in Vue Dialog | Syncfusion
-description: Learn here all about Prevent the focus on the first element in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: How to prevent focus on first element in Vue Dialog | Syncfusion
+description: Stop the Vue Dialog from auto-focusing the first focusable content element on open by handling the open event and enabling the preventFocus argument.
 control: Prevent the focus on the first element 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent the focus on the first element in Vue Dialog component
+# How to prevent focus on first element in Vue Dialog
 
-By default, the dialog focuses on the first elements of the content area which can be active and focusable. You can prevent this default focusing behavior using the [open](https://ej2.syncfusion.com/vue/documentation/api/dialog/#open) event and by enabling the `preventFocus` argument.
+By default, the dialog focuses on the first elements of the content area which can be active and focusable. You can prevent this default focusing behavior using the [open](https://ej2.syncfusion.com/vue/documentation/api/dialog#open) event and by enabling the `preventFocus` argument.
 
 Bind the open event and enable the preventFocus argument within an event like the below sample.
 

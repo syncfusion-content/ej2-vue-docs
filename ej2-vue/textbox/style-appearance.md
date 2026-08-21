@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Textbox component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue TextBox | Syncfusion
+description: Restyle the Syncfusion Vue TextBox wrapper, placeholder, and float label by overriding its CSS for custom height, font, color, and asterisks.
 control: Style appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Textbox component
+# Style and Appearance in Vue TextBox
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 

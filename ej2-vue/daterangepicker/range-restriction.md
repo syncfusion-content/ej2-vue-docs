@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range restriction in Vue Daterangepicker component | Syncfusion
-description: Learn here all about Range restriction in Syncfusion Vue Daterangepicker component of Syncfusion Essential JS 2 and more.
-control: Range restriction 
+title: Range Restriction in Vue DateRangePicker | Syncfusion
+description: Restrict the Syncfusion Vue DateRangePicker selection using min, max, minDays, maxDays, and strictMode to control valid date ranges.
+control: Range restriction
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range restriction in Vue Daterangepicker component
+# Range Restriction in Vue DateRangePicker
 
 Range selection in a DateRangePicker can be made-to-order with desire restrictions based on the application needs.
 

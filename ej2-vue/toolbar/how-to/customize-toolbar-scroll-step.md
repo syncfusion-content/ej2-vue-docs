@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize toolbar scroll step in Vue Toolbar component | Syncfusion
-description: Learn here all about Customize toolbar scroll step in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to customize toolbar scroll step in Vue Toolbar | Syncfusion
+description: Change the Vue Toolbar scroll step distance using the scrollStep property to control how many pixels items move on each scroll button click.
 control: Customize toolbar scroll step 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize toolbar scroll step in Vue Toolbar component
+# How to customize toolbar scroll step in Vue Toolbar
 
 Toolbar supports to customize the scrolling distance when you click the left and right side navigation icons. we can customize `ScrollStep` property for scrolling distance. Refer to the following code example.
 

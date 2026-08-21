@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Async in Vue Uploader component | Syncfusion
-description: Learn here all about Async in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Asynchronous Upload in Vue Uploader | Syncfusion
+description: Upload files to the Syncfusion Vue Uploader asynchronously with save and remove action URLs that auto or manually trigger each transfer.
 control: Async 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Async in Vue Uploader component
+# Asynchronous Upload in Vue Uploader
 
 The uploader component allows you to upload the files asynchronously. The upload process requires save and remove action URL to manage the upload process in the server.
 

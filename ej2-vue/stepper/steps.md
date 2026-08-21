@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Steps in Vue Stepper component | Syncfusion
-description: Checkout and learn about the Steps with Vue Stepper component of the Syncfusion Essential JS 2 and more.
+title: Steps in Vue Stepper | Syncfusion
+description: Define Vue Stepper steps using the e-step directive with iconCss, text, and label properties to configure each step individually in the component.
 control: Stepper
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Steps in Vue Stepper component
+# Steps in Vue Stepper
 
 The Vue Stepper allows you to add steps using the `<e-step>` directive . Each step can be configured with options such as `iconCss`, `text`, `label`, `cssClass` and more.
 

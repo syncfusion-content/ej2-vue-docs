@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable ripple in Vue Button group component | Syncfusion
-description: Learn here all about Enable ripple in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: How to enable ripple in Vue Button Group | Syncfusion
+description: Learn how to enable the ripple effect in a Syncfusion Vue Button Group by importing the rippleEffect method from ej2-base.
 control: Enable ripple 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable ripple in Vue Button group component
+# How to enable ripple in Vue Button Group
 
 Ripple can be enabled by importing `rippleEffect` method from `ej2-base` and initialize rippleEffect with `.e-btn-group` element and selector as `e-btn`.
 

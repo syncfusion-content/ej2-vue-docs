@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Filtering with Vue MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue MultiColumn ComboBox | Syncfusion
+description: Filter the Syncfusion Vue MultiColumn ComboBox grid popup by StartsWith, EndsWith, or Contains via the filterType property while typing.
 platform: ej2-vue
 control: MultiColumn ComboBox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue MultiColumn ComboBox component
+# Filtering in Vue MultiColumn ComboBox
 
 The MultiColumn ComboBox has built-in support to filter the data items, which allows users to filter the list of items based on their input. The filter operation starts as soon as you start typing characters in the component. The filtering can be disabled by setting the [allowFiltering](../api/multicolumn-combobox#allowfiltering) to `false`. By default the value is `true`.
 

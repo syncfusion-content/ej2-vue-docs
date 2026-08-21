@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Summary view in Vue Query builder component | Syncfusion
-description: Learn here all about Summary view in Syncfusion Vue Query builder component of Syncfusion Essential JS 2 and more.
+title: How to show the summary view in Vue Query Builder UI | Syncfusion
+description: Show or hide the filtered query as a summary in the Vue Query Builder UI by toggling the summaryView property on the component.
 control: Summary view 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Summary view in Vue Query builder component
+# How to show the summary view in Vue Query Builder UI
 
-Summary view allows you to show or hide the filtered query. By default, the value is false. You can enable by setting the [`summaryView`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#summaryview) property to true.
+Summary view allows you to show or hide the filtered query. By default, the value is false. You can enable by setting the [`summaryView`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#summaryview) property to true.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

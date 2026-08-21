@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide spinner in Vue Progress button component | Syncfusion
-description: Learn here all about Hide spinner in Syncfusion Vue Progress button component of Syncfusion Essential JS 2 and more.
+title: How to hide spinner in Vue Progress Button | Syncfusion
+description: Hide the spinner on the Vue Progress Button by setting the e-hide-spinner class through the cssClass property of the component.
 control: Hide spinner 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide spinner in Vue Progress button component
+# How to hide spinner in Vue Progress Button
 
 You can hide spinner in the ProgressButton by setting the `e-hide-spinner` property to [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#cssClass).
 

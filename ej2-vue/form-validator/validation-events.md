@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation events in Vue Form validator component | Syncfusion
-description: Learn here all about Validation events in Syncfusion Vue Form validator component of Syncfusion Essential JS 2 and more.
+title: Validation Events in Vue Form Validation | Syncfusion
+description: Hook into validationBegin and validationComplete events of the Syncfusion Vue Form Validator to react to per-rule validation status.
 control: Validation events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation events in Vue Form validator component
+# Validation Events in Vue Form Validation
 
 Validation events have two types of events. These are
 

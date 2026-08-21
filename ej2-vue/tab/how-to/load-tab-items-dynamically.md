@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load tab items dynamically in Vue Tab component | Syncfusion
-description: Learn here all about Load tab items dynamically in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to load tab items dynamically in Vue Tabs | Syncfusion
+description: Add or remove Vue Tabs items at runtime using the addTab and removeTab public methods to dynamically change the tab collection based on user actions.
 control: Load tab items dynamically 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load tab items dynamically in Vue Tab component
+# How to load tab items dynamically in Vue Tabs
 
 Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/vue/documentation/api/tab/#addtab) method.
 

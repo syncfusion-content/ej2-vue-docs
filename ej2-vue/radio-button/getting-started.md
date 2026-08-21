@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue RadioButton component | Syncfusion
-description:  Checkout and learn about Getting started with Vue RadioButton component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Radio Button | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Radio Button control. Explore setup, project configuration, theme installation, and how to add radio buttons in a Vue 2 project.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue RadioButton Component in Vue 2
+# Getting Started with Vue Radio Button
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue RadioButton component.
 

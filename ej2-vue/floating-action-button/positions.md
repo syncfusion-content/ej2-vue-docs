@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Positions in Vue Floating action button component | Syncfusion
-description: Learn here all about Positions in Syncfusion Vue Floating action button component of Syncfusion Essential JS 2 and more.
+title: Positions in Vue Floating Action Button | Syncfusion
+description: Learn how to position the Syncfusion Vue Floating Action Button using the position property with values like TopLeft, MiddleCenter, and BottomRight, or a custom position.
 control: Positions 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Positions in Vue Floating action button component
+# Positions in Vue Floating Action Button
 
 The floating action button can be positioned anywhere on the [`target`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#target) using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#position) property. If the `target` is not defined, then FAB is positioned based on the browser viewport.
 

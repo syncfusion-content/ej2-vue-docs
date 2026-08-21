@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label and size in Vue Radio button component | Syncfusion
-description: Learn here all about Label and size in Syncfusion Vue Radio button component of Syncfusion Essential JS 2 and more.
+title: Label and Size in Vue Radio Button | Syncfusion
+description: Learn how to set the label and labelPosition of the Syncfusion Vue Radio Button, and reduce its size to small using the e-small cssClass for a more compact layout.
 control: Label and size 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Label and size in Vue Radio button component
+# Label and Size in Vue Radio Button
 
 This section explains the different sizes and labels.
 

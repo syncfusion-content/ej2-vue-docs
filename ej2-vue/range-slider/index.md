@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Range Slider component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Vue Range Slider Component | Syncfusion
+description: Pick a value or a value range in Vue with the Syncfusion Range Slider, supporting types, ticks, limits, tooltips, and RTL orientation.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Range Slider component
+# About Syncfusion Vue Range Slider Component.
 
 The Slider component allows the user to select a value or range of values in-between the min and max range, by dragging the handle over the Slider bar.
 

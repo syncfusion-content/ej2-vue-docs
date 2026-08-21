@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Prevent duplicate toast display in Vue Toast component | Syncfusion
-description: Learn here all about Prevent duplicate toast display in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: How to prevent duplicate toast display in Vue Toaster | Syncfusion
+description: Prevent the same toast from showing twice in the Vue Toaster by setting the cancel event in the beforeOpen event handler.
 control: Prevent duplicate toast display 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent duplicate toast display in Vue Toast component
+# How to prevent duplicate toast display in Vue Toaster
 
-You can prevent identical same toast displaying in a screen by the event function and terminate the toast displaying process by setting the cancel event property in the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/toast/#beforeopen) event.
+You can prevent identical same toast displaying in a screen by the event function and terminate the toast displaying process by setting the cancel event property in the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/toast#beforeopen) event.
 
 The following sample demonstrates preventing duplicate title toast element displaying with custom code blocks.
 

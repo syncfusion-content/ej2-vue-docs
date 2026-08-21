@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resize in Vue TextArea component | Syncfusion
-description: Checkout and learn about Resize in Vue TextArea component of Syncfusion Essential JS 2 and more details.
+title: Resize in Vue TextArea | Syncfusion
+description: Allow users to resize the Syncfusion Vue TextArea with Vertical, Horizontal, Both, or None modes via the resizeMode property.
 control: Resize
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in Vue TextArea Component
+# Resize in Vue TextArea
 
 The TextArea allows users to input and edit large amounts of text. Resizing this control effectively can enhance the user experience and accommodate varying content needs. This resizing behavior can be enabled and configured using the [resizeMode](https://ej2.syncfusion.com/vue/documentation/api/textarea/#resizeMode) API, which offers several options for resizing the TextArea:
 

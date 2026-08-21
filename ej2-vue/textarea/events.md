@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue TextArea component | Syncfusion
-description: Handling events triggered by user interactions or changes in the Vue TextArea component of Syncfusion Essential JS 2 and more.
+title: Events in Vue TextArea | Syncfusion
+description: Handle created, input, change, focus, blur, and destroyed events of the Syncfusion Vue TextArea to react to user input.
 control: Events
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue TextArea Component
+# Events in Vue TextArea
 
 This section describes the TextArea events that will be triggered when appropriate actions are performed. The following events are available in the TextArea component.
 

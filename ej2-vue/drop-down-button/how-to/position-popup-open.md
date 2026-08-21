@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position popup open in Vue Drop down button component | Syncfusion
-description: Learn here all about Position popup open in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to position popup open in Vue Dropdown Button | Syncfusion
+description: Change the open position of the Vue Dropdown Button popup by setting top and left values for the popup element in the open event.
 control: Position popup open 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position popup open in Vue Drop down button component
+# How to position popup open in Vue Dropdown Button
 
 Popup open position can be changed according to the requirement. Popup open position can be changed in [`open`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#open) event by setting `top` and `left` for the popup element.
 

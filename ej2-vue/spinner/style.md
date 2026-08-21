@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Spinner component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Spinner component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Spinner | Syncfusion
+description: Customize Vue Spinner appearance with CSS that targets the e-spinner-pane and e-spin-material or e-spin-fabric classes to change the stroke color per theme.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Spinner component
+# Style in Vue Spinner
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

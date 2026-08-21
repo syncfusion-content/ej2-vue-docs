@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Action buttons in Vue Card component | Syncfusion
-description: Learn here all about Action buttons in Syncfusion Vue Card component of Syncfusion Essential JS 2 and more.
-control: Action buttons 
+title: Action Buttons in Vue Card | Syncfusion
+description: Add action buttons inside the Vue Card using the e-card-actions container with button or anchor tags for vertical or horizontal action layouts.
+control: Action buttons
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Action buttons in Vue Card component
+# Action Buttons in Vue Card
 
 Action buttons can be added inside a Card and styled as needed. The action container is a  `div` with the `e-card-actions` class followed by button tag or anchor tag within the card root element.
 
@@ -18,7 +18,7 @@ Action buttons can be added inside a Card and styled as needed. The action conta
         <div class = "e-card">
             <div class="e-card-actions">
                 <button class="e-card-btn"></button>
-                <a href="#"></a>
+                <a href="#" aria-label="Action button"></a>
             </div>
         </div>
     ```
@@ -31,7 +31,7 @@ By default, action buttons are displayed horizontally. To stack them vertically,
     <div class = "e-card">
         <div class="e-card-actions e-card-vertical">
             <button class="e-card-btn">More</button>
-            <a href="#">Share</a>
+            <a href="#" aria-label="Share"></a>
         </div>
     </div>
 ```

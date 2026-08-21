@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue Menu component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Menu Bar | Syncfusion
+description: Override default Vue Menu Bar CSS classes to customize the wrapper, popup, items, and caret icon, or create a custom theme via Theme Studio for the control.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Menu component
+# Style and Appearance in Vue Menu Bar
 
 To modify the Menu appearance, you need to override the default CSS of Menu component. Please find the list of CSS classes and its corresponding section in Menu component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

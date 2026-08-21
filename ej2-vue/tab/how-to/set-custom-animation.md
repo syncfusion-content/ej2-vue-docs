@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set custom animation in Vue Tab component | Syncfusion
-description: Learn here all about Set custom animation in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to set custom animation in Vue Tabs | Syncfusion
+description: Apply custom animation effects to Vue Tabs content transitions using the animation property with duration and easing options per tab switch.
 control: Set custom animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set custom animation in Vue Tab component
+# How to set custom animation in Vue Tabs
 
 Tab supports custom animations for both previous and next actions from the provided animation option of `Animation` library.
 

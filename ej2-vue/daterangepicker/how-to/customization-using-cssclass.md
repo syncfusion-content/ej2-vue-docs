@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization using cssclass in Vue Daterangepicker component | Syncfusion
-description: Learn here all about Customization using cssclass in Syncfusion Vue Daterangepicker component of Syncfusion Essential JS 2 and more.
-control: Customization using cssclass 
+title: How to customize using CSSClass in Vue DateRangePicker | Syncfusion
+description: Customize the Syncfusion Vue DateRangePicker UI by applying a custom cssClass to override wrapper, popup, and Calendar styles.
+control: Customization using cssclass
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization using cssclass in Vue Daterangepicker component
+# How to customize using CSSClass in Vue DateRangePicker
 
 To customize UI, you can make use of [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker#cssclass) that will be added to the DateRangePicker component as the root CSS class. With this CSS class, you can override existing styles of DateRangePicker.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Dialog component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Dialog | Syncfusion
+description: Vue Dialog adheres to ADA, Section 508, WCAG 2.2, and WAI-ARIA standards with screen reader, keyboard, and right-to-left support.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Dialog component
+# Accessibility in Vue Dialog
 
 The Dialog component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -65,7 +65,7 @@ Keyboard interaction of Dialog component has designed based on [WAI-ARIA Practic
 <td>
 <kbd>Esc</kbd></td><td>
 Closes the Dialog. This functionality can be controlled by using
-<a href="https://ej2.syncfusion.com/vue/documentation/api/dialog/#closeonescape" target="_blank"> `closeOnEscape`</a> </td></tr>
+<a href="https://ej2.syncfusion.com/vue/documentation/api/dialog#closeonescape" aria-label="closeOnEscape" target="_blank"> `closeOnEscape`</a> </td></tr>
 <tr>
 <td>
 <kbd>Enter</kbd></td><td>

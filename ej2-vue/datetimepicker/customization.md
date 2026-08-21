@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Datetimepicker component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Datetimepicker component of Syncfusion Essential JS 2 and more.
-control: Customization 
+title: Customization in Vue DateTimePicker | Syncfusion
+description: Customize the Syncfusion Vue DateTimePicker day and time cells with the renderDayCell event and add a mandatory asterisk to placeholder labels.
+control: Customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Datetimepicker component
+# Customization in Vue DateTimePicker
 
 The DateTimePicker is available for UI customization that can be achieved by using available properties and events in the component.
 

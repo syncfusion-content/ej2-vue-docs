@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Disabled the datepicker component in Vue Datepicker component | Syncfusion
-description: Learn here all about Disabled the datepicker component in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Disabled the datepicker component 
+title: How to disable the DatePicker in Vue DatePicker | Syncfusion
+description: Disable the Syncfusion Vue DatePicker by setting the enabled property to false, blocking all user interaction and form submission.
+control: Disabled the datepicker component
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disabled the datepicker component in Vue Datepicker component
+# How to disable the DatePicker in Vue DatePicker
 
-To disable the DatePicker, use its [`enable`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#enabled) property.
+To disable the DatePicker, use its [`enable`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#enabled) property.
 
 The following example demonstrates the DatePicker in a disabled state.
 

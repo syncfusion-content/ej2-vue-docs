@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection and nesting in Vue Button group component | Syncfusion
-description: Learn here all about Selection and nesting in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: Selection and Nesting in Vue Button Group | Syncfusion
+description: Learn about single and multiple selection in the Syncfusion Vue Button Group and how to nest DropDownButton and SplitButton components.
 control: Selection and nesting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection and nesting in Vue Button group component
+# Selection and Nesting in Vue Button Group
 
 ## Selection
 

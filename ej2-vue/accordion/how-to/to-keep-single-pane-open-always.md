@@ -1,14 +1,14 @@
 ---
 layout: post
-title: To keep single pane open always in Vue Accordion component | Syncfusion
-description: Learn here all about To keep single pane open always in Syncfusion Vue Accordion component of Syncfusion Essential JS 2 and more.
+title: How to keep single pane open always in Vue Accordion | Syncfusion
+description: Prevent the last expanded Vue Accordion panel from collapsing in Single expand mode so one pane always stays open for the user.
 control: To keep single pane open always 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# To keep single pane open always in Vue Accordion component
+# How to keep single pane open always in Vue Accordion
 
 By default, all Accordion panels are collapsible. You can customize the Accordion to keep one panel as expanded state always. This is applicable for `Single` expand mode.
 

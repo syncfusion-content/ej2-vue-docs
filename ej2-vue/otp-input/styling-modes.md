@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styling Modes in Vue OTP Input component | Syncfusion
-description:  Learn here all about Styling Modes in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
+title: Styling Modes in Vue OTP Input | Syncfusion
+description: Switch the Syncfusion Vue OTP Input between outlined, filled, and underlined styling modes with the stylingMode property.
 platform: ej2-vue
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styling Modes in Vue OTP Input component
+# Styling Modes in Vue OTP Input
 
 Styling modes specify the style variants for the input fields in the OTP Input component. These modes allows you to customize the appearance of the OTP input fields.
 

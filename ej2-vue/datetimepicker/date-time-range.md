@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date time range in Vue Datetimepicker component | Syncfusion
-description: Learn here all about Date time range in Syncfusion Vue Datetimepicker component of Syncfusion Essential JS 2 and more.
-control: Date time range 
+title: DateTime Range in Vue DateTimePicker | Syncfusion
+description: Restrict the Syncfusion Vue DateTimePicker selection using min, max, minTime, and maxTime properties to control valid dates and times.
+control: Date time range
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date time range in Vue Datetime picker component
+# DateTime Range in Vue DateTimePicker
 
 ## DateTime Restriction
 

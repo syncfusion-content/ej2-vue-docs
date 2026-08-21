@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue Message component | Syncfusion
-description:  Checkout and learn about Getting Started with Vue Message component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Message | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Message control. Explore setup, features, examples, and customization options.
 control: Getting Started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Message Component in Vue 2
+# Getting Started with Vue Message
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Message component.
 

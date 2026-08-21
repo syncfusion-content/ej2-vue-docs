@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue Floating action button component | Syncfusion
-description: Learn here all about Events in Syncfusion Vue Floating action button component of Syncfusion Essential JS 2 and more.
+title: Events in Vue Floating Action Button | Syncfusion
+description: Learn about the events of the Syncfusion Vue Floating Action Button, including the created event that triggers after creation and the onclick event that triggers on click.
 control: Events 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Floating action button component
+# Events in Vue Floating Action Button
 
 This section explains the available events in Floating Action Button component.
 

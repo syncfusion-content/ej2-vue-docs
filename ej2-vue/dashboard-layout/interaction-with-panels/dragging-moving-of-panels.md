@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dragging moving of panels in Vue Dashboard Layout | Syncfusion
-description: Learn here all about Dragging moving of panels in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
-control: Dragging moving of panels 
+title: Dragging Moving Of Panels in Vue Dashboard Layout | Syncfusion
+description: Drag and drop Vue Dashboard Layout panels to reorder them within the layout, with a placeholder highlighting the drop position.
+control: Dragging moving of panels
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dragging moving of panels in Vue Dashboard Layout component
+# Dragging Moving Of Panels in Vue Dashboard Layout
 
 The Dashboard Layout component provides dragging functionality to reorder panels within the layout. While dragging a panel, a placeholder is highlighted below the panel to indicate its placement when dropped. This helps the user decide whether to place the panel in the current position or revert to the previous position without disturbing the layout.
 

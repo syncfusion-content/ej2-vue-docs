@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Vue TreeView component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue TreeView | Syncfusion
+description: Bind hierarchical or self-referential data to the Vue TreeView using the fields property to map dataSource, id, parentID, and text fields of items.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue TreeView component
+# Data Binding in Vue TreeView
 
 The TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property, which is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview/#fields) property. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property supports array of JavaScript objects and [**DataManager**](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 

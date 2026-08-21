@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting Started with the Signature component | Syncfusion
-description: Check out and learn about Vue 3 getting Started with the Vue Signature component of Syncfusion Essential JS 2 and more details.
+description: Learn how to get started with the Syncfusion Vue Signature control. Explore setup, features, examples, and customization options.
 control: Vue 3 getting Started
 platform: ej2-vue
 documentation: ug

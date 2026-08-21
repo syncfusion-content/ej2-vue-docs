@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize progressbar in Vue Uploader component | Syncfusion
-description: Learn here all about Customize progressbar in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to customize progressbar in Vue Uploader | Syncfusion
+description: Resize the Syncfusion Vue Uploader progress bar by overriding the size, color, and progress background CSS classes for your theme.
 control: Customize progressbar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize progressbar in Vue Uploader component
+# How to customize progressbar in Vue Uploader
 
 You can customize the progress bar by override the styles in uploader component. In the following example, showcase about how to customize the progress bar's size, color and progress background.
 

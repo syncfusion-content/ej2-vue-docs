@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in Vue Query builder component | Syncfusion
-description: Learn here all about Global local in Syncfusion Vue Query builder component of Syncfusion Essential JS 2 and more.
+title: Global Local in Vue Query Builder UI | Syncfusion
+description: Localize default text in the Vue Query Builder UI by mapping locale keys to translated strings for cultures such as Arabic, German, and French.
 control: Global local 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in Vue Query builder component
+# Global Local in Vue Query Builder UI
 
 The `Localization` library allows you to localize default text content of the Query Builder. The Query Builder component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object.
 

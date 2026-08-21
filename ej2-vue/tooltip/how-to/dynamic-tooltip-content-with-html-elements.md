@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dynamic HTML content in Vue Tooltip component | Syncfusion
-description: Learn here all about Dynamic tooltip content with html elements in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: How to load dynamic HTML content in Vue Tooltip | Syncfusion
+description: Load HTML tags such as div, span, bold, italic, and underline into the Vue Tooltip content template and apply style attributes for rich formatted display.
 control: Dynamic tooltip content with html elements 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dynamic tooltip content with html elements in Vue Tooltip component
+# How to load dynamic HTML content in Vue Tooltip
 
 The Tooltip component loads HTML tags using the [content](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#content) template.
 

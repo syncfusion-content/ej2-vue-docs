@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue Radio button component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Radio button component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Radio Button | Syncfusion
+description: Learn how to customize the Syncfusion Vue Radio Button appearance by overriding its default CSS classes, and how to build a custom theme using the Theme Studio.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Radio button component
+# Style and Appearance in Vue Radio Button
 
 To modify the RadioButton appearance, you need to override the default CSS of RadioButton component. Please find the list of CSS classes and its corresponding section in RadioButton. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

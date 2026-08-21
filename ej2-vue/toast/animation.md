@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in Vue Toast component | Syncfusion
-description: Learn here all about Animation in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Animation in Vue Toaster | Syncfusion
+description: Apply custom show and hide animations to the Vue Toaster using the animation library for smooth transitions.
 control: Animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in Vue Toast component
+# Animation in Vue Toaster
 
 The toast component supports custom animations for both shows and hide actions from the provided animation option of the `Animation` library.
 

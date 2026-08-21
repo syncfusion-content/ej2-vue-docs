@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Remote data bind in Vue Drop down list component | Syncfusion
-description: Learn here all about Remote data bind in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to get total count of data in Vue Dropdown List | Syncfusion
+description: Get the total count of remote items bound to the Syncfusion Vue Dropdown List using the actionComplete event args or the getItems method.
 control: Remote data bind 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote data bind in Vue Drop down list component
+# How to get total count of data in Vue Dropdown List
 
 Before component rendering, you can get the total items count by using [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#actioncomplete) &nbsp;event with its result arguments.
 

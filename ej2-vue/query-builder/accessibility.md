@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Query Builder component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Query Builder component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Query Builder UI | Syncfusion
+description: Build inclusive Vue Query Builder UI apps with WCAG 2.2, Section 508, ADA, and keyboard navigation support, validated by accessibility-checker and axe-core.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Query Builder component
+# Accessibility in Vue Query Builder UI
 
 The Query Builder component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

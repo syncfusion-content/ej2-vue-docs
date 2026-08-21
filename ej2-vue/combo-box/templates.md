@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue Combo box component | Syncfusion
-description: Learn here all about Templates in Syncfusion Vue Combo box component of Syncfusion Essential JS 2 and more.
+title: Templates in Vue ComboBox | Syncfusion
+description: Customize Syncfusion Vue ComboBox items, group title, header, and footer using the built-in template engine for each list section.
 control: Templates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue Combo box component
+# Templates in Vue ComboBox
 
 The ComboBox has been provided with several options to customize each list items, group title, header, and footer elements.
 

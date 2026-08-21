@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue List box component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue ListBox | Syncfusion
+description: Customize the Syncfusion Vue ListBox appearance using built-in CSS classes for wrapper, items, hover, selection, and toolbar styles.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue List box component
+# Style and Appearance in Vue ListBox
 
 To modify the ListBox appearance, you need to override the default CSS of ListBox component. Please find the list of CSS classes and its corresponding section in ListBox component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template and nesting in Vue Context menu component | Syncfusion
-description: Learn here all about Template and multilevel nesting in Syncfusion Vue Context menu component of Syncfusion Essential JS 2 and more.
+title: Template and Multilevel Nesting in Vue Context Menu | Syncfusion
+description: Customize Vue Context Menu items with the itemTemplate property and render multilevel nested sub-menus using the beforeItemRender event.
 control: Template and multilevel nesting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template and multilevel nesting in Vue Context menu component
+# Template and Multilevel Nesting in Vue Context Menu
 
 ## Item template
 

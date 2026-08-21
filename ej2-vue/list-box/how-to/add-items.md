@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add items in Vue List box component | Syncfusion
-description: Learn here all about Add items in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: How to add items in Vue ListBox | Syncfusion
+description: Add a single item or multiple items to the Syncfusion Vue ListBox at runtime by calling the addItems method with text or item objects.
 control: Add items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add items in Vue List box component
+# How to add items in Vue ListBox
 
 To add an item or multiple items, [`addItems`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#additems) method can be used. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items will be added while clicking `Add Items` button.
 

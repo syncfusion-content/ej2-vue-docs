@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Menu item click in Vue Menu component | Syncfusion
-description: Learn here all about Menu item click in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: How to open menu and sub menu on click in Vue Menu Bar | Syncfusion
+description: Set the showItemOnClick property to true so Vue Menu Bar items and sub menus open only on click instead of hover, for touch-friendly navigation.
 control: Menu item click 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Menu item click in Vue Menu component
+# How to open menu and sub menu on click in Vue Menu Bar
 
 You can open menu items and sub menu on menu item click by setting [`showItemOnClick`](https://ej2.syncfusion.com/vue/documentation/api/menu/#showitemonclick) property of the Menu. To open sub menu items only on item click, should be set as `true`.
 

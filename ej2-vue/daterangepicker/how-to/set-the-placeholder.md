@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the placeholder in Vue Daterangepicker component | Syncfusion
-description: Learn here all about Set the placeholder in Syncfusion Vue Daterangepicker component of Syncfusion Essential JS 2 and more.
-control: Set the placeholder 
+title: How to set the placeholder in Vue DateRangePicker | Syncfusion
+description: Set a placeholder hint in the Syncfusion Vue DateRangePicker input element using the placeholder property to describe the expected value.
+control: Set the placeholder
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the placeholder in Vue Daterangepicker component
+# How to set the placeholder in Vue DateRangePicker
 
 The following example demonstrates how to set [`placeholder`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker#placeholder) in the DateRangePicker control.
 

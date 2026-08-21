@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Data binding in Vue Query builder component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Query builder component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue Query Builder UI | Syncfusion
+description: Bind local JavaScript arrays or remote REST, OData, OData v4, and Web API endpoints to the Vue Query Builder UI using DataManager adaptors.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Query builder component
+# Data Binding in Vue Query Builder UI
 
-The Query Builder uses `DataManager`, which supports both RESTful JSON data services binding and local JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource) property can be assigned either with the instance of `DataManager` or JavaScript object array collection. It supports two kinds of data binding method:
+The Query Builder uses `DataManager`, which supports both RESTful JSON data services binding and local JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) property can be assigned either with the instance of `DataManager` or JavaScript object array collection. It supports two kinds of data binding method:
 
 * Local data
 * Remote data
 
 ## Local data
 
-To bind local data to the query builder, you can assign the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource) property  with a JavaScript object array. The local data source can also be provided as an instance of the `DataManager`.
+To bind local data to the query builder, you can assign the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) property  with a JavaScript object array. The local data source can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -34,7 +34,7 @@ To bind local data to the query builder, you can assign the [`dataSource`](https
 
 ## Remote data
 
-To bind remote  data to the query builder, assign service data as an instance of  `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource) property. To interact with remote data source, provide the endpoint `url`.
+To bind remote  data to the query builder, assign service data as an instance of  `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) property. To interact with remote data source, provide the endpoint `url`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -147,7 +147,7 @@ export default {
 
 ## Data Manager
 
-You can use the created conditions in DataManager through the [`getPredicate`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#getpredicate) method. This method creates predicates which is used as conditions in DataManager.
+You can use the created conditions in DataManager through the [`getPredicate`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#getpredicate) method. This method creates predicates which is used as conditions in DataManager.
 
 Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Buttons` packages using below command.
 

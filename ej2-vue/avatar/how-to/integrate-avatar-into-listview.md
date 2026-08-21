@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate avatar into listview in Vue Avatar component | Syncfusion
-description: Learn here all about Integrate avatar into listview in Syncfusion Vue Avatar component of Syncfusion Essential JS 2 and more.
-control: Integrate avatar into listview 
+title: How to integrate avatar into ListView in Vue Avatar | Syncfusion
+description: Integrate the Vue Avatar into the ListView control to build contacts-style interfaces, using small-size avatars that support both letters and images.
+control: Integrate avatar into listview
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate avatar into listview in Vue Avatar component
+# How to integrate avatar into ListView in Vue Avatar
 
 Avatar can be integrated into various components to make a wide variety of applications. Some of the integrations are shown in the following section.
 

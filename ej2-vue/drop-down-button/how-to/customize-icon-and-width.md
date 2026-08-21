@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize icon and width in Vue Drop down button component | Syncfusion
-description: Learn here all about Customize icon and width in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to customize icon and width in Vue Dropdown Button | Syncfusion
+description: Resize the Vue Dropdown Button and reposition its icon using the iconPosition property and a custom CSS class for styling.
 control: Customize icon and width 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize icon and width in Vue Drop down button component
+# How to customize icon and width in Vue Dropdown Button
 
 Width of the DropDownButton can be customized by setting required width to the dropdown element.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Maskedtextbox component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue MaskedTextBox | Syncfusion
+description: Customize the Syncfusion Vue MaskedTextBox wrapper, input, and hover styles using CSS overrides for font, border, and height.
 control: Style appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Maskedtextbox component
+# Style and Appearance in Vue MaskedTextBox
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 

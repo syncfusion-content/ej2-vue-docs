@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ticks in Vue Range Slider component | Syncfusion
-description: Learn here all about Ticks in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: Ticks in Vue Range Slider | Syncfusion
+description: Add major and minor ticks to the Syncfusion Vue Range Slider, set the step, and configure the min and max boundaries.
 control: Ticks 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ticks in Vue Range Slider component
+# Ticks in Vue Range Slider
 
 The [`ticks`](https://ej2.syncfusion.com/vue/documentation/api/slider#ticks) in Slider help you easily identify the current value/values of the Slider. It contains [`smallStep`](https://ej2.syncfusion.com/vue/documentation/api/slider/ticksDataModel/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/vue/documentation/api/slider/ticksDataModel/#largestep). Only the values of major ticks will be displayed on the Slider. In order to enable/disable the small ticks, use the [`showSmallTicks`](https://ej2.syncfusion.com/vue/documentation/api/slider/ticksDataModel/#showsmallticks) property.
 

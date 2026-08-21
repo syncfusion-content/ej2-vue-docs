@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline a character in the item text in Vue Drop down button component | Syncfusion
-description: Learn here all about Underline a character in the item text in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: Underline character in item text in Vue Dropdown Button | Syncfusion
+description: Underline a single character in a Vue Dropdown Button popup item by inserting a u tag in the beforeItemRender event handler.
 control: Underline a character in the item text 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Underline a character in the item text in Vue Drop down button component
+# How to underline character in item text in Vue Dropdown Button
 
 Underline a particular character in a text can be handled in [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#beforeitemrender)event by adding `<u>` tag in between the text and given as innerHTML in `li` rendering.
 

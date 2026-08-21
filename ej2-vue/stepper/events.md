@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue Stepper component | Syncfusion
-description: Checkout and learn about Events with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Events in Vue Stepper | Syncfusion
+description: Handle Vue Stepper lifecycle and interaction events such as created, stepChanged, and stepClick to execute custom logic during step navigation in the component.
 control: Stepper 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Stepper component
+# Events in Vue Stepper
 
 This section describes the Stepper events that will be triggered when an appropriate actions are performed. The following events are available in the Stepper component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Methods in Vue TextArea component | Syncfusion
-description: Checkout and learn about Handling methods in the Vue TextArea component of Syncfusion Essential JS 2 and more.
+title: Methods in Vue TextArea | Syncfusion
+description: Programmatically focus, blur, or persist Syncfusion Vue TextArea state with focusIn, focusOut, and getPersistData methods.
 control: Methods 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in Vue TextArea Component
+# Methods in Vue TextArea
 
 This section outlines the methods available for interacting with the TextArea component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Dialog component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue Dialog | Syncfusion
+description: Localize the Vue Dialog close button tooltip text for different cultures using the L10n library and locale-based translation loading.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Dialog component
+# Localization in Vue Dialog
 
 `Localization` library allows to localize the default text content of Dialog. In Dialog, The close button's tooltip text alone will be localize based on culture.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Uploader component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Vue Uploader Component | Syncfusion
+description: Discover the Syncfusion Vue Uploader component: async upload, drag and drop, directory upload, paste, progress bar, and validation.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Uploader component
+# About Syncfusion Vue Uploader Component.
 
 The **uploader** component is useful to upload images, documents, and other files to server.
 The component is the extended version of HTML5 that is uploaded with multiple file selection, auto upload,

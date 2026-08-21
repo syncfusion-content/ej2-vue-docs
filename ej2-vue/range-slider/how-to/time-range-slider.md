@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Time range Slider in Vue Range Slider component | Syncfusion
-description: Learn here all about Time range Slider in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to create a time range slider in Vue Range Slider | Syncfusion
+description: Format the Syncfusion Vue Range Slider ticks and tooltip as time values using the renderingTicks and change events.
 control: Time range Slider 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Time range Slider in Vue Range Slider component
+# How to create a time range slider in Vue Range Slider
 
 The time formatting can be achieved in the same manner as date formatting using [`renderingTicks`](https://ej2.syncfusion.com/vue/documentation/api/slider/#renderingticks) and [change](https://ej2.syncfusion.com/vue/documentation/api/slider/#change) events. The process of time formatting is explained in the following sample below.
 

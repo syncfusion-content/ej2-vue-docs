@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change sub menu position in Vue Menu component | Syncfusion
-description: Learn here all about Change sub menu position in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: How to change sub menu position in Vue Menu Bar | Syncfusion
+description: Reposition Vue Menu Bar sub menus by setting custom top and left values in the beforeOpen event arguments to control where the popup appears.
 control: Change sub menu position 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change sub menu position in Vue Menu component
+# How to change sub menu position in Vue Menu Bar
 
 The submenu position can be changed by using the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/menu/#beforeopen) event. Assign the top and left position where you want to open the submenu to the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/menu/#beforeopen) event arguments `args.top` and `args.left` respectively.
 

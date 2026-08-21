@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change the first day of week in Vue Calendar component | Syncfusion
-description: Learn here all about Change the first day of week in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Change the first day of week 
+title: How to change the first day of week in Vue Calendar | Syncfusion
+description: Change the first day of the week in the Syncfusion Vue Calendar using the firstDayOfWeek property, overriding the culture default.
+control: Change the first day of week
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the first day of week in Vue Calendar component
+# How to change the first day of week in Vue Calendar
 
 The Calendar provides an option to change the first day of the week by using the [`firstDayOfWeek`](https://ej2.syncfusion.com/vue/documentation/api/calendar#firstdayofweek) property. Generally, the day of the week starts from 0 (Sunday) and ends with 6 (Saturday).
 

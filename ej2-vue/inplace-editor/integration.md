@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Integration in Vue Inplace editor component | Syncfusion
-description: Learn here all about Integration in Syncfusion Vue Inplace editor component of Syncfusion Essential JS 2 and more.
+title: Integration in Vue In-place Editor | Syncfusion
+description: Integrate HTML5 input and other Vue components into the Vue In-place Editor using the template property as a string, selector, or Vue template.
 control: Integration 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integration in Vue Inplace editor component
+# Integration in Vue In-place Editor
 
-The In-place Editor supports adding HTML5 input components using the [template](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#template) property. The Template property can be given as either a `string` or a `query selector`.
+The In-place Editor supports adding HTML5 input components using the [template](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#template) property. The Template property can be given as either a `string` or a `query selector`.
 
 ## As a string
 
@@ -32,13 +32,13 @@ template: "#date"
 
 ## As a template
 
-You can render other components inside In-place Editor using Vue template . Follow the below guildlines for using other the components as template in In-place Editor.
+You can render other components inside In-place Editor using Vue template . Follow the below guidelines for using other the components as template in In-place Editor.
 
 Declare a template in the template section of the “.vue” file. An empty object “data” needs to be initialized in the data option of the default export object in script section.
 
 The template function needs to be assigned to the template property of the EJ2 Vue In-place Editor Component.
 
-Template mode, the `value` property not handled by the In-place Editor component. So, before sending a value to the server, you need to modify at [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#actionbegin) event, otherwise, an empty string will pass. In the following template sample, before submitting a data to the server, event argument and [value](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#value) property content updated in the `actionBegin` event handler.
+Template mode, the `value` property not handled by the In-place Editor component. So, before sending a value to the server, you need to modify at [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#actionbegin) event, otherwise, an empty string will pass. In the following template sample, before submitting a data to the server, event argument and [value](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#value) property content updated in the `actionBegin` event handler.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -53,4 +53,4 @@ Template mode, the `value` property not handled by the In-place Editor component
 
 ## See Also
 
-* [Built-in Components](./components/)
+* [Built-in Components](./components)

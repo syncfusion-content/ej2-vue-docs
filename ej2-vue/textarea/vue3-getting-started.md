@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started vue3 with Vue TextArea component | Syncfusion
-description:  Checkout and learn about Getting Started vue3 with Vue TextArea component of Syncfusion Essential JS 2 and more details.
+description: Learn how to get started with the Syncfusion Vue TextArea control. Explore setup, features, examples, and customization options.
 control: Getting Started vue3 
 platform: ej2-vue
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom context in Vue Sidebar component | Syncfusion
-description: Learn here all about Custom context in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: Custom Context in Vue Sidebar | Syncfusion
+description: Target any HTML element as the Vue Sidebar container using the target property instead of the default body element for scoped layout placement.
 control: Custom context 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom context in Vue Sidebar component
+# Custom Context in Vue Sidebar
 
 Sidebar has a flexible option to initialize and target any HTML element alongside the main content of a web page.
 

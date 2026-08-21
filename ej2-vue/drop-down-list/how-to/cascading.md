@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cascading in Vue Drop down list component | Syncfusion
-description: Learn here all about Cascading in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to configure cascading in Vue Dropdown List | Syncfusion
+description: Configure cascading Syncfusion Vue Dropdown Lists by loading child data in the parent change event to react to the selected value.
 control: Cascading 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cascading in Vue Drop down list component
+# How to configure cascading in Vue Dropdown List
 
 The cascading DropDownList is a series of DropDownList, where the value of one DropDownList depends upon  another's value. This can be configured by using the [`change`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the parent DropDownList. Within that change event handler, data has to be loaded to the child DropDownList based on the selected value of the parent DropDownList.
 

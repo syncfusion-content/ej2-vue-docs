@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the Chips component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Chips component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 Getting Started with Vue Chips | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Chips in a Vue 3 project using Vite, with setup, theme installation, and adding chips via Composition or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Chips Component in Vue 3
+# Vue 3 Getting Started with Vue Chips
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Chips component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Multi select component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Style in Vue MultiSelect Dropdown | Syncfusion
+description: Customize the Syncfusion Vue MultiSelect Dropdown appearance using CSS for the wrapper, delimiter, input, chips, popup, and selection states.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Multi select component
+# Style in Vue MultiSelect Dropdown
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

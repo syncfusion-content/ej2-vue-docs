@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection in Vue List box component | Syncfusion
-description: Learn here all about Selection in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: Selection in Vue ListBox | Syncfusion
+description: Configure single or multiple selection in the Syncfusion Vue ListBox using selectionSettings.mode, with a change event fired per selection.
 control: Selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in Vue List box component
+# Selection in Vue ListBox
 
 The ListBox provides support to select an item or a group of item by mouse or keyboard action. There are two selection modes available in list box,
 

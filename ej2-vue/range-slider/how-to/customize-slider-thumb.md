@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Slider thumb in Vue Range Slider component | Syncfusion
-description: Learn here all about Customize Slider thumb in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to customize the Slider thumb in Vue Range Slider | Syncfusion
+description: Restyle the Syncfusion Vue Range Slider thumb as square, circle, or oval shapes, or apply a custom image via the e-handle class.
 control: Customize Slider thumb 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Slider thumb in Vue Range Slider component
+# How to customize the Slider thumb in Vue Range Slider
 
 The Slider's appearance can be customized through CSS. By overriding the Slider's CSS classes, you can customize the thumb. By default, the Slider has a unique class `e-handle` for the Slider thumb. You can override this class as per your requirement. In the sample, the Slider thumb has been customized to square, circle, and oval shapes, and its background image has also been customized.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Auto complete component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Auto complete component of Syncfusion Essential JS 2 and more.
+title: Style in Vue AutoComplete | Syncfusion
+description: Customize the Syncfusion Vue AutoComplete appearance using CSS for the wrapper, input, popup, list items, selection, and disabled states.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Auto complete component
+# Style in Vue AutoComplete
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

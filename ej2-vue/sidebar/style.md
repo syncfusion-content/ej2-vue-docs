@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Sidebar component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Sidebar | Syncfusion
+description: Override default Vue Sidebar CSS classes to customize the root element, left and right positioned sidebars, and overall visual appearance to match your app.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Sidebar component
+# Style in Vue Sidebar
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user's preference.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value binding in Vue Multi select component | Syncfusion
-description: Learn here all about Value binding in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Value Binding in Vue MultiSelect Dropdown | Syncfusion
+description: Bind primitive strings, numbers, booleans, nulls, and complex objects to the Syncfusion Vue MultiSelect Dropdown value field for multi-selection.
 control: Value binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value binding in ##Platform_Name## Multi select control
+# Value Binding in Vue MultiSelect Dropdown
 
 Value binding in the MultiSelect control allows you to associate data values with each list item. This facilitates managing and retrieving selected values efficiently. The MultiSelect component provides flexibility in binding both primitive data types and complex objects.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types and styles in Vue Button group component | Syncfusion
-description: Learn here all about Types and styles in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: Types and Styles in Vue Button Group | Syncfusion
+description: Learn about predefined visual types and styles in the Syncfusion Vue Button Group, including outline, primary, success, info, warning, and danger variants.
 control: Types and styles 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types and styles in Vue Button group component
+# Types and Styles in Vue Button Group
 
 This section explains about different types and styles of ButtonGroup.
 
@@ -16,7 +16,7 @@ This section explains about different types and styles of ButtonGroup.
 
 ### Outline ButtonGroup
 
-An Outline ButtonGroup has a border with transparent background. To create Outline ButtonGroup, `e-outline` class needs to be added to the target element and to the button element using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/#cssclass) property.
+An Outline ButtonGroup has a border with transparent background. To create Outline ButtonGroup, `e-outline` class needs to be added to the target element and to the button element using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/index-default#cssclass) property.
 
 The following sample illustrates how to achieve outline ButtonGroup,
 

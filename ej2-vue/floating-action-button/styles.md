@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles in Vue Floating action button component | Syncfusion
-description: Learn here all about Styles in Syncfusion Vue Floating action button component of Syncfusion Essential JS 2 and more.
+title: Styles in Vue Floating Action Button | Syncfusion
+description: Learn how to apply predefined styles to the Syncfusion Vue Floating Action Button using cssClass, override default CSS, show text on hover, and customize the outline color.
 control: Styles 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in Vue Floating action button component
+# Styles in Vue Floating Action Button
 
 This section explains the different styles of Floating Action Button.
 

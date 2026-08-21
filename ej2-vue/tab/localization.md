@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Tab component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue Tabs | Syncfusion
+description: Localize Vue Tabs content using the locale property and enable right-to-left layout with the enableRtl property for global application support.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Tab component
+# Localization in Vue Tabs
 
 Localization library allows to localize the default text content of Tab. In Tab, The close button's tooltip text alone will be localize based on culture.
 

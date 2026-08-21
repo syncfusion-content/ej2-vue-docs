@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in Vue Drop down button component | Syncfusion
-description: Learn here all about Animation in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: Animation in Vue Dropdown Button | Syncfusion
+description: Apply SlideDown, ZoomIn, FadeIn, or no effect to the Vue Dropdown Button popup using the animationSettings API property.
 control: Animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in Vue Drop down button component.
+# Animation in Vue Dropdown Button
 
 The [`animationSettings`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#animationsettings) property is used to customize the animation of the DropDownButton popup. The supported effects for DropDownButton are,
 

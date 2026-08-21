@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Adornments in ##Platform_Name## TextArea control | Syncfusion
-description: Learn here all about Adornments in Syncfusion ##Platform_Name## TextArea control of Syncfusion Essential JS 2 and more.
+title: Adornments in Vue TextArea | Syncfusion
+description: Add icons, labels, or action buttons before and after the Syncfusion Vue TextArea with prependTemplate, appendTemplate, and orientation flow.
 platform: ej2-vue
 control: Adornments
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in ##Platform_Name## TextArea control
+# Adornments in Vue TextArea
 
 Adornments allow you to add custom elements before or after the TextArea using the `prependTemplate` and `appendTemplate` properties. These elements can include icons, text labels, or action buttons for formatting and content management. With orientation support, you can arrange adornments horizontally or vertically using `adornmentFlow` and `adornmentOrientation` for flexible layouts.
 

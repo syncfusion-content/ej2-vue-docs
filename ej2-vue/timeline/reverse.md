@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Reverse in Vue Timeline component | Syncfusion
-description: Learn here all about Reverse in Syncfusion Vue Timeline component of Syncfusion Essential JS 2 and more.
-control: Reverse 
+title: Reverse in Vue Timeline | Syncfusion
+description: Display Vue Timeline items in reverse order for any alignment using the reverse property to improve user interaction and adaptability.
+control: Reverse
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reverse in Vue Timeline component
+# Reverse in Vue Timeline
 
 Display the Timeline items in reverse order for different alignments by using the [reverse](https://ej2.syncfusion.com/vue/documentation/api/timeline#reverse) property. This provides adaptability and improves user interaction.
 

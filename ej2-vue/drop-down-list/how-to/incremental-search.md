@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Incremental search in Vue Drop down list component | Syncfusion
-description: Learn here all about Incremental search in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to do incremental search in Vue Dropdown List | Syncfusion
+description: Search Syncfusion Vue Dropdown List items incrementally by focusing the component and typing characters to move to the closest match.
 control: Incremental search 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Incremental search in Vue Drop down list component
+# How to do incremental search in Vue Dropdown List
 
 DropDownList supports incremental search, by default. You can search the list item by focusing the DropDownList and typing the characters in it. The closely matched items are selected sequentially.
 

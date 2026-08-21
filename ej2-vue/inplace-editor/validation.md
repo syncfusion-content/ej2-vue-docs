@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Validation in Vue Inplace editor component | Syncfusion
-description: Learn here all about Validation in Syncfusion Vue Inplace editor component of Syncfusion Essential JS 2 and more.
+title: Validation in Vue In-place Editor | Syncfusion
+description: Validate Vue In-place Editor input using validationRules with required, email, url, date, number, length, range, and regex rules and the validating event.
 control: Validation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in Vue Inplace editor component
+# Validation in Vue In-place Editor
 
-In-place Editor component supports validation and it can be achieved by adding rules to the [validationRules](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#validationrules) property, its child property `key` must be same as [name](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#name) property, otherwise validation not performed. Submitting data to the server or calling the [validate](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#validate) method validation executed.
+In-place Editor component supports validation and it can be achieved by adding rules to the [validationRules](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#validationrules) property, its child property `key` must be same as [name](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#name) property, otherwise validation not performed. Submitting data to the server or calling the [validate](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#validate) method validation executed.
 
 ## Validation Rules
 
@@ -51,7 +51,7 @@ Step 2:  The corresponding name specified in the name property should bind with 
         
 {% previewsample "page.domainurl/code-snippet/in-place-editor/getting-started-cs23" %}
 
-In the following sample, first editor value submitted without select any date, so the default error message will be displayed below the `DatePicker` element. Second editor configured with the [validating](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#validating) event with the handler. In handler event [errorMessage](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/validateEventArgs/#errormessage) argument value modified and it will show below the `DatePicker` element.
+In the following sample, first editor value submitted without select any date, so the default error message will be displayed below the `DatePicker` element. Second editor configured with the [validating](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#validating) event with the handler. In handler event [errorMessage](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/validateEventArgs#errormessage) argument value modified and it will show below the `DatePicker` element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -64,7 +64,7 @@ In the following sample, first editor value submitted without select any date, s
         
 {% previewsample "page.domainurl/code-snippet/in-place-editor/getting-started-cs24" %}
 
-* For more details about validation configuration, refer this documentation [section](https://ej2.syncfusion.com/documentation/api/form-validator/).
+* For more details about validation configuration, refer this documentation [section](https://ej2.syncfusion.com/documentation/api/form-validator).
 
 * For custom validation except specifying validationRules, specify errorMessage at validating event, message will be shown when the value is `Empty`.
 

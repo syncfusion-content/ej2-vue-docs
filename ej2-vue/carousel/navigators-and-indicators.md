@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Navigators and indicators in Vue Carousel component | Syncfusion
-description: Learn here all about Navigators and indicators in Syncfusion Vue Carousel component of Syncfusion Essential JS 2 and more.
+title: Navigators and Indicators in Vue Carousel | Syncfusion
+description: Show or hide Vue Carousel previous and next navigator buttons and indicator bars using the buttonsVisibility and indicators properties.
 control: Navigators and indicators 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigators and indicators in Vue Carousel component
+# Navigators and Indicators in Vue Carousel
 
 The navigators and indicators are used to transition the slides manually.
 

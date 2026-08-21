@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Drop down list component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Dropdown List | Syncfusion
+description: Customize the Syncfusion Vue Dropdown List appearance using CSS for the wrapper, input, popup, list items, selection, and disabled states.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Drop down list component
+# Style in Vue Dropdown List
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

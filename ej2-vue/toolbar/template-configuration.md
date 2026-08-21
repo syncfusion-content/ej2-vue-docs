@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template configuration in Vue Toolbar component | Syncfusion
-description: Learn here all about Template configuration in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: Template Configuration in Vue Toolbar | Syncfusion
+description: Define custom Vue Toolbar item templates using the v-slot directive to render HTML, icons, or other components inside individual toolbar items.
 control: Template configuration 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template configuration in Vue Toolbar component
+# Template Configuration in Vue Toolbar
 
 ## Integrate menu component
 

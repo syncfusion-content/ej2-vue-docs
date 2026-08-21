@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adaptive in Vue Tab component | Syncfusion
-description: Learn here all about Adaptive in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: Adaptive in Vue Tabs | Syncfusion
+description: Enable responsive scrolling for Vue Tabs on mobile devices so overflow tab headers are accessible via scroll buttons when screen width is limited.
 control: Adaptive 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in Vue Tab component
+# Adaptive in Vue Tabs
 
 The following section explains about rendering Tab when its width exceeds the viewable area or particularly in a given width. The available
 modes are as follows:

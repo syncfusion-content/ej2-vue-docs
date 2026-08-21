@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content render modes in Vue Tab component | Syncfusion
-description: Learn here all about Content render modes in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: Content Render Modes in Vue Tabs | Syncfusion
+description: Control how Vue Tabs renders content panels using the heightAdjustMode and loadOnDemand properties to manage content height and lazy loading behavior.
 control: Content render modes 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content render modes in Vue Tab component
+# Content Render Modes in Vue Tabs
 
 Tabs support rendering content based on different scenarios. The content of the tabs can be rendered in three different ways, as outlined below.
 

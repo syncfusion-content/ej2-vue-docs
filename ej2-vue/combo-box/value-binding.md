@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value binding in Vue Combo box component | Syncfusion
-description: Learn here all about Value binding in Syncfusion Vue Combo box component of Syncfusion Essential JS 2 and more.
+title: Value Binding in Vue ComboBox | Syncfusion
+description: Bind primitive strings, numbers, booleans, and complex objects to the Syncfusion Vue ComboBox value field for efficient selection.
 control: Value binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value binding in ComboBox Component
+# Value Binding in Vue ComboBox
 
 Value binding in the ComboBox control allows you to associate data values with each list item. This facilitates managing and retrieving selected values efficiently. The ComboBox component provides flexibility in binding both primitive data types and complex objects.
 

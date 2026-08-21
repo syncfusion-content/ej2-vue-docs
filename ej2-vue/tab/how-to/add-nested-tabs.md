@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add nested tabs in Vue Tab component | Syncfusion
-description: Learn here all about Add nested tabs in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to add nested tabs in Vue Tabs | Syncfusion
+description: Render a child Vue Tabs component inside a parent tab content area to create nested tab layouts for hierarchical content navigation.
 control: Add nested tabs 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add nested tabs in Vue Tab component
+# How to add nested tabs in Vue Tabs
 
 Tab supports to render the nested level of Tabs by using `content` property. You can add the nested Tab element inside the parent Tab `content`
  property. To render the nested Tab, initialize the component using the id of Tab from a selected event handler.

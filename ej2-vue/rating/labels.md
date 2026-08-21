@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Labels in Vue Rating component | Syncfusion
-description: Learn here all about Labels in Syncfusion Vue Rating component of Syncfusion Essential JS 2 and more.
+title: Labels in Vue Rating | Syncfusion
+description: Add a numeric label next to each Syncfusion Vue Rating and place it on top, bottom, left, or right with custom templates.
 control: Labels 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Labels in Vue Rating component
+# Labels in Vue Rating
 
 You can use the [`showLabel`](https://ej2.syncfusion.com/vue/documentation/api/rating/#showlabel) property to display a label that shows the current value of the rating. When the `showLabel` property is set to `true`, a label will be displayed.
 

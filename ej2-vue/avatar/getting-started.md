@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue Avatar component | Syncfusion
-description:  Checkout and learn about Getting Started with Vue Avatar component of Syncfusion Essential JS 2 and more details.
-control: Getting Started 
+title: Getting Started with Vue Avatar | Syncfusion
+description: Set up a Vue 2 project with Vue CLI and integrate the Syncfusion Vue Avatar component, including CSS themes and basic rendering in App.vue.
+control: Getting Started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Avatar Component in Vue 2
+# Getting Started with Vue Avatar
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Avatar component.
 

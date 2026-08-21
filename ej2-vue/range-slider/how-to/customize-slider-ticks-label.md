@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize ticks label in Vue Range Slider component | Syncfusion
-description: Learn here all about Customize Slider ticks label in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to customize the Slider ticks label in Vue Range Slider | Syncfusion
+description: Restyle Syncfusion Vue Range Slider tick labels with custom icons, fonts, or per-tick colors using the e-tick CSS class.
 control: Customize Slider ticks label 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Slider ticks label in Vue Range Slider component
+# How to customize the Slider ticks label in Vue Range Slider
 
 Slider view can be customized via CSS. By overriding the Slider CSS classes, you can customize the ticks. The ticks in Slider allows you to easily identify the current value/values of the Slider. It contains [`smallStep`](https://ej2.syncfusion.com/vue/documentation/api/slider/ticksData/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/vue/documentation/api/slider/ticksData/#largestep). By default, Slider has class `e-tick` for Slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Determine whether uploader has file input in Vue Uploader component | Syncfusion
-description: Learn here all about Determine whether uploader has file input in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Determine if uploader has file input in Vue Uploader | Syncfusion
+description: Validate the Syncfusion Vue Uploader has a file selected by adding the required attribute to the input and a data-required-message hint.
 control: Determine whether uploader has file input 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Determine whether uploader has file input in Vue Uploader component
+# How to determine if uploader has file input in Vue Uploader
 
 By setting **required** attribute to uploader input element, you can validate the file input has any value in it. In the below sample, set required attribute to the uploader input element and showcase the validation failure message using `data-required-message` attribute.
 

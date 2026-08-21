@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Globalization in Vue Calendar component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Globalization 
+title: Globalization in Vue Calendar | Syncfusion
+description: Adapt the Syncfusion Vue Calendar to different languages and cultures using CLDR data, locale-aware formats, and right-to-left support.
+control: Globalization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Calendar component
+# Globalization in Vue Calendar
 
-Globalization is the combination of internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [Internationalization](../common/internationalization/), and also add culture specific customization and translation to the text ([localization](../common/localization/)).
+Globalization is the combination of internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [Internationalization](../common/internationalization), and also add culture specific customization and translation to the text ([localization](../common/localization)).
 
-By default, the Calendar date format, week, and month names are specific to American English culture. It uses the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](../common/internationalization/) package to parse and format date object based on the culture using the official [UNICODE CLDR](https://cldr.unicode.org/)  JSON data. It provides the [loadCldr](../common/internationalization/#loading-culture-data) method to load the culture-specific CLDR JSON data.
+By default, the Calendar date format, week, and month names are specific to American English culture. It uses the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](../common/internationalization) package to parse and format date object based on the culture using the official [UNICODE CLDR](https://cldr.unicode.org)  JSON data. It provides the [loadCldr](../common/internationalization#loading-culture-data) method to load the culture-specific CLDR JSON data.
 
 The Calendar component supports only the Gregorian type of calendar. All the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component are specific to English culture ('en-US').
 If you want to go with the different culture other than `English`, follow the below steps.
@@ -27,7 +27,7 @@ npm install cldr-data --save
 
 Once the package installed, you can find the culture specific JSON data under the location `/node_modules/cldr-data`.
 
-* Now use the `loadCldr`methodto load the culture specific CLDR JSON data from the installed location to `app.vue` file.
+* Now use the `loadCldr`method to load the culture specific CLDR JSON data from the installed location to `app.vue` file.
 
 * Calendar displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the Calendar with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Event in Vue Speed dial component | Syncfusion
-description: Learn here all about Event in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Event in Vue Speed Dial | Syncfusion
+description: Learn about the events of the Syncfusion Vue Speed Dial, including the clicked event triggered when an action item is clicked and the created event raised after rendering.
 control: Event 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Event in Vue Speed dial component
+# Event in Vue Speed Dial
 
 This section explains the Speed Dial events that will be triggered when appropriate actions are performed.
 

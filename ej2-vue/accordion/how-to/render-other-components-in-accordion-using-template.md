@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Render other components in accordion using template in Vue Accordion component | Syncfusion
-description: Learn here all about Render other components in accordion using template in Syncfusion Vue Accordion component of Syncfusion Essential JS 2 and more.
+title: Render other components using template in Vue Accordion | Syncfusion
+description: Embed other Syncfusion Vue components inside Vue Accordion panels using a Vue template assigned to the content property of an accordion item.
 control: Render other components in accordion using template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render other components in accordion using template in Vue Accordion component
+# Render other components using template in Vue Accordion
 
 You can render other components inside Accordion using Vue **template**. Through this, we can add content as other components directly with all functionalities to our Accordion. Follow the below guidelines for using the other components as template in Accordion.
 

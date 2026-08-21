@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Expand collapse in Vue Splitter component | Syncfusion
-description: Learn here all about Expand collapse in Syncfusion Vue Splitter component of Syncfusion Essential JS 2 and more.
-control: Expand collapse 
+title: Expand Collapse in Vue Splitter | Syncfusion
+description: Enable collapsible behavior on Vue Splitter panes via the paneSettings collapsible property to show or hide expand and collapse icons.
+control: Expand collapse
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Expand collapse in Vue Splitter component
+# Expand Collapse in Vue Splitter
 
 ## Collapsible panes
 

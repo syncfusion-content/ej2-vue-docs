@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Adornments in ##Platform_Name## MaskedTextBox control | Syncfusion
-description: Learn here all about Adornments in Syncfusion ##Platform_Name## MaskedTextBox control of Syncfusion Essential JS 2 and more.
+title: Adornments in Vue MaskedTextBox | Syncfusion
+description: Add icons, prefixes, or action buttons before and after the input in the Syncfusion Vue MaskedTextBox using prependTemplate and appendTemplate.
 platform: ej2-vue
 control: Adornments
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in ##Platform_Name## MaskedTextBox control
+# Adornments in Vue MaskedTextBox
 
 Adornments in the MaskedTextBox control allow you to add custom elements before or after the masked input using the `prependTemplate` and `appendTemplate` properties. These elements can include prefixes, suffix labels, or action icons to provide context, guide user input, and offer quick actions while preserving mask validation and float label behavior.
 

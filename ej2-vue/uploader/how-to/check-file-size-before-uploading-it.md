@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check file size before uploading it in Vue Uploader component | Syncfusion
-description: Learn here all about Check file size before uploading it in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to check file size before uploading in Vue Uploader | Syncfusion
+description: Check the file size in the Syncfusion Vue Uploader before upload using the uploading event and the bytesToSize format helper method.
 control: Check file size before uploading it 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check file size before uploading it in Vue Uploader component
+# How to check file size before uploading in Vue Uploader
 
 By using [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/#uploading) event, you can get the file size before upload it to server. File object contains the file size in bytes only. You can convert the size to standard formats (`KB` or `MB`) using [bytesToSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#bytestosize) method.
 

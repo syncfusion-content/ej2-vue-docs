@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable rtl in Vue Switch component | Syncfusion
-description: Learn here all about Enable rtl in Syncfusion Vue Switch component of Syncfusion Essential JS 2 and more.
+title: How to enable RTL in Vue Toggle Switch Button | Syncfusion
+description: Learn how to enable right-to-left (RTL) support in the Syncfusion Vue Toggle Switch Button by setting the enableRtl property to true for RTL language rendering.
 control: Enable rtl 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable rtl in Vue Switch component
+# How to enable RTL in Vue Toggle Switch Button
 
 Switch component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/switch/#enablertl) as `true`.
 

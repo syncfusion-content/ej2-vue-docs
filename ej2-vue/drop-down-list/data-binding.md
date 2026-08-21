@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Vue Drop down list component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue Dropdown List | Syncfusion
+description: Bind the Syncfusion Vue Dropdown List to local arrays, OData, OData V4, Web API, XML, JSON, or JSONP via DataManager adaptors.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Drop down list component
+# Data Binding in Vue Dropdown List
 
 The DropDownList loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#datasource) property. It supports the data type of `array` or `DataManager`.
 

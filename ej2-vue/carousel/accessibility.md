@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Carousel component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Carousel component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Carousel | Syncfusion
+description: The Vue Carousel meets WAI-ARIA specifications with screen reader support, keyboard navigation, WCAG 2.2, Section 508, and RTL compliance built in.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Carousel component
+# Accessibility in Vue Carousel
 
 The Carousel component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-roledescription`, `aria-label`, `aria-current`, `aria-live`, `aria-role` and `aria-hidden`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and has been tested in major screen readers.
 
@@ -54,7 +54,7 @@ The Carousel component is designed by considering [WAI-ARIA](https://www.w3.org/
 
 ## Keyboard interaction
 
-All Carousel actions can be controlled using keyboard keys through the [`allowKeyboardInteraction`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#allowkeyboardinteraction) property, which is enabled by default. If you wish to disable the default keyboard interactions, you can set this property to `false`. This is particularly useful if the carousel contains input elements, as pressing the arrow keys might cause the carousel to move unexpectedly. By disabling keyboard interaction, the carousel remains static, allowing the user to focus on the input fields without any interruptions.
+All Carousel actions can be controlled using keyboard keys through the [`allowKeyboardInteraction`](https://ej2.syncfusion.com/vue/documentation/api/carousel#allowkeyboardinteraction) property, which is enabled by default. If you wish to disable the default keyboard interactions, you can set this property to `false`. This is particularly useful if the carousel contains input elements, as pressing the arrow keys might cause the carousel to move unexpectedly. By disabling keyboard interaction, the carousel remains static, allowing the user to focus on the input fields without any interruptions.
 
 This control implements keyboard navigation support by following WAI-ARIA practices. Once focused on the active Carousel element, you can use the following key combinations to interact with the Carousel.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open mode in Vue Tooltip component | Syncfusion
-description: Learn here all about Open mode in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Open Mode in Vue Tooltip | Syncfusion
+description: Control when the Vue Tooltip appears using the opensOn property with Auto, Hover, Click, Focus, or Custom modes, including combinations for multiple triggers.
 control: Open mode 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open mode in Vue Tooltip component
+# Open Mode in Vue Tooltip
 
 You can decide the mode in which the Tooltip opens on a page, i.e., on hovering, focusing, or clicking on the target elements.
 

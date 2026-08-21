@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tab key navigation in Vue Tab component | Syncfusion
-description: Learn here all about Tab key navigation in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to navigate tabs with keyboard in Vue Tabs | Syncfusion
+description: Enable keyboard navigation in Vue Tabs so users can switch between tab items using arrow keys, Home, End, and Enter without a mouse.
 control: Tab key navigation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tab key navigation in Vue Tab component
+# How to navigate tabs with keyboard in Vue Tabs
 
 The [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabItemModel/#tabindex) property of a Tab item is used to enable tab key navigation for that particular item. When a positive value is assigned to the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabItemModel/#tabindex) property, it allows the user to switch focus to the next or previous tab item using the Tab or Shift+Tab keys. By default, the user can only switch between tab items using the arrow keys.
 

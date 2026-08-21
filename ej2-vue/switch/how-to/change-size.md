@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change size in Vue Switch component | Syncfusion
-description: Learn here all about Change size in Syncfusion Vue Switch component of Syncfusion Essential JS 2 and more.
+title: How to change size in Vue Toggle Switch Button | Syncfusion
+description: Learn how to reduce the Syncfusion Vue Toggle Switch Button from the default size to small by setting the cssClass property to e-small for a more compact layout.
 control: Change size 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change size in Vue Switch component
+# How to change size in Vue Toggle Switch Button
 
 The different Switch sizes available are default and small. To reduce the size of default Switch to small, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/switch/#cssclass) property to `e-small`.
 

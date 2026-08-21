@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue AutoComplete component | Syncfusion
-description:  Checkout and learn about Getting started with Vue AutoComplete component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue AutoComplete in Vue 2 | Syncfusion
+description: Set up a Vue 2 project with Vue-CLI and integrate the Syncfusion Vue AutoComplete component using the Composition or Options API.
 control: AutoComplete 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue AutoComplete Component in Vue 2
+# Getting Started with Vue AutoComplete in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [AutoComplete](https://www.syncfusion.com/vue-components/vue-autocomplete) component.
 

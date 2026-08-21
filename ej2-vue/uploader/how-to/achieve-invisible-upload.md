@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Achieve invisible upload in Vue Uploader component | Syncfusion
-description: Learn here all about Achieve invisible upload in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to achieve invisible upload in Vue Uploader | Syncfusion
+description: Hide the Syncfusion Vue Uploader UI and process files invisibly by handling the selected event to upload without showing the drop area.
 control: Achieve invisible upload 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Achieve invisible upload in Vue Uploader component
+# How to achieve invisible upload in Vue Uploader
 
 You can achieve the invisible upload feature by using selected event in uploader component. In the following example, explains how to achieve invisible upload in uploader component.
 

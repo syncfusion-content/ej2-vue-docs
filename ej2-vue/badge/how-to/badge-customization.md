@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Badge customization in Vue Badge component | Syncfusion
-description: Learn here all about Badge customization in Syncfusion Vue Badge component of Syncfusion Essential JS 2 and more.
+title: How to customize in Vue Badge | Syncfusion
+description: Customize Vue Badge color beyond the 8 predefined colors, adjust badge size via font size, and change the badge position with custom classes.
 control: Badge customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Badge customization in Vue Badge component
+# How to customize in Vue Badge
 
 ## Color customization
 

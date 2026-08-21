@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Breadcrumb component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Breadcrumb component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Breadcrumb | Syncfusion
+description: The Vue Breadcrumb meets ADA, Section 508, and WCAG 2.2 standards with screen reader support, keyboard navigation, RTL, and color contrast built in.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Breadcrumb component
+# Accessibility in Vue Breadcrumb
 
 The Breadcrumb component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

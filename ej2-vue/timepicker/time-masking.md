@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Time masking in Vue Timepicker component | Syncfusion
-description: Learn here all about Time masking in Syncfusion Vue Timepicker component of Syncfusion Essential JS 2 and more.
-control: Time masking 
+title: Mask Support in Vue TimePicker | Syncfusion
+description: Enable built-in time masking in the Syncfusion Vue TimePicker using enableMask and the MaskedDateTime module with custom placeholder text.
+control: Time masking
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Time masking in Vue Timepicker component
+# Mask Support in Vue TimePicker
 
 TimePicker has `enableMask` property that provides the option to enable the built-in date masking support. Also, you must inject the MaskedDateTime module to enable the masking support.
 

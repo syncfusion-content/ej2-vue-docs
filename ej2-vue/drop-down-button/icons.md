@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in Vue Drop down button component | Syncfusion
-description: Learn here all about Icons in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: Icons in Vue Dropdown Button | Syncfusion
+description: Add built-in font icons, sprite images, icon-only variants, or vertical layout to the Vue Dropdown Button via the iconCss property.
 control: Icons 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in Vue Drop down button component
+# Icons in Vue Dropdown Button
 
 ## DropDownButton icons
 

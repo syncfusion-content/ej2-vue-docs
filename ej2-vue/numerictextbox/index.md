@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Vue Numeric Textbox Component | Syncfusion
+description: Capture validated numeric input in Vue with the Syncfusion Numeric Textbox, supporting range, precision, formats, and globalized parsing.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Numerictextbox component
+# About Syncfusion Vue Numeric Textbox Component.
 
 The **NumericTextBox** is used to get the number inputs from the user. The input values can be incremented
 or decremented by a predefined step value.

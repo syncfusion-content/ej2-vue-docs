@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date time format in Vue Datetimepicker component | Syncfusion
-description: Learn here all about Date time format in Syncfusion Vue Datetimepicker component of Syncfusion Essential JS 2 and more.
-control: Date time format 
+title: DateTime Format in Vue DateTimePicker | Syncfusion
+description: Set custom date and time formats in the Syncfusion Vue DateTimePicker using the format property and accept multiple input formats with inputFormats.
+control: Date time format
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date time format in Vue Datetimepicker component
+# DateTime Format in Vue DateTimePicker
 
 Date time format is a way of representing the date and time value in different string format in the textbox.
 

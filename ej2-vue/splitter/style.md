@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Vue Splitter component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Splitter component of Syncfusion Essential JS 2 and more.
-control: Style 
+title: Style in Vue Splitter | Syncfusion
+description: Customize the Vue Splitter appearance using the exact CSS structure classes to modify spacing, borders, colors, and other visual properties.
+control: Style
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Style in Vue Splitter component
+# Style in Vue Splitter
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

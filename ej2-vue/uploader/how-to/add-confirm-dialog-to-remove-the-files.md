@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add confirm dialog to remove the files in Vue Uploader component | Syncfusion
-description: Learn here all about Add confirm dialog to remove the files in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to add confirm dialog to remove files in Vue Uploader | Syncfusion
+description: Confirm removal in the Syncfusion Vue Uploader with the Syncfusion Dialog and the remove method to avoid accidental file deletion.
 control: Add confirm dialog to remove the files 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add confirm dialog to remove the files in Vue Uploader component
+# How to add confirm dialog to remove files in Vue Uploader
 
 You can customize the uploader component for use confirm dialog before remove the files. In the following example, used ej2 dialog as confirm dialog which is used for making confirmation on removing the files by using [remove](https://ej2.syncfusion.com/vue/documentation/api/uploader/#remove) method.
 

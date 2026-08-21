@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Overflow in Vue Breadcrumb component | Syncfusion
-description: Learn here all about Overflow in Syncfusion Vue Breadcrumb component of Syncfusion Essential JS 2 and more.
+title: Overflow in Vue Breadcrumb | Syncfusion
+description: Limit visible Vue Breadcrumb items using maxItems and overflow modes such as Collapsed, Menu, Wrap, Scroll, Hidden, or None for compact layouts.
 control: Overflow 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overflow in Vue Breadcrumb component
+# Overflow in Vue Breadcrumb
 
-In the Breadcrumb component, [`maxItems`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#maxitems) and [`overflowMode`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#overflowmode) properties were used to limit the number of breadcrumb items to be displayed.
+In the Breadcrumb component, [`maxItems`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#maxitems) and [`overflowMode`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#overflowmode) properties were used to limit the number of breadcrumb items to be displayed.
 
-In the following example, the [`maxItems`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#maxitems) is set as 3 with `overflowMode` as Default. To prevent breadcrumb item navigation, the [`enableNavigation`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#enablenavigation) property has been set to false in the Breadcrumb component.
+In the following example, the [`maxItems`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#maxitems) is set as 3 with `overflowMode` as Default. To prevent breadcrumb item navigation, the [`enableNavigation`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#enablenavigation) property has been set to false in the Breadcrumb component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

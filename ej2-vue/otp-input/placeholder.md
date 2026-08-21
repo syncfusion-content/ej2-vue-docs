@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Placeholder in Vue OTP Input component | Syncfusion
-description:  Learn here all about Placeholder in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
+title: Placeholder in Vue OTP Input | Syncfusion
+description: Set a single-character or multi-character placeholder in the Syncfusion Vue OTP Input fields to hint at the expected value.
 platform: ej2-vue
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Placeholder in Vue OTP Input component
+# Placeholder in Vue OTP Input
 
 The placeholder in OTP Input specifies the text that is shown as a hint or placeholder until the user enters a value in the input field. It acts as a guidance for the users regarding the expected input format or purpose of the input field.
 

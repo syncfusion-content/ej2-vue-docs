@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Button group component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Button Group | Syncfusion
+description: Learn about the accessibility standards supported by the Syncfusion Vue Button Group, including WCAG 2.2, Section 508, and screen reader support.
 control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Button group component
+# Accessibility in Vue Button Group
 
 The Button group component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -47,16 +47,16 @@ The Button group component followed the [keyboard interaction](https://www.w3.or
 | **Press** | **To do this** |
 | --- | --- |
 | <kbd>Tab</kbd> | Focuses the next button in the ButtonGroup. |
-| <kbd>Enter/Space</kbd> | Activates the focussed button in the ButtonGroup. |
+| <kbd>Enter/Space</kbd> | Activates the focused button in the ButtonGroup. |
 
 ### Checkbox behavior
 
 | **Press** | **To do this** |
 | --- | --- |
 | <kbd>Tab</kbd> | Focuses the next button in the ButtonGroup. |
-| <kbd>Space</kbd> | Activates the focussed button in the ButtonGroup. |
+| <kbd>Space</kbd> | Activates the focused button in the ButtonGroup. |
 
-### Radiobutton behavior
+### Radio button behavior
 
 | **Press** | **To do this** |
 | --- | --- |

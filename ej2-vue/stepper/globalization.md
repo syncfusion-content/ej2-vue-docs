@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in Vue Stepper component | Syncfusion
-description: Checkout and learn about Globalization with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Globalization in Vue Stepper | Syncfusion
+description: Localize Vue Stepper text content using the locale property and enable right-to-left layout with the enableRtl property for global application support.
 control: Stepper 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Stepper component
+# Globalization in Vue Stepper
 
 ## Localization
 

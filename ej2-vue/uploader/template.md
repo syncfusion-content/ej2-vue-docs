@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Uploader component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Uploader | Syncfusion
+description: Customize the Syncfusion Vue Uploader file list with the template property to add file-type icons, custom rows, and progress layouts.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Uploader component
+# Template in Vue Uploader
 
 You can customize the default appearance of the uploader using a template along with buttons.
 

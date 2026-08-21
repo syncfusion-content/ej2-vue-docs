@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Localization in Vue Inplace editor component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Inplace editor component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue In-place Editor | Syncfusion
+description: Localize the Vue In-place Editor text content to different cultures using the locale property with L10n, enable right-to-left, and apply value formats.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Inplace editor component
+# Localization in Vue In-place Editor
 
 ## Localization
 
-Localization library allows you to localize the default text content of the In-place Editor to different cultures using the [locale](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#locale) property. In-place Editor following keys will be localize based on culture.
+Localization library allows you to localize the default text content of the In-place Editor to different cultures using the [locale](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#locale) property. In-place Editor following keys will be localize based on culture.
 
 | Locale key | en-US (default) |
 |------|------|
@@ -38,7 +38,7 @@ To load translation object in an application use `load` function of `L10n` class
 
 ## Right to left
 
-Specifies the direction of the In-place Editor component using the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#enablertl) property. For writing systems that require it like Arabic, Hebrew, etc., the direction can be switched to right-to-left.
+Specifies the direction of the In-place Editor component using the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#enablertl) property. For writing systems that require it like Arabic, Hebrew, etc., the direction can be switched to right-to-left.
 
 > It will not change based on the locale property.
 
@@ -55,14 +55,14 @@ Specifies the direction of the In-place Editor component using the [enableRtl](h
 
 ## Format
 
-Formatting is a way of representing the value in different format. You can format the following mentioned components with its `format` property, when it passed through the In-place Editor [model](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#model) property.
+Formatting is a way of representing the value in different format. You can format the following mentioned components with its `format` property, when it passed through the In-place Editor [model](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#model) property.
 
-* [DatePicker](https://ej2.syncfusion.com/vue/documentation/datepicker/date-format/)
-* [DateRangePicker](https://ej2.syncfusion.com/vue/documentation/daterangepicker/globalization/#customize-the-date-format)
-* [DateTimePicker](https://ej2.syncfusion.com/vue/documentation/api/datetimepicker/#timeformat)
-* [NumericTextBox](https://ej2.syncfusion.com/vue/documentation/numerictextbox/formats/)
-* [Slider](https://ej2.syncfusion.com/vue/documentation/range-slider/format/)
-* [TimePicker](https://ej2.syncfusion.com/vue/documentation/api/timepicker/#format)
+* [DatePicker](https://ej2.syncfusion.com/vue/documentation/datepicker/date-format)
+* [DateRangePicker](https://ej2.syncfusion.com/vue/documentation/daterangepicker/globalization#customize-the-date-format)
+* [DateTimePicker](https://ej2.syncfusion.com/vue/documentation/api/datetimepicker#timeformat)
+* [NumericTextBox](https://ej2.syncfusion.com/vue/documentation/numerictextbox/formats)
+* [Slider](https://ej2.syncfusion.com/vue/documentation/range-slider/format)
+* [TimePicker](https://ej2.syncfusion.com/vue/documentation/api/timepicker#format)
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

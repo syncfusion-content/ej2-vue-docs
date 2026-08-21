@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in Vue Mention component | Syncfusion
-description: Learn here all about Sorting in Syncfusion Vue Mention component of Syncfusion Essential JS 2 and more.
+title: Sorting in Vue Mention | Syncfusion
+description: Display Syncfusion Vue Mention suggestions in None, Ascending, or Descending order by setting the sortOrder property on the data source.
 control: Sorting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in Vue Mention component
+# Sorting in Vue Mention
 
 You can display the suggestions list items in a specific order. It has possible types as `Ascending`, `Descending`, and `None` in the [sortOrder](https://ej2.syncfusion.com/vue/documentation/api/mention/#sortorder) property.
 

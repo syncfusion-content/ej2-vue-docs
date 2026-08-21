@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toast services in Vue Toast component | Syncfusion
-description: Learn here all about Toast services in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Toast Services in Vue Toaster | Syncfusion
+description: Render Vue Toaster on the go using a built-in utility function that shows toasts without adding a container element to the DOM.
 control: Toast services 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toast services in Vue Toast component
+# Toast Services in Vue Toaster
 
 The [Vue Toast](https://www.syncfusion.com/vue-components/vue-toaster) component provides a built-in utility function to render the toast with minimal code. The utility function will render the toast without the need of rendering the container element in the DOM where the toast is appended. So that, the toast can now be rendered on the go. The following are the option to render the toast using the utility function.
 

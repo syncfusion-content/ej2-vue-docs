@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation in Vue Uploader component | Syncfusion
-description: Learn here all about Validation in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Validation in Vue Uploader | Syncfusion
+description: Filter Syncfusion Vue Uploader files by allowed extensions, min, and max file size before they reach the server using API or HTML attributes.
 control: Validation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in Vue Uploader component
+# Validation in Vue Uploader
 
 The uploader component validate the selected files extension and size using the [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/#allowedextensions),
 [minFileSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#minfilesize) and [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#maxfilesize) properties. The files can be validated before uploading to the server and can be ignored on uploading. Also, you can validate the files by setting the HTML attributes to the original input element. The validation process occurs on drag-and-drop the files also.

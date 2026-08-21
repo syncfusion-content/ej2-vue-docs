@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header content in Vue Card component | Syncfusion
-description: Learn here all about Header content in Syncfusion Vue Card component of Syncfusion Essential JS 2 and more.
-control: Header content 
+title: Header Content in Vue Card | Syncfusion
+description: Build structured Vue Card layouts using the header, title/subtitle, and extra-content sections to organize card content into clear regions.
+control: Header content
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header content in Vue Card component
+# Header Content in Vue Card
 
 ## Header
 

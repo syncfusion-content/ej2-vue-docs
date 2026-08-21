@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set item wise custom template in Vue Toolbar component | Syncfusion
-description: Learn here all about Set item wise custom template in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: Set item-wise custom template in Vue Toolbar | Syncfusion
+description: Assign a unique custom template to individual Vue Toolbar items using the item-wise template directive for per-item content customization.
 control: Set item wise custom template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set item wise custom template in Vue Toolbar component
+# How to set item-wise custom template in Vue Toolbar
 
 The Toolbar supports adding template commands using the  `template` property. Template property can be given as the `HTML element` that is
 either a `string`  or a `query selector`.

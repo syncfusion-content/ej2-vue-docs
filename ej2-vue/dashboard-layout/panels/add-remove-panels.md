@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add remove panels in Vue Dashboard Layout component | Syncfusion
-description: Learn here all about Add remove panels in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
-control: Add remove panels 
+title: Add Remove Panels in Vue Dashboard Layout | Syncfusion
+description: Dynamically add or remove panels in the Vue Dashboard Layout at runtime using the addPanel and removePanel public methods.
+control: Add remove panels
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Add remove panels in Vue Dashboard Layout component
+# Add Remove Panels in Vue Dashboard Layout
 
 In real-time scenarios, dashboard content often needs to be updated dynamically by adding or removing panels. This can be achieved using the [`addPanel`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#addpanel) and [`removePanel`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#removepanel) public methods.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show multiple toasts in various positions in Vue Toast component | Syncfusion
-description: Learn here all about Show multiple toasts in various positions in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Show multiple toasts in various positions in Vue Toaster | Syncfusion
+description: Display multiple Vue Toaster instances at different positions by initiating separate toasts for each desired location.
 control: Show multiple toasts in various positions 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show multiple toasts in various positions in Vue Toast component
+# How to show multiple toasts in various positions in Vue Toaster
 
 By default, the positions of the new toasts are only updated after the visible toasts have been destroyed. If You need to display multiple toasts with different positions, initiate another toasts.
 

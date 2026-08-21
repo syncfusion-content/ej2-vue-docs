@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Icon support in Vue Auto complete component | Syncfusion
-description: Learn here all about Icon support in Syncfusion Vue Auto complete component of Syncfusion Essential JS 2 and more.
+title: How to show list items with icons in Vue AutoComplete | Syncfusion
+description: Render icons on each Syncfusion Vue AutoComplete item by mapping the iconCss field to a CSS class on a span inside the list item.
 control: Icon support 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icon support in Vue Auto complete component
+# How to show list items with icons in Vue AutoComplete
 
-You can render icons to the list items by mapping the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#fields) field. This iconCss field create a span in the list item with mapped class name to allow styling as per your need.
+You can render icons to the list items by mapping the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#fields) field. This iconCss field create a span in the list item with mapped class name to allow styling as per your need.
 
 In the following sample, the icon classes are mapped with iconCss field.
 

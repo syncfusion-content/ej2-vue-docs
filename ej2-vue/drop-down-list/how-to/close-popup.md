@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Close popup in Vue Drop down list component | Syncfusion
-description: Learn here all about Close popup in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to close the popup on scroll in Vue Dropdown List | Syncfusion
+description: Close the Syncfusion Vue Dropdown List popup on a window scroll event by calling the hidePopup method to dismiss the open popup.
 control: Close popup 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Close popup in Vue Drop down list component
+# How to close the popup on scroll in Vue Dropdown List
 
 By using the `hidePopup` method in DropDownList, you can close the popup on scroll when triggered the windows scroll event.
 

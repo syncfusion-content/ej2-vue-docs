@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chip customization in Vue Multi select component | Syncfusion
-description: Learn here all about Chip customization in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Chip Customization in Vue MultiSelect Dropdown | Syncfusion
+description: Customize the selected chip element in the Syncfusion Vue MultiSelect Dropdown via the tagging event and the setClass method for custom CSS.
 control: Chip customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chip customization in Vue Multi select component
+# Chip Customization in Vue MultiSelect Dropdown
 
 The MultiSelect allows the user to customize the selected chip element through the [`tagging`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#tagging) event. In that event, you can set the custom classes to chip element via that event argument of `setClass` method.
 

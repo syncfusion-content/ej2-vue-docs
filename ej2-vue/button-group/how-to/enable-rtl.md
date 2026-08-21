@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable rtl in Vue Button group component | Syncfusion
-description: Learn here all about Enable rtl in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: How to enable RTL in Vue Button Group | Syncfusion
+description: Learn how to enable right-to-left (RTL) support in a Syncfusion Vue Button Group by adding the e-rtl class to the target element for RTL language rendering.
 control: Enable rtl 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable rtl in Vue Button group component
+# How to enable RTL in Vue Button Group
 
 ButtonGroup supports RTL functionality. This can be achieved by adding `e-rtl` class to the target element.
 

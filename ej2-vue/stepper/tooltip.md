@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip in Vue Stepper component | Syncfusion
-description: Checkout and learn about Tooltip with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Tooltip in Vue Stepper | Syncfusion
+description: Show tooltips on Vue Stepper steps with the showTooltip property and customize tooltip content using the tooltipTemplate property for additional step details on hover.
 control: Stepper 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in Vue Stepper component
+# Tooltip in Vue Stepper
 
 The Stepper component supports tooltip to show additional information in the steps by setting the [showTooltip](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#showtooltip) property to `true`. 
 

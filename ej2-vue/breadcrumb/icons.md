@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Icons in Vue Breadcrumb component | Syncfusion
-description: Learn here all about Icons in Syncfusion Vue Breadcrumb component of Syncfusion Essential JS 2 and more.
+title: Icons in Vue Breadcrumb | Syncfusion
+description: Add font icons or images to Vue Breadcrumb items using the iconCss property to visually represent each navigation step in the trail.
 control: Icons 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in Vue Breadcrumb component
+# Icons in Vue Breadcrumb
 
 ## Loading Icons in Breadcrumb Item
 
-To load the icon on the breadcrumb item, set the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property.
+To load the icon on the breadcrumb item, set the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#iconcss) property.
 
 ### Breadcrumb with font icons
 
-To place the font icon on the breadcrumb item, set the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the item.
+To place the font icon on the breadcrumb item, set the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#iconcss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the item.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,7 +31,7 @@ To place the font icon on the breadcrumb item, set the [`iconCss`](https://ej2.s
 
 ### Breadcrumb with Image
 
-In the Breadcrumb component, images can be added for the items using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property. In the following example, an image was added to the breadcrumb item by using the iconCss class `e-image-home` and specifying height and width.
+In the Breadcrumb component, images can be added for the items using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#iconcss) property. In the following example, an image was added to the breadcrumb item by using the iconCss class `e-image-home` and specifying height and width.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -46,7 +46,7 @@ In the Breadcrumb component, images can be added for the items using the [`iconC
 
 ### Breadcrumb with SVG Image
 
-In the Breadcrumb component, SVG image can be added for the items using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property. In the following example, SVG image was added to the breadcrumb item by using the iconCss class `e-svg-home` and specifying height and width.
+In the Breadcrumb component, SVG image can be added for the items using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#iconcss) property. In the following example, SVG image was added to the breadcrumb item by using the iconCss class `e-svg-home` and specifying height and width.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ In the Breadcrumb component, SVG image can be added for the items using the [`ic
 
 ## Icon Position
 
-By default, the icon is positioned to the left side of the item in the Breadcrumb component. If you need to add the icon right to the breadcrumb item, add the `e-icon-right` class to the required item. In the following example, the `e-icon-right` class was added to the breadcrumb items using the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#beforeitemrender) event.
+By default, the icon is positioned to the left side of the item in the Breadcrumb component. If you need to add the icon right to the breadcrumb item, add the `e-icon-right` class to the required item. In the following example, the `e-icon-right` class was added to the breadcrumb items using the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#beforeitemrender) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,7 +76,7 @@ By default, the icon is positioned to the left side of the item in the Breadcrum
 
 ## Icon only
 
-To display only icons for the items, add icons using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property. In the following example, breadcrumb items were demonstrated with only icons by providing the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property.
+To display only icons for the items, add icons using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#iconcss) property. In the following example, breadcrumb items were demonstrated with only icons by providing the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#iconcss) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,7 +91,7 @@ To display only icons for the items, add icons using the [`iconCss`](https://ej2
 
 ## Show icon only for first item
 
-To show icon only for the first item in the Breadcrumb component, add icons to the first item using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property. In the following example, the icon was provided only for the first item by setting the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property.
+To show icon only for the first item in the Breadcrumb component, add icons to the first item using the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#iconcss) property. In the following example, the icon was provided only for the first item by setting the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#iconcss) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue TextArea component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue TextArea component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue TextArea | Syncfusion
+description: Size, fill, outline, disable, or restyle the Syncfusion Vue TextArea with cssClass and required-asterisk CSS for any design.
 control: Style and Appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sizing in Vue TextArea Component
+# Style and Appearance in Vue TextArea
 
 you can adjust the size of the TextArea by applying specific classes:
 

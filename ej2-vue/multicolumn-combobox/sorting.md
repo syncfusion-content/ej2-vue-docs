@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in Vue MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Sorting in Vue MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: Sorting in Vue MultiColumn ComboBox | Syncfusion
+description: Sort a Syncfusion Vue MultiColumn ComboBox column in None, Ascending, or Descending order via the sortOrder property and column header clicks.
 platform: ej2-vue
 control: MultiColumn ComboBox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in Vue MultiColumn ComboBox component
+# Sorting in Vue MultiColumn ComboBox
 
 The MultiColumn ComboBox component provides built-in support for sorting data-bound columns in ascending or descending order by using the [allowSorting](../api/multicolumn-combobox#allowsorting) property. By default, the value is `true`.
 

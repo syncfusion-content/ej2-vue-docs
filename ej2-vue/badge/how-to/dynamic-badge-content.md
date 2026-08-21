@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dynamic Badge content in Vue Badge component | Syncfusion
-description: Learn here all about Dynamic Badge content in Syncfusion Vue Badge component of Syncfusion Essential JS 2 and more.
+title: How to update dynamic content in Vue Badge | Syncfusion
+description: Update Vue Badge content dynamically using Vue data binding so the badge value refreshes in real time as underlying data changes.
 control: Dynamic Badge content 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dynamic Badge content in Vue Badge component
+# How to update dynamic content in Vue Badge
 
 Badges in real-time needs to be updated dynamically based on the requirements. In this sample, using Vue data binding, the badges content will be updated dynamically. Click the increment button to change the Badge value.
 

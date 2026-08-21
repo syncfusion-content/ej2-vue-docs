@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in Vue List box component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: Drag and Drop in Vue ListBox | Syncfusion
+description: Drag and drop items or groups within a single Syncfusion Vue ListBox or between two ListBoxes using allowDragAndDrop and drag events.
 control: Drag and drop 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in Vue List box component
+# Drag and Drop in Vue ListBox
 
 The ListBox has support to drag an item or a group of selected items and drop it within the same list box or into another list box.
 

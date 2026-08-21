@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set custom animation in Vue Accordion component | Syncfusion
-description: Learn here all about Set custom animation in Syncfusion Vue Accordion component of Syncfusion Essential JS 2 and more.
+title: How to set custom animation in Vue Accordion | Syncfusion
+description: Replace the default slide animations on Vue Accordion expand and collapse with custom effects from the Animation library, or disable them.
 control: Set custom animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set custom animation in Vue Accordion component
+# How to set custom animation in Vue Accordion
 
 Accordion supports custom animations for both expand and collapse actions from the provided animation option of `Animation` library.
 

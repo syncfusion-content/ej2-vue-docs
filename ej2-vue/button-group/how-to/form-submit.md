@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form submit in Vue Button group component | Syncfusion
-description: Learn here all about Form submit in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: How to handle form submission in Vue Button Group | Syncfusion
+description: Learn how to post checked radio or checkbox ButtonGroup values on form submission by grouping inputs with the name attribute.
 control: Form submit 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form submit in Vue Button group component
+# How to handle form submission in Vue Button Group
 
 The name attribute of the input element  is used to group checkbox/radio type ButtonGroup. When the radio/checkbox type are grouped in form, the checked items value attribute will be post to server on form submit that can be retrieved through the name. The disabled radio/checkbox type value will not be sent to the server on form submit.
 

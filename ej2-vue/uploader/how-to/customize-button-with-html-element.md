@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize button with html element in Vue Uploader component | Syncfusion
-description: Learn here all about Customize button with html element in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Customize button with HTML element in Vue Uploader | Syncfusion
+description: Customize the Syncfusion Vue Uploader action buttons with custom HTML elements by setting the buttons property to the desired class names.
 control: Customize button with html element 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize button with html element in Vue Uploader component
+# How to customize button with HTML element in Vue Uploader
 
 The uploader component allows you to customize the action buttons by using [buttons](https://ej2.syncfusion.com/vue/documentation/api/uploader/#buttons) &nbsp;property.
 

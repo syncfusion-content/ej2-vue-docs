@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disabled Items in Vue DropDownList component | Syncfusion
-description: Learn here all about Disabled Items in Syncfusion Vue DropDownList component of Syncfusion Essential JS 2 and more.
+title: Disabled Items in Vue Dropdown List | Syncfusion
+description: Disable individual Syncfusion Vue Dropdown List items by mapping the fields.disabled property so users cannot select them as values.
 control: Disabled Items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disabled Items in Vue DropDownList component
+# Disabled Items in Vue Dropdown List
 
 The DropDownList provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [disabled](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#fields) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Daterangepicker component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Daterangepicker component of Syncfusion Essential JS 2 and more.
-control: Customization 
+title: Customization in Vue DateRangePicker | Syncfusion
+description: Customize the Syncfusion Vue DateRangePicker day cells, preset ranges, and first day of week using renderDayCell, presets, and firstDayOfWeek.
+control: Customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Daterangepicker component
+# Customization in Vue DateRangePicker
 
 The DateRangePicker is available for UI customization that can be achieved by using available properties and events in the component.
 

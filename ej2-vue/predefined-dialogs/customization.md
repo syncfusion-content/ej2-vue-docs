@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Predefined dialogs component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Predefined dialogs component of Syncfusion Essential JS 2 and more.
+title: Customization in Vue Predefined Dialogs | Syncfusion
+description: Customize alert, confirm, and prompt dialog buttons in Vue using okButton and cancelButton properties for enhanced user experience.
 control: Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Predefined dialogs component
+# Customization in Vue Predefined Dialogs
 
 You can customize the predefined dialogs buttons by using below properties.
 * `okButton` - Use this property to customize **OK** button text.
@@ -65,10 +65,10 @@ For prompt dialog , customized the default dialog buttons content as `Connect` a
 
 When rendering the predefined dialogs through utility methods, You can close the dialog using the following ways. The default values of `closeOnEscape` and `showCloseIcon` is `false`.
 
-* By pressing the escape key if the [closeOnEscape](https://ej2.syncfusion.com/documentation/api/dialog/#closeonescape) property is enabled.
-* By clicking the close button if the [showCloseIcon](https://ej2.syncfusion.com/documentation/api/dialog/#showcloseicon) property is enabled.
+* By pressing the escape key if the [closeOnEscape](https://ej2.syncfusion.com/documentation/api/dialog#closeonescape) property is enabled.
+* By clicking the close button if the [showCloseIcon](https://ej2.syncfusion.com/documentation/api/dialog#showcloseicon) property is enabled.
 
-You can also manually close the Dialogs by creating an instance to the dialog and call the [hide](https://ej2.syncfusion.com/documentation/api/dialog/#hide) method.
+You can also manually close the Dialogs by creating an instance to the dialog and call the [hide](https://ej2.syncfusion.com/documentation/api/dialog#hide) method.
 
 Use the following code for **alert**, **confirm** and **prompt** to demonstrates the different ways of hiding the utility dialog.
 

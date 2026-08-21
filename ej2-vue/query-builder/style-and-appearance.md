@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue Query builder component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Query builder component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Query Builder UI | Syncfusion
+description: Customize the Vue Query Builder UI by overriding CSS classes for headers, rules, groups, and joining lines or build themes with Theme Studio.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Query builder component
+# Style and Appearance in Vue Query Builder UI
 
 To modify the QueryBuilder appearance, you need to override the default CSS of QueryBuilder component. Please find the list of CSS classes and its corresponding section in QueryBuilder component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

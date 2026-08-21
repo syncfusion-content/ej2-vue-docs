@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Mode and value in Vue Color picker component | Syncfusion
-description: Learn here all about Mode and value in Syncfusion Vue Color picker component of Syncfusion Essential JS 2 and more.
+title: Mode and Value in Vue Color Picker | Syncfusion
+description: Switch between Picker and Palette modes and set hex color values with optional opacity in the Syncfusion Vue Color Picker.
 control: Mode and value 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mode and value in Vue Color picker component
+# Mode and Value in Vue Color Picker
 
 ## Rendering palette at initial load
 
-By default, the `Picker` area will be rendered at initial load. To render the Palette area while opening the ColorPicker pop-up, and specify the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#mode) property as `Palette`.
+By default, the `Picker` area will be rendered at initial load. To render the Palette area while opening the ColorPicker pop-up, and specify the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#mode) property as `Palette`.
 
 In the following sample, it will render the `Palette` at initial load.
 
@@ -29,7 +29,7 @@ In the following sample, it will render the `Palette` at initial load.
 
 ## Color value
 
-The [`value`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#value) property can be used to specify the color value to the ColorPicker. It supports either `three` or `six` digit hex codes. To include `opacity`, set the color value as `four` or `eight` digit hex code.
+The [`value`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#value) property can be used to specify the color value to the ColorPicker. It supports either `three` or `six` digit hex codes. To include `opacity`, set the color value as `four` or `eight` digit hex code.
 
 In the following sample, the color value sets as `four` digit hex code, the last digit represents the `opacity` value.
 
@@ -44,7 +44,7 @@ In the following sample, the color value sets as `four` digit hex code, the last
         
 {% previewsample "page.domainurl/code-snippet/color-picker/default-cs19" %}
 
->> The [`value`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#value) property supports hex code with or without `#` prefix.
+>> The [`value`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#value) property supports hex code with or without `#` prefix.
 
 ## See Also
 

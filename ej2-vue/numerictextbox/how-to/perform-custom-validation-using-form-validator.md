@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perform custom validation using form validator in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Perform custom validation using form validator in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Custom validation using FormValidator in Vue Numeric Textbox | Syncfusion
+description: Run custom FormValidator rules against the Syncfusion Vue Numeric Textbox so it validates on value change and submit.
 control: Perform custom validation using form validator 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform custom validation using form validator in Vue Numerictextbox component
+# How to perform custom validation using FormValidator in Vue Numeric Textbox
 
 This section explains how to perform custom validation on the NumericTextBox using FormValidator. The NumericTextBox will be validated when the value changes or the user clicks the submit button.
 Validation can be performed by adding custom validation in the rules collection of the FormValidator.

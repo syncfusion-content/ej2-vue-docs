@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation in Vue Textbox component | Syncfusion
-description: Learn here all about Validation in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: Validation in Vue TextBox | Syncfusion
+description: Mark the Syncfusion Vue TextBox with error, warning, or success classes and add a required asterisk to the placeholder and float label.
 control: Validation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in Vue Textbox component
+# Validation in Vue TextBox
 
 The TextBox supports three types of validation styles namely `error`, `warning`, and `success`. These states are enabled by adding corresponding classes `.e-error`, `.e-warning`, or `.e-success` to the input parent element.
 

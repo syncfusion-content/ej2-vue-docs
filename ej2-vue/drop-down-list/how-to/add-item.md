@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add item in Vue Drop down list component | Syncfusion
-description: Learn here all about Add item in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to add item in between in Vue Dropdown List | Syncfusion
+description: Insert items at a specific index in the Syncfusion Vue Dropdown List using the addItem method, or append them when no index is given.
 control: Add item 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add item in Vue Drop down list component
+# How to add item in between in Vue Dropdown List
 
 You can add item in between based on item [index](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#index). If you add new item without item index, item will be added as last item in list.
 

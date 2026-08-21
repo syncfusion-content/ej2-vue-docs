@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the disabled state in Vue Split button component | Syncfusion
-description: Learn here all about Set the disabled state in Syncfusion Vue Split button component of Syncfusion Essential JS 2 and more.
+title: How to set the disabled state in Vue Split Button | Syncfusion
+description: Disable the Vue Split Button control at runtime by setting the disabled API property to true to prevent user interaction with the button.
 control: Set the disabled state 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the disabled state in Vue Split button component
+# How to set the disabled state in Vue Split Button
 
 SplitButton component can be enabled or disabled by [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#disabled) property. To disable SplitButton component, set the disabled property as `true`.
 

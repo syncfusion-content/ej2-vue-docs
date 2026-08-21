@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Fit to Width and Height in ##Platform_Name## Image Editor | Syncfusion
-description: Learn here all about Fit to Width and Height in Syncfusion Vue Image editor component of Syncfusion Essential JS 2 and more.
+title: Fit to Width and Height in Vue Image Editor component | Syncfusion
+description: Programmatically zoom the image to match the Vue Image Editor container width or height using the zoom method, with example Fit Width and Fit Height buttons.
 platform: ej2-vue
-control: Fit to Width and Height 
+control: Fit to Width and Height
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fit Image to Editor Width and Height
+# Fit Image to Editor Width and Height in the Vue Image Editor component
 
 The Image Editor's [`zoom`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/index-default#zoom) method to fit an image to the editor by width or height. Programmatically increase the zoom level until the image dimension matches the editor container's width or height. 
 

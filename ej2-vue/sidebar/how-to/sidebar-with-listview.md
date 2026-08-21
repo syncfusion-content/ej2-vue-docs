@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sidebar with listview in Vue Sidebar component | Syncfusion
-description: Learn here all about Sidebar with listview in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to render Sidebar with ListView in Vue Sidebar | Syncfusion
+description: Place a ListView component inside the Vue Sidebar content area to render navigable list items within the collapsible panel of the sidebar control.
 control: Sidebar with listview 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sidebar with listview in Vue Sidebar component
+# How to render Sidebar with ListView in Vue Sidebar
 
 Any HTML element can be placed in the Sidebar's content area. The Sidebar supports various HTML structures such as `TreeView`, `ListView`, and others.
 

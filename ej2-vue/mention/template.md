@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Mention component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Mention component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Mention | Syncfusion
+description: Customize each Syncfusion Vue Mention list item, the selected value display, and the data loading indicator using itemTemplate and displayTemplate.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Mention component
+# Template in Vue Mention
 
 The Mention has been provided with several options to customize each suggestion list item, display item, and data loading indication.
 

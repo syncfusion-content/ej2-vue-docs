@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open save in Vue Signature component | Syncfusion
-description: Learn here all about Open save in Syncfusion Vue Signature component of Syncfusion Essential JS 2 and more.
+title: Open and Save in Vue Signature | Syncfusion
+description: Open a Syncfusion Vue Signature from a base64 or hosted URL and save the strokes as PNG, JPEG, SVG, blob, or base64.
 control: Open save 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open save in Vue Signature component
+# Open and Save in Vue Signature
 
 The Signature component supports to open the signature by using hosted/online URL or base64. And it also supports various save options like image, base64, and blob.
 

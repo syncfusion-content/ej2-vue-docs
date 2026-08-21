@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the ui appearance of the control in Vue Maskedtextbox component | Syncfusion
-description: Learn here all about Customize the ui appearance of the control in Syncfusion Vue Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: How to customize the UI appearance in Vue MaskedTextBox | Syncfusion
+description: Restyle the Syncfusion Vue MaskedTextBox with a custom cssClass and theme overrides to change its appearance to match your design.
 control: Customize the ui appearance of the control 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the ui appearance of the control in Vue Maskedtextbox component
+# How to customize the UI appearance in Vue MaskedTextBox
 
 The appearance of the MaskedTextBox can be changed by adding custom `cssClass` to the component and enabling styles. Refer to the following example to change the appearance of the MaskedTextBox.
 

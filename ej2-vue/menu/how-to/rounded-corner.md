@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rounded corner in Vue Menu component | Syncfusion
-description: Learn here all about Rounded corner in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: How to show rounded corner in Vue Menu Bar | Syncfusion
+description: Apply rounded corners to the Vue Menu Bar by adding a custom cssClass and using the border-radius CSS property for a softer visual appearance.
 control: Rounded corner 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rounded corner in Vue Menu component
+# How to show rounded corner in Vue Menu Bar
 
 The rounded corner can be achieved by using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/menu/#cssclass) property. Add a custom class to the menu component and customize it using the `border-radius` CSS property. For more information, refer to the `styles` specified in the below sample.
 

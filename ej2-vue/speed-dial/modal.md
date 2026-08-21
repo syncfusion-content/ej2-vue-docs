@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Modal in Vue Speed dial component | Syncfusion
-description: Learn here all about Modal in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Modal in Vue Speed Dial | Syncfusion
+description: Learn how to set the Syncfusion Vue Speed Dial as modal using the modal property to add an overlay that prevents background interaction while the popup is open.
 control: Modal 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Modal in Vue Speed dial component
+# Modal in Vue Speed Dial
 
 You can use the [`modal`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#modal) property to set the Speed Dial as modal which adds an overlay to prevent the background interaction.
 
