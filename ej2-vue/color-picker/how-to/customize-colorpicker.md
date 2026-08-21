@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize colorpicker in Vue Color picker component | Syncfusion
-description: Learn here all about Customize colorpicker in Syncfusion Vue Color picker component of Syncfusion Essential JS 2 and more.
+title: How to customize ColorPicker in Vue Color Picker | Syncfusion
+description: Customize the Syncfusion Vue Color Picker with custom palette colors, hidden input, SVG handle, and an Excel-like UI.
 control: Customize colorpicker 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize colorpicker in Vue Color picker component
+# How to customize ColorPicker in Vue Color Picker
 
 ## Custom palette
 
-By default, the Palette will be rendered with default colors. To load custom colors in the palette, specify the colors in the [`presetColors`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#presetcolors) property. To customize the color palette, add a custom class to palette tiles using [`BeforeTileRender`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#beforetilerender) event.
+By default, the Palette will be rendered with default colors. To load custom colors in the palette, specify the colors in the [`presetColors`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#presetcolors) property. To customize the color palette, add a custom class to palette tiles using [`BeforeTileRender`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#beforetilerender) event.
 
 The following sample demonstrates the above functionalities.
 
@@ -29,7 +29,7 @@ The following sample demonstrates the above functionalities.
 
 ## Hide input area from picker
 
-By default, the input area will be rendered in ColorPicker. To hide the input area from it, add `e-hide-value` class to ColorPicker using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#cssclass) property.
+By default, the input area will be rendered in ColorPicker. To hide the input area from it, add `e-hide-value` class to ColorPicker using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#cssclass) property.
 
 In the following sample, the ColorPicker is rendered without input area.
 
@@ -65,7 +65,7 @@ The following sample show the customized color picker handle.
 
 By default, the applied color will be updated in primary button of the color picker. You can customize that as `icon`.
 
-In the following sample, the `picker` icon is added to primary button and using [`change`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#change) event the selected color will be updated in bottom portion of the icon.
+In the following sample, the `picker` icon is added to primary button and using [`change`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#change) event the selected color will be updated in bottom portion of the icon.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

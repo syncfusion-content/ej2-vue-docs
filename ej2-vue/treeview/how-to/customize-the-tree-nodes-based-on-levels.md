@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize nodes by levels in Vue TreeView component | Syncfusion
-description: Learn here all about Customize the tree nodes based on levels in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
+title: How to customize tree nodes based on levels in Vue TreeView | Syncfusion
+description: Apply different CSS styles to Vue TreeView nodes at each hierarchy level using the nodeTemplate or created event for level-based customization.
 control: Customize the tree nodes based on levels 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the tree nodes based on levels in Vue TreeView component
+# How to customize tree nodes based on levels in Vue TreeView
 
 You can customize the tree nodes based on their levels by adding a custom [`cssClass`](https://helpej2.syncfusion.com/vue/documentation/api/treeview#cssclass) to the component and enabling specific styles.
 

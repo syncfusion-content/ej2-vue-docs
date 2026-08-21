@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Inplace editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Inplace editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue In-place Editor | Syncfusion
+description: The Vue In-place Editor meets ADA, Section 508, and WCAG 2.2 standards with keyboard, screen reader, right-to-left, and color contrast compliance support.
 control: Accessibility 
-platform: ej2-Vue
+platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Inplace editor component
+# Accessibility in Vue In-place Editor
 
 The Inplace editor component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

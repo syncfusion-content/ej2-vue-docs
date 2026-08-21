@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable a dropdownbutton in Vue Drop down button component | Syncfusion
-description: Learn here all about Disable a dropdownbutton in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to disable in Vue Dropdown Button | Syncfusion
+description: Disable a Vue Dropdown Button at runtime by setting the disabled API property to true to prevent user interaction.
 control: Disable a dropdownbutton 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable a dropdownbutton in Vue Drop down button component
+# How to disable in Vue Dropdown Button
 
 DropdownButton component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#disabled) property. It can be disabled by setting disabled property as `true`.
 

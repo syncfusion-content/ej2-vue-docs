@@ -1,14 +1,14 @@
 ---
 layout: post
-title: State maintenance in Vue Dashboard Layout component | Syncfusion
-description: Learn here all about State maintenance in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
-control: State maintenance 
+title: State Maintenance in Vue Dashboard Layout | Syncfusion
+description: Save and recreate the Vue Dashboard Layout structure using the serialize method, returning current panel settings to reconstruct the same configuration.
+control: State maintenance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State maintenance in Vue Dashboard Layout component
+# State Maintenance in Vue Dashboard Layout
 
 The current layout structure of the Dashboard Layout component can be obtained and saved to recreate a dashboard with the same panel structure using the  [`serialize`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#serialize) public method. This method returns the component's current panel settings, which can be used to construct a dashboard with the same layout configuration.
 

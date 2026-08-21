@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Multi select component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue MultiSelect Dropdown | Syncfusion
+description: Explore WAI-ARIA support, screen reader, keyboard navigation, and accessibility compliance built into the Syncfusion Vue MultiSelect Dropdown.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Multi select component
+# Accessibility in Vue MultiSelect Dropdown
 
 The MultiSelect component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Speed dial component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Speed Dial | Syncfusion
+description: Learn how to customize the Syncfusion Vue Speed Dial using the itemTemplate property for action items and the popupTemplate property for the popup content.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Speed dial component
+# Template in Vue Speed Dial
 
 This section explains available templates in SpeedDial component and its usage.
 

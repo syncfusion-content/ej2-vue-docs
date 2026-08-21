@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the disabled state in Vue Radio button component | Syncfusion
-description: Learn here all about Set the disabled state in Syncfusion Vue Radio button component of Syncfusion Essential JS 2 and more.
+title: How to set the disabled state in Vue Radio Button | Syncfusion
+description: Learn how to disable the Syncfusion Vue Radio Button by setting the disabled property, and display the selected option using the change event.
 control: Set the disabled state 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the disabled state in Vue Radio button component
+# How to set the disabled state in Vue Radio Button
 
 RadioButton component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#disabled) property. To disable RadioButton component, the `disabled` property can be set as `true`.
 

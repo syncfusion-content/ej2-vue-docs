@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multi select in Vue Calendar component | Syncfusion
-description: Learn here all about Multi select in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Multi select 
+title: Multi Selection in Vue Calendar | Syncfusion
+description: Enable multi-date selection in the Syncfusion Vue Calendar using isMultiSelection and the values array property for picking multiple dates.
+control: Multi select
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multi select in Vue Calendar component
+# Multi Selection in Vue Calendar
 
 Calendar provides an option to select **single** or **multiple dates** by using `isMultiSelection` and `values` properties. By default, `isMultiSelection` property will be in disabled state.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the Timeline component | Syncfusion
-description:  Check out and learn about Vue 3 getting started with the Vue Timeline component of Syncfusion Essential JS 2 and more details.
+description: Set up a Vue 3 project with Vite and integrate the Syncfusion Vue Timeline component using the Composition API or Options API.
 control: Vue 3 getting started 
 platform: ej2-vue
 documentation: ug

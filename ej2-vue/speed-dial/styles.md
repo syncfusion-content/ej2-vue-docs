@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles in Vue Speed dial component | Syncfusion
-description: Learn here all about Styles in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Styles in Vue Speed Dial | Syncfusion
+description: Learn how to style the Syncfusion Vue Speed Dial button using openIconCss, closeIconCss, and content properties, and apply predefined cssClass styles like primary and outline.
 control: Styles 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in Vue Speed dial component
+# Styles in Vue Speed Dial
 
 This section briefs different ways to style SpeedDial component.
 

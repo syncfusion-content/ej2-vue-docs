@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data binding in Vue Auto complete component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Auto complete component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue AutoComplete | Syncfusion
+description: Bind the Syncfusion Vue AutoComplete to local arrays, OData, OData V4, Web API, XML, JSON, or JSONP via DataManager adaptors.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Auto complete component
+# Data Binding in Vue AutoComplete
 
-The AutoComplete loads the data either from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#datasource) property. It supports the data type of array or DataManager. The AutoComplete also supports different kind of data services such as OData, OData V4, Web API and data formats such as XML, JSON, JSONP with the help of DataManager Adaptors.
+The AutoComplete loads the data either from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#datasource) property. It supports the data type of array or DataManager. The AutoComplete also supports different kind of data services such as OData, OData V4, Web API and data formats such as XML, JSON, JSONP with the help of DataManager Adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -89,5 +89,5 @@ The AutoComplete supports retrieval of data from remote data services with the h
 ## See Also
 
 * [How to load data using template](./templates#item-template)
-* [How to group the data using header](./grouping/)
-* [How to filter the bound data](./filtering/)
+* [How to group the data using header](./grouping)
+* [How to filter the bound data](./filtering)

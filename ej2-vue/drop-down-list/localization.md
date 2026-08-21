@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Vue Drop down list component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue Dropdown List | Syncfusion
+description: Localize the Syncfusion Vue Dropdown List noRecordsTemplate and actionFailureTemplate text by culture using the included localization library.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue Drop down list component
+# Localization in Vue Dropdown List
 
 The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the DropDownList.
 

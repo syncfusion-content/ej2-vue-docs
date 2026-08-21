@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Tooltip component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Tooltip | Syncfusion
+description: Customize Vue Tooltip appearance with CSS targeting the e-tooltip-wrap and e-popup classes to set border radius, opacity, background color, and border.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Tooltip component
+# Style in Vue Tooltip
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user's preference.
 

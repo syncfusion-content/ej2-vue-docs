@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Preview images before uploading in Vue Uploader component | Syncfusion
-description: Learn here all about Preview images before uploading in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to preview images before uploading in Vue Uploader | Syncfusion
+description: Generate Syncfusion Vue Uploader image previews before upload by reading the file in the selected event and showing it in the file list.
 control: Preview images before uploading 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Preview images before uploading in Vue Uploader component
+# How to preview images before uploading in Vue Uploader
 
 The uploader component allows to create preview images before uploaded it. The preview images created by reading the file using selected event.
 Also, the user can create preview images after uploading to server using success event.

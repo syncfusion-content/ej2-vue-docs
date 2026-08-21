@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue Timepicker component | Syncfusion
-description:  Checkout and learn about Getting Started with Vue Timepicker component of Syncfusion Essential JS 2 and more details.
-control: Getting Started 
+title: Getting Started with Vue TimePicker | Syncfusion
+description: Step-by-step guide to install, configure, and render the Syncfusion Vue TimePicker component with theme setup, value, and min-max time.
+control: Getting Started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue TimePicker Component in Vue 3
+# Getting Started with Vue TimePicker
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TimePicker component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

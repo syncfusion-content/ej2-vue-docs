@@ -1,14 +1,14 @@
 ---
 layout: post
-title: JWT Authentication in Vue Uploader component | Syncfusion
-description: Learn here all about File Upload Using JWT Authentication in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: JWT Authentication in Vue Uploader | Syncfusion
+description: Authorize Syncfusion Vue Uploader uploads with a JWT token by sending it on the uploading and removing events to a .NET Core server.
 control: JWT Authentication 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File Upload Using JWT Authentication
+# JWT Authentication in Vue Uploader
 
 JSON Web Token (JWT) is an open standard for securely transmitting information between parties as a JSON object. JWTs are commonly used for authorization, where the client includes a JWT in the request header for the server to validate before processing the request. This approach adds an extra layer of security, ensuring only authenticated users can upload or remove files.
 

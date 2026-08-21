@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the Range Slider component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Range Slider component of Syncfusion Essential JS 2 and more details.
+description: Learn how to get started with the Syncfusion Vue Range Slider control. Explore setup, features, examples, and customization options.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug

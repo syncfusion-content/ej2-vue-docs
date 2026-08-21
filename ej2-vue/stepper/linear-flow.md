@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Linear Flow in Vue Stepper component | Syncfusion
-description: Checkout and learn about Linear Flow with Vue Stepper component of Syncfusion Essential JS 2 and more.
+title: Linear Flow in Vue Stepper | Syncfusion
+description: Restrict Vue Stepper navigation to sequential order by setting the linear property to true, ensuring users progress through each step one at a time.
 control: Stepper
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Linear flow in Vue Stepper component
+# Linear Flow in Vue Stepper
 
 The Stepper component enables users to progress sequentially through each step, ensuring navigation from one step to the next in a linear way by setting the [linear](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#linear) property to `true`. The default value is `false` allowing navigation between any steps and vice versa.
 

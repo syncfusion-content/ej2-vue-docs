@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Shapes in Vue Skeleton component | Syncfusion
-description: Learn here all about Shapes in Syncfusion Vue Skeleton component of Syncfusion Essential JS 2 and more.
+title: Shapes in Vue Skeleton | Syncfusion
+description: Render Vue Skeleton in built-in shapes like Circle, Square, Rectangle, and Text to preview a layout using the shape property.
 control: Shapes 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in Vue Skeleton component
+# Shapes in Vue Skeleton
 
-The Skeleton control support various built-in shape variants to design layout of the page. You can use the [`shape`](https://ej2.syncfusion.com/vue/documentation/api/skeleton/#shape) property to create a preview of any layout.
+The Skeleton control support various built-in shape variants to design layout of the page. You can use the [`shape`](https://ej2.syncfusion.com/vue/documentation/api/skeleton#shape) property to create a preview of any layout.
 
 The Skeleton component supports the following content shapes:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Orientation in Vue Tab component | Syncfusion
-description: Learn here all about Orientation in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: Orientation in Vue Tabs | Syncfusion
+description: Display Vue Tabs headers on the top or bottom of the content area using the headerOrientation property to change the tab header position.
 control: Orientation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orientation in Vue Tab component
+# Orientation in Vue Tabs
 
 This section explains about modifying the position and modes of Tab header.
 

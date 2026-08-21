@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize menu items in Vue Menu component | Syncfusion
-description: Learn here all about Customize menu items in Syncfusion Vue Menu component of Syncfusion Essential JS 2 and more.
+title: How to customize menu items in Vue Menu Bar | Syncfusion
+description: Add, remove, enable, or disable Vue Menu Bar items at runtime using the insertAfter, insertBefore, removeItems, and enableItems public methods.
 control: Customize menu items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize menu items in Vue Menu component
+# How to customize menu items in Vue Menu Bar
 
 ## Add or remove menu items
 

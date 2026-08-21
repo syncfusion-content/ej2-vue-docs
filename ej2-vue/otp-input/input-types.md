@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Input Types in Vue OTP Input component | Syncfusion
-description:  Learn here all about Input Types in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
+title: Input Types in Vue OTP Input | Syncfusion
+description: Choose number, text, or password input for each OTP field in the Syncfusion Vue OTP Input, or set a default value.
 platform: ej2-vue
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Input Types in Vue OTP Input component
+# Input Types in Vue OTP Input
 
 ## Types
 

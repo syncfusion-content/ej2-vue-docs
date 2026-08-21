@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Combo box component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Combo box component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue ComboBox | Syncfusion
+description: Explore WAI-ARIA roles, keyboard navigation, and WCAG 2.2, Section 508, and ADA compliance built into the Syncfusion Vue ComboBox.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Combo box component
+# Accessibility in Vue ComboBox
 
 The ComboBox component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in Vue Splitter component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Vue Splitter component of Syncfusion Essential JS 2 and more.
-control: Globalization 
+title: Globalization in Vue Splitter | Syncfusion
+description: Enable right-to-left rendering for the Vue Splitter using the enableRtl property to support Arabic and Hebrew writing systems.
+control: Globalization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Splitter component
+# Globalization in Vue Splitter
 
 ## RTL
 

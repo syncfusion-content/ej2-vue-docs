@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open and close contextmenu in Vue Context menu component | Syncfusion
-description: Learn here all about Open and close contextmenu in Syncfusion Vue Context menu component of Syncfusion Essential JS 2 and more.
+title: How to open and close ContextMenu in Vue Context Menu | Syncfusion
+description: Open and close the Vue Context Menu programmatically at a specified position using the open and close public methods of the component.
 control: Open and close contextmenu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open and close contextmenu in Vue Context menu component
+# How to open and close ContextMenu in Vue Context Menu
 
 ContextMenu can be opened and closed programmatically whenever required by using the open and close methods.
 

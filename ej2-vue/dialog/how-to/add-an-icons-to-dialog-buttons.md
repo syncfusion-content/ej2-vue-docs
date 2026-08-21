@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Add an icons to dialog buttons in Vue Dialog component | Syncfusion
-description: Learn here all about Add an icons to dialog buttons in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: How to add icons to buttons in Vue Dialog | Syncfusion
+description: Add icons to Vue Dialog footer buttons using the buttons property or footerTemplate property to customize the action buttons with prefix icons.
 control: Add an icons to dialog buttons 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add an icons to dialog buttons in Vue Dialog component
+# How to add icons to buttons in Vue Dialog
 
-You can add icons to the dialog buttons using the [buttons](https://ej2.syncfusion.com/vue/documentation/api/dialog/#buttons) property or [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/dialog/#footertemplate) property . For detailed information about dialog buttons, refer to the [documentation](https://ej2.syncfusion.com/vue/documentation/api/dialog/#buttons) section.
+You can add icons to the dialog buttons using the [buttons](https://ej2.syncfusion.com/vue/documentation/api/dialog#buttons) property or [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/dialog#footertemplate) property . For detailed information about dialog buttons, refer to the [documentation](https://ej2.syncfusion.com/vue/documentation/api/dialog#buttons) section.
 
 In the following sample, dialog footer buttons are customized with icons using `buttons` property.
 

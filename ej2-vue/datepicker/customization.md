@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Customization in Vue Datepicker component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Customization 
+title: Customization in Vue DatePicker | Syncfusion
+description: Customize the Syncfusion Vue DatePicker input and calendar with the cssClass property and the renderDayCell event for day cell styles.
+control: Customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Datepicker component
+# Customization in Vue DatePicker
 
-You can customize the  entire appearance of the input element and Calendar by using custom [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#cssclass) property.
-and also you can use the calendar's [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/renderDayCellEventArgs/#renderdaycelleventargs) event to customize the appearance of the each day cell.
+You can customize the  entire appearance of the input element and Calendar by using custom [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#cssclass) property.
+and also you can use the calendar's [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/renderDayCellEventArgs#renderdaycelleventargs) event to customize the appearance of the each day cell.
 
 Below is the list of classes that provides flexible way to customize the DatePicker component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons support in Vue Drop down list component | Syncfusion
-description: Learn here all about Icons support in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to show list items with icons in Vue Dropdown List | Syncfusion
+description: Render icons on each Syncfusion Vue Dropdown List item by mapping the iconCss field to a CSS class on a span inside the list item.
 control: Icons support 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons support in Vue Drop down list component
+# How to show list items with icons in Vue Dropdown List
 
 You can render **icons** to the list items by mapping the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#fields) &nbsp;field. This `iconCss` field create a span in the list item with mapped class name to allow styling as per your need.
 

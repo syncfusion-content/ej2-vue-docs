@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the ButtonGroup component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue ButtonGroup component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 Getting Started with Vue Button Group | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Button Group in a Vue 3 Vite project, including setup, theme installation, and adding buttons.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue ButtonGroup Component in Vue 3
+# Vue 3 Getting Started with Vue Button Group
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue ButtonGroup component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

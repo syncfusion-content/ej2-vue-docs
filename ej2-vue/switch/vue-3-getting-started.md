@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vue 3 getting started with the Switch component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Switch component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 Getting Started with Vue Toggle Switch Button | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Toggle Switch Button in a Vue 3 project using Vite, with setup, theme installation, and adding a switch via Composition or Options API.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Switch Component in Vue 3
+# Vue 3 Getting Started with Vue Toggle Switch Button
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Switch component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

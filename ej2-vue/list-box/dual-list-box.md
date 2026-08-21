@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dual list box in Vue List box component | Syncfusion
-description: Learn here all about Dual list box in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: Dual ListBox in Vue ListBox | Syncfusion
+description: Move items between two Syncfusion Vue ListBoxes via toolbar buttons by enabling the toolbarSettings scope and moveTo, moveFrom, and moveAllTo actions.
 control: Dual list box 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dual list box in Vue List box component
+# Dual ListBox in Vue ListBox
 
 The dual list box allows the user to move items between two list boxes by clicking the toolbar buttons. Dual list box can be created by listing items in the [`toolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#toolbarsettings) along with the `scope` property.
 

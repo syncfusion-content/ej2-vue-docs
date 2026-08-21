@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline a character in a text in Vue Split button component | Syncfusion
-description: Learn here all about Underline a character in a text in Syncfusion Vue Split button component of Syncfusion Essential JS 2 and more.
+title: Underline a character in a text in Vue Split Button | Syncfusion
+description: Underline a single character in a Vue Split Button popup item by inserting a u tag in the beforeItemRender event handler.
 control: Underline a character in a text 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Underline a character in a text in Vue Split button component
+# How to underline a character in a text in Vue Split Button
 
 To underline a particular character in a text, it can be handled in [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#beforeitemrender) event by
 adding `<u>` tag in between the text and given as innerHTML in `li` rendering.

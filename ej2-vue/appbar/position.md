@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position in Vue Appbar component | Syncfusion
-description: Learn here all about Position in Syncfusion Vue Appbar component of Syncfusion Essential JS 2 and more.
+title: Position in Vue AppBar | Syncfusion
+description: Place the Vue AppBar at the top or bottom of content, or pin it as a sticky bar, using the position and isSticky properties of the component.
 control: Position 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position in Vue Appbar component
+# Position in Vue AppBar
 
 The position of the AppBar can be set using the [position](https://ej2.syncfusion.com/vue/documentation/api/appbar#position) and [isSticky](https://ej2.syncfusion.com/vue/documentation/api/appbar#issticky) property. The AppBar provides the following options for setting its position:
 

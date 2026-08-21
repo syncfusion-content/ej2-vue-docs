@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Group popup items with listview component in Vue Drop down button component | Syncfusion
-description: Learn here all about Group popup items with listview component in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: Group popup items with ListView in Vue Dropdown Button | Syncfusion
+description: Use the ListView component as the target of the Vue Dropdown Button to display grouped popup items with headers via groupBy.
 control: Group popup items with listview component 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group popup items with listview component in Vue Drop down button component
+# How to group popup items with ListView in Vue Dropdown Button
 
 Header in popup items is possible in DropdownButton by templating entire popup with ListView. Create ListView with id `#listview` and provide it as a [`target`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#target) for DropDownButton.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Variations in Vue Sidebar component | Syncfusion
-description: Learn here all about Variations in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: Variations in Vue Sidebar | Syncfusion
+description: Set the Vue Sidebar expand type to Over, Push, Slide, or Auto to control how it interacts with the main content area when opened or closed.
 control: Variations 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Variations in Vue Sidebar component
+# Variations in Vue Sidebar
 
 The Sidebar component's expand behavior can be modified based on its intended use.
 

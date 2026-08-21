@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Create a block button in Vue Button component | Syncfusion
-description: Learn here all about Create a block button in Syncfusion Vue Button component of Syncfusion Essential JS 2 and more.
+title: How to create a block button in Vue Button | Syncfusion
+description: Make a Vue Button span the full width of its parent by setting the cssClass property to e-block to create a block-style button layout.
 control: Create a block button 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create a block button in Vue Button component
+# How to create a block button in Vue Button
 
-You can customize a Button into a Block Button that will span the entire width of its parent element. To create a Block Button, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/#cssclass) property to `e-block`.
+You can customize a Button into a Block Button that will span the entire width of its parent element. To create a Block Button, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/index-default#cssclass) property to `e-block`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable scroller in Vue List box component | Syncfusion
-description: Learn here all about Enable scroller in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: How to enable scroller in Vue ListBox | Syncfusion
+description: Enable scrolling in the Syncfusion Vue ListBox by restricting the height via the height property so the list scrolls inside the bounds.
 control: Enable scroller 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable scroller in Vue List box component
+# How to enable scroller in Vue ListBox
 
 The ListBox supports scrolling and it can be achieved by restricting the height of the list box using [`height`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#height) property.
 

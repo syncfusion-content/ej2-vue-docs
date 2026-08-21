@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load content through post in Vue Accordion component | Syncfusion
-description: Learn here all about Load content through post in Syncfusion Vue Accordion component of Syncfusion Essential JS 2 and more.
+title: How to load content through Ajax in Vue Accordion | Syncfusion
+description: Populate Vue Accordion panels with remote data on demand using the ej2-base Ajax module and the success event to bind the fetched content.
 control: Load content through post 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load content through post in Vue Accordion component
+# How to load content through Ajax in Vue Accordion
 
 Accordion supports to load external contents through `AJAX` library. Refer the below steps.
 

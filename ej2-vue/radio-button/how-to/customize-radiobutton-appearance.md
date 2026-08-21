@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize radiobutton appearance in Vue Radio button component | Syncfusion
-description: Learn here all about Customize radiobutton appearance in Syncfusion Vue Radio button component of Syncfusion Essential JS 2 and more.
+title: How to customize appearance in Vue Radio Button | Syncfusion
+description: Learn how to customize the Syncfusion Vue Radio Button appearance using CSS rules and the cssClass property to create primary, success, info, warning, and danger variants.
 control: Customize radiobutton appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize radiobutton appearance in Vue Radio button component
+# How to customize appearance in Vue Radio Button
 
 You can customize the appearance of the RadioButton component by using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#cssclass) property.
 

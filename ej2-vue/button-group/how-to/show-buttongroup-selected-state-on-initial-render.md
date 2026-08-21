@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show buttongroup selected state on initial render in Vue Button group component | Syncfusion
-description: Learn here all about Show buttongroup selected state on initial render in Syncfusion Vue Button group component of Syncfusion Essential JS 2 and more.
+title: Show selected state on initial render in Vue Button Group | Syncfusion
+description: Learn how to display the selected state of a Syncfusion Vue Button Group on initial render by adding the checked property to the corresponding input element.
 control: Show buttongroup selected state on initial render 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show buttongroup selected state on initial render in Vue Button group component
+# How to show selected state on initial render in Vue Button Group
 
 To show selected state on initial render, `checked` property should to added to the corresponding input element.
 

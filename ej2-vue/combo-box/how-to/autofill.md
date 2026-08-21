@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Autofill in Vue Combo box component | Syncfusion
-description: Learn here all about Autofill in Syncfusion Vue Combo box component of Syncfusion Essential JS 2 and more.
+title: How to enable autofill in Vue ComboBox | Syncfusion
+description: Enable autofill on the Syncfusion Vue ComboBox to autocomplete typed characters against the data source, with no suggestion when no match is found.
 control: Autofill 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Autofill in Vue Combo box component
+# How to enable autofill in Vue ComboBox
 
-The ComboBox supports the `autofill` behaviour with the help of [autofill](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#autofill) property. Whenever you change the input value, the ComboBox will autocomplete your data by matching the typed character. Suppose, if no matches found then, ComboBox doesn't suggest any item.
+The ComboBox supports the `autofill` behavior with the help of [autofill](https://ej2.syncfusion.com/vue/documentation/api/combo-box#autofill) property. Whenever you change the input value, the ComboBox will autocomplete your data by matching the typed character. Suppose, if no matches found then, ComboBox doesn't suggest any item.
 
 The following examples, showcase that how to work autofill with ComboBox.
 

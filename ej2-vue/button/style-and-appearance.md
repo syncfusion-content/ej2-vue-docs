@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue Button component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Button component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Button | Syncfusion
+description: Customize the Vue Button control's appearance by overriding default CSS classes or building a custom theme using Syncfusion Theme Studio.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Button component
+# Style and Appearance in Vue Button
 
 To modify the Button appearance, you need to override the default CSS of Button component. Please find the list of CSS classes and its corresponding section in Button component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

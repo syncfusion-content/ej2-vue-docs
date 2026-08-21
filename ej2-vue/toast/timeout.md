@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timeout in Vue Toast component | Syncfusion
-description: Learn here all about Timeout in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Timeout in Vue Toaster | Syncfusion
+description: Control how long the Vue Toaster stays visible using the timeOut property before it expires without user interaction.
 control: Timeout 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timeout in Vue Toast component
+# Timeout in Vue Toaster
 
 The toast can be expired based on the [`timeOut`](https://ej2.syncfusion.com/vue/documentation/api/toast/#timeout) property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.
 

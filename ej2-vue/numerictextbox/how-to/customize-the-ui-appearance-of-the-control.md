@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the ui appearance of the control in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Customize the ui appearance of the control in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: How to customize the UI appearance in Vue Numeric Textbox | Syncfusion
+description: Restyle the Syncfusion Vue Numeric Textbox with a custom cssClass and theme overrides to match your design.
 control: Customize the ui appearance of the control 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the ui appearance of the control in Vue Numerictextbox component
+# How to customize the UI appearance in Vue Numeric Textbox
 
 You can change the appearance of the NumericTextBox by adding custom `cssClass` to the component and enabling styles. Refer to the following example to change the appearance of the NumericTextBox.
 

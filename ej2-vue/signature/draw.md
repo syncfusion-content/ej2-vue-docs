@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Draw in Vue Signature component | Syncfusion
-description: Learn here all about Draw in Syncfusion Vue Signature component of Syncfusion Essential JS 2 and more.
+title: Draw a Signature in Vue Signature | Syncfusion
+description: Render text as a signature in the Syncfusion Vue Signature using the draw method with custom font family and size.
 control: Draw 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Draw in Vue Signature component
+# Draw a Signature in Vue Signature
 
 ## Draw
 

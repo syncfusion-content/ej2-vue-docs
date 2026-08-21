@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Read all the values from dialog on button click in Vue Dialog component | Syncfusion
-description: Learn here all about Read all the values from dialog on button click in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: How to read all values on button click in Vue Dialog | Syncfusion
+description: Read input element values inside the Vue Dialog by binding action handlers to footer buttons and passing the values to a confirmation dialog on click.
 control: Read all the values from dialog on button click 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read all the values from dialog on button click in Vue Dialog component
+# How to read all values on button click in Vue Dialog
 
-You can read the dialog element values by binding the action handler to the footer buttons. The buttons property provides the options to bind events to the action buttons. For detailed information about buttons, refer to the [footer](../template/#footer) section.
+You can read the dialog element values by binding the action handler to the footer buttons. The buttons property provides the options to bind events to the action buttons. For detailed information about buttons, refer to the [footer](../template#footer) section.
 In the below sample, value of input elements within the dialog has been checked in the footer button click event and send the values as the content of confirmation dialog.
 
 {% tabs %}

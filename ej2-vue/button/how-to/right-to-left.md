@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Right to left in Vue Button component | Syncfusion
-description: Learn here all about Right to left in Syncfusion Vue Button component of Syncfusion Essential JS 2 and more.
+title: How to enable right-to-left in Vue Button | Syncfusion
+description: Render the Vue Button in right-to-left mode by setting the enableRtl property to true for RTL language support.
 control: Right to left 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to left in Vue Button component
+# How to enable right-to-left in Vue Button
 
-Button component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/button/#enablertl) as
+Button component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/button/index-default#enablertl) as
 `true`.
 
 The following example illustrates how to enable right-to-left support in Button component.

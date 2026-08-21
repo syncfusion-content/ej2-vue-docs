@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue ComboBox component | Syncfusion
-description:  Checkout and learn about Getting started with Vue ComboBox component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue ComboBox in Vue 2 | Syncfusion
+description: Set up a Vue 2 project with Vue-CLI and integrate the Syncfusion Vue ComboBox component using the Composition or Options API.
 control: ComboBox 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue ComboBox Component in Vue 2
+# Getting Started with Vue ComboBox in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue [ComboBox](https://www.syncfusion.com/vue-components/vue-combobox) component.
 

@@ -20,20 +20,6 @@ Users can create calculated fields in two convenient ways:
 
 To enable the calculated field functionality, set the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/index-default#allowcalculatedfield) property to **true**. Once enabled, a "CALCULATED FIELD" button appears in the Field List UI. Clicking this button opens the calculated field dialog, where users can create and manage custom fields using an intuitive interface.
 
-> **Note:** The following advanced aggregation types are not supported within calculated field formulas:
->
-> - `Index`
-> - `RunningTotals`
-> - `PercentageOfRunningTotals`
-> - `PercentageOfGrandTotal`
-> - `PercentageOfColumnTotal`
-> - `PercentageOfRowTotal`
-> - `PercentageOfParentColumnTotal`
-> - `PercentageOfParentRowTotal`
-> - `DifferenceFrom`
-> - `PercentageOfDifferenceFrom`
-> - `PercentageOfParentTotal`
-
 ### Defining calculated fields programmatically
 
 You can define calculated fields programmatically using the [`calculatedFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFieldSettings) property. This approach is ideal for pre-configuring specific calculations. The following properties are essential for creating a calculated field:
@@ -44,7 +30,9 @@ You can define calculated fields programmatically using the [`calculatedFieldSet
 
 To use the calculated field feature, you must inject the `CalculatedField` module into the pivot table.
 
-> **Note**: The calculated field feature applies only to value fields. By default, calculated fields created programmatically are added to the field list and calculated field dialog UI. To display a calculated field in the pivot table UI, it must be added to the [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings#values) property, as shown in the code below.
+N>
+- The calculated field feature applies only to value fields. By default, calculated fields created programmatically are added to the field list and calculated field dialog UI. To display a calculated field in the pivot table UI, it must be added to the [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings#values) property, as shown in the code below.
+- The following advanced aggregation types are not supported within calculated field formulas: `Index`, `RunningTotals`, `PercentageOfRunningTotals`, `PercentageOfGrandTotal`, `PercentageOfColumnTotal`, `PercentageOfRowTotal`, `PercentageOfParentColumnTotal`, `PercentageOfParentRowTotal`, `DifferenceFrom`, `PercentageOfDifferenceFrom`, and `PercentageOfParentTotal`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

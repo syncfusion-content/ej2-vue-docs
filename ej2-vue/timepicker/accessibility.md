@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Timepicker component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Timepicker component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in Vue TimePicker | Syncfusion
+description: Learn WAI-ARIA support, keyboard navigation shortcuts, and accessibility compliance for the Syncfusion Vue TimePicker component.
+control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Timepicker component
+# Accessibility in Vue TimePicker
 
 The TimePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -59,7 +59,7 @@ Here in TimePicker, the `combobox` plays the role of input element, and the `lis
 
 * **Aria-owns**: Attribute that creates a parent/child relationship between two DOM element in the accessibility layer.
 
-* **Aria-activedescendent**: Attribute that helps in managing the current active child of the TimePicker component.
+* **Aria-activedescendant**: Attribute that helps in managing the current active child of the TimePicker component.
 
 * **Role**: Attribute that gives assistive technology information for handling each element in a widget.
 

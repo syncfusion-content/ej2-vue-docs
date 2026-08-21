@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Radial menu in Vue Speed dial component | Syncfusion
-description: Learn here all about Radial menu in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Radial Menu in Vue Speed Dial | Syncfusion
+description: Learn how to display Syncfusion Vue Speed Dial action items in a circular radial menu using the mode property and customize direction, startAngle, endAngle, and offset.
 control: Radial menu 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radial menu in Vue Speed dial component
+# Radial Menu in Vue Speed Dial
 
 The React Speed Dial action items can be displayed in a circular patter like a radial menu by setting [`mode`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#mode) property. You can customize the `direction`, `startAngle`, `endAngle` and `offset` by setting [`radialSettings`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#radialsettings) property.
 

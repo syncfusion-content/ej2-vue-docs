@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add floating label to read only textbox in Vue Textbox component | Syncfusion
-description: Learn here all about Add floating label to read only textbox in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: How to add floating label to read-only in Vue TextBox | Syncfusion
+description: Float a label above a read-only Syncfusion Vue TextBox by toggling the e-label-top and e-label-bottom classes on the label element.
 control: Add floating label to read only textbox 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add floating label to read only textbox in Vue Textbox component
+# How to add floating label to read-only in Vue TextBox
 
 You can achieve floating label for read-only textboxes by adding/removing `e-label-top` and `e-label-bottom` classes to the label element
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resizing of panels in Vue Dashboard Layout component | Syncfusion
-description: Learn here all about Resizing of panels in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
-control: Resizing of panels 
+title: Resizing Of Panels in Vue Dashboard Layout | Syncfusion
+description: Enable Vue Dashboard Layout panel resizing through UI interactions via the allowResizing property, with resizing handlers controlling multiple directions.
+control: Resizing of panels
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing of panels in Vue Dashboard Layout component
+# Resizing Of Panels in Vue Dashboard Layout
 
 The Dashboard Layout component provides panel resizing functionality, which can be enabled or disabled using the [`allowResizing`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#allowresizing) property. This functionality allows panels to be resized through UI interactions using resizing handlers that control resizing in various directions.
 

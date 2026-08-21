@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label and size in Vue Check box component | Syncfusion
-description: Learn here all about Label and size in Syncfusion Vue Check box component of Syncfusion Essential JS 2 and more.
+title: Label and Size in Vue Checkbox | Syncfusion
+description: Set a Vue Checkbox caption with the label property, choose its position, and switch between default and small sizes.
 control: Label and size 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Label and size in Vue Check box component
+# Label and Size in Vue Checkbox
 
 This section explains the different sizes and labels.
 

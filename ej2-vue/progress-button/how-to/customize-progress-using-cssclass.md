@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize progress using cssclass in Vue Progress button component | Syncfusion
-description: Learn here all about Customize progress using cssclass in Syncfusion Vue Progress button component of Syncfusion Essential JS 2 and more.
+title: Customize progress using cssClass in Vue Progress Button | Syncfusion
+description: Use the cssClass property on the Vue Progress Button to show vertical progress, top progress, and reverse progress filler styles.
 control: Customize progress using cssclass 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize progress using cssclass in Vue Progress button component
+# How to customize progress using cssClass in Vue Progress Button
 
 You can customize the background filler UI using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#cssClass) property.
 

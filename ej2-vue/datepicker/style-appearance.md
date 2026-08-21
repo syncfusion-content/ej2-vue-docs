@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Datepicker component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Style appearance 
+title: Style and Appearance in Vue DatePicker | Syncfusion
+description: Override Syncfusion Vue DatePicker styles with custom CSS for the wrapper, icon, calendar popup, and full-screen mode on mobile devices.
+control: Style appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Datepicker component
+# Style and Appearance in Vue DatePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

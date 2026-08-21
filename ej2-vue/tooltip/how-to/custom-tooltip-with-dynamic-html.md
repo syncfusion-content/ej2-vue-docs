@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom tooltip with dynamic html in Vue Tooltip component | Syncfusion
-description: Learn here all about Custom tooltip with dynamic html in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: How to render custom tooltip with HTML in Vue Tooltip | Syncfusion
+description: Render custom Vue Tooltip content with HTML tags like iframe, video, and map via the content property to load external HTML pages inside the tooltip.
 control: Custom tooltip with dynamic html 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom tooltip with dynamic html in Vue Tooltip component
+# How to render custom tooltip with HTML in Vue Tooltip
 
 Tooltip loads HTML pages via the HTML tags such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#content) property, which supports both string and HTML tags.
 

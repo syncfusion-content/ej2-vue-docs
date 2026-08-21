@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Progress button component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Progress button component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Progress Button | Syncfusion
+description: The Vue Progress Button meets ADA, Section 508, WCAG 2.2, screen reader, RTL, and keyboard navigation accessibility standards.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Progress button component
+# Accessibility in Vue Progress Button
 
 The Progress button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

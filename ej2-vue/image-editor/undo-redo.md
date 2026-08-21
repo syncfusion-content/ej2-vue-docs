@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Undo Redo in Vue Image editor component | Syncfusion
-description: Learn here all about Undo Redo in Syncfusion Vue Image editor component of Syncfusion Essential JS 2 and more.
+title: Undo Redo in Vue Image Editor component | Syncfusion
+description: Reverse and reapply the most recent editing actions in the Vue Image Editor, with up to 16 steps of undo and redo history.
 platform: ej2-vue
-control: Undo Redo 
+control: Undo Redo
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -22,7 +22,7 @@ The undo action in an image editor allows users to revert the most recent editin
 
 The Redo action in an image editor allows users to reapply previously undone actions or modifications to the image. When the redo command is triggered, the image editor reapplies the last action that was undone, bringing the image back to the state it was in after the action was initially applied. The redo is useful when users want to repeat an action that was previously undone or restore changes that were temporarily reversed. 
 
-In the following example, the [`undo`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open)  and [`redo`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open) method is used in the button click event.
+In the following example, the [`undo`](https://ej2.syncfusion.com/vue/documentation/api/image-editor#open)  and [`redo`](https://ej2.syncfusion.com/vue/documentation/api/image-editor#open) method is used in the button click event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Different layouts in Vue Splitter component | Syncfusion
-description: Learn here all about Different layouts in Syncfusion Vue Splitter component of Syncfusion Essential JS 2 and more.
-control: Different layouts 
+title: Different Layouts in Vue Splitter | Syncfusion
+description: Build multiple and nested pane layouts with the Vue Splitter for common application scenarios.
+control: Different layouts
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Different layouts in Vue Splitter component
+# Different Layouts in Vue Splitter
 
 Using the Splitter component, create multiple and nested pane layouts for common application scenarios.
 

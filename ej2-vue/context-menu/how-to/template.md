@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Context menu component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Context menu component of Syncfusion Essential JS 2 and more.
+title: How to render template in Vue Context Menu | Syncfusion
+description: Customize Vue Context Menu items by rendering a table layout or embedding UI components like CheckBox inside each li via the beforeItemRender event.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Context menu component
+# How to render template in Vue Context Menu
 
 ## Show table in sub ContextMenu
 

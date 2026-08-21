@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Model binding in Vue Query builder component | Syncfusion
-description: Learn here all about Model binding in Syncfusion Vue Query builder component of Syncfusion Essential JS 2 and more.
+title: Model Binding in Vue Query Builder UI | Syncfusion
+description: Bind custom properties to field, operator, and value columns in the Vue Query Builder UI using fieldModel, operatorModel, and valueModel.
 control: Model binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Model binding in Vue Query builder component
+# Model Binding in Vue Query Builder UI
 
 Model binding allows to bind properties for the components used in field, operator, and value columns. To implement model binding, assign fieldModel, operatorModel, and valueModel properties in QueryBuilder.
 

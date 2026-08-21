@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize tab scroll step in Vue Tab component | Syncfusion
-description: Learn here all about Customize tab scroll step in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to customize tab scroll step in Vue Tabs | Syncfusion
+description: Change the Vue Tabs scroll step distance using the scrollStep property to control how many pixels tab headers move on each scroll button click.
 control: Customize tab scroll step 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize tab scroll step in Vue Tab component
+# How to customize tab scroll step in Vue Tabs
 
 Tab supports to customize the scrolling distance when you click the left and right side navigation icons. we can customize `ScrollStep` property for scrolling distance. Refer to the following code example.
 

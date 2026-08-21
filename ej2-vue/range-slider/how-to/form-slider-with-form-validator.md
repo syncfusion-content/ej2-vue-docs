@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form validator in Vue Range Slider component | Syncfusion
-description: Learn here all about Form Slider with form validator in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: Form Slider with FormValidator in Vue Range Slider | Syncfusion
+description: Validate the Syncfusion Vue Range Slider with FormValidator by setting the min, max, range, or regex rules on its form field.
 control: Form Slider with form validator 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Slider with form validator in Vue Range Slider component
+# How to use Form Slider with FormValidator in Vue Range Slider
 
 The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through Slider validation.
 

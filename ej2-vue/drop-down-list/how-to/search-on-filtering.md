@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Search on filtering in Vue Drop down list component | Syncfusion
-description: Learn here all about Search on filtering in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to limit search results in Vue Dropdown List | Syncfusion
+description: Limit the number of search results shown while filtering the Syncfusion Vue Dropdown List by returning a fixed-size subset from the source.
 control: Search on filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search on filtering in Vue Drop down list component
+# How to limit search results in Vue Dropdown List
 
 The following example demonstrates about how to set limit the search result on filtering.
 

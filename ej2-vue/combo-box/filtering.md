@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Filtering in Vue Combo box component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Combo box component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue ComboBox | Syncfusion
+description: Filter Syncfusion Vue ComboBox items as you type by enabling allowFiltering and returning matched data through the filtering event.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Combo box component
+# Filtering in Vue ComboBox
 
 The ComboBox has built-in support to filter data items when `allowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the component.
 
-To display filtered items in the popup, filter the required data and return it to the ComboBox via [updateData](https://ej2.syncfusion.com/vue/documentation/api/combo-box/filteringEventArgs/#updatedata) method by using the [filtering](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#filtering) event.
+To display filtered items in the popup, filter the required data and return it to the ComboBox via [updateData](https://ej2.syncfusion.com/vue/documentation/api/combo-box/filteringEventArgs#updatedata) method by using the [filtering](https://ej2.syncfusion.com/vue/documentation/api/combo-box#filtering) event.
 
 To filter the Vue ComboBox items, you can check on this video:
 
@@ -84,7 +84,7 @@ The following example shows how to perform case-sensitive filter.
 
 ## Diacritics Filtering
 
-ComboBox supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#ignoreaccent) is enabled.
+ComboBox supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/vue/documentation/api/combo-box#ignoreaccent) is enabled.
 
 In the following sample,data with diacritics are bound as dataSource for ComboBox.
 
@@ -101,7 +101,7 @@ In the following sample,data with diacritics are bound as dataSource for ComboBo
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/combo-box#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

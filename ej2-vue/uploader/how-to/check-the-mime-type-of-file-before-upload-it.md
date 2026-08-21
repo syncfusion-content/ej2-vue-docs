@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check the mime type of file before upload it in Vue Uploader component | Syncfusion
-description: Learn here all about Check the mime type of file before upload it in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Check MIME type before upload in Vue Uploader | Syncfusion
+description: Read the file MIME type in the Syncfusion Vue Uploader before upload using the uploading event and show it in an alert dialog.
 control: Check the mime type of file before upload it 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check the mime type of file before upload it in Vue Uploader component
+# How to check MIME type before upload in Vue Uploader
 
 By using [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/#uploading) event, you can get the file MIME type before uploading it to server. In the below sample, file MIME type is shown in the alert box before file start to upload.
 

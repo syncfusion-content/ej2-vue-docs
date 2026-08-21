@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change animation settings in Vue Context menu component | Syncfusion
-description: Learn here all about Change animation settings in Syncfusion Vue Context menu component of Syncfusion Essential JS 2 and more.
+title: How to change animation settings in Vue Context Menu | Syncfusion
+description: Apply None, SlideDown, ZoomIn, or FadeIn animation effects to Vue Context Menu sub-menu transitions using the animationSettings property of the component.
 control: Change animation settings 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change animation settings in Vue Context menu component
+# How to change animation settings in Vue Context Menu
 
 To change the animation of the ContextMenu, [`animationSettings`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuAnimationSettingsModel/) property
 is used. The supported effects for ContextMenu are,

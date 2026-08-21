@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Popup items in Vue Split button component | Syncfusion
-description: Learn here all about Popup items in Syncfusion Vue Split button component of Syncfusion Essential JS 2 and more.
+title: Popup Items in Vue Split Button | Syncfusion
+description: Add icons, separators, and templates to Vue Split Button popup items via iconCss, separator, and the beforeItemRender event.
 control: Popup items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Popup items in Vue Split button component
+# Popup Items in Vue Split Button
 
 ## Icons
 

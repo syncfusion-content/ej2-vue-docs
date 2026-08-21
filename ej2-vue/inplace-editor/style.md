@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Vue Inplace editor component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Inplace editor component of Syncfusion Essential JS 2 and more.
+title: Style in Vue In-place Editor | Syncfusion
+description: Customize the Vue In-place Editor appearance with CSS for text font-family, color, border, and save and cancel action button icon and background colors.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Style in Vue Inplace editor component
+# Style in Vue In-place Editor
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Message component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Message component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Message | Syncfusion
+description: Customize Vue Message content using a template with strings, paragraphs, or HTML elements and Vue Button components added to ejs-message.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Message component
+# Template in Vue Message
 
 The message supports templates that allows the user to customize the content with a custom structure. The content can be a string, paragraph, or any other HTML element. The template can be rendered through the `content` property or added directly to the HTML element.
 

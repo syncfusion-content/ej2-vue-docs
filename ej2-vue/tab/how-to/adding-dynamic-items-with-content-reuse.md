@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adding dynamic items with content reuse in Vue Tab component | Syncfusion
-description: Learn here all about Adding dynamic items with content reuse in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: Add dynamic items with content reuse in Vue Tabs | Syncfusion
+description: Dynamically add Vue Tabs items at runtime with shared content templates to reuse the same content layout across multiple tab items efficiently.
 control: Adding dynamic items with content reuse 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding dynamic items with content reuse in Vue Tab component
+# How to add dynamic items with content reuse in Vue Tabs
 
 You can add dynamic tabs by reusing the content using Vue **template**. Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/vue/documentation/api/tab#addtab) method.
 

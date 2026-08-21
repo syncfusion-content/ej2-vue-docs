@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Numeric range Slider in Vue Range Slider component | Syncfusion
-description: Learn here all about Numeric range Slider in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to create a numeric range slider in Vue Range Slider | Syncfusion
+description: Format Syncfusion Vue Range Slider numeric values with custom decimal digits, fixed digit counts, and unit suffixes.
 control: Numeric range Slider 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Numeric range Slider in Vue Range Slider component
+# How to create a numeric range slider in Vue Range Slider
 
 The numeric values can be formatted into different decimal digits, fixed number of whole numbers, or to represent units. The numeric processing is demonstrated in the following example.
 

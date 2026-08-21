@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent the focus to previous element in Vue Dialog | Syncfusion
-description:  Learn how to prevent focus from returning to the previously focused element in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: How to prevent focus to previous element in Vue Dialog | Syncfusion
+description: Prevent focus from returning to the previously focused element after the Vue Dialog closes by setting preventFocus true in the beforeClose event.
 control: Prevent the focus to the previous element
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent focus to previous element in Vue Dialog component
+# How to prevent focus to previous element in Vue Dialog
 
 By default, when the dialog is closed, focus returns to the element that was previously focused before the dialog opened. You can prevent this behavior using the `beforeClose` event and setting the `preventFocus` argument to `true`.
 

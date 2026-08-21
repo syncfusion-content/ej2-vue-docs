@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Numeric Textbox | Syncfusion
+description: Customize the Syncfusion Vue Numeric Textbox wrapper and spin icons with CSS overrides for height, font, and background.
 control: Style appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Numerictextbox component
+# Style and Appearance in Vue Numeric Textbox
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 

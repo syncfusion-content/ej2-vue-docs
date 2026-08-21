@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Message component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Message component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Message | Syncfusion
+description: Explore Vue Message accessibility support for WCAG 2.2, Section 508, screen readers, keyboard navigation, RTL, and WAI-ARIA attributes.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Message component
+# Accessibility in Vue Message
 
 The Message component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

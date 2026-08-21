@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection in Vue Rating component | Syncfusion
-description: Learn here all about Selection in Syncfusion Vue Rating component of Syncfusion Essential JS 2 and more.
+title: Selection in Vue Rating | Syncfusion
+description: Configure Syncfusion Vue Rating selection with a minimum value, single-selection mode, and an optional reset button.
 control: Selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in Vue Rating component
+# Selection in Vue Rating
 
 The rating component allows users to rate something using a visual scale, and the selection state can be changed by the user clicking or tapping on the stars in the rating scale or through code. The rating component has a minimum value and a reset button, and provides customization options for the selected rating value and selection behavior.
 

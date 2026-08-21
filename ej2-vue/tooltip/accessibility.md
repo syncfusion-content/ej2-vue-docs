@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Tooltip component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Tooltip | Syncfusion
+description: Vue Tooltip meets ADA, Section 508, WCAG 2.2, and WAI-ARIA standards with screen reader, keyboard navigation, right-to-left, and color contrast support.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Tooltip component
+# Accessibility in Vue Tooltip
 
 The Tooltip component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

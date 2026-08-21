@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the disabled state in Vue Textbox component | Syncfusion
-description: Learn here all about Set the disabled state in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: How to set disabled state in Vue TextBox | Syncfusion
+description: Disable the Syncfusion Vue TextBox by adding the e-disabled class to the parent element and the disabled attribute to the input element.
 control: Set the disabled state 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the disabled state in Vue Textbox component
+# How to set disabled state in Vue TextBox
 
 Disable the TextBox by adding the `e-disabled` to the input parent element and set `disabled` attribute to the input element.
 

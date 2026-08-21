@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set cursor position while focus on the input textbox in Vue Maskedtextbox component | Syncfusion
-description: Learn here all about Set cursor position while focus on the input textbox in Syncfusion Vue Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Set cursor position while focus on the input textbox | Syncfusion
+description: Place the caret at the start, end, or a custom position in the Syncfusion Vue MaskedTextBox on focus instead of selecting the whole mask.
 control: Set cursor position while focus on the input textbox 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set cursor position while focus on the input textbox in Vue Maskedtextbox component
+# How to set cursor position while focus on the input textbox
 
 By default, on focusing the MaskedTextBox the entire mask gets selected. You can customize by using any one of the following methods:
 

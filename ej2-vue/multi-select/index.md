@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Multi select component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Vue MultiSelect Dropdown Component | Syncfusion
+description: Learn about the Syncfusion Vue MultiSelect Dropdown and its key features, including data binding, grouping, templates, filtering, and custom value.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Multi select component
+# About Syncfusion Vue MultiSelect Dropdown Component.
 
 The MultiSelect component contains a list of predefined values from which a multiple value can be chosen. The functionality of MultiSelect resembles the SELECT form element of HTML.
 

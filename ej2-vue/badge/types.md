@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types in Vue Badge component | Syncfusion
-description: Learn here all about What are the Types in Syncfusion Vue Badge component of Syncfusion Essential JS 2 and more.
+title: Types and Styles in Vue Badge | Syncfusion
+description: Use predefined Vue Badge CSS classes like primary, success, danger, and warning to style the badge for different notification types.
 control: Types 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types in Vue Badge component
+# Types and Styles in Vue Badge
 
 This section explains different styles and types of the badges.
 

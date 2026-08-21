@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Grouping in Vue Auto complete component | Syncfusion
-description: Learn here all about Grouping in Syncfusion Vue Auto complete component of Syncfusion Essential JS 2 and more.
+title: Grouping in Vue AutoComplete | Syncfusion
+description: Group Syncfusion Vue AutoComplete items into inline or fixed headers by mapping the groupBy field, with dynamic updates on scroll.
 control: Grouping 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in Vue Auto complete component
+# Grouping in Vue AutoComplete
 
-The AutoComplete supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#groupby) field in the data table. The group header is displayed as both inline and fixed headers. The fixed group header content is updated dynamically on scrolling the suggestion list with its category value.
+The AutoComplete supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#groupby) field in the data table. The group header is displayed as both inline and fixed headers. The fixed group header content is updated dynamically on scrolling the suggestion list with its category value.
 
 To group the Vue AutoComplete items, you can check on this video:
 

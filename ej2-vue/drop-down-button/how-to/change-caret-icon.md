@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change caret icon in Vue Drop down button component | Syncfusion
-description: Learn here all about Change caret icon in Syncfusion Vue Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to change caret icon in Vue Dropdown Button | Syncfusion
+description: Toggle the caret icon of a Vue Dropdown Button on popup open and close using the beforeOpen and beforeClose event handlers.
 control: Change caret icon 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change caret icon in Vue Drop down button component
+# How to change caret icon in Vue Dropdown Button
 
 Dropdown arrow can be customized on popup open and close. It can be handled in [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#beforeopen)
 and [`beforeClose`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#beforeclose) event.

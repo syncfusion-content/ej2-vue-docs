@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fancy tooltip customization in Vue Tooltip component | Syncfusion
-description: Learn here all about Fancy tooltip customization in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: How to customize fancy tooltip in Vue Tooltip | Syncfusion
+description: Customize the Vue Tooltip tip arrow into curved or bubble shapes by overriding CSS3 classes positioned for TopCenter, BottomLeft, RightTop, and other placements.
 control: Fancy tooltip customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fancy tooltip customization in Vue Tooltip component
+# How to customize fancy tooltip in Vue Tooltip
 
 The arrow of the tooltip can be customized as needed by modifying CSS on the sample side. The EJ2 tooltip component is achieved through CSS3 format and positions the tip arrow according to the tooltip positions like `TopCenter`, `BottomLeft`, `RightTop`, and more.
 

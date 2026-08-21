@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiline in Vue Textbox component | Syncfusion
-description: Learn here all about Multiline in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: Multiline in Vue TextBox | Syncfusion
+description: Convert the Syncfusion Vue TextBox into a multi-line field by enabling the multiline API or rendering an HTML5 textarea for addresses or comments.
 control: Multiline 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiline in Vue Textbox component
+# Multiline in Vue TextBox
 
 This feature allows the textbox to accept one or more lines of text like address, description, comments, and more.
 

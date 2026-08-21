@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rows and Columns count in Vue TextArea component | Syncfusion
-description: Checkout and learn about Adjusting the size of the Vue TextArea component of Syncfusion Essential JS 2 and more.
+title: Rows and Columns Count in Vue TextArea | Syncfusion
+description: Set Syncfusion Vue TextArea size with the rows and cols properties to control visible line count and width in characters.
 control: Rows and Columns Count
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rows and Columns in Vue TextArea Component
+# Rows and Columns Count in Vue TextArea
 
 Two Essential<sup style="font-size:70%">&reg;</sup> attributes, `rows` and `columns`, play a pivotal role in customizing the TextArea's appearance and layout. The `rows`attribute determines the initial visible number of lines within the TextArea, controlling its vertical size. Conversely, the `columns` attribute specifies the visible width of the TextArea in characters per line, determining its initial width.
 

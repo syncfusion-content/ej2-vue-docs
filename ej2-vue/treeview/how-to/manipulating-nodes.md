@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Node manipulation in Vue TreeView component | Syncfusion
-description: Learn here all about Node manipulation in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
+title: How to manipulate nodes in Vue TreeView | Syncfusion
+description: Add, remove, or update Vue TreeView nodes at runtime using public methods like addNodes, removeNodes, and updateNode to modify the tree dynamically.
 control: TreeView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node manipulation in Vue TreeView component
+# How to manipulate nodes in Vue TreeView
 
 The TreeView component provides Essential<sup style="font-size:70%">&reg;</sup> methods for dynamically managing nodes, offering the ability to create a highly interactive and customizable tree structure.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue Drop down list component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue Dropdown List | Syncfusion
+description: Filter Syncfusion Vue Dropdown List items as you type by enabling allowFiltering and returning matched data through the filtering event.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Drop down list component
+# Filtering in Vue Dropdown List
 
 The DropDownList has built-in support to filter data items when `allowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the search box.
 

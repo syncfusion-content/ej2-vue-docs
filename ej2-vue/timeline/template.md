@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Timeline component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Timeline component of Syncfusion Essential JS 2 and more.
-control: Template 
+title: Template in Vue Timeline | Syncfusion
+description: Customize each Vue Timeline item's appearance using the template property to modify dot items, item content, and progress visuals.
+control: Template
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Timeline component
+# Template in Vue Timeline
 
 The Timeline component allows customization of each item's appearance using the [template](https://ej2.syncfusion.com/vue/documentation/api/timeline#template) property. Templates can modify dot items, item content, progress visuals, and other presentation details.
 

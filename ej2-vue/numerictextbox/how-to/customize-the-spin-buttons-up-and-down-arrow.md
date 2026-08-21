@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the spin buttons up and down arrow in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Customize the spin buttons up and down arrow in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Customize the spin buttons up and down arrow in Vue Numeric Textbox | Syncfusion
+description: Replace the up and down spin icons in the Syncfusion Vue Numeric Textbox by overriding the e-spin-up and e-spin-down CSS classes.
 control: Customize the spin buttons up and down arrow 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the spin buttons up and down arrow in Vue Numerictextbox component
+# How to customize the spin buttons up and down arrow in Vue Numeric Textbox
 
 This section explains about how to change/customize spin up and down icons. You can customize spin button icons using `e-spin-up` and `e-spin-down`
 classes of those buttons.

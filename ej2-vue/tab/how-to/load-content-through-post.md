@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load content through post in Vue Tab component | Syncfusion
-description: Learn here all about Load content through post in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to load content through Ajax in Vue Tabs | Syncfusion
+description: Load Vue Tabs content panels from a remote server using AJAX requests and the dataBound event to populate tab content dynamically on tab selection.
 control: Load content through post 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load content through post in Vue Tab component
+# How to load content through Ajax in Vue Tabs
 
 The Tab supports to load external contents through AJAX library. Refer to the following steps.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the textbox background color and text color in Vue Textbox component | Syncfusion
-description: Learn here all about Customize the textbox background color and text color in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: Customize background color and text color in Vue TextBox | Syncfusion
+description: Override the Syncfusion Vue TextBox background, text, and border colors with custom CSS to match your design or branding.
 control: Customize the textbox background color and text color 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the textbox background color and text color in Vue Textbox component
+# How to customize background color and text color in Vue TextBox
 
 You can customize the textbox styles such as background-color, text-color and border-color by overriding its default styles.
 

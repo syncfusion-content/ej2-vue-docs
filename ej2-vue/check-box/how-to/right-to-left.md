@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to left in Vue Check box component | Syncfusion
-description: Learn here all about Right to left in Syncfusion Vue Check box component of Syncfusion Essential JS 2 and more.
+title: How to enable right-to-left in Vue Checkbox | Syncfusion
+description: Render the Vue Checkbox in right-to-left mode by setting the enableRtl API property to true for RTL language support.
 control: Right to left 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to left in Vue Check box component
+# How to enable right-to-left in Vue Checkbox
 
 CheckBox component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#enablertl) as `true`.
 

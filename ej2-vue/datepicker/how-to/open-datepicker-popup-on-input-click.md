@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open datepicker popup on input click in Vue Datepicker component | Syncfusion
-description: Learn here all about Open datepicker popup on input click in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Open datepicker popup on input click 
+title: How to open the popup on input click in Vue DatePicker | Syncfusion
+description: Open the Syncfusion Vue DatePicker popup on input focus by calling the show method inside the input focus event handler.
+control: Open datepicker popup on input click
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open datepicker popup on input click in Vue Datepicker component
+# How to open the popup on input click in Vue DatePicker
 
 You can open the DatePicker popup on input focus by calling the `show` method in the input `focus` event.
 

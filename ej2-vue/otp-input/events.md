@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue OTP Input component | Syncfusion
-description:  Learn here all about Events in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
+title: Events in Vue OTP Input | Syncfusion
+description: Handle created, focus, blur, input, and valueChanged events of the Syncfusion Vue OTP Input to react to user actions.
 platform: ej2-vue
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue OTP Input component
+# Events in Vue OTP Input
 
 This section describes the OTP Input events that will be triggered when appropriate actions are performed. The following events are available in the OTP Input component.
 

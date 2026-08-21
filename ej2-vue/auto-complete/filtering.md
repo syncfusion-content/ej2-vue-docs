@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue Auto complete component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Auto complete component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue AutoComplete | Syncfusion
+description: Filter Syncfusion Vue AutoComplete suggestions as you type, with StartsWith, EndsWith, and Contains match modes and highlight support.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Auto complete component
+# Filtering in Vue AutoComplete
 
 The AutoComplete has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the component.
 
@@ -18,7 +18,7 @@ To filter the Vue AutoComplete items, you can check on this video:
 
 ## Change the filter type
 
-Determines on which filter type, the component needs to be considered on search action. The available [`filterType`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#filtertype) and its supported data types are
+Determines on which filter type, the component needs to be considered on search action. The available [`filterType`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#filtertype) and its supported data types are
 
 | Filter Type | Description | Supported Types |
 |------|------|-------------|
@@ -41,7 +41,7 @@ The following examples shows the data filtering is done with StartsWith type.
 
 ## Filter item count
 
-You can specify the filter suggestion item count through [`suggestionCount`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#suggestioncount) property of AutoComplete.
+You can specify the filter suggestion item count through [`suggestionCount`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#suggestioncount) property of AutoComplete.
 
 The following example, to restrict the suggestion list item counts as 5.
 
@@ -58,7 +58,7 @@ The following example, to restrict the suggestion list item counts as 5.
 
 ## Limit the minimum filter character
 
-You can set the limit for the character count to filter the data on the AutoComplete. This can be done by set the [`minLength`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#minlength) property to AutoComplete.
+You can set the limit for the character count to filter the data on the AutoComplete. This can be done by set the [`minLength`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#minlength) property to AutoComplete.
 
 In the following example, the remote request doesn't fetch the search data, until the search key contains three characters.
 
@@ -75,7 +75,7 @@ In the following example, the remote request doesn't fetch the search data, unti
 
 ## Case sensitive filtering
 
-Data items can be filtered either with or without case sensitivity using the `DataManager`. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#ignorecase) property of AutoComplete.
+Data items can be filtered either with or without case sensitivity using the `DataManager`. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#ignorecase) property of AutoComplete.
 
 The following sample depicts how to filter the data with case-sensitive.
 
@@ -92,7 +92,7 @@ The following sample depicts how to filter the data with case-sensitive.
 
 ## Diacritics Filtering
 
-An AutoComplete supports diacritics filtering which will ignore the diacritics and makes it easier to filter the results in international characters lists when the [`ignoreAccent`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#ignoreaccent) is enabled.
+An AutoComplete supports diacritics filtering which will ignore the diacritics and makes it easier to filter the results in international characters lists when the [`ignoreAccent`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#ignoreaccent) is enabled.
 
 In the following sample,data with diacritics are bound as dataSource for AutoComplete.
 
@@ -109,7 +109,7 @@ In the following sample,data with diacritics are bound as dataSource for AutoCom
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

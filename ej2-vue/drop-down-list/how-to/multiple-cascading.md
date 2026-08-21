@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple cascading in Vue Drop down list component | Syncfusion
-description: Learn here all about Multiple cascading in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to preselect items in cascading in Vue Dropdown List | Syncfusion
+description: Preselect items in multiple cascading Syncfusion Vue Dropdown Lists by setting initial values that match the parent-child dependency chain.
 control: Multiple cascading 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple cascading in Vue Drop down list component
+# How to preselect items in cascading in Vue Dropdown List
 
 The following example demonstrate about how to preselect the list items in multiple cascading DropDownList.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Split panes in Vue Splitter component | Syncfusion
-description: Learn here all about Split panes in Syncfusion Vue Splitter component of Syncfusion Essential JS 2 and more.
-control: Split panes 
+title: Split Panes in Vue Splitter | Syncfusion
+description: Render the Vue Splitter in horizontal or vertical orientation to split the container into panes separated by dividers.
+control: Split panes
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Split panes in Vue Splitter component
+# Split Panes in Vue Splitter
 
 This section explains split-pane behavior.
 

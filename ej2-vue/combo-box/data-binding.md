@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data binding in Vue Combo box component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Combo box component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue ComboBox | Syncfusion
+description: Bind the Syncfusion Vue ComboBox to local arrays, OData, OData V4, Web API, XML, JSON, or JSONP via DataManager adaptors.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Combo box component
+# Data Binding in Vue ComboBox
 
-The ComboBox loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#datasource) property. It supports the data type of `array` or `DataManager`.
+The ComboBox loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/combo-box#datasource) property. It supports the data type of `array` or `DataManager`.
 
 The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of `DataManager` adaptors.
 
@@ -44,7 +44,7 @@ The ComboBox has support to load array of primitive data such as strings and num
 
 ### 2. Array of JSON data
 
-The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#fields) property.
+The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/combo-box#fields) property.
 
 In the following example, `Id` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
@@ -61,7 +61,7 @@ In the following example, `Id` column and `Game` column from complex data have b
 
 ### 3. Array of Complex data
 
-The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#fields) property.
+The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/combo-box#fields) property.
 
 In the following example, `Code.Id` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
@@ -78,7 +78,7 @@ In the following example, `Code.Id` column and `Country.Name` column from comple
 
 ## Binding remote data
 
-The ComboBox supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#query) property is used to fetch data from the database and bind it to the ComboBox.
+The ComboBox supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/vue/documentation/api/combo-box#query) property is used to fetch data from the database and bind it to the ComboBox.
 
 The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
 
@@ -95,7 +95,7 @@ The following sample displays the first 6 contacts from “Customers” table of
 
 ## See Also
 
-* [How to achieve cascading](./how-to/cascading/)
+* [How to achieve cascading](./how-to/cascading)
 * [How to load data using template](./templates#item-template)
-* [How to group the data using header](./grouping/)
-* [How to filter the bound data](./filtering/)
+* [How to group the data using header](./grouping)
+* [How to filter the bound data](./filtering)

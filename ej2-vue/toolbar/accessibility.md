@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Toolbar component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Toolbar | Syncfusion
+description: The Vue Toolbar meets ADA, Section 508, and WCAG 2.2 standards with screen reader support, keyboard navigation, RTL, and color contrast built in.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Toolbar component
+# Accessibility in Vue Toolbar
 
 The [Vue Toolbar](https://www.syncfusion.com/vue-ui-components/vue-toolbar) component has been designed,  keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/) specifications, and applying the WAI-ARIA roles, states, and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, and `aria-orientation`, It provides information about elements in a document for assistive technology.  The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/), and has been tested in major screen readers.
 

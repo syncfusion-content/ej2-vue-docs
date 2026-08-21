@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Strict mode in Vue Datepicker component | Syncfusion
-description: Learn here all about Strict mode in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Strict mode 
+title: Strict Mode in Vue DatePicker | Syncfusion
+description: Restrict the Syncfusion Vue DatePicker to accept only valid dates within the configured min and max range by enabling strict mode.
+control: Strict mode
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Strict mode in Vue Datepicker component
+# Strict Mode in Vue DatePicker
 
 ## Enable Strict Mode
 

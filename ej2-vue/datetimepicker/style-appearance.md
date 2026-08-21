@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Datetimepicker component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Datetimepicker component of Syncfusion Essential JS 2 and more.
-control: Style appearance 
+title: Style and Appearance in Vue DateTimePicker | Syncfusion
+description: Override Syncfusion Vue DateTimePicker styles with custom CSS for the wrapper, icons, time popup, and full-screen mode on mobile devices.
+control: Style appearance
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Datetimepicker component
+# Style and Appearance in Vue DateTimePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

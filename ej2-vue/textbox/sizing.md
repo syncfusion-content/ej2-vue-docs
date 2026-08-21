@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sizing in Vue Textbox component | Syncfusion
-description: Learn here all about Sizing in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: Sizing in Vue TextBox | Syncfusion
+description: Render the Syncfusion Vue TextBox in default or small size by adding the e-small class to the input element or its container.
 control: Sizing 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sizing in Vue Textbox component
+# Sizing in Vue TextBox
 
 You can render the TextBox in two different sizes.
 

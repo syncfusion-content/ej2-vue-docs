@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set tool tip to the commands in Vue Toolbar component | Syncfusion
-description: Learn here all about Set tool tip to the commands in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to set tooltip to the commands in Vue Toolbar | Syncfusion
+description: Show tooltips on Vue Toolbar command buttons using the Tooltip component to display help text when the user hovers over each toolbar item.
 control: Set tool tip to the commands 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set tool tip to the commands in Vue Toolbar component
+# How to set tooltip to the commands in Vue Toolbar
 
 The `tooltipText` property of the Toolbar item is used to set the HTML Tooltip to the commands that can be viewed as hint texts on mouse hover.
 

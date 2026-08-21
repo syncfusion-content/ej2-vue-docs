@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Name and value in form submit in Vue Check box component | Syncfusion
-description: Learn here all about Name and value in form submit in Syncfusion Vue Check box component of Syncfusion Essential JS 2 and more.
+title: How to set name and value for form submit in Vue Checkbox | Syncfusion
+description: Group Vue Checkbox controls with the name attribute and post only checked items' values to the server on form submit.
 control: Name and value in form submit 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Name and value in form submit in Vue Check box component
+# How to set name and value for form submit in Vue Checkbox
 
 The [`name`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#name) attribute of the CheckBox is used to group Checkboxes. When the Checkboxes are grouped in form, the checked items [`value`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#value) attribute will post to the server on form submit that can be retrieved through the name. The disabled and unchecked CheckBox value will not be sent to the server on form submit.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Limits in Vue Range Slider component | Syncfusion
-description: Learn here all about Limits in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+title: Limits in Vue Range Slider | Syncfusion
+description: Restrict the Syncfusion Vue Range Slider handle movement and lock handles in place using the limits object.
 control: Limits 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Limits in Vue Range Slider component
+# Limits in Vue Range Slider
 
 The Slider [`limits`](https://ej2.syncfusion.com/vue/documentation/api/slider#limits) restrict the Slider thumb to a particular range. This is used when higher or lower values would negatively affect the process or product where the Slider is being used.
 

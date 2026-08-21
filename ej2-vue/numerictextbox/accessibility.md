@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Numeric Textbox | Syncfusion
+description: Learn how the Syncfusion Vue Numeric Textbox meets WCAG 2.2, Section 508, and ARIA spinbutton standards with full keyboard support.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Numerictextbox component
+# Accessibility in Vue Numeric Textbox
 
 The Numerictextbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

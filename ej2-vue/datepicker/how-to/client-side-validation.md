@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Client side validation in Vue Datepicker component | Syncfusion
-description: Learn here all about Client side validation in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Client side validation 
+title: How to add client-side validation in Vue DatePicker | Syncfusion
+description: Validate the Syncfusion Vue DatePicker in client-side forms using Essential JS 2 FormValidator with custom rules and error messages.
+control: Client side validation
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Client side validation in Vue Datepicker component
+# How to add client-side validation in Vue DatePicker
 
-To achieve the client side validation in a DatePicker component by using [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 FormValidator](https://ej2.syncfusion.com/documentation/form-validator/). It provides an option to customize the feedback error messages to the corresponding fields to take action to resolve the issue.
+To achieve the client side validation in a DatePicker component by using [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 FormValidator](https://ej2.syncfusion.com/documentation/form-validator). It provides an option to customize the feedback error messages to the corresponding fields to take action to resolve the issue.
 
 In the below example, the required field validation is implemented by mapping the name attribute value to the rules property. It will validate the DatePicker component and display the validation message when the textbox value is empty during form post back or focus out.
 

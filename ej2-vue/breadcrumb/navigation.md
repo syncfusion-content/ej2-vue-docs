@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Navigation in Vue Breadcrumb component | Syncfusion
-description: Learn here all about Navigation in Syncfusion Vue Breadcrumb component of Syncfusion Essential JS 2 and more.
+title: Navigation in Vue Breadcrumb | Syncfusion
+description: Enable Vue Breadcrumb item navigation by binding relative or absolute URLs so users can click an item to route to that path directly.
 control: Navigation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in Vue Breadcrumb component
+# Navigation in Vue Breadcrumb
 
-The breadcrumb item navigates to the path while clicking the item. To enable navigation, [`url`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem/#url) property was bound to the items.
+The breadcrumb item navigates to the path while clicking the item. To enable navigation, [`url`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/breadcrumbItem#url) property was bound to the items.
 
 ## URL
 
@@ -48,7 +48,7 @@ The breadcrumb items with Absolute URL contain the path and locate to the resour
 
 ## Enable navigation for last Breadcrumb item
 
-The feature enables the last item of the Breadcrumb component by setting the [`enableActiveItemNavigation`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#enableactiveitemnavigation) property to true. In the following example, the last item of the `Breadcrumb` was enabled.
+The feature enables the last item of the Breadcrumb component by setting the [`enableActiveItemNavigation`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#enableactiveitemnavigation) property to true. In the following example, the last item of the `Breadcrumb` was enabled.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -63,7 +63,7 @@ The feature enables the last item of the Breadcrumb component by setting the [`e
 
 ## Open URL in new page or tab
 
-To open the breadcrumb item in a new page or tab, set the target property of the required item url to blank in the Breadcrumb component. In the following example, the target property of items url was set to blank by using the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#beforeitemrender) event which locates to the path in the new tab.
+To open the breadcrumb item in a new page or tab, set the target property of the required item url to blank in the Breadcrumb component. In the following example, the target property of items url was set to blank by using the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb#beforeitemrender) event which locates to the path in the new tab.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

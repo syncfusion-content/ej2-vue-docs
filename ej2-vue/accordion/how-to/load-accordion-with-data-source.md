@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load accordion with data source in Vue Accordion component | Syncfusion
-description: Learn here all about Load accordion with data source in Syncfusion Vue Accordion component of Syncfusion Essential JS 2 and more.
+title: How to load accordion with DataSource in Vue Accordion | Syncfusion
+description: Bind remote OData to Vue Accordion items using DataManager, mapping the header and content fields of the returned JSON to Accordion items.
 control: Load accordion with data source 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load accordion with data source in Vue Accordion component
+# How to load accordion with DataSource in Vue Accordion
 
 You can bind any data object to Accordion items, by mapping it to [`header`](https://ej2.syncfusion.com/vue/documentation/api/accordion/accordionItem#header) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/accordion/accordionItem#content) property.
 

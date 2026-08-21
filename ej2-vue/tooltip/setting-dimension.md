@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Setting dimension in Vue Tooltip component | Syncfusion
-description: Learn here all about Setting dimension in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Setting Dimension in Vue Tooltip | Syncfusion
+description: Set Vue Tooltip dimensions with the width and height properties using auto, pixel, or string values, and enable scroll mode for overflowing content.
 control: Setting dimension 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Setting dimension in Vue Tooltip component
+# Setting Dimension in Vue Tooltip
 
 ## Height and width
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Responsive adaptive in Vue Dashboard Layout component | Syncfusion
-description: Learn here all about Responsive adaptive in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
-control: Responsive adaptive 
+title: Responsive Adaptive in Vue Dashboard Layout | Syncfusion
+description: Build responsive Vue Dashboard Layout dashboards where panels adjust automatically to the parent element dimensions across any resolution.
+control: Responsive adaptive
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Responsive adaptive in Vue Dashboard Layout component
+# Responsive Adaptive in Vue Dashboard Layout
 
 The control is provided with built-in responsive support, where panels within the layout get adjusted based on their parent element's dimensions to accommodate any resolution which relieves the burden of building responsive dashboards.
 

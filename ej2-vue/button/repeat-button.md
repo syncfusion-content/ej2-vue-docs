@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Repeat button in the Vue Button control | Syncfusion
-description: Learn here all about repeat button support in Syncfusion Vue Button control of Syncfusion Essential JS 2 and more.
+title: Repeat Button in Vue Button | Syncfusion
+description: Enable the repeat-click behavior in the Vue Button control using the enableRepeat property to fire the clicked event continuously while pressed.
 platform: ej2-vue
 control: Repeat Button
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Repeat button in the Vue Button control
+# Repeat Button in Vue Button
 
 The Button component provides repeat-click functionality through the `enableRepeat` property. When enabled, the Button continuously triggers the `clicked` event while the user presses and holds the Button.
 

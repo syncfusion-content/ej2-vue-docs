@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Two way binding in Vue Datetimepicker component | Syncfusion
-description: Learn here all about Two way binding in Syncfusion Vue Datetimepicker component of Syncfusion Essential JS 2 and more.
-control: Two way binding 
+title: Two-Way Binding in Vue DateTimePicker | Syncfusion
+description: Bind the Syncfusion Vue DateTimePicker value to a Vue v-model so changes in one instance automatically update another component instance.
+control: Two way binding
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Two way binding in Vue Datetimepicker component
+# Two-Way Binding in Vue DateTimePicker
 
 Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one DateTimePicker component, v-model will automatically update the value in the other DateTimePicker.
 

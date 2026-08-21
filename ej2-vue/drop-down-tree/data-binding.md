@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Vue Dropdown Tree component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Dropdown Tree component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue Dropdown Tree | Syncfusion
+description: Bind the Syncfusion Vue Dropdown Tree to local hierarchical or self-referential arrays, remote services, or lazy load on demand via fields.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Dropdown Tree component
+# Data Binding in Vue Dropdown Tree
 
 The Dropdown Tree component provides an option to load the data either from local data sources or from remote data services. This can be done through [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel/#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#fields) property. The `dataSource` property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 

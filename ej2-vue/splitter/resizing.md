@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resizing in Vue Splitter component | Syncfusion
-description: Learn here all about Resizing in Syncfusion Vue Splitter component of Syncfusion Essential JS 2 and more.
-control: Resizing 
+title: Resizing in Vue Splitter | Syncfusion
+description: Enable Vue Splitter pane resizing with a resize gripper on the separator to make panes resizable by default.
+control: Resizing
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing in Vue Splitter component
+# Resizing in Vue Splitter
 
 By default, resizing is enabled for split panes. A resize gripper is added to the separator to make resizing easier.
 

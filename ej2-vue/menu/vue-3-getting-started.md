@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started Vue 3 with Vue Menu component | Syncfusion
-description: Checkout and learn about Getting Started Vue 3 with Vue Menu component of Syncfusion Essential JS 2 and more details.
+title: Getting Started Vue 3 with Vue Menu Bar | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Menu Bar control. Explore setup, features, examples, and customization options.
 control: Getting Started Vue 3
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Menu Component in Vue 3
+# Getting Started with Vue Menu Bar in Vue 3
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Menu component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

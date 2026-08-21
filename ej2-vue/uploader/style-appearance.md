@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in Vue Uploader component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Uploader | Syncfusion
+description: Customize the Syncfusion Vue Uploader wrapper, drop area, and buttons with custom CSS for height, width, color, and bigger sizes.
 control: Style appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in Vue Uploader component
+# Style and Appearance in Vue Uploader
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 

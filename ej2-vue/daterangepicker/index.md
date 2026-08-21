@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Daterangepicker component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Daterangepicker component of Syncfusion Essential JS 2 and more.
-control: Index 
+title: About Syncfusion Vue DateRangePicker Component | Syncfusion
+description: Explore features of the Syncfusion Vue DateRangePicker, including preset ranges, range restriction, globalization, and customization options.
+control: Index
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Daterangepicker component
+# About Syncfusion Vue DateRangePicker Component.
 
 The **DateRangePicker** is a graphical user interface control that allows to select a date range.
 

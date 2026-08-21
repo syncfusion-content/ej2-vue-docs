@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disabled Items in Vue MultiSelect component | Syncfusion
-description: Learn here all about Disabled Items in Syncfusion Vue MultiSelect component of Syncfusion Essential JS 2 and more.
+title: Disabled Items in Vue MultiSelect Dropdown | Syncfusion
+description: Disable individual Syncfusion Vue MultiSelect Dropdown items by mapping the fields.disabled property, or use the disableItem method for runtime changes.
 control: Disabled Items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disabled Items in Vue MultiSelect component
+# Disabled Items in Vue MultiSelect Dropdown
 
 The MultiSelect provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [disabled](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#fields) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
 

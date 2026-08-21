@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Timeline component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Timeline component of Syncfusion Essential JS 2 and more.
-control: Customization 
+title: Customization in Vue Timeline | Syncfusion
+description: Customize Vue Timeline item appearance including dot size, connectors, borders, and spacing using the available styling options.
+control: Customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Timeline component
+# Customization in Vue Timeline
 
 Customize Timeline item appearance — dot size, connectors, borders, spacing, and more. This section explains the available styling options and how to apply them.
 

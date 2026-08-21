@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date masking in Vue Datepicker component | Syncfusion
-description: Learn here all about Date masking in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: Date masking 
+title: Mask Support in Vue DatePicker | Syncfusion
+description: Enable built-in date masking in the Syncfusion Vue DatePicker using enableMask and the MaskedDateTime module, with configurable mask placeholders.
+control: Date masking
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date masking in Vue Datepicker component
+# Mask Support in Vue DatePicker
 
 DatePicker has `enableMask` property that provides the option to enable the built-in date masking support. Also, you must inject the MaskedDateTime module to enable the masking support.
 
@@ -43,7 +43,7 @@ The following example demonstrates default and custom format of DatePicker compo
         
 {% previewsample "page.domainurl/code-snippet/datepicker/mask-module-cs2" %}
 
-# Configure Mask Placeholder
+## Configure Mask Placeholder
 
 You can change mask placeholder value through property `maskPlaceholder`. By default , it takes the full name of date and time co-ordinates such as `day`, `month`, `year`, `hour` etc.
 

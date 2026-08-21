@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the rounded corner in Vue Textbox component | Syncfusion
-description: Learn here all about Set the rounded corner in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: How to set rounded corner in Vue TextBox | Syncfusion
+description: Add the e-corner class to the Syncfusion Vue TextBox parent element to render the input with rounded corners for a softer UI.
 control: Set the rounded corner 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the rounded corner in Vue Textbox component
+# How to set rounded corner in Vue TextBox
 
 Render the TextBox with `rounded corner` by adding the `e-corner` class to the input parent element.
 

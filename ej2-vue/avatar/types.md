@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types in Vue Avatar component | Syncfusion
-description: Learn here all about Types in Syncfusion Vue Avatar component of Syncfusion Essential JS 2 and more.
+description: Explore Vue Avatar types including Default (rectangular) and Circle, plus five predefined sizes from xsmall to xlarge using modifier classes.
 control: Types 
 platform: ej2-vue
 documentation: ug

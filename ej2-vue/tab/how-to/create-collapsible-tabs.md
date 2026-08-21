@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create collapsible tabs in Vue Tab component | Syncfusion
-description: Learn here all about Create collapsible tabs in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to create collapsible tabs in Vue Tabs | Syncfusion
+description: Allow Vue Tabs headers to be collapsed and expanded by the user using the header pressed event to toggle the tab content area visibility.
 control: Create collapsible tabs 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create collapsible tabs in Vue Tab component
+# How to create collapsible tabs in Vue Tabs
 
 You can achieve collapse and expand functionality in Tab by adding/removing a custom CSS class in the click event handler for each tab.
 * Define a CSS class to set the style property display as none. Here 'collapse' class is added to the content element for hiding it.

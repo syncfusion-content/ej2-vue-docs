@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Alignment in Vue Timeline component | Syncfusion
-description: Learn here all about Alignment in Syncfusion Vue Timeline component of Syncfusion Essential JS 2 and more.
+description: Align Vue Timeline content as Before, After, Alternate, or AlternateReverse using the align property, with oppositeContent shown parallel to content.
 control: Alignment 
 platform: ej2-vue
 documentation: ug

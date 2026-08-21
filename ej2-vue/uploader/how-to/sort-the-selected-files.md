@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sort the selected files in Vue Uploader component | Syncfusion
-description: Learn here all about Sort the selected files in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: How to sort selected files in Vue Uploader | Syncfusion
+description: Sort the Syncfusion Vue Uploader file list by name, size, or type in the selected event to show files in the desired order.
 control: Sort the selected files 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sort the selected files in Vue Uploader component
+# How to sort selected files in Vue Uploader
 
 You can sort the selected files list and shown the list items in meaningful order. By using [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/#selected) event,
 you can achieve this behavior in uploader component.

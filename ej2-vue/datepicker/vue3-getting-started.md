@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started vue3 with Vue Datepicker component | Syncfusion
-description:  Checkout and learn about Getting Started vue3 with Vue Datepicker component of Syncfusion Essential JS 2 and more details.
-control: Getting Started vue3 
+title: Getting Started with Vue 3 DatePicker | Syncfusion
+description: Step-by-step guide to install, configure, and render the Syncfusion Vue DatePicker in a Vue 3 project using Vite and Composition or Options API.
+control: Getting Started vue3
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue DatePicker Component in Vue 3
+# Getting Started with Vue 3 DatePicker
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DatePicker component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 

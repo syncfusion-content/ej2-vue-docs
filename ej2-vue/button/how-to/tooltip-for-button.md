@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip for button in Vue Button component | Syncfusion
-description: Learn here all about Tooltip for button in Syncfusion Vue Button component of Syncfusion Essential JS 2 and more.
+title: How to add tooltip for button in Vue Button | Syncfusion
+description: Display a tooltip on Vue Button hover by setting the native HTML title attribute to show contextual help text to users.
 control: Tooltip for button 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip for button in Vue Button component
+# How to add tooltip for button in Vue Button
 
 Tooltip can be shown on Button hover and it can be achieved by setting `title` attribute.
 

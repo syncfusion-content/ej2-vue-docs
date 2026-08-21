@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue MultiSelect component | Syncfusion
-description:  Checkout and learn about Getting started with Vue MultiSelect component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue MultiSelect Dropdown in Vue 2 | Syncfusion
+description: Set up a Vue 2 project with Vue-CLI and integrate the Syncfusion Vue MultiSelect Dropdown using the Composition or Options API.
 control: MultiSelect
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue MultiSelect Component in Vue 2
+# Getting Started with Vue MultiSelect Dropdown in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue MultiSelect component.
 

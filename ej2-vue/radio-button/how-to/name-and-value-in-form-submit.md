@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Name and value in form submit in Vue Radio button component | Syncfusion
-description: Learn here all about Name and value in form submit in Syncfusion Vue Radio button component of Syncfusion Essential JS 2 and more.
+title: Post name and value on form submit in Vue Radio Button | Syncfusion
+description: Learn how to post the checked Syncfusion Vue Radio Button value to the server on form submit by grouping radio buttons with the name attribute and reading the value.
 control: Name and value in form submit 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Name and value in form submit in Vue Radio button component
+# How to post name and value on form submit in Vue Radio Button
 
 The [`name`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#name) attribute of the RadioButton is used to group RadioButton. When the RadioButton are grouped in form, the checked items [`value`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#value) attribute will be post to server on form submit that can be retrieved through the name. The disabled RadioButton value will not be sent to the server on form submit.
 

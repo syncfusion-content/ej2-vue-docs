@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Server actions in Vue Inplace editor component | Syncfusion
-description: Learn here all about Server actions in Syncfusion Vue Inplace editor component of Syncfusion Essential JS 2 and more.
+title: Server Actions in Vue In-place Editor | Syncfusion
+description: Submit Vue In-place Editor values to the server using primaryKey and URL, handle actionSuccess and actionFailure events with SubmitModel and controller code.
 control: Server actions 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server actions in Vue Inplace editor component
+# Server Actions in Vue In-place Editor
 
-By passing In-place Editor component value to the server, the [primaryKey](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#primarykey) property value must require, otherwise action not performed for remote data.
+By passing In-place Editor component value to the server, the [primaryKey](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#primarykey) property value must require, otherwise action not performed for remote data.
 
-If the [URL](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#url) property value is empty, data passing will handled at local and also the [actionSuccess](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#actionsuccess) event will trigger with `null` as argument value.
+If the [URL](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#url) property value is empty, data passing will handled at local and also the [actionSuccess](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#actionsuccess) event will trigger with `null` as argument value.
 
 > The following arguments are passed to the server when submit actions perform.
 
@@ -43,9 +43,9 @@ public IEnumerable<SubmitModel> UpdateData([FromBody]SubmitModel value)
 
 ```
 
-* Server actions successfully done, the [actionSuccess](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#actionsuccess) event will be fired with returned server data.
+* Server actions successfully done, the [actionSuccess](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#actionsuccess) event will be fired with returned server data.
 
-* If the server is not responding, the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#actionfailure) event will be fired with data, but value not updated in the Editor.
+* If the server is not responding, the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#actionfailure) event will be fired with data, but value not updated in the Editor.
 
 In the following sample, the `actionSuccess` event will trigger once the value submitted successfully into the server. In this sample, both `actionSuccess` and `actionFailure` were configured and resulted value will be converted to chips.
 

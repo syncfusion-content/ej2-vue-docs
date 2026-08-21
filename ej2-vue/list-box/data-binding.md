@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Vue List box component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue ListBox | Syncfusion
+description: Bind the Syncfusion Vue ListBox to local arrays of strings, objects, or remote services, mapping text, value, groupBy, and iconCss fields.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue List box component
+# Data Binding in Vue ListBox
 
 The ListBox loads the data either from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#datasource)property. It supports the data type of `array` or `DataManager`.
 

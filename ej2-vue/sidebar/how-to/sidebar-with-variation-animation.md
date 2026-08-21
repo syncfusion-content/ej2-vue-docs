@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sidebar with variation animation in Vue Sidebar component | Syncfusion
-description: Learn here all about Sidebar with variation animation in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: Render Sidebar with custom animation in Vue Sidebar | Syncfusion
+description: Apply custom CSS animation effects to the Vue Sidebar expand and collapse transitions, with the sidebar auto-adjusting its animation to match custom sizes.
 control: Sidebar with variation animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sidebar with variation animation in Vue Sidebar component
+# How to render Sidebar with custom animation in Vue Sidebar
 
 In the following example, the Sidebar is rendered with custom animation effects. Click the buttons available in the main content area to check how the custom animations work with the Sidebar.
 

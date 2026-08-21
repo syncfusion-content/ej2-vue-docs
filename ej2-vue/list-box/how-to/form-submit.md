@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form submit in Vue List box component | Syncfusion
-description: Learn here all about Form submit in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: How to submit form data in Vue ListBox | Syncfusion
+description: Submit the selected Syncfusion Vue ListBox value as part of an HTML form by placing the ListBox inside a form element with a name attribute.
 control: Form submit 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form submit in Vue List box component
+# How to submit form data in Vue ListBox
 
 In the following code snippet, the value that is in selected state will be sent on form submit.
 

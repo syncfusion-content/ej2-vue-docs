@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Accessibility in Vue Image Editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Image Editor component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+description: Learn how the Vue Image Editor meets WCAG 2.2, Section 508, screen reader, color contrast, and keyboard navigation accessibility standards.
+control: Accessibility
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##

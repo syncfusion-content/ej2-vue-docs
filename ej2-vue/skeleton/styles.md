@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Styles in Vue Skeleton component | Syncfusion
-description: Learn here all about Styles in Syncfusion Vue Skeleton component of Syncfusion Essential JS 2 and more.
+title: Styles in Vue Skeleton | Syncfusion
+description: Customize Vue Skeleton appearance with the cssClass property and control visibility using the visible property.
 control: Styles 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in Vue Skeleton component
+# Styles in Vue Skeleton
 
 You can customize skeleton control in the below ways.
 
 ## cssClass
 
-You can customize the style of a Skeleton control by using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/skeleton/#cssclass). The appearance of Vue Skeleton can be customized by changing the wave color, background color, width, and height. For detailed information, refer `index.css` file below.
+You can customize the style of a Skeleton control by using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/skeleton#cssclass). The appearance of Vue Skeleton can be customized by changing the wave color, background color, width, and height. For detailed information, refer `index.css` file below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ You can customize the style of a Skeleton control by using [`cssClass`](https://
 
 ## Visible
 
-You can use the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/skeleton/#visible) property which defines the visible state of Skeleton.
+You can use the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/skeleton#visible) property which defines the visible state of Skeleton.
 
 ```
 <template>

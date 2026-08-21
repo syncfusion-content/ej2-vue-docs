@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Submit name and value in form in Vue Switch component | Syncfusion
-description: Learn here all about Submit name and value in form in Syncfusion Vue Switch component of Syncfusion Essential JS 2 and more.
+title: Submit name and value in form in Vue Toggle Switch Button | Syncfusion
+description: Learn how to post the checked Syncfusion Vue Toggle Switch Button value to the server on form submit by grouping switches with the name attribute and using the value.
 control: Submit name and value in form 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Submit name and value in form in Vue Switch component
+# How to submit name and value in form in Vue Toggle Switch Button
 
 The [`name`](https://ej2.syncfusion.com/vue/documentation/api/switch/#name) attribute of the Switch is used to group Switches. When the Switches are grouped in form, the checked items
 [`value`](https://ej2.syncfusion.com/vue/documentation/api/switch/#value) attribute will post to the server on form submit. The disabled and unchecked Switch values will not be sent to

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Config in Vue Toast component | Syncfusion
-description: Learn here all about Config in Syncfusion Vue Toast component of Syncfusion Essential JS 2 and more.
+title: Config in Vue Toaster | Syncfusion
+description: Customize the appearance of the Vue Toaster using built-in APIs for content, position, timeout, and other display options.
 control: Config 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Config in Vue Toast component
+# Config in Vue Toaster
 
 This section explains the steps required to customize the appearance of the toast using built-in APIs.
 
 ## Title and content template
 
-Toast can be created with the notification message. The message contains [title](https://ej2.syncfusion.com/vue/documentation/api/toast/#title) and [content](https://ej2.syncfusion.com/vue/documentation/api/toast/#content) of the toasts. The title and contents are adaptable in any resolution.
+Toast can be created with the notification message. The message contains [title](https://ej2.syncfusion.com/vue/documentation/api/toast#title) and [content](https://ej2.syncfusion.com/vue/documentation/api/toast#content) of the toasts. The title and contents are adaptable in any resolution.
 
 > The Title or Content property can be given as HTML element/element ID to a string that can be displayed as a toast.
 
@@ -31,23 +31,23 @@ Toast can be created with the notification message. The message contains [title]
 
 ## Specifying custom target
 
-By default, the toast can be rendered in the document body. You can change the target position for toast rendering using the [target](https://ej2.syncfusion.com/vue/documentation/api/toast/#target) property. Based on the target, the [position](https://ej2.syncfusion.com/vue/documentation/api/toast/#position) will be updated.
+By default, the toast can be rendered in the document body. You can change the target position for toast rendering using the [target](https://ej2.syncfusion.com/vue/documentation/api/toast#target) property. Based on the target, the [position](https://ej2.syncfusion.com/vue/documentation/api/toast#position) will be updated.
 
 ## Close button
 
-By default, the [showCloseButton](https://ej2.syncfusion.com/vue/documentation/api/toast/#showclosebutton) is not enabled. You can enable it by setting the true value. Before expiring the toast, you can use this button to close or destroy toasts manually.
+By default, the [showCloseButton](https://ej2.syncfusion.com/vue/documentation/api/toast#showclosebutton) is not enabled. You can enable it by setting the true value. Before expiring the toast, you can use this button to close or destroy toasts manually.
 
 ## Progress bar
 
-By default, the [showProgressBar](https://ej2.syncfusion.com/vue/documentation/api/toast/#showprogressbar) is not enabled. If it is enabled, it can visually indicate how long to get toast expires. Based on the [timeOut](https://ej2.syncfusion.com/vue/documentation/api/toast/#timeout) property, progress bar will appear.
+By default, the [showProgressBar](https://ej2.syncfusion.com/vue/documentation/api/toast#showprogressbar) is not enabled. If it is enabled, it can visually indicate how long to get toast expires. Based on the [timeOut](https://ej2.syncfusion.com/vue/documentation/api/toast#timeout) property, progress bar will appear.
 
 ### Progress bar direction
 
-By default, the [progressDirection](https://ej2.syncfusion.com/vue/documentation/api/toast/#progressDirection) is set to "Rtl" and it will appear from right to left direction. You can change the progressDirection to "Ltr" to make it appear from left to right direction.
+By default, the [progressDirection](https://ej2.syncfusion.com/vue/documentation/api/toast#progressDirection) is set to "Rtl" and it will appear from right to left direction. You can change the progressDirection to make it appear from left to right direction.
 
 ## Newest on top
 
-By default, the newly created toasts will append next with existing toasts. You can change the sequence like inserting before the toast by enabling the [newestOnTop](https://ej2.syncfusion.com/vue/documentation/api/toast/#newestontop).
+By default, the newly created toasts will append next with existing toasts. You can change the sequence like inserting before the toast by enabling the [newestOnTop](https://ej2.syncfusion.com/vue/documentation/api/toast#newestontop).
 
 Here, The following sample demonstrates the combination of the `target`, `showCloseButton`, `showProgressBar`, and `newestOnTop` properties in toast.
 
@@ -64,7 +64,7 @@ Here, The following sample demonstrates the combination of the `target`, `showCl
 
 ## Width and height
 
-The dimensions of the toast can be set using the [width](https://ej2.syncfusion.com/vue/documentation/api/toast/#width) and [height](https://ej2.syncfusion.com/vue/documentation/api/toast/#height) properties. This will individually set all toasts. You can create different custom dimension toasts.
+The dimensions of the toast can be set using the [width](https://ej2.syncfusion.com/vue/documentation/api/toast#width) and [height](https://ej2.syncfusion.com/vue/documentation/api/toast#height) properties. This will individually set all toasts. You can create different custom dimension toasts.
 
 By default, the toast can be rendered with `300px` width with `auto` height.
 

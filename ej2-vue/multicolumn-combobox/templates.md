@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about templates with Vue MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: Templates in Vue MultiColumn ComboBox | Syncfusion
+description: Customize each list item, header, and footer in the Syncfusion Vue MultiColumn ComboBox using itemTemplate, headerTemplate, and footerTemplate.
 platform: ej2-vue
 control: MultiColumn ComboBox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue MultiColumn ComboBox component
+# Templates in Vue MultiColumn ComboBox
 
 The MultiColumn ComboBox provides several template options to customize each items, groups, header and footer elements.
 

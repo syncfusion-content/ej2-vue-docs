@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Speed dial component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Speed Dial | Syncfusion
+description: Learn about the accessibility standards of the Syncfusion Vue Speed Dial, including WCAG 2.2, Section 508, screen reader, keyboard navigation, RTL, and WAI-ARIA attribute support.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Speed dial component
+# Accessibility in Vue Speed Dial
 
 The Speed Dial component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

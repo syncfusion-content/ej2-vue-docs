@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Orientations in Vue Timeline component | Syncfusion
-description: Learn here all about Orientations in Syncfusion Vue Timeline component of Syncfusion Essential JS 2 and more.
-control: Orientations 
+title: Orientations in Vue Timeline | Syncfusion
+description: Display Vue Timeline items in vertical or horizontal directions using the orientation property to control the layout flow.
+control: Orientations
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orientations in Vue Timeline component
+# Orientations in Vue Timeline
 
 The Timeline component supports displaying items in either vertical or horizontal directions via the [orientation](https://ej2.syncfusion.com/vue/documentation/api/timeline#orientation) property.
 

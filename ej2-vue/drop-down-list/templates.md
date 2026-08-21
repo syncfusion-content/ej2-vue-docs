@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue Drop down list component | Syncfusion
-description: Learn here all about Templates in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: Templates in Vue Dropdown List | Syncfusion
+description: Customize Syncfusion Vue Dropdown List items, group title, header, footer, and selected value display using the built-in template engine.
 control: Templates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue Drop down list component
+# Templates in Vue Dropdown List
 
 The DropDownList has been provided with several options to customize each list item, group title, selected value, header, and footer elements. It uses the Essential<sup style="font-size:70%">&reg;</sup> JS 2 `Template engine` to compile and render the elements properly.
 

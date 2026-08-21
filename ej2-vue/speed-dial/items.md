@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Items in Vue Speed dial component | Syncfusion
-description: Learn here all about Items in Syncfusion Vue Speed dial component of Syncfusion Essential JS 2 and more.
+title: Items in Vue Speed Dial | Syncfusion
+description: Learn how to add action items to the Syncfusion Vue Speed Dial using the items property, and customize each item with text, iconCss, disabled, id, and title fields.
 control: Items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Items in Vue Speed dial component
+# Items in Vue Speed Dial
 
 The Vue Speed Dial action items can be added by using [`items`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#items) property.
 

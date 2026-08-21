@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add textbox programmatically in Vue Textbox component | Syncfusion
-description: Learn here all about Add textbox programmatically in Syncfusion Vue Textbox component of Syncfusion Essential JS 2 and more.
+title: How to add TextBox programmatically in Vue TextBox | Syncfusion
+description: Render a Syncfusion Vue TextBox programmatically using createInput and pass an HTML input element with optional buttons for icons.
 control: Add textbox programmatically 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add textbox programmatically in Vue Textbox component
+# How to add TextBox programmatically in Vue TextBox
 
 * Create a TypeScript file and import the `Input` modules from `ej2-inputs` library as shown below.
 

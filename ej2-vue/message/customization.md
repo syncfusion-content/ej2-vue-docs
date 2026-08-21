@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Message component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Message component of Syncfusion Essential JS 2 and more.
+title: Customization in Vue Message | Syncfusion
+description: Customize Vue Message content alignment to left, center, or right, apply rounded or square shapes via cssClass, or render pure CSS messages.
 control: Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Message component
+# Customization in Vue Message
 
 The Message component allows the user to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
 

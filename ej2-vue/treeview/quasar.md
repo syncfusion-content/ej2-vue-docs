@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Quasar Getting Started with Vue TreeView Component | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue TreeView Component of Syncfusion Essential JS 2 and more details.
+title: Quasar Getting Started with Vue TreeView | Syncfusion
+description: Learn how to get started with the Syncfusion Vue TreeView control. Explore setup, features, examples, and customization options.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the TreeView Component in the Quasar Framework
+# Getting Started with the TreeView in the Quasar Framework
 
 This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 

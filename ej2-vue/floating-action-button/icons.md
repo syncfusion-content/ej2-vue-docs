@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in Vue Floating action button component | Syncfusion
-description: Learn here all about Icons in Syncfusion Vue Floating action button component of Syncfusion Essential JS 2 and more.
+title: Icons in Vue Floating Action Button | Syncfusion
+description: Learn how to customize the icon and text of the Syncfusion Vue Floating Action Button using the iconCss and content properties, and change the icon position.
 control: Icons 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in Vue Floating action button component
+# Icons in Vue Floating Action Button
 
 You can customize the icon and text of Vue Floating Action Button(FAB) using [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#iconcss) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#content) properties.
 

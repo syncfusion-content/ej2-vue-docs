@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Columns in Vue Query builder component | Syncfusion
-description: Learn here all about Columns in Syncfusion Vue Query builder component of Syncfusion Essential JS 2 and more.
+title: Columns in Vue Query Builder UI | Syncfusion
+description: Define column schemas in the Vue Query Builder UI with field, label, operators, format, step, and validation for accurate filter rendering.
 control: Columns 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in Vue Query builder component
+# Columns in Vue Query Builder UI
 
-The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource) schema in the Query Builder. This plays a vital role in rendering column values. The query builder operations such as create or delete conditions and create or delete group they are performed based on the column definitions. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#field) property of the columns is necessary to map the data source values in the query builder columns.
+The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) schema in the Query Builder. This plays a vital role in rendering column values. The query builder operations such as create or delete conditions and create or delete group they are performed based on the column definitions. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#field) property of the columns is necessary to map the data source values in the query builder columns.
 
-> If the column field is not specified in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource), the column values will be empty.
+> If the column field is not specified in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource), the column values will be empty.
 
 ## Auto generation
 
-The [`columns`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#columns) are automatically generated when the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#columns) declaration is empty or undefined while initializing the query builder. All the columns in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource) are bound as the query builder columns.
+The [`columns`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#columns) are automatically generated when the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#columns) declaration is empty or undefined while initializing the query builder. All the columns in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) are bound as the query builder columns.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,15 +29,15 @@ The [`columns`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#
         
 {% previewsample "page.domainurl/code-snippet/query-builder/default-cs1" %}
 
-> When columns are auto-generated, the column type will be determined from the first record of the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource).
+> When columns are auto-generated, the column type will be determined from the first record of the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource).
 
 ## Labels
 
-By default, the column label is displayed from the column [`field`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#field) value. To override the default label, you have to define the [`label`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#label) value.
+By default, the column label is displayed from the column [`field`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#field) value. To override the default label, you have to define the [`label`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#label) value.
 
 ## Operators
 
-The operator for a column can be defined in the [`operators`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#operators) property.
+The operator for a column can be defined in the [`operators`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#operators) property.
 
 The available operators and its supported data types are:
 
@@ -59,11 +59,11 @@ The available operators and its supported data types are:
 
 ## Step
 
-The Query Builder allows you to set the step values to the number fields. So that you can easily access the numeric textbox. Use the [`step`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#step) property, to set the step value for number values.
+The Query Builder allows you to set the step values to the number fields. So that you can easily access the numeric textbox. Use the [`step`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#step) property, to set the step value for number values.
 
 ## Format
 
-The Query Builder formats date and number values. Use the [`format`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#format) property to format date and number values.
+The Query Builder formats date and number values. Use the [`format`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#format) property to format date and number values.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,7 +78,7 @@ The Query Builder formats date and number values. Use the [`format`](https://ej2
 
 ## Validations
 
-Validation allows you to validate the conditions and it display errors for invalid fields while using  the [`validateFields`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#validatefields) method.  To enable validation in the query builder , set the allowValidation to true. Column fields are validated after setting [`allowValidation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#allowvalidation) as to true. So, you should manually configure the validation for Operator and, Value fields through [`validation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#validation).
+Validation allows you to validate the conditions and it display errors for invalid fields while using  the [`validateFields`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#validatefields) method.  To enable validation in the query builder , set the allowValidation to true. Column fields are validated after setting [`allowValidation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#allowvalidation) as to true. So, you should manually configure the validation for Operator and, Value fields through [`validation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#validation).
 
 Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Buttons` packages using below command.
 
@@ -97,5 +97,5 @@ npm install @syncfusion/ej2-vue-buttons --save
         
 {% previewsample "page.domainurl/code-snippet/query-builder/default-cs3" %}
 
-> Set [`isRequired`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/validation/#isrequired) validation for `Operator` and `Value` fields.
-> Set [`max`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/validation/#max), [`min`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/validation/#min) values for number values.
+> Set [`isRequired`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/validation#isrequired) validation for `Operator` and `Value` fields.
+> Set [`max`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/validation#max), [`min`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/validation#min) values for number values.

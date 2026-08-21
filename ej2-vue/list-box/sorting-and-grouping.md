@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting and grouping in Vue List box component | Syncfusion
-description: Learn here all about Sorting and grouping in Syncfusion Vue List box component of Syncfusion Essential JS 2 and more.
+title: Sorting and Grouping in Vue ListBox | Syncfusion
+description: Sort the Syncfusion Vue ListBox items in ascending or descending order and group related items by category using sortOrder and groupBy.
 control: Sorting and grouping 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting and grouping in Vue List box component
+# Sorting and Grouping in Vue ListBox
 
 ## Sorting
 

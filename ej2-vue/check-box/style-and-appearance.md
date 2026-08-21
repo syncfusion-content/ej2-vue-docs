@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue Check box component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Check box component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Checkbox | Syncfusion
+description: Customize the Vue Checkbox frame, label, and check icon styles by overriding default CSS classes or building a theme.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Check box component
+# Style and Appearance in Vue Checkbox
 
 To modify the CheckBox appearance, you need to override the default CSS of CheckBox component. Please find the list of CSS classes and its corresponding section in CheckBox. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

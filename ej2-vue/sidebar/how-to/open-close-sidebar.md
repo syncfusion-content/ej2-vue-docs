@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open close sidebar in Vue Sidebar component | Syncfusion
-description: Learn here all about Open close sidebar in Syncfusion Vue Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to open and close sidebar in Vue Sidebar | Syncfusion
+description: Open and close the Vue Sidebar programmatically using the built-in show, hide, and toggle public methods to control sidebar visibility on user action.
 control: Open close sidebar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open close sidebar in Vue Sidebar component
+# How to open and close sidebar in Vue Sidebar
 
 Opening and closing the Sidebar can be achieved with built-in public methods.
 

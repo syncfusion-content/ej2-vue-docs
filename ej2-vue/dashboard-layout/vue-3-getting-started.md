@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started Vue3 with the Dashboard Layout component | Syncfusion
-description: Check out and learn about Getting Started Vue3 with the Vue Dashboard Layout component of Syncfusion Essential JS 2 and more details.
+description: Set up a Vue 3 project with Vite and integrate the Syncfusion Vue Dashboard Layout component using the Composition API or Options API.
 control: Getting Started Vue3
 platform: ej2-vue
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize selected tab styles in Vue Tab component | Syncfusion
-description: Learn here all about Customize selected tab styles in Syncfusion Vue Tab component of Syncfusion Essential JS 2 and more.
+title: How to customize selected tab styles in Vue Tabs | Syncfusion
+description: Apply custom CSS classes or styles to the active or selected Vue Tabs item using the cssClass property and e-active CSS class overrides.
 control: Customize selected tab styles 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize selected tab styles in Vue Tab component
+# How to customize selected tab styles in Vue Tabs
 
 You can customize the Tab style by overriding its header and active tab CSS classes. Define HTML string for adding animation and customizing
 the Tab header and pass it to [`text`](https://ej2.syncfusion.com/vue/documentation/api/tab/header#text) property. Now you can override the style using custom CSS classes added to

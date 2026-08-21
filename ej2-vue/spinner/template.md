@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Spinner component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Spinner component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Spinner | Syncfusion
+description: Use a custom template for the Vue Spinner in place of the default by passing your template content to the setSpinner method before rendering the component.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Spinner component
+# Template in Vue Spinner
 
 You can use custom templates on the Spinner instead of the default Spinner by specifying the template in the `setSpinner` method.
 

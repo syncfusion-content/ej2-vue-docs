@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in Vue Numerictextbox component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Vue Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Globalization in Vue Numeric Textbox | Syncfusion
+description: Localize spin button tooltips, parse and format numbers with CLDR data, and enable RTL in the Syncfusion Vue Numeric Textbox.
 control: Globalization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Numerictextbox component
+# Globalization in Vue Numeric Textbox
 
 ## Localization
 

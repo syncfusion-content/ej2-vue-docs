@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in Vue Signature component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue Signature component of Syncfusion Essential JS 2 and more.
+title: Customization in Vue Signature | Syncfusion
+description: Tune the Syncfusion Vue Signature stroke width, stroke color, background color, and background image for natural-feeling input.
 control: Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue Signature component
+# Customization in Vue Signature
 
 The Signature component draws stroke/path using moveTo() and lineTo() methods to connect one or more points while drawing in canvas. The stroke width can be modified by using its color and width. And the background can be modified by using its background color and background image.
 

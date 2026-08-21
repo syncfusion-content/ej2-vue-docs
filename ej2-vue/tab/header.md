@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header in Vue Tab component | Syncfusion
-description: Learn all about headers, header styles, and header icon positions in the Vue Tab component of Syncfusion Essential JS 2.
+title: Header in Vue Tabs | Syncfusion
+description: Customize Vue Tabs header styles, icon positions, and overflow behavior using header-related properties like headerPlacement and overflowMode.
 control: Header 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header in Vue Tab component
+# Header in Vue Tabs
 
 This section explains about modifying the style of Tab header, and configuring its icons and positions.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Size and color in Vue Appbar component | Syncfusion
-description: Learn here all about Size and color in Syncfusion Vue Appbar component of Syncfusion Essential JS 2 and more.
+title: Size and Color in Vue AppBar | Syncfusion
+description: Set Vue AppBar height with Regular, Prominent, or Dense modes and apply color themes such as light, dark, primary, or inherit via properties.
 control: Size and color 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Size and color in Vue Appbar component
+# Size and Color in Vue AppBar
 
 ## Size
 

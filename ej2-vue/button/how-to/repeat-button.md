@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Repeat button in Vue Button component | Syncfusion
-description: Learn here all about Repeat button in Syncfusion Vue Button component of Syncfusion Essential JS 2 and more.
+title: How to use repeat button in Vue Button | Syncfusion
+description: Configure the Vue Button to fire the clicked event at regular intervals while pressed using the enableRepeat and interval properties.
 control: Repeat button 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Repeat button in Vue Button component
+# How to use repeat button in Vue Button
 
 The Repeat button is a type of Button in that the click event is triggered at regular time interval from the pressed state till the released state.
 

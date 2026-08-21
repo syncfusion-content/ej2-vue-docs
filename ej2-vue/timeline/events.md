@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue Timeline component | Syncfusion
-description: Learn here all about Events in Syncfusion Vue Timeline component of Syncfusion Essential JS 2 and more.
-control: Events 
+title: Events in Vue Timeline | Syncfusion
+description: Handle Vue Timeline component interaction events triggered during user actions to respond to changes in the Timeline state.
+control: Events
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Timeline component
+# Events in Vue Timeline
 
 This section describes Timeline events that are triggered during component interactions. The following events are available in the Timeline component.
 

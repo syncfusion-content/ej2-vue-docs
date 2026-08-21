@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Drop down list component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Vue Dropdown List Component | Syncfusion
+description: Learn about the Syncfusion Vue Dropdown List component and its key features, including data binding, grouping, sorting, filtering, and templates.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Drop down list component
+# About Syncfusion Vue Dropdown List Component.
 
 The DropDownList component contains a list of predefined values from which a single value can be chosen. When an arrow icon accompanied with this component is pressed, the dropdown displays a list of values from which you can select one.
 

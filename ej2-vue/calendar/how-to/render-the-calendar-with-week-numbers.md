@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Render the calendar with week numbers in Vue Calendar component | Syncfusion
-description: Learn here all about Render the calendar with week numbers in Syncfusion Vue Calendar component of Syncfusion Essential JS 2 and more.
-control: Render the calendar with week numbers 
+title: How to show week numbers in Vue Calendar | Syncfusion
+description: Display ISO week numbers in the Syncfusion Vue Calendar by enabling the weekNumber property to render a leading week column.
+control: Render the calendar with week numbers
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render the calendar with week numbers in Vue Calendar component
+# How to show week numbers in Vue Calendar
 
 You can enable `weekNumbers` in the Calendar by using the [`weekNumber`](https://ej2.syncfusion.com/vue/documentation/api/calendar#weeknumber) property.
 

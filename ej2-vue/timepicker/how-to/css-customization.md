@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Css customization in Vue Timepicker component | Syncfusion
-description: Learn here all about Css customization in Syncfusion Vue Timepicker component of Syncfusion Essential JS 2 and more.
-control: Css customization 
+title: How to customize CSS in Vue TimePicker | Syncfusion
+description: Customize the Syncfusion Vue TimePicker textbox and popup list appearance using the cssClass property and override built-in CSS classes.
+control: Css customization
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Css customization in Vue Timepicker component
+# How to customize CSS in Vue TimePicker
 
 TimePicker allows you to customize the textbox and popup list appearance to suit your application by using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/timepicker#cssclass) property.
 

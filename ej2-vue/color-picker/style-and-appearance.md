@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in Vue Color picker component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Vue Color picker component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in Vue Color Picker | Syncfusion
+description: Customize the Syncfusion Vue Color Picker look by overriding CSS classes for handler, container, palette, switch, and slider.
 control: Style and appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in Vue Color picker component
+# Style and Appearance in Vue Color Picker
 
 To modify the ColorPicker appearance, you need to override the default CSS of ColorPicker component. Please find the list of CSS classes and its corresponding section in ColorPicker component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

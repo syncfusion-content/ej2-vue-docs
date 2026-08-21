@@ -1,14 +1,14 @@
 ---
 layout: post
-title: View in Vue Datepicker component | Syncfusion
-description: Learn here all about View in Syncfusion Vue Datepicker component of Syncfusion Essential JS 2 and more.
-control: View 
+title: Start and Depth View in Vue DatePicker | Syncfusion
+description: Set the Syncfusion Vue DatePicker start and depth views to control initial render and limit drill-down across month, year, and decade.
+control: View
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# View in Vue Datepicker component
+# Start and Depth View in Vue DatePicker
 
 The [Vue DatePicker](https://www.syncfusion.com/vue-ui-components/vue-datepicker) has the following predefined views that provides a flexible way to navigate back and forth to select the date.
 

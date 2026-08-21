@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Expand mode in Vue Accordion component | Syncfusion
-description: Learn here all about Expand mode in Syncfusion Vue Accordion component of Syncfusion Essential JS 2 and more.
+title: Expand Mode in Vue Accordion | Syncfusion
+description: Configure Vue Accordion to expand one panel at a time (Single mode) or several panels together (Multiple mode) using the expandMode property.
 control: Expand mode 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Expand mode in Vue Accordion component
+# Expand Mode in Vue Accordion
 
  The Accordion supports the two listed types of expand modes while expanding or collapsing the item.
 

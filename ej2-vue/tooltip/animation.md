@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in Vue Tooltip component | Syncfusion
-description: Learn here all about Animation in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Animation in Vue Tooltip | Syncfusion
+description: Animate the Vue Tooltip open and close actions using the animation property to set effect, delay, and duration, with FadeIn and FadeOut as the defaults.
 control: Animation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in Vue Tooltip component
+# Animation in Vue Tooltip
 
 To animate the Tooltip, a set of specific animation effects is available, which can be controlled using the [`animation`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#animation) property. The `animation` property also allows you to set delay, duration, and various other effects of your choice.
 

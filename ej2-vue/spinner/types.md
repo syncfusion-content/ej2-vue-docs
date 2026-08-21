@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types in Vue Spinner component | Syncfusion
-description: Learn here all about Types in Syncfusion Vue Spinner component of Syncfusion Essential JS 2 and more.
+title: Types in Vue Spinner | Syncfusion
+description: Set the Vue Spinner type to Material, Fabric, or Bootstrap using the setSpinner method, or leave it to follow the theme imported into the page.
 control: Types 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types in Vue Spinner component
+# Types in Vue Spinner
 
 By default, the Spinner is loaded in the applicable Essential<sup style="font-size:70%">&reg;</sup> JS 2 component based on the theme imported into the page. Based on the theme, the type is set to the Spinner.
 

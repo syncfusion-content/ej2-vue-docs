@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position in Vue Tooltip component | Syncfusion
-description: Learn here all about Position in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Position in Vue Tooltip | Syncfusion
+description: Position the Vue Tooltip at one of 12 static locations around the target using the position property, with TopCenter as the default placement.
 control: Position 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position in Vue Tooltip component
+# Position in Vue Tooltip
 
 Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, you can set the [`position`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#position) property with any one of the following values:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue Rating component | Syncfusion
-description: Learn here all about Templates in Syncfusion Vue Rating component of Syncfusion Essential JS 2 and more.
+title: Templates in Vue Rating | Syncfusion
+description: Render Syncfusion Vue Rating icons as emoji, SVG, PNG, or any custom HTML using emptyTemplate and fullTemplate.
 control: Templates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue Rating component
+# Templates in Vue Rating
 
 The rating component allows you to customize the appearance of the rating items using templates. You can use templates to specify a custom layout for the rating items, which can include any content you want. This allows you to create a more customized and interactive rating experience for the user.
 

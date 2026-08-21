@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Responsive mode in Vue Toolbar component | Syncfusion
-description: Learn here all about Responsive mode in Syncfusion Vue Toolbar component of Syncfusion Essential JS 2 and more.
+title: Responsive Mode in Vue Toolbar | Syncfusion
+description: Enable responsive scrolling for the Vue Toolbar on mobile devices so overflow items are accessible via scroll buttons when space is limited.
 control: Responsive mode 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Responsive mode in Vue Toolbar component
+# Responsive Mode in Vue Toolbar
 
 This section explains the supported display modes of the Toolbar when the content exceeds the viewing area. Possible modes are:
 

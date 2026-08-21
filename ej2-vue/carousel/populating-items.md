@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Populating items in Vue Carousel component | Syncfusion
-description: Learn here all about Populating items in Syncfusion Vue Carousel component of Syncfusion Essential JS 2 and more.
+title: Populating Items in Vue Carousel | Syncfusion
+description: Render Vue Carousel slides using item tag directives per-slide templates or bind a common itemTemplate data source for all items at once.
 control: Populating items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Populating items in Vue Carousel component
+# Populating Items in Vue Carousel
 
 In the Carousel, slides can be rendered in two ways as follows,
 

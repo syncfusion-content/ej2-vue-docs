@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Precision modes in Vue Rating component | Syncfusion
-description: Learn here all about Precision modes in Syncfusion Vue Rating component of Syncfusion Essential JS 2 and more.
+title: Precision Modes in Vue Rating | Syncfusion
+description: Pick exact, quarter, half, or full increment precision in the Syncfusion Vue Rating using the precision property for finer rating feedback.
 control: Precision modes 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Precision modes in Vue Rating component
+# Precision Modes in Vue Rating
 
 You can use the [`precision`](https://ej2.syncfusion.com/vue/documentation/api/rating/#precision) property of the rating component to provide ratings with varying levels of precision.
 

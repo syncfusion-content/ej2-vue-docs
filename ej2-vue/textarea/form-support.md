@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Support with Vue TextArea component | Syncfusion
-description: Checkout and learn about Form support of the Vue TextArea component of Syncfusion Essential JS 2 and more details.
+title: Form Support in Vue TextArea | Syncfusion
+description: Submit multiline values from the Syncfusion Vue TextArea inside HTML forms or validate them with the FormValidator component.
 control: Form Support
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Support in Vue TextArea Component
+# Form Support in Vue TextArea
 
 The TextArea component seamlessly integrates with HTML forms, enabling efficient submission of longer text data. By including TextArea inputs within HTML forms, users can conveniently input multiline text content and submit it as part of form submissions.
 

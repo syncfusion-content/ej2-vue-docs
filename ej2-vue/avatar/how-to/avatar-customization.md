@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Avatar customization in Vue Avatar component | Syncfusion
-description: Learn here all about Avatar customization in Syncfusion Vue Avatar component of Syncfusion Essential JS 2 and more.
+description: Customize Vue Avatar by applying custom colors, scaling sizes via font-size, and using varied media such as SVGs, font-icons, images, and letters.
 control: Avatar customization 
 platform: ej2-vue
 documentation: ug

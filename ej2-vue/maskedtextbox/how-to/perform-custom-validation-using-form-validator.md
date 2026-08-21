@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom validation in Vue Maskedtextbox component | Syncfusion
-description: Learn here all about Perform custom validation using form validator in Syncfusion Vue Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Custom validation using FormValidator | Syncfusion
+description: Validate mobile numbers in the Syncfusion Vue MaskedTextBox with a custom FormValidator rule and a rules collection.
 control: Perform custom validation using form validator 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom validation using form validator in Vue Maskedtextbox component
+# How to perform custom validation using FormValidator
 
 To perform custom validation on the MaskedTextBox use the FormValidator along with custom validation rules.
 

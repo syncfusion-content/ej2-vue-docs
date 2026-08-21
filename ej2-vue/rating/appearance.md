@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in Vue Rating component | Syncfusion
-description: Learn here all about Appearance in Syncfusion Vue Rating component of Syncfusion Essential JS 2 and more.
+title: Appearance in Vue Rating | Syncfusion
+description: Customize Syncfusion Vue Rating items count, disabled, read-only, visible states, colors, spacing, and icons via cssClass.
 control: Appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue Rating component
+# Appearance in Vue Rating
 
 You can also customize the appearance of rating component.
 

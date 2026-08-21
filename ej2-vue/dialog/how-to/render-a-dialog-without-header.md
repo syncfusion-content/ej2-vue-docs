@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Render a dialog without header in Vue Dialog component | Syncfusion
-description: Learn here all about Render a dialog without header in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: How to render without header in Vue Dialog | Syncfusion
+description: Render the Vue Dialog without a header by setting the header property to an empty string or null, which is also the default behavior of the control.
 control: Render a dialog without header 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render a dialog without header in Vue Dialog component
+# How to render without header in Vue Dialog
 
-The dialog can be rendered without header by setting the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog/#header) property value as empty string or null. By default, dialog is rendered without header.
+The dialog can be rendered without header by setting the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog#header) property value as empty string or null. By default, dialog is rendered without header.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

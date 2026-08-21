@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Group header in Vue Drop down list component | Syncfusion
-description: Learn here all about Group header in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to disable the fixed group header in Vue Dropdown List | Syncfusion
+description: Disable the fixed group header in the Syncfusion Vue Dropdown List popup by setting CSS visibility on the fixed header element.
 control: Group header 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group header in Vue Drop down list component
+# How to disable the fixed group header in Vue Dropdown List
 
 The following example demonstrate about how to disable the Fixed group header in DropDownList through CSS by using `visibility` attribute.
 

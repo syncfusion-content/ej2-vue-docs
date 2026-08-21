@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open a dialog on popup item click in Vue Split button component | Syncfusion
-description: Learn here all about Open a dialog on popup item click in Syncfusion Vue Split button component of Syncfusion Essential JS 2 and more.
+title: Open a dialog on popup item click in Vue Split Button | Syncfusion
+description: Open a Dialog component when a Vue Split Button popup item is selected by handling the dialog open action in the select event.
 control: Open a dialog on popup item click 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open a dialog on popup item click in Vue Split button component
+# How to open a dialog on popup item click in Vue Split Button
 
 This section explains about how to open a dialog on SplitButton popup item click. This can be achieved by handling dialog open in [`select`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#select) event of the SplitButton.
 
