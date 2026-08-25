@@ -74,7 +74,6 @@ The following steps show how to register the Syncfusion<sup style="font-size:70%
 
   **License message:** <br /> (INFO) Syncfusion<sup style="font-size:70%">&reg;</sup> License imported successfully.
 
-* Remove the `.cache` folder from `node_modules` in the application.
 
 * Run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-errors) to resolve it. For frequently asked license registration questions, refer to this [link](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-troubleshoot).
 
@@ -139,7 +138,6 @@ npx syncfusion-license activate
 
   **License message:** <br /> (INFO) Syncfusion<sup style="font-size:70%">&reg;</sup> License imported successfully.
 
-* Remove the `.cache` folder from node modules in the application.
 
 * Now run the application. If you are facing a license validation error, refer to this [link](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequent license registration questions from this [`link`](https://ej2.syncfusion.com/vue/documentation/licensing/licensing-troubleshoot).
 
