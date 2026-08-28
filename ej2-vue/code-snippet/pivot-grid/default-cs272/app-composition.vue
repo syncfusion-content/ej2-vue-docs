@@ -2,13 +2,13 @@
   <div id="app">
     <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
   <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
-      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :gridSettings="gridSettings">
+      :allowPdfExport="allowPdfExport" :gridSettings="gridSettings">
 </ejs-pivotview>
   </div >
 </template >
 <script setup>
 import { provide } from "vue";
-import { PivotViewComponent as EjsPivotview, PDFExport, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent as EjsPivotview, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -25,7 +25,6 @@ const dataSourceSettings = {
 const height = 320;
 const allowPdfExport = true;
 const isPrimary = true;
-const enableVirtualization = true;
 const gridSettings = {
   columnWidth: 140,
   pdfHeaderQueryCellInfo: function (args) {
@@ -43,8 +42,7 @@ const btnClick = () => {
 };
 
 provide('pivotview', [
-  PDFExport,
-  VirtualScroll
+  PDFExport
 ]);
 </script>
 <style>

@@ -1,10 +1,10 @@
 
 import Vue from "vue";
-import { PivotViewPlugin, PDFExport, PdfCellRenderArgs, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, PDFExport, PdfCellRenderArgs } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonPlugin, ChangeEventArgs } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin, PDFExport, VirtualScroll);
+Vue.use(PivotViewPlugin, PDFExport);
 Vue.use(ButtonPlugin);
 
 
@@ -13,7 +13,7 @@ new Vue({
   template: `
     <div id="app">
         <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">PDF Export</ejs-button>
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization"
+        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport"
         :gridSettings="gridSettings"> </ejs-pivotview>
     </div>
 `,
@@ -33,7 +33,6 @@ new Vue({
       height: 320,
       allowPdfExport: true,
       isPrimary: true,
-      enableVirtualization: true,
       gridSettings: {
         columnWidth: 140,
         pdfHeaderQueryCellInfo: function (args) {
@@ -54,8 +53,7 @@ new Vue({
   },
   provide: {
     pivotview: [
-      PDFExport,
-      VirtualScroll
+      PDFExport
     ]
   },
 
