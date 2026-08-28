@@ -2,13 +2,13 @@
   <div id="app">
     <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
     <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
-      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :exportComplete="exportComplete">
+      :allowPdfExport="allowPdfExport" :exportComplete="exportComplete">
     </ejs-pivotview>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { PivotViewComponent as EjsPivotview, VirtualScroll, PDFExport } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent as EjsPivotview, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -24,10 +24,9 @@ const dataSourceSettings = {
 };
 const height = 320;
 const allowPdfExport = true;
-const enableVirtualization = true;
 const isPrimary = true;
 
-provide('pivotview', [VirtualScroll, PDFExport]);
+provide('pivotview', [PDFExport]);
 
 const exportComplete = (args) => {
   args.promise.then(function (e) {

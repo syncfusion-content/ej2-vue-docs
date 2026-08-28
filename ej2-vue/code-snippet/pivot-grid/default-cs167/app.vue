@@ -2,12 +2,12 @@
   <div id="app">
     <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
     <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
-      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :beforeExport="beforeExport">
+      :allowPdfExport="allowPdfExport" :beforeExport="beforeExport">
     </ejs-pivotview>
   </div>
 </template>
 <script>
-import { PivotViewComponent, PDFExport, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -31,14 +31,12 @@ export default {
       },
       height: 320,
       allowPdfExport: true,
-      enableVirtualization: true,
       isPrimary: true
     }
   },
   provide: {
     pivotview: [
-      PDFExport,
-      VirtualScroll
+      PDFExport
     ]
   },
   methods: {
