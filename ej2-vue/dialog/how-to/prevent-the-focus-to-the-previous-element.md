@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to prevent focus to previous element in Vue Dialog
+# How to Prevent Focus to Previous Element in Vue Dialog
 
 By default, when the dialog is closed, focus returns to the element that was previously focused before the dialog opened. You can prevent this behavior using the `beforeClose` event and setting the `preventFocus` argument to `true`.
 
@@ -22,5 +22,4 @@ Bind the `beforeClose` event and enable the `preventFocus` argument as shown in 
 {% include code-snippet/dialog/dlg-focus-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
 {% previewsample "page.domainurl/code-snippet/dialog/dlg-focus-cs2" %}

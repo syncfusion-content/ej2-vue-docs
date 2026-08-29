@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to add icons to buttons in Vue Dialog
+# How to Add Icons to Buttons in Vue Dialog
 
-You can add icons to the dialog buttons using the [buttons](https://ej2.syncfusion.com/vue/documentation/api/dialog#buttons) property or [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/dialog#footertemplate) property . For detailed information about dialog buttons, refer to the [documentation](https://ej2.syncfusion.com/vue/documentation/api/dialog#buttons) section.
+You can add icons to the Dialog buttons using the [buttons](https://ej2.syncfusion.com/vue/documentation/api/dialog#buttons) property or [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/dialog#footertemplate) property. For detailed information about Dialog buttons, refer to the [documentation](https://ej2.syncfusion.com/vue/documentation/api/dialog#buttons) section.
 
-In the following sample, dialog footer buttons are customized with icons using `buttons` property.
+In the following sample, Dialog footer buttons are customized with icons using `buttons` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,7 +25,7 @@ In the following sample, dialog footer buttons are customized with icons using `
         
 {% previewsample "page.domainurl/code-snippet/dialog/template-buttons-cs1" %}
 
-In the following sample, dialog footer buttons are customized with icons using `footerTemplate` property.
+In the following sample, Dialog footer buttons are customized with icons using `footerTemplate` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

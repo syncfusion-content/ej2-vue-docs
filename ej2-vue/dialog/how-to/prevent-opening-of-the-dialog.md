@@ -8,10 +8,10 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to prevent opening of the dialog in Vue Dialog
+# How to Prevent Opening of the Dialog in Vue Dialog
 
-You can prevent opening of the dialog by setting the [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/dialog#beforeopen) event argument cancel value to true.
-In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
+You can prevent the dialog from opening by setting the [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/dialog#beforeopen) event argument `cancel` to `true`.
+In the following sample, the success dialog is opened when you enter the username value with a minimum of 4 characters. Otherwise, it will not open.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -21,5 +21,5 @@ In the following sample, the success dialog is opened when you enter the usernam
 {% include code-snippet/dialog/dlg-check-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/dialog/dlg-check-cs1" %}
