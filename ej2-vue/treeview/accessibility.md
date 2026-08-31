@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue TreeView
 
-The TreeView component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The TreeView component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the TreeView component is outlined below.
 
@@ -40,12 +40,12 @@ The accessibility compliance for the TreeView component is outlined below.
 
 ## WAI-ARIA attributes
 
-The TreeView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) patterns to meet the accessibility. The following ARIA attributes are used in the TreeView component:
+The TreeView component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) patterns to meet accessibility requirements. The following ARIA attributes are used in the TreeView component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `role=tree` | All tree nodes are contained within the element. |
-| `role=treeitem `| Specifies the role of each tree node in a selectable TreeView and its containment within the tree. |
+| `role=treeitem` | Specifies the role of each tree node in a selectable TreeView and its containment within the tree. |
 | `role=group` | Specifies the role of each parent node container. |
 | `role=checkbox` | Indicates checkbox control along with treeitem element. |
 | `aria-multiselectable` | Indicates whether the TreeView enables multiple selection or not. |
@@ -60,7 +60,7 @@ The TreeView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/p
 
 ## Keyboard interaction
 
-The TreeView component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the TreeView component.
+The TreeView component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/#keyboardinteraction) guidelines, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the TreeView component.
 
 | Interaction Keys | Description |
 |------|---------|
@@ -78,7 +78,7 @@ The TreeView component followed the [keyboard interaction](https://www.w3.org/WA
 
 ## Ensuring accessibility
 
-The TreeView component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The TreeView component's accessibility compliance is verified using the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 The accessibility compliance of the TreeView component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/treeview.html) in a new window to evaluate the accessibility of the TreeView component with accessibility tools.
 

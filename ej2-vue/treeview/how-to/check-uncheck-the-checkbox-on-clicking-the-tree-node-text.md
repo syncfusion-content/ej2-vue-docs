@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to toggle checkbox on text click in Vue TreeView
 
-You can toggle the checkboxes in the TreeView by clicking on the tree node text. This can be achieved using the [`nodeClicked`](https://helpej2.syncfusion.com/vue/documentation/api/treeview#nodeclicked) event of the TreeView.
+You can toggle the checkboxes in the TreeView by clicking the tree node text. This can be achieved using the [nodeClicked](https://helpej2.syncfusion.com/vue/documentation/api/treeview#nodeclicked) event of the TreeView.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

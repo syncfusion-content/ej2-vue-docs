@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # How to add nested tabs in Vue Tabs
 
-Tab supports to render the nested level of Tabs by using `content` property. You can add the nested Tab element inside the parent Tab `content`
- property. To render the nested Tab, initialize the component using the id of Tab from a selected event handler.
+Tab supports rendering nested Tabs by using the `content` property. You can add the nested Tab element inside the parent Tab's `content` property. To render the nested Tab, initialize the component from the parent's `selected` event handler using the parent Tab's id.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
