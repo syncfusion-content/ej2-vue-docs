@@ -10,9 +10,23 @@ domainurl: ##DomainURL##
 
 # Customization in Vue Smart TextArea
 
-The [ShowSuggestionOnPopup](https://ej2.syncfusion.com/vue/documentation/api/smart-textarea/#showsuggestiononpopup) property in Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Smart TextArea allows you to control how text suggestions are displayed to the users.
+The [ShowSuggestionOnPopup](https://ej2.syncfusion.com/vue/documentation/api/smart-textarea/index-default#showsuggestiononpopup) property in the Syncfusion<sup style="font-size:70%">®</sup> Vue Smart TextArea allows you to control how AI-generated text suggestions are presented to users. Depending on your application requirements, suggestions can be displayed in a popup window or directly within the text area as inline suggestions.
 
-* If `ShowSuggestionOnPopup` is `Enable`, suggestions displayed in the pop-up window
+This customization helps you provide the most suitable suggestion experience for different scenarios. For example, popup suggestions can help users review generated content separately, while inline suggestions offer a more seamless writing experience.
+
+The following values are supported:
+
+| Value | Description |
+|---------|-------------|
+| `Enable` | Displays AI suggestions in a popup window. |
+| `Disable` | Displays AI suggestions inline within the text area. |
+| `None` | Uses the default suggestion behavior. |
+
+By default, the `showSuggestionOnPopup` property is set to `None`.
+
+## Display suggestions in a popup
+
+Set the `showSuggestionOnPopup` property to `Enable` to display AI suggestions in a popup window. This mode allows users to review and accept suggestions without interrupting the content currently being edited.
 
 ```js
 <template>
@@ -30,7 +44,7 @@ The [ShowSuggestionOnPopup](https://ej2.syncfusion.com/vue/documentation/api/sma
 
 ![Suggestion on popup](./images/smart-textarea-popup.gif)
 
-* If `ShowSuggestionOnPopup` is `Disable`, suggestions displayed inline.
+* If `ShowSuggestionOnPopup` is `Disable`, AI-generated suggestions are displayed directly within the text area, allowing users to review suggestions in context and continue typing without interacting with a separate popup window.
 
 ```js
 <template>
