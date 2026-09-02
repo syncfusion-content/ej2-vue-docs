@@ -141,7 +141,7 @@ import { DialogComponent as EjsDialog } from "@syncfusion/ej2-vue-popups";
 
 <script>
   import { DialogComponent } from "@syncfusion/ej2-vue-popups";
-  //Component registeration
+  // Component registration
   export default {
   name: "App",
   components: { "ejs-dialog":DialogComponent }

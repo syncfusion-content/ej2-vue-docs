@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue Dialog | Syncfusion
-description: Learn how to get started with the Syncfusion Vue Dialog control. Explore setup, features, examples, and customization options.
+title: Getting Started with Vue Dialog component | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Dialog component. Explore setup, features, examples, and customization options.
 control: Getting Started
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue Dialog
+# Getting Started with Vue Dialog component
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Dialog component.
 
@@ -16,7 +16,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Setup the Vue 2 project
+## Set up the Vue 2 project
 
 Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
 
@@ -52,7 +52,7 @@ Navigate to the project directory:
 cd quickstart
 ```
 
-## Adding Vue Dialog packages
+## Adding the Vue Dialog package
 
 To install the Dialog package, use the following command:
 
@@ -82,7 +82,7 @@ npm install @syncfusion/ej2-material3-theme --save
 Then add the following CSS reference to the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <style>
 @import "../node_modules/@syncfusion/ej2-material3-theme/styles/dialog/index.css";
@@ -91,7 +91,7 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Dialog component
+## Adding the Dialog component
 
 The Dialog code should be added in the **src/App.vue** file.
 
@@ -111,7 +111,7 @@ The Dialog code should be added in the **src/App.vue** file.
 
 <script>
 import { DialogComponent } from '@syncfusion/ej2-vue-popups';
-//Component registeration
+//Component registration
 export default {
   name: "App",
   components: {
@@ -128,7 +128,6 @@ export default {
     min-height: 200px;
 }
 </style>
-
 
 {% endhighlight %}
 {% endtabs %}

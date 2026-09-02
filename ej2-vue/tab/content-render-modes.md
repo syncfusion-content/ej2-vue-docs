@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Content Render Modes in Vue Tabs
 
-Tabs support rendering content based on different scenarios. The content of the tabs can be rendered in three different ways, as outlined below.
+The Tab component supports rendering content in different ways to suit various scenarios. The content of the tabs can be rendered in three different ways, as outlined below.
 
 * [On Demand rendering or lazy loading](#on-demand-rendering-or-lazy-loading)
 * [Dynamic rendering](#dynamic-rendering)
@@ -35,7 +35,7 @@ In the following code example, the Calendar and Scheduler are rendered in the fi
 
 ## Dynamic rendering
 
-This mode can be applied to Tabs by setting the [`loadOn`](https://ej2.syncfusion.com/vue/documentation/api/tab/#loadon) property to `Dynamic` using `loadOn`. In this mode, only the content of the currently selected tab is loaded and available in the DOM initially. When a different tab is selected, its content replaces the current content. Since this mode ensures the DOM maintains only the content of the active tab, page loading performance is improved. However, the Tabs do not retain their state, as each time a tab is selected, it loads its content again.
+This mode can be applied to Tabs by setting the [loadOn](https://ej2.syncfusion.com/vue/documentation/api/tab#loadon) property to `Dynamic`. In this mode, only the content of the currently selected tab is loaded and available in the DOM initially. When a different tab is selected, its content replaces the current content. Since this mode ensures the DOM maintains only the content of the active tab, it improves page load performance. However, the Tabs do not retain their state, as each time a tab is selected, they load their content again.
 
 In the following code example, there are two tabs. The first tab contains a login page, and the second tab contains a Grid component. The Grid component in the second tab will only be rendered in the DOM after the login is completed. Upon successful login, the second tab will replace the first tab in the DOM.
 
@@ -52,7 +52,7 @@ In the following code example, there are two tabs. The first tab contains a logi
 
 ## On initial rendering
 
-This mode can be applied to Tabs by setting the [`loadOn`](https://ej2.syncfusion.com/vue/documentation/api/tab/#loadon) property to `Init` using `loadOn`. In this mode, the content of all the tabs is rendered on initial load and maintained in the DOM. This mode is ideal when you have a small number of tabs and need to preserve the state of each tab. It also allows you to access the references of components rendered in other tabs.
+This mode can be applied to Tabs by setting the [loadOn](https://ej2.syncfusion.com/vue/documentation/api/tab#loadon) property to `Init`. In this mode, the content of all the tabs is rendered on initial load and maintained in the DOM. This mode is ideal when you have a small number of tabs and need to preserve the state of each tab. It also enables access to the references of components rendered in other tabs.
 
 In the following example, all three tabs are rendered on the initial load, and the data entered in the first tab will be maintained even when the second or third tab is active.
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to customize tab scroll step in Vue Tabs
 
-Tab supports to customize the scrolling distance when you click the left and right side navigation icons. we can customize `ScrollStep` property for scrolling distance. Refer to the following code example.
+Tab supports customizing the scrolling distance when you click the left and right side navigation icons. You can customize the `ScrollStep` property for the scrolling distance. Refer to the following code example.
 
-By using Tab scrollStep property, pass a required value to customize tab scrollStep.
+By using the Tab's `scrollStep` property, pass a required value to customize the tab scroll step.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

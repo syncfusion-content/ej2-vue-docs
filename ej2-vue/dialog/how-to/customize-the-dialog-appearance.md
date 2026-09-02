@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize appearance in Vue Dialog
 
-You can customize the dialog appearance by providing dialog template as string or HTML element to the [content](https://ej2.syncfusion.com/vue/documentation/api/dialog#content) property. In the following sample, dialog is customized as  error window appearance.
+You can customize the dialog appearance by providing a dialog template as a string or an HTML element to the [content](https://ej2.syncfusion.com/vue/documentation/api/dialog#content) property, which accepts template strings and HTML elements. In the following sample, the dialog is customized to show an error window appearance.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -20,5 +20,5 @@ You can customize the dialog appearance by providing dialog template as string o
 {% include code-snippet/dialog/custom-dialog-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/dialog/custom-dialog-cs1" %}

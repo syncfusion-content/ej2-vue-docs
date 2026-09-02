@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to close on outside click in Vue Dialog
 
-By default, dialog can be closed by pressing Esc key and clicking the close icon on the right of dialog header. It can also be closed by clicking outside of the dialog using hide method.
+By default, the Dialog can be closed by pressing the Esc key and clicking the close icon on the right of the dialog header. It can also be closed by clicking outside of the dialog using the hide method.
 
-Set the [CloseOnEscape](https://ej2.syncfusion.com/vue/documentation/api/dialog#closeonescape) property value to false to prevent closing of the dialog when pressing Esc key.
+Set the [closeOnEscape](https://ej2.syncfusion.com/vue/documentation/api/dialog#closeonescape) property value to false to prevent closing of the dialog when pressing the Esc key.
 
-In the following sample, dialog is closed when clicking outside the dialog area using [hide](https://ej2.syncfusion.com/vue/documentation/api/dialog#hide) method.
+In the following sample, the Dialog is closed when clicking outside the dialog area using [hide](https://ej2.syncfusion.com/vue/documentation/api/dialog#hide) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -24,5 +24,5 @@ In the following sample, dialog is closed when clicking outside the dialog area 
 {% include code-snippet/dialog/outside-click-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/dialog/outside-click-cs1" %}

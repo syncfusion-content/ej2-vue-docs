@@ -24,6 +24,7 @@ Use the following CSS to customize the TreeView nodes.
         height: 45px; 
 }
 ```
+
 ![Customizing the height of TreeView nodes](./images/customize-node-height.png)
 
 ## Customizing the text of TreeView nodes
@@ -33,9 +34,10 @@ Use the following CSS to customize the text of TreeView nodes.
 ```css
 .e-treeview .e-list-text { 
         font-weight: bold;
-        color:yellow !important;
+        color: yellow !important;
 } 
 ```
+
 ![Customizing the text of TreeView nodes](./images/customize-treeview-text.png)
 
 ## Customizing the TreeView expand and collapse icons
@@ -50,6 +52,7 @@ Use the following CSS to customize the TreeView expand and collapse icons.
         color: black; 
 }
 ```
+
 ![Customizing the TreeView expand and collapse icons](./images/customize-expand-collapse-icon.png)
 
 ## Customizing the TreeView checkboxes
@@ -66,6 +69,7 @@ Use the following CSS to customize the TreeView checkboxes.
     border-radius:50% !important;
 }
 ```
+
 ![Customizing the TreeView checkboxes](./images/customize-checkbox.png)
 
 ## Customizing the TreeView nodes based on levels
@@ -78,6 +82,7 @@ Use the following CSS to customize the TreeView nodes based on levels.
      border: 1px solid #99C9FF;
 } 
 ```
+
 ![Customizing the TreeView nodes based on levels](./images/customize-based-on-level.png)
 
 ## Customizing the TreeView using HtmlAttributes

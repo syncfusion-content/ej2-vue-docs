@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in Vue Tabs
 
-Localization library allows to localize the default text content of Tab. In Tab, The close button's tooltip text alone will be localize based on culture.
+The Localization library enables localization of the default text content of the Tab. In the Tab, only the close button's tooltip text is localized based on the culture.
 
 | Locale key | en-US (default)  |
 |------|------|-------------|
@@ -18,9 +18,9 @@ Localization library allows to localize the default text content of Tab. In Tab,
 
 ## Loading translations
 
-To load translation object in an application use `load` function of `L10n` class.
+To load translation objects in an application, use the `load` function of the `L10n` class.
 
-In the below sample, `French` culture is set to Tab and change the close button's tooltip text.
+In the following sample, the French culture is applied to the Tab to change the close button's tooltip text.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

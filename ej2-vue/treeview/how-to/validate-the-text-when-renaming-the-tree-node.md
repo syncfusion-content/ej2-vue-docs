@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to validate text when renaming node in Vue TreeView
 
-You can validate the tree node text during editing by using the [`nodeEdited`](https://helpej2.syncfusion.com/vue/documentation/api/treeview#nodeedited) event of the TreeView. The following example demonstrates how to validate and prevent empty values in tree nodes.
+You can validate the tree node text during editing by using the [nodeEdited](https://ej2.syncfusion.com/vue/documentation/api/treeview#nodeedited) event of the TreeView. The following example demonstrates how to validate and prevent empty values in tree nodes.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -22,5 +22,5 @@ The dialog can be positioned inside the target based on the given X and Y values
 {% include code-snippet/dialog/dlg-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/dialog/dlg-position-cs1" %}

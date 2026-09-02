@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Localization in Vue Dialog
 
-`Localization` library allows to localize the default text content of Dialog. In Dialog, The close button's tooltip text alone will be localize based on culture.
+The `Localization` library allows you to localize the default text content of the Dialog. In the Dialog, the close button's tooltip text alone will be localized based on culture. The `close` key in the following table maps to the Dialog close button tooltip text.
 
-| Locale key | en-US (default)  |
+| Locale key | en-US (default) |
 |------|------|
-| close |  Close |
+| close | Close |
 
 ## Loading translations
 
-To load translation object in an application use `load` function of `L10n` class.
+To load a translation object in an application, use the `load` function of the `L10n` class.
 
 In the below sample, `French` culture is set to Dialog and change the close button's tooltip text.
 

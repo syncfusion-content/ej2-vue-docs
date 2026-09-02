@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Quasar Getting Started with Vue TreeView | Syncfusion
-description: Learn how to get started with the Syncfusion Vue TreeView control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Vue TreeView control. Explore setup, features, examples, and customization options and more.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the TreeView in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
@@ -20,7 +20,7 @@ The `Quasar` Framework is a Vue.js-based open-source framework that empowers dev
 
 ## Set up the Quasar project
 
-To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start/) project, use the following commands:
+To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start) project, use the following commands:
 
 ```bash
 npm init quasar
@@ -54,7 +54,7 @@ npm install @syncfusion/ej2-vue-navigations --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the TreeView component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
 
@@ -101,7 +101,7 @@ Follow the below steps to add the Vue TreeView component:
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the values for the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property in the `script` section.
+3\. Declare the values for the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel#datasource) property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
