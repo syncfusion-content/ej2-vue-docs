@@ -20,9 +20,9 @@ The undo action in an image editor allows users to revert the most recent editin
 
 ## Redo the action
 
-The Redo action in an image editor allows users to reapply previously undone actions or modifications to the image. When the redo command is triggered, the image editor reapplies the last action that was undone, bringing the image back to the state it was in after the action was initially applied. The redo is useful when users want to repeat an action that was previously undone or restore changes that were temporarily reversed. 
+The [Redo](https://ej2.syncfusion.com/vue/documentation/api/image-editor/index-default#redo) action in an image editor allows users to reapply previously undone actions or modifications to the image. When the redo command is triggered, the image editor reapplies the last action that was undone, bringing the image back to the state it was in after the action was initially applied. The redo is useful when users want to repeat an action that was previously undone or restore changes that were temporarily reversed. 
 
-In the following example, the [`undo`](https://ej2.syncfusion.com/vue/documentation/api/image-editor#open)  and [`redo`](https://ej2.syncfusion.com/vue/documentation/api/image-editor#open) method is used in the button click event.
+The following example uses the [undo](https://ej2.syncfusion.com/vue/documentation/api/image-editor/index-default#undo) and [Redo](https://ej2.syncfusion.com/vue/documentation/api/image-editor/index-default#redo) methods in a button click event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

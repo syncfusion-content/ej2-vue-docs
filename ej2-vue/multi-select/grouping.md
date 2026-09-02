@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Grouping in Vue MultiSelect Dropdown
 
-The MultiSelect supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header contentis updated dynamically on scrolling the popup list with its category value.
+The MultiSelect supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/vue/documentation/api/multi-select#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
  
 To group the Vue MultiSelect dropdown items, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=nrmMCOHcxTg" %}
 
-In the following sample, vegetables are grouped according on its category using `groupBy` field.
+In the following sample, vegetables are grouped according to their category using the `groupBy` field.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,11 +31,11 @@ In the following sample, vegetables are grouped according on its category using 
 
 ## Customization
 
-The grouping header is also provided with customization option. This allows custom designing using the [`groupTemplate`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#grouptemplate) property for both inline and fixed headers.
+The grouping header is also provided with a customization option. This allows custom designing using the [groupTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select#grouptemplate) property for both inline and fixed headers.
 
 ## Grouping with CheckBox
 
-Previously, there is no checkbox for group headers. Now, this feature allow to render checkbox in group header to select the group items in single selection. You can enable this feature by setting [`enableGroupCheckBox`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#enablegroupcheckbox) property value as **true** and **mode** property as **CheckBox**.
+Previously, there was no checkbox for group headers. Now, this feature allows you to render a checkbox in the group header to select the group items in a single selection. You can enable this feature by setting the [enableGroupCheckBox](https://ej2.syncfusion.com/vue/documentation/api/multi-select#enablegroupcheckbox) property value to **true** and the **mode** property to **CheckBox**.
 
 Inject the `CheckBoxSelection` module in the MultiSelect to use the checkbox.
 

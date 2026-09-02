@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Globalization in Vue Calendar
 
-Globalization is the combination of internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [Internationalization](../common/internationalization), and also add culture specific customization and translation to the text ([localization](../common/localization)).
+Globalization is the combination of internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [Internationalization](https://ej2.syncfusion.com/vue/documentation/common/internationalization), and also add culture specific customization and translation to the text ([Localization](https://ej2.syncfusion.com/vue/documentation/common/localization)).
 
-By default, the Calendar date format, week, and month names are specific to American English culture. It uses the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](../common/internationalization) package to parse and format date object based on the culture using the official [UNICODE CLDR](https://cldr.unicode.org)  JSON data. It provides the [loadCldr](../common/internationalization#loading-culture-data) method to load the culture-specific CLDR JSON data.
+By default, the Calendar date format, week, and month names are specific to American English culture. It uses the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/vue/documentation/common/internationalization) package to parse and format date object based on the culture using the official [UNICODE CLDR](https://cldr.unicode.org)  JSON data. It provides the [loadCldr](https://ej2.syncfusion.com/vue/documentation/common/internationalization#loading-culture-data) method to load the culture-specific CLDR JSON data.
 
-The Calendar component supports only the Gregorian type of calendar. All the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component are specific to English culture ('en-US').
-If you want to go with the different culture other than `English`, follow the below steps.
+The Calendar component supports only the Gregorian type of calendar. All the Essential<sup style="font-size:70%">&reg;</sup> JS 2 components are specific to English culture ('en-US').
+If you want to go with a different culture other than `English`, follow the below steps.
 
 * Install the CLDR-Data package by using the below command (installs the CLDR JSON data).
 
@@ -27,9 +27,9 @@ npm install cldr-data --save
 
 Once the package installed, you can find the culture specific JSON data under the location `/node_modules/cldr-data`.
 
-* Now use the `loadCldr`method to load the culture specific CLDR JSON data from the installed location to `app.vue` file.
+* Now use the `loadCldr` method to load the culture specific CLDR JSON data from the installed location to `app.vue` file.
 
-* Calendar displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the Calendar with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
+* Calendar displays `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the Calendar with loaded culture's first day of week, you need to import `weekData.json` file from the `cldr-data/supplemental` as given in the code example.
 
 ```ts
 //Load the loadCldr from ej2-base
@@ -66,7 +66,7 @@ L10n.load({
 });
 ```
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/calendar#locale) property.
+* Set the culture by using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/calendar/index-default#locale) property.
 
 The following example demonstrates the Calendar in `German` culture
 
@@ -81,10 +81,9 @@ The following example demonstrates the Calendar in `German` culture
         
 {% previewsample "page.domainurl/code-snippet/calendar/internationalization-cs1" %}
 
-## Right-to-Left
+## Right-to-left
 
-The Calendar supports right-to-left functionality for languages like Arabic,  Hebrew, etc. To display text in the right-to-left direction, use
- [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/calendar#enablertl) property.
+The Calendar supports right-to-left functionality for languages like Arabic, Hebrew, etc. To display text in the right-to-left direction, use [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/calendar/index-default#enablertl) property.
 
 The following code example initializes the Calendar component in `Arabic` culture.
 

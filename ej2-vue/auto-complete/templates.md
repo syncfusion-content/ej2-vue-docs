@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Templates in Vue AutoComplete
 
-The AutoComplete has been provided with several options to customize each list items, group title, header and footer elements. It uses the Essential<sup style="font-size:70%">&reg;</sup> JS 2 Template engine to compile and render the elements properly.
+The AutoComplete has been provided with several options to customize each list items, group title, header and footer elements. It uses the Essential<sup style="font-size:70%">&reg;</sup> JS 2 template engine to compile and render the elements properly.
 
 ## Item template
 
 The content of each list item within the AutoComplete can be customized with the help of [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#itemtemplate) property.
 
-In the following sample, each list item is split into two columns to display relevant data's.
+In the following sample, each list item is split into two columns to display relevant data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,7 +31,7 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customize with the help of [`groupTemplate`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#grouptemplate) property. This template is common for both inline and floating group header template.
+The group header title under which appropriate sub-items are categorized can also be customized with the help of [`groupTemplate`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#grouptemplate) property. This template is common for both inline and floating group header template.
 
 In the following sample, employees are grouped according to their city.
 
@@ -99,7 +99,7 @@ In the following sample, popup list content displays the notification of no data
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the actionFailureTemplate property.
+There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [`actionFailureTemplate`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#actionfailuretemplate) property.
 
 In the following sample, when the data fetch request fails, the AutoComplete displays the notification.
 

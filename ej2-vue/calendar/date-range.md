@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Date Range in Vue Calendar
 
-Calendar provides an option to select a date value within a specified range by defining the min and max properties. The min date should always be lesser than the max date. If the value of `min` or `max` properties are changed through code behind, then update the `value` property to be set within the specified range.  Or else, if the value is out of specified date range and less than min date, value property will be updated with the `min` date or, if the value is higher than max date, value property will be updated with the `max` date.
+Calendar provides an option to select a date value within a specified range by defining the min and max properties. The min date should always be less than the max date. If the values of the `min` or `max` properties are changed programmatically, then update the `value` property to be set within the specified range. Otherwise, if the value is out of the specified date range and less than the min date, the value property will be updated with the `min` date. If the value is higher than the max date, the value property will be updated with the `max` date.
 
 The following example allows you to select a date within the range of 7th to 27th days in a month.
 
@@ -22,5 +22,5 @@ The following example allows you to select a date within the range of 7th to 27t
 {% include code-snippet/calendar/min-max-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/calendar/min-max-cs6" %}

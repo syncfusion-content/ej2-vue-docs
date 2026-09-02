@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one Calendar component, v-model will automatically update the value in the other Calendar.
 
-The following example demonstrates how to set the `two-way-binding` in the Calendar.
+The following example demonstrates how to implement two-way binding in the Calendar.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -22,5 +22,5 @@ The following example demonstrates how to set the `two-way-binding` in the Calen
 {% include code-snippet/calendar/two-way-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/calendar/two-way-cs1" %}

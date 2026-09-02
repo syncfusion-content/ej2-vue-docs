@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resizing in Vue AutoComplete
 
-You can dynamically adjust the size of the popup in the Autocomplete component by using the [AllowResize](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#allowresize) property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+You can dynamically adjust the size of the popup in the AutoComplete component by using the [allowResize](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#allowresize) property. When enabled, users can resize the popup, improving visibility and control. The resized dimensions are retained for a consistent user experience.
 
 The following sample illustrates the implementation of the Popup Resize feature.
 
@@ -22,6 +22,5 @@ The following sample illustrates the implementation of the Popup Resize feature.
 {% include code-snippet/auto-complete/getting-started-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
 
 ![Resizing in AutoComplete Component](../images/autocomplete-resize.gif)

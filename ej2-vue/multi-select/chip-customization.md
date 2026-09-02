@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Chip Customization in Vue MultiSelect Dropdown
 
-The MultiSelect allows the user to customize the selected chip element through the [`tagging`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#tagging) event. In that event, you can set the custom classes to chip element via that event argument of `setClass` method.
+The MultiSelect allows the user to customize the selected chip element through the [tagging](https://ej2.syncfusion.com/vue/documentation/api/multi-select#tagging) event. In that event, you can set custom classes on the chip element via the `setClass` method of the event argument.
 
 The following sample demonstrates chip-customization with the MultiSelect component.
 

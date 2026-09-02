@@ -22,8 +22,8 @@ horizontal scrolling enabled when commands overflow to available space.
 
 * The right and left navigation arrows are added to the start and end of the Toolbar to navigate to hidden commands.
 * You can also see the hidden commands using touch swipe action.
-* By default, if navigation icon in the `left` side is disabled, you can see the hidden commands by moving to the `right`.
-* By clicking the arrow or by holding the arrow continuously,  hidden commands will become visible.
+* By default, if the navigation icon on the `left` side is disabled, you can see the hidden commands by moving to the `right`.
+* By clicking or holding the arrow, hidden commands will become visible.
 * If device navigation icons are not available, you can touch swipe to see the hidden commands of the Toolbar.
 
 ![Scrollable](images/scrolling.gif)
@@ -53,7 +53,7 @@ horizontal scrolling enabled when commands overflow to available space.
 
 `Popup` is another type of `overflowMode` in which the Toolbar container holds the commands that can be placed in the available space. The rest of the overflowing commands that do not fit within the viewing area moves to the overflow popup container.
 
-The commands placed in the popup can be viewed by opening the popup using the drop down icon given at the end of the Toolbar.
+The commands placed in the popup can be viewed by opening the popup using the dropdown icon given at the end of the Toolbar.
 
 ![Toolbar popup](images/popup.gif)
 
@@ -74,7 +74,7 @@ Property     | Description
 If primary priority commands also exceed available space, they are moved to the popup container at top order position and placed before the
 secondary priority commands.
 
-> You can maintain toolbar item on popup always by using the [showAlwaysInPopup](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#showalwaysinpopup) property, and this behavior is not applicable for toolbar items with [overflow](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#overflow) property as 'show'.
+> You can maintain toolbar item on popup always by using the [showAlwaysInPopup](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#showalwaysinpopup) property, and this behavior is not applicable for toolbar items with [overflow](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#overflow) property as 'show'.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

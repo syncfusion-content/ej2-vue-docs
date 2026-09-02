@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to customize the day header in Vue Calendar
 
-You can change the format of the day that to be displayed in header using [`dayHeaderFormat`](https://ej2.syncfusion.com/vue/documentation/api/calendar#dayheaderformat) property. By default, the format is `Short`.
+You can change the format of the day name to be displayed in the header using [`dayHeaderFormat`](https://ej2.syncfusion.com/vue/documentation/api/calendar/index-default#dayheaderformat) property. By default, the format is `Short`.
 
-You can find the possible formats on below.
+You can find the possible formats below.
 
 | **Name** | **Description** |
 |------|---------------------|
@@ -29,5 +29,4 @@ You can find the possible formats on below.
 {% include code-snippet/calendar/header-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
 {% previewsample "page.domainurl/code-snippet/calendar/header-format-cs1" %}

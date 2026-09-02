@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The MultiSelect has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 
-To customize MultiSelect dropdown items Using templates, you can check on this video:
+To customize MultiSelect dropdown items using templates, you can check this video:
 
 {% youtube "https://www.youtube.com/watch?v=biPKSEpTgwM" %}
 
@@ -20,7 +20,7 @@ To customize MultiSelect dropdown items Using templates, you can check on this v
 
 The content of each list item within the MultiSelect can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#itemtemplate) property.
 
-In the following sample, each list item is split into two columns to display relevant data's.
+In the following sample, each list item is split into two columns to display relevant data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -52,7 +52,7 @@ In the following sample, the selected value is displayed as a combined text of b
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customize with the help of [groupTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#grouptemplate) property. This template is common for both inline and floating group header template.
+The group header title under which appropriate sub-items are categorized can also be customized with the help of the [groupTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#grouptemplate) property. This template is common for both inline and floating group header templates.
 
 In the following sample, employees are grouped according to their city.
 
@@ -71,7 +71,7 @@ In the following sample, employees are grouped according to their city.
 
 The header element is shown statically at the top of the popup list items within the MultiSelect, and any custom element can be placed as a header element using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#headertemplate) property.
 
-In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
+In the following sample, the list items and their headers are designed and displayed as two columns similar to the multiple columns of a grid.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -88,7 +88,7 @@ In the following sample, the list items and its headers are designed and display
 
 The MultiSelect has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#footertemplate) property.
 
-In the following sample, footer element displays the total number of list items present in the MultiSelect.
+In the following sample, the footer element displays the total number of list items present in the MultiSelect.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -103,9 +103,9 @@ In the following sample, footer element displays the total number of list items 
 
 ## No records template
 
-The MultiSelect is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#norecordstemplate) property.
+The MultiSelect is provided with support to custom design the popup list content when no data is found and no matches are found on search with the help of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#norecordstemplate) property.
 
-In the following sample, popup list content displays the notification of no data available.
+In the following sample, the popup list content displays a notification that no data is available.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

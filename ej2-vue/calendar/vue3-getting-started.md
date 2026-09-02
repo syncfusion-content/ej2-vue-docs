@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue 3 Calendar
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Calendar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Calendar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -22,7 +22,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Setup for local development
 
-Easily set up a Vue 3 application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a Vue 3 application using [Vite](https://vite.dev/), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools. For detailed steps, refer to the Vite [installation instructions](https://vite.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:** To create a Vue application using `create-vue`, refer to this [documentation](https://ej2.syncfusion.com/vue/documentation/getting-started) for more details.
 
@@ -42,7 +42,6 @@ npm create vite@latest my-app -- --template vue-ts
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
 - **Install with npm and start now?** → **Yes**
 
 Selecting **Yes** automatically installs the project dependencies and starts the development server.
@@ -55,7 +54,7 @@ Then, navigate to the project directory:
 cd my-app
 ```
 
-## Add Vue Calendar packages
+## Adding Vue Calendar packages
 
 To install the Calendar packages, use the following command:
 
@@ -86,7 +85,7 @@ npm install @syncfusion/ej2-material3-theme --save
 Then add the following CSS reference to the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API ~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <style>
     @import "../node_modules/@syncfusion/ej2-material3-theme/styles/calendar/index.css";
@@ -113,7 +112,7 @@ The Calendar code should be added in the **src/App.vue** file.
 </script>
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/clendar/index.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/calendar/index.css";
 </style>
 
 {% endhighlight %}
@@ -127,7 +126,7 @@ The Calendar code should be added in the **src/App.vue** file.
 
 <script>
 import { CalendarComponent } from "@syncfusion/ej2-vue-calendars";
-//Component registeration
+//Component registration
 export default {
     name: 'App',
     components: {
@@ -161,7 +160,7 @@ yarn run dev
 
 ## Setting the value, min and max dates
 
-The following example demonstrates how to set the value, min and max dates on initializing the Calendar. Here the Calendar allows you to select a date within the range from 9th to 15th in the month of May 2017. To know more about range restriction in Calendar, please refer this [page](./date-range).
+The following example demonstrates how to set the value, min and max dates on initializing the Calendar. Here the Calendar allows you to select a date within the range from 9th to 15th in the month of May 2017. To know more about range restriction in Calendar, please refer to this [page](./date-range).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -175,8 +174,8 @@ The following example demonstrates how to set the value, min and max dates on in
 </template>
 <script setup>
 import { CalendarComponent as EjsCalendar } from "@syncfusion/ej2-vue-calendars";
-    const data = [{minDate: new Date("05/04/2017"), 
-                  maxDate: new Date("05/16/2017"), 
+    const data = [{minDate: new Date("05/09/2017"), 
+                  maxDate: new Date("05/15/2017"), 
                   dateVal: new Date("05/10/2017")}];
 </script>
 <style>
@@ -196,7 +195,7 @@ import { CalendarComponent as EjsCalendar } from "@syncfusion/ej2-vue-calendars"
 
 <script>
 import { CalendarComponent } from "@syncfusion/ej2-vue-calendars";
-//Component registeration
+//Component registration
 export default {
     name: 'App',
     components: {
@@ -220,7 +219,7 @@ export default {
 
 ![Calendar with min and max dates](./images/range.png)
 
-## See Also
+## See also
 
 * [Select multiple dates in the Calendar](./multi-select)
 * [Render Calendar with specific culture](./globalization)

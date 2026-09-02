@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The following example demonstrates how to show dates of other months.
 
-Using the styles below, you can bring the dates of other months to visibility from its hidden state.
+Using the styles below, you can make the dates of other months visible from their hidden state.
 
 ```
 <style>
@@ -29,6 +29,8 @@ Using the styles below, you can bring the dates of other months to visibility fr
 </style>
 ```
 
+The first rule sets `display: block` so the dates of other months are rendered visibly instead of being hidden. The second rule restores `pointer-events` and `touch-action` so those dates become interactive and clickable.
+
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs10/app-composition.vue %}
@@ -37,5 +39,5 @@ Using the styles below, you can bring the dates of other months to visibility fr
 {% include code-snippet/calendar/min-max-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/calendar/min-max-cs10" %}

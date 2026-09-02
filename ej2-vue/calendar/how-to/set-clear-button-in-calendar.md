@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to set the clear button in Vue Calendar
 
-To configure `clear` button in Calendar UI, do the following:
+To configure a `clear` button in the Calendar UI, do the following:
 
-1. To the [`created`](https://ej2.syncfusion.com/vue/documentation/api/calendar#created) event of the Calendar, add the required elements to make the clear button visible. In the following example, div with Essential<sup style="font-size:70%">&reg;</sup> JS 2 button component is used.
+1. To the [`created`](https://ej2.syncfusion.com/vue/documentation/api/calendar#created) event of the Calendar, add the required elements to make the clear button visible. In the following example, a div containing an Essential<sup style="font-size:70%">&reg;</sup> JS 2 Button component is added.
 
 2. When the `e-footer` class is used, the div tag acts as the footer.
 
-3. Using these button,  selected date can be cleared.
+3. Using this button, the selected date can be cleared.
 
 4. Bind the required event handler to the button tags to update the value.
 
@@ -28,5 +28,5 @@ To configure `clear` button in Calendar UI, do the following:
 {% include code-snippet/calendar/min-max-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/calendar/min-max-cs9" %}

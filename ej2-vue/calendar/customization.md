@@ -19,7 +19,7 @@ The following section demonstrates how to disable or highlight specific dates in
 
 You can disable weekends of every month in the Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs) event. The `renderDayCell` event offers the following arguments on each day cell creation to help you disable the dates.
 
-| **View** | **Description** |
+| **Property** | **Description** |
 | --- | --- |
 | `date` | Defines the current date of the Calendar. |
 | `isDisabled` | Specifies whether the current date is to be disabled or not. |
@@ -35,26 +35,26 @@ The following example demonstrates how to disable weekends of every month.
 {% include code-snippet/calendar/min-max-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/calendar/min-max-cs4" %}
 
 ## Day cell format
 
-You can also highlight specific dates by adding custom CSS or element to the day cell by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs) event. You can customize the appearance of the Calendar by overriding the existing styles. The following list of CSS class names are used to customize the Calendar component.
+You can also highlight specific dates by adding custom CSS or an element to the day cell by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs) event. You can customize the appearance of the Calendar by overriding the existing styles. The following list of CSS class names are used to customize the Calendar component.
 
 | **Class Name** | **Description** |
 | --- | --- |
 | e-calendar | Applied to the Calendar. |
-| e-header | Applied to the header.|
-| e-title |Applied to the title. |
-| e-icon-container | Applied to the previous and next icon container.|
-| e-prev |  Applied  to the previous icon.|
-| e-next | Applied to the next icon.|
-| e-weekend | Applied to weekends.|
-| e-other-month |  Applied to days of other months.|
-| e-day | Applied to each day cell.|
-| e-selected | Applied to the selected dates.|
-| e-disabled | Applied to the disabled dates.|
+| e-header | Applied to the header. |
+| e-title | Applied to the title. |
+| e-icon-container | Applied to the previous and next icon container. |
+| e-prev | Applied to the previous icon. |
+| e-next | Applied to the next icon. |
+| e-weekend | Applied to weekends. |
+| e-other-month | Applied to days of other months. |
+| e-day | Applied to each day cell. |
+| e-selected | Applied to the selected dates. |
+| e-disabled | Applied to the disabled dates. |
 
 The following example highlights the World Health Day (every 7th April) and World Forest Day (every 21st March) by using the custom icon and ToolTip.
 
@@ -66,12 +66,12 @@ The following example highlights the World Health Day (every 7th April) and Worl
 {% include code-snippet/calendar/min-max-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/calendar/min-max-cs5" %}
 
-## Highlight Weekends
+## Highlight weekends
 
-You can highlight the weekends of every month in a Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs) event. The following example demonstrates how to highlights the weekends of every month.
+You can highlight the weekends of every month in a Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs) event. The following example demonstrates how to highlight the weekends of every month.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -81,10 +81,10 @@ You can highlight the weekends of every month in a Calendar by using the [`rende
 {% include code-snippet/calendar/highlight-weekend-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/calendar/highlight-weekend-cs1" %}
 
-## See Also
+## See also
 
 * [Add the external button in the Calendar popup](./how-to/set-clear-button-in-calendar)
 * [How to skip a month in Calendar](./how-to/skip-a-month-in-calendar)

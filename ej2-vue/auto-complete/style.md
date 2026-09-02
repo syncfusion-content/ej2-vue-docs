@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of wrapper element
+## Customizing the appearance of the wrapper element
 
-Use the following CSS to customize the appearance of wrapper element.
+Use the following CSS to customize the appearance of the wrapper element.
 
 ```
 .e-ddl.e-input-group.e-control-wrapper .e-input {
@@ -25,9 +25,9 @@ Use the following CSS to customize the appearance of wrapper element.
 }
 ```
 
-## Customizing the dropdown icon’s color
+## Customizing the dropdown icon's color
 
-Use the following CSS to customize the dropdown icon’s color.
+Use the following CSS to customize the dropdown icon's color.
 
 ```
 .e-ddl.e-input-group .e-input-group-icon,.e-ddl.e-input-group.e-control-wrapper .e-input-group-icon:hover {
@@ -57,7 +57,7 @@ Use the following CSS to customize the focusing color of outline theme.
 }
 ```
 
-## Customizing the disabled component’s text color
+## Customizing the disabled component's text color
 
 Use the following CSS to customize the text color when the component is disabled.
 
@@ -113,9 +113,9 @@ Use the following CSS to customize the background color of focus, hover and acti
 }
 ```
 
-## Customizing the appearance of pop-up element
+## Customizing the appearance of the popup element
 
-Use the following CSS to customize the appearance of popup element.
+Use the following CSS to customize the appearance of the popup element.
 
 ```
 .e-dropdownbase .e-list-item, .e-dropdownbase .e-list-item.e-item-focus {

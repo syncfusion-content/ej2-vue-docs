@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # How to set tooltip to the commands in Vue Toolbar
 
-The `tooltipText` property of the Toolbar item is used to set the HTML Tooltip to the commands that can be viewed as hint texts on mouse hover.
+The [`tooltipText`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tooltiptext) property of the Toolbar item is used to set an HTML tooltip for the toolbar commands that can be viewed as hint text on mouse hover.
 
-To change the `tooltipText` to ej2-tooltip component:
+To replace the `tooltipText` property with the [`Tooltip`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/index-default) component:
 
-* Import the `Tooltip` module from `ej2-popups`,and initialize the Tooltip with the Toolbar target. Refer to the following code example:
+* Import the `Tooltip` module from `ej2-popups`, and initialize the Tooltip with the Toolbar target. Refer to the following code example:
 
     {% tabs %}
     {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
     {% include code-snippet/toolbar/how-to/Tooltip-cs1/app-composition.vue %}
     {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+    {% highlight html tabtitle="Options API (~/src/App.vue)" %}
     {% include code-snippet/toolbar/how-to/Tooltip-cs1/app.vue %}
     {% endhighlight %}
     {% endtabs %}
-            
+
     {% previewsample "page.domainurl/code-snippet/toolbar/how-to/Tooltip-cs1" %}

@@ -16,7 +16,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Setup the Vue 2 project
+## Set up the Vue 2 project
 
 Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
 
@@ -100,7 +100,7 @@ The Calendar code should be added in the **src/App.vue** file.
 
 <template>
     <div id="app">
-    <ejs-calendar ></ejs-calendar>
+    <ejs-calendar></ejs-calendar>
   </div>
 </template>
 
@@ -135,7 +135,7 @@ The following example demonstrates how to set the value, min, and max dates when
 
 {% previewsample "page.domainurl/code-snippet/calendar/min-max-cs7" %}
 
-## See Also
+## See also
 
 * [Select multiple dates in the Calendar](./multi-select)
 * [Render Calendar with specific culture](./globalization)

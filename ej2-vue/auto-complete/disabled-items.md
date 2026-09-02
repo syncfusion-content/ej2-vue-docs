@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Disabled Items in Vue AutoComplete
 
-The AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [disabled](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#fields) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
+The AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The disabled state of each list item can be mapped through the [fields](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#fields) property's `disabled` member in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
 
-In the following sample, State are grouped according on its category using `disabled` field.
+In the following sample, items are marked as disabled using the `fields.disabled` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,9 +25,9 @@ In the following sample, State are grouped according on its category using `disa
         
 {% previewsample "page.domainurl/code-snippet/auto-complete/getting-started-cs26" %}
 
-## Disable Item Method
+## Disable item method
 
-The [disableItem](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#disableItem) method can be used to handle dynamic changing in disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will to be updated in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#datasource), when the item is disabled using this method. If the selected item is disabled dynamically, then the selection will be cleared.
+The [disableItem](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#disableItem) method can be used to dynamically change the disabled state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will be updated in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#dataSource), when the item is disabled using this method. If the selected item is disabled dynamically, then the selection will be cleared.
 
 | Parameter | Type | Description |
 |------|------|------|
@@ -37,6 +37,6 @@ The [disableItem](https://ej2.syncfusion.com/vue/documentation/api/auto-complete
 
 ## Enabled
 
-If you want to disabled the overall component to set the [enabled](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#enabled) property to false.
+If you want to disable the overall component, set the [enabled](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#enabled) property to false. Setting the property to `false` disables the entire AutoComplete so it cannot be interacted with, and setting it back to `true` enables the component again.
 
 ![Disabled AutoComplete Component](../images/autocomplete-disable.png)

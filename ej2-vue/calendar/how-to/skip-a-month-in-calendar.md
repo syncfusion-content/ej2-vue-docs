@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to skip months in Vue Calendar
 
-The following example demonstrates how to skip a month in the Calendar while clicking the previous and next icons. In the example below,  the [`navigated`](https://ej2.syncfusion.com/vue/documentation/api/calendar#navigated) event is used to skip a month with [`navigateTo`](https://ej2.syncfusion.com/vue/documentation/api/calendar#navigateto) method.
+The following example demonstrates how to skip a month in the Calendar while clicking the previous and next icons. In the following example, the [`navigated`](https://ej2.syncfusion.com/vue/documentation/api/calendar/index-default#navigated) event is used to skip a month using the [`navigateTo`](https://ej2.syncfusion.com/vue/documentation/api/calendar/index-default#navigateTo) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -20,5 +20,5 @@ The following example demonstrates how to skip a month in the Calendar while cli
 {% include code-snippet/calendar/min-max-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/calendar/min-max-cs11" %}

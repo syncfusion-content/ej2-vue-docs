@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Custom Value in Vue MultiSelect Dropdown
 
-The MultiSelect allows user to add a new non-present option to the component value when [`allowCustomValue`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#allowcustomvalue) is enabled. while selecting the new custom value [`customValueSelection`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#customvalueselection) event will be triggered.
+The MultiSelect allows the user to add a new non-present option to the component value when [allowCustomValue](https://ej2.syncfusion.com/vue/documentation/api/multi-select#allowcustomvalue) is enabled. When a new custom value is selected, the [customValueSelection](https://ej2.syncfusion.com/vue/documentation/api/multi-select#customvalueselection) event will be triggered.
 
 The following sample demonstrates configuration of custom value support with the MultiSelect component.
 
