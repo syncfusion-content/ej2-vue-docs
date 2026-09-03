@@ -33,9 +33,9 @@ Virtualization provides the following performance benefits:
 
 * **Reduced DOM elements**: Only visible nodes are rendered in the DOM, reducing memory consumption.
 
-* **Faster initial load**: Large datasets load quickly as only a subset of nodes are rendered initially.
+* **Faster initial load**: Large datasets load quickly as only a subset of nodes is rendered initially.
 
-* **Smooth scrolling**: Dynamic loading ensures smooth scrolling experience without lag.
+* **Smooth scrolling**: Dynamic loading ensures a smooth scrolling experience without lag.
 
 * **Lower CPU usage**: Rendering fewer elements reduces CPU consumption.
 

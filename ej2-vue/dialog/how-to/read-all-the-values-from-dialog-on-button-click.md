@@ -10,8 +10,8 @@ domainurl: ##DomainURL##
 
 # How to read all values on button click in Vue Dialog
 
-You can read the dialog element values by binding the action handler to the footer buttons. The buttons property provides the options to bind events to the action buttons. For detailed information about buttons, refer to the [footer](../template#footer) section.
-In the below sample, value of input elements within the dialog has been checked in the footer button click event and send the values as the content of confirmation dialog.
+You can read the dialog element values by binding the action handler to the footer buttons. The buttons property provides options to bind events to the action buttons. For detailed information about buttons, refer to the [footer](../template#footer) section.
+In the below sample, the values of input elements within the dialog are checked in the footer button click event and send the values as the content of the confirmation dialog.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -21,5 +21,4 @@ In the below sample, value of input elements within the dialog has been checked 
 {% include code-snippet/dialog/read-all-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
 {% previewsample "page.domainurl/code-snippet/dialog/read-all-cs1" %}

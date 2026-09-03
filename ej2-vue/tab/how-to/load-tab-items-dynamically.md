@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to load tab items dynamically in Vue Tabs
 
-Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/vue/documentation/api/tab/#addtab) method.
+Tabs can be added dynamically by passing an array of items and an index value to the [addTab](https://ej2.syncfusion.com/vue/documentation/api/tab#addtab) method.
 
 ```ts
     // New tab title and content inputs are fetched and stored in local variable
@@ -25,7 +25,7 @@ Tabs can be added dynamically by passing array of items and index value to the [
     tabObj.addTab([item], totalItems-1);
 ```
 
-In the following demo, you can add the tab content by clicking the **+**. Enter the new Tab heading and  content details in the available text boxes, click 'Add Tab' button to pass the details as an array and here last index is calculated to append the new tab at the end.
+In the following demo, you can add the tab content by clicking the **+**. Enter the new tab heading and content details in the available text boxes, then click the **Add Tab** button to pass the details as an array. The last index is calculated to append the new tab at the end.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to render other components in tab using template in Vue Tabs
 
-You can render other components inside Tab using Vue **template**. Through this, we can add content as other components directly with all functionalities to our Tab. Follow the below guidelines for using the other components as template in tab.
+You can render other components inside the Tab using Vue **templates**. Through this, you can add content as other components directly with all functionalities to the Tab. Follow the guidelines below for using other components as a template in the Tab.
 
-* Declare a template in the **template** section of the “.vue” file. An empty object “data” needs to be initialized in the data option of the default export object in **script** section.
+* Declare a template in the **template** section of the `.vue` file. An empty object `data` needs to be initialized in the `data` option of the default export object in the **script** section.
 
-* The template function needs to be assigned to the content property of the EJ2 Vue Tab Component.
+* The template function needs to be assigned to the `content` property of the Syncfusion Vue Tab component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

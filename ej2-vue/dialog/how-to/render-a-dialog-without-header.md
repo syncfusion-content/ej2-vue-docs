@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to render without header in Vue Dialog
 
-The dialog can be rendered without header by setting the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog#header) property value as empty string or null. By default, dialog is rendered without header.
+The Dialog can be rendered without a header by setting the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog#header) property value to an empty string or null, or by leaving it unset entirely. When omitted, the Dialog defaults to rendering without a header.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -20,5 +20,5 @@ The dialog can be rendered without header by setting the [header](https://ej2.sy
 {% include code-snippet/dialog/dlg-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/dialog/dlg-header-cs1" %}

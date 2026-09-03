@@ -22,5 +22,4 @@ Bind the `beforeClose` event and enable the `preventFocus` argument as shown in 
 {% include code-snippet/dialog/dlg-focus-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
 {% previewsample "page.domainurl/code-snippet/dialog/dlg-focus-cs2" %}

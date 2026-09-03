@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show full screen in Vue Dialog
 
-You can show the dialog in full screen by passing `true` as argument to the dialog [show](https://ej2.syncfusion.com/vue/documentation/api/dialog#show) method.
+You can show the Dialog in full screen by passing `true` as an argument to the Dialog [show](https://ej2.syncfusion.com/vue/documentation/api/dialog#show) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -20,5 +20,5 @@ You can show the dialog in full screen by passing `true` as argument to the dial
 {% include code-snippet/dialog/dlg-fullscreen-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/dialog/dlg-fullscreen-cs1" %}

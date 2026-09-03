@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Orientation in Vue Tabs
 
-This section explains about modifying the position and modes of Tab header.
+This section explains how to modify the position and overflow modes of the Tab header.
 
-It allows placing the header section inside the Tab component at different positions by using the  [`headerPlacement`](https://ej2.syncfusion.com/vue/documentation/api/tab#headerplacement) property. The available positions are as follows:
+It allows placing the header inside the Tab component at different positions by using the [headerPlacement](https://ej2.syncfusion.com/vue/documentation/api/tab#headerplacement) property. The available positions are as follows:
 
-* **Top**: Tab header items can be arranged horizontally, and their content can be placed after the header.
-* **Bottom**: Tab header items can be arranged horizontally, and their content can be placed before the header.
-* **Left**: Tab header items can be arranged vertically, and their content can be placed after the header.
-* **Right**: Tab header items can be arranged vertically, and their content can be placed before the header.
+* **Top**: Arranges Tab header items horizontally, with content placed below the header.
+* **Bottom**: Arranges Tab header items horizontally, with content placed above the header.
+* **Left**: Arranges Tab header items vertically, with content placed to the right of the header.
+* **Right**: Arranges Tab header items vertically, with content placed to the left of the header.
 
-It is also adaptable to the available space when the tab items exceed the view space. You can customize the modes by using `overflowMode` property. The available modes are as follows:
+It also adapts to the available space when the tab items exceed the view space. You can customize the overflow mode using the `overflowMode` property. The available modes are as follows:
 
 * Scrollable
 * Popup

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to load content through Ajax in Vue Tabs
 
-The Tab supports to load external contents through AJAX library. Refer to the following steps.
+The Tab supports loading external contents through the AJAX library. Refer to the following steps.
 
-* Import the Ajax module from ej2-base and initialize with URL path.
+* Import the Ajax module from `@syncfusion/ej2-base` and initialize it with the URL path.
 
-* Get the data from Ajax Success event, then initialize the Tab with retrieved external path data.
+* Get the data from the Ajax `success` event, then initialize the Tab with the retrieved external path data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in Vue Dialog
 
-In Dialog the template support is provided to the header, content and footer sections. So any text or HTML content can be appending in these sections.
+In the Dialog, template support is provided for the header, content, and footer sections. Any text or HTML content can be appended in these sections.
 
 To quickly get started with customizing the appearance of the Vue Dialog using templates, check out this video:
 
@@ -18,7 +18,7 @@ To quickly get started with customizing the appearance of the Vue Dialog using t
 
 ## Header
 
-The Dialog header content can be provided through the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog#header) property, and it will allow both text and any HTML content as a string. Also in header, close button is provided as built-in support, and this can be enabled through the [showCloseIcon](https://ej2.syncfusion.com/vue/documentation/api/dialog#showcloseicon) property.
+The Dialog header content can be provided through the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog#header) property, and it will allow both text and any HTML content as a string. Also, in the header, a close button is provided as built-in support, and this can be enabled through the [showCloseIcon](https://ej2.syncfusion.com/vue/documentation/api/dialog#showcloseicon) property.
 
 ## Footer
 
@@ -28,9 +28,9 @@ The Dialog footer can be enabled by adding built-in [buttons](https://ej2.syncfu
 
 ## Content
 
-The Dialog content can be updated by providing any HTML string through the [`content`](https://ej2.syncfusion.com/vue/documentation/api/dialog#content).
+The Dialog content can be updated by providing any HTML string through the [content](https://ej2.syncfusion.com/vue/documentation/api/dialog#content).
 
-The below example demonstrates the usage of header, footer and content template in the Dialog.
+The below example demonstrates the usage of header, footer, and content templates in the Dialog.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -43,7 +43,7 @@ The below example demonstrates the usage of header, footer and content template 
         
 {% previewsample "page.domainurl/code-snippet/dialog/template-cs1" %}
 
-## See Also
+## See also
 
-* [How to add an icon to dialog buttons](./how-to/add-an-icons-to-dialog-buttons)
-* [How to customize the dialog appearance](./how-to/customize-the-dialog-appearance)
+* [How to add icons to Dialog buttons](./how-to/add-an-icons-to-dialog-buttons)
+* [How to customize the Dialog appearance](./how-to/customize-the-dialog-appearance)

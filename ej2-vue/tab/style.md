@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Tabs
+# Style in Vue Tabs component
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 
-## Customizing Tab
+## Customizing the Tab
 
 Use the following CSS to customize the Tab.
 
@@ -26,7 +26,7 @@ Use the following CSS to customize the Tab.
 
 ## Customizing the Tab items
 
-Use the following CSS to customize the header items of Tab.
+Use the following CSS to customize the header items of the Tab.
 
 ```css
 
@@ -37,7 +37,7 @@ Use the following CSS to customize the header items of Tab.
 
 ```
 
-Use the following CSS to customize the content items of Tab.
+Use the following CSS to customize the content items of the Tab.
 
 ```css
 
@@ -48,9 +48,9 @@ Use the following CSS to customize the content items of Tab.
 
 ```
 
-## Customizing Tab's header
+## Customizing the Tab's header
 
-Use the following CSS to customize the header of Tab control.
+Use the following CSS to customize the header of the Tab.
 
 ```css
 
@@ -60,9 +60,9 @@ Use the following CSS to customize the header of Tab control.
 
 ```
 
-## Customizing Tab's header icon
+## Customizing the Tab's header icon
 
-Use the following CSS to customize the header item icon of Tab control.
+Use the following CSS to customize the header item icon of the Tab.
 
 ```css
 
@@ -72,9 +72,9 @@ Use the following CSS to customize the header item icon of Tab control.
 
 ```
 
-## Customizing Tab's content
+## Customizing the Tab's content
 
-Use the following CSS to customize the content of Tab control.
+Use the following CSS to customize the content of the Tab.
 
 ```css
 
@@ -84,7 +84,7 @@ Use the following CSS to customize the content of Tab control.
 
 ```
 
-## Customizing the hover state of Tab control
+## Customizing the hover state of the Tab control
 
 Use the following CSS to customize the tab item when hovering.
 
@@ -107,7 +107,7 @@ Use the following CSS to customize the tab item popup icon when hovering.
 
 ```
 
-## Customizing selected item of Tab control
+## Customizing the selected item of the Tab control
 
 Use the following CSS to customize the selected tab item.
 

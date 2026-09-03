@@ -10,34 +10,34 @@ domainurl: ##DomainURL##
 
 # Animation in Vue Dialog
 
-The Dialog can be animated during the open and close actions. Also, user can customize animation's `delay`, `duration` and `effect`.
+The Dialog can be animated during the open and close actions. The user can also customize the animation's `delay`, `duration`, and `effect`.
 
 <!-- markdownlint-disable MD033 -->
 <table>
 <tr>
 <td>
-delay</td><td>
-The Dialog animation will start with the mentioned delay</td></tr>
+<b>delay</b></td><td>
+The Dialog animation will start with the mentioned delay.</td></tr>
 <tr>
 <td>
-duration</td><td>
-Specifies the animation duration to complete with one animation cycle</td></tr>
+<b>duration</b></td><td>
+Specifies the duration for the animation to complete one cycle.</td></tr>
 <tr>
 <td>
-effect</td><td>
-Specifies the animation effects of Dialog open and close actions effect.
+<b>effect</b></td><td>
+Specifies the animation effect for Dialog open and close actions.
 <br /><br />
 List of supported animation effects:
 <br />
 'Fade' | 'FadeZoom' | 'FlipLeftDown' | 'FlipLeftUp' | 'FlipRightDown' | 'FlipRightUp' | 'FlipXDown' |
 'FlipXUp' | 'FlipYLeft' | 'FlipYRight' | 'SlideBottom' | 'SlideLeft' | 'SlideRight' | 'SlideTop' |
-'Zoom'| 'None'
+'Zoom' | 'None'
 <br /><br />
-If the user sets ‘Fade’ effect, then the Dialog will open with ‘FadeIn’ effect and close with ‘FadeOut’ effect
+If the user sets 'Fade' effect, then the Dialog will open with 'FadeIn' effect and close with 'FadeOut' effect.
 </td></tr>
 </table>
 
-In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn`
+In the below sample, `Zoom` effect is enabled. So, the Dialog will open with `ZoomIn`
 and close with `ZoomOut` effects.
 
 {% tabs %}
@@ -48,5 +48,5 @@ and close with `ZoomOut` effects.
 {% include code-snippet/dialog/animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/dialog/animation-cs1" %}

@@ -21,7 +21,7 @@ The following options are used as an argument on calling the utility functions:
 | isModal | Specifies the Boolean value whether the dialog can be displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/vue/documentation/api/dialog#ismodal) property.|
 | position | Specifies the value where the alert or confirm dialog is positioned within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/vue/documentation/api/dialog#position) property { X: 'center', Y: 'center'}|
 | okButton | Configures the `OK button` that contains button properties with the click events. `okButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for OK button click', text: 'Yes' // <-- Default value is 'OK' }`|
-| cancelButton | Configures the `Cancel button` that contains button properties with the click events. `cancelButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for ‘Cancel’ button click', text: 'No' // <-- Default value is 'Cancel'}`|
+| cancelButton | Configures the `Cancel button` that contains button properties with the click events. `cancelButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for 'Cancel' button click', text: 'No' // <-- Default value is 'Cancel'}`|
 | isDraggable | Specifies the value whether the alert or confirm dialog can be dragged by the user. |
 | showCloseIcon | When set to true, the close icon is shown in the dialog component. |
 | closeOnEscape | When set to true, you can close the dialog by pressing ESC key. |
@@ -33,7 +33,7 @@ The following options are used as an argument on calling the utility functions:
 
 ## Alert dialog
 
-An alert dialog box is used to display warning like messages to the users. Use the following code to render a simple alert dialog in an application.
+An alert dialog box is used to display warning-like messages to the users. Use the following code to render a simple alert dialog in an application.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,7 +61,7 @@ An alert dialog box is used to display warning like messages to the users. Use t
 
 ## Confirm dialog
 
-A confirm dialog displays a specified message along with 'OK' and 'Cancel' button.
+A confirm dialog displays a specified message along with 'OK' and 'Cancel' buttons.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -89,9 +89,9 @@ A confirm dialog displays a specified message along with 'OK' and 'Cancel' butto
 
 ## Close utility dialog
 
-When rendering an Alert and Confirmation dialog through utility methods, You can close the dialog using the following ways.
+When rendering an Alert and Confirmation dialog through utility methods, you can close the dialog using the following ways.
 
-* By pressing the escape key if the [closeOnEscape](https://ej2.syncfusion.com/vue/documentation/api/dialog#closeonescape) property is enabled.
+* By pressing the Esc key if the [closeOnEscape](https://ej2.syncfusion.com/vue/documentation/api/dialog#closeonescape) property is enabled.
 * By clicking the close button if the [showCloseIcon](https://ej2.syncfusion.com/vue/documentation/api/dialog#showcloseicon) property is enabled.
 
 You can also manually close the Dialogs by creating an instance to the dialog and call the [hide](https://ej2.syncfusion.com/vue/documentation/api/dialog#hide) method.

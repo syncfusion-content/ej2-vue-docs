@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to create nested dialog in Vue Dialog
 
-A Dialog can be nested within another Dialog. The below sample contains parent and child Dialog (inner Dialog).
+A Dialog can be nested within another Dialog. The sample below contains a parent and child Dialog.
 
 **Step 1**:
 
-Create two div elements with id `#dialog` and `#innerDialog`.
+Create two div elements with the ids `dialog` and `innerDialog`.
 
 **Step 2**:
 
@@ -32,5 +32,5 @@ Set the inner Dialog target as `#dialog`.
 {% include code-snippet/dialog/inner-dialog-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/dialog/inner-dialog-cs1" %}

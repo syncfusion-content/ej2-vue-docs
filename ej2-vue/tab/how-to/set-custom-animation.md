@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to set custom animation in Vue Tabs
 
-Tab supports custom animations for both previous and next actions from the provided animation option of `Animation` library.
+Tab supports custom animations for both previous and next actions from the provided animation option of the `Animation` library.
 
-The [`animation`](https://ej2.syncfusion.com/vue/documentation/api/tab/#animation) property also allows you to set [`easing`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabActionSettings/#easing), [`duration`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabActionSettings/#duration), and various other [`effects`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabActionSettings/#effect).
+The [animation](https://ej2.syncfusion.com/vue/documentation/api/tab#animation) property also allows you to set [easing](https://ej2.syncfusion.com/vue/documentation/api/tab/tabActionSettings#easing), [duration](https://ej2.syncfusion.com/vue/documentation/api/tab/tabActionSettings#duration), and various other [effects](https://ej2.syncfusion.com/vue/documentation/api/tab/tabActionSettings#effect).
 
-Default animation is given as `SlideLeftIn` for [`previous`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabAnimationSettings/#previous) tab animation and `SlideRightIn` for [`next`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabAnimationSettings/#next) tab animation. You can also disable the animation by setting the animation effect as `None`. Also, please use the following CSS to disable indicator animation for animation effect as `None`.
+The default animation is `SlideLeftIn` for the [previous](https://ej2.syncfusion.com/vue/documentation/api/tab/tabAnimationSettings#previous) tab animation and `SlideRightIn` for the [next](https://ej2.syncfusion.com/vue/documentation/api/tab/tabAnimationSettings#next) tab animation. You can also disable the animation by setting the animation effect to `None`. Use the following CSS to disable the indicator animation when the animation effect is `None`.
 
 ```css
 
@@ -24,7 +24,7 @@ Default animation is given as `SlideLeftIn` for [`previous`](https://ej2.syncfus
 
 ```
 
-The sample demonstrates some types of animation that suits Tab. You can check all the animation effects here.
+The sample demonstrates some types of animation that suit the Tab. You can check all the animation effects here.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
