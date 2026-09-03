@@ -17,7 +17,7 @@ The Query Builder uses `DataManager`, which supports both RESTful JSON data serv
 
 ## Local data
 
-To bind local data to the query builder, you can assign the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) property  with a JavaScript object array. The local data source can also be provided as an instance of the `DataManager`.
+To bind local data to the Query Builder, you can assign the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) property with a JavaScript object array. The local data source can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -34,7 +34,7 @@ To bind local data to the query builder, you can assign the [`dataSource`](https
 
 ## Remote data
 
-To bind remote  data to the query builder, assign service data as an instance of  `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) property. To interact with remote data source, provide the endpoint `url`.
+To bind remote data to the Query Builder, assign service data as an instance of `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) property. To interact with remote data source, provide the endpoint `url`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -66,7 +66,7 @@ To bind remote  data to the query builder, assign service data as an instance of
 
 ### Binding with OData v4 services
 
-The ODataV4 is an improved version of OData protocols, and the `DataManager` can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [`odata documentation`](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the `ODataV4Adaptor`.
+The ODataV4 is an improved version of OData protocols, and the `DataManager` can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [`OData documentation`](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the `ODataV4Adaptor`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -147,7 +147,7 @@ export default {
 
 ## Data Manager
 
-You can use the created conditions in DataManager through the [`getPredicate`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#getpredicate) method. This method creates predicates which is used as conditions in DataManager.
+You can use the created conditions in DataManager through the [`getPredicate`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#getpredicate) method. This method creates predicates which are used as conditions in DataManager.
 
 Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Buttons` packages using below command.
 
@@ -168,13 +168,13 @@ npm install @syncfusion/ej2-vue-buttons --save
 
 ## Complex Data Binding
 
-Complex Data Binding allows you to create subfield for columns. To implement complex data binding, either bind the complex data in nested columns or specify complex data source and separator must be given in querybuilder.
+Complex data binding allows you to create subfields for columns. To implement complex data binding, either bind the complex data in nested columns or specify complex data source and separator must be given in Query Builder.
 
-To learn about how to use the complex data binding features in Vue Query Builder, you can check on this video
+To learn about how to use the complex data binding features in Vue Query Builder, you can check out this video
 
 {% youtube "https://www.youtube.com/watch?v=JQbc_484R1A" %}
 
-In the following sample, complex data was bound in nested columns.
+In the following sample, complex data is bound in nested columns.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to customize highlight search in Vue AutoComplete
+# How to Customize Highlight Search in Vue AutoComplete
 
-The AutoComplete has built-in support to [`highlight`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#highlight) the searched characters on suggested list items when enabled the highlight property.
+The AutoComplete has built-in support to [`highlight`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#highlight) the searched characters on suggested list items when the highlight property is enabled. Enable the `highlight` property and override the `e-highlight` CSS class to customize the highlight style of the matched characters.
 
-In the below sample, customized the matched character in suggestion list by `e-highlight` class.
+In the below sample, the matched characters in the suggestion list are customized using the `e-highlight` class.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -22,5 +22,5 @@ In the below sample, customized the matched character in suggestion list by `e-h
 {% include code-snippet/auto-complete/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/auto-complete/getting-started-cs16" %}

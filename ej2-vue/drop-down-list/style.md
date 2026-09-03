@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style in Vue Dropdown List
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content provides the exact CSS structure that can be used to modify the appearance of the control based on the user preference.
 
 ## Customizing the appearance of wrapper element
 
-Use the following CSS to customize the appearance of wrapper element.
+Use the following CSS to customize the appearance of the wrapper element.
 
 ```
 .e-ddl.e-input-group.e-control-wrapper .e-input {
@@ -38,7 +38,7 @@ Use the following CSS to customize the dropdown icon’s color.
 
 ## Customizing the focus color
 
-Use the following CSS to customize the focusing color of input element.
+Use the following CSS to customize the focusing color of the input element.
 
 ```
 .e-ddl.e-input-group.e-control-wrapper.e-input-focus::before, .e-ddl.e-input-group.e-control-wrapper.e-input-focus::after {
@@ -48,7 +48,7 @@ Use the following CSS to customize the focusing color of input element.
 
 ## Customizing the outline theme's focus color
 
-Use the following CSS to customize the focusing color of outline theme.
+Use the following CSS to customize the focusing color of the outline theme.
 
 ```
 .e-outline.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled),.e-outline.e-input-group.e-control-wrapper.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) {
@@ -69,7 +69,7 @@ Use the following CSS to customize the text color when the component is disabled
 
 ## Customizing the float label element's focusing color
 
-Use the following CSS to customize the focusing color of float label element.
+Use the following CSS to customize the focusing color of the float label element.
 
 ```
 .e-float-input.e-input-group:not(.e-float-icon-left) .e-float-line::before,.e-float-input.e-control-wrapper.e-input-group:not(.e-float-icon-left) .e-float-line::before,.e-float-input.e-input-group:not(.e-float-icon-left) .e-float-line::after,.e-float-input.e-control-wrapper.e-input-group:not(.e-float-icon-left) .e-float-line::after {
@@ -83,7 +83,7 @@ Use the following CSS to customize the focusing color of float label element.
 
 ## Customizing the color of the placeholder text
 
-Use the following CSS to customize the text color of placeholder.
+Use the following CSS to customize the text color of the placeholder.
 
 ```
 .e-ddl.e-input-group input.e-input::placeholder {
@@ -91,9 +91,9 @@ Use the following CSS to customize the text color of placeholder.
 }
 ```
 
-## Customizing the background color of focus, hover, and active item's
+## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of focus, hover and active item's.
+Use the following CSS to customize the background color of the focus, hover, and active items.
 
 ```
 .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
@@ -102,9 +102,9 @@ Use the following CSS to customize the background color of focus, hover and acti
 }
 ```
 
-## Customizing the appearance of pop-up element
+## Customizing the appearance of popup element
 
-Use the following CSS to customize the appearance of popup element.
+Use the following CSS to customize the appearance of the popup element.
 
 ```
 .e-dropdownbase .e-list-item, .e-dropdownbase .e-list-item.e-item-focus {
@@ -117,7 +117,7 @@ Use the following CSS to customize the appearance of popup element.
 
 ## Adding mandatory asterisk to placeholder and float label
 
-You can add a mandatory `asterisk(*)` to placeholder and float label using <b>.e-input-group.e-control-wrapper.e-float-input .e-float-text::after</b> class.
+You can add a mandatory `asterisk(*)` to the placeholder and float label using the <b>.e-input-group.e-control-wrapper.e-float-input .e-float-text::after</b> class.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

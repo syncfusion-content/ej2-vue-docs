@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Global Local in Vue Query Builder UI
 
-The `Localization` library allows you to localize default text content of the Query Builder. The Query Builder component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object.
+The `Localization` library allows you to localize default text content of the Query Builder. The Query Builder component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and a translation object. To apply a culture, set the `locale` property on the Query Builder and call `L10n.load()` with the translated strings mapped under the `querybuilder` namespace for the target culture.
 
 The following list of properties and its values are used in the Query Builder.
 
@@ -24,7 +24,7 @@ The following list of properties and its values are used in the Query Builder.
 | Edit | EDIT |
 | SelectField | Select a field |
 | SelectOperator | Select operator |
-| StartsWith | Starts With|
+| StartsWith | Starts With |
 | EndsWith | Ends With |
 | DoesNotStartWith | Does Not Start With |
 | DoesNotEndWith | Does Not End With |
@@ -37,7 +37,7 @@ The following list of properties and its values are used in the Query Builder.
 | GreaterThan | Greater Than |
 | GreaterThanOrEqual | Greater Than Or Equal |
 | Between | Between |
-| NotBetween | Not Between|
+| NotBetween | Not Between |
 | In | In |
 | NotIn | Not In |
 | Remove | REMOVE |

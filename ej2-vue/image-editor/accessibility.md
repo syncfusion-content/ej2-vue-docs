@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue Image Editor component
 
-The Image Editor component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Image Editor component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Image Editor component is outlined below.
 
@@ -40,21 +40,21 @@ The accessibility compliance for the Image Editor component is outlined below.
 
 ## Keyboard interaction
 
-The Image Editor component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Image Editor component.
+The Image Editor component follows the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Image Editor component.
 
 | **Press** | **To do this** |
 | --- | --- |
 | <kbd>Ctrl + Z</kbd> | Undo the last user action. |
 | <kbd>Ctrl + Y</kbd> | Redo the last user action. |
-| <kbd>Ctrl + S</kbd> | To save the Image. |
-| <kbd>Ctrl + O</kbd> | To open the Image. |
-| <kbd>Delete</kbd> | To delete the shape once the shape got selected through mouse click . |
-| <kbd>Enter</kbd> | To apply Selection Crop or Image Resize. |
-| <kbd>Escape</kbd> | To discard operations performed in the Image Editor, such as annotation drawings, crop selection, and more. |
+| <kbd>Ctrl + S</kbd> | Save the image. |
+| <kbd>Ctrl + O</kbd> | Open the image. |
+| <kbd>Delete</kbd> | Delete the selected shape. |
+| <kbd>Enter</kbd> | Apply selection crop or image resize. |
+| <kbd>Escape</kbd> | Discard the current operation, such as annotation drawing or crop selection. |
 
 ## Ensuring accessibility
 
-The Image Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Image Editor component's accessibility is verified through the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 The accessibility compliance of the Image Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/image-editor.html) in a new window to evaluate the accessibility of the Image Editor component with accessibility tools.
 
@@ -62,4 +62,4 @@ The accessibility compliance of the Image Editor component is shown in the follo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)
+* [Accessibility in Vue components](../common/accessibility)

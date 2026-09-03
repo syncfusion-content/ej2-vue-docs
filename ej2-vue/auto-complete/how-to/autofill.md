@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to enable autofill in Vue AutoComplete
+# How to Enable Autofill in Vue AutoComplete
 
-The AutoComplete supports the autofill behavior with the help of [`autofill`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#autofill) property. Whenever you change the input value, the AutoComplete will autocomplete your data by matching the typed character. Suppose, if no matches found then, AutoComplete doesn't suggest any item.
+The AutoComplete supports the autofill behavior with the help of the [`autofill`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#autofill) property. Whenever you change the input value, the AutoComplete will autocomplete your data by matching the typed character. If no matches are found, the AutoComplete does not suggest any item.
 
-In the below sample, showcase that how to work autofill with AutoComplete.
+The following sample demonstrates how autofill works with the AutoComplete.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

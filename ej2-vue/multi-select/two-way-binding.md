@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one MultiSelect component, v-model will automatically update the value in the other MultiSelect.
 
-The following example demonstrates how to set the `two-way-binding` in the MultiSelect.
+The following example demonstrates how to set the two-way binding in the MultiSelect.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

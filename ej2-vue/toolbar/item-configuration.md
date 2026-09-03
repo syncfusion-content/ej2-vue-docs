@@ -19,9 +19,9 @@ The [Vue Toolbar](https://www.syncfusion.com/vue-ui-components/vue-toolbar) can 
   Property   | Description
 ------------ | -------------
   text       | The text to be displayed for button.
- id         | The ID of the button to be rendered. If the ID is not given, auto ID is generated.
-  prefixIcon | Defines the class used to specify an icon for the button. The icon is `positioned before` the text if text is available or the icon alone button is rendered.
-suffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both `prefixIcon` and `suffixIcon` are specified, only `prefixIcon` is considered.
+  id         | The ID of the button to be rendered. If the ID is not given, auto ID is generated.
+  prefixIcon | Defines the class used to specify an icon for the button. The icon is `positioned before` the text if text is available or the icon alone is rendered as the button.
+  suffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both `prefixIcon` and `suffixIcon` are specified, only `prefixIcon` is considered.
   width      | Used to set the width of the button.
 
 ## Separator
@@ -43,11 +43,11 @@ The `Separator` type adds a vertical separation between the Toolbar's single/mul
 
 ### Enabling tab key navigation in Toolbar
 
-The [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) property of a Toolbar item is used to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) property allows you to switch between items using the Tab and Shift+Tab keys as well.
+The [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tabindex) property of a Toolbar item is used to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tabindex) property allows you to switch between items using the Tab and Shift+Tab keys as well.
 
-To use the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) property, you need to set it for each Toolbar item that you want to enable tab key navigation. The [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) property should be set to a positive integer value. A value of 0 or a negative value will disable tab key navigation for the item.
+To use the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tabindex) property, you need to set it for each Toolbar item that you want to enable tab key navigation. The [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tabindex) property should be set to a positive integer value. A value of 0 or a negative value will disable tab key navigation for the item.
 
-For example, to enable tab key navigation for two Toolbar items, you can use the following code:
+For example, to enable tab key navigation for three Toolbar items, you can use the following code:
 
 ```
 <template>
@@ -72,9 +72,9 @@ export default {
 </script>
 ```
 
-With the above code, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) values.
+With the above code, the user can switch between the three Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tabindex) values.
 
-If you set the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) values. For example:
+If you set the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tabindex) value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tabindex) values. For example:
 
 ```
 <template>
@@ -99,11 +99,11 @@ export default {
 </script>
 ```
 
-In this case, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, and the items will be navigated in the order in which they appear in the DOM.
+In this case, the user can switch between the three Toolbar items using the Tab and Shift+Tab keys, and the items will be navigated in the order in which they appear in the DOM.
 
 Example:
 
-Here is an example of how you can use the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) property to enable tab key navigation for a Toolbar component:
+Here is an example of how you can use the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#tabindex) property to enable tab key navigation for a Toolbar component:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -120,4 +120,4 @@ With the above code, the user can switch between the Toolbar items using the Tab
 
 ## See Also
 
-* [How to set item wise custom template](./how-to/set-item-wise-custom-template/)
+* [How to set item wise custom template](https://ej2.syncfusion.com/vue/documentation/toolbar/how-to/set-item-wise-custom-template)

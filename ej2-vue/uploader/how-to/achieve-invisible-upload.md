@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to achieve invisible upload in Vue Uploader
 
-You can achieve the invisible upload feature by using selected event in uploader component. In the following example, explains how to achieve invisible upload in uploader component.
+You can achieve the invisible upload feature by using the [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#selected) event in the Uploader component. The following example explains how to achieve the invisible upload in the Uploader component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

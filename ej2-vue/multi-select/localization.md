@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in Vue MultiSelect Dropdown
 
-The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the MultiSelect.
+The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the MultiSelect.
 
 | Locale key | en-US (default)  |
 |------------|------------------|
@@ -21,7 +21,7 @@ The Localization library allows you to localize static text content of the [noRe
 
 To load translation object to your application, use load function of the **L10n** class.
 
-In the following sample, French culture is set to the MultiSelect and no data is loaded. Hence, the `noRecordsTemplate` property displays its text in French culture initially, and if the sample is run offline, the `actionFailureTemplate` property displays its text appropriately.
+In the following sample, the French culture is set on the MultiSelect and no data is loaded. Hence, the `noRecordsTemplate` property displays its text in French culture initially, and if the sample is run offline, the `actionFailureTemplate` property displays its text appropriately.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -36,5 +36,5 @@ In the following sample, French culture is set to the MultiSelect and no data is
 
 ## See Also
 
-* [Accessibility](./accessibility/)
-* [How to bind the data to the combobox](./data-binding/)
+* [Accessibility](./accessibility)
+* [How to bind the data to the MultiSelect](./data-binding)

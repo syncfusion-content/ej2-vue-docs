@@ -24,7 +24,7 @@ To get started quickly with File Upload Using JWT Authentication in the Vue Uplo
 
 To set up the file uploader with JWT authentication, we'll use the `uploading` and `removing` events of the uploader component. The `asyncSettings` is used to configure the URLs for saving and removing files on the server. A property named `token` stores the JWT.
 
-Using the `uploading` and `removing` event argument's, `currentRequest` property and `setRequestHeader` method, the JWT token is added to the request header during the save and remove actions.
+Using the `uploading` and `removing` event arguments `currentRequest` property and `setRequestHeader` method, the JWT token is added to the request header during the save and remove actions.
 
 The following code snippet provides the client-side logic for adding a JWT token during the save and remove actions.
 

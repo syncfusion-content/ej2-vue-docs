@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to convert image into binary format in Vue Uploader
 
-By default, the file upload component saves the uploaded image files in physical directories. Also, you can convert the images into binary format at server-side before saving the uploaded images. To retrieve binary format of image files, convert the posted file’s input stream into  binary reader and read as bytes using ReadBytes method.
+By default, the file upload component saves the uploaded image files in physical directories. You can also convert the images into binary format on the server side before saving them. To retrieve the binary format of image files, convert the posted file's input stream into a binary reader and read it as bytes using the `ReadBytes` method.
 
-Refer to the below server-side code snippet
+Refer to the following server-side code snippet.
 
 ```c#
 

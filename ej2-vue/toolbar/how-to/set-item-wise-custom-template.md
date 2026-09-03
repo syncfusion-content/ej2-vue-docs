@@ -10,12 +10,11 @@ domainurl: ##DomainURL##
 
 # How to set item-wise custom template in Vue Toolbar
 
-The Toolbar supports adding template commands using the  `template` property. Template property can be given as the `HTML element` that is
-either a `string`  or a `query selector`.
+The Toolbar supports adding template commands using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item#template) property. The `template` property can be given as the `HTML element` that is either a `string` or a `query selector`.
 
 ## As a string
 
-The HTML element tag can be given as a string for the template property. Here, the checkbox is rendered as a HTML template.
+The HTML element tag can be given as a string for the template property. Here, a search input is rendered as an HTML template.
 
 ```html
 template: "<div><input type='checkbox' id='check1' checked=''>Accept</input></div>"
@@ -28,7 +27,6 @@ The template property also allows getting template content through query `select
 
 ```ts
 template: "#Template"
-
 ```
 
 {% tabs %}
@@ -39,5 +37,5 @@ template: "#Template"
 {% include code-snippet/toolbar/how-to/toolbar-items-templateID-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/toolbar/how-to/toolbar-items-templateID-cs1" %}

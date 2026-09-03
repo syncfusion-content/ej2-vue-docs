@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The `Localization` library allows you to localize the default text content of the Image Editor. The Image Editor has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the `locale` value and translation object.
 
-The following list of properties and its values are used in the Image  Editor.
+The following list of locale keys and their default text values are used in the Image Editor.
 
 | Locale key words | Text |
 | ------------ | ----------------------- |
@@ -97,8 +97,6 @@ The following list of properties and its values are used in the Image  Editor.
 | Height | Height |
 | Width | Width |
 | AspectRatio | Maintain aspect ratio |
-| W | W |
-| H | H |
 | DragText | Drag and drop your image here or |
 | DropText | Drop your image here or |
 | BrowseText | Browse here... |
@@ -125,6 +123,9 @@ The following list of properties and its values are used in the Image  Editor.
 | 3 | 3 |
 | 4 | 4 |
 | 5 | 5 |
+| W | Width |
+| H | Height |
+| And | and |
 | Border | Border |
 | Solid | Solid |
 | Dashed | Dashed |
@@ -173,6 +174,8 @@ The following list of properties and its values are used in the Image  Editor.
 | PixelSize | Pixel Size |
 | And | and |
 
+The following example loads a French translation and applies it to the Image Editor by setting the `locale` property and registering the translation through the `L10n` module.
+
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs8/app-composition.vue %}
@@ -181,5 +184,5 @@ The following list of properties and its values are used in the Image  Editor.
 {% include code-snippet/image-editor/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs8" %}

@@ -14,7 +14,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the background color of wrapper element
 
-Use the following CSS to customize the background color of wrapper element.
+Use the following CSS to customize the background color of the wrapper element.
 
 ```
 .e-multiselect.e-input-group .e-multi-select-wrapper {
@@ -24,7 +24,7 @@ Use the following CSS to customize the background color of wrapper element.
 
 ## Customizing the appearance of the delimiter wrapper element
 
-Use the following CSS to customize the appearance of delimiter wrapper element.
+Use the following CSS to customize the appearance of the delimiter wrapper element.
 
 ```
 .e-multiselect .e-delim-values {
@@ -64,7 +64,7 @@ Use the following CSS to customize the dropdown icon’s color.
 
 ## Customizing the focus color
 
-Use the following CSS to customize the focusing color of input element.
+Use the following CSS to customize the focusing color of the input element.
 
 ```
 .e-multiselect.e-input-group.e-control-wrapper.e-input-focus::before, .e-multiselect.e-input-group.e-control-wrapper.e-input-focus::after {
@@ -94,7 +94,7 @@ Use the following CSS to customize the text color of placeholder.
 
 ## Customizing the placeholder to add mandatory indicator(*)
 
-Use the following CSS to add the mandatory indicator * to the float label element.
+Use the following CSS to add the mandatory indicator * to the floating label element.
 
 ```
 .e-input-group.e-control-wrapper.e-float-input .e-float-text::after {
@@ -105,7 +105,7 @@ Use the following CSS to add the mandatory indicator * to the float label elemen
 
 ## Customizing the float label element's focusing color
 
-Use the following CSS to customize the focusing color of float label element.
+Use the following CSS to customize the focusing color of the floating label element.
 
 ```
 .e-float-input.e-input-group:not(.e-float-icon-left) .e-float-line::before,.e-float-input.e-control-wrapper.e-input-group:not(.e-float-icon-left) .e-float-line::before,.e-float-input.e-input-group:not(.e-float-icon-left) .e-float-line::after,.e-float-input.e-control-wrapper.e-input-group:not(.e-float-icon-left) .e-float-line::after {
@@ -131,7 +131,7 @@ Use the following CSS to customize the focusing color of outline theme.
 
 ## Customizing the background color of focus, hover, and active item's
 
-Use the following CSS to customize the background color of focus, hover and active item's.
+Use the following CSS to customize the background color of focus, hover, and active items.
 
 ```
 .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
@@ -142,7 +142,7 @@ Use the following CSS to customize the background color of focus, hover and acti
 
 ## Customizing the appearance of pop-up element
 
-Use the following CSS to customize the appearance of popup element.
+Use the following CSS to customize the appearance of the popup element.
 
 ```
 .e-dropdownbase .e-list-item, .e-dropdownbase .e-list-item.e-item-focus {

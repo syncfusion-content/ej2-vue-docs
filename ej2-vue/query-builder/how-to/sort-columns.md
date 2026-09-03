@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to sort the columns in Vue Query Builder UI
 
-SortDirection allows you to sort the columns bounded to the Query Builder to view the columns by ascending or descending order. You should set the [`sortDirection`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#sortdirection) property to sort the fields.
+SortDirection allows you to sort the columns bound to the Query Builder to view the columns in ascending or descending order. You should set the [`sortDirection`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#sortdirection) property to sort the fields.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

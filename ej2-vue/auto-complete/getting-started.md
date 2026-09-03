@@ -20,7 +20,7 @@ To get started quickly with Vue AutoComplete, check this video:
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Setup the Vue 2 project
+## Set up the Vue 2 project
 
 Easily set up a Vue 2 application using Vue CLI, which provides a reliable development environment, a streamlined project structure, and optimized builds compared to older setup tools. For detailed steps, refer to the Vue CLI [installation instructions](https://cli.vuejs.org/guide/installation.html).
 
@@ -43,10 +43,9 @@ vue create quickstart
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-- **Which linter to use?** → **Default ([Vue 2] babel, eslint)**
-- **Install with npm and start now?** → **Yes**
+- **Please pick a preset:** → **Default ([Vue 2] babel, eslint)**
 
-Selecting **Yes** automatically installs the project dependencies and starts the development server.
+Selecting the default preset automatically installs the project dependencies and starts the development server.
 
 After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
 
@@ -56,7 +55,7 @@ Navigate to the project directory:
 cd quickstart
 ```
 
-## Adding Vue Dropdowns package
+## Adding the Vue Dropdowns package
 
 To install the Dropdowns package, use the following command:
 
@@ -77,13 +76,11 @@ Install the **Material 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
- 
 npm install @syncfusion/ej2-material3-theme --save
- 
 {% endhighlight %}
 {% endtabs %}
- 
-Then add the following CSS reference to the **src/App.vue** file:
+
+Then add the following CSS reference to the **src/App.vue** file. The CSS `@import` statement should appear inside the `<style>` block of the component, so the theme is applied directly to the AutoComplete without a separate import elsewhere:
 
 {% tabs %}
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
@@ -140,7 +137,7 @@ Now, you can add the Vue AutoComplete component to your **src/App.vue** file by 
 To run the application, use the following command:
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 or
@@ -159,5 +156,5 @@ The output will appear as follows:
 
 * [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
 * [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
-* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to preselect items in cascading in Vue Dropdown List
 
-The following example demonstrate about how to preselect the list items in multiple cascading DropDownList.
+The following example demonstrates how to preselect the list items in multiple cascading DropDownList components.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

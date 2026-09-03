@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Vue MultiSelect Dropdown | Syncfusion
-description: Customize Syncfusion Vue MultiSelect Dropdown list items, group title, selected value, header, and footer using itemTemplate, groupTemplate, and valueTemplate.
+description: Customize the Vue MultiSelect Dropdown list items, group headers, selected value, header, footer, and summary tag using template engine support.
 control: Templates 
 platform: ej2-vue
 documentation: ug
@@ -12,15 +12,15 @@ domainurl: ##DomainURL##
 
 The MultiSelect has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 
-To customize MultiSelect dropdown items Using templates, you can check on this video:
+To customize MultiSelect dropdown items using templates, you can check this video:
 
 {% youtube "https://www.youtube.com/watch?v=biPKSEpTgwM" %}
 
 ## Item template
 
-The content of each list item within the MultiSelect can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#itemtemplate) property.
+The content of each list item within the MultiSelect can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#itemtemplate) property.
 
-In the following sample, each list item is split into two columns to display relevant data's.
+In the following sample, each list item is split into two columns to display relevant data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -35,7 +35,7 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Value template
 
-The currently selected value that is displayed by default on the MultiSelect input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#valuetemplate) property.
+The currently selected value that is displayed by default on the MultiSelect input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#valuetemplate) property.
 
 In the following sample, the selected value is displayed as a combined text of both `FirstName` and `City` in the MultiSelect input, which is separated by a hyphen.
 
@@ -52,7 +52,7 @@ In the following sample, the selected value is displayed as a combined text of b
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customize with the help of [groupTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#grouptemplate) property. This template is common for both inline and floating group header template.
+The group header title under which appropriate sub-items are categorized can also be customized with the help of the [groupTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#grouptemplate) property. This template is common for both inline and floating group header templates.
 
 In the following sample, employees are grouped according to their city.
 
@@ -69,9 +69,9 @@ In the following sample, employees are grouped according to their city.
 
 ## Header template
 
-The header element is shown statically at the top of the popup list items within the MultiSelect, and any custom element can be placed as a header element using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#headertemplate) property.
+The header element is shown statically at the top of the popup list items within the MultiSelect, and any custom element can be placed as a header element using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#headertemplate) property.
 
-In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
+In the following sample, the list items and their headers are designed and displayed as two columns similar to the multiple columns of a grid.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -86,9 +86,9 @@ In the following sample, the list items and its headers are designed and display
 
 ## Footer template
 
-The MultiSelect has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#footertemplate) property.
+The MultiSelect has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#footertemplate) property.
 
-In the following sample, footer element displays the total number of list items present in the MultiSelect.
+In the following sample, the footer element displays the total number of list items present in the MultiSelect.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -103,9 +103,9 @@ In the following sample, footer element displays the total number of list items 
 
 ## No records template
 
-The MultiSelect is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#norecordstemplate) property.
+The MultiSelect is provided with support to custom design the popup list content when no data is found and no matches are found on search with the help of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#norecordstemplate) property.
 
-In the following sample, popup list content displays the notification of no data available.
+In the following sample, the popup list content displays a notification that no data is available.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -120,7 +120,7 @@ In the following sample, popup list content displays the notification of no data
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#actionfailuretemplate) property.
+There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/index-default#actionfailuretemplate) property.
 
 In the following sample, when the data fetch request fails, the MultiSelect displays the notification.
 

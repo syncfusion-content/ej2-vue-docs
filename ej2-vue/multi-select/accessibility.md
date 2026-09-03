@@ -47,11 +47,11 @@ The MultiSelect component uses the `Listbox` role, and each list item has an `op
 | **Properties** | **Functionalities** |
 | --- | --- |
 | aria-haspopup | Indicates whether the MultiSelect input element has a popup list or not. |
-| aria-expanded | Indicates whether the popup list has expanded or not. |
+| aria-expanded | Indicates whether the popup list is expanded or not. |
 | aria-selected | Indicates the selected option. |
 | aria-readonly | Indicates the readonly state of the MultiSelect element. |
 | aria-disabled | Indicates whether the MultiSelect component is in a disabled state or not. |
-| aria-activedescendent | This attribute holds the ID of the active list item  to focus its descendant child element. |
+| aria-activedescendant | This attribute holds the ID of the active list item to focus its descendant child element. |
 | aria-owns | This attribute contains the ID of the popup list to indicate popup as a child element. |
 
 ## Keyboard interaction
@@ -60,8 +60,8 @@ You can use the following key shortcuts to access the MultiSelect without interr
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | Set focus at the first item in the MultiSelect when no item selected. Otherwise, moves focus next to the currently selected item. |
-| <kbd>Arrow Up</kbd> | Moves focus previous to the currently selected one. |
+| <kbd>Arrow Down</kbd> | Sets focus at the first item in the MultiSelect when no item is selected. Otherwise, moves focus next to the currently selected item. |
+| <kbd>Arrow Up</kbd> | Moves focus to the item previous to the currently selected one. |
 | <kbd>Page Down</kbd> | Scrolls down to the next page and set focus to the first item when popup list opens. |
 | <kbd>Page Up</kbd> | Scrolls up to the previous page and set focus to the first item when popup list opens. |
 | <kbd>Enter</kbd> | Selects the focused item, and popup list closes when it is in open state. |
@@ -70,8 +70,8 @@ You can use the following key shortcuts to access the MultiSelect without interr
 | <kbd>Alt + Down</kbd> | Opens the popup list. |
 | <kbd>Alt + Up</kbd> | Closes the popup list. |
 | <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
-| <kbd>Home</kbd> | set focus to the first item. |
-| <kbd>End</kbd> | set focus to the last item. |
+| <kbd>Home</kbd> | Sets focus to the first item. |
+| <kbd>End</kbd> | Sets focus to the last item. |
 
 > In the below sample, focus the MultiSelect component using <kbd>alt+t</kbd> keys.
 

@@ -42,7 +42,6 @@ npm create vite@latest my-app -- --template vue-ts
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
 
-- **Which linter to use?** → **Default ([Vue 3] babel, eslint)**
 - **Install with npm and start now?** → **Yes**
 
 Selecting **Yes** automatically installs the project dependencies and starts the development server.
@@ -77,9 +76,9 @@ Install the **Material 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
- 
+
 npm install @syncfusion/ej2-material3-theme --save
- 
+
 {% endhighlight %}
 {% endtabs %}
  
@@ -171,7 +170,7 @@ yarn run dev
 
 ![vue3-js-composition](./images/vue3-composition-toolbar.png)
 
-Refer the sample [Vue 3 using Composition API Toolbar getting started](https://github.com/SyncfusionExamples/vue3-toolbar-getting-started)
+Refer to the sample [Vue 3 using Composition API Toolbar getting started](https://github.com/SyncfusionExamples/vue3-toolbar-getting-started)
 
 ## See also
 

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to clear selected item in Vue Dropdown List
 
-You can clear the selected item in the below two different ways.
+You can clear the selected item in the following two different ways.
 
-By clicking on the `clear icon` which is shown in DropDownList element, you can clear the selected item in DropDownList through **interaction**. By using [`showClearButton`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#showclearbutton) property, you can enable the clear icon in DropDownList element.
+By clicking the `clear icon` shown in the DropDownList element, you can clear the selected item in the DropDownList through **interaction**. By using the [showClearButton](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#showclearbutton) property, you can enable the clear icon in the DropDownList element.
 
-Through **programmatic** you can set `null` value to anyone of the index, text or value property to clear the selected item in DropDownList.
+Through **programmatic** approach, you can set the `null` value to any one of the index, text, or value properties to clear the selected item in the DropDownList.
 
-The following example demonstrate about how to clear the selected item in DropDownList.
+The following example demonstrates how to clear the selected item in the DropDownList.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Resizing in Vue Dropdown List
 
-You can dynamically adjust the size of the popup in the DropDownList component by using the [AllowResize](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#allowresize)  property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+You can dynamically adjust the size of the popup in the DropDownList component by using the [AllowResize](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#allowresize) property. When enabled, users can resize the popup, improving visibility and control, and the resized dimensions are retained across sessions for a consistent user experience.
 
-The following sample illustrates the implementation of the Popup Resize feature.
+The following sample illustrates the implementation of the popup resize feature.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

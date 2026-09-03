@@ -30,7 +30,7 @@ Use the following CSS to customize the items of Toolbar.
 
 ```css
 
- .e-toolbar .e-toolbar-item {
+.e-toolbar .e-toolbar-item {
     background: #add8e6;
     border: 1px solid #5a70cc;
 }

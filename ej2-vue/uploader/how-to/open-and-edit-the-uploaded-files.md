@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to open and edit uploaded files in Vue Uploader
 
-The uploader component allows you to modify the file after uploading to the server, which can be achieved using success event of the uploader.
+The Uploader component allows you to modify the file after uploading it to the server, which can be achieved using the [success](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#success) event of the Uploader.
 
-You can retrieve the saved file path in the uploader success event and assign it to custom attribute (data-file-name) value of the respective file list element to open the uploaded file. Click the respective file element to create a new request along with saved file path using http header. In the server-side, get the file path from the header and open the file using process.start method
+You can retrieve the saved file path in the Uploader's success event and assign it to the custom attribute (`data-file-name`) value of the respective file list element to open the uploaded file. When you click the respective file element, a new request is created along with the saved file path using an HTTP header. On the server side, the file path is retrieved from the header, and the file is opened using the `Process.Start` method.
 
 ```
 <template>
@@ -20,7 +20,7 @@ You can retrieve the saved file path in the uploader success event and assign it
     <ejs-uploader ref="uploadObj" id='defaultfileupload' :success="onUploadSuccess" name="UploadFiles" :asyncSettings= "path"></ejs-uploader>
   </div>
 </template>
-<script setup>
+<script>
 
 import { UploaderComponent, SelectedEventArgs } from '@syncfusion/ej2-vue-inputs';
 import { createElement } from '@syncfusion/ej2-base';
@@ -41,7 +41,7 @@ export default {
         for (let i = 0; i < liElements.length; i++) {
             if (liElements[i].getAttribute('data-file-name') == args.file.name) {
                 liElements[i].addEventListener('click', () => { this.openFile(args, event); });
-                // File path have to update from server end in response status description.
+                // The file path has to be updated from the server end in the response status description.
                 liElements[i].setAttribute('file-path', args.e.target.statusText);
             }
         }
@@ -50,12 +50,12 @@ export default {
     if (!e.target.classList.contains('e-file-delete-btn') && !e.target.classList.contains('e-file-remove-btn'))
     {
         let ajax = new XMLHttpRequest();
-        // create new request for open the selected file
+        // create a new request to open the selected file
         ajax.open("POST", "YourHosedService/Home/openFile');
         let liElements = document.getElementsByClassName('e-upload')[0].querySelectorAll('.e-upload-file-list');
         for (let i = 0; i < liElements.length; i++) {
             if (liElements[i].getAttribute('data-file-name') == args.file.name) {
-                // Added the file path in header to get it in server side.
+                // Add the file path in the header to retrieve it on the server side.
             ajax.setRequestHeader('filePath', liElements[i].getAttribute('file-path').toString());
             }
         }
@@ -89,7 +89,7 @@ export default {
 </style>
 ```
 
-## Server side for open and edit the uploaded files
+## Server side for opening and editing the uploaded files
 
 ```c#
         public void Save()

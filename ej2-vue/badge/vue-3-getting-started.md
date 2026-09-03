@@ -86,7 +86,7 @@ npm install @syncfusion/ej2-material3-theme --save
 Then add the following CSS reference to the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API ~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <style>
   @import "../node_modules/@syncfusion/ej2-material3-theme/styles/badge/index.css";
@@ -135,5 +135,5 @@ yarn run dev
 
 * [Getting Started with Vue UI Components with the Nuxt Framework](https://ej2.syncfusion.com/vue/documentation/getting-started/nuxt-3)
 * [Getting Started with Vue UI Components with Vite and PNPM](https://ej2.syncfusion.com/vue/documentation/getting-started/pnpm)
-* [Getting started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
+* [Getting Started with testing Vue UI components in the Vitest project](https://ej2.syncfusion.com/vue/documentation/getting-started/vitest)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components using direct scripts](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)

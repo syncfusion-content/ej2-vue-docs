@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to highlight the matched character in Vue Dropdown List | Syncfusion
+title: Highlight the matched character in Vue Dropdown List | Syncfusion
 description: Highlight matched characters in the Syncfusion Vue Dropdown List while filtering by calling the highlightSearch method in the popup.
 control: Highlight filtering 
 platform: ej2-vue
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 By using the `highlightSearch` method, you can highlight the matched character in DropDownList filtering.
 
-The following example demonstrates about how to highlight the matched character in filtering.
+The following example demonstrates how to highlight the matched character in filtering.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

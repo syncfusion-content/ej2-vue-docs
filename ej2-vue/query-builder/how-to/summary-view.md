@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show the summary view in Vue Query Builder UI
 
-Summary view allows you to show or hide the filtered query. By default, the value is false. You can enable by setting the [`summaryView`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#summaryview) property to true.
+Summary view allows you to show or hide the filtered query. By default, the value is false. You can enable it by setting the [`summaryView`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#summaryview) property to true.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -20,5 +20,5 @@ Summary view allows you to show or hide the filtered query. By default, the valu
 {% include code-snippet/query-builder/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/query-builder/default-cs18" %}

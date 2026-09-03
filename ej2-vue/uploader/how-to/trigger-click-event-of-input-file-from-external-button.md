@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to trigger file click externally in Vue Uploader
 
-You can trigger the input type file click event from external button. In the below sample, click event of input file was triggered from **Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Button**.
+You can trigger the input type file click event from an external button. In the below sample, the click event of the input file is triggered from an **Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Button**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

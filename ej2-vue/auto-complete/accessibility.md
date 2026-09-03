@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue AutoComplete
 
-The AutoComplete component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The AutoComplete component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the AutoComplete component is outlined below.
 
@@ -41,12 +41,9 @@ The accessibility compliance for the AutoComplete component is outlined below.
 
 ## WAI-ARIA attributes
 
+The AutoComplete component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
-The AutoComplete component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
-
-## ARIA attributes
-
-The AutoComplete component uses the `combobox` role and each list item has an `option` role. The following `ARIA Attributes` denote the AutoComplete state.
+The AutoComplete component uses the `combobox` role, the suggestion list has a `listbox` role, and each list item has an `option` role. The following `ARIA attributes` denote the AutoComplete state.
 
 | **Property** | **Functionalities** |
 | --- | --- |
@@ -55,9 +52,9 @@ The AutoComplete component uses the `combobox` role and each list item has an�
 | aria-selected | Indicates the selected option from the list. |
 | aria-readonly | Indicates the readonly state of the AutoComplete element. |
 | aria-disabled | Indicates whether the AutoComplete component is in a disabled state or not.|
-| aria-activedescendent | This attribute holds the ID of the active list item to focus its descendant child element. |
+| aria-activedescendant | This attribute holds the ID of the active list item to focus its descendant child element. |
 | aria-owns | This attribute contains the ID of the suggestion list to indicate popup as a child element. |
-| aria-autocomplete | This attribute contains the ‘both’ to a list of options shows and the currently selected suggestion also shows inline. |
+| aria-autocomplete | This attribute contains the value `both`, meaning a list of options shows and the currently selected suggestion also shows inline. |
 
 ## Keyboard interaction
 
@@ -65,20 +62,20 @@ You can use the following key shortcuts to access the AutoComplete without inter
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | In popup hidden state, opens the suggestion list. In popup open state, focus the first item when no item selected else focus the item next to the currently selected item. |
-| <kbd>Arrow Up</kbd> | In popup hidden state, opens the suggestion list. In popup open state, focus the last item when no item selected else focus the item previous to the currently selected one. |
-| <kbd>Page Down</kbd> | Scrolls down to the next page and focus the first item when popup list opens. |
-| <kbd>Page Up</kbd> | Scrolls up to previous page and focus the first item when popup list open. |
-| <kbd>Enter</kbd> | Selects the focused item and set to AutoComplete component. |
-| <kbd>Tab</kbd> | Focuses on the next tab indexed element when the popup is closed. Otherwise, closes the popup list and remains the focus in component suppose if it is in an open state. |
-| <kbd>Shift + tab </kbd> | Focuses the previous tab indexed element when the popup is closed.  Otherwise,closes the popup list and remains the focus in component suppose if it is in an open state. |
+| <kbd>Arrow Down</kbd> | In popup hidden state, opens the suggestion list. In popup open state, focuses the first item when no item is selected, else focuses the item next to the currently selected item. |
+| <kbd>Arrow Up</kbd> | In popup hidden state, opens the suggestion list. In popup open state, focuses the last item when no item is selected, else focuses the item previous to the currently selected one. |
+| <kbd>Page Down</kbd> | Scrolls down to the next page and focuses the first item when the popup list opens. |
+| <kbd>Page Up</kbd> | Scrolls up to the previous page and focuses the first item when the popup list opens. |
+| <kbd>Enter</kbd> | Selects the focused item and sets it to the AutoComplete component. |
+| <kbd>Tab</kbd> | Focuses on the next tab indexed element when the popup is closed. Otherwise, closes the popup list and retains focus in the component when it is in an open state. |
+| <kbd>Shift + Tab</kbd> | Focuses the previous tab indexed element when the popup is closed. Otherwise, closes the popup list and retains focus in the component when it is in an open state. |
 | <kbd>Alt + Down</kbd> | Opens the popup list. |
 | <kbd>Alt + Up</kbd> | In popup hidden state, opens the popup list. In popup open state, closes the popup list. |
-| <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state then remove the selection. |
-| <kbd>Home</kbd> | Cursor moves to before of first character in input. |
-| <kbd>End</kbd> | Cursor moves to next of last character in input. |
+| <kbd>Esc</kbd> | Closes the popup list when it is in an open state, then removes the selection. |
+| <kbd>Home</kbd> | Moves the cursor before the first character in the input. |
+| <kbd>End</kbd> | Moves the cursor after the last character in the input. |
 
-> In the below sample, focus the AutoComplete component using <kbd>alt+t</kbd> keys.
+> In the below sample, the class-level <kbd>Alt+t</kbd> shortcut is configured to focus the AutoComplete component, so press <kbd>Alt+t</kbd> to focus it before using the other keyboard shortcuts.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -93,7 +90,7 @@ You can use the following key shortcuts to access the AutoComplete without inter
 
 ## Ensuring accessibility
 
-The AutoComplete component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The AutoComplete component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing. The component is validated with the latest published versions of both tools at the time of testing.
 
 The accessibility compliance of the AutoComplete component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/auto-complete.html) in a new window to evaluate the accessibility of the AutoComplete component with accessibility tools.
 

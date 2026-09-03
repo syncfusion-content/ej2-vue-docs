@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to add additional data on upload in Vue Uploader
 
-The uploader component allows you to add the additional data on file upload which is used to get in the server end. By using [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/#uploading) event and its customFormData argument, you can achieve this behavior.
+The Uploader component allows you to add additional data on file upload, which can be received on the server end. By using the [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#uploading) event and its `customFormData` argument, you can achieve this behavior.
 
-In the following code snippet, explains about how to add additional data on file upload.
+The following code snippet explains how to add additional data on file upload.
 
 ```
 <template>
@@ -20,14 +20,13 @@ In the following code snippet, explains about how to add additional data on file
     <ejs-uploader ref="uploadObj" id='defaultfileupload' :uploading="onFileUpload" name="UploadFiles"  :autoUpload="autoUpload" :asyncSettings= "path"></ejs-uploader>
   </div>
 </template>
-<script setup>
+<script>
 
 import { UploaderComponent, SelectedEventArgs } from '@syncfusion/ej2-vue-inputs';
 import { createElement } from '@syncfusion/ej2-base';
 
-
 export default {
-  data: function(){
+  data: function() {
         return {
           path:  {
             saveUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Save',
@@ -38,8 +37,8 @@ export default {
         }
     },
     methods: {
-        onFileUpload:function(args) {
-            // add addition data as key-value pair.
+        onFileUpload: function(args) {
+            // add additional data as key-value pair.
             args.customFormData = [{'name': 'Syncfusion INC'}];
         }
     }
@@ -71,7 +70,7 @@ export default {
 ## Server side for adding additional data
 
 ```c#
-    // Get the additional data in server end by corresponding key.
+    // Get the additional data on the server end by its corresponding key.
     var data = HttpContext.Current.Request.Form["name"];
 ```
 

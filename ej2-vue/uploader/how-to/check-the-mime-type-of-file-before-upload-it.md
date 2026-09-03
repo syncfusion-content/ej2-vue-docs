@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to check MIME type before upload in Vue Uploader
 
-By using [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/#uploading) event, you can get the file MIME type before uploading it to server. In the below sample, file MIME type is shown in the alert box before file start to upload.
+By using the [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#uploading) event, you can get the file's MIME type before uploading it to the server. In the following sample, the file's MIME type is shown in the alert box before the file starts to upload.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
