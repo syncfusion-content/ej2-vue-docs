@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Position Dialog on Center on Scroll in Vue Dialog
+# How to position dialog on center on scroll in Vue Dialog
 
 When the page or container is scrolled, the Dialog is also scrolled along with it. When a user expects to display the Dialog in the same position without scrolling, achieving this at the sample level, as shown below. Here, the `e-fixed` class is added to the Dialog element to prevent the scrolling.
 

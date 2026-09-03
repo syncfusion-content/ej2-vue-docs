@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue DropDownList Component in Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DropDownList component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Vue DropDownList component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](../system-requirements)
+[System requirements for Vue UI components](../system-requirements)
 
 ## Set up the Quasar project
 
@@ -26,11 +26,11 @@ To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start/
 npm init quasar
 ```
 
-This command prompts additional configurations. Follow the steps outlined in the images below:
+This command prompts for additional configurations. Follow the steps outlined in the images below:
 
 ![quasar-setup1](./images/quasar-setup1.png)
 
-This generates the necessary files and prompts for project dependency installation. Respond with 'yes' to proceed with npm install, as shown in the image below:
+This command generates the necessary files and prompts for project dependency installation. Respond with 'yes' to proceed with the npm install, as shown in the image below:
 
 ![quasar-setup2](./images/quasar-setup2.png)
 
@@ -54,9 +54,9 @@ npm install @syncfusion/ej2-vue-dropdowns --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the DropDownList component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
+In this article, the `Material 3` theme is applied using CSS styles, which are available in the installed packages. The necessary `Material 3` CSS styles for the DropDownList component and its dependents are imported into the `<style>` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -74,9 +74,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Follow the below steps to add the Vue DropDownList component:
+Follow these steps to add the Vue DropDownList component:
 
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the DropDownList component and its child directives in the `script` section of the **src/app.vue** file.
+1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. Then, import the DropDownList component and its child directives in the `script` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}

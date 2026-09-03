@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Two Way Binding in Vue Dropdown List
 
-Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one DropDownList component, v-model will automatically update the value in the other DropDownList.
+Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one DropDownList component, the v-model directive automatically updates the value in the other DropDownList.
 
-The following example demonstrates how to set the `two-way-binding` in the DropDownList.
+The following example demonstrates how to achieve two-way binding in the DropDownList.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

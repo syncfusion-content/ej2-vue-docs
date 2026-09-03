@@ -105,7 +105,7 @@ Importing from Named Parameter SQL involves integrating SQL queries with named p
 
 ### Importing from MongoDB Query
 
-Importing from MongoDB Query involves integrating MongoDB queries directly into the Query Builder. This enables users to input MongoDB query statements directly into the application, allowing for seamless integration and manipulation of MongoDB data within the Query Builder environment. It streamlines the process by facilitating direct access to MongoDB data for analysis, filtering, and further processing within the application. Conditions can be set from Named Parameter SQL queries using the [`setMongoQuery`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#setmongoquery) method.
+Importing from MongoDB Query involves integrating MongoDB queries directly into the Query Builder. This enables users to input MongoDB query statements directly into the application, allowing for seamless integration and manipulation of MongoDB data within the Query Builder environment. It streamlines the process by facilitating direct access to MongoDB data for analysis, filtering, and further processing within the application. Conditions can be set from MongoDB queries using the [`setMongoQuery`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#setmongoquery) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -153,7 +153,7 @@ npm install @syncfusion/ej2-vue-popups --save
 
 #### Exporting to Parameter SQL Query
 
-Exporting to Parameter SQL involves incorporating the defined conditions from the Query Builder into SQL queries with parameters. This method allows for dynamic value assignment during execution, enhancing flexibility and adaptability in query processing within SQL database. This can be accomplished using the [`getParameterizedSql`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#getparameterizedsql) method for exporting to Parameter SQL query.
+Exporting to Parameter SQL involves incorporating the defined conditions from the Query Builder into SQL queries with parameters. This method allows for dynamic value assignment during execution, enhancing flexibility and adaptability in query processing within a SQL database. This can be accomplished using the [`getParameterizedSql`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#getparameterizedsql) method for exporting to Parameter SQL query.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -168,7 +168,7 @@ Exporting to Parameter SQL involves incorporating the defined conditions from th
 
 #### Exporting to Named Parameter SQL Query
 
-Exporting to Named Parameter SQL entails integrating the defined conditions from the Query Builder into SQL queries with named parameters. This method offers enhanced readability and flexibility during execution by using named placeholders for parameter values. Named Parameter SQL facilitates easier maintenance and modification of queries, making it convenient for dynamic parameter assignment within SQL database. This can be accomplished using the method [`getParameterizedNamedSql`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#getparameterizednamedsql) for exporting to Named Parameter SQL query.
+Exporting to Named Parameter SQL entails integrating the defined conditions from the Query Builder into SQL queries with named parameters. This method offers enhanced readability and flexibility during execution by using named placeholders for parameter values. Named Parameter SQL facilitates easier maintenance and modification of queries, making it convenient for dynamic parameter assignment within a SQL database. This can be accomplished using the method [`getParameterizedNamedSql`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#getparameterizednamedsql) for exporting to Named Parameter SQL query.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

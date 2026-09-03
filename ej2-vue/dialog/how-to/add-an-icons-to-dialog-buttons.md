@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Add Icons to Buttons in Vue Dialog
+# How to add icons to buttons in Vue Dialog
 
 You can add icons to the Dialog buttons using the [buttons](https://ej2.syncfusion.com/vue/documentation/api/dialog#buttons) property or [footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/dialog#footertemplate) property. For detailed information about Dialog buttons, refer to the [documentation](https://ej2.syncfusion.com/vue/documentation/api/dialog#buttons) section.
 

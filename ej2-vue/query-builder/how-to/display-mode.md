@@ -20,8 +20,8 @@ Display options allow you to view the Query Builder in Vertically or Horizontall
 {% include code-snippet/query-builder/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/query-builder/default-cs13" %}
 
-> The default view the query builder component is Horizontal.
-> The default view in the mobile mode is Vertical.
+> The default view of the Query Builder component is Horizontal.
+> The default view in mobile mode is Vertical.

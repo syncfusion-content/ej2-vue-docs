@@ -12,10 +12,9 @@ domainurl: ##DomainURL##
 
 ## Show table in sub ContextMenu
 
-Menu items of the ContextMenu can be customized according to the requirement. The section explains about how to customize table template
-in sub menu item.
+Menu items of the ContextMenu can be customized according to the requirement. This section explains how to customize the table template in a sub menu item.
 
-This can be achieved by appending table layout while `li` rendering by using [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/#beforeitemrender) event.
+This can be achieved by appending the table layout while `li` rendering by using the [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/context-menu/index-default#beforeitemrender) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -30,9 +29,9 @@ This can be achieved by appending table layout while `li` rendering by using [`b
 
 ## Show UI components in ContextMenu
 
-UI components can also be placed inside the each `li` element of ContextMenu.
+UI components can also be placed inside each `li` element of the ContextMenu.
 
-In the following example, CheckBox component is placed inside each `li` element and this can be achieved by creating CheckBox component in [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/#beforeitemrender) event and appending it into the `li` element.
+In the following example, a CheckBox component is placed inside each `li` element and this can be achieved by creating the CheckBox component in the [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/context-menu/index-default#beforeitemrender) event and appending it into the `li` element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

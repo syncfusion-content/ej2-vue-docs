@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 The DropDownList has built-in support to filter data items when `allowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the search box.
 
-To display filtered items in the popup, filter the required data and return it to the DropDownList via [updateData](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method by using the [filtering](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#filtering) event.
+To display filtered items in the popup, filter the required data and return it to the DropDownList via the [updateData](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/filteringEventArgs#updatedata) method by using the [filtering](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#filtering) event.
 
-How to group and filter the DropDownList Items, you can check on this video:
+For information on how to group and filter the DropDownList items, watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=3KqDc3YnmNE" %}
 
-The following sample illustrates how to query the data source and pass the data to the DropDownList through the `updateData` method in `filtering` event.
+The following sample illustrates how to query the data source and pass the data to the DropDownList through the `updateData` method in the `filtering` event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -33,9 +33,9 @@ The following sample illustrates how to query the data source and pass the data 
 
 ## Limit the minimum filter character
 
-When filtering the list items, you can set the limit for character count to raise remote request and fetch filtered data on the DropDownList. This can be done by manual validation within the filter event handler.
+When filtering the list items, you can set the limit for the character count to raise a remote request and fetch filtered data on the DropDownList. This can be done by manual validation within the filter event handler.
 
-In the following example, the remote request does not fetch the search data until the search key contains three characters
+In the following example, the remote request does not fetch the search data until the search key contains three characters.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -50,9 +50,9 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Change the filter type
 
-While filtering, you can change the filter type to `contains`, `startsWith`, or `endsWith` for string type within the filter event handler
+While filtering, you can change the filter type to `contains`, `startsWith`, or `endsWith` for string type within the filter event handler.
 
-In the following examples, data filtering is done with `endsWith` type.
+In the following example, data filtering is done with the `endsWith` type.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -69,7 +69,7 @@ In the following examples, data filtering is done with `endsWith` type.
 
 Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by passing the fourth optional parameter of the `where` clause.
 
-The following example shows how to perform case-sensitive filter
+The following example shows how to perform a case-sensitive filter.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -84,9 +84,9 @@ The following example shows how to perform case-sensitive filter
 
 ## Diacritics Filtering
 
-The DropDownList supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#ignoreaccent) is enabled.
+The DropDownList supports diacritics filtering, which ignores the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter results in lists with international characters when the [ignoreAccent](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#ignoreaccent) property is enabled.
 
-In the following sample,data with diacritics are bound as dataSource for DropDownList.
+In the following sample, data with diacritics is bound as the dataSource for the DropDownList.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -101,7 +101,7 @@ In the following sample,data with diacritics are bound as dataSource for DropDow
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience. By default, a debounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Prevent Closing of Modal in Vue Dialog
+# How to prevent closing of modal in Vue Dialog
 
 You can prevent closing of the modal dialog by setting the [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/dialog#beforeclose) event argument `cancel` to `true`.
 In the following sample, the dialog is closed when you enter the username value with a minimum of 4 characters. Otherwise, it will not close.

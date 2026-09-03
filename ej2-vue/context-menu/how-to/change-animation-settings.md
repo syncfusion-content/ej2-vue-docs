@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # How to change animation settings in Vue Context Menu
 
-To change the animation of the ContextMenu, [`animationSettings`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuAnimationSettingsModel/) property
-is used. The supported effects for ContextMenu are,
+To change the animation of the ContextMenu, the [animationSettings](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuAnimationSettingsModel) property is used. The supported effects for ContextMenu are:
 
 | Effect | Functionality |
 | ------------ | ---------------------- |

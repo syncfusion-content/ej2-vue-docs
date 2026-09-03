@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# About Syncfusion Vue Dropdown Tree Component.
+# About Syncfusion Vue Dropdown Tree Component
 
-The Dropdown Tree component allows you to select single or multiple values from the hierarchical data in a tree-like structure. It has several out-of-the-box features, such as data binding, check boxes, templates, UI customization, accessibility, and pre-selected values. The available key features are
+The Dropdown Tree component allows you to select single or multiple values from the hierarchical data in a tree-like structure. It has several out-of-the-box features, such as data binding, check boxes, templates, UI customization, accessibility, and pre-selected values. The available key features are:
 
 ## Key features
 
@@ -24,4 +24,4 @@ The Dropdown Tree component allows you to select single or multiple values from 
 
 * **Template** - To customize the Dropdown Tree items, header, footer, action failure content, and no records content.
 
-* **Accessibility** - To provide access to all the Dropdown Tree component features through keyboard interaction, on-screen readers, and other assistive technology devices.
+* **Accessibility** - To provide access to all the Dropdown Tree component features through keyboard interaction, screen readers, and other assistive technology devices.

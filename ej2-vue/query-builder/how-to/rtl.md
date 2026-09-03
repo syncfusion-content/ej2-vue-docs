@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to right to left (RTL) in Vue Query Builder UI
 
-RTL provides an option to switch the text direction and layout of the Query Builder component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Persian, Urdu, etc.). To enable RTL, set the [`enableRtl`]  (https://ej2.syncfusion.com/vue/documentation/right-to-left/) to true.
+RTL provides an option to switch the text direction and layout of the Query Builder component from right to left. It improves the user experience and accessibility for users who use right-to-left languages (Arabic, Persian, Urdu, etc.). To enable RTL, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#enablertl) to true.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

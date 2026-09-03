@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Read All Values on Button Click in Vue Dialog
+# How to read all values on button click in Vue Dialog
 
 You can read the dialog element values by binding the action handler to the footer buttons. The buttons property provides options to bind events to the action buttons. For detailed information about buttons, refer to the [footer](../template#footer) section.
 In the below sample, the values of input elements within the dialog are checked in the footer button click event and send the values as the content of the confirmation dialog.

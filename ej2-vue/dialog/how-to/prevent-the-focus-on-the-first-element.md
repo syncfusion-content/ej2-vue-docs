@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Prevent Focus on First Element in Vue Dialog
+# How to prevent focus on first element in Vue Dialog
 
 By default, the dialog focuses on the first focusable element in the content area. You can prevent this default focusing behavior using the [open](https://ej2.syncfusion.com/vue/documentation/api/dialog#open) event and by enabling the `preventFocus` argument.
 

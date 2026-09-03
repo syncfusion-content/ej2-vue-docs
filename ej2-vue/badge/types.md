@@ -35,7 +35,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Badge has the following
 {% include code-snippet/badge/types-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/types-cs1" %}
 
 ## Badge types
@@ -62,7 +62,7 @@ The circle Badge style can be applied by adding the modifier class `.e-badge-cir
 {% include code-snippet/badge/circle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/circle-cs1" %}
 
 ### Pill
@@ -77,7 +77,7 @@ The pill Badge style can be applied by adding the modifier class `.e-badge-pill`
 {% include code-snippet/badge/pill-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/pill-cs1" %}
 
 ### Link
@@ -92,7 +92,7 @@ When Badge modifier classes are applied to the anchor tag, the badge’s appeara
 {% include code-snippet/badge/link-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/link-cs1" %}
 
 ### Notification
@@ -107,12 +107,12 @@ The notification Badge style can be applied by adding the modifier class `.e-bad
 {% include code-snippet/badge/notification-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/notification-cs1" %}
 
 ### Dot
 
-Dot can be applied by adding the modifier class `.e-badge-dot` to the target element. Dot badges are similar to notification badges, but in a minimalistic way. While using the dot badge, set the parent element to `position: relative` .
+Dot can be applied by adding the modifier class `.e-badge-dot` to the target element. Dot badges are similar to notification badges, but in a minimalistic way. While using the dot badge, set the parent element to `position: relative`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -122,12 +122,12 @@ Dot can be applied by adding the modifier class `.e-badge-dot` to the target ele
 {% include code-snippet/badge/dot-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/dot-cs1" %}
 
 ### Overlap
 
-The overlap Badge can be used with `notification` or `dot` badge, which overlaps with the target element by adding the modifier class`.e-badge-overlap`. While using the overlap badge, set the parent element to `position: relative`.
+The overlap Badge can be used with `notification` or `dot` badge, which overlaps with the target element by adding the modifier class `.e-badge-overlap`. While using the overlap badge, set the parent element to `position: relative`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -137,7 +137,7 @@ The overlap Badge can be used with `notification` or `dot` badge, which overlaps
 {% include code-snippet/badge/overlap-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/overlap-cs1" %}
 
 ### Position
@@ -152,5 +152,5 @@ The default position of the `notification` or `dot` Badge is top. But, the posit
 {% include code-snippet/badge/position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/position-cs1" %}

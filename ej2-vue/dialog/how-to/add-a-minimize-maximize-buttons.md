@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Add Minimize and Maximize Buttons in Vue Dialog
+# How to add minimize and maximize buttons in Vue Dialog
 
 Vue Dialog allows end users to minimize or maximize the Dialog component. You can add minimize and maximize custom buttons near the close icon in the Dialog header using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/dialog#headertemplate) property and handle the actions in the button click events, as shown in the following sample.
 

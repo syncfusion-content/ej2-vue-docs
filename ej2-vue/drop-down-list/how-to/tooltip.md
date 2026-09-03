@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show tooltip in Vue Dropdown List
 
-You can achieve this behavior by using `ej2-tooltip` component. When the mouse hover on the DropDownList option that tooltip display some details related to hovered list item.
+You can achieve this behavior by using the `ej2-tooltip` component. When the mouse hovers over the DropDownList option, the tooltip displays some details related to the hovered list item.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

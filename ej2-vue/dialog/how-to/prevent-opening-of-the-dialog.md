@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Prevent Opening of the Dialog in Vue Dialog
+# How to prevent opening of the dialog in Vue Dialog
 
 You can prevent the dialog from opening by setting the [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/dialog#beforeopen) event argument `cancel` to `true`.
 In the following sample, the success dialog is opened when you enter the username value with a minimum of 4 characters. Otherwise, it will not open.
