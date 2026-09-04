@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # How to preview images before uploading in Vue Uploader
 
-The uploader component allows to create preview images before uploaded it. The preview images created by reading the file using selected event.
-Also, the user can create preview images after uploading to server using success event.
+The Uploader component allows you to create preview images before uploading them. The preview images are created by reading the file using the [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#selected) event.
+Also, you can create preview images after uploading to the server using the [success](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#success) event.
 
-In the following link, explains about how to create image preview in uploader component.
+The following link explains how to create an image preview in the Uploader component.
 
 [Image Preview](https://ej2.syncfusion.com/vue/demos/#/material/uploader/image-preview.html)
 

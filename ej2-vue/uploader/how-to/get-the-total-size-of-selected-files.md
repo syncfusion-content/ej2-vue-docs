@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to get total size of selected files in Vue Uploader
 
-You can get the total size of selected files before upload it to designated server. By using [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/#selected) event you can achieve this behavior.
+You can get the total size of the selected files before uploading them to the designated server. By using the [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#selected) event, you can achieve this behavior.
 
-In the following example, explains about how to calculate total file size before upload.
+The following example explains how to calculate the total file size before upload.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

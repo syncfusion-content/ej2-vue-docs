@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to customize button with HTML element in Vue Uploader
 
-The uploader component allows you to customize the action buttons by using [buttons](https://ej2.syncfusion.com/vue/documentation/api/uploader/#buttons) &nbsp;property.
+The Uploader component allows you to customize the action buttons by using the [buttons](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#buttons) property.
 
-In the following example explains about how to customize the action buttons.
+The following example explains how to customize the action buttons.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

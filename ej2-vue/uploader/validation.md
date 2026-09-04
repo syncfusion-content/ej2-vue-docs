@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Validation in Vue Uploader
 
-The uploader component validate the selected files extension and size using the [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/#allowedextensions),
-[minFileSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#minfilesize) and [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#maxfilesize) properties. The files can be validated before uploading to the server and can be ignored on uploading. Also, you can validate the files by setting the HTML attributes to the original input element. The validation process occurs on drag-and-drop the files also.
+The Uploader component validates the selected files extension and size using the [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#allowedextensions),
+[minFileSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#minfilesize) and [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#maxfilesize) properties. The files can be validated before uploading to the server and can be ignored on uploading. Also, you can validate the files by setting the HTML attributes on the original input element. The validation process also occurs on drag-and-drop of the files.
 
 ## File type
 
-You can allow the specific types of files alone to upload using the [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/#allowedextensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files matched against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute accept to original input element.
+You can allow only the specific types of files to upload using the [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#allowedextensions) property. The extensions can be represented as a collection separated by commas. The Uploader component filters the selected or dropped files matched against the specified file types and processes the upload operation. The validation happens when you specify a value to the inline `accept` attribute on the original input element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -30,7 +30,7 @@ You can allow the specific types of files alone to upload using the [allowedExte
 
 ## File size
 
-The uploader component allows you to validate the files based on its size. The validation helps to restrict uploading large files or empty files to the server. The size can be represented in `bytes`. By default, the uploader component allows you to upload **minimum file size** as 0 byte and **maximum file size** as 28.4 MB using using `minFileSize` and `maxFileSize` properties.
+The Uploader component allows you to validate the files based on their size. The validation helps to restrict uploading large files or empty files to the server. The size can be represented in `bytes`. By default, the Uploader component allows you to upload a **minimum file size** of 0 bytes and a **maximum file size** of 28.4 MB using the `minFileSize` and `maxFileSize` properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -45,7 +45,7 @@ The uploader component allows you to validate the files based on its size. The v
 
 ## Maximum files count
 
-You can restrict uploading the maximum number of files using the **selected** event. In the selected event arguments, you can get the currently selected files details using the `getFilesData()`. You can modify the files details and assign the modified file list to the `eventArgs.modifiedFilesData`.
+You can restrict the maximum number of files to upload using the **selected** event. In the selected event arguments, you can get the currently selected files details using `getFilesData()`. You can modify the files details and assign the modified file list to the `eventArgs.modifiedFilesData`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -60,7 +60,7 @@ You can restrict uploading the maximum number of files using the **selected** ev
 
 ## Duplicate files
 
-You can validate the duplicate files before uploading to server using the selected event. Compare the selected files with the existing files data and filter the file list by removing the duplicate files.
+You can validate the duplicate files before uploading to the server using the selected event. Compare the selected files with the existing files data and filter the file list by removing the duplicate files.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

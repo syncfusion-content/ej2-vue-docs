@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to add confirm dialog to remove files in Vue Uploader
 
-You can customize the uploader component for use confirm dialog before remove the files. In the following example, used ej2 dialog as confirm dialog which is used for making confirmation on removing the files by using [remove](https://ej2.syncfusion.com/vue/documentation/api/uploader/#remove) method.
+You can customize the Uploader component to use a confirm dialog before removing the files. In the following example, the ej2 Dialog is used as a confirm dialog for making a confirmation on removing the files by using the [remove](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#remove) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to resize images before uploading in Vue Uploader
 
-You can customize the dimension of the images before uploading it to the server. By using selected event, you can get the selected file information as type of an object. From the obtained image file information, create a new canvas and render an image with the custom dimensions. Refer the corresponding code snippet as follows.
+You can customize the dimensions of the images before uploading them to the server. By using the [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#selected) event, you can get the selected file information as type of an object. From the obtained image file information, create a new canvas and render an image with the custom dimensions. Refer to the corresponding code snippet as follows.
 
 ```
 <template>
   <div>
     <div id="dropTarget">
-        <span id="dropElement" class="droparea">Drop files here or <a href="" id="browse"><u>Browse</u></a> </span>
+        <span id="dropElement" class="droparea">Drop files here or <a href="" aria-label="Browse files" id="browse"><u>Browse</u></a> </span>
         <ejs-uploader id='template' :multiple='false' name="UploadFiles" :asyncSettings= "path" ref="uploadObj"
             :dropArea= "dropElement" :selected= "onFileSelect" :progress= "onFileUpload"
             :success= "onUploadSuccess" :failure= "onUploadFailed" :removing= "onFileRemove">
@@ -28,14 +28,13 @@ You can customize the dimension of the images before uploading it to the server.
 ```
 
 ```ts
-<script setup>
+<script>
 
 import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
 import { FileInfo } from '@syncfusion/ej2-vue-inputs/uploader';
 import { createSpinner, showSpinner, hideSpinner } from '@syncfusion/ej2-popups';
 import { createElement, isNullOrUndefined, detach, EventHandler } from '@syncfusion/ej2-base';
-
-
+import Vue from 'vue';
 
 export default Vue.extend({
     data: function() {
@@ -253,7 +252,7 @@ export default Vue.extend({
     #dropElement {
         padding: 3% 30% 3%;
         display: inherit;
-        border: 1px dashed #c3c3cc
+        border: 1px dashed #c3c3cc;
     }
 
     .droparea {

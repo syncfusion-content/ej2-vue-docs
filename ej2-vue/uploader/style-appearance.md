@@ -14,7 +14,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the appearance of File Upload wrapper element
 
-Use the following CSS to customize the appearance of wrapper element.
+Use the following CSS to customize the appearance of the wrapper element:
 
 ```
 /* To specify height */
@@ -26,7 +26,7 @@ Use the following CSS to customize the appearance of wrapper element.
 
 ## Customizing the File Upload browse button
 
-Use the following CSS to customize the File Upload browse button
+Use the following CSS to customize the File Upload browse button:
 
 ```
 /* To specify font size and color */
@@ -40,7 +40,7 @@ Use the following CSS to customize the File Upload browse button
 
 ## Customizing the File Upload content
 
-Use the following CSS to customize the File Upload content
+Use the following CSS to customize the File Upload content:
 
 ```
 /* To specify font size and color */
@@ -52,7 +52,7 @@ Use the following CSS to customize the File Upload content
 
 ## Customizing the uploaded file container in File Upload
 
-Use the following CSS to customize the uploaded file container in File Upload
+Use the following CSS to customize the uploaded file container in File Upload:
 
 ```
 /* To specify background color */
@@ -63,4 +63,4 @@ Use the following CSS to customize the uploaded file container in File Upload
 
 ## See Also
 
-* [Customize the appearance of uploader using a template](https://ej2.syncfusion.com/vue/documentation/uploader/template/)
+* [Customize the appearance of uploader using a template](https://ej2.syncfusion.com/vue/documentation/uploader/template)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to determine if uploader has file input in Vue Uploader
 
-By setting **required** attribute to uploader input element, you can validate the file input has any value in it. In the below sample, set required attribute to the uploader input element and showcase the validation failure message using `data-required-message` attribute.
+By setting the **required** attribute on the Uploader input element, you can validate whether the file input has any value in it. In the following sample, the required attribute is set on the Uploader input element, and the validation failure message is displayed using the `data-required-message` attribute.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

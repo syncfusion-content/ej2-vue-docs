@@ -12,10 +12,10 @@ domainurl: ##DomainURL##
 
 ## Paste to upload
 
-The uploader component allows you to upload the files using the select or drop files option from the file explorer.  It also supports pasting to upload the image files. You can upload any currently copied images in the clipboard.
+The Uploader component allows you to upload the files using the select or drop files option from the file explorer.  It also supports pasting to upload the image files. You can upload any image currently copied in the clipboard.
 
-> When you paste the image, it will be saved in the server with the filename as `image.png`. The file name can
-be renamed in the server end. You can generate a random name for the file name using [getUniqueID](https://ej2.syncfusion.com/vue/documentation/api/uploader/#getuniqueid) method.
+> When you paste the image, it will be saved on the server with the filename `image.png`. The file name can
+be renamed on the server end. You can generate a random name for the file using the [getUniqueID](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#getuniqueid) method.
 Refer to the following example.
 
 {% tabs %}
@@ -55,9 +55,9 @@ public void Save()
 
 ## Directory upload
 
-The uploader component allows you to upload all files in the folders to server by using the [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/uploader/#directoryupload) property. When this property is enabled, the uploader component processes the files by iterating through the files and sub-directories in a directory. It allows you to select only folders instead of files to upload.
+The Uploader component allows you to upload all files in the folders to the server by using the [directoryUpload](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#directoryupload) property. When this property is enabled, the Uploader component processes the files by iterating through the files and sub-directories in a directory. It allows you to select only folders instead of files to upload.
 
-> The directory upload is available only in browsers that supports **HTML5 directory**. The uploader will process directory upload by dragging and dropping in the Edge browser. Refer to the following example to upload files to the server.
+> The directory upload is available only in browsers that support **HTML5 directory**. The Uploader will process directory upload by dragging and dropping in the Edge browser. Refer to the following example to upload files to the server.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -110,11 +110,11 @@ public void Save() {
 
 ## Drag and drop
 
-The uploader component allows you to drag and drop the files to upload. You can drag the files from file explorer and drop into the drop area. By default, the uploader component act as drop area element. The drop area gets highlighted when you drag the files over drop area.
+The Uploader component allows you to drag and drop the files to upload. You can drag the files from the file explorer and drop them into the drop area. By default, the Uploader component acts as the drop area element. The drop area gets highlighted when you drag the files over it.
 
 ### Custom drop area
 
-The uploader component allows you to set external target element as drop area using the [dropArea](https://ej2.syncfusion.com/vue/documentation/api/uploader/#droparea) property. The element can be represented as HTML element or element’s id.
+The Uploader component allows you to set an external target element as the drop area using the [dropArea](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#droparea) property. The element can be represented as an HTML element or the element's id.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -124,12 +124,12 @@ The uploader component allows you to set external target element as drop area us
 {% include code-snippet/uploader/draganddrop-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/uploader/draganddrop-cs1" %}
 
 ### Customize drop area
 
-You can customize the appearance of drop area by overriding the default drop area styles. The class “” and “” is available to handle this customization.
+You can customize the appearance of the drop area by overriding the default drop area styles. In the following example, the drop area's styles such as `#dropArea` and `#dropArea .e-upload` are customized for this purpose.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

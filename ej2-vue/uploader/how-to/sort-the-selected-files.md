@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # How to sort selected files in Vue Uploader
 
-You can sort the selected files list and shown the list items in meaningful order. By using [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/#selected) event,
-you can achieve this behavior in uploader component.
+You can sort the selected files list and show the list items in a meaningful order. By using the [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#selected) event,
+you can achieve this behavior in the Uploader component.
 
-In the following example, explains about how to sort the file list in uploader component.
+The following example explains how to sort the file list in the Uploader component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

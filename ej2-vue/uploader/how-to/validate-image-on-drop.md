@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to validate image on drop in Vue Uploader
 
-The uploader component allows you to upload all type of images by setting `image/*` to [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/#allowedextensions) property or directly you can set it to accept attribute of uploader element.
+The Uploader component allows you to upload all types of images by setting `image/*` to the [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#allowedextensions) property, or you can directly set it to the accept attribute of the Uploader element.
 
-By default, the behavior is working with select a file using browse button. But, this behavior doesn’t support on drag and drop the files. You can handle this behavior manually using [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/#selected) event by filtering the file types from application.
+By default, this behavior works when selecting a file using the browse button. However, it is not supported on drag and drop of files. You can handle this behavior manually using the [selected](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#selected) event by filtering the file types in the application.
 
-In the following example, validated image files using images/*. You are able to drag and drop the image files with extension of png, jpg, bpg, gif and tiff to upload it.
+In the following example, image files are validated using `image/*`. You are able to drag and drop the image files with the extensions png, jpg, bmp, gif, and tiff to upload them.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Localization in Vue Uploader
 
-The Localization library allows you to localize static text content of the uploader. The static text contains default text content of action buttons, file status, clear icon title, tooltips, and text content of drag area. Define the [locale](https://ej2.syncfusion.com/vue/documentation/api/uploader/#locale) object for a culture and assign it to L10n load method.
+The Localization library allows you to localize the static text content of the Uploader. The static text contains the default text content of action buttons, file status, clear icon title, tooltips, and text content of the drag area. Define the [locale](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#locale) object for a culture and assign it to the L10n load method.
 
-The following are the list of keys and its values used in the uploader.
+The following is the list of keys and their values used in the Uploader.
 
 | Key | Description |
 |------------------------|---------|
@@ -20,10 +20,10 @@ The following are the list of keys and its values used in the uploader.
 | Clear | To customize the clear button text.|
 | Upload | To customize the upload button text. |
 | dropFilesHint | To customize the drop area text. |
-| uploadFailedMessage | To customize the status text when  the file is failed to upload.|
-| uploadSuccessMessage | To customize the status text when  the file is uploaded successfully.|
-| removedSuccessMessage | To customize the status text when  the file is removed the successfully from the server.|
-| removedFailedMessage | To customize the status text while the file is failed to remove.|
+| uploadFailedMessage | To customize the status text when the file fails to upload.|
+| uploadSuccessMessage | To customize the status text when the file is uploaded successfully.|
+| removedSuccessMessage | To customize the status text when the file is removed successfully from the server.|
+| removedFailedMessage | To customize the status text while the file fails to be removed.|
 | inProgress | To customize the status text while the upload is in progress.|
 | pauseUpload | To customize the status text while the uploading is paused.|
 | fileUploadCancel | To customize the status text when uploading is cancelled.|
@@ -31,11 +31,11 @@ The following are the list of keys and its values used in the uploader.
 | invalidMaxFileSize | To customize the status text when the file size is greater than the maximum file size.|
 | invalidFileType | To customize the status text when the file type is invalid.|
 | invalidMinFileSize | To customize the status text when the file size is less than the minimum file size. |
-| remove | To customize tooltip text for remove icon. |
-| cancel | To customize tooltip text for cancel icon. |
-| delete | To customize tooltip text for delete icon. |
-| totalFiles | To customize tooltip text for total files. |
-| size | To customize tooltip text for size. |
+| remove | To customize the tooltip text for the remove icon. |
+| cancel | To customize the tooltip text for the cancel icon. |
+| delete | To customize the tooltip text for the delete icon. |
+| totalFiles | To customize the tooltip text for total files. |
+| size | To customize the tooltip text for size. |
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

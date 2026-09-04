@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Form Support in Vue Uploader
 
-The uploader component works with HTML form like default file input.
-The following configuration is must to make the uploader work inside the form.
+The Uploader component works with HTML forms like a default file input.
+The following configuration is required to make the Uploader work inside a form:
 
     *   `saveUrl` and `removeUrl` must be null.
     *   `autoUpload` must be disabled.
-    *   `name` attribute must be added in input element.
+    *   The `name` attribute must be added to the input element.
 
 The selected or dropped files are received as a collection in form action when the form is submitted. The form action handles the server-side operations that manage the file upload process. When you reset the form, the file list and data will be cleared.
 
