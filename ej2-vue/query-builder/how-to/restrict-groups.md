@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to set the maximum group count in Vue Query Builder UI
 
-You can restrict the condition set by defining the [`maxGroupCount`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#maxgroupcount) property. By default, the value is 5. In the below demo, the `maxGroupCount` is set to 2 .
+You can restrict the condition set by defining the [`maxGroupCount`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#maxgroupcount) property. By default, the value is 5. In the below demo, the `maxGroupCount` is set to 2.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

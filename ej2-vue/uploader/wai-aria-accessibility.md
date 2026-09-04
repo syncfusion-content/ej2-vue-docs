@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Uploader component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Uploader component is outlined below.
+The accessibility compliance for the Uploader component is outlined below:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,16 +40,16 @@ The accessibility compliance for the Uploader component is outlined below.
 
 ## Keyboard interaction
 
-The uploader component characterized with complete ARIA accessibility support that helps to be accessible by on-screen readers and other assistive technology devices.
+The Uploader component is characterized with complete ARIA accessibility support that helps to be accessible by on-screen readers and other assistive technology devices.
 
-The following are the standard keys that works on uploader component:
+The following are the standard keys that work on the Uploader component:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Tab</kbd> | Move focus to next element. |
-| <kbd>Shift + Tab</kbd> | Move focus to previous element. |
-| <kbd>Enter</kbd> | Triggers corresponding action to button element. |
-| <kbd>Esc</kbd> | Close the file browser dialog alone and cancels the upload on drop the file.
+| <kbd>Tab</kbd> | Move focus to the next element. |
+| <kbd>Shift + Tab</kbd> | Move focus to the previous element. |
+| <kbd>Enter</kbd> | Trigger the corresponding action on the button element. |
+| <kbd>Esc</kbd> | Closes the file browser dialog alone and cancels the upload when dropping the file. |
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -74,4 +74,4 @@ The accessibility compliance of the Uploader component is shown in the following
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)
+* [Accessibility in Vue components](../common/accessibility)

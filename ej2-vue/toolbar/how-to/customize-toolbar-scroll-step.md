@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize toolbar scroll step in Vue Toolbar
 
-Toolbar supports to customize the scrolling distance when you click the left and right side navigation icons. we can customize `ScrollStep` property for scrolling distance. Refer to the following code example.
-
-By using Toolbar scrollStep property, pass a required value to customize toolbar scrollStep.
+You can customize the scrolling distance in the Toolbar when you click the left and right side navigation icons. We can customize the [`scrollStep`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/index-default#scrollstep) property for scrolling distance. The `scrollStep` property accepts a numeric value that specifies the scrolling distance in pixels. Refer to the following code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -22,5 +20,5 @@ By using Toolbar scrollStep property, pass a required value to customize toolbar
 {% include code-snippet/toolbar/how-to/scrollstep-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/toolbar/how-to/scrollstep-cs1" %}

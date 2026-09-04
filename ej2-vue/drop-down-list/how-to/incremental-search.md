@@ -10,6 +10,6 @@ domainurl: ##DomainURL##
 
 # How to do incremental search in Vue Dropdown List
 
-DropDownList supports incremental search, by default. You can search the list item by focusing the DropDownList and typing the characters in it. The closely matched items are selected sequentially.
+The DropDownList supports incremental search by default. You can search for a list item by focusing the DropDownList and typing the characters in it. The closely matched items are selected sequentially.
 
-> If the same key is searched once again, the next matched item is selected.
+> If the same key is searched again, the next matched item is selected.

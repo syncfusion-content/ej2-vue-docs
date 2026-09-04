@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to update dynamic content in Vue Badge
 
-Badges in real-time needs to be updated dynamically based on the requirements. In this sample, using Vue data binding, the badges content will be updated dynamically. Click the increment button to change the Badge value.
+Badges in real-time need to be updated dynamically based on the requirements. In this sample, using Vue data binding, the badge content will be updated dynamically. Click the increment button to change the Badge value. The sample uses a button click handler that updates the Badge text content directly through DOM manipulation to reflect the changed value in real time.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

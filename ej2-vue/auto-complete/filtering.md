@@ -18,15 +18,15 @@ To filter the Vue AutoComplete items, you can check on this video:
 
 ## Change the filter type
 
-Determines on which filter type, the component needs to be considered on search action. The available [`filterType`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#filtertype) and its supported data types are
+Determines which filter type the component uses for the search action. The default `filterType` value is `StartsWith`. The available [`filterType`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#filtertype) values and their supported data types are:
 
 | Filter Type | Description | Supported Types |
 |------|------|-------------|
 | StartsWith | Checks whether a value begins with the specified value. | String |
-| EndsWith | Checks whether a value ends with specified value. | String |
-| Contains | Checks whether a value contains with specified value. | String |
+| EndsWith | Checks whether a value ends with the specified value. | String |
+| Contains | Checks whether a value contains the specified value. | String |
 
-The following examples shows the data filtering is done with StartsWith type.
+The following example shows the data filtering is done with StartsWith type.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -41,9 +41,9 @@ The following examples shows the data filtering is done with StartsWith type.
 
 ## Filter item count
 
-You can specify the filter suggestion item count through [`suggestionCount`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#suggestioncount) property of AutoComplete.
+You can specify the filter suggestion item count through the [`suggestionCount`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#suggestioncount) property of AutoComplete. By default, the `suggestionCount` value is `20`.
 
-The following example, to restrict the suggestion list item counts as 5.
+The following example restricts the suggestion list item count to 5.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -58,7 +58,7 @@ The following example, to restrict the suggestion list item counts as 5.
 
 ## Limit the minimum filter character
 
-You can set the limit for the character count to filter the data on the AutoComplete. This can be done by set the [`minLength`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#minlength) property to AutoComplete.
+You can set the limit for the character count to filter the data on the AutoComplete. This can be done by setting the [`minLength`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#minlength) property to AutoComplete.
 
 In the following example, the remote request doesn't fetch the search data, until the search key contains three characters.
 
@@ -75,9 +75,9 @@ In the following example, the remote request doesn't fetch the search data, unti
 
 ## Case sensitive filtering
 
-Data items can be filtered either with or without case sensitivity using the `DataManager`. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#ignorecase) property of AutoComplete.
+Data items can be filtered either with or without case sensitivity using the `DataManager`. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#ignorecase) property of AutoComplete.
 
-The following sample depicts how to filter the data with case-sensitive.
+The following sample depicts how to filter the data with case sensitivity.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -90,11 +90,11 @@ The following sample depicts how to filter the data with case-sensitive.
         
 {% previewsample "page.domainurl/code-snippet/auto-complete/getting-started-cs9" %}
 
-## Diacritics Filtering
+## Diacritics filtering
 
-An AutoComplete supports diacritics filtering which will ignore the diacritics and makes it easier to filter the results in international characters lists when the [`ignoreAccent`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#ignoreaccent) is enabled.
+An AutoComplete supports diacritics filtering which will ignore the diacritics and makes it easier to filter the results in international characters lists when the [`ignoreAccent`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#ignoreaccent) is enabled. By default, `ignoreAccent` is set to `false`.
 
-In the following sample,data with diacritics are bound as dataSource for AutoComplete.
+In the following sample, data with diacritics are bound as dataSource for AutoComplete.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -109,7 +109,7 @@ In the following sample,data with diacritics are bound as dataSource for AutoCom
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/auto-complete#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/index-default#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience. By default, a debounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -122,7 +122,7 @@ You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api
         
 {% previewsample "page.domainurl/code-snippet/auto-complete/getting-started-cs28" %}
 
-## See Also
+## See also
 
 * [How to achieve autofill while filtering](./how-to/autofill)
 * [How to group the data using header](./grouping)

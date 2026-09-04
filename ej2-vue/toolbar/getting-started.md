@@ -75,7 +75,7 @@ Install the **Material 3** theme package using the following command:
 {% highlight bash Toolbartitle="npm" %}
  
 npm install @syncfusion/ej2-material3-theme --save
- 
+
 {% endhighlight %}
 {% endtabs %}
  
@@ -134,7 +134,7 @@ export default {
 ## Run the application
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 or
@@ -147,9 +147,9 @@ yarn run serve
 
 ## Initialize the Toolbar using HTML elements
 
-The Toolbar component can be rendered based on the given HTML element using `<ejs-toolbar>`. You need to follow the below structure of HTML elements to render the Toolbar inside the `<ejs-toolbar>` tag.
+The Toolbar component can be rendered based on given HTML elements using `<ejs-toolbar>`. You need to follow the below structure of HTML elements to render the Toolbar inside the `<ejs-toolbar>` tag.
 
-```
+```html
    <ejs-toolbar>   --> Root Toolbar Element
     <div>      --> Toolbar Items Container
        <div>   --> Toolbar Item Element
@@ -160,7 +160,7 @@ The Toolbar component can be rendered based on the given HTML element using `<ej
         
 {% previewsample "page.domainurl/code-snippet/toolbar/toolbar-container-cs1" %}
 
-## See Also
+## See also
 
 * [How to add Toggle Button](./how-to/add-toggle-button)
 

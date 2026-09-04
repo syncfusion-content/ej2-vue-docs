@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Render Dialog in Vue Image Editor | Syncfusion
+title: Render the Vue Image Editor in a Dialog | Syncfusion
 description: Render the Vue Image Editor inside a modal dialog to provide a focused, pop-up editing experience that keeps the underlying page layout clean.
 platform: ej2-vue
 control: Render Image Editor in Dialog

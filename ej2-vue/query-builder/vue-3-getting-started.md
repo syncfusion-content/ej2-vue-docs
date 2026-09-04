@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue Query Builder UI
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue QueryBuilder component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Query Builder component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -59,9 +59,9 @@ Then, navigate to the project directory:
 cd my-app
 ```
 
-## Add Vue QueryBuilder packages
+## Add Vue Query Builder packages
 
-To install the QueryBuilder packages, use the following command:
+To install the Query Builder packages, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-querybuilder
@@ -99,9 +99,9 @@ Then add the following CSS reference to the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Vue QueryBuilder component
+## Adding Vue Query Builder component
 
-The QueryBuilder code should be added in the **src/App.vue** file.
+The Query Builder code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

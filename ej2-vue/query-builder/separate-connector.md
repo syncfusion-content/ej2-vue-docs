@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Separate Connector in Vue Query Builder UI
 
-The Query Builder provides the functionality to integrate standalone connectors between rules or groups within the same group. This allows for greater flexibility, as users can connect rules or groups using different connectors, enhancing the complexity and precision of query construction. You can use [`enableSeparateConnector`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#enableSeparateConnector) to perform separate connector functionality.
+The Query Builder provides the functionality to integrate standalone connectors between rules or groups within the same group. This allows for greater flexibility, as users can connect rules or groups using different connectors, enhancing the complexity and precision of query construction. You can use [`enableSeparateConnector`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#enableseparateconnector) to enable the separate connector feature.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -20,5 +20,5 @@ The Query Builder provides the functionality to integrate standalone connectors 
 {% include code-snippet/query-builder/separate-connector-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/query-builder/separate-connector-cs1" %}

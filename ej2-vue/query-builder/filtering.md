@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Query Builder allows you to create or delete conditions and groups. You can use [`showButtons`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#showbuttons) to enable/disable these buttons.
 
-You can create or delete conditions by interacting through the user interface and methods.
+You can create or delete conditions through the user interface or programmatically via methods.
 
 * Use the [`addRules`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#addrules), and [`deleteRules`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#deleterules) methods to create/delete conditions.
 * Use [`addGroups`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#addgroups), and [`deleteGroups`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#deletegroups) methods to create/delete groups.

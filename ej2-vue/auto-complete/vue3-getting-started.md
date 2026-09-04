@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue AutoComplete in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue AutoComplete component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript or TypeScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue AutoComplete component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -57,17 +57,20 @@ cd my-app
 
 ## Adding Vue Dropdowns package
 
-To install the Dropdowns package, use the following command:
+To install the Vue Dropdowns package, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-vue-dropdowns
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn add @syncfusion/ej2-vue-dropdowns
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding CSS reference
 
@@ -77,9 +80,9 @@ Install the **Material 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
- 
+
 npm install @syncfusion/ej2-material3-theme --save
- 
+
 {% endhighlight %}
 {% endtabs %}
  

@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Two Way Binding in Vue AutoComplete
+# Two-Way Binding in Vue AutoComplete
 
-Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one AutoComplete component, v-model will automatically update the value in the other AutoComplete.
+Two-way binding can be achieved by using the `v-model` directive in Vue. In the following sample, when you change the value in one AutoComplete component, v-model will automatically update the value in the other AutoComplete component.
 
 The following example demonstrates how to set the `two-way-binding` in the AutoComplete.
 
@@ -22,5 +22,5 @@ The following example demonstrates how to set the `two-way-binding` in the AutoC
 {% include code-snippet/auto-complete/two-way-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/auto-complete/two-way-cs1" %}

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Checkbox in Vue Dropdown Tree
 
-The Dropdown Tree component allows you to check more than one item from the tree without affecting the UI's appearance by enabling the [`showCheckBox`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#showcheckbox) property. When this property is enabled, checkbox appears before each item text in the popup.
+The Dropdown Tree component allows you to check more than one item from the tree without affecting the appearance of the UI by enabling the [showCheckBox](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/index-default#showcheckbox) property. When this property is enabled, a checkbox appears before each item text in the popup.
 
-In the following example, the [`showCheckBox`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#showcheckbox) property is enabled.
+In the following example, the [showCheckBox](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/index-default#showcheckbox) property is enabled.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,9 +27,9 @@ In the following example, the [`showCheckBox`](https://ej2.syncfusion.com/vue/do
 
 ## Auto Check
 
-By default, the checkbox state of the parent and child items in the Dropdown Tree will not be dependent over each other. If you need dependent checked state, then enable the [`autoCheck`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/treeSettingsModel/#autocheck) property which is a member of [`treeSettings`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#treesettings) property.
+By default, the checkbox state of the parent and child items in the Dropdown Tree will not be dependent on each other. If you need a dependent checked state, enable the [autoCheck](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/treeSettingsModel/#autocheck) property, which is a member of the [treeSettings](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/index-default#treesettings) property.
 
-* If one or more child items are not in the checked state, then the parent item will be in the intermediate state.
+* If one or more child items are not in the checked state, then the parent item will be in the indeterminate state.
 
 * If all the child items are checked, then the parent item will also be in the checked state.
 
@@ -50,11 +50,11 @@ In the following example, the `autoCheck` property is enabled.
 
 ## Select All
 
-The Dropdown Tree component has in-built support to select all the tree items using Select All options in the header.
+The Dropdown Tree component has built-in support to select all the tree items using the Select All option in the header.
 
-When the [`showSelectAll`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#showselectall) property is set to true, a checkbox will be displayed in the popup header that allows you to select or deselect all the tree items in the popup.
+When the [showSelectAll](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/index-default#showselectall) property is set to true, a checkbox will be displayed in the popup header that allows you to select or deselect all the tree items in the popup.
 
-By default, `Select All` and `unSelect All` text values will be showcased along with the checkbox in the popup header to indicate the action to be performed on checking or unchecking the checkbox. You can customize these name attributes by using [`selectAllText`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#selectalltext) and [`unSelectAllText`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#unselectalltext) properties respectively.
+By default, `Select All` and `unSelect All` text values will be showcased along with the checkbox in the popup header to indicate the action to be performed on checking or unchecking the checkbox. You can customize these name attributes by using [selectAllText](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/index-default#selectalltext) and [unSelectAllText](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/index-default#unselectalltext) properties respectively.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

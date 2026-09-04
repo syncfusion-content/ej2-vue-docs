@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data Binding in Vue Dropdown List
 
-The DropDownList loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#datasource) property. It supports the data type of `array` or `DataManager`.
+The DropDownList loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#datasource) property. It supports the data type of `array` or `DataManager`.
 
 The DropDownList also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of `DataManager` adaptors.
 
@@ -29,7 +29,7 @@ Local data can be represented in two ways as described below.
 
 ### 1. Array of simple data
 
-The DropDownList has support to load array of primitive data such as strings and numbers. Here, both value and text field act the same.
+The DropDownList has support to load an array of primitive data such as strings and numbers. Here, both the value and text fields act the same.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -44,9 +44,9 @@ The DropDownList has support to load array of primitive data such as strings and
 
 ### 2. Array of JSON data
 
-The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#fields) property.
+The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#fields) property.
 
-In the following example, `Id` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, the `Id` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -61,9 +61,9 @@ In the following example, `Id` column and `Game` column from complex data have b
 
 ### 3. Array of Complex data
 
-The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#fields) property.
+The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#fields) property.
 
-In the following example, `Code.Id` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, the `Code.Id` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,9 +78,9 @@ In the following example, `Code.Id` column and `Country.Name` column from comple
 
 ## Binding remote data
 
-The DropDownList supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#query) property is used to fetch data from the database and bind it to the DropDownList.
+The DropDownList supports retrieving data from remote data services with the help of the `DataManager` component. The [Query](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#query) property is used to fetch data from the database and bind it to the DropDownList.
 
-The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
+The following sample displays the first 6 contacts from the “Customers” table of the `Northwind` Data Service.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -96,10 +96,10 @@ The following sample displays the first 6 contacts from “Customers” table of
 ## See Also
 
 * [How to load data using template](./templates#item-template)
-* [How to group the data using header](./grouping/)
-* [How to filter the bound data](./filtering/)
-* [How to get the count of the data when using remote data](./how-to/remote-data-bind/)
-* [How to achieve cascading](./how-to/cascading/)
-* [How to add item in between the options](./how-to/add-item/)
-* [How to remove an item](./how-to/remove-item/)
-* [How to preselect the items in dropdownlist](./how-to/multiple-cascading/)
+* [How to group the data using header](./grouping)
+* [How to filter the bound data](./filtering)
+* [How to get the count of the data when using remote data](./how-to/remote-data-bind)
+* [How to achieve cascading](./how-to/cascading)
+* [How to add item in between the options](./how-to/add-item)
+* [How to remove an item](./how-to/remove-item)
+* [How to preselect the items in dropdownlist](./how-to/multiple-cascading)

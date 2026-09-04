@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Columns in Vue Query Builder UI
 
-The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) schema in the Query Builder. This plays a vital role in rendering column values. The query builder operations such as create or delete conditions and create or delete group they are performed based on the column definitions. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#field) property of the columns is necessary to map the data source values in the query builder columns.
+The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource) schema in the Query Builder. This plays a vital role in rendering column values. Operations such as creating or deleting conditions and groups are performed based on the column definitions. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#field) property of the columns is necessary to map the data source values in the Query Builder columns.
 
 > If the column field is not specified in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#datasource), the column values will be empty.
 
@@ -39,7 +39,7 @@ By default, the column label is displayed from the column [`field`](https://ej2.
 
 The operator for a column can be defined in the [`operators`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#operators) property.
 
-The available operators and its supported data types are:
+The available operators and their supported data types are:
 
 | Operators | Description | Supported Types |
 | ------------ | ----------------------- | ------------------ |
@@ -52,10 +52,10 @@ The available operators and its supported data types are:
 | greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Date Number |
 | lessthan | Checks whether the value is less than the specified value.| Date Number |
 | lessthanorequal | Checks whether the value is less than or equal to the specified value. | Date Number |
-| between | Checks whether the value is between the two-specific value. | Date  Number |
-| notbetween | Checks whether the value is not between the two-specific value. | Date  Number |
-| in | Checks whether the value is one of the specific values. | String  Number |
-| notin | Checks whether the value is not in the specific values. | String  Number |
+| between | Checks whether the value is between the two specified values. | Date Number |
+| notbetween | Checks whether the value is not between the two specified values. | Date Number |
+| in | Checks whether the value is one of the specific values. | String Number |
+| notin | Checks whether the value is not in the specific values. | String Number |
 
 ## Step
 
@@ -78,9 +78,9 @@ The Query Builder formats date and number values. Use the [`format`](https://ej2
 
 ## Validations
 
-Validation allows you to validate the conditions and it display errors for invalid fields while using  the [`validateFields`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#validatefields) method.  To enable validation in the query builder , set the allowValidation to true. Column fields are validated after setting [`allowValidation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#allowvalidation) as to true. So, you should manually configure the validation for Operator and, Value fields through [`validation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#validation).
+Validation allows you to validate the conditions and it displays errors for invalid fields while using the [`validateFields`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#validatefields) method. To enable validation in the Query Builder, set `allowValidation` to true. Column fields are validated after setting [`allowValidation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#allowvalidation) to true. So, you should manually configure the validation for operator and value fields through [`validation`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsmodel#validation).
 
-Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Buttons` packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> `Buttons` package using below command.
 
 ```bash
 npm install @syncfusion/ej2-vue-buttons --save

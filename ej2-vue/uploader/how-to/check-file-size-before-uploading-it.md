@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to check file size before uploading in Vue Uploader
 
-By using [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/#uploading) event, you can get the file size before upload it to server. File object contains the file size in bytes only. You can convert the size to standard formats (`KB` or `MB`) using [bytesToSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#bytestosize) method.
+By using the [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#uploading) event, you can get the file size before uploading it to the server. The File object contains the file size in bytes only. You can convert the size to standard formats (`KB` or `MB`) using the [bytesToSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#bytestosize) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

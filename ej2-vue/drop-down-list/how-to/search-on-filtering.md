@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to limit search results in Vue Dropdown List
 
-The following example demonstrates about how to set limit the search result on filtering.
+The following example demonstrates how to limit the search results while filtering.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

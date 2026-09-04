@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to modify result data before passing in Vue Dropdown List | Syncfusion
+title: Modify result data before passing in Vue Dropdown List | Syncfusion
 description: Modify the result data before passing it to the Syncfusion Vue Dropdown List by handling the actionComplete event when binding remote sources.
 control: Modify data 
 platform: ej2-vue
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to modify result data before passing in Vue Dropdown List
 
-When binding the remote data source, by using the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#actioncomplete) event, you can modify the result data before passing it to DropDownList.
+When binding to the remote data source, by using the [actionComplete](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#actioncomplete) event, you can modify the result data before passing it to the DropDownList.
 
-The following sample demonstrate how to modify the result data.
+The following sample demonstrates how to modify the result data.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

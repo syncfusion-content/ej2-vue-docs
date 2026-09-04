@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue Uploader Component | Syncfusion
+title: Getting Started with Quasar and Vue Uploader Component | Syncfusion
 description: Check out and learn about getting started with the Quasar Framework and Vue Uploader Component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Uploader Component in the Quasar Framework
+# Getting Started with Vue Uploader in the Quasar Framework
 
-This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Uploader component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Uploader component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
 The `Quasar` Framework is a Vue.js-based open-source framework that empowers developers to create high-performance and responsive applications across various platforms, such as web, mobile, and desktop.
 
@@ -20,7 +20,7 @@ The `Quasar` Framework is a Vue.js-based open-source framework that empowers dev
 
 ## Set up the Quasar project
 
-To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start/) project, use the following commands:
+To initiate the creation of a new [Quasar](https://quasar.dev/start/quick-start) project, use the following commands:
 
 ```bash
 npm init quasar
@@ -54,7 +54,7 @@ npm install @syncfusion/ej2-vue-inputs --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Uploader component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
 
@@ -76,7 +76,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 Follow the below steps to add the Vue Uploader component:
 
-1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Uploader component and its child directives in the `script` section of the **src/app.vue** file.
+1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`, and import the Uploader component and its child directives in the `script` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
@@ -95,7 +95,7 @@ Follow the below steps to add the Vue Uploader component:
 
 <template>
     <div id="app">
-        <div id="modalTarget" class="control-section; position:relative" style="height:350px;">
+        <div id="modalTarget" class="control-section" style="height:350px; position:relative;">
             <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles"></ejs-uploader>
         </div>
     </div>
@@ -110,7 +110,7 @@ Here is the summarized code for the above steps in the **src/app.vue** file:
 {% highlight html tabtitle="~/src/app.vue" %}
 <template>
     <div id="app">
-        <div id="modalTarget" class="control-section; position:relative" style="height:350px;">
+        <div id="modalTarget" class="control-section" style="height:350px; position:relative;">
             <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles"></ejs-uploader>
         </div>
     </div>

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to show list items with icons in Vue Dropdown List
 
-You can render **icons** to the list items by mapping the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#fields) &nbsp;field. This `iconCss` field create a span in the list item with mapped class name to allow styling as per your need.
+You can render **icons** in the list items by mapping the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#fields) field. The `iconCss` field creates a span in the list item with the mapped class name to allow styling as per your need.
 
-In the following sample, icon classes are mapped with `iconCss` field.
+In the following sample, icon classes are mapped with the `iconCss` field.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

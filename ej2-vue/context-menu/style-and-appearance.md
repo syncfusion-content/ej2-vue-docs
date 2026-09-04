@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in Vue Context Menu
 
-To modify the ContextMenu appearance, you need to override the default CSS of ContextMenu component. Please find the list of CSS classes and its corresponding section in ContextMenu component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+To modify the ContextMenu appearance, you need to override the default CSS of the ContextMenu component. Please find the list of CSS classes and their corresponding sections in the ContextMenu component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
 
 CSS Class | Purpose of Class
 -----|-----

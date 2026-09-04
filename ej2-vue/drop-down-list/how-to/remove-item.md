@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to remove an item from Vue Dropdown List
 
-The following example demonstrate about how to remove an item from DropDownList.
+The following example demonstrates how to remove an item from the DropDownList.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

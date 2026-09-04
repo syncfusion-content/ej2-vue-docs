@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to integrate into ListView in Vue Badge
 
-The badges can be integrated with the `ListView` component to indicate new notification with color based on priority.
+The badges can be integrated with the `ListView` component to indicate new notifications with colors based on priority.
 
-In the following sample, `default` badges are used and there is no need to customize the Badge size. The component will automatically adjust the size based on the container element.
+In the following sample, default badges (using only the `.e-badge` class with color modifiers and no type modifier) are used and there is no need to customize the Badge size. The component will automatically adjust the size based on the container element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

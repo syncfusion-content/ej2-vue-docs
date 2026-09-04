@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Filtering in Vue MultiSelect Dropdown
 
-The MultiSelect has built-in support to filter data items when [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
+The MultiSelect has built-in support to filter data items when [allowFiltering](https://ej2.syncfusion.com/vue/documentation/api/multi-select#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
 
-To display filtered items in the popup, filter the required data and return it to the MultiSelect via `updateData` method by using the [filtering](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#filtering) event.
+To display filtered items in the popup, filter the required data and return it to the MultiSelect via `updateData` method by using the [filtering](https://ej2.syncfusion.com/vue/documentation/api/multi-select#filtering) event.
 
 To filter the Vue MultiSelect dropdown items, you can check on this video:
 
@@ -84,9 +84,9 @@ The following example shows how to perform case-sensitive filter.
 
 ## Diacritics Filtering
 
-MultiSelect supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#ignoreaccent) is enabled.
+MultiSelect supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/vue/documentation/api/multi-select#ignoreaccent) is enabled.
 
-In the following sample,data with diacritics are bound as dataSource for MultiSelect.
+In the following sample, data with diacritics is bound as the dataSource for the MultiSelect.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -101,7 +101,7 @@ In the following sample,data with diacritics are bound as dataSource for MultiSe
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/vue/documentation/api/multi-select#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience. By default, a `debounceDelay` of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

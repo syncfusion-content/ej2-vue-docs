@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to hide default drop area in Vue Uploader
 
-You can achieve this behavior by override the corresponding uploader styles. In the following example, override the below styles to hide the default drop area behavior.
+You can achieve this behavior by overriding the corresponding Uploader styles. In the following example, the below styles are overridden to hide the default drop area behavior.
 
     * .e-upload.e-control
     * .e-upload .e-file-select

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to add item in between in Vue Dropdown List
 
-You can add item in between based on item [index](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#index). If you add new item without item index, item will be added as last item in list.
+You can add an item in between based on the item [index](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/index-default#index). If you add a new item without an item index, the item will be added as the last item in the list.
 
-To add and remove items dynamically in Vue DropDownList component, you can check on this video:
+For information on how to add and remove items dynamically in the Vue DropDownList component, watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=xJaCPILBK9k" %}
 
-The following example demonstrate how to add item in between in DropDownList.
+The following example demonstrates how to add an item in between in the DropDownList.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

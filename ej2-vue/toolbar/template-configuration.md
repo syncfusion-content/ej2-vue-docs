@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Template Configuration in Vue Toolbar
 
-## Integrate menu component
+## Integrate Menu component
 
-You can integrate menu component as toolbar item in Toolbar using Vue **template**. Menu can be populated with items as needed.
+You can integrate the Menu component as a toolbar item in the Toolbar using Vue **template**. The Menu component is imported from `@syncfusion/ej2-vue-navigations` and bound to a Toolbar item through its `template` property. Menu can be populated with items as needed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -22,5 +22,5 @@ You can integrate menu component as toolbar item in Toolbar using Vue **template
 {% include code-snippet/toolbar/menu-component-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/toolbar/menu-component-cs1" %}

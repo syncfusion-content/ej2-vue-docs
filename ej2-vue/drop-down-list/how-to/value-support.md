@@ -10,4 +10,4 @@ domainurl: ##DomainURL##
 
 # How to ensure unique value per item in Vue Dropdown List
 
-yes, value for each list items should be unique.
+Yes, the value for each list item should be unique.

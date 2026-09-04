@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Checkbox in Vue MultiSelect Dropdown
 
-The MultiSelect has built-in support to select multiple values through checkbox, when [`mode`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#mode) property set as `CheckBox`.
+The MultiSelect has built-in support to select multiple values through checkboxes, when the [mode](https://ej2.syncfusion.com/vue/documentation/api/multi-select#mode) property is set to `CheckBox`.
 
 To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
@@ -27,12 +27,11 @@ To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
 ## Select All
 
-The MultiSelect component has in-built support to select the all list items using `Select All` options in the header.
+The MultiSelect component has in-built support to select all list items using the `Select All` option in the header.
 
-When the [`showSelectAll`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#showselectall) property is set to true, by default Select All text will show. You can customize the name attribute of the Select All option by using [`selectAllText`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#selectalltext).
+When the [showSelectAll](https://ej2.syncfusion.com/vue/documentation/api/multi-select#showselectall) property is set to `true`, the `Select All` text is shown by default. You can customize the display text of the Select All option by using [selectAllText](https://ej2.syncfusion.com/vue/documentation/api/multi-select#selectalltext).
 
-For the unSelect All option, by default unSelect All text will show. You can customize the name attribute of the unSelect All option by using
-[`unSelectAllText`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#unselectalltext).
+For the Unselect All option, the `Unselect All` text is shown by default. You can customize the display text of the Unselect All option by using [unSelectAllText](https://ej2.syncfusion.com/vue/documentation/api/multi-select#unselectalltext).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -47,7 +46,7 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 
 ## Selection Limit
 
-Defines the limit of the selected items using [`maximumSelectionLength`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#maximumselectionlength).
+Defines the limit of the selected items using [maximumSelectionLength](https://ej2.syncfusion.com/vue/documentation/api/multi-select#maximumselectionlength).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -62,7 +61,7 @@ Defines the limit of the selected items using [`maximumSelectionLength`](https:/
 
 ## Selection Reordering
 
-Using [`enableSelectionOrder`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#enableselectionorder) to Reorder the selected items in popup visibility state.
+Use [enableSelectionOrder](https://ej2.syncfusion.com/vue/documentation/api/multi-select#enableselectionorder) to reorder the selected items while the popup is visible.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -77,7 +76,7 @@ Using [`enableSelectionOrder`](https://ej2.syncfusion.com/vue/documentation/api/
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
-* [How to filter the bound data](./filtering/)
-* [How to add custom value to the MultiSelect](./custom-value/)
-* [How to render grouping with checkbox](./grouping/#grouping-with-checkbox).
+* [How to bind the data](./data-binding)
+* [How to filter the bound data](./filtering)
+* [How to add custom value to the MultiSelect](./custom-value)
+* [How to render grouping with checkbox](./grouping#grouping-with-checkbox).

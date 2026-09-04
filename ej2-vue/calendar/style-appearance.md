@@ -37,7 +37,7 @@ Use the following CSS to customize the date elements on hovering in the Calendar
 }
 ```
 
-## Customizing the border of date cell grid
+## Customizing the border of the date cell grid
 
 Use the following CSS to add the border to the date cell grid.
 
@@ -60,9 +60,9 @@ Use the following CSS to customize the Calendar title.
 }
 ```
 
-## Customizing the previous and next icon
+## Customizing the previous and next icons
 
-Use the following CSS to customize the previous and next icon.
+Use the following CSS to customize the previous and next icons.
 
 ```
 /* To specify color and border  */

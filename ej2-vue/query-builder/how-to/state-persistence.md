@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to maintain state persistence in Vue Query Builder UI
 
-State persistence allows you to maintain the current state in the browser’s `localStorage` even if the browser is refreshed or if you move to the next page within the browser. State persistence stores the Query Builder’s [`rule`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#rule) object in the local storage when the [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/state-persistence) is defined to true.
+State persistence allows you to maintain the current state in the browser’s `localStorage` even if the browser is refreshed or if you move to the next page within the browser. State persistence persists the Query Builder’s filter state (including the current [`rule`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#rule)) when [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/index-default#enablepersistence) is set to true.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -20,5 +20,5 @@ State persistence allows you to maintain the current state in the browser’s `l
 {% include code-snippet/query-builder/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/query-builder/default-cs17" %}

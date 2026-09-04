@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to show icons on list items in Vue MultiSelect Dropdown | Syncfusion
+title: Show icons on list items in Vue MultiSelect Dropdown | Syncfusion
 description: Render icons on each Syncfusion Vue MultiSelect Dropdown item by mapping the iconCss field to a CSS class on a span inside the list item.
 control: Icons support 
 platform: ej2-vue
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to show icons on list items in Vue MultiSelect Dropdown
 
-You can render **icons** to the list items by mapping the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#fields) &nbsp;field. This `iconCss` field create a span in the list item with mapped class name to allow styling as per your need.
+You can render **icons** on the list items by mapping the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/multi-select#fields) field. This `iconCss` field creates a span in the list item with the mapped class name to allow styling as per your need.
 
-In the following sample, icon classes are mapped with `iconCss` field.
+In the following sample, icon classes are mapped to the `iconCss` field.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
