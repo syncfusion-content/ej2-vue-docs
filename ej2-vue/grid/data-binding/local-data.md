@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Local Data Binding in Vue Data Grid
 
-The [Vue Data Grid](https://www.syncfusion.com/vue-components/vue-grid) provides a straightforward way to bind local data, such as arrays or JSON objects, to the grid component. This feature allows data to be displayed and manipulated within the grid without the need for external server calls, making it particularly useful for scenarios involving static or locally stored data.
+The [Data Grid](https://www.syncfusion.com/vue-components/vue-grid) provides a straightforward way to bind local data, such as arrays or JSON objects, to the grid component. This feature allows data to be displayed and manipulated within the grid without the need for external server calls, making it particularly useful for scenarios involving static or locally stored data.
 
-Assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property. Optionally, provide the local data source using an instance of the `DataManager`.
+Assign an array of JavaScript objects to the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property.
 
 The following example demonstrates the local data binding feature in the Vue Grid component:
 
@@ -27,510 +27,15 @@ The following example demonstrates the local data binding feature in the Vue Gri
         
 {% previewsample "page.domainurl/code-snippet/grid/databind/default-cs4" %}
 
-## Data binding with SignalR 
-
-The Vue Data Grid provides support for real-time data binding using SignalR, enabling automatic Grid updates when data changes on the server side. This feature is particularly useful for applications that require live updates and synchronization across multiple clients.
-
-To achieve real-time data binding with SignalR in the Vue Data Grid, follow the steps outlined below.
-
-**Step 1:** Open Visual Studio and create an Vue and ASP.NET Core project named signalR. To create an Vue and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=vs-2022) for detailed steps.
-
-**Step 2 :** Create a simple Vue Grid by following the [Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation link.
-
-**Step 3:** Install the required SignalR package for the client application using npm:
-
-```bash
- npm install @microsoft/signalr — save
-```
-
-**Step 4:** Create a SignalR hub on the server side to manage communication between clients and the server. A **ChatHub.cs** file can be created under the Hubs folder. Add the following code to define methods for sending data updates to clients:
-
-{% tabs %}
-{% highlight cs tabtitle="ChatHub.cs" %}
-{% raw %}
-
-using Microsoft.AspNetCore.SignalR;
-
-namespace SignalRChat.Hubs
-{
-    public class ChatHub : Hub 
-    {
-        public async Task SendMessage(string message)
-        {
-            await Clients.All.SendAsync("ReceiveMessage", message);
-        }
-    }
-}
-
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-**Step 5:** Configure the SignalR server to route requests to the SignalR hub. In the **Program.cs** file, add the following code:
-
-{% tabs %}
-{% highlight cs tabtitle="Program.cs" %}
-{% raw %}
-
-using SignalR.Server.Hubs;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddSignalR();
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("CORSPolicy",
-        builder => builder
-        .AllowAnyMethod()
-        .AllowAnyHeader()
-        .AllowCredentials()
-        .SetIsOriginAllowed((hosts) =>
-        true));
-});
-var app = builder.Build();
-app.UseCors("CORSPolicy");
-
-app.UseDefaultFiles();
-app.UseStaticFiles();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-app.MapHub<ChatHub>("/chatHub");
-app.MapFallbackToFile("/index.html");
-
-app.Run();
-
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-**Step 6:** In the client-side code, establish a connection to the SignalR hub and configure Grid data binding in the **App.vue** file.
-
-
-{% tabs %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% raw %}
-<template>
-    <div id="app">
-        <ejs-grid ref="grid" :dataSource='data' :toolbar="toolbar" :editSettings="editSettings" allowSorting="true" allowPaging="true" :created="created" :actionComplete="actionComplete">
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right' isPrimaryKey="true"></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
-                <e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-</template>
-<script>
-import { provide } from "vue";
-import { GridComponent, ColumnDirective , ColumnsDirective, Page, Edit, Sort, Toolbar } from "@syncfusion/ej2-vue-grids";
-import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-import * as signalR from '@microsoft/signalr';
-export default {
-    name: "App",
-    components: {
-       "ejs-grid": GridComponent,
-       "e-columns": ColumnsDirective,
-       "e-column": ColumnDirective,
-    },
-    data() {
-      return {
-        data: new DataManager({
-              url: 'https://localhost:****/api/Home',
-              insertUrl: 'https://localhost:****/api/Home/Insert',
-              updateUrl: 'https://localhost:****/api/Home/Update',
-              removeUrl: 'https://localhost:****/api/Home/Remove',
-              adaptor: new UrlAdaptor(),
-        }),//Use remote server host number instead ****
-      editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' },
-      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-      connection: new signalR.HubConnectionBuilder().withUrl("https://localhost:****/ChatHub").build() //Use remote server host number instead ****
-
-      };
-    },
-    methods: {
-       created: function (e) {
-           this.connection.on("ReceiveMessage", (message) => {
-                if (this.$refs.grid) {
-                   this.$refs.grid.ej2Instances.refresh();
-                }
-
-           });
-           this.connection.start()
-                .then(() => {
-                        console.log("SignalR connection established successfully");
-                        this.connection.invoke('SendMessage', "refreshPages")
-                            .catch((err) => {
-                                console.error("Error sending data:", err.toString());
-                            });
-                    })
-                    .catch((err) => {
-                        console.error("Error establishing SignalR connection:", err.toString());
-                    });
-
-       },
-       actionComplete: function (args) {
-                if (args.requestType === "save" || args.requestType === "delete") {
-                    this.connection.invoke('SendMessage', "refreshPages")
-                        .catch((err) => {
-                            console.error(err.toString());
-                        });
-                }
-         }
-    },
-    provide: {
-        grid: [Sort, Edit, Page, Toolbar]
-    },
-};
-</script>
-<style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-</style>
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<template>
-    <div id="app">
-        <ejs-grid ref="grid" :dataSource='data' :toolbar="toolbar" :editSettings="editSettings" allowSorting="true" allowPaging="true" :created="created" :actionComplete="actionComplete">
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right' isPrimaryKey="true"></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-                <e-column field='Freight' headerText='Freight' format="C" width='150'></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
-                <e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-</template>
-<script setup>
-    import { provide, ref } from "vue";
-    import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Edit, Sort, Filter, Toolbar } from "@syncfusion/ej2-vue-grids";
-    import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-    import * as signalR from '@microsoft/signalr';
-    const grid = ref(null);
-
-    const data = new DataManager({
-        url: 'https://localhost:****/api/Home',
-        insertUrl: 'https://localhost:****/api/Home/Insert',
-        updateUrl: 'https://localhost:****/api/Home/Update',
-        removeUrl: 'https://localhost:****/api/Home/Remove',
-        adaptor: new UrlAdaptor(),
-    });//Use remote server host number instead ****
-
-    let connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:****/ChatHub").build();//Use remote server host number instead ****
-    const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
-    const toolbar = ['Add', 'Edit', 'Update', 'Delete', 'Search'];
-    const created = function () {
-        connection.on("ReceiveMessage", (message) => {
-            if (grid.value) {
-                grid.value.ej2Instances.refresh();
-            }
-
-        });
-
-        connection.start()
-            .then(() => {
-                console.log("SignalR connection established successfully");
-                connection.invoke('SendMessage', "refreshPages")
-                    .catch((err) => {
-                        console.error("Error sending data:", err.toString());
-                    });
-            })
-            .catch((err) => {
-                console.error("Error establishing SignalR connection:", err.toString());
-            });
-    };
-    const actionComplete = function (args) {
-        if (args.requestType === "save" || args.requestType === "delete") {
-            connection.invoke('SendMessage', "refreshPages")
-                .catch((err) => {
-                    console.error(err.toString());
-                });
-        }
-    }
-    provide('grid', [Sort, Edit, Filter, Page, Toolbar]);
-
-</script>
-<style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
-</style>
-
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-**Step 6** : Create a controller on the server side to manage data operations such as fetching, updating, inserting, and deleting records. A **HomeController.cs** file can be created under the **Controllers** folder. Add the following code to define methods for sending data updates to clients.
-
-{% tabs %}
-{% highlight cs tabtitle="HomeController.cs" %}
-{% raw %}
-
-using Microsoft.AspNetCore.Mvc;
-using SignalR.Server.Models;
-using Microsoft.AspNetCore.Http;
-using Syncfusion.EJ2.Base;
-
-namespace SignalR.Server.Controllers
-{
-    
-    [ApiController]
-    public class HomeController : Controller
-    {
-        [HttpPost]
-        [Route("api/[controller]")]
-        public object Post([FromBody] DataManagerRequest DataManagerRequest)
-        {
-            // Retrieve data from the data source (e.g., database)
-            IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
-
-            QueryableOperation queryableOperation = new QueryableOperation(); // Initialize DataOperations instance
-
-            // Handling searching operation
-            if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
-            {
-                DataSource = queryableOperation.PerformSearching(DataSource, DataManagerRequest.Search);
-            }
-
-            // Handling filtering operation
-            if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
-            {
-                foreach (var condition in DataManagerRequest.Where)
-                {
-                    foreach (var predicate in condition.predicates)
-                    {
-                        DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, predicate.Operator);
-                    }
-                }
-            }
-
-            // Handling sorting operation
-            if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
-            {
-                DataSource = queryableOperation.PerformSorting(DataSource, DataManagerRequest.Sorted);
-            }
-
-            // Get the total count of records
-            int totalRecordsCount = DataSource.Count();
-
-            // Handling paging operation.
-            if (DataManagerRequest.Skip != 0)
-            {
-                DataSource = queryableOperation.PerformSkip(DataSource, DataManagerRequest.Skip);
-            }
-            if (DataManagerRequest.Take != 0)
-            {
-                DataSource = queryableOperation.PerformTake(DataSource, DataManagerRequest.Take);
-            }
-
-            // Return data based on the request
-            return new { result = DataSource, count = totalRecordsCount };
-        }
-
-        [HttpGet]
-        [Route("api/[controller]")]
-        public List<OrdersDetails> GetOrderData()
-        {
-            var data = OrdersDetails.GetAllRecords().ToList();
-            return data;
-        }
-
-        /// <summary>
-        /// Inserts a new data item into the data collection.
-        /// </summary>
-        /// <param name="newRecord">It contains the new record detail which is need to be inserted.</param>
-        /// <returns>Returns void</returns>
-        [HttpPost]
-        [Route("api/Home/Insert")]
-        public void Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
-        {
-            if (newRecord.value != null)
-            {
-                OrdersDetails.GetAllRecords().Insert(0, newRecord.value);
-            }
-        }
-
-        /// <summary>
-        /// Update a existing data item from the data collection.
-        /// </summary>
-        /// <param name="Order">It contains the updated record detail which is need to be updated.</param>
-        /// <returns>Returns void</returns>
-        [HttpPost]
-        [Route("api/Home/Update")]
-        public void Update([FromBody] CRUDModel<OrdersDetails> Order)
-        {
-            var updatedOrder = Order.value;
-            if (updatedOrder != null)
-            {
-                var data = OrdersDetails.GetAllRecords().FirstOrDefault(or => or.OrderID == updatedOrder.OrderID);
-                if (data != null)
-                {
-                    // Update the existing record
-                    data.OrderID = updatedOrder.OrderID;
-                    data.CustomerID = updatedOrder.CustomerID;
-                    data.ShipCity = updatedOrder.ShipCity;
-                    data.ShipCountry = updatedOrder.ShipCountry;
-                }
-            }
-
-        }
-        /// <summary>
-        /// Remove a specific data item from the data collection.
-        /// </summary>
-        /// <param name="value">It contains the specific record detail which is need to be removed.</param>
-        /// <return>Returns void</return>
-        [HttpPost]
-        [Route("api/Home/Remove")]
-        public void Remove([FromBody] CRUDModel<OrdersDetails> value)
-        {
-            int orderId = int.Parse((value.key).ToString());
-            var data = OrdersDetails.GetAllRecords().FirstOrDefault(orderData => orderData.OrderID == orderId);
-            if (data != null)
-            {
-                // Remove the record from the data collection
-                OrdersDetails.GetAllRecords().Remove(data);
-            }
-        }
-
-        public class CRUDModel<T> where T : class
-        {
-
-            public string? action { get; set; }
-
-            public string? keyColumn { get; set; }
-
-            public object? key { get; set; }
-
-            public T? value { get; set; }
-
-            public List<T>? added { get; set; }
-
-            public List<T>? changed { get; set; }
-
-            public List<T>? deleted { get; set; }
-
-            public IDictionary<string, object>? @params { get; set; }
-        }
-    }
-}
-
-
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-**Step 7 :** Define a model class to represent the data structure. An **OrdersDetails.cs** file can be created under the **Models** folder. Add the following code.
-
-{% tabs %}
-{% highlight cs tabtitle="OrdersDetails.cs" %}
-{% raw %}
-
-namespace SignalR.Server.Models
-{
-    public class OrdersDetails
-    {
-        public static List<OrdersDetails> order = new List<OrdersDetails>();
-        public OrdersDetails()
-        {
-
-        }
-        public OrdersDetails(
-        int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified,
-        DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry,
-        DateTime ShippedDate, string ShipAddress)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerId;
-            this.EmployeeID = EmployeeId;
-            this.Freight = Freight;
-            this.ShipCity = ShipCity;
-            this.Verified = Verified;
-            this.OrderDate = OrderDate;
-            this.ShipName = ShipName;
-            this.ShipCountry = ShipCountry;
-            this.ShippedDate = ShippedDate;
-            this.ShipAddress = ShipAddress;
-        }
-
-        public static List<OrdersDetails> GetAllRecords()
-        {
-            if (order.Count() == 0)
-            {
-                int code = 10000;
-                for (int i = 1; i < 10; i++)
-                {
-                    order.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
-                    order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-                    order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
-                    order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
-                    order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
-                    code += 5;
-                }
-            }
-            return order;
-        }
-
-        public int? OrderID { get; set; }
-        public string? CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string? ShipCity { get; set; }
-        public bool? Verified { get; set; }
-        public DateTime OrderDate { get; set; }
-        public string? ShipName { get; set; }
-        public string? ShipCountry { get; set; }
-        public DateTime ShippedDate { get; set; }
-        public string? ShipAddress { get; set; }
-    }
-}
-
-
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-The following screenshot represents the addition, editing, and deletion operations performed, reflecting changes across all client sides.
-
-![signalR](../../grid/images/signalR.gif)
-
-> A complete SignalR sample is available on [GitHub](https://github.com/SyncfusionExamples/Binding-data-with-SignalR-in-ej2-vue-grid).
-
 ## Binding data from excel file
 
-The Vue Data Grid supports importing data from Excel files for display and manipulation within the grid. This streamlines transferring Excel data into a web-based environment. Use the [Uploader](https://ej2.syncfusion.com/vue/documentation/uploader/getting-started) component's [change](https://ej2.syncfusion.com/vue/documentation/api/uploader#change) event to handle the import.
+The Data Grid supports importing data from Excel files for display and manipulation within the grid. This streamlines transferring Excel data into a web-based environment. Use the [Uploader](https://ej2.syncfusion.com/vue/documentation/uploader/getting-started) component's [change](https://ej2.syncfusion.com/vue/documentation/api/uploader#change) event to handle the import.
+
+Install the `XLSX` library using the following command:
+
+```bash
+npm install xlsx
+```
 
 To import Excel data into the Grid, follow these steps:
 
@@ -551,11 +56,11 @@ The following example demonstrates importing Excel data into the grid by utilizi
         
 {% previewsample "page.domainurl/code-snippet/grid/databind/local-data-cs4" %}
 
-## Binding data and performing CRUD actions via Fetch request
+## CRUD operations using Fetch requests
 
-The Vue Data Grid provides a seamless way to bind data from external sources using Fetch requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and asynchronously retrieving data without refreshing the entire web page.
+The Data Grid provides a seamless way to bind data from external sources using Fetch requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and for asynchronously retrieving data without refreshing the entire web page.
 
-To achieve data binding and perform CRUD actions using Ajax requests in the Vue Data Grid, follow these steps:
+To achieve data binding and perform CRUD actions using Fetch requests in the grid, follow these steps::
 
 **Step 1:** Open Visual Studio and create an Vue and ASP.NET Core project named FetchProject. To create an Vue and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=vs-2022) for detailed steps.
 
@@ -577,7 +82,7 @@ To achieve data binding and perform CRUD actions using Ajax requests in the Vue 
 </div>
 ```
 
-**Step 3:** To bind data from an external Fetch request, utilize the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the `onSuccess` event of the Fetch request.
+**Step 3:** To bind data from an external Fetch request, utilize the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the `onSuccess` event of the Fetch request.
 
 ```ts
 click: function () {
@@ -1345,9 +850,10 @@ provide: {
 </style>
 
 ```
-## Binding data and performing CRUD actions via AJAX request
 
-The Vue Data Grid provides a seamless way to bind data from external sources using AJAX requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and asynchronously retrieving data without refreshing the entire web page.
+## CRUD Operations using AJAX requests
+
+The Data Grid provides a seamless way to bind data from external sources using AJAX requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and asynchronously retrieving data without refreshing the entire web page.
 
 To achieve data binding and perform CRUD actions using Ajax requests in the Vue Data Grid, follow these steps:
 
@@ -2145,9 +1651,9 @@ provide: {
 
 ## Managing spinner visibility during data loading
 
-Showing a spinner during data loading in the Vue Data Grid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
+Showing a spinner during data loading in the Data Grid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
 
-To show or hide a spinner during data loading in the Grid, use the [showSpinner](https://ej2.syncfusion.com/vue/documentation/api/grid#showspinner) and [hideSpinner](https://ej2.syncfusion.com/vue/documentation/api/grid#hidespinner) methods provided by the Grid component.
+To show or hide a spinner during data loading in the Grid, use the [showSpinner](https://ej2.syncfusion.com/vue/documentation/api/grid#showspinner) and [hideSpinner](https://ej2.syncfusion.com/vue/documentation/api/grid#hidespinner) methods provided by the Data Grid component.
 
 The following example demonstrates showing and hiding the spinner during data loading using external buttons in a grid:
 
@@ -2164,11 +1670,11 @@ The following example demonstrates showing and hiding the spinner during data lo
 
 ## Immutable mode  
 
-Immutable mode in the Vue Data Grid is designed to optimize re-rendering performance by utilizing the object reference and deep compare concept. This mode ensures that when performing Grid actions, only the modified or newly added rows are re-rendered, preventing unnecessary re-rendering of unchanged rows. 
+Immutable mode in the Data Grid is designed to optimize re-rendering performance by utilizing the object reference and deep compare concept. This mode ensures that when performing grid actions, only the modified or newly added rows are re-rendered, preventing unnecessary re-rendering of unchanged rows. 
 
 Enable immutable mode by setting [enableImmutableMode](https://ej2.syncfusion.com/vue/documentation/api/grid/index-default#enableImmutableMode) to `true`.
 
-If immutable mode is enabled, when the datasource changes, only newly added rows are regenerated or reused. Consequently, the grid's [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) and [rowDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowdatabound) events trigger only for newly generated rows, not for existing rows. 
+If immutable mode is enabled, when the datasource changes, only newly added rows are regenerated or reused. Consequently, the grid's [queryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid#querycellinfo) and [rowDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid#rowdatabound) events trigger only for newly generated rows, not for existing rows. 
 
 If immutable mode is not enabled, both newly added rows and existing rows are regenerated or reused when the datasource changes. As a result, the `rowDataBound` and `queryCellInfo` events trigger for both newly added and existing rows. 
 
@@ -2455,25 +1961,6 @@ provide: {
         
 {% previewsample "page.domainurl/code-snippet/grid/databind/local-data-cs6" %}
 
-### Limitations
+### Immutable mode constraints
 
-The following features are not supported in the immutable mode:
-
-* Frozen rows and columns
-* Grouping
-* Row Template 
-* Detail Template
-* Hierarchy Grid
-* Scrolling 
-* Virtual scroll
-* Infinite scroll
-* Column reorder
-* Rows,column spanning
-* PDF export ,Excel export,Print
-* Column Resize
-* Drag and drop
-* Column template
-* Column chooser
-* Clipboard
-* AutoFit
-* Filtering
+Immutable mode updates only the rows whose data has changed to improve rendering performance. As a result, features that rely on complex layouts, advanced rendering scenarios, data processing operations, or interactive grid behaviors may not function as expected.
