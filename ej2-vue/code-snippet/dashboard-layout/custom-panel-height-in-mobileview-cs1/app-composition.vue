@@ -1,7 +1,7 @@
 <template>
     <div className="col-lg-12 control-section" id="control_dash">
         <div className="content-wrapper">
-            <div id="dashboardElement">
+            <div id="dashboardElement" style="width: 500px;">
                 <!--  Dashboard Layout component declaration -->
                 <ejs-dashboardlayout ref="dashboard" id='dashboard_default' :cellSpacing="cellSpacing" :mediaQuery="mediaQuery"
                     :columns="columns">
