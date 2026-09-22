@@ -1835,6 +1835,60 @@ The below list of common variables used in the Syncfusion<sup style="font-size:7
                 <span class="circle-color-indicator" style="background: #038387"></span> #038387
             </td>
         </tr>
+        <tr>
+            <td>$primary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0078d4"></span> #0078d4
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0f6cbd"></span> #0f6cbd
+            </td>
+        </tr>
+        <tr>
+            <td>$secondary-bg-color</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #292929"></span> #292929
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #292929"></span> #292929
+            </td>
+        </tr>
+        <tr>
+            <td>$success</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0b6a0b"></span> #0b6a0b
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #107c10"></span> #107c10
+            </td>
+        </tr>
+        <tr>
+            <td>$info</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #038387"></span> #038387
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0099bc"></span> #0099bc
+            </td>
+        </tr>
+        <tr>
+            <td>$warning</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ca5010"></span> #ca5010
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f7630c"></span> #f7630c
+            </td>
+        </tr>
+        <tr>
+            <td>$danger</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d13438"></span> #d13438
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #c50f1f"></span> #c50f1f
+            </td>
+        </tr>
     </tbody>
 </table>
 
