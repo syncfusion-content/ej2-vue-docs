@@ -103,6 +103,19 @@ The [attachmentRemoved](../api/ai-assistview#attachmentremoved) event is trigger
 {% endhighlight %}
 {% endtabs %}
 
+## attachmentRemoving
+
+The [attachmentRemoving](../api/ai-assistview#attachmentremoving) event is triggered when an attached file is being removed in the AI AssistView.
+
+{% tabs %}
+{% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/events/attachment-removing/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/ai-assistview/events/attachment-removing/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
 ## attachmentClick
 
 The [attachmentClick](../api/ai-assistview#attachmentclick) event is triggered when an attached file is clicked in the AI AssistView.
