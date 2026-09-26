@@ -26,8 +26,7 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+@import '../node_modules/@syncfusion/@syncfusion/ej2-fluent2-theme/styles/button/index.css';
 
 .e-checkbox-wrapper {
   margin-top: 18px;

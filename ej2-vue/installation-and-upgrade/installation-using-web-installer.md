@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Web installer setup | Syncfusion
+title: Installation using web installer in Vue Installation and upgrade component | Syncfusion
 description: Learn here all about Installation using web installer in Syncfusion Vue Installation and upgrade component of Syncfusion Essential JS 2 and more.
 control: Installation using web installer
 platform: ej2-vue
@@ -39,51 +39,51 @@ The steps below describe how to install Essential<sup style="font-size:70%">&reg
 
 1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 Web Installer file from the downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
-    ![Web installer - extract wizard](images/img1.png)
+    ![Web installer - extract wizard](images/1.png)
 
     N> The installer wizard displays a dialog showing the package extraction progress.
 
 2. The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Web Installer's welcome wizard appears. Click **Next**.
 
-    ![Web installer welcome wizard](images/img2.png)
+    ![Web installer welcome wizard](images/2.png)
 
 3. The Platform Selection Wizard appears. Select products to install from the **Available** tab. Check **Install All** to install all products.
 
     **Available**
 
-    ![Platform selection - Available](images/img3.png)
+    ![Platform selection - Available](images/3.png)
 
     If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which products to uninstall from the same version. Click **Next**.
 
     **Installed**
 
-    ![Platform selection - Installed](images/img4.png)
+    ![Platform selection - Installed](images/4.png)
 
     I> If required software for the selected product is not installed, the **Additional Software Required** alert appears. Installation can proceed, and required software can be installed later.
 
     **Required Software**
 
-    ![Additional software required](images/img5.png)
+    ![Additional software required](images/5.png)
 
 4. If previous versions of the selected products are installed, the **Uninstall Previous Version** wizard appears. View the list of previously installed versions. Check **Uninstall All** to remove all previous versions. Click **Next**.
 
-    ![Uninstall previous versions](images/img6.png)
+    ![Uninstall previous versions](images/6.png)
 
     N> Starting from 2021 Volume 1, Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall versions from 18.1 onward when installing a new version.
 
 5. A pop-up appears to confirm uninstallation of selected previous versions. Click **Continue** to proceed.
 
-    ![Confirmation pop-up](images/img7.png)
+    ![Confirmation pop-up](images/7.png)
 
 6. The Confirmation Wizard appears with the list of products to be installed and uninstalled. You can view and modify the list of products that will be installed and uninstalled from this page.
 
-    ![Confirmation wizard](images/img8.png)
+    ![Confirmation wizard](images/8.png)
 
     N> By clicking the **Download Size** and **Installation Size** links, you can determine the approximate size of the download and installation.
 
 7. The Configuration Wizard appears. You can change the **Download**, **Install**, and **Demos** locations from here. You can also change the Additional Settings on a product-by-product basis. Click **Next** to install with the default settings.
 
-    ![Configuration wizard](images/img9.png)
+    ![Configuration wizard](images/9.png)
 
     **Additional Settings**
 
@@ -96,23 +96,23 @@ The steps below describe how to install Essential<sup style="font-size:70%">&reg
 
 9. The Login Wizard appears. Enter your Syncfusion<sup style="font-size:70%">&reg;</sup> email address and password. If you do not already have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can create one by clicking **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click **Install**.
 
-    ![Login wizard](images/img8_.png)
+    ![Login wizard](images/8_.png)
 
     I> The products you have chosen will be installed based on your Syncfusion<sup style="font-size:70%">&reg;</sup> license (Trial or Licensed).
 
 10. The download and installation / uninstallation progress is displayed as shown below.
 
-    ![Progress screen](images/img9_.png)
+    ![Progress screen](images/9_.png)
 
 11. When the installation is finished, the **Summary** wizard appears. Here you can see the list of products that have been installed successfully and those that have failed. To close the Summary wizard, click **Finish**.
 
-    ![Summary wizard](images/img12.png)
+    ![Summary wizard](images/12.png)
 
     * To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel, click **Launch Control Panel**.
 
 12. After installation, there are two Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel entries, as shown below. The **Essential<sup style="font-size:70%">&reg;</sup> Studio** entry manages all Syncfusion<sup style="font-size:70%">&reg;</sup> products installed in the same version, while the **Product** entry only uninstall the specific product setup.
 
-    ![Control panel entries](images/img13.png)
+    ![Control panel entries](images/13.png)
 
 ## Uninstallation
 

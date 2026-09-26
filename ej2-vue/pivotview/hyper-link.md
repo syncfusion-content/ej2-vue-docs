@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyperlink in Vue Pivot Table | Syncfusion
-description: Learn how the Vue Pivot Table displays hyperlinks in row, column, value, and summary cells via the hyperlinkSettings property with per-cell-type visibility controls.
+description: Learn how the Vue Pivot Table displays hyperlinks in row, column, value, and summary cells via the hyperlinkSettings property with per-cell-type controls.
 control: Hyper link 
 platform: ej2-vue
 documentation: ug
@@ -166,7 +166,7 @@ It provides two parameters:
 * [`data`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/hyperCellClickEventArgs#data): Contains detailed information about the clicked cell, including its value, row and column headers, position, and whether it’s a summary cell.
 * [`nativeEvent`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/hyperCellClickEventArgs#nativeevent): Represents the original browser event triggered by the click, useful for advanced event handling.
 
-In the example below, when a hyperlink cell is clicked, a custom attribute (**data-url**) is added to the cell to redirect users to the Syncfusion Vue Pivot Table Hyperlink [Demo](https://ej2.syncfusion.com/demos#/tailwind3/pivot-table/hyper-link.html). The [`cancel`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/hyperCellClickEventArgs#cancel) property is set to **false** to enable this interaction.
+In the example below, when a hyperlink cell is clicked, a custom attribute (**data-url**) is added to the cell to redirect users to the Syncfusion Vue Pivot Table Hyperlink [Demo](https://ej2.syncfusion.com/demos/#/tailwind3/pivot-table/hyper-link.html). The [`cancel`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/hyperCellClickEventArgs#cancel) property is set to **false** to enable this interaction.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

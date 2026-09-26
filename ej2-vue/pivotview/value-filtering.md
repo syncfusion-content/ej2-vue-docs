@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value Filtering in Vue Pivot Table | Syncfusion
-description: Learn how the Vue Pivot Table applies value filtering on aggregated measures via the allowValueFilter property and filterSettings, with operator-based UI dialogs and code configuration.
+description: Learn how the Vue Pivot Table applies value filtering on aggregated measures via allowValueFilter and filterSettings, with operator-based dialogs and code.
 control: Value filtering 
 platform: ej2-vue
 documentation: ug

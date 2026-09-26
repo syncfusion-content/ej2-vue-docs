@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Number Formatting in Vue Pivot Table | Syncfusion
-description: Learn how the Vue Pivot Table formats numeric values as number, currency, percentage, or custom patterns through the formatSettings property in dataSourceSettings.
+description: Learn how the Vue Pivot Table formats numeric values as number, currency, percentage, or custom patterns via the formatSettings property in dataSourceSettings.
 control: Number formatting 
 platform: ej2-vue
 documentation: ug

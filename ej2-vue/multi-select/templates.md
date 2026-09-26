@@ -135,6 +135,38 @@ In the following sample, when the data fetch request fails, the MultiSelect disp
         
 {% previewsample "page.domainurl/code-snippet/multi-select/template/action-cs1" %}
 
+## Summary Tag Template
+
+The Summary Tag Template feature displays selected items as a formatted summary text in the input field instead of listing all selections individually. This is especially useful in CheckBox mode when working with large datasets and using the SelectAll option, as it significantly improves performance.
+
+The [summaryTagCount](../api/multi-select#summarytagcount) property sets a threshold—when the number of selected items exceeds this threshold, the [summaryTagTemplate](../api/multi-select#summarytagtemplate) displays a custom formatted text instead of individual items.
+
+### Template Placeholder Properties
+
+The following properties are available for use in the summary template placeholders:
+
+| Placeholder | Description |
+|-------------|-------------|
+| `${selectedCount}` | Total count of currently selected items |
+| `${totalCount}` | Total number of items in the data source |
+
+In the following sample, the Summary Tag Template displays the count of selected items when the threshold is exceeded.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/template/summary-tag-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/template/summary-tag-template-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/multi-select/template/summary-tag-template-cs1" %}
+
+> **Limitation:** The Summary Tag Template feature only works in CheckBox mode because it has a built-in SelectAll option for bulk selection, which triggers the need for performance optimization. Other modes (Default, Box, Delimiter) don't support SelectAll and use different display formats, making template-based formatting unnecessary.
+
+> **Note:** When you set a threshold value and preselected items exceed it, the summary template displays formatted text instead of individual items. If `summaryTagTemplate` and `summaryTagCount` are not provided, the Summary Tag Template feature is automatically enabled when records or preselected items exceed 1000, displaying a default summary format for better performance.
+
 ## See Also
 
 * [How to bind the data](./data-binding)

@@ -23,8 +23,7 @@ components: {
 }
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-material3-theme/styles/button/index.css';
 
 .e-checkbox-wrapper {
   margin-top: 18px;

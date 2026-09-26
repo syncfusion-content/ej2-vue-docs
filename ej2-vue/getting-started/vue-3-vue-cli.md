@@ -269,15 +269,7 @@ In template declaration, the component name must match the property binding name
     };
     </script>
     <style>
-      @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-      @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-      @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-      @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-      @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-      @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-      @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-      @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-      @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+      @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
     </style>
   
   {% endhighlight %}
@@ -346,15 +338,7 @@ The following sample uses the Button component within the grid's template proper
       };
       </script>
       <style>
-        @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-        @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-        @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-        @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-        @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-        @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-        @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-        @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-        @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+        @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/material3.css";
       </style>
   
   {% endhighlight %}

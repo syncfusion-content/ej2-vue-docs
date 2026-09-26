@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to customize number date and time values in Vue Pivot Table | Syncfusion
-description: Step-by-step example showing how to customize number, date, and time values in the Vue Pivot Table with the formatSettings property and NumberFormat or DateFormat options.
+title: Format number, date, and time values in Vue Pivot Table | Syncfusion
+description: Step-by-step example showing how to format number, date, and time values in the Vue Pivot Table with the formatSettings property and DateFormat options.
 control: Customize number date and time values 
 platform: ej2-vue
 documentation: ug

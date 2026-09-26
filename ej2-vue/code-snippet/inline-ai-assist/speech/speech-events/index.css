@@ -1,0 +1,58 @@
+.integration-speechtotext-section {
+  height: 350px;
+  width: 650px;
+  margin: 0 auto;
+}
+
+.integration-speechtotext-section .e-view-container {
+  margin: auto;
+}
+
+.speech-feedback {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 0 auto 12px;
+  width: 650px;
+  background: #fafafa;
+}
+
+.speech-feedback .status-line,
+.speech-feedback .transcript-line,
+.speech-feedback .error-line {
+  margin-bottom: 6px;
+}
+
+#summarizeBtn {
+  padding: 8px 14px;
+  background: #006ce6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#editableText {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 8px;
+  min-height: 40px;
+}
+
+.toolbar-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#container {
+  max-width: 90vw;
+}
+
+@media only screen and (max-width: 750px) {
+  .integration-speechtotext-section,
+  .speech-feedback {
+    width: 100%;
+  }
+}

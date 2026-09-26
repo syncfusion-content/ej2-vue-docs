@@ -1,0 +1,47 @@
+.integration-speechtotext-section {
+  height: 350px;
+  width: 650px;
+  margin: 0 auto;
+}
+
+.integration-speechtotext-section .e-view-container {
+  margin: auto;
+}
+
+.integration-speechtotext-section .banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.integration-speechtotext-section .banner-content .e-listen-icon:before {
+  font-size: 25px;
+}
+
+#container {
+  max-width: 90vw;
+}
+
+#summarizeBtn {
+  padding: 8px 14px;
+  background: #006ce6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#editableText {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 8px;
+  min-height: 40px;
+}
+
+.toolbar-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}

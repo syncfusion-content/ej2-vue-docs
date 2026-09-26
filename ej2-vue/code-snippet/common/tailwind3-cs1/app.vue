@@ -45,8 +45,7 @@ import {
   </script>
   
   <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+  @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/button/index.css';
   
   .e-checkbox-wrapper {
     margin-top: 18px;
