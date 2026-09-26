@@ -14,8 +14,7 @@ const msg = 'Hi EJ2 Components for Vue';
 const name = 'Calendar';
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-material-theme/styles/calendar/index.css";
   #app {
     color: #008cff;
     height: 40px;

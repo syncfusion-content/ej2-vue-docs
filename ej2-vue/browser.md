@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Browser in Vue Browser md component | Syncfusion
-description: Learn here all about Browser in Syncfusion Vue Browser md component of Syncfusion Essential JS 2 and more.
-control: Browser 
+title: Browser Support in Vue Components | Syncfusion
+description: Learn which modern browsers Syncfusion Vue UI components support, including Chrome, Firefox, Edge, Safari, and IE 11.
+control: Browser Support
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Browser Support
+# Browser Support in Syncfusion® Vue Components
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 components are supported only in modern browsers. This includes the following versions.
 
-|    Chrome    |    Firefox    |    Opera     |    Edge    |    IE      |    Safari    |    IOS    |    Android    |    Windows   Mobile    |
+|    Chrome    |    Firefox    |    Opera     |    Edge    |    IE      |    Safari    |    iOS    |    Android    |    Windows   Mobile    |
 |--------------|---------------|--------------|------------|------------|--------------|-----------|---------------|------------------------|
 |    Latest    |    Latest     |    Latest    |    13 +    |    11 +    |    9 +       |    9 +    |    4.4 +      |    IE 11 +             |
 
@@ -43,7 +43,7 @@ To add ES6 Promise polyfill using a CDN, include this in your HTML file.
 
 ## Node.js
 
-ES6 Promise polyfill can also be installed on the node.js.
+ES6 Promise polyfill can also be installed on the Node.js.
 
 To install:
 

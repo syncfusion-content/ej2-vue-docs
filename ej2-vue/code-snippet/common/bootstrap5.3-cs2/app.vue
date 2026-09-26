@@ -19,8 +19,7 @@
   </script>
   
   <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.3.css';
+  @import '../node_modules/@syncfusion/ej2-bootstrap5.3-theme/styles/button/index.css';
   
   button {
     margin: 25px 5px 20px 20px;

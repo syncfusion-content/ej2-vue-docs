@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation using offline installer in Vue Installation and upgrade component | Syncfusion
+title: Offline installer setup | Syncfusion
 description: Learn here all about Installation using offline installer in Syncfusion Vue Installation and upgrade component of Syncfusion Essential JS 2 and more.
 control: Installation using offline installer
 platform: ej2-vue
@@ -76,7 +76,6 @@ The steps below describe how to install the Essential<sup style="font-size:70%">
     ![Uninstall previous versions](images/offline5.png)
 
     N> From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has added the option to uninstall previous versions from 18.1 onward while installing the new version.
-    >
     N> If any version is selected to uninstall, a confirmation screen will appear. If you click **Continue**, the Progress screen will display the uninstall and install progress respectively. If no versions are chosen to be uninstalled, only the installation progress is displayed.
 
     **Confirmation Alert**

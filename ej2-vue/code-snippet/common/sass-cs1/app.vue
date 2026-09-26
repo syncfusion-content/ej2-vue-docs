@@ -35,6 +35,5 @@ components: {
 
 <style lang="scss">
 // syncfusion styles
-@import "../node_modules/@syncfusion/ej2-base/styles/material.scss";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.scss";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.scss";
 </style>

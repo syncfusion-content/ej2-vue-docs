@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation using linux installer in Vue Installation and upgrade component | Syncfusion
+title: Linux installer setup | Syncfusion
 description: Learn here all about Installation using linux installer in Syncfusion Vue Installation and upgrade component of Syncfusion Essential JS 2 and more.
 control: Installation using linux installer
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux Installer
+# Installing JavaScript Linux installer
 
 This guide explains how to extract and use the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer on a Linux machine.
 

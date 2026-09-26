@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation using mac installer in Vue | Syncfusion
+title: Mac installer setup | Syncfusion
 description: Learn here all about Installation using mac installer in Syncfusion Vue Installation and upgrade component of Syncfusion Essential JS 2 and more.
 control: Installation using mac installer
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 Mac Installer
+# Installing JavaScript – EJ2 Mac Installer
 
 This guide explains how to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer on macOS, including how to resolve the macOS Catalina (and later) security warning and how to register your license key in the installed samples.
 

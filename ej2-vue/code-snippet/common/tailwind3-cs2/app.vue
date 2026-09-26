@@ -20,8 +20,8 @@
   </script>
   
   <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+ 
+  @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/button/index.css';
   
   button {
     margin: 25px 5px 20px 20px;

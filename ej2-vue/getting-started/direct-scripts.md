@@ -38,7 +38,7 @@ In this article, `Material3` theme is applied using CSS styles, which are availa
 {% highlight html tabtitle="~/index.html" %}
 
 <head>
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/34.1.33/material3.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/34.2.2/material3.css" rel="stylesheet" type="text/css" />
 </head>
 
 {% endhighlight %}
@@ -52,7 +52,7 @@ To integrate Syncfusion<sup style="font-size:70%">&reg;</sup> components into yo
 {% highlight html tabtitle="~/index.html" %}
 
 <head>
-<script src="https://cdn.syncfusion.com/ej2/34.1.33/ej2-vue-es5/dist/ej2-vue.min.js"></script>
+<script src="https://cdn.syncfusion.com/ej2/34.2.2/ej2-vue-es5/dist/ej2-vue.min.js"></script>
 </head>
 
 {% endhighlight %}

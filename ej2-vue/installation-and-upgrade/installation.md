@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation in Vue Installation and upgrade component | Syncfusion
+title: Installation in Vue | Syncfusion
 description: Learn here all about Installation in Syncfusion Vue Installation and upgrade component of Syncfusion Essential JS 2 and more.
 control: Installation
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation of Syncfusion<sup style="font-size:70%">&reg;</sup> Vue controls
+# Installation of Vue controls
 
 This guide explains how to install Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 Vue UI components into an existing Vue project using either the **npm CLI** or the **`package.json`** file.
 
