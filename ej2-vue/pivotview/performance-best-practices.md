@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance Best Practices in Vue Pivot Table | Syncfusion
-description: Learn performance best practices for the Vue Pivot Table with large datasets, including virtual scrolling, paging, data compression, and efficient field-list usage.
+description: Learn performance best practices for the Vue Pivot Table with large datasets: virtual scrolling, paging, data compression, and efficient field-list usage.
 platform: ej2-vue
 control: Performance best practices
 publishingplatform: ##Platform_Name##

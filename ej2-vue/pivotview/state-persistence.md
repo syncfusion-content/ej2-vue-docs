@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Vue Pivot Table | Syncfusion
-description: Learn how the Vue Pivot Table saves the current layout to cookies with enablePersistence, and lets you save and load a serialized report string with getPersistData and loadPersistData.
+description: Learn how the Vue Pivot Table retains the current layout, field arrangements, and sort states in cookies via enablePersistence, and saves or loads a report.
 control: State persistence 
 platform: ej2-vue
 documentation: ug

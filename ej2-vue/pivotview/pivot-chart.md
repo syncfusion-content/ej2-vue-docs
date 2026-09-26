@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pivot Chart in Vue Pivot Table | Syncfusion
-description: Learn how the Vue Pivot Table renders an integrated Pivot Chart with 15+ chart types, drill down and up, dynamic legend, axis, and tooltip settings, and view-mode control via displayOption.
+description: Learn how the Vue Pivot Table renders 21 Pivot Chart types with drill down and up, configurable legend, axis, and tooltip settings, and view-mode control.
 control: Pivot chart 
 platform: ej2-vue
 documentation: ug

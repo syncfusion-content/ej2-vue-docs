@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value Sorting in Vue Pivot Table | Syncfusion
-description: Learn how the Vue Pivot Table sorts individual value columns via the enableValueSorting and valueSortSettings properties, with header text and delimiter controls.
+description: Learn how the Vue Pivot Table sorts individual value columns via enableValueSorting and valueSortSettings, with header text and delimiter controls.
 control: Value sorting 
 platform: ej2-vue
 documentation: ug

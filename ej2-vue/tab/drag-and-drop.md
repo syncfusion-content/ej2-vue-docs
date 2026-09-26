@@ -39,7 +39,7 @@ In the following sample, the [allowDragAndDrop](https://ej2.syncfusion.com/vue/d
 
 It is possible to drag and drop the tab items between two Tabs by manually saving the dropped items as new tab item data through the `addTab` method of the Tab and removing the dragged item through the `removeTab` method of the Tab.
 
-In this example, the tab control is used as an external source, and the item from the tab component is dragged and dropped onto another Tab. Use the [onDragStart](https://ej2.syncfusion.com/vue/documentation/api/tab#ondragstart) and [dragged](https://ej2.syncfusion.com/vue/documentation/api/tab#dragged) events of the Tab component, where you can form an event object and save it using the `addTab` method of the Tab and remove the dragged item through the `removeTab` method of the Tab using the dragged item index.
+In this example, the tab control is used as an external source, and the item from the tab component is dragged and dropped onto another Tab. Use the `onDragStart` and `dragged` events of the Tab component, where you can form an event object and save it using the `addTab` method of the Tab and remove the dragged item through the `removeTab` method of the Tab using the dragged item index.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -56,7 +56,7 @@ In this example, the tab control is used as an external source, and the item fro
 
 It is possible to drag and drop the items to any of the external sources from the Tab, by manually saving those dropped items as new node data through the `addNodes` method of the Treeview and removing the dragged item through the `removeTab` method of the Tab.
 
-In this example, the TreeView control is used as an external source, and the item from the tab component is dragged and dropped onto the child nodes of the TreeView component. Use the [dragged](https://ej2.syncfusion.com/vue/documentation/api/tab#dragged) event of the Tab component, where you can form an event object and save it using the `addNodes` method of the Treeview and remove the dragged item through the `removeTab` method of the Tab using the dragged item index.
+In this example, the TreeView control is used as an external source, and the item from the tab component is dragged and dropped onto the child nodes of the TreeView component. Use the `dragged` event of the Tab component, where you can form an event object and save it using the `addNodes` method of the Treeview and remove the dragged item through the `removeTab` method of the Tab using the dragged item index.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

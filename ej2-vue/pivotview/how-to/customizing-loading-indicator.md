@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize the loading indicator in Vue Pivot Table | Syncfusion
-description: Step-by-step example showing how to customize or disable the loading indicator in the Vue Pivot Table through the spinnerTemplate property with a custom HTML string.
+description: Step-by-step example showing how to customize the loading indicator in the Vue Pivot Table via the spinnerTemplate property with a custom HTML string.
 control: Customizing loading indicator 
 platform: ej2-vue
 documentation: ug

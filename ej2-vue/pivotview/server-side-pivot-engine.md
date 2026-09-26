@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Server-side Engine in Vue Pivot Table | Syncfusion
-description: Learn how the Vue Pivot Table uses the Syncfusion.Pivot.Engine server-side library via a Web API to offload aggregation, filtering, sorting, and grouping for large relational datasets.
+description: Learn how the Vue Pivot Table offloads aggregation, filtering, sorting, and grouping to a server-side engine via a Web API for large relational datasets.
 control: Server side pivot engine 
 platform: ej2-vue
 documentation: ug

@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/button/index.css";
 
 #app {
   color: #008cff;
