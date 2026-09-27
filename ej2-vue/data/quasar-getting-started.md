@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with Vue DataManager in Quasar Framework
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager enables efficient data management in Vue applications. It seamlessly interacts with various data sources (remote or local) and provides functionalities like sorting, filtering, paging, and CRUD (Create, Read, Update, Delete) operations, enhancing the data presentation capabilities of your Vue application. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager enables efficient data management in Vue applications. It interacts with various data sources (remote or local) and provides functionalities like sorting, filtering, paging, and CRUD (Create, Read, Update, Delete) operations, enhancing data presentation capabilities in Vue applications. 
 
 This guide details the steps involved in setting up [Quasar](https://quasar.dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Data Manager using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api). 
 
@@ -18,17 +18,17 @@ The Quasar Framework is an open-source framework based on Vue.js, empowering dev
 
 ## Prerequisites for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components
 
-Before you start using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components, ensure that your system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Vue.js versions, and other dependencies required for using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components effectively.
+Before using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components, ensure that the system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Vue.js versions, and other dependencies required for using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components effectively.
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
-This section provides information about the Essential<sup style="font-size:70%">&reg;</sup> dependencies required for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager into your Vue projects. These dependencies are necessary for managing and manipulating data effectively within your applications.
+This section provides information about the Essential<sup style="font-size:70%">&reg;</sup> dependencies required for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager into Vue projects. These dependencies are necessary for managing and manipulating data effectively within applications.
 
-1.  `@syncfusion/ej2-data`: The `@syncfusion/ej2-data` package serves as the core component for Syncfusion<sup style="font-size:70%">&reg;</sup> data management functionalities. It includes critical features such as DataManager, which enables various data operations like sorting, filtering, and paging. By integrating this package into your Vue project, you gain access to powerful tools for handling data efficiently.
+1.  `@syncfusion/ej2-data`: The `@syncfusion/ej2-data` package serves as the core component for Syncfusion<sup style="font-size:70%">&reg;</sup> data management functionalities. It includes critical features such as DataManager, which enables various data operations like sorting, filtering, and paging. Integrating this package into Vue projects provides tools for handling data efficiently.
 
-2. `@syncfusion/ej2-base`: The `@syncfusion/ej2-base` package serves as the foundational layer for other Syncfusion<sup style="font-size:70%">&reg;</sup> packages. It provides Essential<sup style="font-size:70%">&reg;</sup> utilities and helpers required for seamless integration and functionality of Syncfusion<sup style="font-size:70%">&reg;</sup> components within your Vue applications.
+2. `@syncfusion/ej2-base`: The `@syncfusion/ej2-base` package serves as the foundational layer for other Syncfusion<sup style="font-size:70%">&reg;</sup> packages. It provides Essential<sup style="font-size:70%">&reg;</sup> utilities and helpers required for integration and functionality of Syncfusion<sup style="font-size:70%">&reg;</sup> components within Vue applications.
 
 ```javascript
 |-- @syncfusion/ej2-data
@@ -36,15 +36,15 @@ This section provides information about the Essential<sup style="font-size:70%">
     |-- es6-promise (Required when window.Promise is not available)
 ```
 
-> **@syncfusion/ej2-data** requires the presence of a Promise feature in global environment. In the browser, window.Promise must be available.
+> `@syncfusion/ej2-data` requires the presence of a Promise feature in global environment. In the browser, window.Promise must be available.
 
 ## Installation and configuration
 
-Setting up a Quasar project for Vue development is straightforward. Quasar's CLI simplifies the process, offering a seamless experience to get you started with a comprehensive Vue application. Follow these steps to create and configure a new Quasar project:
+Setting up a Quasar project for Vue development is straightforward. Quasar's CLI simplifies the process and provides a comprehensive setup experience. Follow these steps to create and configure a new Quasar project:
 
 **Step 1: Create a new Quasar project**
 
-To create a new Quasar project, open your terminal and navigate to your desired project directory. Then, execute the following command:
+To create a new Quasar project, open the terminal and navigate to the desired project directory. Then, execute the following command:
 
 ```bash
 npm init quasar
@@ -52,11 +52,11 @@ npm init quasar
 
 ![Initial_quasar_setup](./images/initial-quasar-setup.png)
 
-If you are new to the Quasar framework, you will need to press **yes** to proceed with the installation.
+For first-time Quasar framework setups, press "yes" to proceed with the installation.
 
 **Step 2: Configure project settings**
 
-After executing the above command, you will be prompted to configure the project settings. Follow the prompts and provide the necessary information:
+After executing the above command, the CLI will prompt for project configuration settings. Provide the necessary information as shown below:
 
 1. **Select project type:** Choose "App with Quasar CLI, let's go!" to create a new Quasar application.
 
@@ -67,7 +67,7 @@ After executing the above command, you will be prompted to configure the project
         Quasar UI kit
     ```
 
-2. **Define the project folder:** Specify the name for your project folder where all project files will be stored. 
+2. **Define the project folder:** Specify the name for the project folder where all project files will be stored. 
 
     ```bash
     ? Project folder: » data-app
@@ -80,14 +80,14 @@ After executing the above command, you will be prompted to configure the project
     >   Quasar v2 (Vue 3 | latest and greatest) - recommended
         Quasar v1 (Vue 2)
     ```
-4. **Script type:** Choose the script type for your project. Select either JavaScript or TypeScript.
+4. **Script type:** Select the script type for the project. Choose either JavaScript or TypeScript.
 
     ```bash
     ? Pick script type: » - Use arrow-keys. Return to submit.
     >   Javascript
         Typescript
     ```
-5. **Quasar app CLI variant:**  Choose the variant that suits your project requirements. For example, select "Quasar App CLI with Vite 2".
+5. **Quasar app CLI variant:**  Select the variant that suits the project requirements. For example, select "Quasar App CLI with Vite 2".
 
     ```bash
     ? Pick Quasar App CLI variant: » - Use arrow-keys. Return to submit.
@@ -96,28 +96,28 @@ After executing the above command, you will be prompted to configure the project
         Quasar App CLI with Webpack (stable | v3)
         Quasar App CLI with Webpack (BETA | next major version - v4)
     ```
-6. **Package name:** Enter the package name for your project. This should be a unique identifier for your project.
+6. **Package name:** Enter the package name for the project. This should be a unique identifier.
 
     ```bash
     ? Package name: » data-app
     ```
-7. **Project product name:** Provide a name for your Quasar project. This is the name that will be displayed in the project's metadata.
+7. **Project product name:** Provide a name for the Quasar project. This name appears in the project's metadata.
 
     ```bash
     ? Project product name: (must start with letter if building mobile apps) » Data Manager
     ```
-8. **Project description:** Enter a brief description of your project to provide context for other developers.
+8. **Project description:** Enter a brief description of the project to provide context for development.
 
     ```bash
     ? Project description: » A Quasar Project
     ```
-9. **Author:** Provide your email or name as the author of the project.
+9. **Author:** Provide an email address or name as the project author.
 
     ```bash
     ? Author: » yourmail@gmail.com
     ```
 
-10. **Vue component style:** Choose the Vue component style you prefer. For example, select "Composition API with `<script setup>`".
+10. **Vue component style:** Select the preferred Vue component style. For example, select "Composition API with `<script setup>`".
 
     ```bash
     ? Pick a Vue component style: » - Use arrow-keys. Return to submit.
@@ -125,7 +125,7 @@ After executing the above command, you will be prompted to configure the project
         Composition API
         Options API
     ```
-11. **CSS preprocessor:** Choose your preferred CSS preprocessor. For example, select "Sass with SCSS syntax". This determines the syntax for writing stylesheets in your project.
+11. **CSS preprocessor:** Select the preferred CSS preprocessor. For example, select "Sass with SCSS syntax". This determines the syntax for writing stylesheets in the project.
 
     ```bash
     ? Pick your CSS preprocessor: » - Use arrow-keys. Return to submit.
@@ -133,7 +133,7 @@ After executing the above command, you will be prompted to configure the project
         Sass with indented syntax
         None (the others will still be available)
     ```
-12. **Feature:** Select the features needed for your project. For example, select Linting (vite-plugin-checker + ESLint) for linting.
+12. **Feature:** Select the features needed for the project. For example, select Linting (vite-plugin-checker + ESLint) for linting.
 
     ```bash
     ? Check the features needed for your project: »
@@ -163,13 +163,13 @@ This generates the necessary files. Refer the below image for references.
 
 **Step 3: Install project dependencies:**
 
-After configuring your project, the Quasar CLI will scaffold the project structure based on your selections. You will then be prompted to install project dependencies. Choose whether to install project dependencies using npm or handle them manually.
+After configuring the project, the Quasar CLI scaffolds the project structure based on the selections. The CLI will then prompt to install project dependencies. Choose whether to install project dependencies using npm or handle them manually.
 
 ![Quasar_dependencies](./images/quasar-dependencies.png)
 
 **Step 4: Navigate to the project directory**
 
-Once the project setup is complete, navigate into the project directory using the **cd** command:
+Once the project setup is complete, navigate into the project directory using the "cd" command:
 
 ```bash
 cd data-app
@@ -193,15 +193,15 @@ npm run dev
 
 ## Connection to a data source
 
-Data sources are fundamental for applications that depend on information, serving as repositories that store and manage various types of data. It enables applications to retrieve, manipulate, and present data effectively. Establishing a connection between your application and a data source is Essential<sup style="font-size:70%">&reg;</sup> for making the most of the data's potential
+Data sources are fundamental for applications that depend on information, serving as repositories that store and manage various types of data. They enable applications to retrieve, manipulate, and present data effectively. Establishing a connection between an application and a data source is Essential<sup style="font-size:70%">&reg;</sup> for optimizing data utility.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) serves as a gateway for both local and remote data sources, utilizing query to interact with the data.
 
 ### Binding to JSON data
 
-Binding to a local data source involves connecting your application directly to a dataset stored within the application itself. This method is useful for small-scale applications where data does not need to be fetched from external sources.
+Binding to a local data source involves connecting an application directly to a dataset stored within the application itself. This method is useful for small-scale applications where data does not need to be fetched from external sources.
 
-To bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) to a local data source, you can assign an array of JavaScript objects to the **json** property or pass them to the constructor during instantiation.
+To bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) to a local data source, assign an array of JavaScript objects to the `json` property or pass them to the constructor during instantiation.
 
 1. Create a [src/datasource.js] file and use the following dataset to provide JSON data: 
 
@@ -315,10 +315,11 @@ To bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamana
     </style>
     ```
 
-The following example demonstrates how to bind JSON data using the [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of `DataManager`.
+The following example demonstrates how to bind JSON data using the [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -363,8 +364,10 @@ const items= new DataManager(data).executeLocal(new Query())
   }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -422,6 +425,7 @@ export default {
 }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -429,14 +433,15 @@ export default {
 
 ### Binding to ODataV4
 
-OData (Open Data Protocol) is a standardized protocol for creating and consuming data APIs over the internet, allowing you to access and manipulate data from various sources. Syncfusion's<sup style="font-size:70%">&reg;</sup> DataManager provides seamless integration with OData services, enabling you to bind data from remote sources to your application.
+OData (Open Data Protocol) is a standardized protocol for creating and consuming data APIs over the internet. It allows access and manipulation of data from various sources. Syncfusion's<sup style="font-size:70%">&reg;</sup> DataManager provides integration with OData services, enabling data binding from remote sources to applications.
 
 [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) can also be bound to remote data source by assigning service endpoint URL to the `url` property. All `DataManager` operations will address the provided service endpoint.
 
-The following example demonstrates how to bind data to an OData service using the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executequery) method of `DataManager`.
+The following example demonstrates how to bind data to an OData service using the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager#executequery) method of `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -490,8 +495,10 @@ dataManager.executeQuery(new Query().take(12)).then((e) => {
   }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -559,6 +566,7 @@ export default {
 }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -568,12 +576,13 @@ export default {
 
 Data filtering is a fundamental operation that allows to obtain a reduced view of data based on specified filter criteria. This feature is Essential<sup style="font-size:70%">&reg;</sup> for efficiently managing and displaying large datasets.
 
-The filter expression can be easily constructed using the [where](https://ej2.syncfusion.com/documentation/api/data/query/#where) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method allows you to specify filter criteria based on various conditions. 
+Filter expressions are constructed using the [where](https://ej2.syncfusion.com/documentation/api/data/query#where) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method enables specification of filter criteria based on various conditions. 
 
-The following example demonstrates how to filter data based on the **EmployeeID** field equal to **4** using the `where` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
+The following example demonstrates how to filter data based on the "EmployeeID" field equal to "4" using the `where` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -618,8 +627,10 @@ const items= new DataManager(data).executeLocal(new Query().where('EmployeeID', 
   }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -677,6 +688,7 @@ export default {
 }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -684,14 +696,15 @@ export default {
 
 ## Sort
 
-Sorting data allows you to arrange it either in ascending or descending order based on specified criteria. 
+Sorting data arranges data in either ascending or descending order based on specified criteria. 
 
-This can be achieved using the [sortBy](https://ej2.syncfusion.com/documentation/api/data/query/#sortby) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method facilitates the sorting of data based on specified fields and order.
+This can be achieved using the [sortBy](https://ej2.syncfusion.com/documentation/api/data/query#sortby) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method facilitates the sorting of data based on specified fields and order.
 
-The following example demonstrates how to sort data based on the **EmployeeID** field in **ascending** order using the `sortBy` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
+The following example demonstrates how to sort data based on the "EmployeeID" field in **ascending** order using the `sortBy` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -736,8 +749,10 @@ const items= new DataManager(data).executeLocal(new Query().sortBy('EmployeeID')
   }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -795,6 +810,7 @@ export default {
 }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -804,12 +820,13 @@ export default {
 
 Paging provides an option to display data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive datasets.
 
-The [page](https://ej2.syncfusion.com/documentation/api/data/query/#page) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables pagination of data by retrieving a specific range of data based on the page index and the page size.
+The [page](https://ej2.syncfusion.com/documentation/api/data/query#page) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables pagination of data by retrieving a specific range of data based on the page index and the page size.
 
-The following example demonstrates how to apply paging to the data using the `page` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
+The following example demonstrates how to apply paging to the data using the `page` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -854,8 +871,10 @@ const items= new DataManager(data).executeLocal(new Query().page(1, 8))
   }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div id="app">
@@ -913,6 +932,7 @@ export default {
 }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -920,21 +940,21 @@ export default {
 
 ## Component binding
 
-The DataManager can be seamlessly integrated with Syncfusion<sup style="font-size:70%">&reg;</sup> components that support data binding. However, before utilizing DataManager, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component.
+The DataManager can be integrated with Syncfusion<sup style="font-size:70%">&reg;</sup> components that support data binding. However, before utilizing DataManager, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component.
 
 In the following samples, the grid component is bound. To render the Grid with the necessary configurations, please refer to the [Grid Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation.
 
 ### Local data binding
 
-Local data binding allows you to directly bind data to Syncfusion<sup style="font-size:70%">&reg;</sup> components from within your Vue application. This method is useful when you have the data available locally and want to integrate it seamlessly with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+Local data binding enables direct data binding to Syncfusion<sup style="font-size:70%">&reg;</sup> components from within Vue applications. This method is useful when data is available locally and requires integration with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 To bind local data to a Syncfusion<sup style="font-size:70%">&reg;</sup> component, follow these steps:
 
-1. Define your data directly in your Vue component or import it from an external source.
+1. Define data directly in the Vue component or import it from an external source.
 
-2. Use the [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) class to create a data source and bind it to your data.
+2. Use the [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) class to create a data source and bind it to the data.
 
-3. Integrate the data source with the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component by setting the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property.
+3. Integrate the data source with the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component by setting the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid#datasource) property.
 
 The following example shows how to bind local data to the grid component using `DataManager`.
 
@@ -951,13 +971,13 @@ The following example shows how to bind local data to the grid component using `
 
 ### Remote data binding
 
-Remote data binding involves binding external data sources, such as API endpoints, to Syncfusion<sup style="font-size:70%">&reg;</sup> components. This allows you to fetch and display data dynamically from a server.
+Remote data binding involves binding external data sources, such as API endpoints, to Syncfusion<sup style="font-size:70%">&reg;</sup> components. This enables fetching and displaying data dynamically from a server.
 
 To bind remote data to a Syncfusion<sup style="font-size:70%">&reg;</sup> component, follow these steps:
 
-1. Initialize a [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) object and configure it with the URL of the remote service from which you want to fetch data.
+1. Initialize a [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) object and configure it with the URL of the remote service from which data is to be fetched.
 
-2.  Assign the `DataManager` instance to the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property of the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component.
+2.  Assign the `DataManager` instance to the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid#datasource) property of the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component.
 
 The following example demonstrates how to bind remote data to the grid component using `DataManager`.
 
