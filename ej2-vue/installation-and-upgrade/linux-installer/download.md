@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Download Linux installer | Syncfusion
+title: Download in Vue Installation component | Syncfusion
 description: Learn here all about Download in Syncfusion Vue Installation component of Syncfusion Essential JS 2 and more.
 control: Download
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download JavaScript Linux installer
+# Download Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux Installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. Download either the licensed installer or the trial installer depending on your license. The Linux installer is provided in `.zip` format and does not require an unlock key to install.
 

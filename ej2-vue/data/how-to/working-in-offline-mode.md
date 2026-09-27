@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Working in offline mode with Vue DataManager | Syncfusion
-description: Learn here all about Working in offline mode with Syncfusion Vue DataManager of Syncfusion Essential JS 2 and more.
+title: Vue DataManager - Working in Offline Mode | Syncfusion
+description: Use offline mode in Syncfusion Vue DataManager to load data once and process queries client-side.
 platform: ej2-vue
 control: Working in offline mode in Vue DataManager 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Working in offline mode with Vue DataManager
+# Offline mode with Vue DataManager
 
-In Vue applications, working with remote data binding using [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) often involves sending requests to the server every time the executeQuery method is invoked. This process can result in unnecessary server calls, leading to increased latency and server load. 
+In Vue applications, remote data binding with DataManager typically sends a request to the server each time the `executeQuery` method is invoked. This repeated communication can increase latency and place additional load on the server.
 
-`DataManager` provides an `offline` property that allows you to load all data during initialization and perform query processing on the client-side. This approach eliminates the need to send requests to the server every time [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executequery) is called, resulting in a more responsive and efficient data interaction experience.
+To improve efficiency, DataManager provides an offline property. When enabled, all data is loaded during initialization, and subsequent query processing is handled on the client side. This eliminates unnecessary server calls, resulting in faster response times and reduced server overhead.
 
-To enable offline mode in DataManager, set the `offline` property to **true** during initialization. This is demonstrated in the below code example.
+To enable offline mode in DataManager, set the `offline` property to `true` during initialization. This is demonstrated in the below code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -23,12 +23,11 @@ To enable offline mode in DataManager, set the `offline` property to **true** du
 <template>
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>   
   </div>
@@ -36,19 +35,19 @@ To enable offline mode in DataManager, set the `offline` property to **true** du
 
 <script setup>
 import { onMounted, ref } from "vue";
-import { DataManager, Query, ODataAdaptor } from '@syncfusion/ej2-data';
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
 const items = ref([]);
 
 onMounted(() => {
-  let SERVICE_URI = "https://services.syncfusion.com/vue/production/api/Orders";
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
   let dataManager = new DataManager({
     url: SERVICE_URI,
-    adaptor: new ODataAdaptor(),
+    adaptor: new ODataV4Adaptor(),
     offline: true
   });
-  dataManager.executeQuery(new Query()).then((e) => {
-    this.items = e.result;
+  dataManager.executeQuery(new Query().take(8)).then((e) => {
+    items.value = e.result;
   });
 })
 </script>
@@ -83,19 +82,18 @@ onMounted(() => {
 <template>
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>   
   </div>
 </template>
 
 <script>
-import { DataManager, Query, ODataAdaptor } from '@syncfusion/ej2-data';
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
 export default {
   data() {
@@ -104,16 +102,16 @@ export default {
     };
   },
   mounted() {
-    let SERVICE_URI = "https://services.syncfusion.com/vue/production/api/Orders";
+    let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
     let dataManager = new DataManager({
       url: SERVICE_URI,
-      adaptor: new ODataAdaptor(),
+      adaptor: new ODataV4Adaptor(),
       offline: true
     });
-    dataManager.executeQuery(new Query()).then((e) => {
+    dataManager.executeQuery(new Query().take(8)).then((e) => {
       this.items = e.result;
     });
-  } 
+  }
 }
 </script>
 
@@ -143,4 +141,23 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/data/how-to/offline-mode" %}
+
 > The loaded data will be cached in the **json** property of `DataManager`.
+
+## When to use Offline mode
+
+Offline mode is most effective when:
+
+- The dataset is moderately sized and can be loaded during initialization.
+- Data does not change frequently, reducing the risk of stale results.
+- Client-side query processing provides a performance advantage.
+
+## When to avoid Offline mode
+
+Offline mode should be avoided in scenarios such as:
+
+- Large datasets: Loading all records at once may cause performance issues in the browser.
+- Frequently changing data: Cached data may become outdated quickly.
+- Real-time requirements: Applications that depend on live or streaming data need server-side queries.
+- Sensitive data: Storing all records on the client side may expose information unnecessarily.
