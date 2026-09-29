@@ -68,7 +68,7 @@ components: {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
     .content {
         margin: 0 auto;
         width: 550px;

@@ -76,7 +76,7 @@ Import pager component CSS as given below in `<style>` section of the `App.vue` 
 ```
 <style>
 <!-- Material theme used for this sample -->
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
 </style>
 ```
 
@@ -99,7 +99,7 @@ Here the pager is rendered with `totalRecordsCount` which is used to render nume
 import { PagerComponent as EjsPager } from '@syncfusion/ej2-vue-grids';
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
 </style>
 
 ```
@@ -116,7 +116,7 @@ Modify the template in [src/app.vue] file to render the pager component.
 import { PagerComponent as EjsPager } from '@syncfusion/ej2-vue-grids';
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
 </style>
 ```
 

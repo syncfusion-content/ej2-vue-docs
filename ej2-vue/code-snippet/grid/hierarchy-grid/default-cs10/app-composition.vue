@@ -30,5 +30,5 @@ import { extend } from '@syncfusion/ej2-base';
   provide('grid',  [DetailRow, Toolbar]);
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
 </style>

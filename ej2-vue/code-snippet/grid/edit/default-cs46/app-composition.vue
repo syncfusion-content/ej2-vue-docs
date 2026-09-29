@@ -47,7 +47,7 @@ const rowDataBound = (args) => {
 provide('grid', [DetailRow]);
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
 
 .e-row[aria-selected="true"] .e-customizedExpandcell {
   background-color: #e0e0e0;

@@ -51,13 +51,5 @@ components: {
   border-radius: 50px;
   box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
 }
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+ @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
 </style>

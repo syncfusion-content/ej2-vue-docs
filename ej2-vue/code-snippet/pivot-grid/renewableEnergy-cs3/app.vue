@@ -112,7 +112,7 @@ methods: {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
+@import "../ej2-tailwind3-theme/styles/pivotview/index.css";
 
 .e-pivotview .e-columnsheader .tempwrap {
 display: none;

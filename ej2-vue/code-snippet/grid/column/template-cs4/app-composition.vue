@@ -90,7 +90,7 @@ let instance = new Internationconstalization();
   provide('grid', [DetailRow]);
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+ @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
  .detailtable td {
         font-size: 13px;
         padding: 4px;

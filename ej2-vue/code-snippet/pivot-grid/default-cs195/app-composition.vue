@@ -29,4 +29,5 @@ const chartSettings = {
 
 provide('pivotview', [PivotChart]);
 </script>
-<style>@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";</style>
+<style>@import "../ej2-tailwind3-theme/styles/pivotview/index.css";
+</style>

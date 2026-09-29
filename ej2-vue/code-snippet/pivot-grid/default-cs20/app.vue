@@ -37,7 +37,5 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-pivotview/styles/tailwind3.css";
+@import "../ej2-tailwind3-theme/styles/pivotview/index.css";
 </style>
