@@ -5,16 +5,18 @@
         <th>Order ID</th>
         <th>Customer ID</th>
         <th>Employee ID</th>
+        <th>Ship Country</th>
       </tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
       </tr>
       <tr>
         <td></td>
         <td></td>
-        <td>Min: {{ min }}</td>
+        <td>Sum: {{ sum }}</td>
         <td></td>
       </tr>
     </table>
@@ -27,7 +29,7 @@ import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
 
 const items = ref([]);
-const min = ref(0);
+const sum = ref(0);
 
 onMounted(() => {
   let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
@@ -36,10 +38,10 @@ onMounted(() => {
     url: SERVICE_URI,
     adaptor: new ODataV4Adaptor()
   });
-  dataManager.executeQuery(new Query().take(5).requiresCount()
-    .aggregate('min', 'EmployeeID')).then((e) => {
+  dataManager.executeQuery(new Query().take(8).requiresCount()
+    .aggregate('sum', 'EmployeeID')).then((e) => {
       items.value = e.result;
-      min.value = e.aggregates['EmployeeID - min'];
+      sum.value = e.aggregates['EmployeeID - sum'];
     }
     );
 })

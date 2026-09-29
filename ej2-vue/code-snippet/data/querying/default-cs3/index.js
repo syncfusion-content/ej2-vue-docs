@@ -7,11 +7,12 @@ new Vue({
   template: `
   <div id="app">
     <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee Name</th></tr>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee Name</th><th>Ship Country</th></tr>
       <tr v-for="(item, index) in items" :key="index">
         <td>{{ item.OrderID }}</td>
         <td>{{ item.CustomerID }}</td>
         <td>{{ item.Employee.FirstName }}</td>
+        <td>{{ item.ShipCountry }}</td>
       </tr>
     </table>  
   </div>`,
@@ -28,7 +29,7 @@ new Vue({
       adaptor: new ODataV4Adaptor()
     });
     dataManager.executeQuery(new Query()
-    .expand('Employee').take(8)).then((e) => {
+    .expand('Employee').take(12)).then((e) => {
       this.items = e.result;
     });
   }
