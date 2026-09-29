@@ -38,7 +38,7 @@ components: {
 }
 </script>
 <style>
- @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-treegrid/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-material3-theme/styles/treegrid/index.css";
  .e-grid .e-rowcell.customcss{
   background-color: #ecedee;
 }

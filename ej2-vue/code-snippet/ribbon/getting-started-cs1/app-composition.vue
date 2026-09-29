@@ -198,7 +198,7 @@ const navigationSettings = { label: "Navigation Pane", checked: true };
 
 <style>
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/ribbon/index.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 
 .ribbonTemplate {
   display: flex;
