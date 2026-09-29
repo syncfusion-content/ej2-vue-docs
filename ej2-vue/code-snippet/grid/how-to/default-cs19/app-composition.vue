@@ -27,5 +27,5 @@ const filterOptions = {
 provide('grid', [Filter]);
 </script>
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "https://ej2.syncfusion.com/vue/documentation/node_modules/ej2-material3-theme/styles/grid/index.css";
 </style>

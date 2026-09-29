@@ -35,7 +35,7 @@ const fieldEnginePopulated = () => {
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
+@import "../ej2-tailwind3-theme/styles/pivotview/index.css";
 
 #pivotfieldlist1 {
   width: 400px;

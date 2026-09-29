@@ -17,7 +17,7 @@ import { data } from './datasource.js';
 const customAttributes = {class: 'customcss'};
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
   .e-grid .e-rowcell.customcss{
     background-color: #ecedee;
     color: 'red';

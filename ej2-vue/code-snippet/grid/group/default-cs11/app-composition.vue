@@ -19,5 +19,5 @@ const rowSelected = function (args) {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
 </style>

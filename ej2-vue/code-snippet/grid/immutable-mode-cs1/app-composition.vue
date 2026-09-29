@@ -212,5 +212,5 @@ const dataBound = function () {
   pointer-events: none;
 }
 
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/grid/index.css";
 </style>

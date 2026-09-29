@@ -32,7 +32,7 @@ provide('pivotview', [Toolbar]);
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
+@import "../ej2-tailwind3-theme/styles/pivotview/index.css";
 
 .pivotTooltipTemplateWrap {
   border: 3px solid #27b1f0;

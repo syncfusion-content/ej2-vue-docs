@@ -30,4 +30,4 @@ provide('grid', [ColumnChooser, Toolbar]);
   width: 230px;
 }
 
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";</style>
+ @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";</style>

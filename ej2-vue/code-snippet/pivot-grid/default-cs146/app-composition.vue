@@ -26,7 +26,7 @@ const hyperlinkSettings = {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/tailwind3.css";
+@import "../ej2-tailwind3-theme/styles/pivotview/index.css";
 
 .e-custom-class {
   color: #008cff;

@@ -22,7 +22,7 @@ const selectionOptions = { type: 'Multiple' };
 provide('grid', [Page]);
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material3.css";
+ @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
 
 .e-grid {
   font-family: cursive;
