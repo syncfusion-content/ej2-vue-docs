@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/25.1.35/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/34.2.2/"
     },
     map: {
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",

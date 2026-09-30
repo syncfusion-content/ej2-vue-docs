@@ -49,7 +49,7 @@ components: {
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-material3-theme/styles/treegrid/index.css";
  /* The device with borders */
     .e-mobile-layout {
         position: relative;

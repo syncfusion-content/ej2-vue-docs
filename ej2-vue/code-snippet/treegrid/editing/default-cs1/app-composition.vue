@@ -25,5 +25,5 @@ provide('treegrid',  [ Edit, Toolbar ]);
 
 </script>
 <style>
- @import "../../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/treegrid/index.css";
 </style>

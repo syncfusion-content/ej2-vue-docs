@@ -74,15 +74,7 @@ The [isToggle](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonBut
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -136,15 +128,7 @@ You can use the [checked](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -195,15 +179,7 @@ You can use the [label](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -327,15 +303,7 @@ You can use the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/ap
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -385,15 +353,7 @@ You can use the [index](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -504,15 +464,7 @@ You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -661,15 +613,7 @@ To display the items only in the classic layout group, set the mode as `DisplayM
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -716,15 +660,7 @@ To display the items only in the simplified layout group, set the mode as `Displ
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -771,15 +707,7 @@ To display the items only in the overflow, set the mode as `DisplayMode.Overflow
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```
@@ -830,15 +758,7 @@ Use the [disabled](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbo
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/ribbon/index.css";
 </style>
 
 ```

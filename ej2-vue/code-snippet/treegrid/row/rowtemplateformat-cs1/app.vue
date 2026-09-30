@@ -79,7 +79,7 @@ components: {
 }
 </script>
 <style>
- @import "../../node_modules/@syncfusion/ej2-vue-treegrid/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-material3-theme/styles/treegrid/index.css";
 
   .border {
         border-color: #e0e0e0;
