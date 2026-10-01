@@ -54,7 +54,7 @@ import {
 import {
   domVirtualizationData,
   domVirtualizationDataSource
-} from './data-source';
+} from './datasource';
 
 domVirtualizationDataSource();
 
