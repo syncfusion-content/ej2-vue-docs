@@ -219,6 +219,8 @@ export default {
 
 ![Calendar with min and max dates](./images/range.png)
 
+N> The Calendar component follows a **commit-on-Enter/focus-out** scenario. The underlying `value` is updated only when the user commits the edit by pressing **Enter** or moving focus away (**blur**). The `refresh` method rebuilds the component using the **last committed value**. If `refresh()` is invoked—either directly or indirectly via ResizeObserver callbacks, layout shifts, or dynamic validation updates—while the user is actively typing, uncommitted input is discarded and restored to the previous committed value.
+
 ## See also
 
 * [Select multiple dates in the Calendar](./multi-select)
