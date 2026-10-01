@@ -224,6 +224,7 @@ Open your terminal in the project's client folder and install the required Syncf
 ```
 npm install @syncfusion/ej2-Vue-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-material3-theme --save
 ```
 
 **Step 2: Clean Up App.vue and main.css**

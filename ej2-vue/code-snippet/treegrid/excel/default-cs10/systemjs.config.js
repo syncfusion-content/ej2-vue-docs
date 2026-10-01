@@ -35,6 +35,7 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-vue-grids": "syncfusion:ej2-vue-grids/dist/ej2-vue-grids.umd.min.js",
         "@syncfusion/ej2-treegrid": "syncfusion:ej2-treegrid/dist/ej2-treegrid.umd.min.js",
         "@syncfusion/ej2-vue-treegrid": "syncfusion:ej2-vue-treegrid/dist/ej2-vue-treegrid.umd.min.js",
+                "@syncfusion/ej2-querybuilder": "syncfusion:ej2-querybuilder/dist/ej2-querybuilder.umd.min.js",
         "@syncfusion/ej2-vue-inputs": "syncfusion:ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js",
     }
 });

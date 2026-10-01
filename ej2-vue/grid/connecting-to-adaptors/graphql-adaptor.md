@@ -276,6 +276,7 @@ npm install
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-material3-theme --save
 ```
 
 2. Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles in your `App.vue`:

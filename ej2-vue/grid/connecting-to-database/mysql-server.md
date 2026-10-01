@@ -150,6 +150,7 @@ Open your terminal in the project client folder and install the required Syncfus
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-material3-theme --save
 ```
 
 **Step 2: Clean Up App.vue and main.css**
@@ -1969,7 +1970,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 ### Handling CRUD operations
 
-To enable editing in the Vue Data Grid, utilize the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) documentation.
+To enable editing in the Vue Data Grid, utilize the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) documentation.
 
 In this scenario, the inline edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editsettings#mode) and [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid#toolbar) property configured to display toolbar items for editing purpose.
 
