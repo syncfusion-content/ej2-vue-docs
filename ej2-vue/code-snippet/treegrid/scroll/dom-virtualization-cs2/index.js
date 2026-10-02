@@ -4,7 +4,7 @@ import { TreeGridPlugin, DomVirtualization } from "@syncfusion/ej2-vue-treegrid"
 import {
   domVirtualizationData,
   domVirtualizationDataSource
-} from "./data-source";
+} from "./datasource.js";
 
 Vue.use(TreeGridPlugin);
 

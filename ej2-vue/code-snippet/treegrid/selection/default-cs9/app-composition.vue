@@ -75,11 +75,8 @@ const hierarchyModeChange = (args) => {
 };
 
 const queryCellInfo = (args) => {
-    if (
-        args.column?.field !== 'status' ||
-        !args.cell ||
-        !args.data
-    ) {
+    if ((args.column && args.column.field !== 'status') ||
+        !args.cell || !args.data) {
         return;
     }
     const task = args.data;
