@@ -114,7 +114,7 @@ import {
 import { DropDownListComponent } from '@syncfusion/ej2-vue-dropdowns';
 
 import { QueryCellInfoEventArgs} from '@syncfusion/ej2-grids';
-import { showCheckBoxData} from './data-source';
+import { showCheckBoxData} from './datasource';
 export default defineComponent({
     components: {
         'ejs-treegrid': TreeGridComponent,
@@ -166,9 +166,8 @@ export default defineComponent({
             }
         },
         queryCellInfo(args){
-            if ( args.column?.field !== 'status' ||
-                !args.cell ||
-                !args.data ) {
+            if ((args.column && args.column.field !== 'status') ||
+                !args.cell || !args.data) {
                 return;
             }
             const task = args.data;
