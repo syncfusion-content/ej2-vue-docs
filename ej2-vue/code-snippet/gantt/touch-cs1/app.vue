@@ -63,5 +63,5 @@ components: {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-vue-gantt/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/gantt/index.css";
 </style>

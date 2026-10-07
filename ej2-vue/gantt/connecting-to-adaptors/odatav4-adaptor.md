@@ -54,23 +54,7 @@ npm install @syncfusion/ej2-data --save
 
 ```ts
 /* Basic Gantt Chart styles */
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-gantt/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-
-/* For editing, toolbar, and dialog features */
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
-
-/* For rich text editor in dialog notes tab */
-@import "../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/gantt/index.css";
 ```
 
 Import the **App.css** in the application entry point(**App.vue**).
@@ -91,16 +75,16 @@ Conceptually, the adaptor formats timeline and task‑related requests (for exam
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
 <template>
-  <ejs-gantt :dataSource="data" :taskFields="taskFields" height='400px'>
-    <e-columns>
-      <e-column field="TaskID" headerText="Task ID" textAlign="Right" width="90" type="number" :isPrimaryKey="true" />
-      <e-column field="TaskName" headerText="Task Name" textAlign="Left" width="270" type="string" />
-      <e-column field="StartDate" headerText="Start Date" textAlign="Right" width="150" format="yMd" type="dateTime" />
-      <e-column field="EndDate" headerText="End Date" textAlign="Right" width="150" format="dd/MM/yyyy hh:mm" type="dateTime" />
-      <e-column field="Duration" headerText="Duration" textAlign="Right" width="90" type="number" />
-      <e-column field="Progress" headerText="Progress" textAlign="Right" width="120" type="number" />
-    </e-columns>
-  </ejs-gantt>
+<ejs-gantt :dataSource="data" :taskFields="taskFields" height='400px'>
+<e-columns>
+<e-column field="TaskID" headerText="Task ID" textAlign="Right" width="90" type="number" :isPrimaryKey="true" />
+<e-column field="TaskName" headerText="Task Name" textAlign="Left" width="270" type="string" />
+<e-column field="StartDate" headerText="Start Date" textAlign="Right" width="150" format="yMd" type="dateTime" />
+<e-column field="EndDate" headerText="End Date" textAlign="Right" width="150" format="dd/MM/yyyy hh:mm" type="dateTime" />
+<e-column field="Duration" headerText="Duration" textAlign="Right" width="90" type="number" />
+<e-column field="Progress" headerText="Progress" textAlign="Right" width="120" type="number" />
+</e-columns>
+</ejs-gantt>
 </template>
 
 <script setup>
@@ -144,12 +128,12 @@ The DataManager with ODataV4Adaptor supports **Create** (add records), **Read** 
 
 CRUD operations are conveyed to the service using standard OData conventions. The ODataV4Adaptor works with a single task endpoint and standard HTTP methods:
 
-| Operation | HTTP Method | URL Example | Description |
-|-----------|-------------|-------------|-------------|
-| **Read** | GET | `/odata/GanttTasks` | Get all records. |
-| **Create** | POST | `/odata/GanttTasks` | Add a new record. |
-| **Update** | PATCH | `/odata/GanttTasks(1)` | Update record with key "1". |
-| **Delete** | DELETE | `/odata/GanttTasks(1)` | Delete record with key "1". |
+| Operation  | HTTP Method | URL Example            | Description                 |
+| ---------- | ----------- | ---------------------- | --------------------------- |
+| **Read**   | GET         | `/odata/GanttTasks`    | Get all records.            |
+| **Create** | POST        | `/odata/GanttTasks`    | Add a new record.           |
+| **Update** | PATCH       | `/odata/GanttTasks(1)` | Update record with key "1". |
+| **Delete** | DELETE      | `/odata/GanttTasks(1)` | Delete record with key "1". |
 
 ### Step 1: Complete server-side controller
 
@@ -195,7 +179,7 @@ public class GanttTasksController : ODataController
         if (task == null || task.TaskID != updateRecord.TaskID)
             return NotFound();
         task = updateRecord;
-        
+
         return Ok(task);
     }
 
@@ -212,6 +196,7 @@ public class GanttTasksController : ODataController
         GanttDataAdaptor.GetAllRecords().Remove(task);
         return NoContent();
     }
+
 }
 
 {% endhighlight %}
@@ -275,7 +260,7 @@ import './App.css';
 {% endhighlight %}
 {% endtabs %}
 
-> * For detailed editing setup, refer to the [editing documentation](https://ej2.syncfusion.com/vue/documentation/gantt/managing-tasks/editing-tasks). 
+> - For detailed editing setup, refer to the [editing documentation](https://ej2.syncfusion.com/vue/documentation/gantt/managing-tasks/editing-tasks).
 
 ## Run the application
 
@@ -283,20 +268,20 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 
 ## Troubleshooting
 
-| Issue                     | Cause                                                                 | Solution                                                                                                     |
-|---------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| Empty response            | Service not returning task records or required metadata               | Verify service returns records with fields like parent ids, resources, and start/end dates                  |
-| 404 responses             | Incorrect route or endpoint configuration                             | Confirm DataManager URLs are correct and endpoints exist                                                     |
-| 500 or server errors      | Server-side exceptions or improper request handling                   | Check server logs, validate parameters, and ensure scheduling/dependency logic is error-free                |
-| Cross-origin errors       | CORS not enabled or misconfiguration                                     | Ensure cross-origin requests are allowed when frontend and backend are on different domains                 |
-| Related data mismatches   | Remote datasets not returning expected values                         | Confirm related endpoints return correct data for display and dependency mapping                            |
+| Issue                   | Cause                                                   | Solution                                                                                     |
+| ----------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Empty response          | Service not returning task records or required metadata | Verify service returns records with fields like parent ids, resources, and start/end dates   |
+| 404 responses           | Incorrect route or endpoint configuration               | Confirm DataManager URLs are correct and endpoints exist                                     |
+| 500 or server errors    | Server-side exceptions or improper request handling     | Check server logs, validate parameters, and ensure scheduling/dependency logic is error-free |
+| Cross-origin errors     | CORS not enabled or misconfiguration                    | Ensure cross-origin requests are allowed when frontend and backend are on different domains  |
+| Related data mismatches | Remote datasets not returning expected values           | Confirm related endpoints return correct data for display and dependency mapping             |
 
 ## Complete sample repository
 
-For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-vue-gantt-chart-samples/tree/master/ODataV4Adaptor) repository.
-
+For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-vue-gantt-chart-samples/tree/master/OdataV4Adaptor) repository.
 
 ## See also
+
 - [Hybrid data binding](./remote-save-adaptor)
 - [RESTful CRUD Operations in ASP.NET Web Forms](./web-method-adaptor)
 - [Data binding](https://ej2.syncfusion.com/vue/documentation/gantt/data-binding)
