@@ -189,11 +189,11 @@ public ActionResult Remove(List<TreeGridData> changed, List<TreeGridData> added,
 
 The deleted record primary key value is bound to the `key` parameter. Please refer to the following screenshot.
 
-![Delete](images/remove.PNG)
+![Delete](../images/remove.PNG)
 
 While delete parent record, the parent and child records is bound to the `deleted` parameter. Please refer to the following screenshot.
 
-![Remove](images/delete.PNG)
+![Remove](../images/delete.PNG)
 
 ## Remote save adaptor
 
