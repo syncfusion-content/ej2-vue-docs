@@ -5,6 +5,7 @@
     <ejs-button id='delete' @click.native='clickEvents'>Delete</ejs-button>
     <ejs-button id='updaterow' @click.native='clickEvents'>Update Row</ejs-button>
     <ejs-button id='updatecell' @click.native='clickEvents'>Update Cell</ejs-button>
+    <ejs-button id='save' @click.native='clickEvents'>Save Bulk Changes</ejs-button>
     <div class="control-section" style="padding-top:20px">
       <ejs-grid ref="grid" id="Grid" :dataSource='data' :editSettings='editSettings'>
         <e-columns>
@@ -57,6 +58,8 @@ export default {
         grid.updateRow(0, { OrderID: 10248, CustomerID: 'RTER', ShipCity: 'America', ShipName: 'Hanari' });
       } else if (args.target.id === "updatecell") {
         grid.setCellValue(this.data[0].OrderID, 'CustomerID', 'Value Changed');
+      } else {
+        grid.value.ej2Instances.saveBulkChanges({ShipName: 'Island Trading', ShipCity: 'Tokyo'}, grid.value.ej2Instances.getCurrentViewRecords().slice(0,3), () => { grid.value.ej2Instances.refresh(); });
       }
     },
     generateCustomerId: function() {
@@ -83,7 +86,7 @@ export default {
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
-  #edit,#add,#delete,#updaterow,#updatecell{
+  #edit,#add,#delete,#updaterow,#updatecell,#save{
     margin-left: 10px
   }
 </style>
