@@ -110,7 +110,7 @@ Add the following import to the **src/App.vue** file:
 
 ```
 <style>
-  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css";
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
 </style>
 ```
 
@@ -140,7 +140,7 @@ Replace the entire contents of **src/App.vue** with the following code:
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css";
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
 </style>
 ```
 
@@ -278,7 +278,7 @@ export default {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css";
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
 </style>
 ```
 

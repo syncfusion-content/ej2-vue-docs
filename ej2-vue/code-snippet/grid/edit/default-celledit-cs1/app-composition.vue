@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <ejs-grid  ref="grid" id="grid" :dataSource='billingData' :allowPaging='true' :allowSorting='true' :allowFiltering='true; :editSettings='editSettings' :toolbar='toolbar' :filterSettings='filterSettings' :actionBegin="actionBegin" :actionComplete="actionComplete">
+      <ejs-grid ref="grid" id="grid" :dataSource='billingData' :allowPaging='true' :allowSorting='true' :allowFiltering='true' :editSettings='editSettings' :toolbar='toolbar' :filterSettings='filterSettings' :actionBegin="actionBegin" :actionComplete="actionComplete">
         <e-columns>
           <e-column field="BillID" headerText="Bill ID" width="120" :isPrimaryKey="true" :validationRules="{ required: true }"></e-column>
           <e-column field="BillDate" headerText="Bill Date" width="140" format="yMd" editType="datepickeredit"></e-column>
@@ -16,24 +16,29 @@
     </div>
 </template>
 <script setup>
-import { provide } from "vue";
+import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Toolbar, Edit, Sort, Filter } from "@syncfusion/ej2-vue-grids";
 import { billingData } from './datasource.js';
+
+const grid = ref(null);
 const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Cell' };
 const toolbar = ['Add', 'Delete', 'Update', 'Cancel'];
 const filterSettings = { type: 'CheckBox' };
+
 const actionBegin = function (args) {
   if (args.requestType === 'beginEdit' && args.columnName === 'Total') {
     args.cancel = true;
   }
-}
+};
+
 const actionComplete = function (args) {
-  let gridInstance = grid.value.ej2Instances;
+  const gridInstance = grid.value?.ej2Instances;
   if (args.action === 'edit' && args.requestType === 'save' && (args.columnName === 'Quantity' || args.columnName === 'Price')) {
-    var total = args.data.Quantity * args.data.Price;
-    gridInstance.updateCell(args.index, "Total", total);
+    const total = args.data.Quantity * args.data.Price;
+    gridInstance.updateCell(args.index, 'Total', total);
   }
-}
+};
+
 provide('grid', [Page, Edit, Toolbar, Sort, Filter]);
 </script>
 <style>

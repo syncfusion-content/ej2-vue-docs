@@ -4,7 +4,7 @@
       <label style="padding: 0px 20px 0px 0px;font-weight: bold">Enable and disable search option</label>
       <ejs-switch ref="switch" id="switch" :checked="true" :change="change"></ejs-switch>
     </div>
-    <ejs-grid :dataSource="data" :showColumnChooser='true' :toolbar='toolbarOptions' height='272px'>
+    <ejs-grid ref='grid' :dataSource="data" :showColumnChooser='true' :toolbar='toolbarOptions' height='272px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' width='120' textAlign="Right"></e-column>
         <e-column field='CustomerID' headerText='Customer Name' width='150'></e-column>

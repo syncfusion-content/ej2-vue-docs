@@ -12,20 +12,18 @@ domainurl: ##DomainURL##
 
 This section provides a step-by-step guide for setting up a Vue application in Replit and integrating the Syncfusion® Grid component — without installing any local tools.
 
-## What is Replit?
-
-Replit is a browser-based development environment that lets you write, run, and deploy applications entirely in the cloud. It requires no local setup and is well suited for users who are new to software development, or who want to prototype and iterate quickly without configuring local development tools.
+`Replit` is a browser-based development environment that lets you write, run, and deploy applications entirely in the cloud. It requires no local setup and is well suited for users who are new to software development, or who want to prototype and iterate quickly without configuring local development tools.
 
 ## Prerequisites
 
 Before getting started, ensure the following:
 
 * A free or paid Replit account
-* A valid Syncfusion license key (licensed or trial)
+* A valid Syncfusion® license key (licensed or trial)
 
 > No local Node.js, npm, or IDE installation is required. All development happens inside the Replit browser environment.
 
-## Create an Empty Project in Replit
+## Create a project in Replit
 
 1. Sign in to [Replit](https://replit.com/).
 2. Click **New** and select **Empty project**.
@@ -36,9 +34,9 @@ Before getting started, ensure the following:
 
 ![Edit project details in Replit](./images/replit-edit-project.png)
 
-## Create a Vue Grid Application in Replit
+## Integrate the Vue Grid component
 
-This section explains how to add a simple Vue Grid application to the current Replit project and integrate the Syncfusion® Grid component with the minimum required setup using either of the following approaches.
+This section explains how to integrate the Syncfusion® Vue Grid component into your existing Replit Vue project with the minimum required configuration. You can use either of the following approaches to add and run the Grid component successfully.
 
 Before proceeding, click the **+** icon in the tab bar and select **Shell** from the new tab. The Shell is required for both the Agent Skills and Vite CLI approaches described in the following sections.
 
@@ -47,28 +45,22 @@ Before proceeding, click the **+** icon in the tab bar and select **Shell** from
 {% tabs %}
 {% highlight bash tabtitle="Agent Skills" %}
 
-**Install Syncfusion® Vue Grid SDK Skills**
+Use the pre-installed Syncfusion® Vue Grid Skills with the Replit Agent to generate the application code automatically.
 
-In the Shell tab, run the following command to install the Syncfusion® Vue Grid SDK skills:
+## Install the Vue Grid skills
 
 ```bash
 npx skills add syncfusion/vue-ui-components-skills --skill syncfusion-vue-grid
 ```
 
-**How Syncfusion® Grid SDK Skills Work**
-
 Once skills are installed, the Replit Agent automatically:
 
-* **Reads the skill files** — The agent retrieves component APIs, best practices, and code patterns from the installed Syncfusion skills.
-* **Grounds code generation** — The agent uses skill-based knowledge instead of generic AI suggestions, ensuring accurate Syncfusion APIs and patterns.
+* **Reads the skill files** — The agent retrieves component APIs, best practices, and code patterns from the installed Syncfusion® skills.
+* **Grounds code generation** — The agent uses skill-based knowledge instead of generic AI suggestions, ensuring accurate Syncfusion® APIs and patterns.
 * **Generates production-ready code** — The agent generates complete, working implementations that can be directly integrated into your application.
 * **Enforces best practices** — The agent recommends correct packages, proper license registration, theme setup, and configuration.
 
-**Use the Replit Agent with Skills**
-
 Once skills are installed, the Replit Agent can generate Grid component code automatically. Open the Replit Agent panel and enter a prompt such as:
-
-**Example Prompt:**
 
 > Create a minimal Vue Replit web app using the Syncfusion EJ2 Vue Grid and the Fluent 2 theme. Configure the project with Vue 3 and TypeScript support. Install the required packages: @syncfusion/ej2-vue-grids, @syncfusion/ej2-base, @syncfusion/ej2-fluent2-theme, and vite. Render a single Grid with sample order data. Enable sorting by column headers and filtering with the Grid's filter menus by injecting the Sort and Filter modules. Keep the page simple, with just the Grid and no dashboard or additional interface. Start the Replit preview and verify that the Vue application builds and loads successfully. Do not publish, deploy, or configure a custom domain.
 
@@ -77,19 +69,17 @@ Once skills are installed, the Replit Agent can generate Grid component code aut
 The agent will:
 
 * Create a Vue application structure
-* Install the required Syncfusion packages (@syncfusion/ej2-vue-grids, @syncfusion/ej2-fluent2-theme, etc.)
+* Install the required Syncfusion® packages (@syncfusion/ej2-vue-grids, @syncfusion/ej2-fluent2-theme, etc.)
 * Register the license key before component initialization if mentioned
 * Import the theme CSS in the correct file
 * Generate the complete Grid component implementation with your requested features
 * Create sample data and configuration based on your requirements
 
-**Review and Modify**
-
-Review the generated code by opening the **Library** panel on the right side. Click the **Files** tab to view all project files. Then, click on files like `src/App.vue`, `index.html`, and `src/style.css` to view and edit the generated code if needed. You can also press **Ctrl + Shift + L** to quickly toggle the Library panel.
+Review the generated code by opening the Library panel on the right side. Click the **Files** tab to view all project files. Then, click on files like `src/App.vue`, `index.html`, and `src/style.css` to view and edit the generated code if needed. You can also press Ctrl + Shift + L to quickly toggle the Library panel.
 
 ![Files Panel in Replit](./images/replit-files-panel.png)
 
-**Run the Application**
+## Run the application
 
 Once the agent finishes generating the application code, the Vue Grid application will be automatically displayed in the preview pane.
 
@@ -97,6 +87,10 @@ Once the agent finishes generating the application code, the Vue Grid applicatio
 
 {% endhighlight %}
 {% highlight bash tabtitle="Vite CLI" %}
+
+Create the Vue application manually using the Vite CLI and add the Syncfusion® Vue Grid component step by step.
+
+## Create a Vite Vue project
 
 1. In the Shell tab, run the following command to create a Vite Vue project:
 
@@ -118,7 +112,7 @@ npm install
 npm install @syncfusion/ej2-vue-grids @syncfusion/ej2-fluent2-theme --save
 ```
 
-4. Open the `src/style.css` file and add the following import statement:
+4. Open the `src/style.css` file, remove the default Vite template styles to avoid conflicts with the Syncfusion® theme, and add the following import statement:
 
 ```css
 @import "@syncfusion/ej2-fluent2-theme/styles/fluent2.css";
@@ -194,7 +188,7 @@ export default {
         {
           OrderID: 10252,
           CustomerID: 'SUPRD',
-          Freight: 51.30,
+          Freight: 51.3,
           OrderDate: new Date(8378442e5)
         }
       ]
@@ -211,35 +205,37 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Run the Application
+For more information on obtaining and registering a license key, see [How to Register a Syncfusion® License Key](../../licensing/license-key-registration).
+
+## Run the application
 
 Once you have completed all the setup steps, click the **Run** button (▶) at the top of the Replit workspace. The Vue Grid application will be built and rendered in the preview pane.
 
 ![Syncfusion Grid rendered in Replit](./images/replit-grid-preview.png)
 
-## Key Features to Explore
+## Key features to explore
 
 Once your Grid is running, you can enhance it with:
 
-* **Data Binding:** Bind data from APIs or remote sources
-* **Sorting & Filtering:** Enable sorting and filtering on columns
-* **Paging:** Add pagination to handle large datasets
-* **Selection:** Enable row or cell selection
-* **Editing:** Allow inline editing of cell values
-* **Exporting:** Export data to Excel or PDF formats
+* Data binding: Bind data from APIs or remote sources
+* Sorting and filtering: Enable sorting and filtering on columns using Grid properties
+* Paging: Add pagination to handle large datasets
+* Selection: Enable row or cell selection
+* Editing: Allow inline editing of cell values with the Edit module
+* Exporting: Export data to Excel or PDF formats
+* Responsive design: Build responsive layouts that adapt to different screen sizes
 
-## Tips for Working in Replit
+## Tips for working in Replit
 
-* **Shell Access:** Use the Shell tab to run any npm commands, such as installing additional packages or starting/stopping the development server manually.
-* **Persistent Storage:** Replit persists your project files automatically. Changes are saved as you type.
-* **File Management:** Use the file browser to view and edit project files. You can also use the context menu to create, edit, and manage files.
-
+* Shell access: Use the Shell tab to run any npm commands, such as installing additional packages or starting or stopping the development server manually.
+* Persistent storage: Replit persists your project files automatically. Changes are saved as you type.
+* File management: Use the file browser to view and edit project files. You can also use the context menu to create, edit, and manage files.
 
 ## Troubleshooting
 
 | Issue | Resolution |
 |-------|-----------|
-| Preview shows "Your app is not running" | Open the Agent panel and enter the error text from the preview along with a prompt such as "My app is not starting in Preview. Check the workflow, start the development server, and fix any runtime errors." The agent will diagnose and resolve the issue. |
+| Preview shows "Your app is not running" | Open the Agent panel and enter the error text from the preview along with a prompt such as "My app is not starting in preview. Check the workflow, start the development server, and fix any runtime errors." The agent will diagnose and resolve the issue. |
 | Module not found errors | Open the Shell and run `npm install` to restore all dependencies. |
 | License warning banner | Verify that `registerLicense` is called before initializing the Grid component in `src/main.js`. |
 | Grid not displaying | Ensure the theme CSS is imported in `src/style.css` and that the Grid component is properly registered in `src/App.vue`. |
