@@ -1,4 +1,4 @@
-var productData = [
+export var data = [
   {
     Id: 1,
     Product: "Chai",

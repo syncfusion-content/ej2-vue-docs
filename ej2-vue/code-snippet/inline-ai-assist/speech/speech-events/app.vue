@@ -1,8 +1,6 @@
 <template>
     <div id="container" style="height: 580px; width: 700px; margin: 0 auto;">
         <br />
-
-        <!-- Speech feedback -->
         <div class="speech-feedback">
             <div class="status-line">
                 <strong>Status:</strong>
@@ -22,7 +20,7 @@
         </div>
 
         <div class="toolbar-row">
-            <button id="summarizeBtn" @click="showPopup">Summarize</button>
+            <button id="summarizeBtn" class="e-btn e-primary"  @click="showPopup">Summarize</button>
             <div id="editableText" contenteditable="true">Select text and click Summarize</div>
         </div>
 
@@ -108,8 +106,7 @@ export default {
                 (args.result && args.result.transcript) ||
                 '';
 
-            const isFinal =
-                args.isFinal || args.final || (args.result && args.result.isFinal) || false;
+            const isFinal = !(args && args.isInterimResult);
 
             if (text) this.lastTranscript = text;
 
@@ -164,5 +161,33 @@ export default {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/inline-ai-assist/index.css";
+
+@import '@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/speech-to-text/index.css';
+
+#editableText {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    overflow-y: auto;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+.speech-feedback {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 0 auto 12px;
+  width: 650px;
+  background: #fafafa;
+}
+
+#container {
+  max-width: 90vw;
+}
+
 </style>

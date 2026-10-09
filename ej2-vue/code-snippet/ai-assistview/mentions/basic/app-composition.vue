@@ -86,11 +86,61 @@ const onPromptRequest = () => {
 };
 </script>
 <style>
-@import '@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/ai-assistview/index.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/drop-down-list/index.css';
 
 #container {
   height: 450px;
   width: 650px;
   margin: 20px auto;
 }
+
+.e-assist-mention  .listItems {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 5px;
+    row-gap: 0;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 1.2;
+    min-height: 38px;
+}
+
+.e-assist-mention  .listItems .commandIcon {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'e-icons';
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+}
+
+.e-assist-mention  .listItems .commandName {
+    grid-row: 1;
+    grid-column: 2;
+    font-weight: 600;
+    font-size: 13px;
+    align-self: end;
+}
+
+.e-assist-mention  .listItems .commandDesc {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 11px;
+    color: var(--color-sf-text-muted, #6b6b6b);
+    align-self: start;
+    margin-top: 1px;
+}
+
+.e-assist-mention  .e-list-item .e-highlight {
+    font-weight: 700;
+    background: transparent;
+    color: inherit;
+}
+
 </style>

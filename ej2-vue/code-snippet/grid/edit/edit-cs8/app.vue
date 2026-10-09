@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <ejs-grid :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' :actionBegin="actionBegin" height='280px' >
+      <ejs-grid :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='280px' >
         <e-columns>
           <e-column field="EmployeeID" headerText="Employee ID" textAlign="Right" isPrimaryKey="true" width="120"></e-column>
           <e-column field="Name.FirstName" headerText="First Name" :editTemplate="'firstNameTemplate'" width="200"></e-column>
