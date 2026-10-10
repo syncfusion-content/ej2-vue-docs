@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='container' style="height: 350px; width: 650px; margin: 0 auto;">
     <br>
     <div style="margin-bottom:8px;">
@@ -54,5 +54,5 @@ watch(responseMode, (newVal) => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/inline-ai-assist/index.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css';
 </style>

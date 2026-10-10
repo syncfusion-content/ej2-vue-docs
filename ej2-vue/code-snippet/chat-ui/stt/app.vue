@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="integration-speechtotext">
     <ejs-chatui
       id="chatUI"
@@ -133,12 +133,8 @@ export default {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/chat-ui/index.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/speech-to-text/index.css';
 
   .integration-speechtotext {
     height: 400px;
@@ -197,4 +193,5 @@ export default {
   .integration-speechtotext .option-container {
     align-self: flex-end;
   }
+
 </style>

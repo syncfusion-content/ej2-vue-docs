@@ -86,7 +86,8 @@ const onPromptRequest = () => {
 };
 </script>
 <style>
-@import '@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/ai-assistview/index.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/drop-down-list/index.css';
 
 #container {
 	height: 450px;
