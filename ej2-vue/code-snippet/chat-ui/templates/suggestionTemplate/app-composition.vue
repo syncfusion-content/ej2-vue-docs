@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui id="suggestionTemplate" :suggestions="suggestions" suggestionTemplate="suggestionTemplate" :user="currentUser">
       <template v-slot:suggestionTemplate="{data}">
@@ -32,14 +32,7 @@ const suggestions = ["Okay will check it", "Sounds good!"];
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-
+@import '@syncfusion/ej2-tailwind3-theme/styles/chat-ui/index.css';
 #suggestionTemplate .e-suggestion-list li {
   padding: 0;
   border: none;

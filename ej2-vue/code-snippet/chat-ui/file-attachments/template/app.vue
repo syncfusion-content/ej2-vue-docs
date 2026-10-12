@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui :user="currentUser" cssClass="chat-attachment-template" :enableAttachments="true" :attachmentSettings="attachmentSettings">
       <template v-slot:attachmentTemplate="{data}">
@@ -92,14 +92,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-
+@import '@syncfusion/ej2-tailwind3-theme/styles/chat-ui/index.css';
 /* Attachment template styles */
 .chat-attachment-template .c-attach {
   display: flex;
@@ -157,5 +150,4 @@ export default {
 .chat-attachment-template .c-name { min-width: 0; flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; color: #212121; }
 .chat-attachment-template .c-btn-link { font-size: 13px; color: #2962ff; text-decoration: none; font-weight: 600; }
 .chat-attachment-template .e-preview-template { position: absolute; bottom: 5px; width: min-content;}
-
 </style>

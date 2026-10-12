@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="container">
         <div id="defaultInlineAssist"></div>
         <button id="summarizeBtn">Summarize</button>
@@ -62,5 +62,5 @@ onBeforeUnmount(() => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/inline-ai-assist/index.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css';
 </style>

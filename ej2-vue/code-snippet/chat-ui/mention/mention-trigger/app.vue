@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui :user="currentUser" :enableRipple="true" :mentionUsers="mentionUsers" mentionTriggerChar="/" headerText="TeamSync Professionals">
 <e-messages>
@@ -48,12 +48,5 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/chat-ui/index.css';
 </style>

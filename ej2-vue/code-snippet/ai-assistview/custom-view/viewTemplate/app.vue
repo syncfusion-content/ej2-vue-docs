@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='container' style="width: max(50%, 500px); margin: 30px auto;">
     <br>
     <ejs-aiassistview id='aiAssistView'>
@@ -33,13 +33,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
-
+@import '@syncfusion/ej2-tailwind3-theme/styles/ai-assistview/index.css';
 .view-container {
   margin: 20px auto;
   width: 80%;

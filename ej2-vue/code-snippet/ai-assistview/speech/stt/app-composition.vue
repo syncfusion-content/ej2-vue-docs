@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="container" style="height: 500px; width: 700px; margin: 0 auto;">
     <br />
     <ejs-aiassistview
@@ -53,13 +53,8 @@ const onPromptRequest = (args) => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
-
+@import '@syncfusion/ej2-tailwind3-theme/styles/ai-assistview/index.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/speech-to-text/index.css';
 .banner-content {
 display: flex;
 flex-direction: column;

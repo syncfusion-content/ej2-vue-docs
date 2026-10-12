@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <ejs-grid ref="grid" id="grid" :dataSource='data' :allowPaging='true' :allowSorting='true' :allowFiltering='true; :editSettings='editSettings' :toolbar='toolbar' :filterSettings='filterSettings' :actionBegin="actionBegin" :actionComplete="actionComplete">
+      <ejs-grid ref="grid" id="grid" :dataSource='data' :allowPaging='true' :allowSorting='true' :allowFiltering='true' :editSettings='editSettings' :toolbar='toolbar' :filterSettings='filterSettings' :actionBegin="actionBegin" :actionComplete="actionComplete">
         <e-columns>
           <e-column field="BillID" headerText="Bill ID" width="120" :isPrimaryKey="true" :validationRules="{ required: true }"></e-column>
           <e-column field="BillDate" headerText="Bill Date" width="140" format="yMd" editType="datepickeredit"></e-column>
@@ -35,7 +35,7 @@ components: {
   },
   methods: {
     actionComplete: function (args) {
-      let gridInstance = document.getElementById("grid").ej2_instances[0]
+      let gridInstance = document.getElementById("grid").ej2_instances[0];
       if (args.action === 'edit' && args.requestType === 'save' && (args.columnName === 'Quantity' || args.columnName === 'Price')) {
         var total = args.data.Quantity * args.data.Price;
         gridInstance.updateCell(args.index, "Total", total);
@@ -44,8 +44,8 @@ components: {
     actionBegin: function(args) {
       if (args.requestType === 'beginEdit' && args.columnName === 'Total') {
         args.cancel = true;
-      },
-    } 
+      }
+    }
   },
   provide: {
     grid: [Page, Edit, Toolbar, Sort, Filter]

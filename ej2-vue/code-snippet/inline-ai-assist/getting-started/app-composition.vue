@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
         <br />
         <div style="display:flex; gap:12px; align-items:center; margin-bottom:8px;">
@@ -64,5 +64,5 @@ onMounted(() => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css';
 </style>

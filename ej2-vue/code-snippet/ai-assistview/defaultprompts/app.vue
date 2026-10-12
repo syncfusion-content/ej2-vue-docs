@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='container' style="height: 350px; width: 650px; margin: 0 auto;">
     <br>
     <ejs-aiassistview id='aiAssistView' ref="aiassist" :prompt-suggestions="promptSuggestions" :prompt-request="onPromptRequest"></ejs-aiassistview>
@@ -42,5 +42,5 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/ai-assistview/index.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/ai-assistview/index.css';
 </style>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='container' style="width: 450px; margin: 0 auto;">
     <ejs-chatui height='380px' :user="currentUser">
       <e-messages>
@@ -26,11 +26,5 @@ const michaleUser = {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/chat-ui/index.css';
 </style>

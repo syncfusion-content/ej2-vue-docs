@@ -2,8 +2,9 @@
     <div id="container" style="height: 350px; width: 650px; margin: 0 auto;">
         <br />
         <div class="toolbar-row">
-            <button id="summarizeBtn" @click="showPopup">Summarize</button>
-            <div id="editableText" contenteditable="true">Select text and click Summarize</div>
+            <button id="summarizeBtn" class="e-btn e-primary" @click="showPopup">Summarize</button>
+            <div id="editableText" contenteditable="true">
+            </div>
         </div>
 
         <ejs-inlineaiassist popup-width="500px"
@@ -77,5 +78,17 @@ onMounted(() => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/speech-to-text/index.css';
+
+#editableText {
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    overflow-y: auto;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid;
+}
 </style>

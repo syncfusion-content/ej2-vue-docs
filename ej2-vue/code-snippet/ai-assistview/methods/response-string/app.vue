@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='container' style="height: 350px; width: 650px; margin: 0 auto;">
     <br>
     <button id="addStringResponse" @click="buttonClick">Add String Response</button>
@@ -32,13 +32,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css";
-
+@import '@syncfusion/ej2-tailwind3-theme/styles/ai-assistview/index.css';
 #addStringResponse {
   margin-bottom: 10px;
 }

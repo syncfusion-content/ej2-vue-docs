@@ -27,6 +27,8 @@ To use advanced filtering, inject the [AdvancedFilter](../../api/grid/advancedfi
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/grid/filter/advanced-filter-cs1" %}
+
 ## Initial filter
 
 Initial filter conditions can be set and applied automatically when the Grid loads. The `advancedFilterSettings` property with `queryBuilderSettings` is used to define the initial rule.
@@ -41,6 +43,8 @@ The following example demonstrates displaying only tickets with a priority of **
 {% include code-snippet/grid/filter/advanced-filter-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/filter/advanced-filter-cs2" %}
 
 > By default, hidden columns are not included in the advanced filter builder. Setting `advancedFilterSettings.includeHiddenColumns` to `true` displays hidden columns in the Query Builder, enabling filter conditions to be created using their values.
 
@@ -72,3 +76,5 @@ The Advanced Filter feature provides the following methods for controlling the d
 {% include code-snippet/grid/filter/advanced-filter-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/filter/advanced-filter-cs3" %}

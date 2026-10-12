@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <br>
     <ejs-chatui :user="currentUser"></ejs-chatui>
@@ -14,5 +14,5 @@ const currentUser = {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/chat-ui/index.css";
+@import '@syncfusion/ej2-tailwind3-theme/styles/chat-ui/index.css';
 </style>
