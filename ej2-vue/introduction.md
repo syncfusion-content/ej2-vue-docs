@@ -146,6 +146,8 @@ letter-spacing: 0.7px;
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/speech-to-text/getting-started">Speech To Text</a></div> 
         <div><p class="control-category">FORMS</p></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/query-builder/getting-started/">Query Builder</a></div>
+        <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/form-builder/getting-started/">Form Builder</a></div>
+        <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/form-renderer/getting-started/">Form Renderer</a></div>
     </td>
     <td>
         <div><p class="control-category">DROPDOWNS</p></div>
