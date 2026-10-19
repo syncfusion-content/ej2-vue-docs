@@ -120,6 +120,27 @@ In the following code, the rows which contains `TaskId` value as 3 and 4 are sel
         
 {% previewsample "page.domainurl/code-snippet/gantt/selection-cs15" %}
 
+## Hierarchy Checkbox Mode
+
+The [hierarchyCheckboxMode](https://ej2.syncfusion.com/vue/documentation/api/gantt#hierarchycheckboxmode) property allows you to configure how checkbox selection is propagated across parent and child task records using different hierarchy modes. The following modes are supported:
+
+- **Self:** Selecting a record's checkbox selects only that record. Even if the record is a parent or a child, its selection state does not affect any other records in the hierarchy.
+- **Hierarchy:** Selecting a record's checkbox selects all its descendant and parent records. For example, when you select a parent record, all of its child records are selected, and when you select a child record, its parent record reflects the selection state accordingly. This is the default behavior of the [hierarchyCheckboxMode](https://ej2.syncfusion.com/vue/documentation/api/gantt#hierarchycheckboxmode) property.
+- **FilteredHierarchy:** The behavior is similar to **Hierarchy** mode, but checkbox propagation is applied only to the records that are currently visible after filtering or searching. Records that are hidden by the filter remain unaffected by the selection.
+
+The following example demonstrates how to enable checkbox-based row selection with the **Hierarchy** mode:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/hierarchy-selection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/hierarchy-selection-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/gantt/hierarchy-selection-cs1" %}
+
 ## Touch interaction
 
 The touch interaction feature in the Gantt Chart component allows you to easily interact with the Gantt chart on touch screen devices. This feature is particularly useful for enhancing usability on mobile devices and tablets, making it easier to navigate and interact with the Gantt chart's content using touch gestures.

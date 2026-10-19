@@ -25,12 +25,13 @@ Before getting started, ensure the following:
 
 ## Create a project in Replit
 
-1. Sign in to [Replit](https://replit.com/).
-2. Click **New** and select **Empty project**.
+1.Sign in to [Replit](https://replit.com/).
+
+2.Click **New** and select **Empty project**.
 
 ![Empty Project in Replit](./images/replit-empty-project.png)
 
-3. To rename the project, click the project name dropdown located at the top of the Replit workspace, select **Edit project details**, and enter a name such as `grid-app`.
+3.To rename the project, click the project name dropdown located at the top of the Replit workspace, select **Edit project details**, and enter a name such as `grid-app`.
 
 ![Edit project details in Replit](./images/replit-edit-project.png)
 
@@ -94,7 +95,7 @@ Create the Vue application manually using the Vite CLI and add the Syncfusion® 
 
 ## Create a Vite Vue project
 
-1. In the Shell tab, run the following command to create a Vite Vue project:
+1.In the Shell tab, run the following command to create a Vite Vue project:
 
 ```bash
 npm create vite@latest . -- --template vue
@@ -102,25 +103,25 @@ npm create vite@latest . -- --template vue
 
 > Since the Replit workspace already contains configuration files, Vite may prompt that the current directory is not empty. Choose to ignore the existing files and continue when prompted.
 
-2. Install the project dependencies:
+2.Install the project dependencies:
 
 ```bash
 npm install
 ```
 
-3. Install the Syncfusion® Grid package and the Fluent2 theme:
+3.Install the Syncfusion® Grid package and the Fluent2 theme:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids @syncfusion/ej2-fluent2-theme --save
 ```
 
-4. Open the `src/style.css` file, remove the default Vite template styles to avoid conflicts with the Syncfusion® theme, and add the following import statement:
+4.Open the `src/style.css` file, remove the default Vite template styles to avoid conflicts with the Syncfusion® theme, and add the following import statement:
 
 ```css
 @import "@syncfusion/ej2-fluent2-theme/styles/fluent2.css";
 ```
 
-5. Open the `src/main.js` file and register the license key and theme:
+5.Open the `src/main.js` file and register the license key and theme:
 
 ```javascript
 import { createApp } from 'vue'
@@ -134,7 +135,7 @@ registerLicense('YOUR_LICENSE_KEY');
 createApp(App).mount('#app')
 ```
 
-6. Open the `src/App.vue` file and replace its contents with:
+6.Open the `src/App.vue` file and replace its contents with:
 
 ```vue
 <template>

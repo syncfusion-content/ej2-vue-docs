@@ -189,3 +189,35 @@ By default, mapping the dependency field in taskFields displays dependency lines
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/taskdependency-cs6" %}
+
+## Manage specific dependency types
+
+The Gantt Chart supports the [allowedDependencyTypes](https://ej2.syncfusion.com/vue/documentation/api/gantt/index-default#alloweddependencytypes) property to control which dependency relationship types can participate in dependency processing during data loading and editing operations.
+
+Only the dependency types included in the configured `allowedDependencyTypes` collection are processed and maintained. Dependency types that are not included in the collection are ignored during data loading and prevented during editing actions. This behavior applies to all CRUD operations.
+
+The supported dependency types are:
+
+- **FS** - Finish-to-Start
+- **SS** - Start-to-Start
+- **FF** - Finish-to-Finish
+- **SF** - Start-to-Finish
+
+**For example:**
+
+The following example allows only the Start to Finish (SF) dependency type. This code configures `allowedDependencyTypes: ['SF']` so that only **SF** relationships can be created during loading and editing, with all other dependency types disabled.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/allowedDependencyTypes-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/allowedDependencyTypes-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/gantt/allowedDependencyTypes-cs1" %}
+
+> **NOTE**
+> By default, all dependency types are allowed when the `allowedDependencyTypes` property is not specified.
+> Specifying an empty collection (`allowedDependencyTypes: []`) is equivalent to not defining the `allowedDependencyTypes` property. In both cases, all supported dependency types are allowed. The Gantt processes all supported dependency types during data loading and allows all dependency relationship types to be created or modified during editing operations.
