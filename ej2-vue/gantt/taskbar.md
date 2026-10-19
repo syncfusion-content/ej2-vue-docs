@@ -97,6 +97,23 @@ The following code example shows how to use this property.
         
 {% previewsample "page.domainurl/code-snippet/gantt/projectview-multitaskbar-cs1" %}
 
+## Enable taskbar drawing
+
+The Gantt Chart component supports creating new tasks by dragging directly on the timeline. This feature is enabled via the [allowTaskbarDraw](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbardraw) property in the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt#editsettings) configuration. Taskbar drawing is intended for scheduling unscheduled tasks and requires [allowUnscheduledTasks](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowunscheduledtasks) to be enabled.
+
+The following example demonstrates how to enable taskbar drawing:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskbar-draw-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskbar-draw-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/gantt/taskbar-draw-cs1" %}
+
 ## Connector lines
 
 The width and background color of connector lines in Gantt can be customized using the [connectorLineWidth](https://ej2.syncfusion.com/vue/documentation/api/gantt#connectorlinewidth) and [connectorLineBackground](https://ej2.syncfusion.com/vue/documentation/api/gantt#connectorlinebackground) properties. The following code example shows how to use these properties.

@@ -39,3 +39,22 @@ On taskbar edit action, the [taskbarEditing](https://ej2.syncfusion.com/vue/docu
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs16" %}
+
+## Enable taskbar drawing
+
+The Gantt Chart component supports creating new tasks by dragging directly on the timeline. This feature is enabled via the [allowTaskbarDraw](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings#allowtaskbardraw) property in the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/gantt#editsettings) configuration. Taskbar drawing is intended for scheduling unscheduled tasks and requires [allowUnscheduledTasks](https://ej2.syncfusion.com/vue/documentation/api/gantt#allowunscheduledtasks) to be enabled.
+
+Dragging across the timeline schedules an unscheduled task by defining its timeline range. The resulting task duration is calculated based on the configured scheduling settings.
+
+The following example demonstrates how to enable taskbar drawing:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskbar-draw-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskbar-draw-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/gantt/taskbar-draw-cs1" %}
