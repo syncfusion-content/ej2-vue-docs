@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="app">
     <div class='wrapper'>
       <ejs-timepicker :step="timeStep" :format="timeFormat" :value="timeVal"></ejs-timepicker>
@@ -14,11 +14,7 @@ const timeVal = new Date();
 
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/timepicker/index.css";
 
 .wrapper {
   max-width: 250px;

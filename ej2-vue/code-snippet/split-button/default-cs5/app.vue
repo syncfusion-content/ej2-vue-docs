@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <ejs-splitbutton :items='items' :select='onSelect'>Help</ejs-splitbutton>
         <ejs-dialog id="dialog" content="Are you sure want to update?" header='Software Update' :buttons='buttons'
@@ -62,11 +62,7 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/split-button/index.css";
 .e-split-btn-wrapper {
     margin: 20px 20px 5px 5px;
 }

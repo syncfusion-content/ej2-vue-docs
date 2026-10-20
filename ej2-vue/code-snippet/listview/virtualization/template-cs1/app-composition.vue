@@ -57,9 +57,7 @@
   
   </script>
   <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-lists/styles/material3.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/list-view/index.css";
   
   #app {
     color: #008cff;

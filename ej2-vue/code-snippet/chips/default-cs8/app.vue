@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <ejs-chiplist id="chip" text="Janet Leverling"></ejs-chiplist>
 </template>
 
@@ -14,5 +14,5 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material3.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/chips/index.css";
 </style>

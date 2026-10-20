@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <ejs-button cssClass='e-round-corner'>Button</ejs-button>
 </template>
 
@@ -9,9 +9,7 @@ enableRipple(true);
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button/index.css";
 .e-round-corner {
   border-radius: 5px;
 }

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <ejs-chiplist id="chip" enableDelete="true" selection="Single">
     <e-chips>
       <e-chip text="Andrew" avatarIconCss='andrew'></e-chip>
@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/chips/index.css";
 #chip .andrew {
   background-image: url('./andrew.png')
 }

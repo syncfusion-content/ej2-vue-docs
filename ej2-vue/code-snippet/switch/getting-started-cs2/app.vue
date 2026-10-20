@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <ejs-switch checked=true></ejs-switch>
 </template>
 
@@ -17,9 +17,7 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/switch/index.css";
 .e-switch-wrapper {
   margin: 18px;
 }

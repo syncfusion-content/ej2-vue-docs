@@ -14,11 +14,7 @@ const userData = ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph'];
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/mention/index.css";
 
 #app {
   color: #008cff;

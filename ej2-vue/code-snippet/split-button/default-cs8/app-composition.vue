@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <ejs-splitbutton :items='items' iconCss='e-sb-icons e-paste'>Paste</ejs-splitbutton>
         <ejs-splitbutton :items='items' iconCss='e-sb-icons e-paste' iconPosition="Top">Paste</ejs-splitbutton>
@@ -30,11 +30,7 @@ const items = [
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/split-button/index.css";
 @font-face {
     font-family: 'ddb-icons';
     src:

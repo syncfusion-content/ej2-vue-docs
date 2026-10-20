@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 	<div id="chip-draganddrop-wrapper">
 		<div class="chips-headers">To-do lists</div>
 		<div class="sample-padding">
@@ -24,6 +24,7 @@ import { ChipListComponent as EjsChiplist, ChipsDirective as EChips, ChipDirecti
 </script>
 
 <style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/chips/index.css";
 	#chip-draganddrop-wrapper .sample-padding {
 		padding: 10px;
 		display: flex;

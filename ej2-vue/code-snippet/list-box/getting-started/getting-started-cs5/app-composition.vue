@@ -18,7 +18,5 @@ const fields = { text: 'ProductName', value: 'ProductID' };
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/list-box/index.css";
 </style>

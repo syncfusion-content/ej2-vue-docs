@@ -138,11 +138,7 @@ components: {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/badge/index.css";
 
     #element {
         width: 400px;

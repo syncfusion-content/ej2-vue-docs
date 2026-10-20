@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <div id="target" style='border: 1px solid grey;'>
         <table>
@@ -29,10 +29,7 @@ components: {
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-button/index.css";
     .e-cell {
     border: 1px solid grey;
     padding: 8px;

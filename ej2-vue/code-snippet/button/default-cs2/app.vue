@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <ejs-button cssClass='e-flat'>Button</ejs-button>
 </template>
 
@@ -17,9 +17,7 @@ name: "App",
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button/index.css";
 button {
   margin: 25px 5px 20px 20px;
 }

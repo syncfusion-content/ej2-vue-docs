@@ -11,8 +11,7 @@ import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
 
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/message/material.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/message/index.css";
 
   .msg-custom-section .content-section {
     margin: 0 auto;

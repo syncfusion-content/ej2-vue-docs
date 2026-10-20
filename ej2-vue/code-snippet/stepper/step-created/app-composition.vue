@@ -20,9 +20,7 @@ const stepCreated = () => {
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/stepper/index.css";
 
 .created-event {
   margin-top: 30px;

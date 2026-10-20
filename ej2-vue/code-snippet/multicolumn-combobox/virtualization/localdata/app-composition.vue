@@ -40,9 +40,5 @@ const fields = { text: 'Engineer', value: 'TaskID' };
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-multicolumn-combobox/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/multicolumn-combobox/index.css";
 </style>

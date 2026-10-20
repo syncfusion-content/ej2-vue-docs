@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="app">
         <div id='container'>
             <h3> Built-in Components </h3>
@@ -170,17 +170,7 @@ provide("inplaceeditor", [TimePicker, DateRangePicker, Rte, MultiSelect, AutoCom
 </script>
 
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/inplace-editor/index.css";
 
 #loader {
     color: #008cff;

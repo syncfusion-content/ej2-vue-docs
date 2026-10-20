@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <ul>
     <li> <ejs-radiobutton label="Primary" name="custom" cssClass="e-primary"></ejs-radiobutton></li>
     <li> <ejs-radiobutton label="Success" name="custom" cssClass="e-success"></ejs-radiobutton></li>
@@ -16,9 +16,7 @@ enableRipple(true);
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/radio-button/index.css";
 .e-radio-wrapper {
   margin-top: 18px;
 }

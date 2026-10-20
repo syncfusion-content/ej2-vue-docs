@@ -46,8 +46,7 @@ export default {
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/timeline/index.css";
 
 .content-container {
   position: relative;

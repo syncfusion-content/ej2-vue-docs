@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <ejs-chiplist id="chip">
         <e-chips>
             <e-chip text="Andrew" avatarIconCss='andrew'></e-chip>
@@ -22,6 +22,7 @@ components: {
 </script>
 
 <style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/chips/index.css";
 #chip .andrew {
   background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/andrew.png')
 }

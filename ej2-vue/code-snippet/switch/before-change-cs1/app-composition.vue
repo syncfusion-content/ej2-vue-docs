@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <!-- Use v-bind:checked or :checked for dynamic binding, and note that true should be lowercase -->
         <ejs-switch id="switch1" :checked="true" @beforeChange="beforeChange"></ejs-switch>
@@ -18,6 +18,5 @@ function beforeChange(args) {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fabric.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fabric.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/switch/index.css";
 </style>

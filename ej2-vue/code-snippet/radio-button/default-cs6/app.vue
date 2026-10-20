@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <form>
 <ul>
 <li> <ejs-radiobutton label="Credit/Debit Card" name="payment" value="credit/debit" checked="true"></ejs-radiobutton></li>
@@ -26,9 +26,7 @@ components: {
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/radio-button/index.css";
 .e-radio-wrapper {
   margin-top: 18px;
 }

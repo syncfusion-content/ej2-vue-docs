@@ -17,7 +17,7 @@ const header = 'Dialog header';
 const content = 'This is a Dialog with header.';
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/dialog/index.css";
 
 #app {
     color: #008cff;

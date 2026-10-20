@@ -56,9 +56,7 @@
 </script>
 
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/dashboard-layout/index.css";
 
     #dashboard_default .e-panel .e-panel-content {
         vertical-align: middle;

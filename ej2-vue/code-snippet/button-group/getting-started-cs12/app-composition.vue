@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id='app'>
     <div class='e-btn-group'>
         <input type="radio" id="radioleft" name="align" value="left"/>
@@ -13,10 +13,7 @@
 <script setup>
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button-group/index.css";
   #app {
    margin: 20px;
   }

@@ -79,6 +79,7 @@ const handleSubmit = () => {
 </script>
 
 <style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/tab/index.css";
    .button-container {
       display: flex;
       justify-content: center;

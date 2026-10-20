@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <ejs-dropdownbutton :items='items'>Clipboard</ejs-dropdownbutton>
 </template>
 
@@ -20,8 +20,5 @@ const items = [
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-button/index.css";
 </style>

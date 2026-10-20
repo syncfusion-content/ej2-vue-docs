@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="app">
     <div class='wrapper'>
       <ejs-calendar :min="minDate" :max="maxDate" :value="dateVal"></ejs-calendar>
@@ -14,9 +14,7 @@ const dateVal = new Date("05/11/2017");
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/calendar/index.css";
 
 .wrapper {
   max-width: 250px;

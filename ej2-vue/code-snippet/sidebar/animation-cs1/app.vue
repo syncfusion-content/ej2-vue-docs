@@ -98,8 +98,7 @@
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/sidebar/index.css";
 
   /*Sidebar element styles*/
   #sidebar-element {

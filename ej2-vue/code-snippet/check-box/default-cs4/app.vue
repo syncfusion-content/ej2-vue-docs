@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <ul>
     <li><ejs-checkbox label='Primary' cssClass='e-primary' checked=true></ejs-checkbox></li>
     <li><ejs-checkbox label='Success' cssClass='e-success' checked=true></ejs-checkbox></li>
@@ -20,9 +20,7 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/check-box/index.css";
 li {
   list-style: none;
 }
