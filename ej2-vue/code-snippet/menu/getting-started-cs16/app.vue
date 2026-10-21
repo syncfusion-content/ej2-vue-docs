@@ -52,9 +52,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/bootstrap.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/menu/index.css";
 
 body {
   margin-top: 100px;

@@ -22,10 +22,7 @@ const value: [30, 70]
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/slider/index.css";
 
 #app {
   color: #008cff;

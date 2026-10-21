@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="container">
       <div id='datepicker'>
         <ejs-datepicker dayHeaderFormat="Short" ref="datepickerObj"></ejs-datepicker>
@@ -33,11 +33,7 @@
   
   </script>
   <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-  
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/datepicker/index.css";
   #container {
     width: 100%;
   }

@@ -20,9 +20,7 @@ const tooltipContent = '<span class="template-content"><span class="stepper-icon
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/stepper/index.css";
 
 .step-tooltip-template {
   margin-top: 30px;

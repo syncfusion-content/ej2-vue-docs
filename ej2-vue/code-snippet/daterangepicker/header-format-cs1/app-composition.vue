@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="container">
         <div id='daterangepicker'>
             <ejs-daterangepicker cssClass="format-wide" dayHeaderFormat="Short"
@@ -35,10 +35,7 @@ const formatHandler = (args) => {
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/daterangepicker/index.css";
 
 #container {
     width: 100%;

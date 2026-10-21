@@ -63,7 +63,7 @@ const content3 = () => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/splitter/index.css";
 
 #app {
     margin: 65px auto;

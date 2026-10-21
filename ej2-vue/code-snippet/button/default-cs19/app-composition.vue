@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="container">
     <div class="frame">
       <h3>Repeat Button</h3>
@@ -71,9 +71,7 @@ const resetCounts = () => {
 </script>
 
 <style scoped>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button/index.css";
 body {
   font-family: Roboto, sans-serif;
   padding: 20px;

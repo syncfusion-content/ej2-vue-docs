@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <ejs-switch id="switch1" :checked="true" :beforeChange="beforeChange"></ejs-switch>
     </div>
@@ -25,6 +25,5 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fabric.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fabric.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/switch/index.css";
 </style>

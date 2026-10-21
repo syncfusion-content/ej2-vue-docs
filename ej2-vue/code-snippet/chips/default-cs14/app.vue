@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <ejs-chiplist id="chip">
       <e-chips>
             <e-chip leadingIconCss="trendingIcon" 
@@ -26,6 +26,7 @@ components: {
 </script>
 
 <style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/chips/index.css";
 #chip .e-chip .trendingIcon {
 	margin: 4px 0 4px 6px;
 	width: 16px;

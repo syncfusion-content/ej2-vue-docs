@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <ejs-button cssClass='e-link' v-on:click='btnClick'>Button</ejs-button>
 </template>
 <script setup>
@@ -10,8 +10,7 @@ const btnClick = function(event) {
     }
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button/index.css";
 button {
   margin: 25px 5px 20px 20px;
 }

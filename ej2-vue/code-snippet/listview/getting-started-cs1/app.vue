@@ -30,7 +30,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/list-view/index.css";
 
 #flat-list {
   border: 1px solid #dddddd;

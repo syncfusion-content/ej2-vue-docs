@@ -32,9 +32,7 @@ onBeforeUpload: function(args) {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/uploader/index.css";
  #container {
         padding-left: 5%;
         width: 100%;

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <div id="targetElement" style="position:relative;min-height:350px;border:1px solid;"></div>
         <ejs-speeddial id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' opensOnHover=true
@@ -19,6 +19,5 @@ const items = [
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/speed-dial/index.css";
 </style>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="app">
     <div id="wrapper1">
       <ejs-daterangepicker id="daterangepicker" :placeholder="waterMark" v-model="date"></ejs-daterangepicker>
@@ -18,9 +18,7 @@ const date = ref(null);
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/daterangepicker/index.css";
 
 #wrapper1 {
   min-width: 250px;

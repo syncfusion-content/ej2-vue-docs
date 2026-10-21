@@ -63,9 +63,7 @@ const onStateChange = function () {
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-list/index.css";
 
 #container .padding-top {
   padding-top: 35px;

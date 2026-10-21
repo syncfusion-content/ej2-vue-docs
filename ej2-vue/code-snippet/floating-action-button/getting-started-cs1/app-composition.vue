@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <div id="targetElement" style="position:relative;min-height:350px;border:1px solid;"></div>
         <!-- To render Floating Action Button -->
@@ -14,6 +14,5 @@
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/floating-action-button/index.css";
 </style>

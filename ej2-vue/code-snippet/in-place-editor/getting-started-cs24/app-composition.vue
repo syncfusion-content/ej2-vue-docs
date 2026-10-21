@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="app">
         <table class="table-section">
             <tr>
@@ -43,17 +43,7 @@ const valid = function (e) {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/inplace-editor/index.css";
 
 .table-section {
     text-align: center;

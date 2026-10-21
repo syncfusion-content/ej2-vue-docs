@@ -42,7 +42,7 @@ const hideToast = function(){
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/toast/index.css";
 </style>
 
 <style lang="scss">

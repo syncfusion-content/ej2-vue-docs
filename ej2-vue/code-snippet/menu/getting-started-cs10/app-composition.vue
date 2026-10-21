@@ -50,9 +50,7 @@ const beforeItemRender = function (args) {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/menu/index.css";
 
 body {
     margin-top: 100px;
