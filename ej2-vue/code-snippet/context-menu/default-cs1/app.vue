@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/context-menu/index.css";
 
 @font-face {
   font-family: 'e-context-menu';

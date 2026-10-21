@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <ul>
 <li><div id="text">Selected: Option 1</div></li>
 <li> <ejs-radiobutton label="Option 1" name="default" checked="true" :change="onChange" ></ejs-radiobutton></li>
@@ -26,8 +26,7 @@ components: {
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';;
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/radio-button/index.css";
 
 .e-radio-wrapper {
   margin-top: 18px;

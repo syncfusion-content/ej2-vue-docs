@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div>
     <div id="wrapper1">
       <ejs-checkbox label='Default' v-model="value" :checked="value"></ejs-checkbox>
@@ -29,9 +29,7 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/radio-button/index.css";
 .e-checkbox-wrapper {
   margin-top: 18px;
 }

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <ul>
 <li><ejs-checkbox label='Buy Groceries' cssClass='e-checkicon' checked=true></ejs-checkbox></li>
 <li><ejs-checkbox label='Pay Rent' cssClass='e-checkicon'></ejs-checkbox></li>
@@ -22,9 +22,7 @@ components: {
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/check-box/index.css";
 li {
   list-style: none;
 }

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <div id="target" style="position:relative;min-height:350px;border:1px solid;"></div>
         <!-- To render Floating Action Button in TopLeft position -->
@@ -31,9 +31,7 @@ enableRipple(true);
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/floating-action-button/index.css";
 .fab-container {
     position: relative;
     min-height: 310px;

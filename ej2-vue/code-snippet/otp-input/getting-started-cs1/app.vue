@@ -17,8 +17,7 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/otp-input/index.css";
 
 #container {
     margin-top: 30px;

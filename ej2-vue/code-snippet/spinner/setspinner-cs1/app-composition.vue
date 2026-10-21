@@ -31,7 +31,7 @@ const onGridCreated = () => {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/spinner/index.css";
 
 .e-spinner-pane.e-spin-hide {
   display: block;

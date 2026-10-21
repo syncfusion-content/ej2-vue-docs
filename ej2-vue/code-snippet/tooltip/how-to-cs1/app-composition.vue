@@ -18,8 +18,7 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 const content = "Tooltip from disabled element";
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/tooltip/index.css";
 
 #disabledbutton {
     pointer-events: none;

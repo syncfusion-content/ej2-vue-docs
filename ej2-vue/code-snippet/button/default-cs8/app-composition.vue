@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id='container'>
         <div class='btncontainer'>
             <ejs-button id='button' cssClass='e-small'>Button</ejs-button>
@@ -72,9 +72,7 @@ const appendSpanElement = function (text) {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button/index.css";
 .btncontainer {
   float: left;
   width: 40%;

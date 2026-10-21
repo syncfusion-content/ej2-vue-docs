@@ -30,10 +30,7 @@ const value = [{ id: 'id5', text: 'Item 5' }, { id: 'id7', text: 'Item 7' }, { i
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/multi-select/index.css";
 
 #wrapper1 {
     min-width: 250px;

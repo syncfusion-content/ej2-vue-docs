@@ -49,7 +49,7 @@ const buttons = [{ click: dlgButtonClick, buttonModel: { content: 'OK', isPrimar
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/dialog/index.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 
 #app {

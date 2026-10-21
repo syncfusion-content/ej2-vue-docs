@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <ejs-progressbutton content="Slide Left" :enableProgress="true" :animationSettings="animationSettings"
         :spinSettings="spinSettings"></ejs-progressbutton>
 </template>
@@ -23,8 +23,5 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/progress-button/index.css";
 </style>

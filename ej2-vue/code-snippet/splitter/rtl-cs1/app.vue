@@ -34,5 +34,5 @@ export default {
     display: flex;
 }
 
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/splitter/index.css";
 </style>

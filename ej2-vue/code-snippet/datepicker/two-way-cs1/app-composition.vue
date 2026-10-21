@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="app">
     <div id="wrapper1">
       <ejs-datepicker id="datepicker" v-model="date"></ejs-datepicker>
@@ -17,9 +17,7 @@ const date = ref(new Date());
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/datepicker/index.css";
 
 #wrapper1 {
   min-width: 250px;

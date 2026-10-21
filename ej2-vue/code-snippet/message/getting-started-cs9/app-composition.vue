@@ -31,9 +31,7 @@ const closed = function () {
 };
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/message/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/button/material.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/message/index.css";
 
 .msg-template-section .content-section {
   margin: 0 auto;

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <ejs-dropdownbutton :items="items" :itemTemplate="'itemTemplate'">DropDownButton
         <template v-slot:itemTemplate="{ data }">
             <div>
@@ -52,11 +52,7 @@ const items = [
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-button/index.css";
 .e-dropdown-popup .e-item {
     color: #4a4a4a;
 }

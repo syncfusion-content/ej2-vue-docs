@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <table class='switch-control'>
         <tr>
             <td class='lSize'><label for='switch1'>USB Tethering</label></td>
@@ -30,9 +30,7 @@ enableRipple(true);
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fabric.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fabric.css";
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/switch/index.css";
 .switch-control tr td {
   padding: 10px;
 }

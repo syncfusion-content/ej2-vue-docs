@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="app">
     <div class='wrapper'>
       <ejs-daterangepicker :placeholder="waterMark">
@@ -35,12 +35,7 @@ const yearEnd = new Date(new Date(new Date().getFullYear() - 1, 11, 31).toDateSt
 
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/daterangepicker/index.css";
 
 .wrapper {
   max-width: 250px;

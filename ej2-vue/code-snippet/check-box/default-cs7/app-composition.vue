@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <form>
 <ul>
 <li><ejs-checkbox name='Sport' value='Cricket' label='Cricket' checked=true></ejs-checkbox></li>
@@ -20,9 +20,7 @@ enableRipple(true);
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/check-box/index.css";
 .e-checkbox-wrapper {
   margin-top: 18px;
 }

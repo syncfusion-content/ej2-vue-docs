@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="app">
     <div id="wrapper1">
       <ejs-calendar id="calendar" v-model="date"></ejs-calendar>
@@ -25,9 +25,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/calendar/index.css";
 
 #wrapper1 {
   max-width: 300px;

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="container">
         <div id="targetElement" class="content-area">
             <h2>Floating Action Button Click event</h2>
@@ -29,9 +29,7 @@ const onClick = function () {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/floating-action-button/index.css";
     .container {
     display: flex;
     justify-content: center;

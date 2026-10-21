@@ -147,8 +147,7 @@
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/sidebar/index.css";
 
     #header-section.main-header {
         border-bottom: 1px solid #d2d6de;

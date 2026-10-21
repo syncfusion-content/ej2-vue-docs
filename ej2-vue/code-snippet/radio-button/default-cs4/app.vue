@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <ul>
     <li><ejs-radiobutton label='Option 1' name='default' checked=true></ejs-radiobutton></li>
     <li><ejs-radiobutton label='Option 2' name='default'></ejs-radiobutton></li>
@@ -20,9 +20,7 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/radio-button/index.css";
 .e-radio-wrapper {
   margin-top: 18px;
 }

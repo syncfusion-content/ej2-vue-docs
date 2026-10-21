@@ -15,8 +15,7 @@ import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notification
 const showIcon = true;
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/message/material.css";
+  @import "../node_modules/@syncfusion/ej2-material3-theme/styles/message/index.css";
 
   .msg-default-section .content-section {
     margin: 0 auto;

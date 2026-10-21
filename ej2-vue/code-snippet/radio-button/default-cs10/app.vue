@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <ul>
 <li> <ejs-radiobutton label="Small" name="size" checked="true" cssClass="e-small"></ejs-radiobutton></li>
 <li> <ejs-radiobutton label="Default" name="size"></ejs-radiobutton></li>
@@ -19,9 +19,7 @@ components: {
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/radio-button/index.css";
 .e-radio-wrapper {
   margin-top: 18px;
 }

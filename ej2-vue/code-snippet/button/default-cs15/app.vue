@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <ejs-button ref="toggleBtn" cssClass='e-flat' iconCss='e-btn-sb-icon e-play-icon' isToggle=true v-on:click='btnClick'>Play</ejs-button>
 </template>
 
@@ -26,9 +26,7 @@ components: {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button/index.css";
 button {
   margin: 25px 5px 20px 20px;
 }

@@ -92,8 +92,7 @@
 </template>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/avatar/index.css";
 
 #element {
     width: auto;

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <div>
     <ejs-button cssClass='e-block'>Block Button</ejs-button>
     <ejs-button cssClass='e-block' isPrimary=true>Block Button</ejs-button>
@@ -19,9 +19,7 @@ components: {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/button/index.css";
 button {
   margin: 25px 0;
 }

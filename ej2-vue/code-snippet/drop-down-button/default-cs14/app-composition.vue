@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <ejs-dropdownbutton :items='items' iconCss='e-icons e-menu' cssClass='e-caret-hide'></ejs-dropdownbutton>
 </template>
 
@@ -34,11 +34,7 @@ const items = [
 </script>
 
 <style>
-@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/drop-down-button/index.css";
 .e-menu::before {
     content: '\e984';
 }

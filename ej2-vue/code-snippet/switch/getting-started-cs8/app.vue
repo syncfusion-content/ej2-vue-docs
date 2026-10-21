@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <form>
         <table class='size'>
             <tr>
@@ -43,9 +43,7 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/fabric.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/fabric.css";
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/switch/index.css";
 .size tr td {
     padding: 10px;
 }

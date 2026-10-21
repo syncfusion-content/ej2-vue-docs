@@ -69,9 +69,7 @@ const onCreated = () => {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/menu/index.css";
 
 .menu-section {
     margin-top: 100px;

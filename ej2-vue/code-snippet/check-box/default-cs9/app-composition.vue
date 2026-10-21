@@ -1,4 +1,4 @@
-<template>
+﻿<template>
 <ul>
 <li><ejs-checkbox label='Left Side Label' labelPosition='Before'></ejs-checkbox></li>
 <li><ejs-checkbox label='Right Side Label' checked=true></ejs-checkbox></li>
@@ -14,9 +14,7 @@ enableRipple(true);
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/check-box/index.css";
 .e-checkbox-wrapper {
   margin-top: 18px;
 }

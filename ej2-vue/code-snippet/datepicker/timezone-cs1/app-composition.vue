@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="app">
     <div class='wrapper'>
       <ejs-datepicker :placeholder="waterMark" :serverTimezoneOffset="serverOffset" :value="dateVal"></ejs-datepicker>
@@ -14,11 +14,7 @@ const dateVal = new Date();
 
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/datepicker/index.css";
 
 .wrapper {
   max-width: 250px;

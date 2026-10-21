@@ -50,7 +50,7 @@ const buttonClick = (e) => {
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/dialog/index.css";
 
 #customization {
     display: table;
