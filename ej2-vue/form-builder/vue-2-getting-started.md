@@ -93,28 +93,26 @@ The Form Builder code should be added in the **src/App.vue** file.
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-  <ejs-form-builder></ejs-form-builder>
+  <ejs-formbuilder></ejs-formbuilder>
 </template>
 
 <script>
 import { FormBuilderComponent, FormBuilderPlugin } from "@syncfusion/ej2-vue-form-builder";
 import Vue from "vue";
 
-
 Vue.use(FormBuilderPlugin);
 
 export default {
   name: "App",
   components: {
-  'ejs-form-builder': FormBuilderComponent
+  'ejs-formbuilder': FormBuilderComponent
   }
 };
 </script>
 
 <style>
-@import "~@syncfusion/ej2-material3-theme/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/form-builder/index.css";
 </style>
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +132,7 @@ yarn run serve
 
 The output will appear as follows:
 
-![Vue Form Builder](./images/form-builder.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/getting-started-cs2" %}
 
 ## See also
 

@@ -78,183 +78,14 @@ The **Layout** category contains containers that group other components. Layout 
 
 ## Templates tab
 
-The **Templates** tab (available in Developer mode only) displays a flat list of pre-built form templates that you can drag and drop onto the canvas. These templates provide ready-made form layouts to help you quickly get started or add common scenarios to your form. You can also customize the available templates using the `formTemplates` property.
+The **Templates** tab (available in Developer mode only) displays a flat list of pre-built form templates that you can drag and drop onto the canvas. These templates provide ready-made form layouts to help you quickly get started or add common scenarios to your form. You can also customize the available templates using the [formTemplates](https://ej2.syncfusion.com/vue/documentation/api/form-builder/index-default#formtemplates) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :formTemplates="formTemplates" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script setup>
-import { ref, provide } from "vue";
-import {
-  FormBuilderComponent as EjsFormbuilder,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-
-provide("FormBuilderPlugin", [FormBuilderPlugin]);
-
-const formObj = ref(null);
-
-const formTemplates = ref([
-  {
-    id: "login form",
-    title: "login",
-    schema: {
-      version: "0.1.0",
-      properties: {
-        emailAddress: {
-          id: "textbox_1785491685456_167",
-          name: "emailAddress",
-          type: "string",
-          label: "Email Address",
-          textboxType: "email",
-          required: true,
-          placeholder: "Enter your email",
-          widget: "textbox"
-        },
-        password: {
-          id: "textbox_1785491685456_537",
-          name: "password",
-          type: "string",
-          label: "Password",
-          textboxType: "password",
-          required: true,
-          minLength: 6,
-          placeholder: "Enter your password",
-          widget: "textbox"
-        },
-        rememberMe: {
-          id: "checkbox_1785491685456_262",
-          name: "rememberMe",
-          type: "boolean",
-          label: "Remember Me",
-          widget: "checkbox"
-        },
-        submit: {
-          id: "submit_button_initial",
-          name: "defaultFormsubmit",
-          type: "button",
-          label: "Submit",
-          buttonType: "submit",
-          widget: "button",
-          style: "primary",
-          disabled: false
-        }
-      },
-      layout: [
-        { type: "field", propertyId: "emailAddress" },
-        { type: "field", propertyId: "password" },
-        { type: "field", propertyId: "rememberMe" },
-        { type: "field", propertyId: "submit" }
-      ],
-      settings: {
-        name: "Untitled Form"
-      }
-    }
-  }
-]);
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/field-components-cs1/app-composition.vue %}
 {% endhighlight %}
-
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :formTemplates="formTemplates" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderComponent,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-
-export default {
-  name: "App",
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-formbuilder": FormBuilderComponent
-  },
-  data() {
-    return {
-      formTemplates: [
-        {
-          id: "login form",
-          title: "login",
-          schema: {
-            version: "0.1.0",
-            properties: {
-              emailAddress: {
-                id: "textbox_1785491685456_167",
-                name: "emailAddress",
-                type: "string",
-                label: "Email Address",
-                textboxType: "email",
-                required: true,
-                placeholder: "Enter your email",
-                widget: "textbox"
-              },
-              password: {
-                id: "textbox_1785491685456_537",
-                name: "password",
-                type: "string",
-                label: "Password",
-                textboxType: "password",
-                required: true,
-                minLength: 6,
-                placeholder: "Enter your password",
-                widget: "textbox"
-              },
-              rememberMe: {
-                id: "checkbox_1785491685456_262",
-                name: "rememberMe",
-                type: "boolean",
-                label: "Remember Me",
-                widget: "checkbox"
-              },
-              submit: {
-                id: "submit_button_initial",
-                name: "defaultFormsubmit",
-                type: "button",
-                label: "Submit",
-                buttonType: "submit",
-                widget: "button",
-                style: "primary",
-                disabled: false
-              }
-            },
-            layout: [
-              { type: "field", propertyId: "emailAddress" },
-              { type: "field", propertyId: "password" },
-              { type: "field", propertyId: "rememberMe" },
-              { type: "field", propertyId: "submit" }
-            ],
-            settings: {
-              name: "Untitled Form"
-            }
-          }
-        }
-      ]
-    };
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/field-components-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -262,123 +93,22 @@ Dragging a template onto the canvas inserts the entire set of components defined
 
 The output will appear as follows:
 
-![Templates tab](./images/form-builder-form-templates.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/field-components-cs1" %}
 
 ## Customizing the toolbox items
 
-The form fields in the toolbox can be customized using the `toolboxCategories` property. 
+The form fields in the toolbox can be customized using the [toolboxCategories](https://ej2.syncfusion.com/vue/documentation/api/form-builder/index-default#toolboxcategories) property. 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :toolboxCategories="toolBoxCategories" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script setup>
-import { ref, provide } from "vue";
-import {
-  FormBuilderComponent as EjsFormbuilder,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-import {
-  ComponentCategory,
-  FormWidgetType
-} from "@syncfusion/ej2-form-builder";
-
-provide("FormBuilderPlugin", [FormBuilderPlugin]);
-
-const formObj = ref(null);
-
-const toolBoxCategories = [
-        {
-            category: ComponentCategory.Basic,
-            items: [
-                FormWidgetType.Textbox, FormWidgetType.Textarea
-            ]
-        },
-        {
-            category: ComponentCategory.Advanced,
-            items: [
-                FormWidgetType.Date, FormWidgetType.DateRange
-            ]
-        },
-        {
-            category: ComponentCategory.Layout,
-            items: [
-                FormWidgetType.Panel, FormWidgetType.Card
-            ]
-        }
-    ];
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/field-components-cs2/app-composition.vue %}
 {% endhighlight %}
-
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :toolboxCategories="toolBoxCategories" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderComponent,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-import {
-  ComponentCategory,
-  FormWidgetType
-} from "@syncfusion/ej2-form-builder";
-
-export default {
-  name: "App",
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-formbuilder": FormBuilderComponent
-  },
-  data() {
-    return {
-      toolBoxCategories: [
-        {
-            category: ComponentCategory.Basic,
-            items: [
-                FormWidgetType.Textbox, FormWidgetType.Textarea
-            ]
-        },
-        {
-            category: ComponentCategory.Advanced,
-            items: [
-                FormWidgetType.Date, FormWidgetType.DateRange
-            ]
-        },
-        {
-            category: ComponentCategory.Layout,
-            items: [
-                FormWidgetType.Panel, FormWidgetType.Card
-            ]
-        }
-      ]
-    };
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/field-components-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing toolbox items](./images/form-builder-toolbox-categories.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/field-components-cs2" %}
 
 ## Drag and drop behavior
 

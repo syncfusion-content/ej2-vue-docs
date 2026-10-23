@@ -39,163 +39,29 @@ In the property panel, different tabs are available for each form field. They ar
 The property panel automatically saves your changes as you make them. There is no Save button — any adjustment you make is instantly applied to your form and reflected on the design canvas. This makes editing fast and seamless, so you can focus on building your form without worrying about saving your work.
 
 ## Adding a new property in the property panel
-Properties of the built-in Syncfusion controls, or properties related to the [template](./template), can be added dynamically to the property panel using the `setProperty` method in the Form Builder.
+Properties of the built-in Syncfusion controls, or properties related to the [template](./template), can be added dynamically to the property panel using the [setProperty](https://ej2.syncfusion.com/vue/documentation/api/form-builder/index-default#setproperty) method in the Form Builder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :enablePreview="false" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script setup>
-import { ref, provide, onMounted } from "vue";
-import {
-  FormBuilderComponent as EjsFormbuilder,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-import { FormWidgetType } from "@syncfusion/ej2-form-builder";
-
-provide("FormBuilderPlugin", [FormBuilderPlugin]);
-
-const formObj = ref(null);
-
-onMounted(() => {
-  formObj.value.ej2Instances.setProperty(FormWidgetType.Textarea, {
-    key: "enableRtl",
-    label: "Enable RTL",
-    type: "boolean",
-    default: false
-  });
-});
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/property-panel-cs1/app-composition.vue %}
 {% endhighlight %}
-
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :enablePreview="false" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderComponent,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-import { FormWidgetType } from "@syncfusion/ej2-form-builder";
-
-export default {
-  name: "App",
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-formbuilder": FormBuilderComponent
-  },
-  mounted() {
-    this.$refs.formObj.ej2Instances.setProperty(FormWidgetType.Textarea, {
-      key: "enableRtl",
-      label: "Enable RTL",
-      type: "boolean",
-      default: false
-    });
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/property-panel-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-![Adding new Property in property panel](./images/from-builder-setproperty.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/property-panel-cs1" %}
 
 ## Hiding a property from the property panel
-An existing property in the property panel can be hidden by getting the property details using the `getProperty` method of the Form Builder and setting the `visible` property to **false**.
+An existing property in the property panel can be hidden by getting the property details using the [getProperty](https://ej2.syncfusion.com/vue/documentation/api/form-builder/index-default#getproperty) method of the Form Builder and setting the `visible` property to **false**.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :enablePreview="false" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script setup>
-import { ref, provide, onMounted } from "vue";
-import {
-  FormBuilderComponent as EjsFormbuilder,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-import { FormWidgetType } from "@syncfusion/ej2-form-builder";
-
-provide("FormBuilderPlugin", [FormBuilderPlugin]);
-
-const formObj = ref(null);
-
-onMounted(() => {
-  const instance = formObj.value.ej2Instances;
-  const labelProp = instance.getProperty(FormWidgetType.Textarea, "label");
-  if (labelProp) {
-    labelProp.visible = false;
-  }
-  instance.refresh();
-});
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/property-panel-cs2/app-composition.vue %}
 {% endhighlight %}
-
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :enablePreview="false" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderComponent,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-import { FormWidgetType } from "@syncfusion/ej2-form-builder";
-
-export default {
-  name: "App",
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-formbuilder": FormBuilderComponent
-  },
-  mounted() {
-    const instance = this.$refs.formObj.ej2Instances;
-    const labelProp = instance.getProperty(FormWidgetType.Textarea, "label");
-    if (labelProp) {
-      labelProp.visible = false;
-    }
-    instance.refresh();
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/property-panel-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-![Hiding a property from property panel](./images/form-builder-hiding-property.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/property-panel-cs2" %}
