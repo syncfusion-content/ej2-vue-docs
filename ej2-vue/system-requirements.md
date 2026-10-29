@@ -14,11 +14,16 @@ This section explains the basic system requirements for working with Syncfusion<
 
 * Vue supported version >= `2.6+`.
 
-* Required [Node.js](https://nodejs.org/en/) version >= `16+`. The supported [npm](https://www.npmjs.com/) version is installed along with Node.js. Use the following command to check the Node.js version:
+- **Node.js and npm**
 
-```bash
-node --version
-```
+  Node.js is required for Vue development, providing the runtime for the Vue CLI and package management tools. Syncfusion<sup style="font-size:70%">®</sup> Vue UI components require an [active Long-Term Support (LTS) or Maintenance LTS version](https://nodejs.org/en/about/previous-releases) of Node.js.
+
+  **Recommended:** Use the latest LTS version of Node.js for optimal stability and security. Download Node.js from [Node.js website](https://nodejs.org/en), which includes npm (Node Package Manager). After installation, verify the versions:
+
+  ```bash
+  node --version
+  npm --version
+  ```
 
 > The [vue-class-components](https://www.npmjs.com/package/vue-class-component) package is required before the 2023 Volume 1 (v21.1.35) release. 
 >    * `Vue 2.6` - Use the `7.2.6` version.
@@ -26,7 +31,7 @@ node --version
 >    * `Vue 3+` - Use `^8.0.0-rc.1` version. 
 
 ## Browser support
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components are supported only in modern browsers. For more information, refer to the [browser compatibility](./browser/) section.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components are supported only in modern browsers. For more information, refer to the [browser compatibility](./browser) section.
 
 ## Vue supported versions
 
