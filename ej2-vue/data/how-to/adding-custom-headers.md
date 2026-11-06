@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Adding custom headers with Vue DataManager | Syncfusion
-description: Learn here all about Adding custom headers with Syncfusion Vue DataManager of Syncfusion Essential JS 2 and more.
+title: Vue DataManager - Custom headers | Syncfusion
+description: Send custom HTTP headers (e.g., authentication tokens, API keys) with Syncfusion Vue DataManager using the headers property.
 platform: ej2-vue
-control: Adding custom headers in Vue DataManager 
+control: Adding custom headers in Vue DataManager
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding custom headers with Vue DataManager
+# Custom headers for Vue DataManager
 
-Custom headers allow you to send extra information along with your HTTP requests. This information can include authentication tokens, API keys, or any other data required by the server to process the request correctly. By adding custom headers, you can enhance the security and functionality of your application's data communication process.
+Custom headers provide a mechanism to send additional information along with HTTP requests made by the Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager). These headers can include authentication tokens, API keys, session identifiers, or any other metadata required by the server to validate and process the request correctly.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) provides a flexible way to include custom HTTP headers in your data requests through the `headers` property, enhancing communication between your application and the server. This feature is particularly useful when you need to include additional information or authentication tokens in your data requests.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager supports custom headers through its `headers` property, enabling secure and flexible communication between the client application and the server. This feature is particularly useful when requests must carry additional information for authentication, authorization, or contextual processing.
 
-To integrate custom headers into your `DataManager` requests, follow these steps:
+Steps to integrate custom headers into DataManager requests:
 
 1. Create a new instance of `DataManager` with the required `URL` and `adaptor`.
 
 2. Assign the custom headers to the `headers` property of the `DataManager` instance. 
 
-3. Trigger the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executequery) method to send the request to the server with the custom headers.
+3. Trigger the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/executequery) method to send the request to the server with the custom headers.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -48,12 +48,12 @@ const items = ref([]);
 onMounted(() => {
   let SERVICE_URI = "https://services.syncfusion.com/vue/production/api/Orders";
   let dataManager = new DataManager({ 
-      url: SERVICE_URI, 
-      adaptor: new ODataAdaptor, 
-      headers:[{ 'syncfusion-data-manager': 'true' }]  
+    url: SERVICE_URI, 
+    adaptor: new ODataAdaptor, 
+    headers:[{ 'syncfusion-data-manager': 'true' }]  
   });
   dataManager.executeQuery(new Query()).then((e) => {
-    this.items = e.result;
+    items.value = e.result;
   });
 })
 </script>
@@ -110,9 +110,9 @@ export default {
   mounted() {
     let SERVICE_URI = "https://services.syncfusion.com/vue/production/api/Orders";
     let dataManager = new DataManager({ 
-        url: SERVICE_URI, 
-        adaptor: new ODataAdaptor, 
-        headers:[{ 'syncfusion-data-manager': 'true' }]  
+      url: SERVICE_URI, 
+      adaptor: new ODataAdaptor, 
+      headers:[{ 'syncfusion-data-manager': 'true' }]  
     });
     dataManager.executeQuery(new Query()).then((e) => {
       this.items = e.result;
@@ -146,6 +146,3 @@ export default {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
-> * Headers can be defined as key-value pairs.
-> * Adding custom headers while making cross domain request will initiate preflight request.

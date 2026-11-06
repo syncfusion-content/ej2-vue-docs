@@ -10,27 +10,27 @@ domainurl: ##DomainURL##
 
 # Getting started with Vue DataManager in Vue 3
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager enables efficient data management in Vue applications. It seamlessly interacts with various data sources (remote or local) and provides functionalities like sorting, filtering, paging, and CRUD (Create, Read, Update, Delete) operations, enhancing the data presentation capabilities of your Vue application. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager enables efficient data management in Vue applications. It interacts with various data sources (remote or local) and provides functionalities like sorting, filtering, paging, and CRUD (Create, Read, Update, Delete) operations for data presentation.
 
-This guide details the steps involved in setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This guide details the steps involved in setting up a [Vite](https://vitejs.dev) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+The `Composition API` is a feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It uses smaller, reusable functions called composition functions to manage component properties and behavior.
 
 The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component’s properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
 ## Prerequisites for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI Components
 
-Before you start using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components, ensure that your system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Vue.js versions, and other dependencies required for using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components effectively.
+Before integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components, ensure that the system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Vue.js versions, and other dependencies required for using Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components effectively.
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
-This section provides information about the Essential<sup style="font-size:70%">&reg;</sup> dependencies required for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager into your Vue projects. These dependencies are necessary for managing and manipulating data effectively within your applications.
+This section provides information about the Essential<sup style="font-size:70%">&reg;</sup> dependencies required for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager into Vue projects. These dependencies are necessary for managing and manipulating data effectively within applications.
 
-1.  `@syncfusion/ej2-data`: The `@syncfusion/ej2-data` package serves as the core component for Syncfusion<sup style="font-size:70%">&reg;</sup> data management functionalities. It includes critical features such as DataManager, which enables various data operations like sorting, filtering, and paging. By integrating this package into your Vue project, you gain access to powerful tools for handling data efficiently.
+1.  `@syncfusion/ej2-data`: The `@syncfusion/ej2-data` package serves as the core component for Syncfusion<sup style="font-size:70%">&reg;</sup> data management functionalities. It includes critical features such as DataManager, which enables various data operations like sorting, filtering, and paging. Integration of this package provides access to tools for handling data efficiently.
 
-2. `@syncfusion/ej2-base`: The `@syncfusion/ej2-base` package serves as the foundational layer for other Syncfusion<sup style="font-size:70%">&reg;</sup> packages. It provides Essential<sup style="font-size:70%">&reg;</sup> utilities and helpers required for seamless integration and functionality of Syncfusion<sup style="font-size:70%">&reg;</sup> components within your Vue applications.
+2. `@syncfusion/ej2-base`: The `@syncfusion/ej2-base` package serves as the foundational layer for other Syncfusion<sup style="font-size:70%">&reg;</sup> packages. It provides Essential<sup style="font-size:70%">&reg;</sup> utilities and helpers required for integration and functionality of Syncfusion<sup style="font-size:70%">&reg;</sup> components within Vue applications.
 
 ```javascript
 |-- @syncfusion/ej2-data
@@ -38,7 +38,7 @@ This section provides information about the Essential<sup style="font-size:70%">
     |-- es6-promise (Required when window.Promise is not available)
 ```
 
-> **@syncfusion/ej2-data** requires the presence of a Promise feature in global environment. In the browser, window.Promise must be available.
+> **@syncfusion/ej2-data** requires the presence of a Promise feature in global environment. In the browser, "window.Promise" must be available.
 
 ## Installation and configuration
 
@@ -46,7 +46,7 @@ Setting up a Vite project for Vue development is a simple process. Vite is a mod
 
 **Step 1: Create a new Vite project**
 
-To create a new Vite project, you can use either npm or Yarn. Run one of the following commands in your terminal:
+To create a new Vite project, run one of the following commands in the terminal:
 
 ```bash
 npm create vite@latest
@@ -60,15 +60,15 @@ yarn create vite
 
 **Step 2: Configure project settings**
 
-After executing one of the commands above, you will be prompted to configure the project settings. Follow the prompts and provide the necessary information:
+After executing one of the commands above, project configuration prompts will appear. Follow the prompts and provide the necessary information:
 
-  1. **Define the project name:** Specify a name for your project. 
+  1. **Define the project name:** Specify a name for this project. 
 
       ```bash
       ? Project name: » data-app
       ```
 
-  2. **Select Vue as the framework:** Choose Vue as the framework for your project.
+  2. **Select Vue as the framework:** Choose Vue as the framework for this project.
 
       ```bash
       ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -125,15 +125,15 @@ yarn run dev
 
 ## Connection to a data source
 
-Data sources are fundamental for applications that depend on information, serving as repositories that store and manage various types of data. It enables applications to retrieve, manipulate, and present data effectively. Establishing a connection between your application and a data source is Essential<sup style="font-size:70%">&reg;</sup> for making the most of the data's potential
+Data sources are fundamental for applications that depend on information, serving as repositories that store and manage various types of data. It enables applications to retrieve, manipulate, and present data effectively. Establishing a connection between application and a data source is Essential<sup style="font-size:70%">&reg;</sup> for making the most of the data's potential
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) serves as a gateway for both local and remote data sources, utilizing query to interact with the data.
 
 ### Binding to JSON data
 
-Binding to a local data source involves connecting your application directly to a dataset stored within the application itself. This method is useful for small-scale applications where data does not need to be fetched from external sources.
+Binding to a local data source involves connecting applications directly to datasets stored within the application itself. This method is useful for small-scale applications where data does not need to be fetched from external sources.
 
-To bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) to a local data source, you can assign an array of JavaScript objects to the **json** property or pass them to the constructor during instantiation.
+Assign an array of JavaScript objects to the **json** property of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) or pass them to the constructor during instantiation to bind to a local data source.
 
 1. Create a [src/datasource.js] file and use the following dataset to provide JSON data: 
 
@@ -247,7 +247,7 @@ To bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamana
     </style>
     ```
 
-The following example demonstrates how to bind JSON data using the [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of `DataManager`.
+The following example demonstrates how to bind JSON data using the [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of `DataManager`.
 
 
 {% tabs %}
@@ -361,11 +361,11 @@ export default {
 
 ### Binding to ODataV4
 
-OData (Open Data Protocol) is a standardized protocol for creating and consuming data APIs over the internet, allowing you to access and manipulate data from various sources. Syncfusion's<sup style="font-size:70%">&reg;</sup> DataManager provides seamless integration with OData services, enabling you to bind data from remote sources to your application.
+OData (Open Data Protocol) is a standardized protocol for creating and consuming data APIs over the internet. It enables access to and manipulation of data from various sources. Syncfusion's<sup style="font-size:70%">&reg;</sup> DataManager provides integration with OData services, enabling binding of data from remote sources.
 
-[DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) can also be bound to remote data source by assigning service endpoint URL to the `url` property. All `DataManager` operations will address the provided service endpoint.
+Bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) to remote data sources by assigning the service endpoint URL to the `url` property. All `DataManager` operations address the provided service endpoint.
 
-The following example demonstrates how to bind data to an OData service using the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executequery) method of `DataManager`.
+The following example demonstrates how to bind data to an OData service using the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager#executequery) method of `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -502,9 +502,9 @@ export default {
 
 Data filtering is a fundamental operation that allows to obtain a reduced view of data based on specified filter criteria. This feature is Essential<sup style="font-size:70%">&reg;</sup> for efficiently managing and displaying large datasets.
 
-The filter expression can be easily constructed using the [where](https://ej2.syncfusion.com/documentation/api/data/query/#where) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method allows you to specify filter criteria based on various conditions. 
+Construct filter expressions using the [where](https://ej2.syncfusion.com/documentation/api/data/query#where) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method enables specification of filter criteria based on various conditions. 
 
-The following example demonstrates how to filter data based on the **EmployeeID** field equal to **4** using the `where` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
+The following example demonstrates how to filter data based on the **EmployeeID** field equal to **4** using the `where` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -623,11 +623,11 @@ export default {
 
 ## Sort
 
-Sorting data allows you to arrange it either in ascending or descending order based on specified criteria. 
+Sorting data enables arrangement in either ascending or descending order based on specified criteria. 
 
-This can be achieved using the [sortBy](https://ej2.syncfusion.com/documentation/api/data/query/#sortby) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class. This method facilitates the sorting of data based on specified fields and order.
+The [sortBy](https://ej2.syncfusion.com/documentation/api/data/query#sortby) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class facilitates data sorting based on specified fields and order.
 
-The following example demonstrates how to sort data based on the **EmployeeID** field in **ascending** order using the `sortBy` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
+The following example demonstrates how to sort data based on the **EmployeeID** field in **ascending** order using the `sortBy` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -735,11 +735,11 @@ export default {
 
 ## Page
 
-Paging provides an option to display data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive datasets.
+Paging enables display of data in segmented pages, facilitating navigation through large datasets. This feature is useful when dealing with extensive datasets.
 
-The [page](https://ej2.syncfusion.com/documentation/api/data/query/#page) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables pagination of data by retrieving a specific range of data based on the page index and the page size.
+The [page](https://ej2.syncfusion.com/documentation/api/data/query#page) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables data pagination by retrieving a specific range based on the page index and page size.
 
-The following example demonstrates how to apply paging to the data using the `page` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
+The following example demonstrates how to apply paging to the data using the `page` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -859,21 +859,21 @@ export default {
 
 ## Component binding
 
-The DataManager can be seamlessly integrated with Syncfusion<sup style="font-size:70%">&reg;</sup> components that support data binding. However, before utilizing DataManager, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component.
+Integration of DataManager with Syncfusion<sup style="font-size:70%">&reg;</sup> components that support data binding requires registration of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component.
 
 In the following samples, the grid component is bound. To render the Grid with the necessary configurations, please refer to the [Grid Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation.
 
 ### Local data binding
 
-Local data binding allows you to directly bind data to Syncfusion<sup style="font-size:70%">&reg;</sup> components from within your Vue application. This method is useful when you have the data available locally and want to integrate it seamlessly with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+Local data binding enables direct binding of data to Syncfusion<sup style="font-size:70%">&reg;</sup> components from within Vue applications. This method is useful when data is available locally and requires integration with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-To bind local data to a Syncfusion<sup style="font-size:70%">&reg;</sup> component, follow these steps:
+Bind local data to a Syncfusion<sup style="font-size:70%">&reg;</sup> component by following these steps:
 
-1. Define your data directly in your Vue component or import it from an external source.
+1. Define data directly in the Vue component or import it from an external source.
 
-2. Use the [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) class to create a data source and bind it to your data.
+2. Use the [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) class to create a data source and bind it to the data.
 
-3. Integrate the data source with the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component by setting the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property.
+3. Integrate the data source with the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component by setting the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid#datasource) property.
 
 The following example shows how to bind local data to the grid component using `DataManager`.
 
@@ -890,13 +890,13 @@ The following example shows how to bind local data to the grid component using `
 
 ### Remote data binding
 
-Remote data binding involves binding external data sources, such as API endpoints, to Syncfusion<sup style="font-size:70%">&reg;</sup> components. This allows you to fetch and display data dynamically from a server.
+Remote data binding involves binding external data sources, such as API endpoints, to Syncfusion<sup style="font-size:70%">&reg;</sup> components. This enables dynamic fetching and display of data from a server.
 
-To bind remote data to a Syncfusion<sup style="font-size:70%">&reg;</sup> component, follow these steps:
+Bind remote data to a Syncfusion<sup style="font-size:70%">&reg;</sup> component by following these steps:
 
-1. Initialize a [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) object and configure it with the URL of the remote service from which you want to fetch data.
+1. Initialize a [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager) object and configure it with the URL of the remote service from which data is to be fetched.
 
-2.  Assign the `DataManager` instance to the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property of the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component.
+2.  Assign the `DataManager` instance to the [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid#datasource) property of the Syncfusion<sup style="font-size:70%">&reg;</sup> grid component.
 
 The following example demonstrates how to bind remote data to the grid component using `DataManager`.
 

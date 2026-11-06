@@ -1,24 +1,26 @@
 ---
 layout: post
-title: Cache in Vue DataManager | Syncfusion
-description: Learn here all about Cache in Syncfusion Vue Data component of Syncfusion Essential JS 2 and more details.
+title: Vue DataManger - Cache | Syncfusion
+description: Improve performance in Syncfusion Vue DataManager by enabling cache to avoid redundant requests for paged data.
 platform: ej2-vue
 control: Cache 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable Cache in Vue Data component
+# Cache in Vue DataManager
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager provides the `enableCache` property, which enhances performance by reducing redundant HTTP requests for previously visited pages. When caching is enabled, the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) retrieves data from the cache instead of sending a new request, minimizing server load and improving user experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager provides the `enableCache` property, which enhances performance by reducing redundant HTTP requests for previously visited pages. When caching is enabled, the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager) retrieves data from the cache instead of sending a new request, minimizing server load and improving experience.
 
 **How it works**
 
-* When `enableCache` is set to true, the DataManager generates a unique ID at initialization and uses it to store previously loaded page data in cache memory. This enables efficient data retrieval without redundant server requests.
+* When `enableCache` property is set to "true", the DataManager generates a unique ID at initialization and uses it to store previously loaded page data in cache memory. This enables efficient data retrieval without redundant server requests.
+
 * The cache is automatically cleared when data actions such as sorting, filtering, grouping, searching, or CRUD operations (Create, Read, Update, Delete) are performed.
+
 * This feature is supported by all adaptors in Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager, ensuring consistent caching behavior across different data sources.
 
-The following example demonstrates how to enable caching using the `enableCache` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager:
+The following code demonstrates how to enable caching using the `enableCache` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DataManager:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -36,6 +38,7 @@ The following example demonstrates how to enable caching using the `enableCache`
     </ejs-grid>
   </div>
 </template>
+
 <script setup>
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
@@ -47,6 +50,7 @@ const data = new DataManager({
   enableCache: true // Enables caching to prevent repeated HTTP requests.
 });
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
@@ -76,6 +80,7 @@ const data = new DataManager({
     </ejs-grid>
   </div>
 </template>
+
 <script>
 import { GridComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-grids";
 import { DataManager, WebApiAdaptor } from "@syncfusion/ej2-data";
@@ -98,6 +103,7 @@ export default {
   }
 }
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
