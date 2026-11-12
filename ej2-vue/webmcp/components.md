@@ -50,7 +50,7 @@ The Syncfusion® DataGrid component exposes **27 tools**, giving AI agents full 
 
 ## Diagram
 
-The Syncfusion® Diagram component exposes **19 tools**, giving AI agents full programmatic control over diagram creation, manipulation, and management.
+The Syncfusion® Diagram component exposes **19 tools**, giving AI agents full programmatic control over diagram creation, manipulation, and management. Explore the Syncfusion® Vue Diagram component with WebMCP integration through this [demo](https://demos.syncfusion.com/diagram-sdk/diagram-webmcp/index.html).
 
 | Tool Name | Description |
 |-----------|-------------|
@@ -342,7 +342,7 @@ The Syncfusion® Pivot Table component exposes **23 tools**, giving AI agents fu
 
 ## Scheduler
 
-The Syncfusion® Scheduler component exposes 5 tools, giving AI agents full programmatic control over events, view switching, and date navigation.
+The Syncfusion® Scheduler component exposes 5 tools, giving AI agents full programmatic control over events, view switching, and date navigation. Explore the Syncfusion® Vue Scheduler component with WebMCP integration through this [demo](https://demos.syncfusion.com/scheduler-sdk/webmcp-integration/index.html).
 
 | Tool Name | Description |
 | --- | --- |
