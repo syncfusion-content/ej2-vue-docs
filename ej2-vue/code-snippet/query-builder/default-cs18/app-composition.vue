@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
             <ejs-querybuilder width="30%" :dataSource="dataSource" :rule="importRules" :summaryView="true">
@@ -63,7 +63,7 @@ const importRules = {
 
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-vue-querybuilder/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/query-builder/index.css";
     .e-query-builder {
         margin: 0 auto;
     }

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="control-section">
             <ejs-querybuilder id="querybuilder" ref="querybuilder" :dataSource="dataSource" :rule="importRules" :headerTemplate="headerTemplate" enableNotCondition = true>
                 <e-columns>
@@ -145,15 +145,7 @@ var employeeData = [
 
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-vue-querybuilder/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/query-builder/index.css";
 
 .e-query-builder {
     margin: 0 auto;

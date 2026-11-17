@@ -1,0 +1,22 @@
+/* Dashboard Layout component styles  */
+#defaultLayout {
+    margin: 0 auto;
+    width: 500px;
+}
+
+#defaultLayout .e-panel .e-panel-container .content {
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 90px;
+}
+
+#defaultLayout .e-panel {
+    transition: none !important;
+}
+
+#defaultLayout .e-panel .e-panel-content {
+    align-content: center;
+    text-align: center;
+}

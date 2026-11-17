@@ -20,240 +20,34 @@ You can use the exported schema in the Form Renderer control to render the same 
 
 ## Disabling the export
 
-Exporting can be disabled in the Form Builder component by setting the `allowExport` property to `false`. The default value of the property is `true`.
+Exporting can be disabled in the Form Builder component by setting the [allowExport](https://ej2.syncfusion.com/vue/documentation/api/form-builder/index-default#allowexport) property to `false`. The default value of the property is `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :allowExport="false" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script setup>
-import { provide } from "vue";
-import {
-  FormBuilderComponent as EjsFormbuilder,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-
-provide("FormBuilderPlugin", [FormBuilderPlugin]);
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/export-import-cs1/app-composition.vue %}
 {% endhighlight %}
-
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :allowExport="false" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderComponent,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-
-export default {
-  name: "App",
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-formbuilder": FormBuilderComponent,
-  },
-  data() {
-    return {
-    };
-  },
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/export-import-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
 The output will appear as follows:
 
-![Disabling the export](./images/form-builder-export.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/export-import-cs1" %}
 
 ## Import form schema
 
-To import a form, assign the exported schema to the `schema` property of the Form Builder. This loads the form definition into the builder so that you can continue editing it.
+To import a form, assign the exported schema to the [schema](https://ej2.syncfusion.com/vue/documentation/api/form-builder/index-default#schema) property of the Form Builder. This loads the form definition into the builder so that you can continue editing it.
 
-The following example shows how to use the same schema for both export and import scenarios.
+The following example shows how to import a schema object to the Form Builder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :schema="schema" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script setup>
-import { ref, provide } from "vue";
-import {
-  FormBuilderComponent as EjsFormbuilder,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-
-provide("FormBuilderPlugin", [FormBuilderPlugin]);
-
-const formObj = ref(null);
-const schema = ref({
-  version: "0.1.0",
-  properties: {
-    emailAddress: {
-      id: "textbox_1785491685456_167",
-      name: "emailAddress",
-      type: "string",
-      label: "Email Address",
-      textboxType: "email",
-      required: true,
-      placeholder: "Enter your email",
-      widget: "textbox"
-    },
-    password: {
-      id: "textbox_1785491685456_537",
-      name: "password",
-      type: "string",
-      label: "Password",
-      textboxType: "password",
-      required: true,
-      minLength: 6,
-      placeholder: "Enter your password",
-      widget: "textbox"
-    },
-    rememberMe: {
-      id: "checkbox_1785491685456_262",
-      name: "rememberMe",
-      type: "boolean",
-      label: "Remember Me",
-      widget: "checkbox"
-    },
-    submit: {
-      id: "submit_button_initial",
-      name: "defaultFormsubmit",
-      type: "button",
-      label: "Submit",
-      buttonType: "submit",
-      widget: "button",
-      style: "primary",
-      disabled: false
-    }
-  },
-  layout: [
-    { type: "field", propertyId: "emailAddress" },
-    { type: "field", propertyId: "password" },
-    { type: "field", propertyId: "rememberMe" },
-    { type: "field", propertyId: "submit" }
-  ],
-  settings: {
-    name: "Untitled Form"
-  }
-});
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/export-import-cs2/app-composition.vue %}
 {% endhighlight %}
-
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :schema="schema" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderComponent,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-
-export default {
-  name: "App",
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-formbuilder": FormBuilderComponent
-  },
-  data() {
-    return {
-      schema: {
-        version: "0.1.0",
-        properties: {
-          emailAddress: {
-            id: "textbox_1785491685456_167",
-            name: "emailAddress",
-            type: "string",
-            label: "Email Address",
-            textboxType: "email",
-            required: true,
-            placeholder: "Enter your email",
-            widget: "textbox"
-          },
-          password: {
-            id: "textbox_1785491685456_537",
-            name: "password",
-            type: "string",
-            label: "Password",
-            textboxType: "password",
-            required: true,
-            minLength: 6,
-            placeholder: "Enter your password",
-            widget: "textbox"
-          },
-          rememberMe: {
-            id: "checkbox_1785491685456_262",
-            name: "rememberMe",
-            type: "boolean",
-            label: "Remember Me",
-            widget: "checkbox"
-          },
-          submit: {
-            id: "submit_button_initial",
-            name: "defaultFormsubmit",
-            type: "button",
-            label: "Submit",
-            buttonType: "submit",
-            widget: "button",
-            style: "primary",
-            disabled: false
-          }
-        },
-        layout: [
-          { type: "field", propertyId: "emailAddress" },
-          { type: "field", propertyId: "password" },
-          { type: "field", propertyId: "rememberMe" },
-          { type: "field", propertyId: "submit" }
-        ],
-        settings: {
-          name: "Untitled Form"
-        }
-      }
-    };
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/export-import-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-![Import from schema](./images/form-builder-import-schema.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/export-import-cs2" %}

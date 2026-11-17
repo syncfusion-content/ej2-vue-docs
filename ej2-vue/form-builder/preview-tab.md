@@ -20,71 +20,20 @@ You can switch to the **Preview** tab to see a live preview of the form. This vi
 
 ## Disabling the preview
 
-The preview option can be disabled by setting the `enablePreview` property to `false`. The default value is `true`.
+The preview option can be disabled by setting the [enablePreview](https://ej2.syncfusion.com/vue/documentation/api/form-builder/index-default#enablepreview) property to `false`. The default value is `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :enablePreview="false" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script setup>
-import { ref, provide } from "vue";
-import {
-  FormBuilderComponent as EjsFormbuilder,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-
-provide("FormBuilderPlugin", [FormBuilderPlugin]);
-
-const formObj = ref(null);
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/preview-cs1/app-composition.vue %}
 {% endhighlight %}
-
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder :enablePreview="false" ref="formObj">
-  </ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderComponent,
-  FormBuilderPlugin
-} from "@syncfusion/ej2-vue-form-builder";
-
-export default {
-  name: "App",
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-formbuilder": FormBuilderComponent
-  },
-  data() {
-    return {};
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-</style>
-
+{% include code-snippet/form-builder/preview-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
 The output will appear as follows:
 
-![Disabling the preview in Form Builder](./images/form-builder-disable-preview.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/preview-cs1" %}
 
 ## JSON code preview
 

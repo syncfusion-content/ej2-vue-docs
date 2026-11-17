@@ -109,66 +109,10 @@ The Form Builder code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-
-<template>
-  <ejs-formbuilder></ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderPlugin,
-  FormBuilderComponent
-} from "@syncfusion/ej2-vue-form-builder";
-
-export default {
-  name: "App",
-  // Register the Form Builder plugin so that all form fields are globally registered.
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-formbuilder": FormBuilderComponent
-  },
-  // Import the bundled module that wires up every built-in widget (textbox, checkbox, button, etc.).
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/material3.css";
-</style>
-
-
-{% endraw %}
+{% include code-snippet/form-builder/getting-started-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <ejs-formbuilder></ejs-formbuilder>
-</template>
-
-<script>
-import {
-  FormBuilderPlugin,
-  FormBuilderComponent
-} from "@syncfusion/ej2-vue-form-builder";
-
-export default {
-  name: "App",
-  // Register the Form Builder plugin so that all form fields are globally registered.
-  provide: {
-    FormBuilderPlugin: [FormBuilderPlugin]
-  },
-  components: {
-    "ejs-form-builder": FormBuilderComponent
-  }
-};
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/material3.css";
-</style>
-
+{% include code-snippet/form-builder/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -187,7 +131,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![Vue Form Builder](./images/form-builder.png)
+{% previewsample "page.domainurl/code-snippet/form-builder/getting-started-cs1" %}
 
 ## Registering Syncfusion license
 
