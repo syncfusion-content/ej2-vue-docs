@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting and Importing in Vue Form Builder control | Syncfusion
-description: Learn how to export and import in the Vue Form Builder control. Use export to reuse the generated form schema in Form Renderer, and import to continue editing an existing schema in Form Builder.
+description: Learn how to export and import in the Vue Form Builder control. Use export to reuse the form schema in Form Renderer, and import to continue editing a schema in Form Builder.
 platform: ej2-vue
 control: Exporting and Importing
 documentation: ug
