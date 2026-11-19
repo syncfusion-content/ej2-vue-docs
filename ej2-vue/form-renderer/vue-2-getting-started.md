@@ -197,7 +197,7 @@ yarn run serve
 
 The output will appear as follows:
 
-{% previewsample "page.domainurl/code-snippet/form-renderer/getting-started-cs2" %}
+![Vue Form Renderer](./images/form-renderer.png)
 
 ## See also
 

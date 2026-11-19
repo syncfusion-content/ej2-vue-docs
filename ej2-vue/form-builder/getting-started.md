@@ -131,7 +131,7 @@ yarn run dev
 
 The output will appear as follows:
 
-{% previewsample "page.domainurl/code-snippet/form-builder/getting-started-cs1" %}
+![Vue Form Builder](./images/form-builder.png)
 
 ## Registering Syncfusion license
 
