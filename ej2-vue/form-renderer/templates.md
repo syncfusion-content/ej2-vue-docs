@@ -30,8 +30,6 @@ Multiple `<e-customwidgetsetting>` entries can be added inside `<e-customwidgets
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/form-renderer/template-cs1" %}
-
 ## Adding a template to a single or specific field
 
 To apply a template to a specific field rather than all fields of a given type, use [fieldName](https://ej2.syncfusion.com/vue/documentation/api/form-renderer/customwidgetsetting#fieldname) or [templateId](https://ej2.syncfusion.com/vue/documentation/api/form-renderer/customwidgetsetting#templateid) on `<e-customwidgetsetting>`:
@@ -47,5 +45,3 @@ To apply a template to a specific field rather than all fields of a given type, 
 {% include code-snippet/form-renderer/template-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/form-renderer/template-cs2" %}

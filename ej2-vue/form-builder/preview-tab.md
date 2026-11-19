@@ -33,7 +33,7 @@ The preview option can be disabled by setting the [enablePreview](https://ej2.sy
 
 The output will appear as follows:
 
-{% previewsample "page.domainurl/code-snippet/form-builder/preview-cs1" %}
+![Disabling the preview in Form Builder](./images/form-builder-disable-preview.png)
 
 ## JSON code preview
 
