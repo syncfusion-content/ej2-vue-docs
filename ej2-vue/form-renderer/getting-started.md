@@ -111,10 +111,193 @@ The Form Renderer code should be added in the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/form-renderer/getting-started-cs1/app-composition.vue %}
+{% raw %}
+
+<template>
+  <ejs-formrenderer :schema="schema" :submit="onSubmit"></ejs-formrenderer>
+</template>
+
+<script>
+import {
+  FormRendererPlugin,
+  FormRendererComponent
+} from "@syncfusion/ej2-vue-form-renderer";
+
+export default {
+  name: "App",
+  // Register the Form Renderer plugin so that all form fields are globally registered.
+  provide: {
+    FormRendererPlugin: [FormRendererPlugin]
+  },
+  components: {
+    "ejs-formrenderer": FormRendererComponent
+  },
+  // Import the bundled module that wires up every built-in widget (textbox, checkbox, button, etc.).
+  data() {
+    return {
+      schema: {
+        version: "0.1.0",
+        properties: {
+          emailAddress: {
+            id: "textbox_1785491685456_167",
+            name: "emailAddress",
+            type: "string",
+            label: "Email Address",
+            textboxType: "email",
+            required: true,
+            widget: "textbox"
+          },
+          password: {
+            id: "textbox_1785491685456_537",
+            name: "password",
+            type: "string",
+            label: "Password",
+            textboxType: "password",
+            required: true,
+            minLength: 6,
+            widget: "textbox"
+          },
+          rememberMe: {
+            id: "checkbox_1785491685456_262",
+            name: "rememberMe",
+            type: "boolean",
+            label: "Remember Me",
+            widget: "checkbox"
+          },
+          submit: {
+            id: "submit_button_initial",
+            name: "defaultFormsubmit",
+            type: "button",
+            label: "Submit",
+            buttonType: "submit",
+            widget: "button",
+            style: "primary",
+            disabled: false
+          }
+        },
+        layout: [
+          { row: 0, col: 0, field: "emailAddress" },
+          { row: 1, col: 0, field: "password" },
+          { row: 2, col: 0, field: "rememberMe" },
+          { row: 3, col: 0, field: "submit" }
+        ],
+        settings: {
+          name: "Untitled Form"
+        }
+      }
+    };
+  },
+  methods: {
+    onSubmit: function (args) {
+      if (args && args.data) {
+        // `args.data` holds the form values, `args.isValid` indicates whether
+        // every required/validation rule passed.
+        console.log(args.data, args.isValid);
+      }
+    }
+  }
+};
+</script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/material3.css";
+</style>
+
+
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/form-renderer/getting-started-cs1/app.vue %}
+
+<template>
+  <ejs-formrenderer :schema="schema" :submit="onSubmit"></ejs-formrenderer>
+</template>
+
+<script>
+import {
+  FormRendererPlugin,
+  FormRendererComponent
+} from "@syncfusion/ej2-vue-form-renderer";
+
+export default {
+  name: "App",
+  // Register the Form Renderer plugin so that all form fields are globally registered.
+  provide: {
+    FormRendererPlugin: [FormRendererPlugin]
+  },
+  components: {
+    "ejs-formrenderer": FormRendererComponent
+  },
+  // Import the bundled module that wires up every built-in widget (textbox, checkbox, button, etc.).
+  data() {
+    return {
+      schema: {
+        version: "0.1.0",
+        properties: {
+          emailAddress: {
+            id: "textbox_1785491685456_167",
+            name: "emailAddress",
+            type: "string",
+            label: "Email Address",
+            textboxType: "email",
+            required: true,
+            widget: "textbox"
+          },
+          password: {
+            id: "textbox_1785491685456_537",
+            name: "password",
+            type: "string",
+            label: "Password",
+            textboxType: "password",
+            required: true,
+            minLength: 6,
+            widget: "textbox"
+          },
+          rememberMe: {
+            id: "checkbox_1785491685456_262",
+            name: "rememberMe",
+            type: "boolean",
+            label: "Remember Me",
+            widget: "checkbox"
+          },
+          submit: {
+            id: "submit_button_initial",
+            name: "defaultFormsubmit",
+            type: "button",
+            label: "Submit",
+            buttonType: "submit",
+            widget: "button",
+            style: "primary",
+            disabled: false
+          }
+        },
+        layout: [
+          { type: "field", propertyId: "emailAddress" },
+          { type: "field", propertyId: "password" },
+          { type: "field", propertyId: "rememberMe" },
+          { type: "field", propertyId: "submit" }
+        ],
+        settings: {
+          name: "Untitled Form"
+        }
+      }
+    };
+  },
+  methods: {
+    onSubmit: function (args) {
+      if (args.data) {
+        // `args.data` holds the form values, `args.isValid` indicates whether
+        // every required/validation rule passed.
+        console.log(args.data, args.isValid);
+      }
+    }
+  }
+};
+</script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/material3.css";
+</style>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -133,7 +316,7 @@ yarn run dev
 
 The output will appear as follows:
 
-{% previewsample "page.domainurl/code-snippet/form-renderer/getting-started-cs1" %}
+![Vue Form Renderer](./images/form-renderer.png)
 
 ## Registering Syncfusion license
 
