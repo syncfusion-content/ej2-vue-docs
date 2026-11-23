@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positions in Vue Speed Dial | Syncfusion
-description: Learn how to position the Syncfusion Vue Speed Dial using the position property with values like TopLeft, MiddleCenter, and BottomRight, or open items on hover with opensOnHover.
+description: Learn to position the Syncfusion Vue Speed Dial with the position property (TopLeft, MiddleCenter, BottomRight) or open items on hover using opensOnHover.
 control: Positions 
 platform: ej2-vue
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Positions in Vue Speed Dial
 
-The Speed dial control can be positioned anywhere on the [`target`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#target) using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#position) property. If the `target` is not defined, then Speed Dial is positioned based on the browser viewport.
+The Speed dial control can be positioned anywhere on the [`target`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/index-default#target) using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#position) property. If the `target` is not defined, then Speed Dial is positioned based on the browser viewport.
 
 The position values of Speed Dial are as follows:
 * TopLeft
@@ -36,7 +36,7 @@ The position values of Speed Dial are as follows:
 
 ## Opens items on hover
 
-You can open the Speed Dial action items on mouse hover by setting the [`opensOnHover`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#opensonhover) property.
+You can open the Speed Dial action items on mouse hover by setting the [`opensOnHover`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#opensonhover) property.
 
 ```
 <template>
@@ -53,14 +53,13 @@ You can open the Speed Dial action items on mouse hover by setting the [`opensOn
 </script>
 
 <style>
-    @import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/speed-dial/index.css";
 </style>
 ```
 
 ## Programmatically show/hide Speed Dial items
 
-You can open/close the Speed Dial action items programmatically using [`show`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#show) and [`hide`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#hide) methods.
+You can open/close the Speed Dial action items programmatically using [`show`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#show) and [`hide`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#hide) methods.
 
 Below example demonstrates open/close action items on button click.
 
@@ -77,7 +76,7 @@ Below example demonstrates open/close action items on button click.
 
 ## Programmatically refresh the position
 
-You can refresh the position of the Speed Dial using [`refreshPosition`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#refreshposition) method when the `target`position is changed.
+You can refresh the position of the Speed Dial using [`refreshPosition`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#refreshposition) method when the `target`position is changed.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

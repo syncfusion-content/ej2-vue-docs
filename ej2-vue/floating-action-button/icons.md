@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Icons in Vue Floating Action Button
 
-You can customize the icon and text of Vue Floating Action Button(FAB) using [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#iconcss) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#content) properties.
+You can customize the icon and text of Vue Floating Action Button(FAB) using [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/index-default#iconcss) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/index-default#content) properties.
 
 ## FAB with icon
 
-You can show icon only in Floating Action Button by setting [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#iconcss) property. You can show tooltip on hover to show additional details to end-user by setting `title` attribute.
+You can show icon only in Floating Action Button by setting [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/index-default#iconcss) property. You can show tooltip on hover to show additional details to end-user by setting `title` attribute.
 
 ```
 <template>
@@ -27,14 +27,13 @@ You can show icon only in Floating Action Button by setting [`iconCss`](https://
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/floating-action-button/index.css";
 </style>
 ```
 
 ## FAB with icon and text
 
-You can show icon along with text in Floating Action Button by setting [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#iconcss) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#content) properties.
+You can show icon along with text in Floating Action Button by setting [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/index-default#iconcss) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/index-default#content) properties.
 
 ```
 <template>
@@ -48,14 +47,13 @@ You can show icon along with text in Floating Action Button by setting [`iconCss
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/floating-action-button/index.css";
 </style>
 ```
 
 ### Icon position
 
-You can change the position of icon when showing along with content by setting [`iconPosition`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#iconposition) property. By default, the icon is positioned on the left side together with text.
+You can change the position of icon when showing along with content by setting [`iconPosition`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/index-default#iconposition) property. By default, the icon is positioned on the left side together with text.
 
 ```
 <template>
@@ -68,8 +66,7 @@ You can change the position of icon when showing along with content by setting [
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/floating-action-button/index.css";
 </style>
 ```
 

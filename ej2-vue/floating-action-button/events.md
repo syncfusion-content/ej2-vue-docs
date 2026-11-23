@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Vue Floating Action Button | Syncfusion
-description: Learn about the events of the Syncfusion Vue Floating Action Button, including the created event that triggers after creation and the onclick event that triggers on click.
+description: Learn about Syncfusion Vue Floating Action Button events, including created, triggered after creation, and onclick, triggered when the button is clicked.
 control: Events 
 platform: ej2-vue
 documentation: ug
@@ -30,8 +30,7 @@ Event triggers after the creation of Floating Action Button.
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/floating-action-button/index.css";
 </style>
 ```
 
@@ -53,8 +52,7 @@ Event triggers when the Floating Action Button is clicked.
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/floating-action-button/index.css";
 </style>
 ```
 

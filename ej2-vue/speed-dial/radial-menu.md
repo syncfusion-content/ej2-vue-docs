@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Radial Menu in Vue Speed Dial | Syncfusion
-description: Learn how to display Syncfusion Vue Speed Dial action items in a circular radial menu using the mode property and customize direction, startAngle, endAngle, and offset.
+description: Learn how to display Syncfusion Vue Speed Dial items in a radial menu using the mode property and customize direction, startAngle, endAngle, and offset.
 control: Radial menu 
 platform: ej2-vue
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Radial Menu in Vue Speed Dial
 
-The React Speed Dial action items can be displayed in a circular patter like a radial menu by setting [`mode`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#mode) property. You can customize the `direction`, `startAngle`, `endAngle` and `offset` by setting [`radialSettings`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#radialsettings) property.
+The React Speed Dial action items can be displayed in a circular patter like a radial menu by setting [`mode`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#mode) property. You can customize the `direction`, `startAngle`, `endAngle` and `offset` by setting [`radialSettings`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#radialsettings) property.
 
 ## Radial menu direction
 
-You can open the action items in either clockwise or anticlockwise by setting [`direction`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel/#direction) property. The default value is [`Auto`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialDirection/) where the action items are displayed based on the `position` property of the Speed Dial.
+You can open the action items in either clockwise or anticlockwise by setting [`direction`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel#direction) property. The default value is [`Auto`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialDirection) where the action items are displayed based on the `position` property of the Speed Dial.
 
 ```
 <template>
@@ -34,14 +34,13 @@ You can open the action items in either clockwise or anticlockwise by setting [`
 </script>
 
 <style>
-    @import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/speed-dial/index.css";
 </style>
 ```
 
 ## Radial menu start and end angle
 
-You can modify the start and end angle of action items by setting [`startAngle`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel/#startangle) and [`endAngle`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel/#endangle) properties. If the angle is not defined, the action items are displayed based on the `position` property of the Speed Dial.
+You can modify the start and end angle of action items by setting [`startAngle`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel#startangle) and [`endAngle`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel#endangle) properties. If the angle is not defined, the action items are displayed based on the `position` property of the Speed Dial.
 
 ```
 <template>
@@ -61,14 +60,13 @@ You can modify the start and end angle of action items by setting [`startAngle`]
 </script>
 
 <style>
-    @import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/speed-dial/index.css";
 </style>
 ```
 
 ## Offset
 
-You can modify the offset distance between action items and Speed Dial button using [`offset`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel/#offset) property.
+You can modify the offset distance between action items and Speed Dial button using [`offset`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel#offset) property.
 
 ```
 <template>
@@ -88,8 +86,7 @@ You can modify the offset distance between action items and Speed Dial button us
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/speed-dial/index.css";
 </style>
 ```
 
